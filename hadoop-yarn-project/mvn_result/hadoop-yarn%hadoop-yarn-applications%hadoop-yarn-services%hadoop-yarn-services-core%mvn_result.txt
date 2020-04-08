@@ -1,0 +1,97 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36morg.apache.hadoop:hadoop-yarn-services-core[0;1m >-------------[m
+[[1;34mINFO[m] [1mBuilding Apache Hadoop YARN Services Core 3.2.1[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-antrun-plugin:1.7:run[m [1m(create-testdirs)[m @ [36mhadoop-yarn-services-core[0;1m ---[m
+[[1;34mINFO[m] Executing tasks
+
+main:
+[[1;34mINFO[m] Executed tasks
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mhadoop-maven-plugins:3.2.1:protoc[m [1m(compile-protoc)[m @ [36mhadoop-yarn-services-core[0;1m ---[m
+[[1;34mINFO[m] No changes detected in protoc files, skipping generation.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mhadoop-yarn-services-core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mhadoop-yarn-services-core[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mhadoop-yarn-services-core[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 9 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mhadoop-yarn-services-core[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M1:test[m [1m(default-test)[m @ [36mhadoop-yarn-services-core[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.conf.[1mTestAppJsonResolve[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.983 s - in org.apache.hadoop.yarn.service.conf.[1mTestAppJsonResolve[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.conf.[1mTestValidateServiceNames[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.475 s - in org.apache.hadoop.yarn.service.conf.[1mTestValidateServiceNames[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.conf.[1mTestLoadExampleAppJson[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.997 s - in org.apache.hadoop.yarn.service.conf.[1mTestLoadExampleAppJson[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.component.[1mTestComponent[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.542 s - in org.apache.hadoop.yarn.service.component.[1mTestComponent[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.component.[1mTestComponentRestartPolicy[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.295 s - in org.apache.hadoop.yarn.service.component.[1mTestComponentRestartPolicy[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.component.instance.[1mTestComponentInstance[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m12[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.978 s - in org.apache.hadoop.yarn.service.component.instance.[1mTestComponentInstance[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.component.[1mTestComponentDecommissionInstances[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 111.352 s - in org.apache.hadoop.yarn.service.component.[1mTestComponentDecommissionInstances[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.timelineservice.[1mTestServiceTimelinePublisher[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.107 s - in org.apache.hadoop.yarn.service.timelineservice.[1mTestServiceTimelinePublisher[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.provider.[1mTestAbstractProviderService[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.401 s - in org.apache.hadoop.yarn.service.provider.[1mTestAbstractProviderService[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.provider.[1mTestProviderUtils[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.454 s - in org.apache.hadoop.yarn.service.provider.[1mTestProviderUtils[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.monitor.[1mTestServiceMonitor[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.125 s - in org.apache.hadoop.yarn.service.monitor.[1mTestServiceMonitor[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.monitor.probe.[1mTestDefaultProbe[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.424 s - in org.apache.hadoop.yarn.service.monitor.probe.[1mTestDefaultProbe[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.[1mTestServiceAM[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.845 s - in org.apache.hadoop.yarn.service.[1mTestServiceAM[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.utils.[1mTestFilterUtils[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.317 s - in org.apache.hadoop.yarn.service.utils.[1mTestFilterUtils[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.utils.[1mTestCoreFileSystem[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.573 s - in org.apache.hadoop.yarn.service.utils.[1mTestCoreFileSystem[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.utils.[1mTestServiceApiUtil[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.911 s - in org.apache.hadoop.yarn.service.utils.[1mTestServiceApiUtil[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.[1mTestDefaultUpgradeComponentsFinder[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.364 s - in org.apache.hadoop.yarn.service.[1mTestDefaultUpgradeComponentsFinder[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.providers.[1mTestDefaultClientProvider[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.311 s - in org.apache.hadoop.yarn.service.providers.[1mTestDefaultClientProvider[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.providers.[1mTestProviderFactory[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 s - in org.apache.hadoop.yarn.service.providers.[1mTestProviderFactory[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.providers.[1mTestAbstractClientProvider[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.302 s - in org.apache.hadoop.yarn.service.providers.[1mTestAbstractClientProvider[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.[1mTestYarnNativeServices[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m13[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 816.199 s - in org.apache.hadoop.yarn.service.[1mTestYarnNativeServices[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.containerlaunch.[1mTestAbstractLauncher[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.442 s - in org.apache.hadoop.yarn.service.containerlaunch.[1mTestAbstractLauncher[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.client.[1mTestServiceCLI[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.979 s - in org.apache.hadoop.yarn.service.client.[1mTestServiceCLI[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.client.[1mTestServiceClient[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.253 s - in org.apache.hadoop.yarn.service.client.[1mTestServiceClient[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.client.[1mTestBuildExternalComponents[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.352 s - in org.apache.hadoop.yarn.service.client.[1mTestBuildExternalComponents[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.service.[1mTestServiceManager[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.737 s - in org.apache.hadoop.yarn.service.[1mTestServiceManager[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 133, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  16:50 min
+[[1;34mINFO[m] Finished at: 2020-04-08T07:50:11Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
