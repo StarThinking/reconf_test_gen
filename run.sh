@@ -2,10 +2,10 @@
 
 if [ $# != 1 ]; then echo 'wrong'; exit -1; fi
 
-# yarn
+# yarn mapreduce
 the_project=$1
 
-for sub in $(cat /root/reconf_test_gen/"$yarn"/sub_projects.txt)
+for sub in $(cat /root/reconf_test_gen/"$the_project"/sub_projects.txt)
 do
     echo $sub
     cd $sub
