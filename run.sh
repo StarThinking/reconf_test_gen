@@ -9,8 +9,8 @@ for sub in $(cat /root/reconf_test_gen/"$the_project"/sub_projects.txt)
 do
     echo $sub
     cd $sub
-    #mvn test > mvn_result.txt
-    find . -name *output.txt | awk -F './target/surefire-reports/' '{print $2}' | awk -F '-output.txt' '{print $1}' | sort -u > all_classes.txt
+    mvn test > mvn_result.txt
+    #find . -name *output.txt | awk -F './target/surefire-reports/' '{print $2}' | awk -F '-output.txt' '{print $1}' | sort -u > all_classes.txt
 done
 
 #
