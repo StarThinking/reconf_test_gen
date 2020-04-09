@@ -1,0 +1,129 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] ------------------------------------------------------------------------
+[[1;34mINFO[m] Detecting the operating system and CPU architecture
+[[1;34mINFO[m] ------------------------------------------------------------------------
+[[1;34mINFO[m] os.detected.name: linux
+[[1;34mINFO[m] os.detected.arch: x86_64
+[[1;34mINFO[m] os.detected.version: 4.4
+[[1;34mINFO[m] os.detected.version.major: 4
+[[1;34mINFO[m] os.detected.version.minor: 4
+[[1;34mINFO[m] os.detected.release: ubuntu
+[[1;34mINFO[m] os.detected.release.version: 18.04
+[[1;34mINFO[m] os.detected.release.like.ubuntu: true
+[[1;34mINFO[m] os.detected.release.like.debian: true
+[[1;34mINFO[m] os.detected.classifier: linux-x86_64
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.hbase:hbase-http[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding Apache HBase - HTTP 2.2.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hbase/hbase-resource-bundle/2.2.4/hbase-resource-bundle-2.2.4.pom
+Progress (1): 2.2/2.6 kBProgress (1): 2.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hbase/hbase-resource-bundle/2.2.4/hbase-resource-bundle-2.2.4.pom (2.6 kB at 4.7 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hbase/hbase-resource-bundle/2.2.4/hbase-resource-bundle-2.2.4.jar
+Progress (1): 2.2/57 kBProgress (1): 5.0/57 kBProgress (1): 7.7/57 kBProgress (1): 10/57 kB Progress (1): 13/57 kBProgress (1): 16/57 kBProgress (1): 19/57 kBProgress (1): 21/57 kBProgress (1): 24/57 kBProgress (1): 27/57 kBProgress (1): 30/57 kBProgress (1): 32/57 kBProgress (1): 36/57 kBProgress (1): 40/57 kBProgress (1): 45/57 kBProgress (1): 49/57 kBProgress (1): 53/57 kBProgress (1): 57/57 kBProgress (1): 57 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hbase/hbase-resource-bundle/2.2.4/hbase-resource-bundle-2.2.4.jar (57 kB at 496 kB/s)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.0.0:bsh-property[m [1m(negate-license-bundles-property)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.0.0:regex-property[m [1m(create-license-file-path-property)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] No match to regex '\\' found in '/root/hbase-2.2.4/hbase-http/target/maven-shared-archive-resources/META-INF/LICENSE'. The initial value '/root/hbase-2.2.4/hbase-http/target/maven-shared-archive-resources/META-INF/LICENSE' is left as-is...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(enforce-maven-version)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(hadoop-profile-min-maven-min-java-banned-xerces)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(banned-jsr305)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuildnumber-maven-plugin:1.4:create-timestamp[m [1m(default)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(banned-illegal-imports)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.5:process[m [1m(process-resource-bundles)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /root/hbase-2.2.4/hbase-http/src/main/resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(check-aggregate-license)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] Skipping Rule Enforcement.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:compile[m [1m(default-compile)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] Compiling 1 source file to /root/hbase-2.2.4/hbase-http/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.1.1:build-classpath[m [1m(create-mrapp-generated-classpath)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] Wrote classpath file '/root/hbase-2.2.4/hbase-http/target/test-classes/mrapp-generated-classpath'.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /root/hbase-2.2.4/hbase-http/src/test/resources/META-INF
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:testCompile[m [1m(default-testCompile)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mwarbucks-maven-plugin:1.1.0:check[m [1m(run-warbucks)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] Rule 0: Class Matches: 24
+[[1;34mINFO[m] Rule 0: Class Failures: 0
+[[1;34mINFO[m] Total class failures: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M4:test[m [1m(default-test)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.conf.[1mTestConfServlet[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.471 s - in org.apache.hadoop.hbase.http.conf.[1mTestConfServlet[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestHtmlQuoting[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.713 s - in org.apache.hadoop.hbase.http.[1mTestHtmlQuoting[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestProfileOutputServlet[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.209 s - in org.apache.hadoop.hbase.http.[1mTestProfileOutputServlet[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.log.[1mTestLogLevel[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.762 s - in org.apache.hadoop.hbase.http.log.[1mTestLogLevel[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.lib.[1mTestStaticUserWebFilter[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.938 s - in org.apache.hadoop.hbase.http.lib.[1mTestStaticUserWebFilter[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.jmx.[1mTestJMXJsonServlet[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.387 s - in org.apache.hadoop.hbase.http.jmx.[1mTestJMXJsonServlet[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestSpnegoHttpServer[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.706 s - in org.apache.hadoop.hbase.http.[1mTestSpnegoHttpServer[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestGlobalFilter[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.846 s - in org.apache.hadoop.hbase.http.[1mTestGlobalFilter[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestHttpServer[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m16[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m2[m, Time elapsed: 1.758 s - in org.apache.hadoop.hbase.http.[1mTestHttpServer[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestPathFilter[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.775 s - in org.apache.hadoop.hbase.http.[1mTestPathFilter[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestSSLHttpServer[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.475 s - in org.apache.hadoop.hbase.http.[1mTestSSLHttpServer[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestHttpServerLifecycle[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m6[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m6[m, Time elapsed: 0.019 s - in org.apache.hadoop.hbase.http.[1mTestHttpServerLifecycle[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestHttpRequestLog[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 s - in org.apache.hadoop.hbase.http.[1mTestHttpRequestLog[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestServletFilter[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m3[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m1[m, Time elapsed: 0.619 s - in org.apache.hadoop.hbase.http.[1mTestServletFilter[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestHttpRequestLogAppender[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.182 s - in org.apache.hadoop.hbase.http.[1mTestHttpRequestLogAppender[m
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestHttpServerWebapps[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.402 s - in org.apache.hadoop.hbase.http.[1mTestHttpServerWebapps[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;33mWARNING[m] [1;33mTests run: 51, Failures: 0, Errors: 0, Skipped: 9[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M4:test[m [1m(secondPartTestsExecution)[m @ [36mhbase-http[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.hadoop.hbase.http.[1mTestSecurityHeadersFilter[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.807 s - in org.apache.hadoop.hbase.http.[1mTestSecurityHeadersFilter[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 2, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  44.377 s
+[[1;34mINFO[m] Finished at: 2020-04-08T22:08:28Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
