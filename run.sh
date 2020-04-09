@@ -19,6 +19,6 @@ do
     cd $sub; find . -name *output.txt | awk -F './target/surefire-reports/' '{print $2}' | awk -F '-output.txt' '{print $1}' | sort -u > all_classes.txt
 done
     
-# save class names as files
+# cd into sub dir, save class names as file for each sub project
 cd $project_root_dir; for i in $(find . -name all_classes.txt); do copy_file=$(echo $i | sed 's#/#%#g' | sed 's/^..//'); echo $copy_file; cp $i $copy_file; done
 cd $project_root_dir; for i in $(find . -name mvn_result.txt); do copy_file=$(echo $i | sed 's#/#%#g' | sed 's/^..//'); echo $copy_file; cp $i $copy_file; done
