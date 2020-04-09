@@ -20,5 +20,5 @@ do
 done
     
 # cd into sub dir, save class names as file for each sub project
-cd $project_root_dir; for i in $(find . -name all_classes.txt); do copy_file=$(echo $i | sed 's#/#%#g' | sed 's/^..//'); echo $copy_file; cp $i $copy_file; done
-cd $project_root_dir; for i in $(find . -name mvn_result.txt); do copy_file=$(echo $i | sed 's#/#%#g' | sed 's/^..//'); echo $copy_file; cp $i $copy_file; done
+cd $project_root_dir; for i in $(find . -name all_classes.txt); do copy_file=$(echo $i | sed 's#/#%#g' | sed 's/^..//'); echo $copy_file; mv $i $copy_file; done
+cd $project_root_dir; for i in $(find . -name mvn_result.txt); do copy_file=$(echo $i | sed 's#/#%#g' | sed 's/^..//'); echo $copy_file; mv $i $copy_file; done
