@@ -2,7 +2,7 @@
 
 if [ $# != 1 ]; then echo 'wrong'; exit -1; fi
 
-# yarn mapreduce hdfs
+# yarn mapreduce hdfs hbase
 the_project=$1
 sub_projects=$(cat /root/reconf_test_gen/"$the_project"/sub_projects.txt)
 project_root_dir=$(cat /root/reconf_test_gen/"$the_project"/project_root_dir.txt)
