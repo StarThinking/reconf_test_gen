@@ -1,6 +1,8 @@
 #!/bin/bash
 
-the_project='yarn'
+if [ $# -ne 1 ]; then echo 'ERROR: ./dispatcher.sh [project]'; exit -1; fi
+
+the_project=$1
 dst='/root/reconf_test_gen/'
 IFS=$'\n' 
 entry_list=( $(cat task.txt) )
@@ -23,17 +25,7 @@ while [ $entry_cursor -lt $entry_list_length ]
 do
     for i in $(seq 0 19)
     do
-	idles[$i]=$(is_idle $i) & pids[$i]=$!
-    done
-
-    for i in $(seq 0 19)
-    do
-        wait ${pids[$i]}
-    done
-
-    for i in $(seq 0 19)
-    do
-        if [ "${ildes[$i]}" == "no" ]; then
+        if [ "$(is_idle $i)" == "no" ]; then
 	     echo hadoop-$i is busy
 	else
 	    docker exec -d hadoop-$i bash -c "/root/reconf_test_gen/run_mvn_test.sh $the_project ${entry_list[$entry_cursor]} $dst"
@@ -44,3 +36,10 @@ do
     done
     sleep 1
 done
+
+for i in $(seq 0 19)
+do
+    while [ "$(is_idle $i)" == "no" ]; do sleep 10; done
+done
+
+echo all nodes are idle
