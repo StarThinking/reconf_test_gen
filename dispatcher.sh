@@ -14,20 +14,29 @@ echo entry_list_length = $entry_list_length
 cmd='echo /root/reconf_test_gen/run_mvn_test.sh $the_project ${entry_list[$entry_cursor]} $dst'
 
 function is_busy {
+#    i=$1
+#    busy=$(docker exec hadoop-$i bash -c "cat $busy_file")
+#    if [ "$busy" != "true" ] && [ "$busy" != "false" ]; then
+#	echo "ERROR: busy is wrong, $busy"; exit -1;
+#    else
+#	echo "$busy"
+#    fi
     i=$1
-    busy=$(docker exec hadoop-$i bash -c "cat $busy_file")
-    if [ "$busy" != "true" ] && [ "$busy" != "false" ]; then
-	echo "ERROR: busy is wrong, $busy"; exit -1;
+    jps_num=$(docker exec hadoop-$i bash -c "jps" | wc -l)
+    #sh_num=$(docker exec hadoop-$i bash -c "ps aux | grep run_mvn_test.sh" | wc -l)
+    if [ $jps_num -gt 1 ] ; then
+	echo "true"
     else
-	echo "$busy"
+	echo "false"
     fi
+
 }
 
 # init busy file
-for i in $(seq 0 $vm_num)
-do
-    docker exec hadoop-$i bash -c "echo 'false' > $busy_file"
-done
+#for i in $(seq 0 $vm_num)
+#do
+#    docker exec hadoop-$i bash -c "echo 'false' > $busy_file"
+#done
 
 while [ $entry_cursor -lt $entry_list_length ]
 do
