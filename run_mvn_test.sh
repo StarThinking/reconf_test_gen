@@ -3,7 +3,7 @@
 if [ $# -lt 2 ]; then echo 'ERROR: ./run_mvn_test.sh [project] [test_name] [optional: log_dts_dir]'; exit -1; fi
 
 busy_file=/tmp/reconf_busy
-if [ ! $busy_file -f ] || [ "$(cat $busy_file )" == "true" ]; then
+if [ ! -f $busy_file ] || [ "$(cat $busy_file )" == "true" ]; then
     echo "ERROR: something goes very wrong!!!!!!!!"; exit -1;
 fi
 echo 'true' > $busy_file
