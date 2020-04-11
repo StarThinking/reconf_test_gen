@@ -2,10 +2,16 @@
 
 if [ $# -lt 2 ]; then echo 'ERROR: ./run_mvn_test.sh [project] [test_name] [optional: log_dts_dir]'; exit -1; fi
 
+busy_file=/tmp/reconf_busy
+if [ ! $busy_file -f ] || [ "$(cat $busy_file )" == "true" ]; then
+    echo "ERROR: something goes very wrong!!!!!!!!"; exit -1;
+fi
+echo 'true' > $busy_file
+
 # yarn mapreduce hdfs hbase
 the_project=$1
 project_root_dir=$(cat /root/reconf_test_gen/"$the_project"/project_root_dir.txt)
-if [ $? -ne 0 ]; then echo 'ERROR: project name is wrong'; exit -1; fi
+if [ $? -ne 0 ]; then echo 'ERROR: project name is wrong'; echo 'false' > $busy_file; exit -1; fi
 
 the_test=$2
 classname=$(echo $the_test | awk -F '#' '{print $1}')
@@ -18,7 +24,7 @@ if [ $# -eq 3 ]; then log_dts_dir=$3; fi
 suffix='all_classes.txt'
 raw_sub_project=$(cd $sub_project_classes_dir; grep ^"$classname"$ *.txt | awk -F 'all_classes.txt' '{print $1}' | sed 's#%#/#g')
 if [ "$raw_sub_project" == "" ]; then
-    echo "ERROR: cannot find sub_project for $the_test"; exit -1;
+    echo "ERROR: cannot find sub_project for $the_test"; echo 'false' > $busy_file; exit -1
 fi
 sub_project="$project_root_dir""$raw_sub_project"
 #echo "sub_project for $the_test is $sub_project"
@@ -28,7 +34,9 @@ cd $sub_project; mvn test -Dtest=$the_test
 
 # log
 test_log="$sub_project"/target/surefire-reports/"$the_test"-output.txt
-if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test'; exit -1; fi
+if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test'; echo 'false' > $busy_file; exit -1; fi
 #echo "test_log is $test_log"
 if [ "$log_dts_dir" != "" ]; then mv $test_log $log_dts_dir; fi
 
+echo 'false' > $busy_file
+exit 0
