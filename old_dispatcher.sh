@@ -1,6 +1,6 @@
 #!/bin/bash
 
-the_project='hbase'
+the_project='yarn'
 dst='/root/reconf_test_gen/'
 IFS=$'\n' 
 entry_list=( $(cat task.txt) )
