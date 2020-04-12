@@ -1,0 +1,70 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36morg.apache.hadoop:hadoop-sls[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Hadoop Scheduler Load Simulator 3.2.1[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.pom
+Downloading from repository.jboss.org: https://repository.jboss.org/nexus/content/groups/public/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.pom
+Progress (1): 2.2/11 kBProgress (1): 5.0/11 kBProgress (1): 7.8/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.pom (11 kB at 58 kB/s)
+Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.jar
+Downloading from repository.jboss.org: https://repository.jboss.org/nexus/content/groups/public/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.jar
+Progress (1): 2.2/44 kBProgress (1): 5.0/44 kBProgress (1): 7.7/44 kBProgress (1): 10/44 kB Progress (1): 13/44 kBProgress (1): 16/44 kBProgress (1): 19/44 kBProgress (1): 21/44 kBProgress (1): 24/44 kBProgress (1): 27/44 kBProgress (1): 30/44 kBProgress (1): 32/44 kBProgress (1): 36/44 kBProgress (1): 40/44 kBProgress (1): 44 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-client/3.2.1/hadoop-client-3.2.1.jar (44 kB at 605 kB/s)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-antrun-plugin:1.7:run[m [1m(create-testdirs)[m @ [36mhadoop-sls[0;1m ---[m
+[[1;34mINFO[m] Executing tasks
+
+main:
+[[1;34mINFO[m] Executed tasks
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mhadoop-sls[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 9 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mhadoop-sls[0;1m ---[m
+[[1;34mINFO[m] Compiling 2 source files to /root/hadoop-3.2.1-src/hadoop-tools/hadoop-sls/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mhadoop-sls[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 16 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mhadoop-sls[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M1:test[m [1m(default-test)[m @ [36mhadoop-sls[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.scheduler.[1mTestTaskRunner[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.502 s - in org.apache.hadoop.yarn.sls.scheduler.[1mTestTaskRunner[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.[1mTestReservationSystemInvariants[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 187.06 s - in org.apache.hadoop.yarn.sls.[1mTestReservationSystemInvariants[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.web.[1mTestSLSWebApp[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in org.apache.hadoop.yarn.sls.web.[1mTestSLSWebApp[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.[1mTestSLSStreamAMSynth[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 68.985 s - in org.apache.hadoop.yarn.sls.[1mTestSLSStreamAMSynth[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.appmaster.[1mTestAMSimulator[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.737 s - in org.apache.hadoop.yarn.sls.appmaster.[1mTestAMSimulator[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.nodemanager.[1mTestNMSimulator[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.45 s - in org.apache.hadoop.yarn.sls.nodemanager.[1mTestNMSimulator[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.[1mTestSLSGenericSynth[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.078 s - in org.apache.hadoop.yarn.sls.[1mTestSLSGenericSynth[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.[1mTestSynthJobGeneration[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.952 s - in org.apache.hadoop.yarn.sls.[1mTestSynthJobGeneration[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.utils.[1mTestSLSUtils[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.667 s - in org.apache.hadoop.yarn.sls.utils.[1mTestSLSUtils[m
+[[1;34mINFO[m] Running org.apache.hadoop.yarn.sls.[1mTestSLSRunner[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 242.11 s - in org.apache.hadoop.yarn.sls.[1mTestSLSRunner[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 41, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  09:52 min
+[[1;34mINFO[m] Finished at: 2020-04-12T05:45:55Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
