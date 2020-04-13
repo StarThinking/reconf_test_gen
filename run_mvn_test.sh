@@ -24,7 +24,8 @@ sub_project="$project_root_dir""$raw_sub_project"
 #echo "sub_project for $the_test is $sub_project"
 
 # run mvn test
-cd $sub_project; mvn test -Dtest=$the_test
+#cd $sub_project; mvn test -Dtest=$the_test
+cd $project_root_dir; mvn test -Dtest=$the_test
 
 # log
 test_log="$sub_project"/target/surefire-reports/"$the_test"-output.txt
