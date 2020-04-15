@@ -1,0 +1,149 @@
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionToCurrentStateIsANop
+msx-listener unitTestCounterInClass = 0
+2020-04-15 18:08:01,952 [Thread-0] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:02,879 [Listener at localhost/44192] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:02,883 [Listener at localhost/44192] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:03,011 [Listener at localhost/36404] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:03,058 [Listener at localhost/36404] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:08:03,676 [Listener at localhost/32896] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:08:04,404 [Listener at localhost/32896] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:08:04,547 [Listener at localhost/32896] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:04,615 [Listener at localhost/32896] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionToCurrentStateIsANop
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionToCurrentStateIsANop
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testFailoverWithEmptyInProgressEditLogWithHeader
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+2020-04-15 18:08:04,760 [Thread-124] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:04,875 [Listener at localhost/46131] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:04,879 [Listener at localhost/46131] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:05,006 [Listener at localhost/41110] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:05,352 [Listener at localhost/41110] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:05,464 [Listener at localhost/41110] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testFailoverWithEmptyInProgressEditLogWithHeader
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testFailoverWithEmptyInProgressEditLogWithHeader
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testIsAtLeastOneActive
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+2020-04-15 18:08:05,723 [Thread-210] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:05,840 [Listener at localhost/46761] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:05,848 [Listener at localhost/46761] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:05,950 [Listener at localhost/40758] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:06,329 [Listener at localhost/40758] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:06,371 [Listener at localhost/40758] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testIsAtLeastOneActive
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testIsAtLeastOneActive
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testManualFailoverAndFailback
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+2020-04-15 18:08:06,465 [Thread-298] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:06,585 [Listener at localhost/40969] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:06,587 [Listener at localhost/40969] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:06,714 [Listener at localhost/43542] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:06,722 [Listener at localhost/43542] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:08:06,778 [Listener at localhost/41540] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:08:07,771 [Listener at localhost/41540] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:08:07,811 [Listener at localhost/41540] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:07,829 [Listener at localhost/41540] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testManualFailoverAndFailback
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testManualFailoverAndFailback
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testFailoverWithEmptyInProgressEditLog
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+2020-04-15 18:08:07,929 [Thread-439] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:08,014 [Listener at localhost/34752] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:08,017 [Listener at localhost/34752] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:08,128 [Listener at localhost/40364] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:08,191 [Listener at localhost/40364] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:08,234 [Listener at localhost/40364] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testFailoverWithEmptyInProgressEditLog
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testFailoverWithEmptyInProgressEditLog
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testManualFailoverFailbackFederationHA
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+2020-04-15 18:08:08,344 [Thread-525] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:08,521 [Listener at localhost/46739] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:08,524 [Listener at localhost/46739] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:08,660 [Listener at localhost/40033] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:08,717 [Listener at localhost/40033] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:08,829 [Listener at localhost/42650] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:08,834 [Listener at localhost/42650] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:08,941 [Listener at localhost/37455] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:08,949 [Listener at localhost/37455] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:08:09,053 [Listener at localhost/38594] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:08:10,611 [Listener at localhost/38594] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:08:10,646 [Listener at localhost/38594] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:10,667 [Listener at localhost/38594] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:10,698 [Listener at localhost/38594] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:10,735 [Listener at localhost/38594] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testManualFailoverFailbackFederationHA
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testManualFailoverFailbackFederationHA
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testDelegationTokensAfterFailover
+msx-listener perform reset as unitTestCounterInClass 6 is larger than zero
+2020-04-15 18:08:10,866 [Thread-778] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:10,953 [Listener at localhost/36703] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:10,962 [Listener at localhost/36703] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:11,097 [Listener at localhost/38232] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:11,236 [Listener at localhost/38232] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:11,329 [Listener at localhost/38232] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testDelegationTokensAfterFailover
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testDelegationTokensAfterFailover
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testLeasesRenewedOnTransition
+msx-listener perform reset as unitTestCounterInClass 7 is larger than zero
+2020-04-15 18:08:11,452 [Thread-872] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:11,537 [Listener at localhost/45773] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:11,541 [Listener at localhost/45773] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:11,645 [Listener at localhost/32956] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:11,674 [Listener at localhost/32956] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:08:11,734 [Listener at localhost/41260] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:08:13,249 [Listener at localhost/41260] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:08:13,369 [Listener at localhost/41260] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:13,409 [Listener at localhost/41260] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testLeasesRenewedOnTransition
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testLeasesRenewedOnTransition
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionActiveToStandby
+msx-listener perform reset as unitTestCounterInClass 8 is larger than zero
+2020-04-15 18:08:13,583 [Thread-997] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:13,676 [Listener at localhost/34119] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:13,678 [Listener at localhost/34119] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:13,803 [Listener at localhost/37676] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:13,810 [Listener at localhost/37676] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:08:13,870 [Listener at localhost/33275] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:08:14,694 [Listener at localhost/33275] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:08:14,746 [Listener at localhost/33275] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:14,771 [Listener at localhost/33275] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionActiveToStandby
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionActiveToStandby
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionSynchronization
+msx-listener perform reset as unitTestCounterInClass 9 is larger than zero
+2020-04-15 18:08:14,931 [Thread-1130] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:15,107 [Listener at localhost/34215] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:15,114 [Listener at localhost/34215] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:15,235 [Listener at localhost/45129] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:58,201 [Listener at localhost/45129] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:58,416 [Listener at localhost/45129] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionSynchronization
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testTransitionSynchronization
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testSecretManagerState
+msx-listener perform reset as unitTestCounterInClass 10 is larger than zero
+2020-04-15 18:08:58,560 [Thread-1453] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:58,687 [Listener at localhost/35174] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:58,689 [Listener at localhost/35174] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:58,797 [Listener at localhost/34679] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:08:58,803 [Listener at localhost/34679] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:08:58,846 [Listener at localhost/43569] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:08:59,491 [Listener at localhost/43569] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:08:59,522 [Listener at localhost/43569] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:08:59,704 [Listener at localhost/35174] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:09:06,275 [Listener at localhost/35174] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:09:06,315 [Listener at localhost/35174] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:09:06,340 [Listener at localhost/35174] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testSecretManagerState
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHAStateTransitions#testSecretManagerState
+msx-listener succeed
+msx-listener all testRunFinished
