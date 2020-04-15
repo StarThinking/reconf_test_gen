@@ -1,0 +1,27 @@
+msx-listener test started org.apache.hadoop.streaming.TestMultipleCachefiles#testMultipleCachefiles
+msx-listener unitTestCounterInClass = 0
+2020-04-15 20:32:38,593 INFO  [main] namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 20:32:39,922 INFO  [Listener at localhost/35108] namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 20:32:40,042 INFO  [Listener at localhost/35108] datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 20:32:41,211 INFO  [Listener at localhost/35732] datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 20:32:43,089 INFO  [Listener at localhost/35732] v2.MiniMRYarnCluster (MiniMRYarnCluster.java:serviceInit(239)) - msx-mapreduce JobHistoryServer init
+2020-04-15 20:32:43,407 INFO  [Listener at localhost/35732] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(499)) - msx-yarn ResourceManager init
+2020-04-15 20:32:43,842 INFO  [Listener at localhost/35732] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(605)) - msx-yarn NodeManager init
+2020-04-15 20:32:43,842 INFO  [Listener at localhost/35732] v2.MiniMRYarnCluster (MiniMRYarnCluster.java:serviceStart(244)) - msx-mapreduce JobHistoryServer start
+2020-04-15 20:32:46,988 INFO  [Listener at b1550957ec4c/40677] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(504)) - msx-yarn ResourceManager start
+2020-04-15 20:32:48,248 INFO  [Listener at b1550957ec4c/46413] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(629)) - msx-yarn NodeManager start
+2020-04-15 20:32:56,685 INFO  [Listener at b1550957ec4c/37802] datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 20:32:56,793 INFO  [Listener at b1550957ec4c/37802] namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 20:32:56,867 INFO  [Listener at b1550957ec4c/37802] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(640)) - msx-yarn NodeManager stop
+2020-04-15 20:33:13,948 INFO  [Listener at b1550957ec4c/37802] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(534)) - msx-yarn ResourceManager stop
+2020-04-15 20:33:14,042 INFO  [Listener at b1550957ec4c/37802] v2.MiniMRYarnCluster (MiniMRYarnCluster.java:serviceStop(280)) - msx-mapreduce JobHistoryServer stop
+msx-listener test Failure org.apache.hadoop.streaming.TestMultipleCachefiles#testMultipleCachefiles
+msx-listener writeFile testName is org.apache.hadoop.streaming.TestMultipleCachefiles#testMultipleCachefiles
+msx-listener failed
+msx-listener failureMessage: File /testing-streaming/out does not exist.
+msx-listener stackTrace: java.io.FileNotFoundException: File /testing-streaming/out does not exist.
+msx-listener testfinished org.apache.hadoop.streaming.TestMultipleCachefiles#testMultipleCachefiles
+msx-listener writeFile testName is org.apache.hadoop.streaming.TestMultipleCachefiles#testMultipleCachefiles
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.streaming.TestMultipleCachefiles#testMultipleCachefiles
+msx-listener succeed
+msx-listener all testRunFinished
