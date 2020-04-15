@@ -25,7 +25,6 @@ sub_project="$project_root_dir""$raw_sub_project"
 # run mvn test
 #cd $sub_project; mvn test -Dtest=$the_test
 echo "the_test is $the_test"
-sleep 5
 cd $project_root_dir; mvn test -Dtest=$the_test
 
 # log
