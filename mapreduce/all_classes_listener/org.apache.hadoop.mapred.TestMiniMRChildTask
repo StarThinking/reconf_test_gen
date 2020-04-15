@@ -1,0 +1,26 @@
+2020-04-15 17:45:29,453 INFO  [main] namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 17:45:31,359 INFO  [Listener at localhost/41486] namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 17:45:31,518 INFO  [Listener at localhost/41486] datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 17:45:32,941 INFO  [Listener at localhost/36177] datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 17:45:34,597 INFO  [Listener at localhost/36177] v2.MiniMRYarnCluster (MiniMRYarnCluster.java:serviceInit(239)) - msx-mapreduce JobHistoryServer init
+2020-04-15 17:45:34,914 INFO  [Listener at localhost/36177] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(499)) - msx-yarn ResourceManager init
+2020-04-15 17:45:35,448 INFO  [Listener at localhost/36177] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(605)) - msx-yarn NodeManager init
+2020-04-15 17:45:35,449 INFO  [Listener at localhost/36177] v2.MiniMRYarnCluster (MiniMRYarnCluster.java:serviceStart(244)) - msx-mapreduce JobHistoryServer start
+2020-04-15 17:45:38,620 INFO  [Listener at 5ae00577af4c/41718] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(504)) - msx-yarn ResourceManager start
+2020-04-15 17:45:40,176 INFO  [Listener at 5ae00577af4c/33255] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(629)) - msx-yarn NodeManager start
+msx-listener test started org.apache.hadoop.mapred.TestMiniMRChildTask#testTaskEnv
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.mapred.TestMiniMRChildTask#testTaskEnv
+msx-listener writeFile testName is org.apache.hadoop.mapred.TestMiniMRChildTask#testTaskEnv
+msx-listener succeed
+msx-listener test started org.apache.hadoop.mapred.TestMiniMRChildTask#testTaskOldEnv
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.mapred.TestMiniMRChildTask#testTaskOldEnv
+msx-listener writeFile testName is org.apache.hadoop.mapred.TestMiniMRChildTask#testTaskOldEnv
+msx-listener succeed
+2020-04-15 17:46:22,633 INFO  [Listener at 5ae00577af4c/46321] datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 17:46:23,093 INFO  [Listener at 5ae00577af4c/46321] namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 17:46:23,264 INFO  [Listener at 5ae00577af4c/46321] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(640)) - msx-yarn NodeManager stop
+2020-04-15 17:46:40,356 INFO  [Listener at 5ae00577af4c/46321] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(534)) - msx-yarn ResourceManager stop
+2020-04-15 17:46:40,386 INFO  [Listener at 5ae00577af4c/46321] v2.MiniMRYarnCluster (MiniMRYarnCluster.java:serviceStop(280)) - msx-mapreduce JobHistoryServer stop
+msx-listener all testRunFinished
