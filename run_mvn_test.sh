@@ -25,8 +25,8 @@ sleep 10
 
 # run mvn test
 echo "the_test is $the_test"
-#cd $project_root_dir; mvn test -Dtest=$the_test
-cd $sub_project; mvn test -Dtest=$the_test
+cd $project_root_dir; mvn test -Dtest=$the_test
+#cd $sub_project; mvn test -Dtest=$the_test
 
 # log
 test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt
