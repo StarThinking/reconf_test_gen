@@ -21,7 +21,6 @@ if [ "$raw_sub_project" == "" ]; then
 fi
 sub_project="$project_root_dir""$raw_sub_project"
 echo "sub_project for $the_test is $sub_project"
-sleep 10
 
 # run mvn test
 echo "the_test is $the_test"
