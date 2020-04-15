@@ -1,89 +1,0 @@
-[[1;34mINFO[m] Scanning for projects...
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m---< [0;36morg.apache.hadoop:hadoop-yarn-server-applicationhistoryservice[0;1m >---[m
-[[1;34mINFO[m] [1mBuilding Apache Hadoop YARN ApplicationHistoryService 3.2.1[m
-[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
-Downloading from apache.snapshots.https: https://repository.apache.org/content/repositories/snapshots/org/apache/hadoop/hadoop-auth/3.2.1/hadoop-auth-3.2.1-tests.jar
-Downloading from repository.jboss.org: https://repository.jboss.org/nexus/content/groups/public/org/apache/hadoop/hadoop-auth/3.2.1/hadoop-auth-3.2.1-tests.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-auth/3.2.1/hadoop-auth-3.2.1-tests.jar
-Progress (1): 2.2/146 kBProgress (1): 5.0/146 kBProgress (1): 7.7/146 kBProgress (1): 10/146 kB Progress (1): 13/146 kBProgress (1): 16/146 kBProgress (1): 19/146 kBProgress (1): 21/146 kBProgress (1): 24/146 kBProgress (1): 27/146 kBProgress (1): 30/146 kBProgress (1): 32/146 kBProgress (1): 36/146 kBProgress (1): 40/146 kBProgress (1): 45/146 kBProgress (1): 49/146 kBProgress (1): 53/146 kBProgress (1): 57/146 kBProgress (1): 61/146 kBProgress (1): 65/146 kBProgress (1): 69/146 kBProgress (1): 73/146 kBProgress (1): 77/146 kBProgress (1): 81/146 kBProgress (1): 85/146 kBProgress (1): 90/146 kBProgress (1): 94/146 kBProgress (1): 98/146 kBProgress (1): 102/146 kBProgress (1): 106/146 kBProgress (1): 110/146 kBProgress (1): 114/146 kBProgress (1): 118/146 kBProgress (1): 122/146 kBProgress (1): 126/146 kBProgress (1): 131/146 kBProgress (1): 135/146 kBProgress (1): 139/146 kBProgress (1): 143/146 kBProgress (1): 146 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/hadoop/hadoop-auth/3.2.1/hadoop-auth-3.2.1-tests.jar (146 kB at 421 kB/s)
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-antrun-plugin:1.7:run[m [1m(create-testdirs)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] Executing tasks
-
-main:
-[[1;34mINFO[m] Executed tasks
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mhadoop-maven-plugins:3.2.1:protoc[m [1m(compile-protoc)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] No changes detected in protoc files, skipping generation.
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
-[[1;34mINFO[m] skip non existing resourceDirectory /root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/resources
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] Nothing to compile - all classes are up to date
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
-[[1;34mINFO[m] skip non existing resourceDirectory /root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/test/resources
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] Nothing to compile - all classes are up to date
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.5:test-jar[m [1m(default)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M1:test[m [1m(default-test)[m @ [36mhadoop-yarn-server-applicationhistoryservice[0;1m ---[m
-[[1;34mINFO[m] 
-[[1;34mINFO[m] -------------------------------------------------------
-[[1;34mINFO[m]  T E S T S
-[[1;34mINFO[m] -------------------------------------------------------
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestFileSystemApplicationHistoryStore[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.411 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestFileSystemApplicationHistoryStore[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryManagerImpl[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.36 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryManagerImpl[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestMemoryApplicationHistoryStore[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.695 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestMemoryApplicationHistoryStore[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryClientService[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.617 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryClientService[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryServer[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.451 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryServer[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryManagerOnTimelineStore[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m40[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.169 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.[1mTestApplicationHistoryManagerOnTimelineStore[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.webapp.[1mTestAHSWebServices[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m36[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.262 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.webapp.[1mTestAHSWebServices[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.applicationhistoryservice.webapp.[1mTestAHSWebApp[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.767 s - in org.apache.hadoop.yarn.server.applicationhistoryservice.webapp.[1mTestAHSWebApp[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.[1mTestMemoryTimelineStore[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.211 s - in org.apache.hadoop.yarn.server.timeline.[1mTestMemoryTimelineStore[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.[1mTestRollingLevelDB[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.732 s - in org.apache.hadoop.yarn.server.timeline.[1mTestRollingLevelDB[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.security.[1mTestTimelineAuthenticationFilterForV1[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.065 s - in org.apache.hadoop.yarn.server.timeline.security.[1mTestTimelineAuthenticationFilterForV1[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.security.[1mTestTimelineACLsManager[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.452 s - in org.apache.hadoop.yarn.server.timeline.security.[1mTestTimelineACLsManager[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.[1mTestTimelineDataManager[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.072 s - in org.apache.hadoop.yarn.server.timeline.[1mTestTimelineDataManager[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.[1mTestGenericObjectMapper[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.368 s - in org.apache.hadoop.yarn.server.timeline.[1mTestGenericObjectMapper[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.[1mTestRollingLevelDBTimelineStore[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m16[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.492 s - in org.apache.hadoop.yarn.server.timeline.[1mTestRollingLevelDBTimelineStore[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.recovery.[1mTestLeveldbTimelineStateStore[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.714 s - in org.apache.hadoop.yarn.server.timeline.recovery.[1mTestLeveldbTimelineStateStore[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.webapp.[1mTestTimelineWebServicesWithSSL[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.011 s - in org.apache.hadoop.yarn.server.timeline.webapp.[1mTestTimelineWebServicesWithSSL[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.webapp.[1mTestTimelineWebServices[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m26[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.614 s - in org.apache.hadoop.yarn.server.timeline.webapp.[1mTestTimelineWebServices[m
-[[1;34mINFO[m] Running org.apache.hadoop.yarn.server.timeline.[1mTestLeveldbTimelineStore[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.174 s - in org.apache.hadoop.yarn.server.timeline.[1mTestLeveldbTimelineStore[m
-[[1;34mINFO[m] 
-[[1;34mINFO[m] Results:
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1;32mTests run: 205, Failures: 0, Errors: 0, Skipped: 0[m
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
-[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  02:41 min
-[[1;34mINFO[m] Finished at: 2020-04-08T23:07:07Z
-[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

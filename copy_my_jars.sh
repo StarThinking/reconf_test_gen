@@ -12,7 +12,7 @@ cp /root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/had
 ls -la /root/.m2/repository/org/apache/hadoop/hadoop-yarn-server-tests/3.2.1/
 
 # HBase HMaster HRegionServer
-cp /root/hbase-2.2.4/hbase-server/target/*.jar /root/.m2/repository/org/apache/hbase/hbase-server/2.2.4/
+cp /root/hadoop-3.2.1-src/hbase-2.2.4/hbase-server/target/*.jar /root/.m2/repository/org/apache/hbase/hbase-server/2.2.4/
 ls -la /root/.m2/repository/org/apache/hbase/hbase-server/2.2.4/
 
 # MapReduce

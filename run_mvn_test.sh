@@ -20,12 +20,13 @@ if [ "$raw_sub_project" == "" ]; then
     echo "ERROR: cannot find sub_project for $the_test"; exit -1;
 fi
 sub_project="$project_root_dir""$raw_sub_project"
-#echo "sub_project for $the_test is $sub_project"
+echo "sub_project for $the_test is $sub_project"
+sleep 10
 
 # run mvn test
-#cd $sub_project; mvn test -Dtest=$the_test
 echo "the_test is $the_test"
-cd $project_root_dir; mvn test -Dtest=$the_test
+#cd $project_root_dir; mvn test -Dtest=$the_test
+cd $sub_project; mvn test -Dtest=$the_test
 
 # log
 test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt
