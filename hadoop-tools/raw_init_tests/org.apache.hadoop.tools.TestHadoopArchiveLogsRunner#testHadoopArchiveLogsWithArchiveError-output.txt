@@ -1,0 +1,843 @@
+msx-listener test started org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
+msx-listener unitTestCounterInClass = 0
+2020-04-16 00:19:23,320 INFO  [Thread-0] Configuration.deprecation (Configuration.java:logDeprecation(1395)) - yarn.resourcemanager.zk-timeout-ms is deprecated. Instead, use hadoop.zk.timeout-ms
+2020-04-16 00:19:23,365 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - resource-types.xml not found
+2020-04-16 00:19:23,366 INFO  [Thread-0] resource.ResourceUtils (ResourceUtils.java:addResourcesFileToConf(440)) - Unable to find 'resource-types.xml'.
+2020-04-16 00:19:23,529 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - core-site.xml not found
+2020-04-16 00:19:23,614 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - yarn-site.xml not found
+2020-04-16 00:19:23,620 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.RMFatalEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMFatalEventDispatcher
+2020-04-16 00:19:23,751 INFO  [Thread-0] security.NMTokenSecretManagerInRM (NMTokenSecretManagerInRM.java:<init>(75)) - NMTokenKeyRollingInterval: 86400000ms and NMTokenKeyActivationDelay: 900000ms
+2020-04-16 00:19:23,756 INFO  [Thread-0] security.RMContainerTokenSecretManager (RMContainerTokenSecretManager.java:<init>(81)) - ContainerTokenKeyRollingInterval: 86400000ms and ContainerTokenKeyActivationDelay: 900000ms
+2020-04-16 00:19:23,764 INFO  [Thread-0] security.AMRMTokenSecretManager (AMRMTokenSecretManager.java:<init>(94)) - AMRMTokenKeyRollingInterval: 86400000ms and AMRMTokenKeyActivationDelay: 900000 ms
+2020-04-16 00:19:23,861 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStoreEventType for class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore$ForwardingEventHandler
+2020-04-16 00:19:23,867 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.NodesListManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.NodesListManager
+2020-04-16 00:19:23,868 INFO  [Thread-0] resourcemanager.ResourceManager (ResourceManager.java:createScheduler(445)) - Using Scheduler: org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler
+2020-04-16 00:19:23,927 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.scheduler.event.SchedulerEventType for class org.apache.hadoop.yarn.event.EventDispatcher
+2020-04-16 00:19:23,929 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationEventDispatcher
+2020-04-16 00:19:23,931 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationAttemptEventDispatcher
+2020-04-16 00:19:23,932 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$NodeEventDispatcher
+2020-04-16 00:19:24,023 WARN  [Thread-0] impl.MetricsConfig (MetricsConfig.java:loadFirst(134)) - Cannot locate configuration: tried hadoop-metrics2-resourcemanager.properties,hadoop-metrics2.properties
+2020-04-16 00:19:24,143 INFO  [Thread-0] impl.MetricsSystemImpl (MetricsSystemImpl.java:startTimer(374)) - Scheduled Metric snapshot period at 10 second(s).
+2020-04-16 00:19:24,144 INFO  [Thread-0] impl.MetricsSystemImpl (MetricsSystemImpl.java:start(191)) - ResourceManager metrics system started
+2020-04-16 00:19:24,174 INFO  [Thread-0] security.YarnAuthorizationProvider (YarnAuthorizationProvider.java:getInstance(58)) - org.apache.hadoop.yarn.security.ConfiguredYarnAuthorizer is instantiated.
+2020-04-16 00:19:24,179 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.RMAppManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.RMAppManager
+2020-04-16 00:19:24,198 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.AMLauncherEventType for class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher
+2020-04-16 00:19:24,202 INFO  [Thread-0] resourcemanager.RMNMInfo (RMNMInfo.java:<init>(65)) - Registered RMNMInfo MBean
+2020-04-16 00:19:24,203 INFO  [Thread-0] monitor.RMAppLifetimeMonitor (RMAppLifetimeMonitor.java:serviceInit(66)) - Application lifelime monitor interval set to 3000 ms.
+2020-04-16 00:19:24,214 INFO  [Thread-0] placement.MultiNodeSortingManager (MultiNodeSortingManager.java:serviceInit(59)) - Initializing NodeSortingService=MultiNodeSortingManager
+2020-04-16 00:19:24,219 INFO  [Thread-0] util.HostsFileReader (HostsFileReader.java:refresh(211)) - Refreshing hosts (include/exclude) list
+2020-04-16 00:19:24,241 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2798)) - found resource capacity-scheduler.xml at jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-server-tests/3.2.1/hadoop-yarn-server-tests-3.2.1-tests.jar!/capacity-scheduler.xml
+2020-04-16 00:19:24,297 INFO  [Thread-0] scheduler.AbstractYarnScheduler (AbstractYarnScheduler.java:getMinimumAllocation(1402)) - Minimum allocation = <memory:1024, vCores:1>
+2020-04-16 00:19:24,298 INFO  [Thread-0] scheduler.AbstractYarnScheduler (AbstractYarnScheduler.java:getMaximumAllocation(1414)) - Maximum allocation = <memory:8192, vCores:4>
+2020-04-16 00:19:24,375 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(915)) - max alloc mb per queue for root is undefined
+2020-04-16 00:19:24,376 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(919)) - max alloc vcore per queue for root is undefined
+2020-04-16 00:19:24,397 INFO  [Thread-0] capacity.ParentQueue (ParentQueue.java:setupQueueConfigs(151)) - root, capacity=1.0, absoluteCapacity=1.0, maxCapacity=1.0, absoluteMaxCapacity=1.0, state=RUNNING, acls=ADMINISTER_QUEUE:*SUBMIT_APP:*, labels=*,
+, reservationsContinueLooking=true, orderingPolicy=utilization, priority=0
+2020-04-16 00:19:24,398 INFO  [Thread-0] capacity.ParentQueue (ParentQueue.java:<init>(114)) - Initialized parent-queue root name=root, fullname=root
+2020-04-16 00:19:24,441 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(915)) - max alloc mb per queue for root.default is undefined
+2020-04-16 00:19:24,442 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(919)) - max alloc vcore per queue for root.default is undefined
+2020-04-16 00:19:24,449 INFO  [Thread-0] capacity.LeafQueue (LeafQueue.java:setupQueueConfigs(285)) - Initializing default
+capacity = 1.0 [= (float) configuredCapacity / 100 ]
+absoluteCapacity = 1.0 [= parentAbsoluteCapacity * capacity ]
+maxCapacity = 1.0 [= configuredMaxCapacity ]
+absoluteMaxCapacity = 1.0 [= 1.0 maximumCapacity undefined, (parentAbsoluteMaxCapacity * maximumCapacity) / 100 otherwise ]
+effectiveMinResource=<memory:0, vCores:0>
+ , effectiveMaxResource=<memory:0, vCores:0>
+userLimit = 100 [= configuredUserLimit ]
+userLimitFactor = 1.0 [= configuredUserLimitFactor ]
+maxApplications = 10000 [= configuredMaximumSystemApplicationsPerQueue or (int)(configuredMaximumSystemApplications * absoluteCapacity)]
+maxApplicationsPerUser = 10000 [= (int)(maxApplications * (userLimit / 100.0f) * userLimitFactor) ]
+usedCapacity = 0.0 [= usedResourcesMemory / (clusterResourceMemory * absoluteCapacity)]
+absoluteUsedCapacity = 0.0 [= usedResourcesMemory / clusterResourceMemory]
+maxAMResourcePerQueuePercent = 0.1 [= configuredMaximumAMResourcePercent ]
+minimumAllocationFactor = 0.875 [= (float)(maximumAllocationMemory - minimumAllocationMemory) / maximumAllocationMemory ]
+maximumAllocation = <memory:8192, vCores:4> [= configuredMaxAllocation ]
+numContainers = 0 [= currentNumContainers ]
+state = RUNNING [= configuredState ]
+acls = ADMINISTER_QUEUE:*SUBMIT_APP:* [= configuredAcls ]
+nodeLocalityDelay = -1
+rackLocalityAdditionalDelay = -1
+labels=*,
+reservationsContinueLooking = true
+preemptionDisabled = true
+defaultAppPriorityPerQueue = 0
+priority = 0
+maxLifetime = -1 seconds
+defaultLifetime = -1 seconds
+2020-04-16 00:19:24,451 INFO  [Thread-0] capacity.CapacitySchedulerQueueManager (CapacitySchedulerQueueManager.java:parseQueue(298)) - Initialized queue: default: capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>, usedCapacity=0.0, absoluteUsedCapacity=0.0, numApps=0, numContainers=0, effectiveMinResource=<memory:0, vCores:0> , effectiveMaxResource=<memory:0, vCores:0>
+2020-04-16 00:19:24,452 INFO  [Thread-0] capacity.CapacitySchedulerQueueManager (CapacitySchedulerQueueManager.java:parseQueue(298)) - Initialized queue: root: numChildQueue= 1, capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>usedCapacity=0.0, numApps=0, numContainers=0
+2020-04-16 00:19:24,455 INFO  [Thread-0] capacity.CapacitySchedulerQueueManager (CapacitySchedulerQueueManager.java:initializeQueues(163)) - Initialized root queue root: numChildQueue= 1, capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>usedCapacity=0.0, numApps=0, numContainers=0
+2020-04-16 00:19:24,456 INFO  [Thread-0] placement.UserGroupMappingPlacementRule (UserGroupMappingPlacementRule.java:initialize(237)) - Initialized queue mappings, override: false
+2020-04-16 00:19:24,458 INFO  [Thread-0] placement.MultiNodeSortingManager (MultiNodeSortingManager.java:registerMultiNodePolicyNames(104)) - MultiNode scheduling is 'false', and configured policies are 
+2020-04-16 00:19:24,459 INFO  [Thread-0] capacity.CapacityScheduler (CapacityScheduler.java:initScheduler(408)) - Initialized CapacityScheduler with calculator=class org.apache.hadoop.yarn.util.resource.DefaultResourceCalculator, minimumAllocation=<<memory:1024, vCores:1>>, maximumAllocation=<<memory:8192, vCores:4>>, asynchronousScheduling=false, asyncScheduleInterval=5ms,multiNodePlacementEnabled=false
+2020-04-16 00:19:24,471 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - dynamic-resources.xml not found
+2020-04-16 00:19:24,475 INFO  [Thread-0] resourcemanager.AMSProcessingChain (AMSProcessingChain.java:init(62)) - Initializing AMS Processing chain. Root Processor=[org.apache.hadoop.yarn.server.resourcemanager.DefaultAMSProcessor].
+2020-04-16 00:19:24,476 INFO  [Thread-0] resourcemanager.ApplicationMasterService (ApplicationMasterService.java:addPlacementConstraintHandler(132)) - disabled placement handler will be used, all scheduling requests will be rejected.
+2020-04-16 00:19:24,478 INFO  [Thread-0] resourcemanager.AMSProcessingChain (AMSProcessingChain.java:addProcessor(75)) - Adding [org.apache.hadoop.yarn.server.resourcemanager.scheduler.constraint.processor.DisabledPlacementProcessor] tp top of AMS Processing chain. 
+2020-04-16 00:19:24,495 INFO  [Thread-0] resourcemanager.ResourceManager (ResourceManager.java:createSystemMetricsPublisher(580)) - TimelineServicePublisher is not configured
+2020-04-16 00:19:24,503 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$1
+2020-04-16 00:19:24,504 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(499)) - msx-yarn ResourceManager init
+2020-04-16 00:19:24,506 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:prepareDirs(621)) - Created localDir in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/TestHadoopArchiveLogsRunner/TestHadoopArchiveLogsRunner-localDir-nm-0_0
+2020-04-16 00:19:24,506 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:prepareDirs(621)) - Created logDir in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/TestHadoopArchiveLogsRunner/TestHadoopArchiveLogsRunner-logDir-nm-0_0
+2020-04-16 00:19:24,511 INFO  [Thread-0] net.ServerSocketUtil (ServerSocketUtil.java:getPort(53)) - Using port 8048
+2020-04-16 00:19:24,512 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(602)) - Starting NM: 0
+2020-04-16 00:19:24,544 INFO  [Thread-0] resourceplugin.ResourcePluginManager (ResourcePluginManager.java:getPluginsFromConfig(72)) - No Resource plugins found from configuration!
+2020-04-16 00:19:24,544 INFO  [Thread-0] resourceplugin.ResourcePluginManager (ResourcePluginManager.java:getPluginsFromConfig(74)) - Found Resource plugins from configuration: null
+2020-04-16 00:19:24,574 INFO  [Thread-0] nodemanager.NodeManager (NodeManager.java:getNodeHealthScriptRunner(357)) - Node Manager health check script is not available or doesn't have execute permission, so not starting the node health script runner.
+2020-04-16 00:19:24,648 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ContainerEventDispatcher
+2020-04-16 00:19:24,650 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ApplicationEventDispatcher
+2020-04-16 00:19:24,655 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$LocalizationEventHandlerWrapper
+2020-04-16 00:19:24,656 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServicesEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices
+2020-04-16 00:19:24,657 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl
+2020-04-16 00:19:24,659 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncherEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher
+2020-04-16 00:19:24,660 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerSchedulerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler
+2020-04-16 00:19:24,665 INFO  [Thread-0] tracker.NMLogAggregationStatusTracker (NMLogAggregationStatusTracker.java:<init>(89)) - the rolling interval seconds for the NodeManager Cached Log aggregation status is 600
+2020-04-16 00:19:24,679 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.ContainerManagerEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$CustomContainerManagerImpl
+2020-04-16 00:19:24,680 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.NodeManagerEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$ShortCircuitedNodeManager
+2020-04-16 00:19:24,681 INFO  [Thread-0] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - NodeManager metrics system started (again)
+2020-04-16 00:19:24,704 INFO  [Thread-0] nodemanager.DirectoryCollection (DirectoryCollection.java:<init>(187)) - Disk Validator 'basic' is loaded.
+2020-04-16 00:19:24,725 INFO  [Thread-0] nodemanager.DirectoryCollection (DirectoryCollection.java:<init>(187)) - Disk Validator 'basic' is loaded.
+2020-04-16 00:19:24,766 INFO  [Thread-0] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:serviceInit(75)) -  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@6b2683a3
+2020-04-16 00:19:24,783 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.event.LogHandlerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.logaggregation.LogAggregationService
+2020-04-16 00:19:24,788 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadService
+2020-04-16 00:19:24,788 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:createAMRMProxyService(902)) - CustomAMRMProxyService is disabled
+2020-04-16 00:19:24,789 INFO  [Thread-0] localizer.ResourceLocalizationService (ResourceLocalizationService.java:validateConf(242)) - per directory file limit = 8192
+2020-04-16 00:19:24,878 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$LocalizerTracker
+2020-04-16 00:19:24,883 INFO  [Thread-0] resources.ResourceHandlerModule (ResourceHandlerModule.java:initNetworkResourceHandler(200)) - Using traffic control bandwidth handler
+2020-04-16 00:19:24,887 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(138)) -  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@1aa9a660
+2020-04-16 00:19:24,888 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(143)) -  Using ResourceCalculatorProcessTree : null
+2020-04-16 00:19:24,890 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(190)) - Physical memory check enabled: true
+2020-04-16 00:19:24,891 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(191)) - Virtual memory check enabled: true
+2020-04-16 00:19:24,891 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(192)) - Elastic memory control enabled: false
+2020-04-16 00:19:24,891 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(193)) - Strict memory control enabled: true
+2020-04-16 00:19:24,892 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(218)) - ContainersMonitor enabled: false
+2020-04-16 00:19:24,895 INFO  [Thread-0] logaggregation.LogAggregationService (LogAggregationService.java:calculateRollingMonitorInterval(115)) - rollingMonitorInterval is set as -1. The log rolling monitoring interval is disabled. The logs will be aggregated after this application is finished.
+2020-04-16 00:19:24,904 INFO  [Thread-0] logaggregation.LogAggregationService (LogAggregationService.java:serviceInit(159)) - rollingMonitorInterval is set as -1. The logs will be aggregated every -1 seconds
+2020-04-16 00:19:24,905 INFO  [Thread-0] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:recover(399)) - Not a recoverable state store. Nothing to recover.
+2020-04-16 00:19:24,907 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - node-resources.xml not found
+2020-04-16 00:19:24,908 INFO  [Thread-0] resource.ResourceUtils (ResourceUtils.java:addResourcesFileToConf(440)) - Unable to find 'node-resources.xml'.
+2020-04-16 00:19:24,911 INFO  [Thread-0] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceInit(201)) - Nodemanager resources is set to: <memory:4096, vCores:8>
+2020-04-16 00:19:24,955 INFO  [Thread-0] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceInit(249)) - Initialized nodemanager with : physical-memory=4096 virtual-memory=8602 virtual-cores=8
+2020-04-16 00:19:24,956 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(605)) - msx-yarn NodeManager init
+2020-04-16 00:19:24,957 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:prepareDirs(621)) - Created localDir in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/TestHadoopArchiveLogsRunner/TestHadoopArchiveLogsRunner-localDir-nm-1_0
+2020-04-16 00:19:24,957 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:prepareDirs(621)) - Created logDir in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/TestHadoopArchiveLogsRunner/TestHadoopArchiveLogsRunner-logDir-nm-1_0
+2020-04-16 00:19:24,958 INFO  [Thread-0] net.ServerSocketUtil (ServerSocketUtil.java:getPort(53)) - Using port 8048
+2020-04-16 00:19:24,958 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(602)) - Starting NM: 1
+2020-04-16 00:19:24,959 INFO  [Thread-0] resourceplugin.ResourcePluginManager (ResourcePluginManager.java:getPluginsFromConfig(72)) - No Resource plugins found from configuration!
+2020-04-16 00:19:24,960 INFO  [Thread-0] resourceplugin.ResourcePluginManager (ResourcePluginManager.java:getPluginsFromConfig(74)) - Found Resource plugins from configuration: null
+2020-04-16 00:19:24,976 INFO  [Thread-0] nodemanager.NodeManager (NodeManager.java:getNodeHealthScriptRunner(357)) - Node Manager health check script is not available or doesn't have execute permission, so not starting the node health script runner.
+2020-04-16 00:19:24,977 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ContainerEventDispatcher
+2020-04-16 00:19:24,977 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ApplicationEventDispatcher
+2020-04-16 00:19:24,977 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$LocalizationEventHandlerWrapper
+2020-04-16 00:19:24,978 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServicesEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices
+2020-04-16 00:19:24,978 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl
+2020-04-16 00:19:24,978 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncherEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher
+2020-04-16 00:19:24,978 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerSchedulerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler
+2020-04-16 00:19:24,979 INFO  [Thread-0] tracker.NMLogAggregationStatusTracker (NMLogAggregationStatusTracker.java:<init>(89)) - the rolling interval seconds for the NodeManager Cached Log aggregation status is 600
+2020-04-16 00:19:24,979 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.ContainerManagerEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$CustomContainerManagerImpl
+2020-04-16 00:19:24,979 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.NodeManagerEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$ShortCircuitedNodeManager
+2020-04-16 00:19:24,980 INFO  [Thread-0] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - NodeManager metrics system started (again)
+2020-04-16 00:19:24,999 INFO  [Thread-0] nodemanager.DirectoryCollection (DirectoryCollection.java:<init>(187)) - Disk Validator 'basic' is loaded.
+2020-04-16 00:19:25,014 INFO  [Thread-0] nodemanager.DirectoryCollection (DirectoryCollection.java:<init>(187)) - Disk Validator 'basic' is loaded.
+2020-04-16 00:19:25,020 INFO  [Thread-0] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:serviceInit(75)) -  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@5f28b1e7
+2020-04-16 00:19:25,020 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.event.LogHandlerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.logaggregation.LogAggregationService
+2020-04-16 00:19:25,020 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadService
+2020-04-16 00:19:25,021 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:createAMRMProxyService(902)) - CustomAMRMProxyService is disabled
+2020-04-16 00:19:25,021 INFO  [Thread-0] localizer.ResourceLocalizationService (ResourceLocalizationService.java:validateConf(242)) - per directory file limit = 8192
+2020-04-16 00:19:25,051 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$LocalizerTracker
+2020-04-16 00:19:25,052 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(138)) -  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@4e557a6f
+2020-04-16 00:19:25,052 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(143)) -  Using ResourceCalculatorProcessTree : null
+2020-04-16 00:19:25,068 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(190)) - Physical memory check enabled: true
+2020-04-16 00:19:25,068 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(191)) - Virtual memory check enabled: true
+2020-04-16 00:19:25,068 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(192)) - Elastic memory control enabled: false
+2020-04-16 00:19:25,068 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(193)) - Strict memory control enabled: true
+2020-04-16 00:19:25,068 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(218)) - ContainersMonitor enabled: false
+2020-04-16 00:19:25,070 INFO  [Thread-0] logaggregation.LogAggregationService (LogAggregationService.java:calculateRollingMonitorInterval(115)) - rollingMonitorInterval is set as -1. The log rolling monitoring interval is disabled. The logs will be aggregated after this application is finished.
+2020-04-16 00:19:25,070 INFO  [Thread-0] logaggregation.LogAggregationService (LogAggregationService.java:serviceInit(159)) - rollingMonitorInterval is set as -1. The logs will be aggregated every -1 seconds
+2020-04-16 00:19:25,070 INFO  [Thread-0] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:recover(399)) - Not a recoverable state store. Nothing to recover.
+2020-04-16 00:19:25,071 INFO  [Thread-0] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceInit(201)) - Nodemanager resources is set to: <memory:4096, vCores:8>
+2020-04-16 00:19:25,089 INFO  [Thread-0] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceInit(249)) - Initialized nodemanager with : physical-memory=4096 virtual-memory=8602 virtual-cores=8
+2020-04-16 00:19:25,090 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(605)) - msx-yarn NodeManager init
+2020-04-16 00:19:25,090 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(504)) - msx-yarn ResourceManager start
+2020-04-16 00:19:25,154 INFO  [Thread-0] util.log (Log.java:initialized(192)) - Logging initialized @3872ms
+2020-04-16 00:19:25,781 INFO  [Thread-0] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:25,816 INFO  [Thread-0] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(81)) - Http request log for http.requests.resourcemanager is not defined
+2020-04-16 00:19:25,837 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:19:25,855 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context cluster
+2020-04-16 00:19:25,856 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context logs
+2020-04-16 00:19:25,856 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context static
+2020-04-16 00:19:25,857 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context cluster
+2020-04-16 00:19:25,858 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:19:25,858 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:19:25,861 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /cluster/*
+2020-04-16 00:19:25,861 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /ws/*
+2020-04-16 00:19:25,861 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /app/*
+2020-04-16 00:19:26,667 INFO  [Thread-0] webapp.WebApps (WebApps.java:build(395)) - Registered webapp guice modules
+2020-04-16 00:19:26,674 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 8088
+2020-04-16 00:19:26,676 INFO  [Thread-0] server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:19:26,794 INFO  [Thread-0] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:26,809 INFO  [Thread-0] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:26,813 INFO  [Thread[Thread-30,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(679)) - Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2020-04-16 00:19:26,818 INFO  [Thread[Thread-30,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:26,853 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@43eb1c09{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,AVAILABLE}
+2020-04-16 00:19:26,855 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@2ad5153e{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,AVAILABLE}
+Apr 16, 2020 12:19:27 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.resourcemanager.webapp.JAXBContextResolver as a provider class
+Apr 16, 2020 12:19:27 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebServices as a root resource class
+Apr 16, 2020 12:19:27 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+Apr 16, 2020 12:19:27 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.19 02/11/2015 03:25 AM'
+Apr 16, 2020 12:19:27 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.resourcemanager.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:28 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:31 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebServices to GuiceManagedComponentProvider with the scope "Singleton"
+2020-04-16 00:19:31,574 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@473f4bf7{/,file:///tmp/jetty-0.0.0.0-8088-cluster-_-any-5181245614836339937.dir/webapp/,AVAILABLE}{/cluster}
+2020-04-16 00:19:31,623 INFO  [Thread-0] server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@57bc4795{HTTP/1.1,[http/1.1]}{0.0.0.0:8088}
+2020-04-16 00:19:31,623 INFO  [Thread-0] server.Server (Server.java:doStart(419)) - Started @10341ms
+2020-04-16 00:19:31,624 INFO  [Thread-0] webapp.WebApps (WebApps.java:start(440)) - Web app cluster started at 8088
+2020-04-16 00:19:31,823 INFO  [Thread-0] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 100, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:31,900 INFO  [Socket Reader #1 for port 8033] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 8033
+2020-04-16 00:19:32,243 INFO  [Listener at 0.0.0.0/8033] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.server.api.ResourceManagerAdministrationProtocolPB to the server
+2020-04-16 00:19:32,244 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:32,244 INFO  [IPC Server listener on 8033] ipc.Server (Server.java:run(1298)) - IPC Server listener on 8033: starting
+2020-04-16 00:19:32,285 INFO  [Listener at 0.0.0.0/8033] resourcemanager.ResourceManager (ResourceManager.java:transitionToActive(1297)) - Transitioning to active state
+2020-04-16 00:19:32,893 INFO  [Listener at 0.0.0.0/8033] recovery.RMStateStore (RMStateStore.java:transition(550)) - Updating AMRMToken
+2020-04-16 00:19:32,893 INFO  [Listener at 0.0.0.0/8033] security.RMContainerTokenSecretManager (RMContainerTokenSecretManager.java:rollMasterKey(109)) - Rolling master-key for container-tokens
+2020-04-16 00:19:32,894 INFO  [Listener at 0.0.0.0/8033] security.NMTokenSecretManagerInRM (NMTokenSecretManagerInRM.java:rollMasterKey(95)) - Rolling master-key for nm-tokens
+2020-04-16 00:19:32,895 INFO  [Listener at 0.0.0.0/8033] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:32,901 INFO  [Listener at 0.0.0.0/8033] security.RMDelegationTokenSecretManager (RMDelegationTokenSecretManager.java:storeNewMasterKey(92)) - storing master key with keyID 1
+2020-04-16 00:19:32,901 INFO  [Listener at 0.0.0.0/8033] recovery.RMStateStore (RMStateStore.java:transition(501)) - Storing RMDTMasterKey.
+2020-04-16 00:19:32,903 INFO  [Thread[Thread-40,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(679)) - Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2020-04-16 00:19:32,903 INFO  [Thread[Thread-40,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:32,904 INFO  [Thread[Thread-40,5,main]] security.RMDelegationTokenSecretManager (RMDelegationTokenSecretManager.java:storeNewMasterKey(92)) - storing master key with keyID 2
+2020-04-16 00:19:32,904 INFO  [Thread[Thread-40,5,main]] recovery.RMStateStore (RMStateStore.java:transition(501)) - Storing RMDTMasterKey.
+2020-04-16 00:19:32,910 INFO  [Listener at 0.0.0.0/8033] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.nodelabels.event.NodeLabelsStoreEventType for class org.apache.hadoop.yarn.nodelabels.CommonNodeLabelsManager$ForwardingEventHandler
+2020-04-16 00:19:33,096 INFO  [Listener at 0.0.0.0/8033] store.AbstractFSNodeStore (AbstractFSNodeStore.java:initStore(67)) - Created store directory :file:/tmp/hadoop-yarn-root/node-attribute
+2020-04-16 00:19:33,146 INFO  [Listener at 0.0.0.0/8033] store.AbstractFSNodeStore (AbstractFSNodeStore.java:recoverFromStore(181)) - Finished write mirror at:file:/tmp/hadoop-yarn-root/node-attribute/nodeattribute.mirror
+2020-04-16 00:19:33,148 INFO  [Listener at 0.0.0.0/8033] store.AbstractFSNodeStore (AbstractFSNodeStore.java:recoverFromStore(182)) - Finished create editlog file at:file:/tmp/hadoop-yarn-root/node-attribute/nodeattribute.editlog
+2020-04-16 00:19:33,178 INFO  [Listener at 0.0.0.0/8033] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.nodelabels.NodeAttributesStoreEventType for class org.apache.hadoop.yarn.server.resourcemanager.nodelabels.NodeAttributesManagerImpl$ForwardingEventHandler
+2020-04-16 00:19:33,186 INFO  [Listener at 0.0.0.0/8033] placement.MultiNodeSortingManager (MultiNodeSortingManager.java:serviceStart(66)) - Starting NodeSortingService=MultiNodeSortingManager
+2020-04-16 00:19:33,251 INFO  [Listener at 0.0.0.0/8033] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:33,252 INFO  [Socket Reader #1 for port 8031] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 8031
+2020-04-16 00:19:33,272 INFO  [Listener at 0.0.0.0/8031] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.server.api.ResourceTrackerPB to the server
+2020-04-16 00:19:33,281 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:33,301 INFO  [IPC Server listener on 8031] ipc.Server (Server.java:run(1298)) - IPC Server listener on 8031: starting
+2020-04-16 00:19:33,346 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@4abe31f1] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:19:33,383 INFO  [Listener at 0.0.0.0/8031] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:33,400 INFO  [Socket Reader #1 for port 8030] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 8030
+2020-04-16 00:19:33,420 INFO  [Listener at 0.0.0.0/8030] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.api.ApplicationMasterProtocolPB to the server
+2020-04-16 00:19:33,425 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:33,429 INFO  [IPC Server listener on 8030] ipc.Server (Server.java:run(1298)) - IPC Server listener on 8030: starting
+2020-04-16 00:19:33,732 INFO  [Listener at 0.0.0.0/8030] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:33,733 INFO  [Socket Reader #1 for port 8032] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 8032
+2020-04-16 00:19:33,738 INFO  [Listener at 0.0.0.0/8032] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.api.ApplicationClientProtocolPB to the server
+2020-04-16 00:19:33,740 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:33,745 INFO  [IPC Server listener on 8032] ipc.Server (Server.java:run(1298)) - IPC Server listener on 8032: starting
+2020-04-16 00:19:33,793 INFO  [Listener at 0.0.0.0/8032] resourcemanager.ResourceManager (ResourceManager.java:transitionToActive(1313)) - Transitioned to active state
+2020-04-16 00:19:33,798 INFO  [Listener at 0.0.0.0/8032] server.MiniYARNCluster (MiniYARNCluster.java:startResourceManager(376)) - MiniYARN ResourceManager address: c5e374aa2199:8032
+2020-04-16 00:19:33,799 INFO  [Listener at 0.0.0.0/8032] server.MiniYARNCluster (MiniYARNCluster.java:startResourceManager(378)) - MiniYARN ResourceManager web address: 0.0.0.0:8088
+2020-04-16 00:19:33,799 INFO  [Listener at 0.0.0.0/8032] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(512)) - Starting resourcemanager 0
+2020-04-16 00:19:33,800 INFO  [Listener at 0.0.0.0/8032] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(513)) - MiniYARN ResourceManager address: c5e374aa2199:8032
+2020-04-16 00:19:33,801 INFO  [Listener at 0.0.0.0/8032] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(515)) - MiniYARN ResourceManager web address: 0.0.0.0:8088
+2020-04-16 00:19:33,801 INFO  [Listener at 0.0.0.0/8032] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(629)) - msx-yarn NodeManager start
+2020-04-16 00:19:33,809 INFO  [Listener at 0.0.0.0/8032] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:isEnabled(85)) - Node Resource monitoring interval is <=0. org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl is disabled.
+2020-04-16 00:19:33,913 INFO  [Listener at 0.0.0.0/8032] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 2000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:33,930 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:33,934 INFO  [Listener at c5e374aa2199/45431] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.api.ContainerManagementProtocolPB to the server
+2020-04-16 00:19:33,939 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:33,939 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:33,977 INFO  [Listener at c5e374aa2199/45431] security.NMContainerTokenSecretManager (NMContainerTokenSecretManager.java:setNodeId(265)) - Updating node address : c5e374aa2199:45431
+2020-04-16 00:19:34,008 INFO  [Listener at c5e374aa2199/45431] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 500, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:34,013 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:34,039 INFO  [Listener at c5e374aa2199/42947] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB to the server
+2020-04-16 00:19:34,040 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:34,041 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:34,042 INFO  [Listener at c5e374aa2199/42947] localizer.ResourceLocalizationService (ResourceLocalizationService.java:serviceStart(392)) - Localizer started on port 42947
+2020-04-16 00:19:34,056 INFO  [Listener at c5e374aa2199/42947] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:serviceStart(683)) - ContainerManager started at /172.17.0.11:45431
+2020-04-16 00:19:34,056 INFO  [Listener at c5e374aa2199/42947] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:serviceStart(684)) - ContainerManager bound to c5e374aa2199/172.17.0.11:0
+2020-04-16 00:19:34,057 INFO  [Listener at c5e374aa2199/42947] webapp.WebServer (WebServer.java:serviceStart(99)) - Instantiating NMWebApp at c5e374aa2199:0
+2020-04-16 00:19:34,060 INFO  [Listener at c5e374aa2199/42947] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:34,065 INFO  [Listener at c5e374aa2199/42947] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(81)) - Http request log for http.requests.nodemanager is not defined
+2020-04-16 00:19:34,072 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:19:34,074 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context node
+2020-04-16 00:19:34,074 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:19:34,074 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:19:34,076 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context node
+2020-04-16 00:19:34,076 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context logs
+2020-04-16 00:19:34,076 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context static
+2020-04-16 00:19:34,088 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /node/*
+2020-04-16 00:19:34,129 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /ws/*
+Apr 16, 2020 12:19:34 AM com.google.inject.servlet.GuiceFilter setPipeline
+WARNING: Multiple Servlet injectors detected. This is a warning indicating that you have more than one GuiceFilter running in your web application. If this is deliberate, you may safely ignore this message. If this is NOT deliberate however, your application may not work as expected.
+2020-04-16 00:19:34,235 INFO  [Listener at c5e374aa2199/42947] webapp.WebApps (WebApps.java:build(395)) - Registered webapp guice modules
+2020-04-16 00:19:34,236 INFO  [Listener at c5e374aa2199/42947] http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 42826
+2020-04-16 00:19:34,236 INFO  [Listener at c5e374aa2199/42947] server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:19:34,243 INFO  [Listener at c5e374aa2199/42947] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:34,245 INFO  [Listener at c5e374aa2199/42947] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@2df205fa{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,AVAILABLE}
+2020-04-16 00:19:34,246 INFO  [Listener at c5e374aa2199/42947] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@3517718f{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,AVAILABLE}
+Apr 16, 2020 12:19:34 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices as a root resource class
+Apr 16, 2020 12:19:34 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+Apr 16, 2020 12:19:34 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.nodemanager.webapp.JAXBContextResolver as a provider class
+Apr 16, 2020 12:19:34 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.19 02/11/2015 03:25 AM'
+Apr 16, 2020 12:19:34 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.nodemanager.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:34 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:34 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices to GuiceManagedComponentProvider with the scope "Singleton"
+2020-04-16 00:19:34,804 INFO  [Listener at c5e374aa2199/42947] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@29740c8f{/,file:///tmp/jetty-c5e374aa2199-42826-node-_-any-7396350936121891429.dir/webapp/,AVAILABLE}{/node}
+2020-04-16 00:19:34,897 INFO  [Listener at c5e374aa2199/42947] server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@735ab8fd{HTTP/1.1,[http/1.1]}{c5e374aa2199:42826}
+2020-04-16 00:19:34,898 INFO  [Listener at c5e374aa2199/42947] server.Server (Server.java:doStart(419)) - Started @13615ms
+2020-04-16 00:19:34,898 INFO  [Listener at c5e374aa2199/42947] webapp.WebApps (WebApps.java:start(440)) - Web app node started at 42826
+2020-04-16 00:19:34,950 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@717bbb8] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:19:34,973 INFO  [Listener at c5e374aa2199/42947] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceStart(265)) - Node ID assigned is : c5e374aa2199:45431
+2020-04-16 00:19:34,987 INFO  [Listener at c5e374aa2199/42947] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:getNMContainerStatuses(666)) - Sending out 0 NM container statuses: []
+2020-04-16 00:19:35,026 INFO  [Listener at c5e374aa2199/42947] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:registerWithRM(399)) - Registering with RM using containers :[]
+2020-04-16 00:19:35,143 INFO  [Listener at c5e374aa2199/42947] resourcemanager.ResourceTrackerService (ResourceTrackerService.java:registerNodeManager(522)) - NodeManager from node c5e374aa2199(cmPort: 45431 httpPort: 42826) registered with capability: <memory:4096, vCores:8>, assigned nodeId c5e374aa2199:45431
+2020-04-16 00:19:35,144 INFO  [Listener at c5e374aa2199/42947] security.NMContainerTokenSecretManager (NMContainerTokenSecretManager.java:setMasterKey(143)) - Rolling master-key for container-tokens, got key with id 1563095479
+2020-04-16 00:19:35,145 INFO  [Listener at c5e374aa2199/42947] security.NMTokenSecretManagerInNM (NMTokenSecretManagerInNM.java:setMasterKey(143)) - Rolling master-key for container-tokens, got key with id -951687805
+2020-04-16 00:19:35,145 INFO  [Listener at c5e374aa2199/42947] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:registerWithRM(485)) - Registered with ResourceManager as c5e374aa2199:45431 with total resource of <memory:4096, vCores:8>
+2020-04-16 00:19:35,151 INFO  [RM Event dispatcher] rmnode.RMNodeImpl (RMNodeImpl.java:handle(677)) - c5e374aa2199:45431 Node Transitioned from NEW to RUNNING
+2020-04-16 00:19:35,153 INFO  [Listener at c5e374aa2199/42947] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(629)) - msx-yarn NodeManager start
+2020-04-16 00:19:35,163 INFO  [Listener at c5e374aa2199/42947] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:isEnabled(85)) - Node Resource monitoring interval is <=0. org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl is disabled.
+2020-04-16 00:19:35,227 INFO  [Listener at c5e374aa2199/42947] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 2000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:35,233 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:35,240 INFO  [SchedulerEventDispatcher:Event Processor] capacity.CapacityScheduler (CapacityScheduler.java:addNode(2004)) - Added node c5e374aa2199:45431 clusterResource: <memory:4096, vCores:8>
+2020-04-16 00:19:35,256 INFO  [Listener at c5e374aa2199/42102] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.api.ContainerManagementProtocolPB to the server
+2020-04-16 00:19:35,258 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:35,262 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:35,266 INFO  [Listener at c5e374aa2199/42102] security.NMContainerTokenSecretManager (NMContainerTokenSecretManager.java:setNodeId(265)) - Updating node address : c5e374aa2199:42102
+2020-04-16 00:19:35,292 INFO  [Listener at c5e374aa2199/42102] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 500, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:35,299 INFO  [Listener at c5e374aa2199/45510] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB to the server
+2020-04-16 00:19:35,309 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:35,320 INFO  [Listener at c5e374aa2199/45510] localizer.ResourceLocalizationService (ResourceLocalizationService.java:serviceStart(392)) - Localizer started on port 45510
+2020-04-16 00:19:35,336 INFO  [Listener at c5e374aa2199/45510] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:serviceStart(683)) - ContainerManager started at /172.17.0.11:42102
+2020-04-16 00:19:35,337 INFO  [Listener at c5e374aa2199/45510] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:serviceStart(684)) - ContainerManager bound to c5e374aa2199/172.17.0.11:0
+2020-04-16 00:19:35,337 INFO  [Listener at c5e374aa2199/45510] webapp.WebServer (WebServer.java:serviceStart(99)) - Instantiating NMWebApp at c5e374aa2199:0
+2020-04-16 00:19:35,339 INFO  [Listener at c5e374aa2199/45510] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:35,319 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:35,319 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:35,340 INFO  [Listener at c5e374aa2199/45510] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(81)) - Http request log for http.requests.nodemanager is not defined
+2020-04-16 00:19:35,382 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:19:35,395 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context node
+2020-04-16 00:19:35,405 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:19:35,406 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:19:35,411 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context node
+2020-04-16 00:19:35,421 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context static
+2020-04-16 00:19:35,421 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context logs
+2020-04-16 00:19:35,421 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /node/*
+2020-04-16 00:19:35,422 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /ws/*
+Apr 16, 2020 12:19:35 AM com.google.inject.servlet.GuiceFilter setPipeline
+WARNING: Multiple Servlet injectors detected. This is a warning indicating that you have more than one GuiceFilter running in your web application. If this is deliberate, you may safely ignore this message. If this is NOT deliberate however, your application may not work as expected.
+2020-04-16 00:19:35,493 INFO  [Listener at c5e374aa2199/45510] webapp.WebApps (WebApps.java:build(395)) - Registered webapp guice modules
+2020-04-16 00:19:35,494 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 46557
+2020-04-16 00:19:35,495 INFO  [Listener at c5e374aa2199/45510] server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:19:35,498 INFO  [Listener at c5e374aa2199/45510] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:35,499 INFO  [Listener at c5e374aa2199/45510] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@4c61b16a{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,AVAILABLE}
+2020-04-16 00:19:35,500 INFO  [Listener at c5e374aa2199/45510] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@3c5b575a{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,AVAILABLE}
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices as a root resource class
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.nodemanager.webapp.JAXBContextResolver as a provider class
+Apr 16, 2020 12:19:35 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.19 02/11/2015 03:25 AM'
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.nodemanager.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:36 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices to GuiceManagedComponentProvider with the scope "Singleton"
+2020-04-16 00:19:36,041 INFO  [Listener at c5e374aa2199/45510] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@2bd9fe81{/,file:///tmp/jetty-c5e374aa2199-46557-node-_-any-1659397024513824149.dir/webapp/,AVAILABLE}{/node}
+2020-04-16 00:19:36,045 INFO  [Listener at c5e374aa2199/45510] server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@53349ad2{HTTP/1.1,[http/1.1]}{c5e374aa2199:46557}
+2020-04-16 00:19:36,045 INFO  [Listener at c5e374aa2199/45510] server.Server (Server.java:doStart(419)) - Started @14763ms
+2020-04-16 00:19:36,045 INFO  [Listener at c5e374aa2199/45510] webapp.WebApps (WebApps.java:start(440)) - Web app node started at 46557
+2020-04-16 00:19:36,061 INFO  [Listener at c5e374aa2199/45510] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceStart(265)) - Node ID assigned is : c5e374aa2199:42102
+2020-04-16 00:19:36,062 INFO  [Listener at c5e374aa2199/45510] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:getNMContainerStatuses(666)) - Sending out 0 NM container statuses: []
+2020-04-16 00:19:36,062 INFO  [Listener at c5e374aa2199/45510] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:registerWithRM(399)) - Registering with RM using containers :[]
+2020-04-16 00:19:36,062 INFO  [Listener at c5e374aa2199/45510] resourcemanager.ResourceTrackerService (ResourceTrackerService.java:registerNodeManager(522)) - NodeManager from node c5e374aa2199(cmPort: 42102 httpPort: 46557) registered with capability: <memory:4096, vCores:8>, assigned nodeId c5e374aa2199:42102
+2020-04-16 00:19:36,062 INFO  [Listener at c5e374aa2199/45510] security.NMContainerTokenSecretManager (NMContainerTokenSecretManager.java:setMasterKey(143)) - Rolling master-key for container-tokens, got key with id 1563095479
+2020-04-16 00:19:36,062 INFO  [RM Event dispatcher] rmnode.RMNodeImpl (RMNodeImpl.java:handle(677)) - c5e374aa2199:42102 Node Transitioned from NEW to RUNNING
+2020-04-16 00:19:36,061 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@3b8d8fd2] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:19:36,062 INFO  [Listener at c5e374aa2199/45510] security.NMTokenSecretManagerInNM (NMTokenSecretManagerInNM.java:setMasterKey(143)) - Rolling master-key for container-tokens, got key with id -951687805
+2020-04-16 00:19:36,070 INFO  [Listener at c5e374aa2199/45510] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:registerWithRM(485)) - Registered with ResourceManager as c5e374aa2199:42102 with total resource of <memory:4096, vCores:8>
+2020-04-16 00:19:36,107 INFO  [SchedulerEventDispatcher:Event Processor] capacity.CapacityScheduler (CapacityScheduler.java:addNode(2004)) - Added node c5e374aa2199:42102 clusterResource: <memory:8192, vCores:16>
+2020-04-16 00:19:36,110 INFO  [Listener at c5e374aa2199/45510] server.MiniYARNCluster (MiniYARNCluster.java:waitForNodeManagersToConnect(799)) - All Node Managers connected in MiniYARNCluster
+2020-04-16 00:19:36,155 INFO  [Listener at c5e374aa2199/45510] hdfs.MiniDFSCluster (MiniDFSCluster.java:<init>(493)) - starting cluster: numNameNodes=1, numDataNodes=1
+Formatting using clusterid: testClusterID
+2020-04-16 00:19:36,843 INFO  [Listener at c5e374aa2199/45510] namenode.FSEditLog (FSEditLog.java:newInstance(229)) - Edit logging is async:true
+2020-04-16 00:19:36,866 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(755)) - KeyProvider: null
+2020-04-16 00:19:36,868 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystemLock.java:<init>(123)) - fsLock is fair: true
+2020-04-16 00:19:36,869 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystemLock.java:<init>(141)) - Detailed lock hold time metrics enabled: false
+2020-04-16 00:19:36,869 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(780)) - fsOwner             = root (auth:SIMPLE)
+2020-04-16 00:19:36,869 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(781)) - supergroup          = supergroup
+2020-04-16 00:19:36,869 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(782)) - isPermissionEnabled = true
+2020-04-16 00:19:36,870 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(793)) - HA Enabled: false
+2020-04-16 00:19:36,948 INFO  [Listener at c5e374aa2199/45510] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:19:36,952 INFO  [Listener at c5e374aa2199/45510] Configuration.deprecation (Configuration.java:logDeprecation(1395)) - hadoop.configured.node.mapping is deprecated. Instead, use net.topology.configured.node.mapping
+2020-04-16 00:19:36,952 INFO  [Listener at c5e374aa2199/45510] blockmanagement.DatanodeManager (DatanodeManager.java:<init>(303)) - dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2020-04-16 00:19:36,952 INFO  [Listener at c5e374aa2199/45510] blockmanagement.DatanodeManager (DatanodeManager.java:<init>(311)) - dfs.namenode.datanode.registration.ip-hostname-check=true
+2020-04-16 00:19:36,958 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(79)) - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2020-04-16 00:19:36,959 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(85)) - The block deletion will start around 2020 Apr 16 00:19:36
+2020-04-16 00:19:36,961 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map BlocksMap
+2020-04-16 00:19:36,962 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:36,964 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 2.0% max memory 1.9 GB = 39.0 MB
+2020-04-16 00:19:36,964 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^22 = 4194304 entries
+2020-04-16 00:19:36,987 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:createSPSManager(5183)) - Storage policy satisfier is disabled
+2020-04-16 00:19:36,987 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:createBlockTokenSecretManager(595)) - dfs.block.access.token.enable = false
+2020-04-16 00:19:36,998 INFO  [Listener at c5e374aa2199/45510] Configuration.deprecation (Configuration.java:logDeprecation(1395)) - No unit for dfs.namenode.safemode.extension(0) assuming MILLISECONDS
+2020-04-16 00:19:36,999 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(161)) - dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2020-04-16 00:19:36,999 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(162)) - dfs.namenode.safemode.min.datanodes = 0
+2020-04-16 00:19:36,999 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(164)) - dfs.namenode.safemode.extension = 0
+2020-04-16 00:19:37,000 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(581)) - defaultReplication         = 1
+2020-04-16 00:19:37,000 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(582)) - maxReplication             = 512
+2020-04-16 00:19:37,001 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(583)) - minReplication             = 1
+2020-04-16 00:19:37,001 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(584)) - maxReplicationStreams      = 2
+2020-04-16 00:19:37,001 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(585)) - redundancyRecheckInterval  = 3000ms
+2020-04-16 00:19:37,001 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(586)) - encryptDataTransfer        = false
+2020-04-16 00:19:37,001 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(587)) - maxNumBlocksToLog          = 1000
+2020-04-16 00:19:37,060 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - GLOBAL serial map: bits=29 maxEntries=536870911
+2020-04-16 00:19:37,060 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - USER serial map: bits=24 maxEntries=16777215
+2020-04-16 00:19:37,060 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - GROUP serial map: bits=24 maxEntries=16777215
+2020-04-16 00:19:37,060 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - XATTR serial map: bits=24 maxEntries=16777215
+2020-04-16 00:19:37,082 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map INodeMap
+2020-04-16 00:19:37,082 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:37,082 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 1.0% max memory 1.9 GB = 19.5 MB
+2020-04-16 00:19:37,083 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^21 = 2097152 entries
+2020-04-16 00:19:37,089 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (FSDirectory.java:<init>(290)) - ACLs enabled? false
+2020-04-16 00:19:37,090 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (FSDirectory.java:<init>(294)) - POSIX ACL inheritance enabled? true
+2020-04-16 00:19:37,090 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (FSDirectory.java:<init>(298)) - XAttrs enabled? true
+2020-04-16 00:19:37,090 INFO  [Listener at c5e374aa2199/45510] namenode.NameNode (FSDirectory.java:<init>(362)) - Caching file names occurring more than 10 times
+2020-04-16 00:19:37,099 INFO  [Listener at c5e374aa2199/45510] snapshot.SnapshotManager (SnapshotManager.java:<init>(124)) - Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2020-04-16 00:19:37,102 INFO  [Listener at c5e374aa2199/45510] snapshot.SnapshotManager (DirectoryDiffListFactory.java:init(43)) - SkipList is disabled
+2020-04-16 00:19:37,110 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map cachedBlocks
+2020-04-16 00:19:37,110 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:37,111 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.25% max memory 1.9 GB = 4.9 MB
+2020-04-16 00:19:37,111 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^19 = 524288 entries
+2020-04-16 00:19:37,124 INFO  [Listener at c5e374aa2199/45510] metrics.TopMetrics (TopMetrics.java:logConf(76)) - NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2020-04-16 00:19:37,125 INFO  [Listener at c5e374aa2199/45510] metrics.TopMetrics (TopMetrics.java:logConf(78)) - NNTop conf: dfs.namenode.top.num.users = 10
+2020-04-16 00:19:37,125 INFO  [Listener at c5e374aa2199/45510] metrics.TopMetrics (TopMetrics.java:logConf(80)) - NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2020-04-16 00:19:37,147 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(996)) - Retry cache on namenode is enabled
+2020-04-16 00:19:37,147 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1004)) - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2020-04-16 00:19:37,150 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map NameNodeRetryCache
+2020-04-16 00:19:37,151 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:37,151 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.029999999329447746% max memory 1.9 GB = 599.7 KB
+2020-04-16 00:19:37,151 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^16 = 65536 entries
+2020-04-16 00:19:37,226 INFO  [Listener at c5e374aa2199/45510] namenode.FSImage (FSImage.java:format(185)) - Allocated new BlockPoolId: BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:37,250 INFO  [Listener at c5e374aa2199/45510] common.Storage (NNStorage.java:format(595)) - Storage directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1 has been successfully formatted.
+2020-04-16 00:19:37,257 INFO  [Listener at c5e374aa2199/45510] common.Storage (NNStorage.java:format(595)) - Storage directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2 has been successfully formatted.
+2020-04-16 00:19:37,322 INFO  [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2 of type IMAGE_AND_EDITS] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(512)) - Saving image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2/current/fsimage.ckpt_0000000000000000000 using no compression
+2020-04-16 00:19:37,322 INFO  [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1 of type IMAGE_AND_EDITS] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(512)) - Saving image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/current/fsimage.ckpt_0000000000000000000 using no compression
+2020-04-16 00:19:37,825 INFO  [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2 of type IMAGE_AND_EDITS] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(516)) - Image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2/current/fsimage.ckpt_0000000000000000000 of size 399 bytes saved in 0 seconds .
+2020-04-16 00:19:37,828 INFO  [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1 of type IMAGE_AND_EDITS] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(516)) - Image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/current/fsimage.ckpt_0000000000000000000 of size 399 bytes saved in 0 seconds .
+2020-04-16 00:19:37,835 INFO  [Listener at c5e374aa2199/45510] namenode.NNStorageRetentionManager (NNStorageRetentionManager.java:getImageTxIdToRetain(203)) - Going to retain 1 images with txid >= 0
+2020-04-16 00:19:37,840 INFO  [Listener at c5e374aa2199/45510] namenode.NameNode (NameNode.java:createNameNode(1635)) - createNameNode []
+2020-04-16 00:19:37,847 INFO  [Listener at c5e374aa2199/45510] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - NameNode metrics system started (again)
+2020-04-16 00:19:37,848 INFO  [Listener at c5e374aa2199/45510] namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-16 00:19:37,850 INFO  [Listener at c5e374aa2199/45510] namenode.NameNodeUtils (NameNodeUtils.java:getClientNamenodeAddress(79)) - fs.defaultFS is hdfs://127.0.0.1:0
+2020-04-16 00:19:37,891 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@632cd560] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:19:37,893 INFO  [Listener at c5e374aa2199/45510] hdfs.DFSUtil (DFSUtil.java:httpServerTemplateForNNAndJN(1641)) - Starting Web-server for hdfs at: http://localhost:0
+2020-04-16 00:19:37,896 INFO  [Listener at c5e374aa2199/45510] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:37,897 INFO  [Listener at c5e374aa2199/45510] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(81)) - Http request log for http.requests.namenode is not defined
+2020-04-16 00:19:37,900 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:19:37,903 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context hdfs
+2020-04-16 00:19:37,903 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context logs
+2020-04-16 00:19:37,903 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context static
+2020-04-16 00:19:37,904 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2020-04-16 00:19:37,904 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:19:37,904 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:19:37,911 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (NameNodeHttpServer.java:initWebHdfs(102)) - Added filter 'org.apache.hadoop.hdfs.web.AuthFilter' (class=org.apache.hadoop.hdfs.web.AuthFilter)
+2020-04-16 00:19:37,913 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:addJerseyResourcePackage(806)) - addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
+2020-04-16 00:19:37,929 INFO  [Listener at c5e374aa2199/45510] http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 39845
+2020-04-16 00:19:37,929 INFO  [Listener at c5e374aa2199/45510] server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:19:37,985 INFO  [Listener at c5e374aa2199/45510] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:37,997 INFO  [Listener at c5e374aa2199/45510] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:37,998 INFO  [Listener at c5e374aa2199/45510] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@67720b80{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,AVAILABLE}
+2020-04-16 00:19:37,999 INFO  [Thread[Thread-314,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(679)) - Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2020-04-16 00:19:37,999 INFO  [Listener at c5e374aa2199/45510] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@10c8874e{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-hdfs/3.2.1/hadoop-hdfs-3.2.1-tests.jar!/webapps/static,AVAILABLE}
+2020-04-16 00:19:38,010 INFO  [Thread[Thread-314,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:38,425 INFO  [Listener at c5e374aa2199/45510] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@2bfc438{/,file:///tmp/jetty-localhost-39845-hdfs-_-any-4965075676790707514.dir/webapp/,AVAILABLE}{/hdfs}
+2020-04-16 00:19:38,427 INFO  [Listener at c5e374aa2199/45510] server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@7b134110{HTTP/1.1,[http/1.1]}{localhost:39845}
+2020-04-16 00:19:38,427 INFO  [Listener at c5e374aa2199/45510] server.Server (Server.java:doStart(419)) - Started @17145ms
+2020-04-16 00:19:38,460 INFO  [Listener at c5e374aa2199/45510] namenode.FSEditLog (FSEditLog.java:newInstance(229)) - Edit logging is async:true
+2020-04-16 00:19:38,465 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(755)) - KeyProvider: null
+2020-04-16 00:19:38,465 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystemLock.java:<init>(123)) - fsLock is fair: true
+2020-04-16 00:19:38,465 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystemLock.java:<init>(141)) - Detailed lock hold time metrics enabled: false
+2020-04-16 00:19:38,471 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(780)) - fsOwner             = root (auth:SIMPLE)
+2020-04-16 00:19:38,471 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(781)) - supergroup          = supergroup
+2020-04-16 00:19:38,472 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(782)) - isPermissionEnabled = true
+2020-04-16 00:19:38,472 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:<init>(793)) - HA Enabled: false
+2020-04-16 00:19:38,473 INFO  [Listener at c5e374aa2199/45510] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:19:38,474 INFO  [Listener at c5e374aa2199/45510] blockmanagement.DatanodeManager (DatanodeManager.java:<init>(303)) - dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2020-04-16 00:19:38,474 INFO  [Listener at c5e374aa2199/45510] blockmanagement.DatanodeManager (DatanodeManager.java:<init>(311)) - dfs.namenode.datanode.registration.ip-hostname-check=true
+2020-04-16 00:19:38,475 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(79)) - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2020-04-16 00:19:38,482 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(85)) - The block deletion will start around 2020 Apr 16 00:19:38
+2020-04-16 00:19:38,485 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map BlocksMap
+2020-04-16 00:19:38,485 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:38,485 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 2.0% max memory 1.9 GB = 39.0 MB
+2020-04-16 00:19:38,486 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^22 = 4194304 entries
+2020-04-16 00:19:38,511 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:createSPSManager(5183)) - Storage policy satisfier is disabled
+2020-04-16 00:19:38,512 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:createBlockTokenSecretManager(595)) - dfs.block.access.token.enable = false
+2020-04-16 00:19:38,513 INFO  [Listener at c5e374aa2199/45510] Configuration.deprecation (Configuration.java:logDeprecation(1395)) - No unit for dfs.namenode.safemode.extension(0) assuming MILLISECONDS
+2020-04-16 00:19:38,513 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(161)) - dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2020-04-16 00:19:38,513 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(162)) - dfs.namenode.safemode.min.datanodes = 0
+2020-04-16 00:19:38,513 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(164)) - dfs.namenode.safemode.extension = 0
+2020-04-16 00:19:38,513 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(581)) - defaultReplication         = 1
+2020-04-16 00:19:38,514 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(582)) - maxReplication             = 512
+2020-04-16 00:19:38,514 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(583)) - minReplication             = 1
+2020-04-16 00:19:38,514 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(584)) - maxReplicationStreams      = 2
+2020-04-16 00:19:38,522 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(585)) - redundancyRecheckInterval  = 3000ms
+2020-04-16 00:19:38,522 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(586)) - encryptDataTransfer        = false
+2020-04-16 00:19:38,522 INFO  [Listener at c5e374aa2199/45510] blockmanagement.BlockManager (BlockManager.java:<init>(587)) - maxNumBlocksToLog          = 1000
+2020-04-16 00:19:38,523 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map INodeMap
+2020-04-16 00:19:38,523 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:38,523 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 1.0% max memory 1.9 GB = 19.5 MB
+2020-04-16 00:19:38,523 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^21 = 2097152 entries
+2020-04-16 00:19:38,529 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (FSDirectory.java:<init>(290)) - ACLs enabled? false
+2020-04-16 00:19:38,531 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (FSDirectory.java:<init>(294)) - POSIX ACL inheritance enabled? true
+2020-04-16 00:19:38,531 INFO  [Listener at c5e374aa2199/45510] namenode.FSDirectory (FSDirectory.java:<init>(298)) - XAttrs enabled? true
+2020-04-16 00:19:38,532 INFO  [Listener at c5e374aa2199/45510] namenode.NameNode (FSDirectory.java:<init>(362)) - Caching file names occurring more than 10 times
+2020-04-16 00:19:38,532 INFO  [Listener at c5e374aa2199/45510] snapshot.SnapshotManager (SnapshotManager.java:<init>(124)) - Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2020-04-16 00:19:38,532 INFO  [Listener at c5e374aa2199/45510] snapshot.SnapshotManager (DirectoryDiffListFactory.java:init(43)) - SkipList is disabled
+2020-04-16 00:19:38,532 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map cachedBlocks
+2020-04-16 00:19:38,532 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:38,533 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.25% max memory 1.9 GB = 4.9 MB
+2020-04-16 00:19:38,533 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^19 = 524288 entries
+2020-04-16 00:19:38,535 INFO  [Listener at c5e374aa2199/45510] metrics.TopMetrics (TopMetrics.java:logConf(76)) - NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2020-04-16 00:19:38,539 INFO  [Listener at c5e374aa2199/45510] metrics.TopMetrics (TopMetrics.java:logConf(78)) - NNTop conf: dfs.namenode.top.num.users = 10
+2020-04-16 00:19:38,539 INFO  [Listener at c5e374aa2199/45510] metrics.TopMetrics (TopMetrics.java:logConf(80)) - NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2020-04-16 00:19:38,539 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(996)) - Retry cache on namenode is enabled
+2020-04-16 00:19:38,540 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1004)) - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2020-04-16 00:19:38,540 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map NameNodeRetryCache
+2020-04-16 00:19:38,540 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:19:38,540 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.029999999329447746% max memory 1.9 GB = 599.7 KB
+2020-04-16 00:19:38,541 INFO  [Listener at c5e374aa2199/45510] util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^16 = 65536 entries
+2020-04-16 00:19:38,550 INFO  [Listener at c5e374aa2199/45510] common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/in_use.lock acquired by nodename 5489@c5e374aa2199
+2020-04-16 00:19:38,557 INFO  [Listener at c5e374aa2199/45510] common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2/in_use.lock acquired by nodename 5489@c5e374aa2199
+2020-04-16 00:19:38,560 INFO  [Listener at c5e374aa2199/45510] namenode.FileJournalManager (FileJournalManager.java:recoverUnfinalizedSegments(428)) - Recovering unfinalized segments in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/current
+2020-04-16 00:19:38,561 INFO  [Listener at c5e374aa2199/45510] namenode.FileJournalManager (FileJournalManager.java:recoverUnfinalizedSegments(428)) - Recovering unfinalized segments in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2/current
+2020-04-16 00:19:38,562 INFO  [Listener at c5e374aa2199/45510] namenode.FSImage (FSImage.java:loadFSImage(733)) - No edit log streams selected.
+2020-04-16 00:19:38,563 INFO  [Listener at c5e374aa2199/45510] namenode.FSImage (FSImage.java:loadFSImageFile(797)) - Planning to load image: FSImageFile(file=/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2020-04-16 00:19:38,640 INFO  [Listener at c5e374aa2199/45510] namenode.FSImageFormatPBINode (FSImageFormatPBINode.java:loadINodeSection(234)) - Loading 1 INodes.
+2020-04-16 00:19:38,649 INFO  [Listener at c5e374aa2199/45510] namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:load(246)) - Loaded FSImage in 0 seconds.
+2020-04-16 00:19:38,649 INFO  [Listener at c5e374aa2199/45510] namenode.FSImage (FSImage.java:loadFSImage(978)) - Loaded image for txid 0 from /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/current/fsimage_0000000000000000000
+2020-04-16 00:19:38,657 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:loadFSImage(1110)) - Need to save fs image? false (staleImage=false, haEnabled=false, isRollingUpgrade=false)
+2020-04-16 00:19:38,659 INFO  [Listener at c5e374aa2199/45510] namenode.FSEditLog (FSEditLog.java:startLogSegment(1365)) - Starting log segment at 1
+2020-04-16 00:19:38,722 INFO  [Listener at c5e374aa2199/45510] namenode.NameCache (NameCache.java:initialized(143)) - initialized with 0 entries 0 lookups
+2020-04-16 00:19:38,723 INFO  [Listener at c5e374aa2199/45510] namenode.FSNamesystem (FSNamesystem.java:loadFromDisk(727)) - Finished loading FSImage in 181 msecs
+2020-04-16 00:19:39,007 INFO  [Listener at c5e374aa2199/45510] namenode.NameNode (NameNodeRpcServer.java:<init>(448)) - RPC server is binding to localhost:0
+2020-04-16 00:19:39,029 INFO  [Listener at c5e374aa2199/45510] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:39,037 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:39,091 INFO  [Listener at localhost/37577] namenode.NameNode (NameNode.java:initialize(722)) - Clients are to use localhost:37577 to access this namenode/service.
+2020-04-16 00:19:39,094 INFO  [Listener at localhost/37577] namenode.FSNamesystem (FSNamesystem.java:registerMBean(5090)) - Registered FSNamesystemState, ReplicatedBlocksState and ECBlockGroupsState MBeans.
+2020-04-16 00:19:39,152 INFO  [Listener at localhost/37577] namenode.LeaseManager (LeaseManager.java:getNumUnderConstructionBlocks(171)) - Number of blocks under construction: 0
+2020-04-16 00:19:39,210 INFO  [Listener at localhost/37577] blockmanagement.BlockManager (BlockManager.java:initializeReplQueues(4922)) - initializing replication queues
+2020-04-16 00:19:39,211 INFO  [Listener at localhost/37577] hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(400)) - STATE* Leaving safe mode after 0 secs
+2020-04-16 00:19:39,211 INFO  [Listener at localhost/37577] hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(406)) - STATE* Network topology has 0 racks and 0 datanodes
+2020-04-16 00:19:39,212 INFO  [Listener at localhost/37577] hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(408)) - STATE* UnderReplicatedBlocks has 0 blocks
+2020-04-16 00:19:39,228 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3585)) - Total number of blocks            = 0
+2020-04-16 00:19:39,233 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3586)) - Number of invalid blocks          = 0
+2020-04-16 00:19:39,262 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3587)) - Number of under-replicated blocks = 0
+2020-04-16 00:19:39,262 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3588)) - Number of  over-replicated blocks = 0
+2020-04-16 00:19:39,262 INFO  [Reconstruction Queue Initializer] blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3590)) - Number of blocks being written    = 0
+2020-04-16 00:19:39,262 INFO  [Reconstruction Queue Initializer] hdfs.StateChange (BlockManager.java:processMisReplicatesAsync(3593)) - STATE* Replication Queue initialization scan for invalid, over- and under-replicated blocks completed in 40 msec
+2020-04-16 00:19:39,333 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:39,333 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:39,409 INFO  [Listener at localhost/37577] namenode.NameNode (NameNode.java:startCommonServices(828)) - NameNode RPC up at: localhost/127.0.0.1:37577
+2020-04-16 00:19:39,417 INFO  [Listener at localhost/37577] namenode.FSNamesystem (FSNamesystem.java:startActiveServices(1222)) - Starting services required for active state
+2020-04-16 00:19:39,417 INFO  [Listener at localhost/37577] namenode.FSDirectory (FSDirectory.java:updateCountForQuota(777)) - Initializing quota with 4 thread(s)
+2020-04-16 00:19:39,444 INFO  [Listener at localhost/37577] namenode.FSDirectory (FSDirectory.java:updateCountForQuota(786)) - Quota initialization completed in 27 milliseconds
+name space=1
+storage space=0
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0, PROVIDED=0
+2020-04-16 00:19:39,462 INFO  [CacheReplicationMonitor(1121283937)] blockmanagement.CacheReplicationMonitor (CacheReplicationMonitor.java:run(160)) - Starting CacheReplicationMonitor with interval 30000 milliseconds
+2020-04-16 00:19:39,473 INFO  [Listener at localhost/37577] namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-16 00:19:39,486 INFO  [Listener at localhost/37577] hdfs.MiniDFSCluster (MiniDFSCluster.java:startDataNodes(1659)) - Starting DataNode 0 with dfs.datanode.data.dir: [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1,[DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2
+2020-04-16 00:19:39,523 INFO  [Listener at localhost/37577] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1
+2020-04-16 00:19:39,550 INFO  [Listener at localhost/37577] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2
+2020-04-16 00:19:39,555 INFO  [Listener at localhost/37577] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - DataNode metrics system started (again)
+2020-04-16 00:19:39,555 INFO  [Listener at localhost/37577] datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-16 00:19:39,566 INFO  [Listener at localhost/37577] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:19:39,572 INFO  [Listener at localhost/37577] datanode.BlockScanner (BlockScanner.java:<init>(184)) - Initialized block scanner with targetBytesPerSec 1048576
+2020-04-16 00:19:39,578 INFO  [Listener at localhost/37577] datanode.DataNode (DataNode.java:<init>(502)) - Configured hostname is 127.0.0.1
+2020-04-16 00:19:39,580 INFO  [Listener at localhost/37577] common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:19:39,587 INFO  [Listener at localhost/37577] datanode.DataNode (DataNode.java:startDataNode(1402)) - Starting DataNode with maxLockedMemory = 0
+2020-04-16 00:19:39,595 INFO  [Listener at localhost/37577] datanode.DataNode (DataNode.java:initDataXceiver(1150)) - Opened streaming server at /127.0.0.1:33971
+2020-04-16 00:19:39,599 INFO  [Listener at localhost/37577] datanode.DataNode (DataXceiverServer.java:<init>(78)) - Balancing bandwidth is 10485760 bytes/s
+2020-04-16 00:19:39,599 INFO  [Listener at localhost/37577] datanode.DataNode (DataXceiverServer.java:<init>(79)) - Number threads for balancing is 50
+2020-04-16 00:19:39,645 INFO  [Listener at localhost/37577] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:39,653 INFO  [Listener at localhost/37577] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(81)) - Http request log for http.requests.datanode is not defined
+2020-04-16 00:19:39,656 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:19:39,675 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context datanode
+2020-04-16 00:19:39,675 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context static
+2020-04-16 00:19:39,675 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context logs
+2020-04-16 00:19:39,675 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context datanode
+2020-04-16 00:19:39,675 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:19:39,675 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:19:39,684 INFO  [Listener at localhost/37577] http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 38909
+2020-04-16 00:19:39,684 INFO  [Listener at localhost/37577] server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:19:39,710 INFO  [Listener at localhost/37577] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:39,717 INFO  [Listener at localhost/37577] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:39,721 INFO  [Listener at localhost/37577] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@6684ef1f{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,AVAILABLE}
+2020-04-16 00:19:39,723 INFO  [Thread[Thread-350,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(679)) - Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2020-04-16 00:19:39,729 INFO  [Listener at localhost/37577] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@34bdd108{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-hdfs/3.2.1/hadoop-hdfs-3.2.1-tests.jar!/webapps/static,AVAILABLE}
+2020-04-16 00:19:39,769 INFO  [Thread[Thread-350,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:39,969 INFO  [Listener at localhost/37577] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@276d7e98{/,file:///tmp/jetty-localhost-38909-datanode-_-any-7688627764223833662.dir/webapp/,AVAILABLE}{/datanode}
+2020-04-16 00:19:39,970 INFO  [Listener at localhost/37577] server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@48ef34c5{HTTP/1.1,[http/1.1]}{localhost:38909}
+2020-04-16 00:19:39,970 INFO  [Listener at localhost/37577] server.Server (Server.java:doStart(419)) - Started @18688ms
+2020-04-16 00:19:40,313 INFO  [Listener at localhost/37577] web.DatanodeHttpServer (DatanodeHttpServer.java:start(255)) - Listening HTTP traffic on /127.0.0.1:45031
+2020-04-16 00:19:40,323 INFO  [Listener at localhost/37577] datanode.DataNode (DataNode.java:startDataNode(1430)) - dnUserName = root
+2020-04-16 00:19:40,323 INFO  [Listener at localhost/37577] datanode.DataNode (DataNode.java:startDataNode(1431)) - supergroup = supergroup
+2020-04-16 00:19:40,327 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@41cf4046] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:19:40,352 INFO  [Listener at localhost/37577] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:40,353 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:40,387 INFO  [Listener at localhost/36665] datanode.DataNode (DataNode.java:initIpcServer(1036)) - Opened IPC server at /127.0.0.1:36665
+2020-04-16 00:19:40,415 INFO  [Listener at localhost/36665] datanode.DataNode (BlockPoolManager.java:refreshNamenodes(149)) - Refresh request received for nameservices: null
+2020-04-16 00:19:40,441 INFO  [Listener at localhost/36665] datanode.DataNode (BlockPoolManager.java:doRefreshNamenodes(210)) - Starting BPOfferServices for nameservices: <default>
+2020-04-16 00:19:40,471 INFO  [Thread-358] datanode.DataNode (BPServiceActor.java:run(817)) - Block pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:37577 starting to offer service
+2020-04-16 00:19:40,489 INFO  [Listener at localhost/36665] datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-16 00:19:40,513 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:40,517 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:42,254 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@3b8d8fd2] util.JvmPauseMonitor (JvmPauseMonitor.java:run(205)) - Detected pause in JVM or host machine (eg GC): pause of approximately 1038ms
+GC pool 'PS MarkSweep' had collection(s): count=1 time=800ms
+GC pool 'PS Scavenge' had collection(s): count=1 time=232ms
+2020-04-16 00:19:42,254 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@717bbb8] util.JvmPauseMonitor (JvmPauseMonitor.java:run(205)) - Detected pause in JVM or host machine (eg GC): pause of approximately 1042ms
+GC pool 'PS MarkSweep' had collection(s): count=1 time=800ms
+GC pool 'PS Scavenge' had collection(s): count=1 time=232ms
+2020-04-16 00:19:42,410 INFO  [Thread-358] datanode.DataNode (BPOfferService.java:verifyAndSetNamespaceInfo(378)) - Acknowledging ACTIVE Namenode during handshakeBlock pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:37577
+2020-04-16 00:19:42,424 INFO  [Thread-358] common.Storage (DataStorage.java:getParallelVolumeLoadThreadsNum(354)) - Using 2 threads to upgrade data directories (dfs.datanode.parallel.volumes.load.threads.num=2, dataDirs=2)
+2020-04-16 00:19:42,435 INFO  [Thread-358] common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1/in_use.lock acquired by nodename 5489@c5e374aa2199
+2020-04-16 00:19:42,437 INFO  [Thread-358] common.Storage (DataStorage.java:loadStorageDirectory(282)) - Storage directory with location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1 is not formatted for namespace 527669062. Formatting...
+2020-04-16 00:19:42,438 INFO  [Thread-358] common.Storage (DataStorage.java:createStorageID(160)) - Generated new storageID DS-7f24869e-c068-4421-9d32-5df8ae1ee71e for directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1 
+2020-04-16 00:19:42,450 INFO  [Thread-358] common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2/in_use.lock acquired by nodename 5489@c5e374aa2199
+2020-04-16 00:19:42,451 INFO  [Thread-358] common.Storage (DataStorage.java:loadStorageDirectory(282)) - Storage directory with location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2 is not formatted for namespace 527669062. Formatting...
+2020-04-16 00:19:42,451 INFO  [Thread-358] common.Storage (DataStorage.java:createStorageID(160)) - Generated new storageID DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5 for directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2 
+2020-04-16 00:19:42,531 INFO  [Thread-358] common.Storage (BlockPoolSliceStorage.java:recoverTransitionRead(251)) - Analyzing storage directories for bpid BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:42,532 INFO  [Thread-358] common.Storage (Storage.java:lock(882)) - Locking is disabled for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1/current/BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:42,533 INFO  [Thread-358] common.Storage (BlockPoolSliceStorage.java:loadStorageDirectory(168)) - Block pool storage directory for location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1 and block pool id BP-258311010-172.17.0.11-1586996377207 is not formatted. Formatting ...
+2020-04-16 00:19:42,533 INFO  [Thread-358] common.Storage (BlockPoolSliceStorage.java:format(280)) - Formatting block pool BP-258311010-172.17.0.11-1586996377207 directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1/current/BP-258311010-172.17.0.11-1586996377207/current
+2020-04-16 00:19:42,570 INFO  [Thread-358] common.Storage (BlockPoolSliceStorage.java:recoverTransitionRead(251)) - Analyzing storage directories for bpid BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:42,571 INFO  [Thread-358] common.Storage (Storage.java:lock(882)) - Locking is disabled for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2/current/BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:42,571 INFO  [Thread-358] common.Storage (BlockPoolSliceStorage.java:loadStorageDirectory(168)) - Block pool storage directory for location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2 and block pool id BP-258311010-172.17.0.11-1586996377207 is not formatted. Formatting ...
+2020-04-16 00:19:42,571 INFO  [Thread-358] common.Storage (BlockPoolSliceStorage.java:format(280)) - Formatting block pool BP-258311010-172.17.0.11-1586996377207 directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2/current/BP-258311010-172.17.0.11-1586996377207/current
+2020-04-16 00:19:42,582 INFO  [Thread-358] datanode.DataNode (DataNode.java:initStorage(1748)) - Setting up storage: nsid=527669062;bpid=BP-258311010-172.17.0.11-1586996377207;lv=-57;nsInfo=lv=-65;cid=testClusterID;nsid=527669062;c=1586996377207;bpid=BP-258311010-172.17.0.11-1586996377207;dnuuid=null
+2020-04-16 00:19:42,592 INFO  [Thread-358] datanode.DataNode (DataNode.java:checkDatanodeUuid(1548)) - Generated and persisted new Datanode UUID dcefccea-0cc5-47cd-89b2-7ab8f019e51e
+2020-04-16 00:19:42,840 INFO  [Thread-358] impl.FsDatasetImpl (FsVolumeList.java:addVolume(304)) - Added new volume: DS-7f24869e-c068-4421-9d32-5df8ae1ee71e
+2020-04-16 00:19:42,870 INFO  [Thread-358] impl.FsDatasetImpl (FsDatasetImpl.java:addVolume(450)) - Added volume - [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1, StorageType: DISK
+2020-04-16 00:19:42,895 INFO  [Thread-358] impl.FsDatasetImpl (FsVolumeList.java:addVolume(304)) - Added new volume: DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5
+2020-04-16 00:19:42,896 INFO  [Thread-358] impl.FsDatasetImpl (FsDatasetImpl.java:addVolume(450)) - Added volume - [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2, StorageType: DISK
+2020-04-16 00:19:42,901 INFO  [Thread-358] impl.FsDatasetImpl (FsDatasetImpl.java:registerMBean(2280)) - Registered FSDatasetState MBean
+2020-04-16 00:19:42,935 INFO  [Thread-358] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1
+2020-04-16 00:19:42,990 INFO  [Thread-358] checker.DatasetVolumeChecker (DatasetVolumeChecker.java:checkAllVolumes(222)) - Scheduled health check for volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1
+2020-04-16 00:19:42,993 INFO  [Thread-358] checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2
+2020-04-16 00:19:42,993 INFO  [Thread-358] checker.DatasetVolumeChecker (DatasetVolumeChecker.java:checkAllVolumes(222)) - Scheduled health check for volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2
+2020-04-16 00:19:42,993 INFO  [Thread-358] impl.FsDatasetImpl (FsDatasetImpl.java:addBlockPool(2791)) - Adding block pool BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:43,005 INFO  [Thread-375] impl.FsDatasetImpl (FsVolumeList.java:run(406)) - Scanning block pool BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1...
+2020-04-16 00:19:43,009 INFO  [Thread-376] impl.FsDatasetImpl (FsVolumeList.java:run(406)) - Scanning block pool BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2...
+2020-04-16 00:19:43,036 INFO  [IPC Server handler 9 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2020-04-16 00:19:43,097 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2782)) - dnInfo.length != numDataNodes
+2020-04-16 00:19:43,097 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:19:43,232 INFO  [Thread-375] impl.FsDatasetImpl (FsVolumeList.java:run(411)) - Time taken to scan block pool BP-258311010-172.17.0.11-1586996377207 on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1: 211ms
+2020-04-16 00:19:43,234 INFO  [IPC Server handler 8 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2020-04-16 00:19:43,254 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2782)) - dnInfo.length != numDataNodes
+2020-04-16 00:19:43,254 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:19:43,255 INFO  [Thread-376] impl.FsDatasetImpl (FsVolumeList.java:run(411)) - Time taken to scan block pool BP-258311010-172.17.0.11-1586996377207 on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2: 230ms
+2020-04-16 00:19:43,258 INFO  [Thread-358] impl.FsDatasetImpl (FsVolumeList.java:addBlockPool(431)) - Total time to scan all replicas for block pool BP-258311010-172.17.0.11-1586996377207: 264ms
+2020-04-16 00:19:43,265 INFO  [Thread-379] impl.FsDatasetImpl (FsVolumeList.java:run(199)) - Adding replicas to map for block pool BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1...
+2020-04-16 00:19:43,265 INFO  [Thread-379] impl.BlockPoolSlice (BlockPoolSlice.java:readReplicasFromCache(876)) - Replica Cache file: /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1/current/BP-258311010-172.17.0.11-1586996377207/current/replicas doesn't exist 
+2020-04-16 00:19:43,269 INFO  [Thread-380] impl.FsDatasetImpl (FsVolumeList.java:run(199)) - Adding replicas to map for block pool BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2...
+2020-04-16 00:19:43,269 INFO  [Thread-380] impl.BlockPoolSlice (BlockPoolSlice.java:readReplicasFromCache(876)) - Replica Cache file: /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2/current/BP-258311010-172.17.0.11-1586996377207/current/replicas doesn't exist 
+2020-04-16 00:19:43,289 INFO  [Thread-379] impl.FsDatasetImpl (FsVolumeList.java:run(204)) - Time to add replicas to map for block pool BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1: 24ms
+2020-04-16 00:19:43,299 INFO  [Thread-380] impl.FsDatasetImpl (FsVolumeList.java:run(204)) - Time to add replicas to map for block pool BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2: 30ms
+2020-04-16 00:19:43,301 INFO  [Thread-358] impl.FsDatasetImpl (FsVolumeList.java:getAllVolumesMap(225)) - Total time to add all replicas to map for block pool BP-258311010-172.17.0.11-1586996377207: 41ms
+2020-04-16 00:19:43,303 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(381)) - Now scanning bpid BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1
+2020-04-16 00:19:43,305 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1)] datanode.VolumeScanner (VolumeScanner.java:runLoop(539)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1, DS-7f24869e-c068-4421-9d32-5df8ae1ee71e): finished scanning block pool BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:43,313 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(381)) - Now scanning bpid BP-258311010-172.17.0.11-1586996377207 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2
+2020-04-16 00:19:43,345 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2)] datanode.VolumeScanner (VolumeScanner.java:runLoop(539)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2, DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5): finished scanning block pool BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:43,368 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(398)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1, DS-7f24869e-c068-4421-9d32-5df8ae1ee71e): no suitable block pools found to scan.  Waiting 1814399935 ms.
+2020-04-16 00:19:43,369 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2)] datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(398)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2, DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5): no suitable block pools found to scan.  Waiting 1814399934 ms.
+2020-04-16 00:19:43,376 INFO  [Thread-358] datanode.DirectoryScanner (DirectoryScanner.java:start(284)) - Periodic Directory Tree Verification scan starting at 4/16/20 5:52 AM with interval of 21600000ms
+2020-04-16 00:19:43,383 INFO  [IPC Server handler 0 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2020-04-16 00:19:43,384 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2782)) - dnInfo.length != numDataNodes
+2020-04-16 00:19:43,384 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:19:43,399 INFO  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.DataNode (BPServiceActor.java:register(767)) - Block pool BP-258311010-172.17.0.11-1586996377207 (Datanode Uuid dcefccea-0cc5-47cd-89b2-7ab8f019e51e) service to localhost/127.0.0.1:37577 beginning handshake with NN
+2020-04-16 00:19:43,438 INFO  [IPC Server handler 9 on default port 37577] hdfs.StateChange (DatanodeManager.java:registerDatanode(1042)) - BLOCK* registerDatanode: from DatanodeRegistration(127.0.0.1:33971, datanodeUuid=dcefccea-0cc5-47cd-89b2-7ab8f019e51e, infoPort=45031, infoSecurePort=0, ipcPort=36665, storageInfo=lv=-57;cid=testClusterID;nsid=527669062;c=1586996377207) storage dcefccea-0cc5-47cd-89b2-7ab8f019e51e
+2020-04-16 00:19:43,440 INFO  [IPC Server handler 9 on default port 37577] net.NetworkTopology (NetworkTopology.java:add(145)) - Adding a new node: /default-rack/127.0.0.1:33971
+2020-04-16 00:19:43,441 INFO  [IPC Server handler 9 on default port 37577] blockmanagement.BlockReportLeaseManager (BlockReportLeaseManager.java:registerNode(204)) - Registered DN dcefccea-0cc5-47cd-89b2-7ab8f019e51e (127.0.0.1:33971).
+2020-04-16 00:19:43,455 INFO  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.DataNode (BPServiceActor.java:register(786)) - Block pool Block pool BP-258311010-172.17.0.11-1586996377207 (Datanode Uuid dcefccea-0cc5-47cd-89b2-7ab8f019e51e) service to localhost/127.0.0.1:37577 successfully registered with NN
+2020-04-16 00:19:43,456 INFO  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.DataNode (BPServiceActor.java:offerService(616)) - For namenode localhost/127.0.0.1:37577 using BLOCKREPORT_INTERVAL of 21600000msec CACHEREPORT_INTERVAL of 10000msec Initial delay: 0msec; heartBeatInterval=3000
+2020-04-16 00:19:43,495 INFO  [IPC Server handler 6 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2020-04-16 00:19:43,502 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2798)) - No heartbeat from DataNode: 127.0.0.1:33971
+2020-04-16 00:19:43,502 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:19:43,506 INFO  [IPC Server handler 7 on default port 37577] blockmanagement.DatanodeDescriptor (DatanodeDescriptor.java:updateStorage(987)) - Adding new storage ID DS-7f24869e-c068-4421-9d32-5df8ae1ee71e for DN 127.0.0.1:33971
+2020-04-16 00:19:43,507 INFO  [IPC Server handler 7 on default port 37577] blockmanagement.DatanodeDescriptor (DatanodeDescriptor.java:updateStorage(987)) - Adding new storage ID DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5 for DN 127.0.0.1:33971
+2020-04-16 00:19:43,566 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2648)) - BLOCK* processReport 0x120709da93e65960: Processing first storage report for DS-7f24869e-c068-4421-9d32-5df8ae1ee71e from datanode dcefccea-0cc5-47cd-89b2-7ab8f019e51e
+2020-04-16 00:19:43,569 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2677)) - BLOCK* processReport 0x120709da93e65960: from storage DS-7f24869e-c068-4421-9d32-5df8ae1ee71e node DatanodeRegistration(127.0.0.1:33971, datanodeUuid=dcefccea-0cc5-47cd-89b2-7ab8f019e51e, infoPort=45031, infoSecurePort=0, ipcPort=36665, storageInfo=lv=-57;cid=testClusterID;nsid=527669062;c=1586996377207), blocks: 0, hasStaleStorage: true, processing time: 2 msecs, invalidatedBlocks: 0
+2020-04-16 00:19:43,570 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2648)) - BLOCK* processReport 0x120709da93e65960: Processing first storage report for DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5 from datanode dcefccea-0cc5-47cd-89b2-7ab8f019e51e
+2020-04-16 00:19:43,570 INFO  [Block report processor] BlockStateChange (BlockManager.java:processReport(2677)) - BLOCK* processReport 0x120709da93e65960: from storage DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5 node DatanodeRegistration(127.0.0.1:33971, datanodeUuid=dcefccea-0cc5-47cd-89b2-7ab8f019e51e, infoPort=45031, infoSecurePort=0, ipcPort=36665, storageInfo=lv=-57;cid=testClusterID;nsid=527669062;c=1586996377207), blocks: 0, hasStaleStorage: false, processing time: 0 msecs, invalidatedBlocks: 0
+2020-04-16 00:19:43,605 INFO  [IPC Server handler 3 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=datanodeReport	src=null	dst=null	perm=null	proto=rpc
+2020-04-16 00:19:43,608 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2758)) - Cluster is active
+2020-04-16 00:19:43,612 INFO  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.DataNode (BPServiceActor.java:blockReport(424)) - Successfully sent block report 0x120709da93e65960,  containing 2 storage report(s), of which we sent 2. The reports had 0 total blocks and used 1 RPC(s). This took 5 msec to generate and 66 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2020-04-16 00:19:43,612 INFO  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.DataNode (BPOfferService.java:processCommandFromActive(759)) - Got finalize command for block pool BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:43,661 INFO  [IPC Server handler 4 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=mkdirs	src=/tmp/logs/root/logs	dst=null	perm=root:supergroup:rwxr-xr-x	proto=rpc
+2020-04-16 00:19:43,686 INFO  [IPC Server handler 2 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=mkdirs	src=/tmp/logs/root/logs/application_1586996383616_0001	dst=null	perm=root:supergroup:rwxr-xr-x	proto=rpc
+2020-04-16 00:19:43,727 INFO  [IPC Server handler 1 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/tmp/logs/root/logs/application_1586996383616_0001/log1	dst=null	perm=root:supergroup:rw-r--r--	proto=rpc
+2020-04-16 00:19:43,805 INFO  [IPC Server handler 8 on default port 37577] hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741825_1001, replicas=127.0.0.1:33971 for /tmp/logs/root/logs/application_1586996383616_0001/log1
+2020-04-16 00:19:43,836 INFO  [Thread-384] sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:19:43,934 INFO  [DataXceiver for client DFSClient_NONMAPREDUCE_120893450_24 at /127.0.0.1:38382 [Receiving block BP-258311010-172.17.0.11-1586996377207:blk_1073741825_1001]] datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-258311010-172.17.0.11-1586996377207:blk_1073741825_1001 src: /127.0.0.1:38382 dest: /127.0.0.1:33971
+2020-04-16 00:19:44,061 INFO  [PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741825_1001, type=LAST_IN_PIPELINE] DataNode.clienttrace (BlockReceiver.java:finalizeBlock(1533)) - src: /127.0.0.1:38382, dest: /127.0.0.1:33971, bytes: 12288, op: HDFS_WRITE, cliID: DFSClient_NONMAPREDUCE_120893450_24, offset: 0, srvID: dcefccea-0cc5-47cd-89b2-7ab8f019e51e, blockid: BP-258311010-172.17.0.11-1586996377207:blk_1073741825_1001, duration(ns): 61801052
+2020-04-16 00:19:44,061 INFO  [PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741825_1001, type=LAST_IN_PIPELINE] datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741825_1001, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:19:44,086 INFO  [IPC Server handler 9 on default port 37577] namenode.FSNamesystem (FSNamesystem.java:checkBlocksComplete(2995)) - BLOCK* blk_1073741825_1001 is COMMITTED but not COMPLETE(numNodes= 0 <  minimum = 1) in file /tmp/logs/root/logs/application_1586996383616_0001/log1
+2020-04-16 00:19:44,522 INFO  [IPC Server handler 7 on default port 37577] hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/logs/root/logs/application_1586996383616_0001/log1 is closed by DFSClient_NONMAPREDUCE_120893450_24
+2020-04-16 00:19:44,535 INFO  [IPC Server handler 3 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/tmp/logs/root/logs/application_1586996383616_0001/log2	dst=null	perm=root:supergroup:rw-r--r--	proto=rpc
+2020-04-16 00:19:44,556 INFO  [IPC Server handler 5 on default port 37577] hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741826_1002, replicas=127.0.0.1:33971 for /tmp/logs/root/logs/application_1586996383616_0001/log2
+2020-04-16 00:19:44,560 INFO  [Thread-389] sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:19:44,578 INFO  [DataXceiver for client DFSClient_NONMAPREDUCE_120893450_24 at /127.0.0.1:38388 [Receiving block BP-258311010-172.17.0.11-1586996377207:blk_1073741826_1002]] datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-258311010-172.17.0.11-1586996377207:blk_1073741826_1002 src: /127.0.0.1:38388 dest: /127.0.0.1:33971
+2020-04-16 00:19:44,624 INFO  [PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741826_1002, type=LAST_IN_PIPELINE] DataNode.clienttrace (BlockReceiver.java:finalizeBlock(1533)) - src: /127.0.0.1:38388, dest: /127.0.0.1:33971, bytes: 16384, op: HDFS_WRITE, cliID: DFSClient_NONMAPREDUCE_120893450_24, offset: 0, srvID: dcefccea-0cc5-47cd-89b2-7ab8f019e51e, blockid: BP-258311010-172.17.0.11-1586996377207:blk_1073741826_1002, duration(ns): 26761303
+2020-04-16 00:19:44,655 INFO  [PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741826_1002, type=LAST_IN_PIPELINE] datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741826_1002, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:19:44,659 INFO  [IPC Server handler 2 on default port 37577] hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/logs/root/logs/application_1586996383616_0001/log2 is closed by DFSClient_NONMAPREDUCE_120893450_24
+2020-04-16 00:19:44,670 INFO  [IPC Server handler 1 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=create	src=/tmp/logs/root/logs/application_1586996383616_0001/log3	dst=null	perm=root:supergroup:rw-r--r--	proto=rpc
+2020-04-16 00:19:44,681 INFO  [IPC Server handler 8 on default port 37577] hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741827_1003, replicas=127.0.0.1:33971 for /tmp/logs/root/logs/application_1586996383616_0001/log3
+2020-04-16 00:19:44,687 INFO  [Thread-393] sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:19:44,705 INFO  [DataXceiver for client DFSClient_NONMAPREDUCE_120893450_24 at /127.0.0.1:38390 [Receiving block BP-258311010-172.17.0.11-1586996377207:blk_1073741827_1003]] datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-258311010-172.17.0.11-1586996377207:blk_1073741827_1003 src: /127.0.0.1:38390 dest: /127.0.0.1:33971
+2020-04-16 00:19:44,755 INFO  [PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741827_1003, type=LAST_IN_PIPELINE] DataNode.clienttrace (BlockReceiver.java:finalizeBlock(1533)) - src: /127.0.0.1:38390, dest: /127.0.0.1:33971, bytes: 8192, op: HDFS_WRITE, cliID: DFSClient_NONMAPREDUCE_120893450_24, offset: 0, srvID: dcefccea-0cc5-47cd-89b2-7ab8f019e51e, blockid: BP-258311010-172.17.0.11-1586996377207:blk_1073741827_1003, duration(ns): 42003658
+2020-04-16 00:19:44,756 INFO  [PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741827_1003, type=LAST_IN_PIPELINE] datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-258311010-172.17.0.11-1586996377207:blk_1073741827_1003, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:19:44,771 INFO  [IPC Server handler 6 on default port 37577] hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/logs/root/logs/application_1586996383616_0001/log3 is closed by DFSClient_NONMAPREDUCE_120893450_24
+2020-04-16 00:19:44,786 INFO  [IPC Server handler 9 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=listStatus	src=/tmp/logs/root/logs/application_1586996383616_0001	dst=null	perm=null	proto=rpc
+2020-04-16 00:19:44,983 INFO  [Listener at localhost/36665] tools.HadoopArchiveLogsRunner (HadoopArchiveLogsRunner.java:run(114)) - Running as root
+2020-04-16 00:19:44,983 INFO  [Listener at localhost/36665] tools.HadoopArchiveLogsRunner (HadoopArchiveLogsRunner.java:runInternal(153)) - Executing 'hadoop archives'
+	-archiveName
+	application_1586996383616_0001.har
+	-p
+	/tmp/logs/root/logs/application_1586996383616_0001
+	*
+	/tmp/logs/archive-logs-work
+2020-04-16 00:19:44,986 WARN  [Listener at localhost/36665] tools.HadoopArchiveLogsRunner (HadoopArchiveLogsRunner.java:runInternal(156)) - Failed to create archives for application_1586996383616_0001
+2020-04-16 00:19:44,998 INFO  [IPC Server handler 7 on default port 37577] FSNamesystem.audit (FSNamesystem.java:logAuditMessage(8074)) - allowed=true	ugi=root (auth:SIMPLE)	ip=/127.0.0.1	cmd=listStatus	src=/tmp/logs/root/logs/application_1586996383616_0001	dst=null	perm=null	proto=rpc
+2020-04-16 00:19:45,001 INFO  [Listener at localhost/36665] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(640)) - msx-yarn NodeManager stop
+2020-04-16 00:19:45,015 INFO  [Listener at localhost/36665] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:unRegisterNM(313)) - Successfully Unregistered the Node c5e374aa2199:42102 with ResourceManager.
+2020-04-16 00:19:45,024 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.w.WebAppContext@2bd9fe81{/,null,UNAVAILABLE}{/node}
+2020-04-16 00:19:45,046 INFO  [Listener at localhost/36665] server.AbstractConnector (AbstractConnector.java:doStop(318)) - Stopped ServerConnector@53349ad2{HTTP/1.1,[http/1.1]}{c5e374aa2199:0}
+2020-04-16 00:19:45,046 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@3c5b575a{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,UNAVAILABLE}
+2020-04-16 00:19:45,047 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@4c61b16a{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,UNAVAILABLE}
+2020-04-16 00:19:45,057 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 42102
+2020-04-16 00:19:45,085 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:45,085 INFO  [Listener at localhost/36665] logaggregation.LogAggregationService (LogAggregationService.java:serviceStop(176)) - org.apache.hadoop.yarn.server.nodemanager.containermanager.logaggregation.LogAggregationService waiting for pending aggregation during exit
+2020-04-16 00:19:45,089 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,093 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 45510
+2020-04-16 00:19:45,106 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:45,106 INFO  [Listener at localhost/36665] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:isEnabled(85)) - Node Resource monitoring interval is <=0. org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl is disabled.
+2020-04-16 00:19:45,106 INFO  [Public Localizer] localizer.ResourceLocalizationService (ResourceLocalizationService.java:run(1006)) - Public cache exiting
+2020-04-16 00:19:45,107 INFO  [Listener at localhost/36665] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(640)) - msx-yarn NodeManager stop
+2020-04-16 00:19:45,107 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,107 INFO  [Listener at localhost/36665] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:unRegisterNM(313)) - Successfully Unregistered the Node c5e374aa2199:45431 with ResourceManager.
+2020-04-16 00:19:45,122 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.w.WebAppContext@29740c8f{/,null,UNAVAILABLE}{/node}
+2020-04-16 00:19:45,146 INFO  [Listener at localhost/36665] server.AbstractConnector (AbstractConnector.java:doStop(318)) - Stopped ServerConnector@735ab8fd{HTTP/1.1,[http/1.1]}{c5e374aa2199:0}
+2020-04-16 00:19:45,147 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@3517718f{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,UNAVAILABLE}
+2020-04-16 00:19:45,147 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@2df205fa{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,UNAVAILABLE}
+2020-04-16 00:19:45,173 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 45431
+2020-04-16 00:19:45,187 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,188 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:45,188 INFO  [Listener at localhost/36665] logaggregation.LogAggregationService (LogAggregationService.java:serviceStop(176)) - org.apache.hadoop.yarn.server.nodemanager.containermanager.logaggregation.LogAggregationService waiting for pending aggregation during exit
+2020-04-16 00:19:45,194 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 42947
+2020-04-16 00:19:45,217 INFO  [Listener at localhost/36665] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:isEnabled(85)) - Node Resource monitoring interval is <=0. org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl is disabled.
+2020-04-16 00:19:45,217 INFO  [Listener at localhost/36665] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(534)) - msx-yarn ResourceManager stop
+2020-04-16 00:19:45,219 ERROR [Thread[Thread-30,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(700)) - ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2020-04-16 00:19:45,220 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.w.WebAppContext@473f4bf7{/,null,UNAVAILABLE}{/cluster}
+2020-04-16 00:19:45,221 INFO  [Public Localizer] localizer.ResourceLocalizationService (ResourceLocalizationService.java:run(1006)) - Public cache exiting
+2020-04-16 00:19:45,225 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:45,245 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,257 INFO  [Listener at localhost/36665] server.AbstractConnector (AbstractConnector.java:doStop(318)) - Stopped ServerConnector@57bc4795{HTTP/1.1,[http/1.1]}{0.0.0.0:8088}
+2020-04-16 00:19:45,258 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@2ad5153e{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,UNAVAILABLE}
+2020-04-16 00:19:45,259 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@43eb1c09{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,UNAVAILABLE}
+2020-04-16 00:19:45,277 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 8032
+2020-04-16 00:19:45,301 INFO  [IPC Server listener on 8032] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 8032
+2020-04-16 00:19:45,310 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 8033
+2020-04-16 00:19:45,321 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,329 INFO  [IPC Server listener on 8033] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 8033
+2020-04-16 00:19:45,342 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,342 INFO  [Listener at localhost/36665] resourcemanager.ResourceManager (ResourceManager.java:transitionToStandby(1324)) - Transitioning to standby state
+2020-04-16 00:19:45,343 WARN  [ApplicationMaster Launcher] amlauncher.ApplicationMasterLauncher (ApplicationMasterLauncher.java:run(122)) - org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher$LauncherThread interrupted. Returning.
+2020-04-16 00:19:45,343 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 8030
+2020-04-16 00:19:45,360 INFO  [IPC Server listener on 8030] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 8030
+2020-04-16 00:19:45,378 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,385 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 8031
+2020-04-16 00:19:45,401 INFO  [IPC Server listener on 8031] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 8031
+2020-04-16 00:19:45,401 ERROR [SchedulerEventDispatcher:Event Processor] event.EventDispatcher (EventDispatcher.java:run(61)) - Returning, interrupted : java.lang.InterruptedException
+2020-04-16 00:19:45,414 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,414 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - NMLivelinessMonitor thread interrupted
+2020-04-16 00:19:45,445 INFO  [ActivitiesManager thread.] activities.ActivitiesManager (ActivitiesManager.java:run(146)) - org.apache.hadoop.yarn.server.resourcemanager.scheduler.activities.ActivitiesManager thread interrupted
+2020-04-16 00:19:45,450 INFO  [Listener at localhost/36665] event.AsyncDispatcher (AsyncDispatcher.java:serviceStop(177)) - AsyncDispatcher is draining to stop, ignoring any new events.
+2020-04-16 00:19:45,469 INFO  [Listener at localhost/36665] event.AsyncDispatcher (AsyncDispatcher.java:serviceStop(177)) - AsyncDispatcher is draining to stop, ignoring any new events.
+2020-04-16 00:19:45,492 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - org.apache.hadoop.yarn.server.resourcemanager.rmapp.monitor.RMAppLifetimeMonitor thread interrupted
+2020-04-16 00:19:45,505 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - org.apache.hadoop.yarn.server.resourcemanager.rmcontainer.ContainerAllocationExpirer thread interrupted
+2020-04-16 00:19:45,507 ERROR [Thread[Thread-40,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(700)) - ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2020-04-16 00:19:45,508 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - AMLivelinessMonitor thread interrupted
+2020-04-16 00:19:45,508 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - AMLivelinessMonitor thread interrupted
+2020-04-16 00:19:45,521 INFO  [Listener at localhost/36665] event.AsyncDispatcher (AsyncDispatcher.java:serviceStop(177)) - AsyncDispatcher is draining to stop, ignoring any new events.
+2020-04-16 00:19:45,525 INFO  [Listener at localhost/36665] resourcemanager.ResourceManager (ResourceManager.java:transitionToStandby(1331)) - Transitioned to standby state
+2020-04-16 00:19:45,525 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:shutdown(2049)) - Shutting down the Mini HDFS Cluster
+2020-04-16 00:19:45,525 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:shutdownDataNode(2097)) - Shutting down DataNode 0
+2020-04-16 00:19:45,525 INFO  [Listener at localhost/36665] datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-16 00:19:45,529 INFO  [org.apache.hadoop.hdfs.server.datanode.DataXceiverServer@4efdd8] datanode.DataNode (DataXceiverServer.java:closeAllPeers(281)) - Closing all peers.
+2020-04-16 00:19:45,526 WARN  [Listener at localhost/36665] datanode.DirectoryScanner (DirectoryScanner.java:shutdown(343)) - DirectoryScanner: shutdown has been called
+2020-04-16 00:19:45,546 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2)] datanode.VolumeScanner (VolumeScanner.java:run(637)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2, DS-37545a64-0e0b-4ad8-93a4-6d9e543a0aa5) exiting.
+2020-04-16 00:19:45,546 INFO  [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1)] datanode.VolumeScanner (VolumeScanner.java:run(637)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1, DS-7f24869e-c068-4421-9d32-5df8ae1ee71e) exiting.
+2020-04-16 00:19:45,666 ERROR [Thread[Thread-350,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(700)) - ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2020-04-16 00:19:45,667 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.w.WebAppContext@276d7e98{/,null,UNAVAILABLE}{/datanode}
+2020-04-16 00:19:45,669 INFO  [Listener at localhost/36665] server.AbstractConnector (AbstractConnector.java:doStop(318)) - Stopped ServerConnector@48ef34c5{HTTP/1.1,[http/1.1]}{localhost:0}
+2020-04-16 00:19:45,670 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@34bdd108{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-hdfs/3.2.1/hadoop-hdfs-3.2.1-tests.jar!/webapps/static,UNAVAILABLE}
+2020-04-16 00:19:45,670 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@6684ef1f{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,UNAVAILABLE}
+2020-04-16 00:19:45,717 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 36665
+2020-04-16 00:19:45,730 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,731 WARN  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.IncrementalBlockReportManager (IncrementalBlockReportManager.java:waitTillNextIBR(160)) - IncrementalBlockReportManager interrupted
+2020-04-16 00:19:45,731 WARN  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.DataNode (BPServiceActor.java:run(860)) - Ending block pool service for: Block pool BP-258311010-172.17.0.11-1586996377207 (Datanode Uuid dcefccea-0cc5-47cd-89b2-7ab8f019e51e) service to localhost/127.0.0.1:37577
+2020-04-16 00:19:45,731 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:45,833 INFO  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] datanode.DataNode (BlockPoolManager.java:remove(102)) - Removed Block pool BP-258311010-172.17.0.11-1586996377207 (Datanode Uuid dcefccea-0cc5-47cd-89b2-7ab8f019e51e)
+2020-04-16 00:19:45,834 INFO  [BP-258311010-172.17.0.11-1586996377207 heartbeating to localhost/127.0.0.1:37577] impl.FsDatasetImpl (FsDatasetImpl.java:shutdownBlockPool(2814)) - Removing block pool BP-258311010-172.17.0.11-1586996377207
+2020-04-16 00:19:45,836 WARN  [refreshUsed-/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data1/current/BP-258311010-172.17.0.11-1586996377207] fs.CachingGetSpaceUsed (CachingGetSpaceUsed.java:run(183)) - Thread Interrupted waiting to refresh disk information: sleep interrupted
+2020-04-16 00:19:45,837 WARN  [refreshUsed-/root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/data/data2/current/BP-258311010-172.17.0.11-1586996377207] fs.CachingGetSpaceUsed (CachingGetSpaceUsed.java:run(183)) - Thread Interrupted waiting to refresh disk information: sleep interrupted
+2020-04-16 00:19:45,840 INFO  [Listener at localhost/36665] impl.FsDatasetAsyncDiskService (FsDatasetAsyncDiskService.java:shutdown(193)) - Shutting down all async disk service threads
+2020-04-16 00:19:45,849 INFO  [Listener at localhost/36665] impl.FsDatasetAsyncDiskService (FsDatasetAsyncDiskService.java:shutdown(201)) - All async disk service threads have been shut down
+2020-04-16 00:19:45,850 INFO  [Listener at localhost/36665] impl.RamDiskAsyncLazyPersistService (RamDiskAsyncLazyPersistService.java:shutdown(177)) - Shutting down all async lazy persist service threads
+2020-04-16 00:19:45,850 INFO  [Listener at localhost/36665] impl.RamDiskAsyncLazyPersistService (RamDiskAsyncLazyPersistService.java:shutdown(184)) - All async lazy persist service threads have been shut down
+2020-04-16 00:19:45,861 INFO  [Listener at localhost/36665] datanode.DataNode (DataNode.java:shutdown(2167)) - Shutdown complete.
+2020-04-16 00:19:45,862 INFO  [Listener at localhost/36665] hdfs.MiniDFSCluster (MiniDFSCluster.java:stopAndJoinNameNode(2130)) - Shutting down the namenode
+2020-04-16 00:19:45,862 INFO  [Listener at localhost/36665] namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-16 00:19:45,862 INFO  [Listener at localhost/36665] namenode.FSNamesystem (FSNamesystem.java:stopActiveServices(1334)) - Stopping services started for active state
+2020-04-16 00:19:45,863 INFO  [Listener at localhost/36665] namenode.FSEditLog (FSEditLog.java:endCurrentLogSegment(1410)) - Ending log segment 1, 21
+2020-04-16 00:19:45,864 INFO  [org.apache.hadoop.hdfs.server.namenode.FSNamesystem$NameNodeEditLogRoller@6b213764] namenode.FSNamesystem (FSNamesystem.java:run(4107)) - NameNodeEditLogRoller was interrupted, exiting
+2020-04-16 00:19:45,873 INFO  [Listener at localhost/36665] namenode.FSEditLog (FSEditLog.java:printStatistics(778)) - Number of transactions: 22 Total time for transactions(ms): 27 Number of transactions batched in Syncs: 6 Number of syncs: 17 SyncTimes(ms): 16 3 
+2020-04-16 00:19:45,878 INFO  [Listener at localhost/36665] namenode.FileJournalManager (FileJournalManager.java:finalizeLogSegment(145)) - Finalizing edits file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/current/edits_inprogress_0000000000000000001 -> /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-1/current/edits_0000000000000000001-0000000000000000022
+2020-04-16 00:19:45,879 INFO  [Listener at localhost/36665] namenode.FileJournalManager (FileJournalManager.java:finalizeLogSegment(145)) - Finalizing edits file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2/current/edits_inprogress_0000000000000000001 -> /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/test-dir/dfs/name-0-2/current/edits_0000000000000000001-0000000000000000022
+2020-04-16 00:19:45,873 INFO  [org.apache.hadoop.hdfs.server.namenode.FSNamesystem$LazyPersistFileScrubber@81b3e16] namenode.FSNamesystem (FSNamesystem.java:run(4198)) - LazyPersistFileScrubber was interrupted, exiting
+2020-04-16 00:19:45,880 INFO  [FSEditLogAsync] namenode.FSEditLog (FSEditLogAsync.java:run(253)) - FSEditLogAsync was interrupted, exiting
+2020-04-16 00:19:45,889 INFO  [CacheReplicationMonitor(1121283937)] blockmanagement.CacheReplicationMonitor (CacheReplicationMonitor.java:run(169)) - Shutting down CacheReplicationMonitor
+2020-04-16 00:19:45,894 INFO  [Listener at localhost/36665] ipc.Server (Server.java:stop(3359)) - Stopping server on 37577
+2020-04-16 00:19:45,895 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:45,897 INFO  [RedundancyMonitor] blockmanagement.BlockManager (BlockManager.java:run(4687)) - Stopping RedundancyMonitor.
+2020-04-16 00:19:45,899 INFO  [StorageInfoMonitor] blockmanagement.BlockManager (BlockManager.java:run(4722)) - Stopping thread.
+2020-04-16 00:19:45,909 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:45,992 INFO  [Listener at localhost/36665] namenode.FSNamesystem (FSNamesystem.java:stopActiveServices(1334)) - Stopping services started for active state
+2020-04-16 00:19:45,992 INFO  [Listener at localhost/36665] namenode.FSNamesystem (FSNamesystem.java:stopStandbyServices(1434)) - Stopping services started for standby state
+2020-04-16 00:19:45,995 ERROR [Thread[Thread-314,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(700)) - ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2020-04-16 00:19:45,999 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.w.WebAppContext@2bfc438{/,null,UNAVAILABLE}{/hdfs}
+2020-04-16 00:19:46,001 INFO  [Listener at localhost/36665] server.AbstractConnector (AbstractConnector.java:doStop(318)) - Stopped ServerConnector@7b134110{HTTP/1.1,[http/1.1]}{localhost:0}
+2020-04-16 00:19:46,002 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@10c8874e{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-hdfs/3.2.1/hadoop-hdfs-3.2.1-tests.jar!/webapps/static,UNAVAILABLE}
+2020-04-16 00:19:46,002 INFO  [Listener at localhost/36665] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@67720b80{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,UNAVAILABLE}
+2020-04-16 00:19:46,003 INFO  [Listener at localhost/36665] impl.MetricsSystemImpl (MetricsSystemImpl.java:stop(210)) - Stopping DataNode metrics system...
+2020-04-16 00:19:46,006 INFO  [Listener at localhost/36665] impl.MetricsSystemImpl (MetricsSystemImpl.java:stop(216)) - DataNode metrics system stopped.
+2020-04-16 00:19:46,007 INFO  [Listener at localhost/36665] impl.MetricsSystemImpl (MetricsSystemImpl.java:shutdown(607)) - DataNode metrics system shutdown complete.
+msx-listener testfinished org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
+msx-listener writeFile testName is org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
+msx-listener succeed
+msx-listener all testRunFinished

@@ -1,0 +1,327 @@
+msx-listener test started org.apache.hadoop.tools.TestHadoopArchiveLogs#testFilterAppsByAggregatedStatus
+msx-listener unitTestCounterInClass = 0
+2020-04-16 00:19:31,334 INFO  [Thread-0] net.ServerSocketUtil (ServerSocketUtil.java:getPort(53)) - Using port 9188
+2020-04-16 00:19:31,369 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - resource-types.xml not found
+2020-04-16 00:19:31,390 INFO  [Thread-0] resource.ResourceUtils (ResourceUtils.java:addResourcesFileToConf(440)) - Unable to find 'resource-types.xml'.
+2020-04-16 00:19:31,568 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - core-site.xml not found
+2020-04-16 00:19:31,676 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - yarn-site.xml not found
+2020-04-16 00:19:31,689 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.RMFatalEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMFatalEventDispatcher
+2020-04-16 00:19:31,793 INFO  [Thread-0] security.NMTokenSecretManagerInRM (NMTokenSecretManagerInRM.java:<init>(75)) - NMTokenKeyRollingInterval: 86400000ms and NMTokenKeyActivationDelay: 900000ms
+2020-04-16 00:19:31,815 INFO  [Thread-0] security.RMContainerTokenSecretManager (RMContainerTokenSecretManager.java:<init>(81)) - ContainerTokenKeyRollingInterval: 86400000ms and ContainerTokenKeyActivationDelay: 900000ms
+2020-04-16 00:19:31,825 INFO  [Thread-0] security.AMRMTokenSecretManager (AMRMTokenSecretManager.java:<init>(94)) - AMRMTokenKeyRollingInterval: 86400000ms and AMRMTokenKeyActivationDelay: 900000 ms
+2020-04-16 00:19:31,918 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStoreEventType for class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore$ForwardingEventHandler
+2020-04-16 00:19:31,926 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.NodesListManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.NodesListManager
+2020-04-16 00:19:31,927 INFO  [Thread-0] resourcemanager.ResourceManager (ResourceManager.java:createScheduler(445)) - Using Scheduler: org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler
+2020-04-16 00:19:32,017 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.scheduler.event.SchedulerEventType for class org.apache.hadoop.yarn.event.EventDispatcher
+2020-04-16 00:19:32,019 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationEventDispatcher
+2020-04-16 00:19:32,029 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationAttemptEventDispatcher
+2020-04-16 00:19:32,032 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$NodeEventDispatcher
+2020-04-16 00:19:32,182 WARN  [Thread-0] impl.MetricsConfig (MetricsConfig.java:loadFirst(134)) - Cannot locate configuration: tried hadoop-metrics2-resourcemanager.properties,hadoop-metrics2.properties
+2020-04-16 00:19:32,337 INFO  [Thread-0] impl.MetricsSystemImpl (MetricsSystemImpl.java:startTimer(374)) - Scheduled Metric snapshot period at 10 second(s).
+2020-04-16 00:19:32,337 INFO  [Thread-0] impl.MetricsSystemImpl (MetricsSystemImpl.java:start(191)) - ResourceManager metrics system started
+2020-04-16 00:19:32,378 INFO  [Thread-0] security.YarnAuthorizationProvider (YarnAuthorizationProvider.java:getInstance(58)) - org.apache.hadoop.yarn.security.ConfiguredYarnAuthorizer is instantiated.
+2020-04-16 00:19:32,384 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.RMAppManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.RMAppManager
+2020-04-16 00:19:32,407 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.AMLauncherEventType for class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher
+2020-04-16 00:19:32,419 INFO  [Thread-0] resourcemanager.RMNMInfo (RMNMInfo.java:<init>(65)) - Registered RMNMInfo MBean
+2020-04-16 00:19:32,420 INFO  [Thread-0] monitor.RMAppLifetimeMonitor (RMAppLifetimeMonitor.java:serviceInit(66)) - Application lifelime monitor interval set to 3000 ms.
+2020-04-16 00:19:32,431 INFO  [Thread-0] placement.MultiNodeSortingManager (MultiNodeSortingManager.java:serviceInit(59)) - Initializing NodeSortingService=MultiNodeSortingManager
+2020-04-16 00:19:32,435 INFO  [Thread-0] util.HostsFileReader (HostsFileReader.java:refresh(211)) - Refreshing hosts (include/exclude) list
+2020-04-16 00:19:32,470 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2798)) - found resource capacity-scheduler.xml at jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-server-tests/3.2.1/hadoop-yarn-server-tests-3.2.1-tests.jar!/capacity-scheduler.xml
+2020-04-16 00:19:32,505 INFO  [Thread-0] scheduler.AbstractYarnScheduler (AbstractYarnScheduler.java:getMinimumAllocation(1402)) - Minimum allocation = <memory:1024, vCores:1>
+2020-04-16 00:19:32,505 INFO  [Thread-0] scheduler.AbstractYarnScheduler (AbstractYarnScheduler.java:getMaximumAllocation(1414)) - Maximum allocation = <memory:8192, vCores:4>
+2020-04-16 00:19:32,588 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(915)) - max alloc mb per queue for root is undefined
+2020-04-16 00:19:32,588 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(919)) - max alloc vcore per queue for root is undefined
+2020-04-16 00:19:32,614 INFO  [Thread-0] capacity.ParentQueue (ParentQueue.java:setupQueueConfigs(151)) - root, capacity=1.0, absoluteCapacity=1.0, maxCapacity=1.0, absoluteMaxCapacity=1.0, state=RUNNING, acls=SUBMIT_APP:*ADMINISTER_QUEUE:*, labels=*,
+, reservationsContinueLooking=true, orderingPolicy=utilization, priority=0
+2020-04-16 00:19:32,614 INFO  [Thread-0] capacity.ParentQueue (ParentQueue.java:<init>(114)) - Initialized parent-queue root name=root, fullname=root
+2020-04-16 00:19:32,650 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(915)) - max alloc mb per queue for root.default is undefined
+2020-04-16 00:19:32,650 INFO  [Thread-0] capacity.CapacitySchedulerConfiguration (CapacitySchedulerConfiguration.java:getMaximumAllocationPerQueue(919)) - max alloc vcore per queue for root.default is undefined
+2020-04-16 00:19:32,661 INFO  [Thread-0] capacity.LeafQueue (LeafQueue.java:setupQueueConfigs(285)) - Initializing default
+capacity = 1.0 [= (float) configuredCapacity / 100 ]
+absoluteCapacity = 1.0 [= parentAbsoluteCapacity * capacity ]
+maxCapacity = 1.0 [= configuredMaxCapacity ]
+absoluteMaxCapacity = 1.0 [= 1.0 maximumCapacity undefined, (parentAbsoluteMaxCapacity * maximumCapacity) / 100 otherwise ]
+effectiveMinResource=<memory:0, vCores:0>
+ , effectiveMaxResource=<memory:0, vCores:0>
+userLimit = 100 [= configuredUserLimit ]
+userLimitFactor = 1.0 [= configuredUserLimitFactor ]
+maxApplications = 10000 [= configuredMaximumSystemApplicationsPerQueue or (int)(configuredMaximumSystemApplications * absoluteCapacity)]
+maxApplicationsPerUser = 10000 [= (int)(maxApplications * (userLimit / 100.0f) * userLimitFactor) ]
+usedCapacity = 0.0 [= usedResourcesMemory / (clusterResourceMemory * absoluteCapacity)]
+absoluteUsedCapacity = 0.0 [= usedResourcesMemory / clusterResourceMemory]
+maxAMResourcePerQueuePercent = 0.1 [= configuredMaximumAMResourcePercent ]
+minimumAllocationFactor = 0.875 [= (float)(maximumAllocationMemory - minimumAllocationMemory) / maximumAllocationMemory ]
+maximumAllocation = <memory:8192, vCores:4> [= configuredMaxAllocation ]
+numContainers = 0 [= currentNumContainers ]
+state = RUNNING [= configuredState ]
+acls = SUBMIT_APP:*ADMINISTER_QUEUE:* [= configuredAcls ]
+nodeLocalityDelay = -1
+rackLocalityAdditionalDelay = -1
+labels=*,
+reservationsContinueLooking = true
+preemptionDisabled = true
+defaultAppPriorityPerQueue = 0
+priority = 0
+maxLifetime = -1 seconds
+defaultLifetime = -1 seconds
+2020-04-16 00:19:32,662 INFO  [Thread-0] capacity.CapacitySchedulerQueueManager (CapacitySchedulerQueueManager.java:parseQueue(298)) - Initialized queue: default: capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>, usedCapacity=0.0, absoluteUsedCapacity=0.0, numApps=0, numContainers=0, effectiveMinResource=<memory:0, vCores:0> , effectiveMaxResource=<memory:0, vCores:0>
+2020-04-16 00:19:32,663 INFO  [Thread-0] capacity.CapacitySchedulerQueueManager (CapacitySchedulerQueueManager.java:parseQueue(298)) - Initialized queue: root: numChildQueue= 1, capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>usedCapacity=0.0, numApps=0, numContainers=0
+2020-04-16 00:19:32,666 INFO  [Thread-0] capacity.CapacitySchedulerQueueManager (CapacitySchedulerQueueManager.java:initializeQueues(163)) - Initialized root queue root: numChildQueue= 1, capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>usedCapacity=0.0, numApps=0, numContainers=0
+2020-04-16 00:19:32,667 INFO  [Thread-0] placement.UserGroupMappingPlacementRule (UserGroupMappingPlacementRule.java:initialize(237)) - Initialized queue mappings, override: false
+2020-04-16 00:19:32,669 INFO  [Thread-0] placement.MultiNodeSortingManager (MultiNodeSortingManager.java:registerMultiNodePolicyNames(104)) - MultiNode scheduling is 'false', and configured policies are 
+2020-04-16 00:19:32,670 INFO  [Thread-0] capacity.CapacityScheduler (CapacityScheduler.java:initScheduler(408)) - Initialized CapacityScheduler with calculator=class org.apache.hadoop.yarn.util.resource.DefaultResourceCalculator, minimumAllocation=<<memory:1024, vCores:1>>, maximumAllocation=<<memory:8192, vCores:4>>, asynchronousScheduling=false, asyncScheduleInterval=5ms,multiNodePlacementEnabled=false
+2020-04-16 00:19:32,675 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - dynamic-resources.xml not found
+2020-04-16 00:19:32,680 INFO  [Thread-0] resourcemanager.AMSProcessingChain (AMSProcessingChain.java:init(62)) - Initializing AMS Processing chain. Root Processor=[org.apache.hadoop.yarn.server.resourcemanager.DefaultAMSProcessor].
+2020-04-16 00:19:32,681 INFO  [Thread-0] resourcemanager.ApplicationMasterService (ApplicationMasterService.java:addPlacementConstraintHandler(132)) - disabled placement handler will be used, all scheduling requests will be rejected.
+2020-04-16 00:19:32,683 INFO  [Thread-0] resourcemanager.AMSProcessingChain (AMSProcessingChain.java:addProcessor(75)) - Adding [org.apache.hadoop.yarn.server.resourcemanager.scheduler.constraint.processor.DisabledPlacementProcessor] tp top of AMS Processing chain. 
+2020-04-16 00:19:32,699 INFO  [Thread-0] resourcemanager.ResourceManager (ResourceManager.java:createSystemMetricsPublisher(580)) - TimelineServicePublisher is not configured
+2020-04-16 00:19:32,721 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$1
+2020-04-16 00:19:32,722 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(499)) - msx-yarn ResourceManager init
+2020-04-16 00:19:32,724 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:prepareDirs(621)) - Created localDir in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/TestHadoopArchiveLogs/TestHadoopArchiveLogs-localDir-nm-0_0
+2020-04-16 00:19:32,725 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:prepareDirs(621)) - Created logDir in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/TestHadoopArchiveLogs/TestHadoopArchiveLogs-logDir-nm-0_0
+2020-04-16 00:19:32,726 INFO  [Thread-0] net.ServerSocketUtil (ServerSocketUtil.java:getPort(53)) - Using port 8048
+2020-04-16 00:19:32,727 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(602)) - Starting NM: 0
+2020-04-16 00:19:32,756 INFO  [Thread-0] resourceplugin.ResourcePluginManager (ResourcePluginManager.java:getPluginsFromConfig(72)) - No Resource plugins found from configuration!
+2020-04-16 00:19:32,756 INFO  [Thread-0] resourceplugin.ResourcePluginManager (ResourcePluginManager.java:getPluginsFromConfig(74)) - Found Resource plugins from configuration: null
+2020-04-16 00:19:32,791 INFO  [Thread-0] nodemanager.NodeManager (NodeManager.java:getNodeHealthScriptRunner(357)) - Node Manager health check script is not available or doesn't have execute permission, so not starting the node health script runner.
+2020-04-16 00:19:32,870 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.container.ContainerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ContainerEventDispatcher
+2020-04-16 00:19:32,871 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.application.ApplicationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$ApplicationEventDispatcher
+2020-04-16 00:19:32,873 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizationEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl$LocalizationEventHandlerWrapper
+2020-04-16 00:19:32,873 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServicesEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices
+2020-04-16 00:19:32,874 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl
+2020-04-16 00:19:32,875 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncherEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher
+2020-04-16 00:19:32,876 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerSchedulerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler
+2020-04-16 00:19:32,879 INFO  [Thread-0] tracker.NMLogAggregationStatusTracker (NMLogAggregationStatusTracker.java:<init>(89)) - the rolling interval seconds for the NodeManager Cached Log aggregation status is 600
+2020-04-16 00:19:32,889 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.ContainerManagerEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$CustomContainerManagerImpl
+2020-04-16 00:19:32,890 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.NodeManagerEventType for class org.apache.hadoop.yarn.server.MiniYARNCluster$ShortCircuitedNodeManager
+2020-04-16 00:19:32,892 INFO  [Thread-0] impl.MetricsSystemImpl (MetricsSystemImpl.java:init(158)) - NodeManager metrics system started (again)
+2020-04-16 00:19:32,915 INFO  [Thread-0] nodemanager.DirectoryCollection (DirectoryCollection.java:<init>(187)) - Disk Validator 'basic' is loaded.
+2020-04-16 00:19:32,930 INFO  [Thread-0] nodemanager.DirectoryCollection (DirectoryCollection.java:<init>(187)) - Disk Validator 'basic' is loaded.
+2020-04-16 00:19:32,993 INFO  [Thread-0] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:serviceInit(75)) -  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@7e7e9152
+2020-04-16 00:19:32,997 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.event.LogHandlerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.logaggregation.LogAggregationService
+2020-04-16 00:19:32,999 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadService
+2020-04-16 00:19:33,000 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:createAMRMProxyService(902)) - CustomAMRMProxyService is disabled
+2020-04-16 00:19:33,000 INFO  [Thread-0] localizer.ResourceLocalizationService (ResourceLocalizationService.java:validateConf(242)) - per directory file limit = 8192
+2020-04-16 00:19:33,092 INFO  [Thread-0] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.event.LocalizerEventType for class org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$LocalizerTracker
+2020-04-16 00:19:33,099 INFO  [Thread-0] resources.ResourceHandlerModule (ResourceHandlerModule.java:initNetworkResourceHandler(200)) - Using traffic control bandwidth handler
+2020-04-16 00:19:33,103 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(138)) -  Using ResourceCalculatorPlugin : org.apache.hadoop.yarn.util.ResourceCalculatorPlugin@4cbd84e8
+2020-04-16 00:19:33,106 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(143)) -  Using ResourceCalculatorProcessTree : null
+2020-04-16 00:19:33,108 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(190)) - Physical memory check enabled: true
+2020-04-16 00:19:33,108 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(191)) - Virtual memory check enabled: true
+2020-04-16 00:19:33,108 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(192)) - Elastic memory control enabled: false
+2020-04-16 00:19:33,108 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(193)) - Strict memory control enabled: true
+2020-04-16 00:19:33,108 INFO  [Thread-0] monitor.ContainersMonitorImpl (ContainersMonitorImpl.java:serviceInit(218)) - ContainersMonitor enabled: false
+2020-04-16 00:19:33,112 INFO  [Thread-0] logaggregation.LogAggregationService (LogAggregationService.java:calculateRollingMonitorInterval(115)) - rollingMonitorInterval is set as -1. The log rolling monitoring interval is disabled. The logs will be aggregated after this application is finished.
+2020-04-16 00:19:33,114 INFO  [Thread-0] logaggregation.LogAggregationService (LogAggregationService.java:serviceInit(159)) - rollingMonitorInterval is set as -1. The logs will be aggregated every -1 seconds
+2020-04-16 00:19:33,115 INFO  [Thread-0] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:recover(399)) - Not a recoverable state store. Nothing to recover.
+2020-04-16 00:19:33,117 INFO  [Thread-0] conf.Configuration (Configuration.java:getConfResourceAsInputStream(2795)) - node-resources.xml not found
+2020-04-16 00:19:33,118 INFO  [Thread-0] resource.ResourceUtils (ResourceUtils.java:addResourcesFileToConf(440)) - Unable to find 'node-resources.xml'.
+2020-04-16 00:19:33,121 INFO  [Thread-0] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceInit(201)) - Nodemanager resources is set to: <memory:4096, vCores:8>
+2020-04-16 00:19:33,142 INFO  [Thread-0] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceInit(249)) - Initialized nodemanager with : physical-memory=4096 virtual-memory=8602 virtual-cores=8
+2020-04-16 00:19:33,143 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(605)) - msx-yarn NodeManager init
+2020-04-16 00:19:33,143 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(504)) - msx-yarn ResourceManager start
+2020-04-16 00:19:33,206 INFO  [Thread-0] util.log (Log.java:initialized(192)) - Logging initialized @4186ms
+2020-04-16 00:19:33,362 INFO  [Thread-0] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:33,774 INFO  [Thread-0] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(81)) - Http request log for http.requests.resourcemanager is not defined
+2020-04-16 00:19:33,807 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:19:33,814 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context cluster
+2020-04-16 00:19:33,814 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context static
+2020-04-16 00:19:33,817 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context logs
+2020-04-16 00:19:33,818 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context cluster
+2020-04-16 00:19:33,819 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:19:33,819 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:19:33,822 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /cluster/*
+2020-04-16 00:19:33,823 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /ws/*
+2020-04-16 00:19:33,823 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /app/*
+2020-04-16 00:19:34,605 INFO  [Thread-0] webapp.WebApps (WebApps.java:build(395)) - Registered webapp guice modules
+2020-04-16 00:19:34,612 INFO  [Thread-0] http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 42139
+2020-04-16 00:19:34,615 INFO  [Thread-0] server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:19:34,731 INFO  [Thread-0] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:34,772 INFO  [Thread-0] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:34,792 INFO  [Thread[Thread-26,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(679)) - Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2020-04-16 00:19:34,805 INFO  [Thread[Thread-26,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:34,865 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@38456988{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,AVAILABLE}
+2020-04-16 00:19:34,871 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@10af9c9d{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,AVAILABLE}
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.resourcemanager.webapp.JAXBContextResolver as a provider class
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebServices as a root resource class
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+Apr 16, 2020 12:19:35 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.19 02/11/2015 03:25 AM'
+Apr 16, 2020 12:19:35 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.resourcemanager.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:36 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:38 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebServices to GuiceManagedComponentProvider with the scope "Singleton"
+2020-04-16 00:19:39,058 INFO  [Thread-0] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@7633f572{/,file:///tmp/jetty-f7a2e0944fd7-42139-cluster-_-any-5933729629088175630.dir/webapp/,AVAILABLE}{/cluster}
+2020-04-16 00:19:39,083 INFO  [Thread-0] server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@1eed7e9e{HTTP/1.1,[http/1.1]}{f7a2e0944fd7:42139}
+2020-04-16 00:19:39,085 INFO  [Thread-0] server.Server (Server.java:doStart(419)) - Started @10065ms
+2020-04-16 00:19:39,093 INFO  [Thread-0] webapp.WebApps (WebApps.java:start(440)) - Web app cluster started at 42139
+2020-04-16 00:19:39,239 INFO  [Thread-0] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 100, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:39,256 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:39,586 INFO  [Listener at f7a2e0944fd7/33837] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.server.api.ResourceManagerAdministrationProtocolPB to the server
+2020-04-16 00:19:39,587 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:39,587 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:39,592 INFO  [Listener at f7a2e0944fd7/33837] resourcemanager.ResourceManager (ResourceManager.java:transitionToActive(1297)) - Transitioning to active state
+2020-04-16 00:19:40,007 INFO  [Listener at f7a2e0944fd7/33837] recovery.RMStateStore (RMStateStore.java:transition(550)) - Updating AMRMToken
+2020-04-16 00:19:40,007 INFO  [Listener at f7a2e0944fd7/33837] security.RMContainerTokenSecretManager (RMContainerTokenSecretManager.java:rollMasterKey(109)) - Rolling master-key for container-tokens
+2020-04-16 00:19:40,008 INFO  [Listener at f7a2e0944fd7/33837] security.NMTokenSecretManagerInRM (NMTokenSecretManagerInRM.java:rollMasterKey(95)) - Rolling master-key for nm-tokens
+2020-04-16 00:19:40,037 INFO  [Listener at f7a2e0944fd7/33837] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:40,038 INFO  [Listener at f7a2e0944fd7/33837] security.RMDelegationTokenSecretManager (RMDelegationTokenSecretManager.java:storeNewMasterKey(92)) - storing master key with keyID 1
+2020-04-16 00:19:40,038 INFO  [Listener at f7a2e0944fd7/33837] recovery.RMStateStore (RMStateStore.java:transition(501)) - Storing RMDTMasterKey.
+2020-04-16 00:19:40,042 INFO  [Thread[Thread-36,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(679)) - Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2020-04-16 00:19:40,043 INFO  [Thread[Thread-36,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:updateCurrentKey(347)) - Updating the current master key for generating delegation tokens
+2020-04-16 00:19:40,043 INFO  [Thread[Thread-36,5,main]] security.RMDelegationTokenSecretManager (RMDelegationTokenSecretManager.java:storeNewMasterKey(92)) - storing master key with keyID 2
+2020-04-16 00:19:40,043 INFO  [Thread[Thread-36,5,main]] recovery.RMStateStore (RMStateStore.java:transition(501)) - Storing RMDTMasterKey.
+2020-04-16 00:19:40,063 INFO  [Listener at f7a2e0944fd7/33837] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.nodelabels.event.NodeLabelsStoreEventType for class org.apache.hadoop.yarn.nodelabels.CommonNodeLabelsManager$ForwardingEventHandler
+2020-04-16 00:19:40,248 INFO  [Listener at f7a2e0944fd7/33837] store.AbstractFSNodeStore (AbstractFSNodeStore.java:initStore(67)) - Created store directory :file:/tmp/hadoop-yarn-root/node-attribute
+2020-04-16 00:19:40,277 INFO  [Listener at f7a2e0944fd7/33837] store.AbstractFSNodeStore (AbstractFSNodeStore.java:recoverFromStore(181)) - Finished write mirror at:file:/tmp/hadoop-yarn-root/node-attribute/nodeattribute.mirror
+2020-04-16 00:19:40,278 INFO  [Listener at f7a2e0944fd7/33837] store.AbstractFSNodeStore (AbstractFSNodeStore.java:recoverFromStore(182)) - Finished create editlog file at:file:/tmp/hadoop-yarn-root/node-attribute/nodeattribute.editlog
+2020-04-16 00:19:40,299 INFO  [Listener at f7a2e0944fd7/33837] event.AsyncDispatcher (AsyncDispatcher.java:register(245)) - Registering class org.apache.hadoop.yarn.server.resourcemanager.nodelabels.NodeAttributesStoreEventType for class org.apache.hadoop.yarn.server.resourcemanager.nodelabels.NodeAttributesManagerImpl$ForwardingEventHandler
+2020-04-16 00:19:40,305 INFO  [Listener at f7a2e0944fd7/33837] placement.MultiNodeSortingManager (MultiNodeSortingManager.java:serviceStart(66)) - Starting NodeSortingService=MultiNodeSortingManager
+2020-04-16 00:19:40,322 INFO  [Listener at f7a2e0944fd7/33837] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:40,324 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:40,338 INFO  [Listener at f7a2e0944fd7/40314] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.server.api.ResourceTrackerPB to the server
+2020-04-16 00:19:40,346 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:40,349 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:40,482 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@63ac249a] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:19:40,486 INFO  [Listener at f7a2e0944fd7/40314] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:40,495 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:40,509 INFO  [Listener at f7a2e0944fd7/45716] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.api.ApplicationMasterProtocolPB to the server
+2020-04-16 00:19:40,510 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:40,510 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:40,733 INFO  [Listener at f7a2e0944fd7/45716] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:40,739 INFO  [Listener at f7a2e0944fd7/44876] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.api.ApplicationClientProtocolPB to the server
+2020-04-16 00:19:40,740 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:40,740 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:40,783 INFO  [Listener at f7a2e0944fd7/44876] resourcemanager.ResourceManager (ResourceManager.java:transitionToActive(1313)) - Transitioned to active state
+2020-04-16 00:19:40,785 INFO  [Listener at f7a2e0944fd7/44876] server.MiniYARNCluster (MiniYARNCluster.java:startResourceManager(376)) - MiniYARN ResourceManager address: f7a2e0944fd7:44876
+2020-04-16 00:19:40,787 INFO  [Listener at f7a2e0944fd7/44876] server.MiniYARNCluster (MiniYARNCluster.java:startResourceManager(378)) - MiniYARN ResourceManager web address: f7a2e0944fd7:42139
+2020-04-16 00:19:40,789 INFO  [Listener at f7a2e0944fd7/44876] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(512)) - Starting resourcemanager 0
+2020-04-16 00:19:40,790 INFO  [Listener at f7a2e0944fd7/44876] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(513)) - MiniYARN ResourceManager address: f7a2e0944fd7:44876
+2020-04-16 00:19:40,798 INFO  [Listener at f7a2e0944fd7/44876] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(515)) - MiniYARN ResourceManager web address: f7a2e0944fd7:42139
+2020-04-16 00:19:40,809 INFO  [Listener at f7a2e0944fd7/44876] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(629)) - msx-yarn NodeManager start
+2020-04-16 00:19:40,740 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:40,821 INFO  [Listener at f7a2e0944fd7/44876] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:isEnabled(85)) - Node Resource monitoring interval is <=0. org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl is disabled.
+2020-04-16 00:19:40,885 INFO  [Listener at f7a2e0944fd7/44876] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 2000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:40,886 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:40,898 INFO  [Listener at f7a2e0944fd7/45176] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.api.ContainerManagementProtocolPB to the server
+2020-04-16 00:19:40,898 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:40,899 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:41,038 INFO  [Listener at f7a2e0944fd7/45176] security.NMContainerTokenSecretManager (NMContainerTokenSecretManager.java:setNodeId(265)) - Updating node address : f7a2e0944fd7:45176
+2020-04-16 00:19:41,054 INFO  [Listener at f7a2e0944fd7/45176] ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 500, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:19:41,059 INFO  [Socket Reader #1 for port 0] ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:19:41,065 INFO  [Listener at f7a2e0944fd7/37068] pb.RpcServerFactoryPBImpl (RpcServerFactoryPBImpl.java:createServer(173)) - Adding protocol org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB to the server
+2020-04-16 00:19:41,066 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:19:41,068 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:19:41,074 INFO  [Listener at f7a2e0944fd7/37068] localizer.ResourceLocalizationService (ResourceLocalizationService.java:serviceStart(392)) - Localizer started on port 37068
+2020-04-16 00:19:41,090 INFO  [Listener at f7a2e0944fd7/37068] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:serviceStart(683)) - ContainerManager started at /172.17.0.14:45176
+2020-04-16 00:19:41,099 INFO  [Listener at f7a2e0944fd7/37068] containermanager.ContainerManagerImpl (ContainerManagerImpl.java:serviceStart(684)) - ContainerManager bound to f7a2e0944fd7/172.17.0.14:0
+2020-04-16 00:19:41,100 INFO  [Listener at f7a2e0944fd7/37068] webapp.WebServer (WebServer.java:serviceStart(99)) - Instantiating NMWebApp at f7a2e0944fd7:0
+2020-04-16 00:19:41,104 INFO  [Listener at f7a2e0944fd7/37068] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:41,106 INFO  [Listener at f7a2e0944fd7/37068] http.HttpRequestLog (HttpRequestLog.java:getRequestLog(81)) - Http request log for http.requests.nodemanager is not defined
+2020-04-16 00:19:41,110 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:19:41,133 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context node
+2020-04-16 00:19:41,133 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:19:41,134 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:19:41,135 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context node
+2020-04-16 00:19:41,142 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context static
+2020-04-16 00:19:41,142 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter authentication (class=org.apache.hadoop.security.authentication.server.AuthenticationFilter) to context logs
+2020-04-16 00:19:41,142 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /node/*
+2020-04-16 00:19:41,143 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:initializeWebServer(613)) - adding path spec: /ws/*
+Apr 16, 2020 12:19:41 AM com.google.inject.servlet.GuiceFilter setPipeline
+WARNING: Multiple Servlet injectors detected. This is a warning indicating that you have more than one GuiceFilter running in your web application. If this is deliberate, you may safely ignore this message. If this is NOT deliberate however, your application may not work as expected.
+2020-04-16 00:19:41,228 INFO  [Listener at f7a2e0944fd7/37068] webapp.WebApps (WebApps.java:build(395)) - Registered webapp guice modules
+2020-04-16 00:19:41,232 INFO  [Listener at f7a2e0944fd7/37068] http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 33859
+2020-04-16 00:19:41,233 INFO  [Listener at f7a2e0944fd7/37068] server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:19:41,262 INFO  [Listener at f7a2e0944fd7/37068] server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:19:41,265 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@6ca17f3c{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,AVAILABLE}
+2020-04-16 00:19:41,266 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@9498585{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,AVAILABLE}
+Apr 16, 2020 12:19:41 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices as a root resource class
+Apr 16, 2020 12:19:41 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+Apr 16, 2020 12:19:41 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.nodemanager.webapp.JAXBContextResolver as a provider class
+Apr 16, 2020 12:19:41 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.19 02/11/2015 03:25 AM'
+Apr 16, 2020 12:19:41 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.nodemanager.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:41 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+Apr 16, 2020 12:19:41 AM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices to GuiceManagedComponentProvider with the scope "Singleton"
+2020-04-16 00:19:41,895 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@5384156a{/,file:///tmp/jetty-f7a2e0944fd7-33859-node-_-any-5283549734011738013.dir/webapp/,AVAILABLE}{/node}
+2020-04-16 00:19:41,910 INFO  [Listener at f7a2e0944fd7/37068] server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@1e1dd979{HTTP/1.1,[http/1.1]}{f7a2e0944fd7:33859}
+2020-04-16 00:19:41,910 INFO  [Listener at f7a2e0944fd7/37068] server.Server (Server.java:doStart(419)) - Started @12891ms
+2020-04-16 00:19:41,910 INFO  [Listener at f7a2e0944fd7/37068] webapp.WebApps (WebApps.java:start(440)) - Web app node started at 33859
+2020-04-16 00:19:41,937 INFO  [Listener at f7a2e0944fd7/37068] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:serviceStart(265)) - Node ID assigned is : f7a2e0944fd7:45176
+2020-04-16 00:19:41,944 INFO  [org.apache.hadoop.util.JvmPauseMonitor$Monitor@312ab9b3] util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:19:41,949 INFO  [Listener at f7a2e0944fd7/37068] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:getNMContainerStatuses(666)) - Sending out 0 NM container statuses: []
+2020-04-16 00:19:41,972 INFO  [Listener at f7a2e0944fd7/37068] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:registerWithRM(399)) - Registering with RM using containers :[]
+2020-04-16 00:19:42,054 INFO  [Listener at f7a2e0944fd7/37068] resourcemanager.ResourceTrackerService (ResourceTrackerService.java:registerNodeManager(522)) - NodeManager from node f7a2e0944fd7(cmPort: 45176 httpPort: 33859) registered with capability: <memory:4096, vCores:8>, assigned nodeId f7a2e0944fd7:45176
+2020-04-16 00:19:42,056 INFO  [Listener at f7a2e0944fd7/37068] security.NMContainerTokenSecretManager (NMContainerTokenSecretManager.java:setMasterKey(143)) - Rolling master-key for container-tokens, got key with id 1413847002
+2020-04-16 00:19:42,057 INFO  [Listener at f7a2e0944fd7/37068] security.NMTokenSecretManagerInNM (NMTokenSecretManagerInNM.java:setMasterKey(143)) - Rolling master-key for container-tokens, got key with id 104096896
+2020-04-16 00:19:42,057 INFO  [Listener at f7a2e0944fd7/37068] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:registerWithRM(485)) - Registered with ResourceManager as f7a2e0944fd7:45176 with total resource of <memory:4096, vCores:8>
+2020-04-16 00:19:42,062 INFO  [RM Event dispatcher] rmnode.RMNodeImpl (RMNodeImpl.java:handle(677)) - f7a2e0944fd7:45176 Node Transitioned from NEW to RUNNING
+2020-04-16 00:19:42,119 INFO  [Listener at f7a2e0944fd7/37068] server.MiniYARNCluster (MiniYARNCluster.java:waitForNodeManagersToConnect(799)) - All Node Managers connected in MiniYARNCluster
+2020-04-16 00:19:42,168 INFO  [SchedulerEventDispatcher:Event Processor] capacity.CapacityScheduler (CapacityScheduler.java:addNode(2004)) - Added node f7a2e0944fd7:45176 clusterResource: <memory:4096, vCores:8>
+2020-04-16 00:19:42,340 INFO  [Listener at f7a2e0944fd7/37068] client.RMProxy (RMProxy.java:newProxyInstance(133)) - Connecting to ResourceManager at f7a2e0944fd7/172.17.0.14:44876
+2020-04-16 00:19:43,006 INFO  [IPC Server handler 7 on default port 44876] ipc.Server (Server.java:logException(2969)) - IPC Server handler 7 on default port 44876, call Call#7 Retry#0 org.apache.hadoop.yarn.api.ApplicationClientProtocolPB.getApplicationReport from 172.17.0.14:39864: org.apache.hadoop.yarn.exceptions.ApplicationNotFoundException: Application with id 'application_1586996370140_0008' doesn't exist in RM. Please check that the job submission was successful.
+2020-04-16 00:19:43,120 INFO  [Listener at f7a2e0944fd7/37068] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(640)) - msx-yarn NodeManager stop
+2020-04-16 00:19:43,136 INFO  [Listener at f7a2e0944fd7/37068] nodemanager.NodeStatusUpdaterImpl (NodeStatusUpdaterImpl.java:unRegisterNM(313)) - Successfully Unregistered the Node f7a2e0944fd7:45176 with ResourceManager.
+2020-04-16 00:19:43,141 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.w.WebAppContext@5384156a{/,null,UNAVAILABLE}{/node}
+2020-04-16 00:19:43,153 INFO  [Listener at f7a2e0944fd7/37068] server.AbstractConnector (AbstractConnector.java:doStop(318)) - Stopped ServerConnector@1e1dd979{HTTP/1.1,[http/1.1]}{f7a2e0944fd7:0}
+2020-04-16 00:19:43,155 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@9498585{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,UNAVAILABLE}
+2020-04-16 00:19:43,156 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@6ca17f3c{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,UNAVAILABLE}
+2020-04-16 00:19:43,175 INFO  [Listener at f7a2e0944fd7/37068] ipc.Server (Server.java:stop(3359)) - Stopping server on 45176
+2020-04-16 00:19:43,185 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:43,191 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:43,194 INFO  [Listener at f7a2e0944fd7/37068] logaggregation.LogAggregationService (LogAggregationService.java:serviceStop(176)) - org.apache.hadoop.yarn.server.nodemanager.containermanager.logaggregation.LogAggregationService waiting for pending aggregation during exit
+2020-04-16 00:19:43,197 INFO  [Listener at f7a2e0944fd7/37068] ipc.Server (Server.java:stop(3359)) - Stopping server on 37068
+2020-04-16 00:19:43,200 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:43,202 INFO  [Listener at f7a2e0944fd7/37068] nodemanager.NodeResourceMonitorImpl (NodeResourceMonitorImpl.java:isEnabled(85)) - Node Resource monitoring interval is <=0. org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl is disabled.
+2020-04-16 00:19:43,203 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:43,205 INFO  [Listener at f7a2e0944fd7/37068] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(534)) - msx-yarn ResourceManager stop
+2020-04-16 00:19:43,204 INFO  [Public Localizer] localizer.ResourceLocalizationService (ResourceLocalizationService.java:run(1006)) - Public cache exiting
+2020-04-16 00:19:43,210 ERROR [Thread[Thread-26,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(700)) - ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2020-04-16 00:19:43,211 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.w.WebAppContext@7633f572{/,null,UNAVAILABLE}{/cluster}
+2020-04-16 00:19:43,221 INFO  [Listener at f7a2e0944fd7/37068] server.AbstractConnector (AbstractConnector.java:doStop(318)) - Stopped ServerConnector@1eed7e9e{HTTP/1.1,[http/1.1]}{f7a2e0944fd7:0}
+2020-04-16 00:19:43,221 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@10af9c9d{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/webapps/static,UNAVAILABLE}
+2020-04-16 00:19:43,225 INFO  [Listener at f7a2e0944fd7/37068] handler.ContextHandler (ContextHandler.java:doStop(910)) - Stopped o.e.j.s.ServletContextHandler@38456988{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-archive-logs/target/log/,UNAVAILABLE}
+2020-04-16 00:19:43,237 INFO  [Listener at f7a2e0944fd7/37068] ipc.Server (Server.java:stop(3359)) - Stopping server on 44876
+2020-04-16 00:19:43,240 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:43,240 INFO  [Listener at f7a2e0944fd7/37068] ipc.Server (Server.java:stop(3359)) - Stopping server on 33837
+2020-04-16 00:19:43,241 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:43,248 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:43,249 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:43,253 INFO  [Listener at f7a2e0944fd7/37068] resourcemanager.ResourceManager (ResourceManager.java:transitionToStandby(1324)) - Transitioning to standby state
+2020-04-16 00:19:43,269 WARN  [ApplicationMaster Launcher] amlauncher.ApplicationMasterLauncher (ApplicationMasterLauncher.java:run(122)) - org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher$LauncherThread interrupted. Returning.
+2020-04-16 00:19:43,269 INFO  [Listener at f7a2e0944fd7/37068] ipc.Server (Server.java:stop(3359)) - Stopping server on 45716
+2020-04-16 00:19:43,271 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:43,276 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:43,293 INFO  [Listener at f7a2e0944fd7/37068] ipc.Server (Server.java:stop(3359)) - Stopping server on 40314
+2020-04-16 00:19:43,301 INFO  [IPC Server listener on 0] ipc.Server (Server.java:run(1330)) - Stopping IPC Server listener on 0
+2020-04-16 00:19:43,304 ERROR [SchedulerEventDispatcher:Event Processor] event.EventDispatcher (EventDispatcher.java:run(61)) - Returning, interrupted : java.lang.InterruptedException
+2020-04-16 00:19:43,305 INFO  [IPC Server Responder] ipc.Server (Server.java:run(1465)) - Stopping IPC Server Responder
+2020-04-16 00:19:43,305 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - NMLivelinessMonitor thread interrupted
+2020-04-16 00:19:43,305 INFO  [ActivitiesManager thread.] activities.ActivitiesManager (ActivitiesManager.java:run(146)) - org.apache.hadoop.yarn.server.resourcemanager.scheduler.activities.ActivitiesManager thread interrupted
+2020-04-16 00:19:43,306 INFO  [Listener at f7a2e0944fd7/37068] event.AsyncDispatcher (AsyncDispatcher.java:serviceStop(177)) - AsyncDispatcher is draining to stop, ignoring any new events.
+2020-04-16 00:19:43,308 INFO  [Listener at f7a2e0944fd7/37068] event.AsyncDispatcher (AsyncDispatcher.java:serviceStop(177)) - AsyncDispatcher is draining to stop, ignoring any new events.
+2020-04-16 00:19:43,308 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - org.apache.hadoop.yarn.server.resourcemanager.rmcontainer.ContainerAllocationExpirer thread interrupted
+2020-04-16 00:19:43,308 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - org.apache.hadoop.yarn.server.resourcemanager.rmapp.monitor.RMAppLifetimeMonitor thread interrupted
+2020-04-16 00:19:43,308 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - AMLivelinessMonitor thread interrupted
+2020-04-16 00:19:43,309 INFO  [Ping Checker] util.AbstractLivelinessMonitor (AbstractLivelinessMonitor.java:run(156)) - AMLivelinessMonitor thread interrupted
+2020-04-16 00:19:43,309 ERROR [Thread[Thread-36,5,main]] delegation.AbstractDelegationTokenSecretManager (AbstractDelegationTokenSecretManager.java:run(700)) - ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2020-04-16 00:19:43,317 INFO  [Listener at f7a2e0944fd7/37068] impl.MetricsSystemImpl (MetricsSystemImpl.java:stop(210)) - Stopping NodeManager metrics system...
+2020-04-16 00:19:43,318 INFO  [Listener at f7a2e0944fd7/37068] impl.MetricsSystemImpl (MetricsSystemImpl.java:stop(216)) - NodeManager metrics system stopped.
+2020-04-16 00:19:43,318 INFO  [Listener at f7a2e0944fd7/37068] impl.MetricsSystemImpl (MetricsSystemImpl.java:shutdown(607)) - NodeManager metrics system shutdown complete.
+2020-04-16 00:19:43,319 INFO  [Listener at f7a2e0944fd7/37068] event.AsyncDispatcher (AsyncDispatcher.java:serviceStop(177)) - AsyncDispatcher is draining to stop, ignoring any new events.
+2020-04-16 00:19:43,319 INFO  [Listener at f7a2e0944fd7/37068] resourcemanager.ResourceManager (ResourceManager.java:transitionToStandby(1331)) - Transitioned to standby state
+msx-listener testfinished org.apache.hadoop.tools.TestHadoopArchiveLogs#testFilterAppsByAggregatedStatus
+msx-listener writeFile testName is org.apache.hadoop.tools.TestHadoopArchiveLogs#testFilterAppsByAggregatedStatus
+msx-listener succeed
+msx-listener all testRunFinished

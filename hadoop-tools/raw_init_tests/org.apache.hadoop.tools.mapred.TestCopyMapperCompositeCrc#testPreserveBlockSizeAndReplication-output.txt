@@ -1,0 +1,712 @@
+2020-04-16 00:14:37,412 [main] DEBUG mapred.TestCopyMapper (TestCopyMapper.java:getConfigurationForCluster(114)) - fs.default.name  == file:///
+2020-04-16 00:14:37,418 [main] DEBUG mapred.TestCopyMapper (TestCopyMapper.java:getConfigurationForCluster(115)) - dfs.http.address == null
+2020-04-16 00:14:37,596 [main] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:<init>(493)) - starting cluster: numNameNodes=1, numDataNodes=1
+Formatting using clusterid: testClusterID
+2020-04-16 00:14:38,568 [main] INFO  namenode.FSEditLog (FSEditLog.java:newInstance(229)) - Edit logging is async:true
+2020-04-16 00:14:38,589 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(755)) - KeyProvider: null
+2020-04-16 00:14:38,592 [main] INFO  namenode.FSNamesystem (FSNamesystemLock.java:<init>(123)) - fsLock is fair: true
+2020-04-16 00:14:38,593 [main] INFO  namenode.FSNamesystem (FSNamesystemLock.java:<init>(141)) - Detailed lock hold time metrics enabled: false
+2020-04-16 00:14:38,627 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(780)) - fsOwner             = root (auth:SIMPLE)
+2020-04-16 00:14:38,628 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(781)) - supergroup          = supergroup
+2020-04-16 00:14:38,628 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(782)) - isPermissionEnabled = true
+2020-04-16 00:14:38,629 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(793)) - HA Enabled: false
+2020-04-16 00:14:38,723 [main] INFO  common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:14:38,734 [main] INFO  blockmanagement.DatanodeManager (DatanodeManager.java:<init>(303)) - dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2020-04-16 00:14:38,734 [main] INFO  blockmanagement.DatanodeManager (DatanodeManager.java:<init>(311)) - dfs.namenode.datanode.registration.ip-hostname-check=true
+2020-04-16 00:14:38,743 [main] INFO  blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(79)) - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2020-04-16 00:14:38,744 [main] INFO  blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(85)) - The block deletion will start around 2020 Apr 16 00:14:38
+2020-04-16 00:14:38,748 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map BlocksMap
+2020-04-16 00:14:38,749 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:38,751 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 2.0% max memory 981.5 MB = 19.6 MB
+2020-04-16 00:14:38,752 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^21 = 2097152 entries
+2020-04-16 00:14:38,772 [main] INFO  blockmanagement.BlockManager (BlockManager.java:createSPSManager(5183)) - Storage policy satisfier is disabled
+2020-04-16 00:14:38,773 [main] INFO  blockmanagement.BlockManager (BlockManager.java:createBlockTokenSecretManager(595)) - dfs.block.access.token.enable = false
+2020-04-16 00:14:38,786 [main] INFO  blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(161)) - dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2020-04-16 00:14:38,786 [main] INFO  blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(162)) - dfs.namenode.safemode.min.datanodes = 0
+2020-04-16 00:14:38,787 [main] INFO  blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(164)) - dfs.namenode.safemode.extension = 0
+2020-04-16 00:14:38,788 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(581)) - defaultReplication         = 1
+2020-04-16 00:14:38,789 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(582)) - maxReplication             = 512
+2020-04-16 00:14:38,789 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(583)) - minReplication             = 1
+2020-04-16 00:14:38,789 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(584)) - maxReplicationStreams      = 2
+2020-04-16 00:14:38,789 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(585)) - redundancyRecheckInterval  = 3000ms
+2020-04-16 00:14:38,790 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(586)) - encryptDataTransfer        = false
+2020-04-16 00:14:38,790 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(587)) - maxNumBlocksToLog          = 1000
+2020-04-16 00:14:38,829 [main] INFO  namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - GLOBAL serial map: bits=29 maxEntries=536870911
+2020-04-16 00:14:38,830 [main] INFO  namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - USER serial map: bits=24 maxEntries=16777215
+2020-04-16 00:14:38,830 [main] INFO  namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - GROUP serial map: bits=24 maxEntries=16777215
+2020-04-16 00:14:38,830 [main] INFO  namenode.FSDirectory (SerialNumberManager.java:<clinit>(51)) - XATTR serial map: bits=24 maxEntries=16777215
+2020-04-16 00:14:38,852 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map INodeMap
+2020-04-16 00:14:38,852 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:38,853 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 1.0% max memory 981.5 MB = 9.8 MB
+2020-04-16 00:14:38,853 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^20 = 1048576 entries
+2020-04-16 00:14:38,858 [main] INFO  namenode.FSDirectory (FSDirectory.java:<init>(290)) - ACLs enabled? false
+2020-04-16 00:14:38,859 [main] INFO  namenode.FSDirectory (FSDirectory.java:<init>(294)) - POSIX ACL inheritance enabled? true
+2020-04-16 00:14:38,859 [main] INFO  namenode.FSDirectory (FSDirectory.java:<init>(298)) - XAttrs enabled? true
+2020-04-16 00:14:38,860 [main] INFO  namenode.NameNode (FSDirectory.java:<init>(362)) - Caching file names occurring more than 10 times
+2020-04-16 00:14:38,868 [main] INFO  snapshot.SnapshotManager (SnapshotManager.java:<init>(124)) - Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2020-04-16 00:14:38,871 [main] INFO  snapshot.SnapshotManager (DirectoryDiffListFactory.java:init(43)) - SkipList is disabled
+2020-04-16 00:14:38,878 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map cachedBlocks
+2020-04-16 00:14:38,879 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:38,879 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.25% max memory 981.5 MB = 2.5 MB
+2020-04-16 00:14:38,880 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^18 = 262144 entries
+2020-04-16 00:14:38,894 [main] INFO  metrics.TopMetrics (TopMetrics.java:logConf(76)) - NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2020-04-16 00:14:38,894 [main] INFO  metrics.TopMetrics (TopMetrics.java:logConf(78)) - NNTop conf: dfs.namenode.top.num.users = 10
+2020-04-16 00:14:38,894 [main] INFO  metrics.TopMetrics (TopMetrics.java:logConf(80)) - NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2020-04-16 00:14:38,900 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:initRetryCache(996)) - Retry cache on namenode is enabled
+2020-04-16 00:14:38,900 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1004)) - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2020-04-16 00:14:38,903 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map NameNodeRetryCache
+2020-04-16 00:14:38,903 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:38,904 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.029999999329447746% max memory 981.5 MB = 301.5 KB
+2020-04-16 00:14:38,904 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^15 = 32768 entries
+2020-04-16 00:14:38,955 [main] INFO  namenode.FSImage (FSImage.java:format(185)) - Allocated new BlockPoolId: BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:38,971 [main] INFO  common.Storage (NNStorage.java:format(595)) - Storage directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1 has been successfully formatted.
+2020-04-16 00:14:38,973 [main] INFO  common.Storage (NNStorage.java:format(595)) - Storage directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-2 has been successfully formatted.
+2020-04-16 00:14:39,034 [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1 of type IMAGE_AND_EDITS] INFO  namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(512)) - Saving image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1/current/fsimage.ckpt_0000000000000000000 using no compression
+2020-04-16 00:14:39,043 [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-2 of type IMAGE_AND_EDITS] INFO  namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(512)) - Saving image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-2/current/fsimage.ckpt_0000000000000000000 using no compression
+2020-04-16 00:14:39,224 [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-2 of type IMAGE_AND_EDITS] INFO  namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(516)) - Image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-2/current/fsimage.ckpt_0000000000000000000 of size 399 bytes saved in 0 seconds .
+2020-04-16 00:14:39,224 [FSImageSaver for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1 of type IMAGE_AND_EDITS] INFO  namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:save(516)) - Image file /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1/current/fsimage.ckpt_0000000000000000000 of size 399 bytes saved in 0 seconds .
+2020-04-16 00:14:39,245 [main] INFO  namenode.NNStorageRetentionManager (NNStorageRetentionManager.java:getImageTxIdToRetain(203)) - Going to retain 1 images with txid >= 0
+2020-04-16 00:14:39,250 [main] INFO  namenode.NameNode (NameNode.java:createNameNode(1635)) - createNameNode []
+2020-04-16 00:14:39,779 [main] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-16 00:14:39,811 [main] INFO  namenode.NameNodeUtils (NameNodeUtils.java:getClientNamenodeAddress(79)) - fs.defaultFS is hdfs://127.0.0.1:0
+2020-04-16 00:14:39,869 [org.apache.hadoop.util.JvmPauseMonitor$Monitor@93081b6] INFO  util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:14:39,891 [main] INFO  hdfs.DFSUtil (DFSUtil.java:httpServerTemplateForNNAndJN(1641)) - Starting Web-server for hdfs at: http://localhost:0
+2020-04-16 00:14:39,914 [main] INFO  util.log (Log.java:initialized(192)) - Logging initialized @3772ms
+2020-04-16 00:14:40,041 [main] INFO  server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:14:40,056 [main] WARN  http.HttpRequestLog (HttpRequestLog.java:getRequestLog(97)) - Jetty request log can only be enabled using Log4j
+2020-04-16 00:14:40,088 [main] INFO  http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:14:40,094 [main] INFO  http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2020-04-16 00:14:40,094 [main] INFO  http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:14:40,095 [main] INFO  http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:14:40,128 [main] INFO  http.HttpServer2 (NameNodeHttpServer.java:initWebHdfs(102)) - Added filter 'org.apache.hadoop.hdfs.web.AuthFilter' (class=org.apache.hadoop.hdfs.web.AuthFilter)
+2020-04-16 00:14:40,128 [main] INFO  http.HttpServer2 (HttpServer2.java:addJerseyResourcePackage(806)) - addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
+2020-04-16 00:14:40,140 [main] INFO  http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 44642
+2020-04-16 00:14:40,142 [main] INFO  server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:14:40,184 [main] INFO  handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@58ce9668{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/log,AVAILABLE}
+2020-04-16 00:14:40,186 [main] INFO  handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@b4711e2{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-hdfs/3.2.1/hadoop-hdfs-3.2.1-tests.jar!/webapps/static,AVAILABLE}
+2020-04-16 00:14:40,539 [main] INFO  handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@18a136ac{/,file:///tmp/jetty-localhost-44642-hdfs-_-any-3603974174156918109.dir/webapp/,AVAILABLE}{/hdfs}
+2020-04-16 00:14:40,550 [main] INFO  server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@615b99ad{HTTP/1.1,[http/1.1]}{localhost:44642}
+2020-04-16 00:14:40,551 [main] INFO  server.Server (Server.java:doStart(419)) - Started @4409ms
+2020-04-16 00:14:40,564 [main] INFO  namenode.FSEditLog (FSEditLog.java:newInstance(229)) - Edit logging is async:true
+2020-04-16 00:14:40,565 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(755)) - KeyProvider: null
+2020-04-16 00:14:40,565 [main] INFO  namenode.FSNamesystem (FSNamesystemLock.java:<init>(123)) - fsLock is fair: true
+2020-04-16 00:14:40,566 [main] INFO  namenode.FSNamesystem (FSNamesystemLock.java:<init>(141)) - Detailed lock hold time metrics enabled: false
+2020-04-16 00:14:40,566 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(780)) - fsOwner             = root (auth:SIMPLE)
+2020-04-16 00:14:40,566 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(781)) - supergroup          = supergroup
+2020-04-16 00:14:40,566 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(782)) - isPermissionEnabled = true
+2020-04-16 00:14:40,567 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:<init>(793)) - HA Enabled: false
+2020-04-16 00:14:40,568 [main] INFO  common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:14:40,569 [main] INFO  blockmanagement.DatanodeManager (DatanodeManager.java:<init>(303)) - dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2020-04-16 00:14:40,569 [main] INFO  blockmanagement.DatanodeManager (DatanodeManager.java:<init>(311)) - dfs.namenode.datanode.registration.ip-hostname-check=true
+2020-04-16 00:14:40,570 [main] INFO  blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(79)) - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2020-04-16 00:14:40,570 [main] INFO  blockmanagement.BlockManager (InvalidateBlocks.java:printBlockDeletionTime(85)) - The block deletion will start around 2020 Apr 16 00:14:40
+2020-04-16 00:14:40,571 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map BlocksMap
+2020-04-16 00:14:40,571 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:40,571 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 2.0% max memory 910.5 MB = 18.2 MB
+2020-04-16 00:14:40,572 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^21 = 2097152 entries
+2020-04-16 00:14:40,576 [main] INFO  blockmanagement.BlockManager (BlockManager.java:createSPSManager(5183)) - Storage policy satisfier is disabled
+2020-04-16 00:14:40,577 [main] INFO  blockmanagement.BlockManager (BlockManager.java:createBlockTokenSecretManager(595)) - dfs.block.access.token.enable = false
+2020-04-16 00:14:40,577 [main] INFO  blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(161)) - dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2020-04-16 00:14:40,578 [main] INFO  blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(162)) - dfs.namenode.safemode.min.datanodes = 0
+2020-04-16 00:14:40,578 [main] INFO  blockmanagement.BlockManagerSafeMode (BlockManagerSafeMode.java:<init>(164)) - dfs.namenode.safemode.extension = 0
+2020-04-16 00:14:40,578 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(581)) - defaultReplication         = 1
+2020-04-16 00:14:40,578 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(582)) - maxReplication             = 512
+2020-04-16 00:14:40,579 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(583)) - minReplication             = 1
+2020-04-16 00:14:40,579 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(584)) - maxReplicationStreams      = 2
+2020-04-16 00:14:40,580 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(585)) - redundancyRecheckInterval  = 3000ms
+2020-04-16 00:14:40,580 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(586)) - encryptDataTransfer        = false
+2020-04-16 00:14:40,580 [main] INFO  blockmanagement.BlockManager (BlockManager.java:<init>(587)) - maxNumBlocksToLog          = 1000
+2020-04-16 00:14:40,581 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map INodeMap
+2020-04-16 00:14:40,581 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:40,582 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 1.0% max memory 910.5 MB = 9.1 MB
+2020-04-16 00:14:40,582 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^20 = 1048576 entries
+2020-04-16 00:14:40,584 [main] INFO  namenode.FSDirectory (FSDirectory.java:<init>(290)) - ACLs enabled? false
+2020-04-16 00:14:40,585 [main] INFO  namenode.FSDirectory (FSDirectory.java:<init>(294)) - POSIX ACL inheritance enabled? true
+2020-04-16 00:14:40,585 [main] INFO  namenode.FSDirectory (FSDirectory.java:<init>(298)) - XAttrs enabled? true
+2020-04-16 00:14:40,585 [main] INFO  namenode.NameNode (FSDirectory.java:<init>(362)) - Caching file names occurring more than 10 times
+2020-04-16 00:14:40,586 [main] INFO  snapshot.SnapshotManager (SnapshotManager.java:<init>(124)) - Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2020-04-16 00:14:40,586 [main] INFO  snapshot.SnapshotManager (DirectoryDiffListFactory.java:init(43)) - SkipList is disabled
+2020-04-16 00:14:40,588 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map cachedBlocks
+2020-04-16 00:14:40,599 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:40,600 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.25% max memory 910.5 MB = 2.3 MB
+2020-04-16 00:14:40,600 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^18 = 262144 entries
+2020-04-16 00:14:40,602 [main] INFO  metrics.TopMetrics (TopMetrics.java:logConf(76)) - NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2020-04-16 00:14:40,602 [main] INFO  metrics.TopMetrics (TopMetrics.java:logConf(78)) - NNTop conf: dfs.namenode.top.num.users = 10
+2020-04-16 00:14:40,602 [main] INFO  metrics.TopMetrics (TopMetrics.java:logConf(80)) - NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2020-04-16 00:14:40,602 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:initRetryCache(996)) - Retry cache on namenode is enabled
+2020-04-16 00:14:40,603 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:initRetryCache(1004)) - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2020-04-16 00:14:40,603 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(395)) - Computing capacity for map NameNodeRetryCache
+2020-04-16 00:14:40,603 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(396)) - VM type       = 64-bit
+2020-04-16 00:14:40,603 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(397)) - 0.029999999329447746% max memory 910.5 MB = 279.7 KB
+2020-04-16 00:14:40,603 [main] INFO  util.GSet (LightWeightGSet.java:computeCapacity(402)) - capacity      = 2^15 = 32768 entries
+2020-04-16 00:14:40,614 [main] INFO  common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1/in_use.lock acquired by nodename 2266@c416149342ad
+2020-04-16 00:14:40,618 [main] INFO  common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-2/in_use.lock acquired by nodename 2266@c416149342ad
+2020-04-16 00:14:40,622 [main] INFO  namenode.FileJournalManager (FileJournalManager.java:recoverUnfinalizedSegments(428)) - Recovering unfinalized segments in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1/current
+2020-04-16 00:14:40,622 [main] INFO  namenode.FileJournalManager (FileJournalManager.java:recoverUnfinalizedSegments(428)) - Recovering unfinalized segments in /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-2/current
+2020-04-16 00:14:40,623 [main] INFO  namenode.FSImage (FSImage.java:loadFSImage(733)) - No edit log streams selected.
+2020-04-16 00:14:40,624 [main] INFO  namenode.FSImage (FSImage.java:loadFSImageFile(797)) - Planning to load image: FSImageFile(file=/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1/current/fsimage_0000000000000000000, cpktTxId=0000000000000000000)
+2020-04-16 00:14:40,672 [main] INFO  namenode.FSImageFormatPBINode (FSImageFormatPBINode.java:loadINodeSection(234)) - Loading 1 INodes.
+2020-04-16 00:14:40,684 [main] INFO  namenode.FSImageFormatProtobuf (FSImageFormatProtobuf.java:load(246)) - Loaded FSImage in 0 seconds.
+2020-04-16 00:14:40,685 [main] INFO  namenode.FSImage (FSImage.java:loadFSImage(978)) - Loaded image for txid 0 from /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/name-0-1/current/fsimage_0000000000000000000
+2020-04-16 00:14:40,691 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:loadFSImage(1110)) - Need to save fs image? false (staleImage=false, haEnabled=false, isRollingUpgrade=false)
+2020-04-16 00:14:40,694 [main] INFO  namenode.FSEditLog (FSEditLog.java:startLogSegment(1365)) - Starting log segment at 1
+2020-04-16 00:14:40,732 [main] INFO  namenode.NameCache (NameCache.java:initialized(143)) - initialized with 0 entries 0 lookups
+2020-04-16 00:14:40,733 [main] INFO  namenode.FSNamesystem (FSNamesystem.java:loadFromDisk(727)) - Finished loading FSImage in 127 msecs
+2020-04-16 00:14:40,975 [main] INFO  namenode.NameNode (NameNodeRpcServer.java:<init>(448)) - RPC server is binding to localhost:0
+2020-04-16 00:14:41,052 [main] INFO  ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:14:41,096 [Socket Reader #1 for port 0] INFO  ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:14:41,491 [Listener at localhost/46287] INFO  namenode.NameNode (NameNode.java:initialize(722)) - Clients are to use localhost:46287 to access this namenode/service.
+2020-04-16 00:14:41,503 [Listener at localhost/46287] INFO  namenode.FSNamesystem (FSNamesystem.java:registerMBean(5090)) - Registered FSNamesystemState, ReplicatedBlocksState and ECBlockGroupsState MBeans.
+2020-04-16 00:14:41,573 [Listener at localhost/46287] INFO  namenode.LeaseManager (LeaseManager.java:getNumUnderConstructionBlocks(171)) - Number of blocks under construction: 0
+2020-04-16 00:14:41,603 [Listener at localhost/46287] INFO  blockmanagement.BlockManager (BlockManager.java:initializeReplQueues(4922)) - initializing replication queues
+2020-04-16 00:14:41,605 [Listener at localhost/46287] INFO  hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(400)) - STATE* Leaving safe mode after 0 secs
+2020-04-16 00:14:41,605 [Listener at localhost/46287] INFO  hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(406)) - STATE* Network topology has 0 racks and 0 datanodes
+2020-04-16 00:14:41,605 [Listener at localhost/46287] INFO  hdfs.StateChange (BlockManagerSafeMode.java:leaveSafeMode(408)) - STATE* UnderReplicatedBlocks has 0 blocks
+2020-04-16 00:14:41,639 [Reconstruction Queue Initializer] INFO  blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3585)) - Total number of blocks            = 0
+2020-04-16 00:14:41,640 [Reconstruction Queue Initializer] INFO  blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3586)) - Number of invalid blocks          = 0
+2020-04-16 00:14:41,640 [Reconstruction Queue Initializer] INFO  blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3587)) - Number of under-replicated blocks = 0
+2020-04-16 00:14:41,640 [Reconstruction Queue Initializer] INFO  blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3588)) - Number of  over-replicated blocks = 0
+2020-04-16 00:14:41,640 [Reconstruction Queue Initializer] INFO  blockmanagement.BlockManager (BlockManager.java:processMisReplicatesAsync(3590)) - Number of blocks being written    = 0
+2020-04-16 00:14:41,640 [Reconstruction Queue Initializer] INFO  hdfs.StateChange (BlockManager.java:processMisReplicatesAsync(3593)) - STATE* Replication Queue initialization scan for invalid, over- and under-replicated blocks completed in 3 msec
+2020-04-16 00:14:41,729 [IPC Server Responder] INFO  ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:14:41,743 [Listener at localhost/46287] INFO  namenode.NameNode (NameNode.java:startCommonServices(828)) - NameNode RPC up at: localhost/127.0.0.1:46287
+2020-04-16 00:14:41,745 [Listener at localhost/46287] WARN  common.MetricsLoggerTask (MetricsLoggerTask.java:makeMetricsLoggerAsync(155)) - Metrics logging will not be async since the logger is not log4j
+2020-04-16 00:14:41,743 [IPC Server listener on 0] INFO  ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:14:41,749 [Listener at localhost/46287] INFO  namenode.FSNamesystem (FSNamesystem.java:startActiveServices(1222)) - Starting services required for active state
+2020-04-16 00:14:41,749 [Listener at localhost/46287] INFO  namenode.FSDirectory (FSDirectory.java:updateCountForQuota(777)) - Initializing quota with 4 thread(s)
+2020-04-16 00:14:41,785 [Listener at localhost/46287] INFO  namenode.FSDirectory (FSDirectory.java:updateCountForQuota(786)) - Quota initialization completed in 36 milliseconds
+name space=1
+storage space=0
+storage types=RAM_DISK=0, SSD=0, DISK=0, ARCHIVE=0, PROVIDED=0
+2020-04-16 00:14:41,820 [Listener at localhost/46287] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-16 00:14:41,852 [CacheReplicationMonitor(1541628803)] INFO  blockmanagement.CacheReplicationMonitor (CacheReplicationMonitor.java:run(160)) - Starting CacheReplicationMonitor with interval 30000 milliseconds
+2020-04-16 00:14:41,854 [Listener at localhost/46287] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:startDataNodes(1659)) - Starting DataNode 0 with dfs.datanode.data.dir: [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1,[DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2
+2020-04-16 00:14:41,944 [Listener at localhost/46287] INFO  checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1
+2020-04-16 00:14:41,984 [Listener at localhost/46287] INFO  checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2
+2020-04-16 00:14:42,099 [Listener at localhost/46287] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-16 00:14:42,123 [Listener at localhost/46287] INFO  common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:14:42,130 [Listener at localhost/46287] INFO  datanode.BlockScanner (BlockScanner.java:<init>(184)) - Initialized block scanner with targetBytesPerSec 1048576
+2020-04-16 00:14:42,137 [Listener at localhost/46287] INFO  datanode.DataNode (DataNode.java:<init>(502)) - Configured hostname is 127.0.0.1
+2020-04-16 00:14:42,139 [Listener at localhost/46287] INFO  common.Util (Util.java:isDiskStatsEnabled(395)) - dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2020-04-16 00:14:42,146 [Listener at localhost/46287] INFO  datanode.DataNode (DataNode.java:startDataNode(1402)) - Starting DataNode with maxLockedMemory = 0
+2020-04-16 00:14:42,156 [Listener at localhost/46287] INFO  datanode.DataNode (DataNode.java:initDataXceiver(1150)) - Opened streaming server at /127.0.0.1:44604
+2020-04-16 00:14:42,160 [Listener at localhost/46287] INFO  datanode.DataNode (DataXceiverServer.java:<init>(78)) - Balancing bandwidth is 10485760 bytes/s
+2020-04-16 00:14:42,161 [Listener at localhost/46287] INFO  datanode.DataNode (DataXceiverServer.java:<init>(79)) - Number threads for balancing is 50
+2020-04-16 00:14:42,216 [Listener at localhost/46287] INFO  server.AuthenticationFilter (AuthenticationFilter.java:constructSecretProvider(240)) - Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2020-04-16 00:14:42,238 [Listener at localhost/46287] WARN  http.HttpRequestLog (HttpRequestLog.java:getRequestLog(97)) - Jetty request log can only be enabled using Log4j
+2020-04-16 00:14:42,249 [Listener at localhost/46287] INFO  http.HttpServer2 (HttpServer2.java:addGlobalFilter(990)) - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2020-04-16 00:14:42,251 [Listener at localhost/46287] INFO  http.HttpServer2 (HttpServer2.java:addFilter(963)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context datanode
+2020-04-16 00:14:42,251 [Listener at localhost/46287] INFO  http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2020-04-16 00:14:42,251 [Listener at localhost/46287] INFO  http.HttpServer2 (HttpServer2.java:addFilter(973)) - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2020-04-16 00:14:42,264 [Listener at localhost/46287] INFO  http.HttpServer2 (HttpServer2.java:bindListener(1206)) - Jetty bound to port 44936
+2020-04-16 00:14:42,265 [Listener at localhost/46287] INFO  server.Server (Server.java:doStart(351)) - jetty-9.3.24.v20180605, build timestamp: 2018-06-05T17:11:56Z, git hash: 84205aa28f11a4f31f2a3b86d1bba2cc8ab69827
+2020-04-16 00:14:42,271 [Listener at localhost/46287] INFO  handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@5d332969{/logs,file:///root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/log,AVAILABLE}
+2020-04-16 00:14:42,272 [Listener at localhost/46287] INFO  handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.s.ServletContextHandler@2e27d72f{/static,jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-hdfs/3.2.1/hadoop-hdfs-3.2.1-tests.jar!/webapps/static,AVAILABLE}
+2020-04-16 00:14:42,526 [Listener at localhost/46287] INFO  handler.ContextHandler (ContextHandler.java:doStart(781)) - Started o.e.j.w.WebAppContext@3b4ef7{/,file:///tmp/jetty-localhost-44936-datanode-_-any-5278529680203553827.dir/webapp/,AVAILABLE}{/datanode}
+2020-04-16 00:14:42,529 [Listener at localhost/46287] INFO  server.AbstractConnector (AbstractConnector.java:doStart(278)) - Started ServerConnector@1af05b03{HTTP/1.1,[http/1.1]}{localhost:44936}
+2020-04-16 00:14:42,537 [Listener at localhost/46287] INFO  server.Server (Server.java:doStart(419)) - Started @6394ms
+2020-04-16 00:14:43,930 [Listener at localhost/46287] INFO  web.DatanodeHttpServer (DatanodeHttpServer.java:start(255)) - Listening HTTP traffic on /127.0.0.1:45331
+2020-04-16 00:14:43,942 [Listener at localhost/46287] INFO  datanode.DataNode (DataNode.java:startDataNode(1430)) - dnUserName = root
+2020-04-16 00:14:43,943 [Listener at localhost/46287] INFO  datanode.DataNode (DataNode.java:startDataNode(1431)) - supergroup = supergroup
+2020-04-16 00:14:43,945 [org.apache.hadoop.util.JvmPauseMonitor$Monitor@712ca57b] INFO  util.JvmPauseMonitor (JvmPauseMonitor.java:run(188)) - Starting JVM pause monitor
+2020-04-16 00:14:43,995 [Listener at localhost/46287] INFO  ipc.CallQueueManager (CallQueueManager.java:<init>(84)) - Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 1000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2020-04-16 00:14:43,997 [Socket Reader #1 for port 0] INFO  ipc.Server (Server.java:run(1219)) - Starting Socket Reader #1 for port 0
+2020-04-16 00:14:44,033 [Listener at localhost/35835] INFO  datanode.DataNode (DataNode.java:initIpcServer(1036)) - Opened IPC server at /127.0.0.1:35835
+2020-04-16 00:14:44,068 [Listener at localhost/35835] INFO  datanode.DataNode (BlockPoolManager.java:refreshNamenodes(149)) - Refresh request received for nameservices: null
+2020-04-16 00:14:44,070 [Listener at localhost/35835] INFO  datanode.DataNode (BlockPoolManager.java:doRefreshNamenodes(210)) - Starting BPOfferServices for nameservices: <default>
+2020-04-16 00:14:44,105 [Listener at localhost/35835] WARN  common.MetricsLoggerTask (MetricsLoggerTask.java:makeMetricsLoggerAsync(155)) - Metrics logging will not be async since the logger is not log4j
+2020-04-16 00:14:44,106 [Listener at localhost/35835] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-16 00:14:44,101 [Thread-58] INFO  datanode.DataNode (BPServiceActor.java:run(817)) - Block pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:46287 starting to offer service
+2020-04-16 00:14:44,107 [IPC Server Responder] INFO  ipc.Server (Server.java:run(1460)) - IPC Server Responder: starting
+2020-04-16 00:14:44,109 [IPC Server listener on 0] INFO  ipc.Server (Server.java:run(1298)) - IPC Server listener on 0: starting
+2020-04-16 00:14:44,767 [Thread-58] INFO  datanode.DataNode (BPOfferService.java:verifyAndSetNamespaceInfo(378)) - Acknowledging ACTIVE Namenode during handshakeBlock pool <registering> (Datanode Uuid unassigned) service to localhost/127.0.0.1:46287
+2020-04-16 00:14:44,773 [Thread-58] INFO  common.Storage (DataStorage.java:getParallelVolumeLoadThreadsNum(354)) - Using 2 threads to upgrade data directories (dfs.datanode.parallel.volumes.load.threads.num=2, dataDirs=2)
+2020-04-16 00:14:44,777 [Thread-58] INFO  common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1/in_use.lock acquired by nodename 2266@c416149342ad
+2020-04-16 00:14:44,779 [Thread-58] INFO  common.Storage (DataStorage.java:loadStorageDirectory(282)) - Storage directory with location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1 is not formatted for namespace 516976808. Formatting...
+2020-04-16 00:14:44,781 [Thread-58] INFO  common.Storage (DataStorage.java:createStorageID(160)) - Generated new storageID DS-374181c8-78fe-430d-9eca-865e97659eef for directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1 
+2020-04-16 00:14:44,785 [Thread-58] INFO  common.Storage (Storage.java:tryLock(923)) - Lock on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2/in_use.lock acquired by nodename 2266@c416149342ad
+2020-04-16 00:14:44,786 [Thread-58] INFO  common.Storage (DataStorage.java:loadStorageDirectory(282)) - Storage directory with location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2 is not formatted for namespace 516976808. Formatting...
+2020-04-16 00:14:44,787 [Thread-58] INFO  common.Storage (DataStorage.java:createStorageID(160)) - Generated new storageID DS-037f2584-d217-4613-8067-9d6a0a6bb758 for directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2 
+2020-04-16 00:14:44,821 [Thread-58] INFO  common.Storage (BlockPoolSliceStorage.java:recoverTransitionRead(251)) - Analyzing storage directories for bpid BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:44,823 [Thread-58] INFO  common.Storage (Storage.java:lock(882)) - Locking is disabled for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1/current/BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:44,824 [Thread-58] INFO  common.Storage (BlockPoolSliceStorage.java:loadStorageDirectory(168)) - Block pool storage directory for location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1 and block pool id BP-466001805-172.17.0.6-1586996078934 is not formatted. Formatting ...
+2020-04-16 00:14:44,824 [Thread-58] INFO  common.Storage (BlockPoolSliceStorage.java:format(280)) - Formatting block pool BP-466001805-172.17.0.6-1586996078934 directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1/current/BP-466001805-172.17.0.6-1586996078934/current
+2020-04-16 00:14:44,844 [Thread-58] INFO  common.Storage (BlockPoolSliceStorage.java:recoverTransitionRead(251)) - Analyzing storage directories for bpid BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:44,845 [Thread-58] INFO  common.Storage (Storage.java:lock(882)) - Locking is disabled for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2/current/BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:44,845 [Thread-58] INFO  common.Storage (BlockPoolSliceStorage.java:loadStorageDirectory(168)) - Block pool storage directory for location [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2 and block pool id BP-466001805-172.17.0.6-1586996078934 is not formatted. Formatting ...
+2020-04-16 00:14:44,845 [Thread-58] INFO  common.Storage (BlockPoolSliceStorage.java:format(280)) - Formatting block pool BP-466001805-172.17.0.6-1586996078934 directory /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2/current/BP-466001805-172.17.0.6-1586996078934/current
+2020-04-16 00:14:44,848 [Thread-58] INFO  datanode.DataNode (DataNode.java:initStorage(1748)) - Setting up storage: nsid=516976808;bpid=BP-466001805-172.17.0.6-1586996078934;lv=-57;nsInfo=lv=-65;cid=testClusterID;nsid=516976808;c=1586996078934;bpid=BP-466001805-172.17.0.6-1586996078934;dnuuid=null
+2020-04-16 00:14:44,849 [Thread-58] INFO  datanode.DataNode (DataNode.java:checkDatanodeUuid(1548)) - Generated and persisted new Datanode UUID b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d
+2020-04-16 00:14:45,137 [Thread-58] INFO  impl.FsDatasetImpl (FsVolumeList.java:addVolume(304)) - Added new volume: DS-374181c8-78fe-430d-9eca-865e97659eef
+2020-04-16 00:14:45,138 [Thread-58] INFO  impl.FsDatasetImpl (FsDatasetImpl.java:addVolume(450)) - Added volume - [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1, StorageType: DISK
+2020-04-16 00:14:45,145 [Thread-58] INFO  impl.FsDatasetImpl (FsVolumeList.java:addVolume(304)) - Added new volume: DS-037f2584-d217-4613-8067-9d6a0a6bb758
+2020-04-16 00:14:45,145 [Thread-58] INFO  impl.FsDatasetImpl (FsDatasetImpl.java:addVolume(450)) - Added volume - [DISK]file:/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2, StorageType: DISK
+2020-04-16 00:14:45,151 [Thread-58] INFO  impl.FsDatasetImpl (FsDatasetImpl.java:registerMBean(2280)) - Registered FSDatasetState MBean
+2020-04-16 00:14:45,164 [Thread-58] INFO  checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1
+2020-04-16 00:14:45,231 [Thread-58] INFO  checker.DatasetVolumeChecker (DatasetVolumeChecker.java:checkAllVolumes(222)) - Scheduled health check for volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1
+2020-04-16 00:14:45,251 [Thread-58] INFO  checker.ThrottledAsyncChecker (ThrottledAsyncChecker.java:schedule(137)) - Scheduling a check for /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2
+2020-04-16 00:14:45,251 [Thread-58] INFO  checker.DatasetVolumeChecker (DatasetVolumeChecker.java:checkAllVolumes(222)) - Scheduled health check for volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2
+2020-04-16 00:14:45,261 [Thread-58] INFO  impl.FsDatasetImpl (FsDatasetImpl.java:addBlockPool(2791)) - Adding block pool BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:45,262 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2782)) - dnInfo.length != numDataNodes
+2020-04-16 00:14:45,263 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:14:45,262 [Thread-76] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(406)) - Scanning block pool BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2...
+2020-04-16 00:14:45,262 [Thread-75] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(406)) - Scanning block pool BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1...
+2020-04-16 00:14:45,393 [Thread-75] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(411)) - Time taken to scan block pool BP-466001805-172.17.0.6-1586996078934 on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1: 114ms
+2020-04-16 00:14:45,397 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2782)) - dnInfo.length != numDataNodes
+2020-04-16 00:14:45,397 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:14:45,399 [Thread-76] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(411)) - Time taken to scan block pool BP-466001805-172.17.0.6-1586996078934 on /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2: 136ms
+2020-04-16 00:14:45,400 [Thread-58] INFO  impl.FsDatasetImpl (FsVolumeList.java:addBlockPool(431)) - Total time to scan all replicas for block pool BP-466001805-172.17.0.6-1586996078934: 139ms
+2020-04-16 00:14:45,415 [Thread-79] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(199)) - Adding replicas to map for block pool BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1...
+2020-04-16 00:14:45,415 [Thread-79] INFO  impl.BlockPoolSlice (BlockPoolSlice.java:readReplicasFromCache(876)) - Replica Cache file: /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1/current/BP-466001805-172.17.0.6-1586996078934/current/replicas doesn't exist 
+2020-04-16 00:14:45,417 [Thread-80] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(199)) - Adding replicas to map for block pool BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2...
+2020-04-16 00:14:45,417 [Thread-80] INFO  impl.BlockPoolSlice (BlockPoolSlice.java:readReplicasFromCache(876)) - Replica Cache file: /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2/current/BP-466001805-172.17.0.6-1586996078934/current/replicas doesn't exist 
+2020-04-16 00:14:45,461 [Thread-79] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(204)) - Time to add replicas to map for block pool BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1: 46ms
+2020-04-16 00:14:45,461 [Thread-80] INFO  impl.FsDatasetImpl (FsVolumeList.java:run(204)) - Time to add replicas to map for block pool BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2: 44ms
+2020-04-16 00:14:45,465 [Thread-58] INFO  impl.FsDatasetImpl (FsVolumeList.java:getAllVolumesMap(225)) - Total time to add all replicas to map for block pool BP-466001805-172.17.0.6-1586996078934: 62ms
+2020-04-16 00:14:45,467 [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1)] INFO  datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(381)) - Now scanning bpid BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1
+2020-04-16 00:14:45,468 [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2)] INFO  datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(381)) - Now scanning bpid BP-466001805-172.17.0.6-1586996078934 on volume /root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2
+2020-04-16 00:14:45,493 [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1)] INFO  datanode.VolumeScanner (VolumeScanner.java:runLoop(539)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1, DS-374181c8-78fe-430d-9eca-865e97659eef): finished scanning block pool BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:45,495 [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2)] INFO  datanode.VolumeScanner (VolumeScanner.java:runLoop(539)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2, DS-037f2584-d217-4613-8067-9d6a0a6bb758): finished scanning block pool BP-466001805-172.17.0.6-1586996078934
+2020-04-16 00:14:45,516 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2782)) - dnInfo.length != numDataNodes
+2020-04-16 00:14:45,517 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:14:45,544 [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1)] INFO  datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(398)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data1, DS-374181c8-78fe-430d-9eca-865e97659eef): no suitable block pools found to scan.  Waiting 1814399923 ms.
+2020-04-16 00:14:45,545 [VolumeScannerThread(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2)] INFO  datanode.VolumeScanner (VolumeScanner.java:findNextUsableBlockIter(398)) - VolumeScanner(/root/hadoop-3.2.1-src/hadoop-tools/hadoop-distcp/target/tmp/build/TEST_COPY_MAPPER/data/dfs/data/data2, DS-037f2584-d217-4613-8067-9d6a0a6bb758): no suitable block pools found to scan.  Waiting 1814399922 ms.
+2020-04-16 00:14:45,554 [Thread-58] INFO  datanode.DirectoryScanner (DirectoryScanner.java:start(284)) - Periodic Directory Tree Verification scan starting at 4/16/20 3:19 AM with interval of 21600000ms
+2020-04-16 00:14:45,574 [BP-466001805-172.17.0.6-1586996078934 heartbeating to localhost/127.0.0.1:46287] INFO  datanode.DataNode (BPServiceActor.java:register(767)) - Block pool BP-466001805-172.17.0.6-1586996078934 (Datanode Uuid b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d) service to localhost/127.0.0.1:46287 beginning handshake with NN
+2020-04-16 00:14:45,605 [IPC Server handler 2 on default port 46287] INFO  hdfs.StateChange (DatanodeManager.java:registerDatanode(1042)) - BLOCK* registerDatanode: from DatanodeRegistration(127.0.0.1:44604, datanodeUuid=b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d, infoPort=45331, infoSecurePort=0, ipcPort=35835, storageInfo=lv=-57;cid=testClusterID;nsid=516976808;c=1586996078934) storage b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d
+2020-04-16 00:14:45,608 [IPC Server handler 2 on default port 46287] INFO  net.NetworkTopology (NetworkTopology.java:add(145)) - Adding a new node: /default-rack/127.0.0.1:44604
+2020-04-16 00:14:45,608 [IPC Server handler 2 on default port 46287] INFO  blockmanagement.BlockReportLeaseManager (BlockReportLeaseManager.java:registerNode(204)) - Registered DN b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d (127.0.0.1:44604).
+2020-04-16 00:14:45,623 [BP-466001805-172.17.0.6-1586996078934 heartbeating to localhost/127.0.0.1:46287] INFO  datanode.DataNode (BPServiceActor.java:register(786)) - Block pool Block pool BP-466001805-172.17.0.6-1586996078934 (Datanode Uuid b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d) service to localhost/127.0.0.1:46287 successfully registered with NN
+2020-04-16 00:14:45,623 [BP-466001805-172.17.0.6-1586996078934 heartbeating to localhost/127.0.0.1:46287] INFO  datanode.DataNode (BPServiceActor.java:offerService(616)) - For namenode localhost/127.0.0.1:46287 using BLOCKREPORT_INTERVAL of 21600000msec CACHEREPORT_INTERVAL of 10000msec Initial delay: 0msec; heartBeatInterval=3000
+2020-04-16 00:14:45,649 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:shouldWait(2798)) - No heartbeat from DataNode: 127.0.0.1:44604
+2020-04-16 00:14:45,650 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2703)) - Waiting for cluster to become active
+2020-04-16 00:14:45,687 [IPC Server handler 5 on default port 46287] INFO  blockmanagement.DatanodeDescriptor (DatanodeDescriptor.java:updateStorage(987)) - Adding new storage ID DS-374181c8-78fe-430d-9eca-865e97659eef for DN 127.0.0.1:44604
+2020-04-16 00:14:45,688 [IPC Server handler 5 on default port 46287] INFO  blockmanagement.DatanodeDescriptor (DatanodeDescriptor.java:updateStorage(987)) - Adding new storage ID DS-037f2584-d217-4613-8067-9d6a0a6bb758 for DN 127.0.0.1:44604
+2020-04-16 00:14:45,754 [Block report processor] INFO  BlockStateChange (BlockManager.java:processReport(2648)) - BLOCK* processReport 0xc07f8962497a00e9: Processing first storage report for DS-037f2584-d217-4613-8067-9d6a0a6bb758 from datanode b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d
+2020-04-16 00:14:45,756 [Listener at localhost/35835] INFO  hdfs.MiniDFSCluster (MiniDFSCluster.java:waitActive(2758)) - Cluster is active
+2020-04-16 00:14:45,757 [Block report processor] INFO  BlockStateChange (BlockManager.java:processReport(2677)) - BLOCK* processReport 0xc07f8962497a00e9: from storage DS-037f2584-d217-4613-8067-9d6a0a6bb758 node DatanodeRegistration(127.0.0.1:44604, datanodeUuid=b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d, infoPort=45331, infoSecurePort=0, ipcPort=35835, storageInfo=lv=-57;cid=testClusterID;nsid=516976808;c=1586996078934), blocks: 0, hasStaleStorage: true, processing time: 3 msecs, invalidatedBlocks: 0
+2020-04-16 00:14:45,765 [Block report processor] INFO  BlockStateChange (BlockManager.java:processReport(2648)) - BLOCK* processReport 0xc07f8962497a00e9: Processing first storage report for DS-374181c8-78fe-430d-9eca-865e97659eef from datanode b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d
+2020-04-16 00:14:45,765 [Block report processor] INFO  BlockStateChange (BlockManager.java:processReport(2677)) - BLOCK* processReport 0xc07f8962497a00e9: from storage DS-374181c8-78fe-430d-9eca-865e97659eef node DatanodeRegistration(127.0.0.1:44604, datanodeUuid=b662b89d-0cc3-4a7d-8b1d-033dcb94fb2d, infoPort=45331, infoSecurePort=0, ipcPort=35835, storageInfo=lv=-57;cid=testClusterID;nsid=516976808;c=1586996078934), blocks: 0, hasStaleStorage: false, processing time: 0 msecs, invalidatedBlocks: 0
+msx-listener test started org.apache.hadoop.tools.mapred.TestCopyMapperCompositeCrc#testPreserveBlockSizeAndReplication
+msx-listener unitTestCounterInClass = 0
+2020-04-16 00:14:45,860 [BP-466001805-172.17.0.6-1586996078934 heartbeating to localhost/127.0.0.1:46287] INFO  datanode.DataNode (BPServiceActor.java:blockReport(424)) - Successfully sent block report 0xc07f8962497a00e9,  containing 2 storage report(s), of which we sent 2. The reports had 0 total blocks and used 1 RPC(s). This took 6 msec to generate and 121 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
+2020-04-16 00:14:45,860 [BP-466001805-172.17.0.6-1586996078934 heartbeating to localhost/127.0.0.1:46287] INFO  datanode.DataNode (BPOfferService.java:processCommandFromActive(759)) - Got finalize command for block pool BP-466001805-172.17.0.6-1586996078934
+268435456
+2
+2020-04-16 00:14:46,161 [IPC Server handler 9 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741825_1001, replicas=127.0.0.1:44604 for /tmp/source/5/6
+2020-04-16 00:14:46,200 [Thread-85] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:46,287 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51486 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741825_1001]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741825_1001 src: /127.0.0.1:51486 dest: /127.0.0.1:44604
+2020-04-16 00:14:46,350 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741825_1001, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741825_1001 size 1024 from /127.0.0.1:51486
+2020-04-16 00:14:46,351 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741825_1001, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741825_1001, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:46,372 [IPC Server handler 8 on default port 46287] INFO  namenode.FSNamesystem (FSNamesystem.java:checkBlocksComplete(2995)) - BLOCK* blk_1073741825_1001 is COMMITTED but not COMPLETE(numNodes= 0 <  minimum = 1) in file /tmp/source/5/6
+2020-04-16 00:14:46,784 [IPC Server handler 2 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/source/5/6 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+268435456
+2
+2020-04-16 00:14:46,824 [IPC Server handler 0 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741826_1002, replicas=127.0.0.1:44604 for /tmp/source/7/8/9
+2020-04-16 00:14:46,827 [Thread-90] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:46,841 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51500 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741826_1002]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741826_1002 src: /127.0.0.1:51500 dest: /127.0.0.1:44604
+2020-04-16 00:14:46,863 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741826_1002, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741826_1002 size 1024 from /127.0.0.1:51500
+2020-04-16 00:14:46,863 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741826_1002, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741826_1002, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:46,881 [IPC Server handler 9 on default port 46287] INFO  namenode.FSNamesystem (FSNamesystem.java:checkBlocksComplete(2995)) - BLOCK* blk_1073741826_1002 is COMMITTED but not COMPLETE(numNodes= 0 <  minimum = 1) in file /tmp/source/7/8/9
+2020-04-16 00:14:47,284 [IPC Server handler 8 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/source/7/8/9 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+2020-04-16 00:14:47,310 [Thread-84] DEBUG mapred.TestCopyMapper (TestCopyMapper.java:getConfigurationForCluster(114)) - fs.default.name  == file:///
+2020-04-16 00:14:47,310 [Thread-84] DEBUG mapred.TestCopyMapper (TestCopyMapper.java:getConfigurationForCluster(115)) - dfs.http.address == 0.0.0.0:9870
+2020-04-16 00:14:47,352 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/1, /1
+2020-04-16 00:14:47,360 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/1 to hdfs://localhost:46287/tmp/target/1
+2020-04-16 00:14:47,374 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/1
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/1
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:47,416 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/2, /2
+2020-04-16 00:14:47,416 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/2 to hdfs://localhost:46287/tmp/target/2
+2020-04-16 00:14:47,438 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/2
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/2
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:47,456 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/2/3/4, /2/3/4
+2020-04-16 00:14:47,457 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/2/3/4 to hdfs://localhost:46287/tmp/target/2/3/4
+2020-04-16 00:14:47,466 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/2/3/4
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/2/3/4
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:47,474 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/2/3, /2/3
+2020-04-16 00:14:47,475 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/2/3 to hdfs://localhost:46287/tmp/target/2/3
+2020-04-16 00:14:47,501 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/5, /5
+2020-04-16 00:14:47,502 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/5 to hdfs://localhost:46287/tmp/target/5
+2020-04-16 00:14:47,520 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/5
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/5
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:47,550 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/5/6, /5/6
+2020-04-16 00:14:47,550 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/5/6 to hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:47,565 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/5/6
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/5/6
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:47,567 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(218)) - copying org.apache.hadoop.tools.CopyListingFileStatus@6f05c61d{hdfs://localhost:46287/tmp/source/5/6 length = 1024 aclEntries = null, xAttrs = null} hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:47,568 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(121)) - Copying hdfs://localhost:46287/tmp/source/5/6 to hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:47,569 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:getTempFile(233)) - Creating temp file: hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:47,569 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(127)) - Writing to temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:47,638 [Thread-84] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:47,710 [IPC Server handler 0 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741827_1003, replicas=127.0.0.1:44604 for /tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:47,714 [Thread-94] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:47,718 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51514 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741827_1003]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741827_1003 src: /127.0.0.1:51514 dest: /127.0.0.1:44604
+2020-04-16 00:14:47,758 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741827_1003, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741827_1003 size 1024 from /127.0.0.1:51514
+2020-04-16 00:14:47,759 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741827_1003, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741827_1003, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:47,777 [IPC Server handler 9 on default port 46287] INFO  namenode.FSNamesystem (FSNamesystem.java:checkBlocksComplete(2995)) - BLOCK* blk_1073741827_1003 is COMMITTED but not COMPLETE(numNodes= 0 <  minimum = 1) in file /tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:48,182 [IPC Server handler 8 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/target/.distcp.tmp.attempt__0000_m_000000_0 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+2020-04-16 00:14:48,241 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(152)) - Renaming temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0 to hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:48,285 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(156)) - Completed writing hdfs://localhost:46287/tmp/target/5/6 (1024 bytes)
+2020-04-16 00:14:48,296 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/7, /7
+2020-04-16 00:14:48,296 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/7 to hdfs://localhost:46287/tmp/target/7
+2020-04-16 00:14:48,306 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/7
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/7
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:48,321 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/7/8, /7/8
+2020-04-16 00:14:48,322 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/7/8 to hdfs://localhost:46287/tmp/target/7/8
+2020-04-16 00:14:48,331 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/7/8
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/7/8
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:48,338 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/7/8/9, /7/8/9
+2020-04-16 00:14:48,339 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/7/8/9 to hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:48,342 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/7/8/9
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/7/8/9
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:982)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:48,343 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(218)) - copying org.apache.hadoop.tools.CopyListingFileStatus@a01efe81{hdfs://localhost:46287/tmp/source/7/8/9 length = 1024 aclEntries = null, xAttrs = null} hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:48,344 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(121)) - Copying hdfs://localhost:46287/tmp/source/7/8/9 to hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:48,344 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:getTempFile(233)) - Creating temp file: hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:48,344 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(127)) - Writing to temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:48,384 [IPC Server handler 2 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741828_1004, replicas=127.0.0.1:44604 for /tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:48,390 [Thread-102] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:48,393 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51522 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741828_1004]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741828_1004 src: /127.0.0.1:51522 dest: /127.0.0.1:44604
+2020-04-16 00:14:48,419 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741828_1004, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741828_1004 size 1024 from /127.0.0.1:51522
+2020-04-16 00:14:48,429 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741828_1004, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741828_1004, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:48,442 [IPC Server handler 5 on default port 46287] INFO  namenode.FSNamesystem (FSNamesystem.java:checkBlocksComplete(2995)) - BLOCK* blk_1073741828_1004 is COMMITTED but not COMPLETE(numNodes= 0 <  minimum = 1) in file /tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:48,852 [IPC Server handler 0 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/target/.distcp.tmp.attempt__0000_m_000000_0 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+2020-04-16 00:14:48,876 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(152)) - Renaming temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0 to hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:48,881 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(156)) - Completed writing hdfs://localhost:46287/tmp/target/7/8/9 (1024 bytes)
+268435456
+2
+2020-04-16 00:14:49,074 [IPC Server handler 3 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741829_1005, replicas=127.0.0.1:44604 for /tmp/source/5/6
+2020-04-16 00:14:49,080 [Thread-108] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:49,086 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51530 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741829_1005]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741829_1005 src: /127.0.0.1:51530 dest: /127.0.0.1:44604
+2020-04-16 00:14:49,096 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741829_1005, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741829_1005 size 1024 from /127.0.0.1:51530
+2020-04-16 00:14:49,096 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741829_1005, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741829_1005, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:49,100 [IPC Server handler 4 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/source/5/6 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+268435456
+2
+2020-04-16 00:14:49,140 [IPC Server handler 6 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741830_1006, replicas=127.0.0.1:44604 for /tmp/source/7/8/9
+2020-04-16 00:14:49,143 [Thread-112] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:49,161 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51532 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741830_1006]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741830_1006 src: /127.0.0.1:51532 dest: /127.0.0.1:44604
+2020-04-16 00:14:49,175 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741830_1006, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741830_1006 size 1024 from /127.0.0.1:51532
+2020-04-16 00:14:49,175 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741830_1006, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741830_1006, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:49,185 [IPC Server handler 1 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/source/7/8/9 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+2020-04-16 00:14:49,219 [Thread-84] DEBUG mapred.TestCopyMapper (TestCopyMapper.java:getConfigurationForCluster(114)) - fs.default.name  == file:///
+2020-04-16 00:14:49,219 [Thread-84] DEBUG mapred.TestCopyMapper (TestCopyMapper.java:getConfigurationForCluster(115)) - dfs.http.address == 0.0.0.0:9870
+2020-04-16 00:14:49,225 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/1, /1
+2020-04-16 00:14:49,226 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/1 to hdfs://localhost:46287/tmp/target/1
+2020-04-16 00:14:49,242 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/1
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/1
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,249 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/2, /2
+2020-04-16 00:14:49,249 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/2 to hdfs://localhost:46287/tmp/target/2
+2020-04-16 00:14:49,255 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/2
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/2
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,267 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/2/3/4, /2/3/4
+2020-04-16 00:14:49,268 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/2/3/4 to hdfs://localhost:46287/tmp/target/2/3/4
+2020-04-16 00:14:49,288 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/2/3/4
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/2/3/4
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,296 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/2/3, /2/3
+2020-04-16 00:14:49,296 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/2/3 to hdfs://localhost:46287/tmp/target/2/3
+2020-04-16 00:14:49,324 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/5, /5
+2020-04-16 00:14:49,324 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/5 to hdfs://localhost:46287/tmp/target/5
+2020-04-16 00:14:49,336 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/5
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/5
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,351 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/5/6, /5/6
+2020-04-16 00:14:49,352 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/5/6 to hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:49,367 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/5/6
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/5/6
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,368 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(218)) - copying org.apache.hadoop.tools.CopyListingFileStatus@42fdaa05{hdfs://localhost:46287/tmp/source/5/6 length = 1024 aclEntries = null, xAttrs = null} hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:49,368 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(121)) - Copying hdfs://localhost:46287/tmp/source/5/6 to hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:49,368 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:getTempFile(233)) - Creating temp file: hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:49,368 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(127)) - Writing to temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:49,421 [IPC Server handler 8 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741831_1007, replicas=127.0.0.1:44604 for /tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:49,426 [Thread-116] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:49,457 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51534 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741831_1007]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741831_1007 src: /127.0.0.1:51534 dest: /127.0.0.1:44604
+2020-04-16 00:14:49,489 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741831_1007, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741831_1007 size 1024 from /127.0.0.1:51534
+2020-04-16 00:14:49,489 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741831_1007, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741831_1007, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:49,506 [IPC Server handler 2 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/target/.distcp.tmp.attempt__0000_m_000000_0 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+2020-04-16 00:14:49,548 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(152)) - Renaming temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0 to hdfs://localhost:46287/tmp/target/5/6
+2020-04-16 00:14:49,554 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(156)) - Completed writing hdfs://localhost:46287/tmp/target/5/6 (1024 bytes)
+2020-04-16 00:14:49,562 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/7, /7
+2020-04-16 00:14:49,563 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/7 to hdfs://localhost:46287/tmp/target/7
+2020-04-16 00:14:49,569 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/7
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/7
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,580 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/7/8, /7/8
+2020-04-16 00:14:49,580 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/7/8 to hdfs://localhost:46287/tmp/target/7/8
+2020-04-16 00:14:49,605 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/7/8
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/7/8
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,615 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(144)) - DistCpMapper::map(): Received hdfs://localhost:46287/tmp/source/7/8/9, /7/8/9
+2020-04-16 00:14:49,615 [Thread-84] INFO  mapred.CopyMapper (CopyMapper.java:map(157)) - Copying hdfs://localhost:46287/tmp/source/7/8/9 to hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:49,621 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(182)) - Path could not be found: hdfs://localhost:46287/tmp/target/7/8/9
+java.io.FileNotFoundException: File does not exist: hdfs://localhost:46287/tmp/target/7/8/9
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1580)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$29.doCall(DistributedFileSystem.java:1573)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1588)
+	at org.apache.hadoop.tools.mapred.CopyMapper.map(CopyMapper.java:179)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplicationImpl(TestCopyMapper.java:1112)
+	at org.apache.hadoop.tools.mapred.TestCopyMapper.testPreserveBlockSizeAndReplication(TestCopyMapper.java:983)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$StatementThread.run(FailOnTimeout.java:74)
+2020-04-16 00:14:49,622 [Thread-84] DEBUG mapred.CopyMapper (CopyMapper.java:map(218)) - copying org.apache.hadoop.tools.CopyListingFileStatus@920056b5{hdfs://localhost:46287/tmp/source/7/8/9 length = 1024 aclEntries = null, xAttrs = null} hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:49,622 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(121)) - Copying hdfs://localhost:46287/tmp/source/7/8/9 to hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:49,623 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:getTempFile(233)) - Creating temp file: hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:49,623 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(127)) - Writing to temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:49,658 [IPC Server handler 3 on default port 46287] INFO  hdfs.StateChange (FSDirWriteFileOp.java:logAllocatedBlock(798)) - BLOCK* allocate blk_1073741832_1008, replicas=127.0.0.1:44604 for /tmp/target/.distcp.tmp.attempt__0000_m_000000_0
+2020-04-16 00:14:49,660 [Thread-122] INFO  sasl.SaslDataTransferClient (SaslDataTransferClient.java:checkTrustAndSend(239)) - SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2020-04-16 00:14:49,666 [DataXceiver for client DFSClient_NONMAPREDUCE_-741639418_300 at /127.0.0.1:51540 [Receiving block BP-466001805-172.17.0.6-1586996078934:blk_1073741832_1008]] INFO  datanode.DataNode (DataXceiver.java:writeBlock(747)) - Receiving BP-466001805-172.17.0.6-1586996078934:blk_1073741832_1008 src: /127.0.0.1:51540 dest: /127.0.0.1:44604
+2020-04-16 00:14:49,717 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741832_1008, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:finalizeBlock(1537)) - Received BP-466001805-172.17.0.6-1586996078934:blk_1073741832_1008 size 1024 from /127.0.0.1:51540
+2020-04-16 00:14:49,717 [PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741832_1008, type=LAST_IN_PIPELINE] INFO  datanode.DataNode (BlockReceiver.java:run(1506)) - PacketResponder: BP-466001805-172.17.0.6-1586996078934:blk_1073741832_1008, type=LAST_IN_PIPELINE terminating
+2020-04-16 00:14:49,729 [IPC Server handler 5 on default port 46287] INFO  hdfs.StateChange (FSNamesystem.java:completeFile(2948)) - DIR* completeFile: /tmp/target/.distcp.tmp.attempt__0000_m_000000_0 is closed by DFSClient_NONMAPREDUCE_-741639418_300
+2020-04-16 00:14:49,757 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(152)) - Renaming temporary target file path hdfs://localhost:46287/tmp/target/.distcp.tmp.attempt__0000_m_000000_0 to hdfs://localhost:46287/tmp/target/7/8/9
+2020-04-16 00:14:49,767 [Thread-84] INFO  mapred.RetriableFileCopyCommand (RetriableFileCopyCommand.java:doCopy(156)) - Completed writing hdfs://localhost:46287/tmp/target/7/8/9 (1024 bytes)
+msx-listener testfinished org.apache.hadoop.tools.mapred.TestCopyMapperCompositeCrc#testPreserveBlockSizeAndReplication
+msx-listener writeFile testName is org.apache.hadoop.tools.mapred.TestCopyMapperCompositeCrc#testPreserveBlockSizeAndReplication
+msx-listener succeed
+msx-listener all testRunFinished
+2020-04-16 00:14:49,954 [shutdown-hook-0] INFO  namenode.FSImage (FSImage.java:lambda$run$0(1054)) - FSImageSaver clean checkpoint: txid=0 when meet shutdown.
+2020-04-16 00:14:49,961 [shutdown-hook-0] INFO  namenode.FSImage (FSImage.java:lambda$run$0(1054)) - FSImageSaver clean checkpoint: txid=0 when meet shutdown.
