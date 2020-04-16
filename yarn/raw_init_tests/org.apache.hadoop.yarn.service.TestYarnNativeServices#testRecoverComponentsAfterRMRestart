@@ -1,0 +1,18 @@
+msx-listener test started org.apache.hadoop.yarn.service.TestYarnNativeServices#testRecoverComponentsAfterRMRestart
+msx-listener unitTestCounterInClass = 0
+2020-04-16 03:42:45,510 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(499)) - msx-yarn ResourceManager init
+2020-04-16 03:42:45,755 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceInit(605)) - msx-yarn NodeManager init
+2020-04-16 03:42:45,755 INFO  [Thread-0] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(504)) - msx-yarn ResourceManager start
+2020-04-16 03:42:48,265 INFO  [Listener at 0.0.0.0/8032] server.MiniYARNCluster (MiniYARNCluster.java:serviceStart(629)) - msx-yarn NodeManager start
+2020-04-16 03:42:49,952 INFO  [Listener at 449e58ff30d7/45348] namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-16 03:42:50,572 INFO  [Listener at localhost/38893] namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-16 03:42:50,906 INFO  [Listener at localhost/38893] datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-16 03:42:51,425 INFO  [Listener at localhost/41438] datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-16 03:43:31,989 INFO  [main] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(640)) - msx-yarn NodeManager stop
+2020-04-16 03:43:49,026 INFO  [main] server.MiniYARNCluster (MiniYARNCluster.java:serviceStop(534)) - msx-yarn ResourceManager stop
+2020-04-16 03:43:54,101 INFO  [main] datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-16 03:43:54,147 INFO  [main] namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.yarn.service.TestYarnNativeServices#testRecoverComponentsAfterRMRestart
+msx-listener writeFile testName is org.apache.hadoop.yarn.service.TestYarnNativeServices#testRecoverComponentsAfterRMRestart
+msx-listener succeed
+msx-listener all testRunFinished
