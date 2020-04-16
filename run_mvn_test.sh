@@ -31,5 +31,5 @@ cd $project_root_dir; mvn test -Dtest=$the_test
 test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt
 if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test'; exit -1; fi
 #echo "test_log is $test_log"
-if [ "$log_dts_dir" != "none" ]; then mv $test_log $log_dts_dir; fi
+if [ "$log_dts_dir" != "none" ]; then mv $test_log $log_dts_dir/"$the_test"-output.txt; fi
 
