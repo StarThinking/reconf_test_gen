@@ -1,0 +1,81 @@
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testDisableLazyPersistFileScrubber
+msx-listener unitTestCounterInClass = 0
+2020-04-15 17:58:26,657 [Thread-1] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 17:58:28,022 [Listener at localhost/38923] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 17:58:28,254 [Listener at localhost/38923] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 17:58:29,845 [Listener at localhost/41307] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 17:58:31,910 [Listener at localhost/41307] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 17:59:14,360 [Listener at localhost/41307] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testDisableLazyPersistFileScrubber
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testDisableLazyPersistFileScrubber
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testConcurrentWrites
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+2020-04-15 17:59:14,530 [Thread-93] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 17:59:14,749 [Listener at localhost/38587] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 17:59:14,772 [Listener at localhost/38587] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 17:59:14,868 [Listener at localhost/37516] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 17:59:28,375 [Listener at localhost/37516] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 17:59:28,518 [Listener at localhost/37516] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testConcurrentWrites
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testConcurrentWrites
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testFileShouldNotDiscardedIfNNRestarted
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+2020-04-15 17:59:28,640 [Thread-256] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 17:59:28,732 [Listener at localhost/36910] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 17:59:28,791 [Listener at localhost/36910] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 17:59:28,907 [Listener at localhost/36004] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 17:59:29,210 [Listener at localhost/36004] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 17:59:29,294 [Listener at localhost/36004] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 17:59:29,357 [Listener at localhost/36004] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 17:59:29,538 [Listener at localhost/36910] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 17:59:32,568 [Thread-255] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testFileShouldNotDiscardedIfNNRestarted
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testFileShouldNotDiscardedIfNNRestarted
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testCorruptFilesAreDiscarded
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+2020-04-15 17:59:32,687 [Thread-382] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 17:59:32,812 [Listener at localhost/46096] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 17:59:32,819 [Listener at localhost/46096] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 17:59:33,034 [Listener at localhost/37293] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 17:59:33,494 [Listener at localhost/37293] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:00:15,544 [Listener at localhost/37293] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testCorruptFilesAreDiscarded
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testCorruptFilesAreDiscarded
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testConcurrentRead
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+2020-04-15 18:00:15,818 [Thread-468] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:00:15,942 [Listener at localhost/36232] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:00:15,952 [Listener at localhost/36232] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:00:16,035 [Listener at localhost/44100] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:00:16,830 [Listener at localhost/44100] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:00:16,881 [Listener at localhost/44100] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testConcurrentRead
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testConcurrentRead
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testTruncateIsDenied
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+2020-04-15 18:00:16,987 [Thread-564] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:00:17,127 [Listener at localhost/45788] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:00:17,136 [Listener at localhost/45788] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:00:17,181 [Listener at localhost/41440] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:00:17,920 [Listener at localhost/41440] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:00:17,965 [Listener at localhost/41440] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testTruncateIsDenied
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testTruncateIsDenied
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testAppendIsDenied
+msx-listener perform reset as unitTestCounterInClass 6 is larger than zero
+2020-04-15 18:00:18,210 [Thread-649] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:00:18,384 [Listener at localhost/37824] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:00:18,395 [Listener at localhost/37824] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:00:18,440 [Listener at localhost/37603] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:00:18,860 [Listener at localhost/37603] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:00:18,930 [Listener at localhost/37603] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testAppendIsDenied
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestLazyPersistFiles#testAppendIsDenied
+msx-listener succeed
+msx-listener all testRunFinished

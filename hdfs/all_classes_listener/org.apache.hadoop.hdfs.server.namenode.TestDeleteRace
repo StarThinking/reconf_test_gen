@@ -1,0 +1,97 @@
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAddBlockRaceWithSnapshot
+msx-listener unitTestCounterInClass = 0
+2020-04-15 18:01:14,042 [Thread-0] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:01:15,227 [Listener at localhost/46399] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:01:15,353 [Listener at localhost/46399] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:16,038 [Listener at localhost/44555] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:01:19,861 [Listener at localhost/44555] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:01:20,050 [Listener at localhost/44555] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAddBlockRaceWithSnapshot
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAddBlockRaceWithSnapshot
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testRenameRace
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+2020-04-15 18:01:20,218 [Thread-90] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:01:20,347 [Listener at localhost/42078] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:01:20,373 [Listener at localhost/42078] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:20,529 [Listener at localhost/42128] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:01:24,332 [Listener at localhost/42128] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:01:24,359 [Listener at localhost/42128] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:01:24,645 [Listener at localhost/42078] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:01:30,655 [Listener at localhost/42078] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:01:30,735 [Listener at localhost/42078] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testRenameRace
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testRenameRace
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndCommitBlockSynchonizationRaceNoSnapshot
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+2020-04-15 18:01:30,883 [Thread-217] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:01:31,001 [Listener at localhost/42164] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:01:31,010 [Listener at localhost/42164] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:31,054 [Listener at localhost/44798] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:01:31,081 [Listener at localhost/44798] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:31,144 [Listener at localhost/44620] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:01:31,152 [Listener at localhost/44620] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:31,358 [Listener at localhost/37507] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:01:43,508 [Listener at localhost/37507] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:01:43,532 [Listener at localhost/37507] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:01:43,681 [Listener at localhost/42164] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:01:49,320 [Listener at localhost/42164] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:01:49,411 [Listener at localhost/42164] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:01:49,476 [Listener at localhost/42164] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:01:49,699 [Listener at localhost/42164] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndCommitBlockSynchonizationRaceNoSnapshot
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndCommitBlockSynchonizationRaceNoSnapshot
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndCommitBlockSynchronizationRaceHasSnapshot
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+2020-04-15 18:01:49,828 [Thread-455] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:01:49,973 [Listener at localhost/41151] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:01:50,000 [Listener at localhost/41151] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:50,055 [Listener at localhost/38846] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:01:50,078 [Listener at localhost/38846] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:50,158 [Listener at localhost/38563] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:01:50,196 [Listener at localhost/38563] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:01:50,280 [Listener at localhost/34979] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:02:02,458 [Listener at localhost/34979] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:02:02,485 [Listener at localhost/34979] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:02:02,629 [Listener at localhost/41151] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:02:08,277 [Listener at localhost/41151] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:02:08,328 [Listener at localhost/41151] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:02:08,380 [Listener at localhost/41151] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:02:08,432 [Listener at localhost/41151] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndCommitBlockSynchronizationRaceHasSnapshot
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndCommitBlockSynchronizationRaceHasSnapshot
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndLeaseRecoveryHardLimitSnapshot
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+2020-04-15 18:02:08,563 [Thread-685] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:02:08,754 [Listener at localhost/42661] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:02:08,794 [Listener at localhost/42661] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:02:08,843 [Listener at localhost/44957] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:02:08,874 [Listener at localhost/44957] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:02:08,946 [Listener at localhost/45722] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:02:08,958 [Listener at localhost/45722] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:02:09,193 [Listener at localhost/42482] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:02:13,527 [Listener at localhost/42482] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-15 18:02:13,551 [Listener at localhost/42482] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:02:13,687 [Listener at localhost/42661] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:02:18,232 [Listener at localhost/42661] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:02:18,266 [Listener at localhost/42661] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:02:18,304 [Listener at localhost/42661] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:02:18,446 [Listener at localhost/42661] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndLeaseRecoveryHardLimitSnapshot
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAndLeaseRecoveryHardLimitSnapshot
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAddBlockRace
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+2020-04-15 18:02:18,584 [Thread-879] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-15 18:02:18,706 [Listener at localhost/41816] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-15 18:02:18,728 [Listener at localhost/41816] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-15 18:02:18,787 [Listener at localhost/33627] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-15 18:02:22,066 [Listener at localhost/33627] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-15 18:02:22,093 [Listener at localhost/33627] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAddBlockRace
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDeleteRace#testDeleteAddBlockRace
+msx-listener succeed
+msx-listener all testRunFinished

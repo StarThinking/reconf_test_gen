@@ -12,7 +12,7 @@ do
     if [ "$(echo "$line" | grep :)" != "" ]; then 
 	echo "$line" | awk -F ':' '{print $1}' | sed 's/$/:*]/g'
     else
-       echo "$line" 
+	echo "$line"    
     fi
 done < $tmp_file 
 rm $tmp_file
