@@ -1,0 +1,675 @@
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener unitTestCounterInClass = 0
+2020-04-17 20:22:26,578 [main] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:28,637 [Listener at localhost/39269] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:30,490 [Listener at localhost/39269] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:22:30,703 [Listener at localhost/39269] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:31,307 [Listener at localhost/41583] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:31,428 [Listener at localhost/41583] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener test Failure org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener failed
+msx-listener failureMessage: NN should have failed to start with /root/hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name-0-1 set unreadable
+msx-listener stackTrace: java.lang.AssertionError: NN should have failed to start with /root/hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name-0-1 set unreadable
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeWithDelegationTokens
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+2020-04-17 20:22:31,899 [Listener at localhost/41583] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:32,549 [Listener at localhost/35199] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:32,801 [Listener at localhost/35199] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:33,572 [Listener at localhost/34184] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:33,678 [Listener at localhost/34184] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:34,129 [Listener at localhost/43878] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:34,227 [Listener at localhost/43878] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:34,676 [Listener at localhost/33051] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:35,988 [Listener at localhost/33051] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:37,193 [Listener at localhost/33051] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:37,214 [Listener at localhost/33051] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:37,333 [Listener at localhost/33051] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:37,527 [Listener at localhost/33051] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:37,771 [Listener at localhost/33051] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeWithDelegationTokens
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeWithDelegationTokens
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirLocking
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+2020-04-17 20:22:38,160 [Listener at localhost/33051] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:38,537 [Listener at localhost/40285] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:38,642 [Listener at localhost/40285] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:22:38,749 [Listener at localhost/40285] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:38,994 [Listener at localhost/40285] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirLocking
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirLocking
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+2020-04-17 20:22:39,252 [Listener at localhost/40285] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:39,914 [Listener at localhost/38987] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:40,106 [Listener at localhost/38987] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:40,825 [Listener at localhost/36007] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:40,843 [Listener at localhost/36007] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:40,999 [Listener at localhost/37430] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:41,370 [Listener at localhost/37430] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:41,508 [Listener at localhost/37430] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:41,909 [Listener at localhost/37430] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:41,920 [Listener at localhost/37430] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:41,930 [Listener at localhost/37430] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:42,071 [Listener at localhost/37430] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:22:42,147 [Listener at localhost/37430] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNNsAgainstSameNN
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+2020-04-17 20:22:42,394 [Listener at localhost/37430] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:42,746 [Listener at localhost/40106] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:42,805 [Listener at localhost/40106] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:42,965 [Listener at localhost/40106] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:43,644 [Listener at localhost/40106] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:43,654 [Listener at localhost/40106] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:43,663 [Listener at localhost/40106] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNNsAgainstSameNN
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNNsAgainstSameNN
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryPurgesEditLogs
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+2020-04-17 20:22:43,863 [Listener at localhost/40106] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:44,138 [Listener at localhost/33159] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:44,253 [Listener at localhost/33159] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:44,978 [Listener at localhost/33159] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:44,997 [Listener at localhost/33159] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryPurgesEditLogs
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryPurgesEditLogs
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+msx-listener perform reset as unitTestCounterInClass 6 is larger than zero
+2020-04-17 20:22:45,222 [Listener at localhost/33159] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:45,470 [Listener at localhost/35865] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:45,537 [Listener at localhost/35865] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:45,812 [Listener at localhost/35865] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:45,823 [Listener at localhost/35865] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener test Failure org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+msx-listener failed
+msx-listener failureMessage: Did not fail to checkpoint when there are no valid storage dirs
+msx-listener stackTrace: java.lang.AssertionError: Did not fail to checkpoint when there are no valid storage dirs
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithFailedStorageDir
+msx-listener perform reset as unitTestCounterInClass 7 is larger than zero
+2020-04-17 20:22:45,994 [Listener at localhost/35865] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:46,230 [Listener at localhost/41006] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:46,270 [Listener at localhost/41006] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:46,656 [Listener at localhost/41006] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:46,665 [Listener at localhost/41006] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithFailedStorageDir
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithFailedStorageDir
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testEditFailureBeforeRename
+msx-listener perform reset as unitTestCounterInClass 8 is larger than zero
+2020-04-17 20:22:46,818 [Thread-674] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:47,067 [Listener at localhost/38495] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:47,082 [Listener at localhost/38495] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:47,171 [Listener at localhost/39048] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:47,199 [Listener at localhost/39048] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:47,353 [Listener at localhost/43107] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:47,392 [Listener at localhost/43107] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:47,637 [Listener at localhost/34472] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:47,866 [Listener at localhost/34472] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:48,883 [Listener at localhost/34472] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:48,893 [Listener at localhost/34472] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:48,961 [Listener at localhost/34472] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:49,045 [Listener at localhost/34472] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:49,146 [Listener at localhost/34472] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testEditFailureBeforeRename
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testEditFailureBeforeRename
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testLegacyOivImage
+msx-listener perform reset as unitTestCounterInClass 9 is larger than zero
+2020-04-17 20:22:49,429 [Listener at localhost/41006] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:49,850 [Listener at localhost/43110] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:49,922 [Listener at localhost/43110] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:50,602 [Listener at localhost/43110] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:50,614 [Listener at localhost/43110] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testLegacyOivImage
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testLegacyOivImage
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpoint
+msx-listener perform reset as unitTestCounterInClass 10 is larger than zero
+2020-04-17 20:22:50,877 [Listener at localhost/43110] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:51,503 [Listener at localhost/38831] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:51,523 [Listener at localhost/38831] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:51,674 [Listener at localhost/45070] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:51,713 [Listener at localhost/45070] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:51,936 [Listener at localhost/38782] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:51,974 [Listener at localhost/38782] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:52,219 [Listener at localhost/35814] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:56,882 [Listener at localhost/35814] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:57,297 [Listener at localhost/35814] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:57,308 [Listener at localhost/35814] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:57,350 [Listener at localhost/35814] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:57,419 [Listener at localhost/35814] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:57,572 [Listener at localhost/35814] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:22:57,629 [Listener at localhost/35814] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:22:57,911 [Listener at localhost/34871] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:22:57,926 [Listener at localhost/34871] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:58,110 [Listener at localhost/35923] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:58,138 [Listener at localhost/35923] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:58,324 [Listener at localhost/42503] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:58,351 [Listener at localhost/42503] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:22:58,514 [Listener at localhost/40513] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:22:59,035 [Listener at localhost/40513] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:22:59,466 [Listener at localhost/40513] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:22:59,480 [Listener at localhost/40513] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:59,524 [Listener at localhost/40513] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:59,597 [Listener at localhost/40513] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:22:59,714 [Listener at localhost/40513] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:22:59,758 [Listener at localhost/40513] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:00,027 [Listener at localhost/34760] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:00,046 [Listener at localhost/34760] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:00,175 [Listener at localhost/41080] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:00,200 [Listener at localhost/41080] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:00,416 [Listener at localhost/44658] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:00,445 [Listener at localhost/44658] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:00,661 [Listener at localhost/37613] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:00,938 [Listener at localhost/37613] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:00,985 [Listener at localhost/37613] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:01,034 [Listener at localhost/37613] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:01,115 [Listener at localhost/37613] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpoint
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpoint
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testDeleteTemporaryEditsOnStartup
+msx-listener perform reset as unitTestCounterInClass 11 is larger than zero
+2020-04-17 20:23:01,535 [Thread-1346] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:01,793 [Listener at localhost/33035] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:01,827 [Listener at localhost/33035] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:01,939 [Listener at localhost/39150] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:01,954 [Listener at localhost/39150] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:02,139 [Listener at localhost/39095] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:02,154 [Listener at localhost/39095] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:02,265 [Listener at localhost/35715] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:02,624 [Listener at localhost/35715] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:03,393 [Listener at localhost/35715] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:03,404 [Listener at localhost/35715] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:03,600 [Listener at localhost/35715] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:03,611 [Listener at localhost/35715] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:03,663 [Listener at localhost/35715] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:03,728 [Listener at localhost/35715] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:03,843 [Listener at localhost/35715] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testDeleteTemporaryEditsOnStartup
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testDeleteTemporaryEditsOnStartup
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError1
+msx-listener perform reset as unitTestCounterInClass 12 is larger than zero
+2020-04-17 20:23:04,281 [Listener at localhost/37613] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:04,618 [Listener at localhost/43495] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:04,636 [Listener at localhost/43495] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:04,795 [Listener at localhost/33176] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:04,815 [Listener at localhost/33176] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:04,981 [Listener at localhost/35236] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:05,007 [Listener at localhost/35236] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:05,208 [Listener at localhost/40619] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:05,499 [Listener at localhost/40619] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:05,902 [Listener at localhost/40619] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:05,915 [Listener at localhost/40619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:06,050 [Listener at localhost/40619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:06,089 [Listener at localhost/40619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:06,130 [Listener at localhost/40619] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:23:06,219 [Listener at localhost/40619] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:06,543 [Listener at localhost/41865] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:06,557 [Listener at localhost/41865] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:06,649 [Listener at localhost/40454] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:06,675 [Listener at localhost/40454] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:06,810 [Listener at localhost/39248] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:06,847 [Listener at localhost/39248] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:07,076 [Listener at localhost/38221] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:07,403 [Listener at localhost/38221] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:07,650 [Listener at localhost/38221] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:07,661 [Listener at localhost/38221] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:07,661 [Listener at localhost/38221] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:07,689 [Listener at localhost/38221] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:07,722 [Listener at localhost/38221] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:07,767 [Listener at localhost/38221] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError1
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError1
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError2
+msx-listener perform reset as unitTestCounterInClass 13 is larger than zero
+2020-04-17 20:23:08,145 [Listener at localhost/38221] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:08,487 [Listener at localhost/43604] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:08,680 [Listener at localhost/43604] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:08,789 [Listener at localhost/43708] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:08,804 [Listener at localhost/43708] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:08,983 [Listener at localhost/40482] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:09,012 [Listener at localhost/40482] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:09,190 [Listener at localhost/40156] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:09,479 [Listener at localhost/40156] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:09,857 [Listener at localhost/40156] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:09,868 [Listener at localhost/40156] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:10,050 [Listener at localhost/40156] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:10,089 [Listener at localhost/40156] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:10,163 [Listener at localhost/40156] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:23:10,310 [Listener at localhost/40156] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:10,615 [Listener at localhost/36336] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:10,637 [Listener at localhost/36336] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:10,757 [Listener at localhost/42194] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:10,793 [Listener at localhost/42194] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:10,992 [Listener at localhost/36176] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:11,007 [Listener at localhost/36176] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:11,326 [Listener at localhost/36979] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:11,584 [Listener at localhost/36979] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:11,845 [Listener at localhost/36979] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:11,854 [Listener at localhost/36979] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:11,855 [Listener at localhost/36979] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:11,947 [Listener at localhost/36979] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:12,143 [Listener at localhost/36979] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:12,239 [Listener at localhost/36979] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError2
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError2
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError3
+msx-listener perform reset as unitTestCounterInClass 14 is larger than zero
+2020-04-17 20:23:12,584 [Listener at localhost/36979] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:12,806 [Listener at localhost/34349] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:12,846 [Listener at localhost/34349] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:12,971 [Listener at localhost/37832] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:13,016 [Listener at localhost/37832] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:13,307 [Listener at localhost/35130] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:13,350 [Listener at localhost/35130] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:13,497 [Listener at localhost/43012] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:14,046 [Listener at localhost/43012] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:14,179 [Listener at localhost/43012] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:14,189 [Listener at localhost/43012] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:14,571 [Listener at localhost/43012] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:14,582 [Listener at localhost/43012] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:14,617 [Listener at localhost/43012] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:14,668 [Listener at localhost/43012] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:14,837 [Listener at localhost/43012] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:23:14,897 [Listener at localhost/43012] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:15,200 [Listener at localhost/35598] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:15,215 [Listener at localhost/35598] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:15,367 [Listener at localhost/34285] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:15,386 [Listener at localhost/34285] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:15,598 [Listener at localhost/33868] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:15,680 [Listener at localhost/33868] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:15,857 [Listener at localhost/39200] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:16,119 [Listener at localhost/39200] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:16,557 [Listener at localhost/39200] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:16,567 [Listener at localhost/39200] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:16,568 [Listener at localhost/39200] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:16,634 [Listener at localhost/39200] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:16,728 [Listener at localhost/39200] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:16,931 [Listener at localhost/39200] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError3
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNamenodeError3
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testWriteTransactionIdHandlesIOE
+msx-listener perform reset as unitTestCounterInClass 15 is larger than zero
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testWriteTransactionIdHandlesIOE
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testWriteTransactionIdHandlesIOE
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNNsAgainstSameNN2
+msx-listener perform reset as unitTestCounterInClass 16 is larger than zero
+2020-04-17 20:23:17,346 [Listener at localhost/39200] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:17,705 [Listener at localhost/35200] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:17,776 [Listener at localhost/35200] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:17,899 [Listener at localhost/35200] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:18,500 [Listener at localhost/35200] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:18,515 [Listener at localhost/35200] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:18,525 [Listener at localhost/35200] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNNsAgainstSameNN2
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNNsAgainstSameNN2
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNamespaceVerifiedOnFileTransfer
+msx-listener perform reset as unitTestCounterInClass 17 is larger than zero
+2020-04-17 20:23:18,933 [Listener at localhost/35200] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:19,228 [Listener at localhost/42903] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:19,383 [Listener at localhost/42903] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNamespaceVerifiedOnFileTransfer
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNamespaceVerifiedOnFileTransfer
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointAfterTwoFailedUploads
+msx-listener perform reset as unitTestCounterInClass 18 is larger than zero
+2020-04-17 20:23:19,624 [Listener at localhost/42903] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:19,902 [Listener at localhost/43422] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:19,915 [Listener at localhost/43422] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:20,051 [Listener at localhost/33208] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:20,078 [Listener at localhost/33208] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:20,269 [Listener at localhost/46366] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:20,300 [Listener at localhost/46366] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:20,497 [Listener at localhost/43040] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:20,978 [Listener at localhost/43040] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:21,311 [Listener at localhost/43040] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:21,325 [Listener at localhost/43040] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:21,399 [Listener at localhost/43040] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:21,555 [Listener at localhost/43040] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:21,728 [Listener at localhost/43040] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointAfterTwoFailedUploads
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointAfterTwoFailedUploads
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testEditFailureOnFirstCheckpoint
+msx-listener perform reset as unitTestCounterInClass 19 is larger than zero
+2020-04-17 20:23:22,020 [Thread-2704] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:22,270 [Listener at localhost/42926] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:22,287 [Listener at localhost/42926] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:22,375 [Listener at localhost/34211] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:22,384 [Listener at localhost/34211] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:22,510 [Listener at localhost/39147] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:22,580 [Listener at localhost/39147] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:22,713 [Listener at localhost/35919] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:22,949 [Listener at localhost/35919] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:23,793 [Listener at localhost/35919] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:23,802 [Listener at localhost/35919] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:23,857 [Listener at localhost/35919] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:23,885 [Listener at localhost/35919] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:24,006 [Listener at localhost/35919] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testEditFailureOnFirstCheckpoint
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testEditFailureOnFirstCheckpoint
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameNodeImageSendFailWrongSize
+msx-listener perform reset as unitTestCounterInClass 20 is larger than zero
+2020-04-17 20:23:24,334 [Listener at localhost/43040] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:24,628 [Listener at localhost/43826] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:24,644 [Listener at localhost/43826] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:24,748 [Listener at localhost/42285] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:24,762 [Listener at localhost/42285] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:24,894 [Listener at localhost/44973] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:24,928 [Listener at localhost/44973] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:25,062 [Listener at localhost/40352] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:25,298 [Listener at localhost/40352] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:35,582 [Listener at localhost/40352] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:35,596 [Listener at localhost/40352] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:36,047 [Listener at localhost/40352] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:36,063 [Listener at localhost/40352] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:36,107 [Listener at localhost/40352] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:36,134 [Listener at localhost/40352] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:36,173 [Listener at localhost/40352] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameNodeImageSendFailWrongSize
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameNodeImageSendFailWrongSize
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReloadOnEditReplayFailure
+msx-listener perform reset as unitTestCounterInClass 21 is larger than zero
+2020-04-17 20:23:36,327 [Thread-3029] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:36,537 [Listener at localhost/45264] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:36,553 [Listener at localhost/45264] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:36,672 [Listener at localhost/41546] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:36,698 [Listener at localhost/41546] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:36,805 [Listener at localhost/36961] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:36,813 [Listener at localhost/36961] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:36,915 [Listener at localhost/40248] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:37,239 [Listener at localhost/40248] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:37,643 [Listener at localhost/40248] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:37,654 [Listener at localhost/40248] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:37,676 [Listener at localhost/40248] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:37,733 [Listener at localhost/40248] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:37,768 [Listener at localhost/40248] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReloadOnEditReplayFailure
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReloadOnEditReplayFailure
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testImportCheckpoint
+msx-listener perform reset as unitTestCounterInClass 22 is larger than zero
+2020-04-17 20:23:38,101 [Listener at localhost/40352] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:38,579 [Listener at localhost/40412] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:38,707 [Listener at localhost/40412] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:38,986 [Listener at localhost/40412] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:38,997 [Listener at localhost/40412] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:23:39,055 [Listener at localhost/40412] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:39,276 [Listener at localhost/40412] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:23:39,289 [Listener at localhost/40412] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:40,061 [Listener at localhost/37646] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:40,200 [Listener at localhost/37646] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testImportCheckpoint
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testImportCheckpoint
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameNodeImageSendFailWrongDigest
+msx-listener perform reset as unitTestCounterInClass 23 is larger than zero
+2020-04-17 20:23:40,517 [Listener at localhost/37646] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:40,757 [Listener at localhost/36676] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:40,780 [Listener at localhost/36676] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:40,881 [Listener at localhost/40184] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:40,890 [Listener at localhost/40184] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:41,028 [Listener at localhost/41903] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:41,047 [Listener at localhost/41903] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:41,217 [Listener at localhost/41384] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:41,478 [Listener at localhost/41384] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:41,753 [Listener at localhost/41384] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:41,762 [Listener at localhost/41384] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:42,159 [Listener at localhost/41384] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:42,169 [Listener at localhost/41384] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:42,212 [Listener at localhost/41384] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:42,231 [Listener at localhost/41384] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:42,247 [Listener at localhost/41384] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameNodeImageSendFailWrongDigest
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameNodeImageSendFailWrongDigest
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeLocking
+msx-listener perform reset as unitTestCounterInClass 24 is larger than zero
+2020-04-17 20:23:42,491 [Listener at localhost/41384] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:42,699 [Listener at localhost/34897] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:42,755 [Listener at localhost/34897] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:42,889 [Listener at localhost/34897] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:42,905 [Listener at localhost/34897] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:42,936 [Listener at localhost/34897] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:42,936 [Listener at localhost/34897] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeLocking
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeLocking
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testFailureBeforeRename
+msx-listener perform reset as unitTestCounterInClass 25 is larger than zero
+2020-04-17 20:23:43,193 [Thread-3513] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:43,549 [Listener at localhost/42965] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:43,586 [Listener at localhost/42965] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:43,658 [Listener at localhost/34395] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:43,665 [Listener at localhost/34395] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:43,753 [Listener at localhost/44456] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:43,778 [Listener at localhost/44456] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:43,994 [Listener at localhost/34016] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:44,204 [Listener at localhost/34016] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:44,719 [Listener at localhost/34016] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:23:44,763 [Listener at localhost/34016] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:44,970 [Listener at localhost/42965] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:49,894 [Listener at localhost/42965] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:49,903 [Listener at localhost/42965] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:50,016 [Listener at localhost/42965] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:50,051 [Listener at localhost/42965] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:50,094 [Listener at localhost/42965] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testFailureBeforeRename
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testFailureBeforeRename
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
+msx-listener perform reset as unitTestCounterInClass 26 is larger than zero
+2020-04-17 20:23:50,611 [Listener at localhost/34897] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:50,906 [Listener at localhost/37400] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:50,919 [Listener at localhost/37400] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:51,025 [Listener at localhost/34527] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:51,034 [Listener at localhost/34527] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:51,164 [Listener at localhost/44821] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:51,190 [Listener at localhost/44821] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:51,396 [Listener at localhost/36718] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:51,647 [Listener at localhost/36718] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:51,855 [Listener at localhost/36718] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:51,870 [Listener at localhost/36718] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:51,908 [Listener at localhost/36718] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:51,948 [Listener at localhost/36718] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:51,998 [Listener at localhost/36718] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryImageDownload
+msx-listener perform reset as unitTestCounterInClass 27 is larger than zero
+2020-04-17 20:23:52,605 [Listener at localhost/36718] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:52,901 [Listener at localhost/40028] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:52,931 [Listener at localhost/40028] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:53,033 [Listener at localhost/36640] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:53,043 [Listener at localhost/36640] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:53,164 [Listener at localhost/45880] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:53,179 [Listener at localhost/45880] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:53,304 [Listener at localhost/46405] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:53,548 [Listener at localhost/46405] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:23:53,974 [Listener at localhost/46405] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:53,984 [Listener at localhost/46405] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:54,005 [Listener at localhost/46405] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:54,053 [Listener at localhost/46405] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:54,076 [Listener at localhost/46405] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryImageDownload
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryImageDownload
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointTriggerOnTxnCount
+msx-listener perform reset as unitTestCounterInClass 28 is larger than zero
+2020-04-17 20:23:54,411 [Thread-4015] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:54,791 [Listener at localhost/44832] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:54,905 [Listener at localhost/44832] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+Checkpoint Edits Dirs  : [file:/root/hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/namesecondary-0-1, file:/root/hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/namesecondary-0-2]] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:run(323)) - msx-hdfs SecondaryNameNode start
+2020-04-17 20:23:57,340 [Listener at localhost/44832] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:23:57,364 [Listener at localhost/44832] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointTriggerOnTxnCount
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointTriggerOnTxnCount
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testStorageAlreadyLockedErrorMessage
+msx-listener perform reset as unitTestCounterInClass 29 is larger than zero
+2020-04-17 20:23:57,562 [Listener at localhost/46405] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:57,798 [Listener at localhost/41055] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:57,856 [Listener at localhost/41055] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testStorageAlreadyLockedErrorMessage
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testStorageAlreadyLockedErrorMessage
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCommandLineParsing
+msx-listener perform reset as unitTestCounterInClass 30 is larger than zero
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCommandLineParsing
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCommandLineParsing
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSaveNamespace
+msx-listener perform reset as unitTestCounterInClass 31 is larger than zero
+2020-04-17 20:23:58,063 [Listener at localhost/41055] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:58,569 [Listener at localhost/44748] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:58,583 [Listener at localhost/44748] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:58,690 [Listener at localhost/38522] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:58,700 [Listener at localhost/38522] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:58,864 [Listener at localhost/36906] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:58,882 [Listener at localhost/36906] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:59,004 [Listener at localhost/33120] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:59,453 [Listener at localhost/33120] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:59,491 [Listener at localhost/33120] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:59,515 [Listener at localhost/33120] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:59,544 [Listener at localhost/33120] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:23:59,594 [Listener at localhost/33120] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:59,937 [Listener at localhost/37513] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:59,962 [Listener at localhost/37513] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:00,057 [Listener at localhost/36194] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:00,066 [Listener at localhost/36194] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:00,247 [Listener at localhost/34997] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:00,262 [Listener at localhost/34997] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:00,392 [Listener at localhost/35807] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:00,785 [Listener at localhost/35807] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:01,443 [Listener at localhost/35807] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:01,462 [Listener at localhost/35807] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:01,559 [Listener at localhost/35807] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSaveNamespace
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSaveNamespace
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testTooManyEditReplayFailures
+msx-listener perform reset as unitTestCounterInClass 32 is larger than zero
+2020-04-17 20:24:01,836 [Thread-4403] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:02,112 [Listener at localhost/42735] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:02,128 [Listener at localhost/42735] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:02,206 [Listener at localhost/35167] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:02,214 [Listener at localhost/35167] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:02,315 [Listener at localhost/45347] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:02,340 [Listener at localhost/45347] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:02,446 [Listener at localhost/36458] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:02,768 [Listener at localhost/36458] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:24:04,996 [Listener at localhost/36458] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:24:05,008 [Listener at localhost/36458] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:05,027 [Listener at localhost/36458] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:05,057 [Listener at localhost/36458] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:05,080 [Listener at localhost/36458] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testTooManyEditReplayFailures
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testTooManyEditReplayFailures
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
+msx-listener perform reset as unitTestCounterInClass 33 is larger than zero
+2020-04-17 20:24:05,514 [Listener at localhost/35807] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:05,765 [Listener at localhost/37327] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:05,806 [Listener at localhost/37327] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:24:06,009 [Listener at localhost/37327] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:24:06,276 [Listener at localhost/37327] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:06,486 [Listener at localhost/37327] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:06,559 [Listener at localhost/37327] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:24:06,569 [Listener at localhost/37327] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeWithSavedLeases
+msx-listener perform reset as unitTestCounterInClass 34 is larger than zero
+2020-04-17 20:24:06,735 [Listener at localhost/37327] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:07,395 [Listener at localhost/45291] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:07,411 [Listener at localhost/45291] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:07,504 [Listener at localhost/42103] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:07,528 [Listener at localhost/42103] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:07,688 [Listener at localhost/36809] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:07,697 [Listener at localhost/36809] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:07,822 [Listener at localhost/35579] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:08,073 [Listener at localhost/35579] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:24:08,404 [Listener at localhost/35579] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:24:08,412 [Listener at localhost/35579] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:08,438 [Listener at localhost/35579] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:08,459 [Listener at localhost/35579] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:08,477 [Listener at localhost/35579] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeWithSavedLeases
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryNameNodeWithSavedLeases
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSeparateEditsDirLocking
+msx-listener perform reset as unitTestCounterInClass 35 is larger than zero
+2020-04-17 20:24:08,643 [Listener at localhost/35579] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:08,874 [Listener at localhost/34467] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:08,927 [Listener at localhost/34467] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:24:08,953 [Listener at localhost/34467] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:10,805 [Listener at localhost/34467] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSeparateEditsDirLocking
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSeparateEditsDirLocking
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointSignature
+msx-listener perform reset as unitTestCounterInClass 36 is larger than zero
+2020-04-17 20:24:10,980 [Listener at localhost/34467] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:11,184 [Listener at localhost/35415] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:11,199 [Listener at localhost/35415] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:11,283 [Listener at localhost/34373] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:11,303 [Listener at localhost/34373] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:11,389 [Listener at localhost/34945] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:11,404 [Listener at localhost/34945] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:11,556 [Listener at localhost/37134] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:11,759 [Listener at localhost/37134] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:24:11,976 [Listener at localhost/37134] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:24:11,986 [Listener at localhost/37134] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:12,014 [Listener at localhost/37134] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:12,045 [Listener at localhost/37134] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:12,073 [Listener at localhost/37134] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointSignature
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointSignature
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryHasVeryOutOfDateImage
+msx-listener perform reset as unitTestCounterInClass 37 is larger than zero
+2020-04-17 20:24:14,649 [Listener at localhost/37134] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:14,949 [Listener at localhost/43382] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:14,963 [Listener at localhost/43382] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:15,055 [Listener at localhost/34722] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:15,065 [Listener at localhost/34722] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:15,216 [Listener at localhost/40816] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:15,244 [Listener at localhost/40816] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:15,403 [Listener at localhost/35828] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:15,598 [Listener at localhost/35828] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:<init>(186)) - msx-hdfs SecondaryNameNode init
+2020-04-17 20:24:17,208 [Listener at localhost/35828] INFO  namenode.SecondaryNameNode (SecondaryNameNode.java:shutdown(284)) - msx-hdfs SecondaryNameNode stop
+2020-04-17 20:24:17,223 [Listener at localhost/35828] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:17,275 [Listener at localhost/35828] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:17,298 [Listener at localhost/35828] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:17,381 [Listener at localhost/35828] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryHasVeryOutOfDateImage
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryHasVeryOutOfDateImage
+msx-listener succeed
+msx-listener all testRunFinished

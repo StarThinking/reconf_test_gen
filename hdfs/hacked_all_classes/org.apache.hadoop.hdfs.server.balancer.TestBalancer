@@ -1,0 +1,703 @@
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testTwoReplicaShouldNotInSameDN
+msx-listener unitTestCounterInClass = 0
+2020-04-17 20:23:18,978 [Thread-0] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:20,760 [Listener at localhost/45822] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:20,975 [Listener at localhost/45822] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:22,119 [Listener at localhost/34196] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:22,183 [Listener at localhost/34196] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:22,539 [Listener at localhost/33009] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:40,769 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:40,872 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:23:40,964 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testTwoReplicaShouldNotInSameDN
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testTwoReplicaShouldNotInSameDN
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithRamDisk
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+2020-04-17 20:23:41,235 [Thread-275] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:23:41,499 [Listener at localhost/40687] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:23:41,591 [Listener at localhost/40687] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:41,710 [Listener at localhost/43961] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:23:48,493 [Listener at localhost/43961] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:23:48,572 [Listener at localhost/43607] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:42,398 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:42,493 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:24:42,557 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithRamDisk
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithRamDisk
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithPinnedBlocks
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+2020-04-17 20:24:42,892 [Thread-419] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:24:43,157 [Listener at localhost/39614] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:24:43,204 [Listener at localhost/39614] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:43,328 [Listener at localhost/43567] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:43,346 [Listener at localhost/43567] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:43,638 [Listener at localhost/39357] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:24:44,780 [Listener at localhost/39357] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:24:44,878 [Listener at localhost/37227] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:02,485 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:02,525 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:02,612 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:02,665 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithPinnedBlocks
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithPinnedBlocks
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testMinBlockSizeAndSourceNodes
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+2020-04-17 20:25:02,934 [Thread-1010] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:25:03,184 [Listener at localhost/37299] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:25:03,196 [Listener at localhost/37299] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:03,301 [Listener at localhost/43628] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:03,329 [Listener at localhost/43628] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:03,476 [Listener at localhost/45655] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:03,487 [Listener at localhost/45655] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:03,599 [Listener at localhost/37057] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:04,282 [Listener at localhost/37057] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:04,391 [Listener at localhost/37401] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:04,411 [Listener at localhost/37401] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:04,762 [Listener at localhost/44006] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:04,777 [Listener at localhost/44006] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:04,876 [Listener at localhost/41317] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:25,242 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:25,285 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:25,322 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:25,360 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:25,404 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:25,454 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:25,514 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testMinBlockSizeAndSourceNodes
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testMinBlockSizeAndSourceNodes
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListWithPorts
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+2020-04-17 20:25:25,790 [Thread-1238] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:25:26,091 [Listener at localhost/35490] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:25:26,146 [Listener at localhost/35490] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:26,279 [Listener at localhost/38058] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:26,310 [Listener at localhost/38058] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:26,475 [Listener at localhost/42352] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:26,848 [Listener at localhost/42352] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:26,980 [Listener at localhost/33462] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:27,006 [Listener at localhost/33462] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:27,181 [Listener at localhost/35420] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:27,204 [Listener at localhost/35420] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:27,350 [Listener at localhost/40095] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:31,701 [Listener at localhost/40095] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:31,724 [Listener at localhost/40095] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:31,746 [Listener at localhost/40095] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:31,774 [Listener at localhost/40095] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:31,823 [Listener at localhost/40095] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:31,855 [Listener at localhost/40095] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:25:31,912 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListWithPorts
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListWithPorts
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testExitZeroOnSuccess
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+2020-04-17 20:25:32,062 [Thread-1494] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:25:32,335 [Listener at localhost/44716] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:25:32,385 [Listener at localhost/44716] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:32,498 [Listener at localhost/39193] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:32,762 [Listener at localhost/39193] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:32,926 [Listener at localhost/46455] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:37,708 [Listener at localhost/46455] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:37,734 [Listener at localhost/46455] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:37,761 [Listener at localhost/46455] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:25:37,794 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testExitZeroOnSuccess
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testExitZeroOnSuccess
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListWithPortsInAFile
+msx-listener perform reset as unitTestCounterInClass 6 is larger than zero
+2020-04-17 20:25:38,158 [Thread-1643] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:25:38,357 [Listener at localhost/46643] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:25:38,397 [Listener at localhost/46643] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:38,461 [Listener at localhost/38701] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:38,474 [Listener at localhost/38701] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:38,586 [Listener at localhost/35862] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:38,912 [Listener at localhost/35862] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:39,021 [Listener at localhost/45908] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:39,038 [Listener at localhost/45908] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:39,124 [Listener at localhost/44484] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:39,138 [Listener at localhost/44484] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:39,238 [Listener at localhost/41887] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:43,793 [Listener at localhost/41887] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:43,816 [Listener at localhost/41887] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:43,839 [Listener at localhost/41887] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:43,864 [Listener at localhost/41887] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:43,894 [Listener at localhost/41887] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:25:43,929 [Listener at localhost/41887] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:25:43,968 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListWithPortsInAFile
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListWithPortsInAFile
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testUpgradeDomainPolicyAfterBalance
+msx-listener perform reset as unitTestCounterInClass 7 is larger than zero
+2020-04-17 20:25:44,107 [Thread-1899] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:25:44,369 [Listener at localhost/42736] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:25:44,384 [Listener at localhost/42736] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:44,480 [Listener at localhost/33169] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:44,503 [Listener at localhost/33169] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:44,713 [Listener at localhost/37078] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:44,733 [Listener at localhost/37078] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:44,854 [Listener at localhost/33585] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:25:45,495 [Listener at localhost/33585] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:25:45,600 [Listener at localhost/46778] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:02,194 [Listener at localhost/46778] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:02,224 [Listener at localhost/46778] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:02,251 [Listener at localhost/46778] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:02,289 [Listener at localhost/46778] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:02,320 [Listener at localhost/46778] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:26:02,371 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testUpgradeDomainPolicyAfterBalance
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testUpgradeDomainPolicyAfterBalance
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testUnknownDatanodeSimple
+msx-listener perform reset as unitTestCounterInClass 8 is larger than zero
+2020-04-17 20:26:02,516 [Thread-2338] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:02,765 [Listener at localhost/35535] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:02,780 [Listener at localhost/35535] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:02,902 [Listener at localhost/39205] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:02,927 [Listener at localhost/39205] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:03,058 [Listener at localhost/39251] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:03,079 [Listener at localhost/39251] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:03,214 [Listener at localhost/40272] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:03,656 [Listener at localhost/40272] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:03,688 [Listener at localhost/40272] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:03,725 [Listener at localhost/40272] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:03,766 [Listener at localhost/40272] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:26:03,827 [Listener at localhost/40272] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:04,320 [Listener at localhost/43825] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:04,334 [Listener at localhost/43825] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:04,482 [Listener at localhost/36627] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:04,503 [Listener at localhost/36627] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:04,629 [Listener at localhost/41728] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:04,645 [Listener at localhost/41728] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:04,786 [Listener at localhost/46750] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:04,908 [Listener at localhost/46750] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:04,999 [Listener at localhost/45760] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:19,296 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:19,322 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:19,363 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:19,415 [main] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:19,455 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testUnknownDatanodeSimple
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testUnknownDatanodeSimple
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
+msx-listener perform reset as unitTestCounterInClass 9 is larger than zero
+2020-04-17 20:26:19,644 [Thread-2813] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:19,872 [Listener at localhost/37467] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:19,887 [Listener at localhost/37467] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:19,981 [Listener at localhost/33488] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:19,999 [Listener at localhost/33488] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:20,226 [Listener at localhost/33489] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:20,743 [Listener at localhost/33489] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:20,857 [Listener at localhost/41751] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:37,506 [Listener at localhost/41751] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:37,543 [Listener at localhost/41751] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:37,574 [Listener at localhost/41751] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:37,607 [Listener at localhost/41751] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:26:37,642 [main] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithZeroThreadsForMove
+msx-listener perform reset as unitTestCounterInClass 10 is larger than zero
+2020-04-17 20:26:37,789 [main] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:38,061 [Listener at localhost/37323] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:38,077 [Listener at localhost/37323] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:38,196 [Listener at localhost/38554] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:38,214 [Listener at localhost/38554] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:38,340 [Listener at localhost/33494] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:38,645 [Listener at localhost/33494] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:38,676 [Listener at localhost/33494] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:38,713 [Listener at localhost/33494] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:26:38,760 [Listener at localhost/33494] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:39,139 [Listener at localhost/45655] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:39,157 [Listener at localhost/45655] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:39,291 [Listener at localhost/44272] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:39,333 [Listener at localhost/44272] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:39,497 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:40,625 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:40,656 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:40,685 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithZeroThreadsForMove
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithZeroThreadsForMove
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListWithPortsInAFile
+msx-listener perform reset as unitTestCounterInClass 11 is larger than zero
+2020-04-17 20:26:40,854 [Thread-3428] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:41,123 [Listener at localhost/42479] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:41,165 [Listener at localhost/42479] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:41,266 [Listener at localhost/37936] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:41,281 [Listener at localhost/37936] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:41,399 [Listener at localhost/33217] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:41,670 [Listener at localhost/33217] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:41,788 [Listener at localhost/44489] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:41,799 [Listener at localhost/44489] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:41,984 [Listener at localhost/37587] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:41,999 [Listener at localhost/37587] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:42,086 [Listener at localhost/33717] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:46,524 [Listener at localhost/33717] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:46,555 [Listener at localhost/33717] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:46,583 [Listener at localhost/33717] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:46,610 [Listener at localhost/33717] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:46,640 [Listener at localhost/33717] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:46,686 [Listener at localhost/33717] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:26:46,735 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListWithPortsInAFile
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListWithPortsInAFile
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testManyBalancerSimultaneously
+msx-listener perform reset as unitTestCounterInClass 12 is larger than zero
+2020-04-17 20:26:46,865 [Thread-3684] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:47,112 [Listener at localhost/33595] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:47,127 [Listener at localhost/33595] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:47,269 [Listener at localhost/39724] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:47,691 [Listener at localhost/39724] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:47,797 [Listener at localhost/42118] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:47,998 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:48,051 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:26:48,115 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testManyBalancerSimultaneously
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testManyBalancerSimultaneously
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithStripedFile
+msx-listener perform reset as unitTestCounterInClass 13 is larger than zero
+2020-04-17 20:26:48,310 [Thread-3966] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:26:48,716 [Listener at localhost/42357] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:26:48,734 [Listener at localhost/42357] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:48,859 [Listener at localhost/36548] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:48,876 [Listener at localhost/36548] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:48,977 [Listener at localhost/43109] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:48,991 [Listener at localhost/43109] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,101 [Listener at localhost/44399] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,116 [Listener at localhost/44399] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,216 [Listener at localhost/45605] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,231 [Listener at localhost/45605] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,332 [Listener at localhost/44879] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,347 [Listener at localhost/44879] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,446 [Listener at localhost/40133] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,460 [Listener at localhost/40133] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,563 [Listener at localhost/45452] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,578 [Listener at localhost/45452] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,681 [Listener at localhost/44382] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,696 [Listener at localhost/44382] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,801 [Listener at localhost/38710] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,816 [Listener at localhost/38710] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:49,932 [Listener at localhost/42968] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:49,959 [Listener at localhost/42968] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:50,134 [Listener at localhost/33720] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:50,145 [Listener at localhost/33720] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:50,230 [Listener at localhost/39117] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:53,199 [Listener at localhost/39117] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:53,292 [Listener at localhost/46246] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:26:53,304 [Listener at localhost/46246] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:26:53,402 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:06,825 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:06,855 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:06,885 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:06,918 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:06,953 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:06,990 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,028 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,060 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,095 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,134 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,177 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,218 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,263 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,308 [Listener at localhost/42716] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:07,352 [Listener at localhost/42716] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:27:07,437 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithStripedFile
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithStripedFile
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseWithWrongParams
+msx-listener perform reset as unitTestCounterInClass 14 is larger than zero
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseWithWrongParams
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseWithWrongParams
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseWithThresholdOutOfBoundaries
+msx-listener perform reset as unitTestCounterInClass 15 is larger than zero
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseWithThresholdOutOfBoundaries
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseWithThresholdOutOfBoundaries
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithIncludeList
+msx-listener perform reset as unitTestCounterInClass 16 is larger than zero
+2020-04-17 20:27:07,621 [Thread-4712] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:08,032 [Listener at localhost/38129] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:08,113 [Listener at localhost/38129] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:08,321 [Listener at localhost/35604] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:08,347 [Listener at localhost/35604] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:08,583 [Listener at localhost/38710] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:08,902 [Listener at localhost/38710] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:09,299 [Listener at localhost/39294] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:09,311 [Listener at localhost/39294] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:09,431 [Listener at localhost/35248] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:09,454 [Listener at localhost/35248] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:09,584 [Listener at localhost/34501] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:13,691 [Listener at localhost/34501] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:13,716 [Listener at localhost/34501] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:13,743 [Listener at localhost/34501] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:13,772 [Listener at localhost/34501] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:13,806 [Listener at localhost/34501] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:13,841 [Listener at localhost/34501] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:27:13,886 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithIncludeList
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithIncludeList
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerDuringUpgrade
+msx-listener perform reset as unitTestCounterInClass 17 is larger than zero
+2020-04-17 20:27:14,157 [Thread-4968] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:14,415 [Listener at localhost/33394] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:14,431 [Listener at localhost/33394] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:14,516 [Listener at localhost/41985] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:14,893 [Listener at localhost/41985] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:14,996 [Listener at localhost/42905] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:19,561 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:19,595 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:19,630 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerDuringUpgrade
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerDuringUpgrade
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListInAFile
+msx-listener perform reset as unitTestCounterInClass 18 is larger than zero
+2020-04-17 20:27:19,794 [Thread-5089] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:20,012 [Listener at localhost/38406] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:20,060 [Listener at localhost/38406] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:20,145 [Listener at localhost/42850] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:20,156 [Listener at localhost/42850] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:20,319 [Listener at localhost/32823] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:20,582 [Listener at localhost/32823] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:20,644 [Listener at localhost/36940] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:20,651 [Listener at localhost/36940] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:20,722 [Listener at localhost/33869] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:20,730 [Listener at localhost/33869] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:20,815 [Listener at localhost/36456] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:25,445 [Listener at localhost/36456] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:25,471 [Listener at localhost/36456] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:25,497 [Listener at localhost/36456] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:25,523 [Listener at localhost/36456] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:25,551 [Listener at localhost/36456] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:25,580 [Listener at localhost/36456] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:27:25,611 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListInAFile
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListInAFile
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithIncludeListWithPorts
+msx-listener perform reset as unitTestCounterInClass 19 is larger than zero
+2020-04-17 20:27:25,720 [Thread-5345] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:26,000 [Listener at localhost/45038] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:26,079 [Listener at localhost/45038] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:26,175 [Listener at localhost/41587] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:26,190 [Listener at localhost/41587] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:26,322 [Listener at localhost/45944] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:26,598 [Listener at localhost/45944] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:26,782 [Listener at localhost/45756] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:26,792 [Listener at localhost/45756] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:26,894 [Listener at localhost/33811] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:26,905 [Listener at localhost/33811] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:27,031 [Listener at localhost/44619] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:31,459 [Listener at localhost/44619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:31,486 [Listener at localhost/44619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:31,513 [Listener at localhost/44619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:31,541 [Listener at localhost/44619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:31,569 [Listener at localhost/44619] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:31,598 [Listener at localhost/44619] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:27:31,630 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithIncludeListWithPorts
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithIncludeListWithPorts
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListInAFile
+msx-listener perform reset as unitTestCounterInClass 20 is larger than zero
+2020-04-17 20:27:31,741 [Thread-5601] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:31,996 [Listener at localhost/45666] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:32,046 [Listener at localhost/45666] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:32,137 [Listener at localhost/35049] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:32,152 [Listener at localhost/35049] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:32,257 [Listener at localhost/37842] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:32,530 [Listener at localhost/37842] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:32,633 [Listener at localhost/35449] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:32,644 [Listener at localhost/35449] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:32,767 [Listener at localhost/36786] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:32,778 [Listener at localhost/36786] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:32,966 [Listener at localhost/46748] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:37,407 [Listener at localhost/46748] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:37,441 [Listener at localhost/46748] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:37,474 [Listener at localhost/46748] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:37,505 [Listener at localhost/46748] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:37,541 [Listener at localhost/46748] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:37,572 [Listener at localhost/46748] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:27:37,601 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListInAFile
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeListInAFile
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithExcludeList
+msx-listener perform reset as unitTestCounterInClass 21 is larger than zero
+2020-04-17 20:27:37,740 [Thread-5857] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:37,985 [Listener at localhost/34625] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:38,036 [Listener at localhost/34625] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:38,131 [Listener at localhost/35587] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:38,146 [Listener at localhost/35587] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:38,260 [Listener at localhost/36099] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:38,543 [Listener at localhost/36099] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:38,641 [Listener at localhost/35005] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:38,654 [Listener at localhost/35005] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:38,768 [Listener at localhost/42585] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:38,779 [Listener at localhost/42585] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:38,874 [Listener at localhost/33393] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:43,412 [Listener at localhost/33393] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:43,446 [Listener at localhost/33393] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:43,475 [Listener at localhost/33393] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:43,502 [Listener at localhost/33393] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:43,530 [Listener at localhost/33393] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:43,558 [Listener at localhost/33393] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:27:43,588 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithExcludeList
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithExcludeList
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithKeytabs
+msx-listener perform reset as unitTestCounterInClass 22 is larger than zero
+2020-04-17 20:27:44,839 [Thread-6113] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:45,186 [Listener at localhost/37619] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:45,224 [Listener at localhost/37619] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:45,361 [Listener at localhost/33791] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:45,404 [Listener at localhost/33791] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:45,586 [Listener at localhost/46871] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:45,665 [Listener at localhost/46871] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:45,822 [Listener at localhost/33989] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:46,554 [Listener at localhost/33989] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:46,580 [Listener at localhost/33989] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:46,605 [Listener at localhost/33989] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:27:46,629 [Listener at localhost/33989] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:27:46,671 [Listener at localhost/33989] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:27:46,930 [Listener at localhost/42293] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:27:46,961 [Listener at localhost/42293] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:47,064 [Listener at localhost/38735] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:47,105 [Listener at localhost/38735] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:47,241 [Listener at localhost/37481] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:47,281 [Listener at localhost/37481] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:47,410 [Listener at localhost/44215] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:27:47,555 [Listener at localhost/44215] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:27:47,660 [Listener at localhost/45235] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:02,042 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:02,068 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:02,093 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:02,120 [Listener at localhost/42301] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:02,158 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithKeytabs
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithKeytabs
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithNonZeroThreadsForMove
+msx-listener perform reset as unitTestCounterInClass 23 is larger than zero
+2020-04-17 20:28:02,349 [Thread-6607] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:02,602 [Listener at localhost/40325] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:02,620 [Listener at localhost/40325] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:02,716 [Listener at localhost/35708] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:02,727 [Listener at localhost/35708] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:02,848 [Listener at localhost/36006] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:03,121 [Listener at localhost/36006] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:03,144 [Listener at localhost/36006] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:03,170 [Listener at localhost/36006] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:03,218 [Listener at localhost/36006] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:03,499 [Listener at localhost/35110] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:03,515 [Listener at localhost/35110] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:03,606 [Listener at localhost/44062] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:03,619 [Listener at localhost/44062] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:03,820 [Listener at localhost/45794] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:08,943 [Listener at localhost/45794] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:08,973 [Listener at localhost/45794] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:08,999 [Listener at localhost/45794] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:09,031 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithNonZeroThreadsForMove
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithNonZeroThreadsForMove
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeList
+msx-listener perform reset as unitTestCounterInClass 24 is larger than zero
+2020-04-17 20:28:09,145 [Thread-6898] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:09,365 [Listener at localhost/45932] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:09,412 [Listener at localhost/45932] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:09,491 [Listener at localhost/40763] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:09,502 [Listener at localhost/40763] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:09,593 [Listener at localhost/35483] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:09,832 [Listener at localhost/35483] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:09,913 [Listener at localhost/34130] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:09,927 [Listener at localhost/34130] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:10,021 [Listener at localhost/41859] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:10,032 [Listener at localhost/41859] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:10,116 [Listener at localhost/44894] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:14,748 [Listener at localhost/44894] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:14,777 [Listener at localhost/44894] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:14,804 [Listener at localhost/44894] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:14,831 [Listener at localhost/44894] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:14,859 [Listener at localhost/44894] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:14,894 [Listener at localhost/44894] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:14,939 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeList
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeList
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseBlockpools
+msx-listener perform reset as unitTestCounterInClass 25 is larger than zero
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseBlockpools
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliParseBlockpools
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer0
+msx-listener perform reset as unitTestCounterInClass 26 is larger than zero
+2020-04-17 20:28:15,162 [Thread-7154] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:15,430 [Listener at localhost/36948] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:15,478 [Listener at localhost/36948] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:15,569 [Listener at localhost/45122] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:15,774 [Listener at localhost/45122] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:15,873 [Listener at localhost/34018] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:20,709 [Listener at localhost/34018] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:20,739 [Listener at localhost/34018] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:20,765 [Listener at localhost/34018] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:20,905 [Listener at localhost/34018] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:21,115 [Listener at localhost/45717] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:21,166 [Listener at localhost/45717] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:21,242 [Listener at localhost/43348] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:21,254 [Listener at localhost/43348] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:21,394 [Listener at localhost/45882] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:21,615 [Listener at localhost/45882] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:21,690 [Listener at localhost/45822] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:26,520 [Listener at localhost/45822] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:26,549 [Listener at localhost/45822] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:26,577 [Listener at localhost/45822] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:26,606 [Listener at localhost/45822] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:26,646 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer0
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer0
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer1
+msx-listener perform reset as unitTestCounterInClass 27 is larger than zero
+2020-04-17 20:28:26,780 [Thread-7514] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:27,018 [Listener at localhost/45817] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:27,032 [Listener at localhost/45817] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:27,122 [Listener at localhost/37438] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:27,135 [Listener at localhost/37438] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:27,236 [Listener at localhost/35053] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:27,502 [Listener at localhost/35053] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:27,533 [Listener at localhost/35053] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:27,562 [Listener at localhost/35053] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:27,596 [Listener at localhost/35053] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:27,850 [Listener at localhost/37836] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:27,864 [Listener at localhost/37836] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:28,029 [Listener at localhost/41066] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:28,036 [Listener at localhost/41066] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:28,154 [Listener at localhost/37534] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:33,283 [Listener at localhost/37534] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:33,309 [Listener at localhost/37534] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:33,334 [Listener at localhost/37534] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:33,363 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer1
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer1
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer2
+msx-listener perform reset as unitTestCounterInClass 28 is larger than zero
+2020-04-17 20:28:33,480 [Thread-7805] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:33,675 [Listener at localhost/43130] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:33,688 [Listener at localhost/43130] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:33,767 [Listener at localhost/40337] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:33,778 [Listener at localhost/40337] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:33,862 [Listener at localhost/40927] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:34,082 [Listener at localhost/40927] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:34,150 [Listener at localhost/44998] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:38,968 [Listener at localhost/44998] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:38,997 [Listener at localhost/44998] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:39,024 [Listener at localhost/44998] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:39,049 [Listener at localhost/44998] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:39,077 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer2
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancer2
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListWithPorts
+msx-listener perform reset as unitTestCounterInClass 29 is larger than zero
+2020-04-17 20:28:39,186 [Thread-8017] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:39,510 [Listener at localhost/40537] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:39,552 [Listener at localhost/40537] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:39,598 [Listener at localhost/45247] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:39,605 [Listener at localhost/45247] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:39,679 [Listener at localhost/41161] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:39,887 [Listener at localhost/41161] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:39,950 [Listener at localhost/42825] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:39,959 [Listener at localhost/42825] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:40,024 [Listener at localhost/40745] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:40,032 [Listener at localhost/40745] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:40,126 [Listener at localhost/37912] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:44,855 [Listener at localhost/37912] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:44,884 [Listener at localhost/37912] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:44,914 [Listener at localhost/37912] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:44,941 [Listener at localhost/37912] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:44,969 [Listener at localhost/37912] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:44,998 [Listener at localhost/37912] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:45,040 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListWithPorts
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithIncludeListWithPorts
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeList
+msx-listener perform reset as unitTestCounterInClass 30 is larger than zero
+2020-04-17 20:28:45,187 [Thread-8273] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:45,444 [Listener at localhost/39941] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:45,492 [Listener at localhost/39941] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:45,598 [Listener at localhost/33008] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:45,629 [Listener at localhost/33008] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:45,740 [Listener at localhost/42143] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:46,101 [Listener at localhost/42143] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:46,181 [Listener at localhost/36351] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:46,192 [Listener at localhost/36351] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:46,298 [Listener at localhost/36464] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:46,308 [Listener at localhost/36464] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:46,431 [Listener at localhost/36554] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:50,881 [Listener at localhost/36554] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:50,908 [Listener at localhost/36554] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:50,934 [Listener at localhost/36554] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:50,960 [Listener at localhost/36554] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:50,988 [Listener at localhost/36554] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:51,015 [Listener at localhost/36554] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:51,045 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeList
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerCliWithExcludeList
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testMaxIterationTime
+msx-listener perform reset as unitTestCounterInClass 31 is larger than zero
+2020-04-17 20:28:51,153 [Thread-8529] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:51,383 [Listener at localhost/38011] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:51,429 [Listener at localhost/38011] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:51,519 [Listener at localhost/33243] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:52,067 [Listener at localhost/33243] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:52,151 [Listener at localhost/41660] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:55,562 [Listener at localhost/41660] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:55,587 [Listener at localhost/41660] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:28:55,619 [Listener at localhost/41660] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:28:55,646 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testMaxIterationTime
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testMaxIterationTime
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithExcludeListWithPorts
+msx-listener perform reset as unitTestCounterInClass 32 is larger than zero
+2020-04-17 20:28:55,748 [Thread-8637] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-17 20:28:55,940 [Listener at localhost/39235] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-17 20:28:55,984 [Listener at localhost/39235] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:56,048 [Listener at localhost/35786] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:56,055 [Listener at localhost/35786] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:56,124 [Listener at localhost/46321] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:56,343 [Listener at localhost/46321] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:56,427 [Listener at localhost/39922] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:56,439 [Listener at localhost/39922] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:56,678 [Listener at localhost/35155] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:28:56,690 [Listener at localhost/35155] INFO  datanode.DataNode (DataNode.java:<init>(450)) - msx-hdfs DataNode init
+2020-04-17 20:28:56,762 [Listener at localhost/42364] INFO  datanode.DataNode (DataNode.java:runDatanodeDaemon(2662)) - msx-hdfs DataNode start
+2020-04-17 20:29:01,294 [Listener at localhost/42364] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:29:01,318 [Listener at localhost/42364] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:29:01,340 [Listener at localhost/42364] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:29:01,367 [Listener at localhost/42364] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:29:01,390 [Listener at localhost/42364] INFO  datanode.DataNode (DataNode.java:shutdown(2010)) - msx-hdfs DataNode stop
+2020-04-17 20:29:01,413 [Listener at localhost/42364] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-17 20:29:01,443 [Listener at localhost/42301] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithExcludeListWithPorts
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testBalancerWithExcludeListWithPorts
+msx-listener succeed
+msx-listener all testRunFinished
