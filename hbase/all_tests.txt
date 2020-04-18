@@ -3027,6 +3027,7 @@ org.apache.hadoop.hbase.regionserver.TestHRegionInfo#testRegionNameForRegionRepl
 org.apache.hadoop.hbase.regionserver.TestHRegionOnCluster#testDataCorrectnessReplayingRecoveredEdits
 org.apache.hadoop.hbase.regionserver.TestHStoreFile#testBloomTypes
 org.apache.hadoop.hbase.regionserver.TestHStoreFile#testCacheOnWriteEvictOnClose
+org.apache.hadoop.hbase.regionserver.TestHStoreFile#testMultipleTimestamps
 org.apache.hadoop.hbase.regionserver.TestHStoreFile#testReferenceToHFileLink
 org.apache.hadoop.hbase.regionserver.TestHStore#testAge
 org.apache.hadoop.hbase.regionserver.TestHStore#testCreateScannerAndSnapshotConcurrently
@@ -3380,7 +3381,9 @@ org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testAddingCompac
 org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testClearFiles
 org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testCompactionAndFlushConflict
 org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testEmptyResultsForStripes
+org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testGetFilesForGetAndScan
 org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testLoadFilesAfterSplit
+org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testLoadFilesWithBadStripe
 org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testLoadFilesWithGaps
 org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testPriority
 org.apache.hadoop.hbase.regionserver.TestStripeStoreFileManager#testRowKeyBefore
@@ -4029,6 +4032,7 @@ org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsOnNewVersionBeha
 org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsOpWithDifferentUsersNoACL#testLabelsTableOpsWithDifferentUsers
 org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsReplication#testVisibilityReplication
 org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsWithACL#testGetForSuperUserWithFewerLabelAuths
+org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsWithACL#testLabelsTableOpsWithDifferentUsers
 org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsWithACL#testVisibilityLabelsForUserWithNoAuths
 org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsWithCustomVisLabService#testAuthorizationsWithSpecialUnicodeCharacters
 org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsWithCustomVisLabService#testClearUserAuths
