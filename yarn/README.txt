@@ -1,0 +1,6 @@
+< org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithCustomLogPropertyFile
+324d322
+< org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV1_5
+655a654,655
+> org.apache.hadoop.yarn.logaggregation.TestAggregatedLogFormat#testContainerLogsFileAccess
+> org.apache.hadoop.yarn.logaggregation.TestAggregatedLogFormat#testForCorruptedAggregatedLogs
