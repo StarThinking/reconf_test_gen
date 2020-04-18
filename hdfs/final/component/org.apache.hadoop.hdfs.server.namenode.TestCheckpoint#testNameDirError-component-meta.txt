@@ -1,0 +1,18 @@
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener unitTestCounterInClass = 0
+2020-04-18 05:45:26,032 [main] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-18 05:45:28,109 [Listener at localhost/33277] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-18 05:45:29,785 [Listener at localhost/33277] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+2020-04-18 05:45:30,055 [Listener at localhost/33277] INFO  namenode.NameNode (NameNode.java:<init>(932)) - msx-hdfs NameNode init
+2020-04-18 05:45:30,626 [Listener at localhost/35485] INFO  namenode.NameNode (NameNode.java:<init>(969)) - msx-hdfs NameNode start
+2020-04-18 05:45:30,824 [Listener at localhost/35485] INFO  namenode.NameNode (NameNode.java:stop(1013)) - msx-hdfs NameNode stop
+msx-listener test Failure org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener failed
+msx-listener failureMessage: NN should have failed to start with /root/hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name-0-1 set unreadable
+msx-listener stackTrace: java.lang.AssertionError: NN should have failed to start with /root/hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/target/test/data/dfs/name-0-1 set unreadable
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testNameDirError
+msx-listener succeed
+msx-listener all testRunFinished
