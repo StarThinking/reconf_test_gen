@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:57:12,157 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:57:13,595 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:57:13,883 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:57:14,357 INFO  [M:0;f41edfc3224b:40022] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:57:14,360 INFO  [M:0;f41edfc3224b:40022] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:57:19,104 INFO  [RS:0;f41edfc3224b:39479] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionExceptionByAsync
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionExceptionByAsync
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionExceptionByAsync
+msx-listener succeed
+2020-04-18 04:57:33,890 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:57:35,268 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

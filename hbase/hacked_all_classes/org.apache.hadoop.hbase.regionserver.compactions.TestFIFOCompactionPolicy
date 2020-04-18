@@ -1,0 +1,40 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:54:36,319 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:37,754 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:54:38,031 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:38,831 INFO  [M:0;ddede14e9897:36124] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:54:38,847 INFO  [M:0;ddede14e9897:36124] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:54:42,396 INFO  [RS:0;ddede14e9897:40841] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckMinVersion
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckMinVersion
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckMinVersion
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckTTL
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckTTL
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckTTL
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testFIFOCompactionPolicyExpiredEmptyHFiles
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testFIFOCompactionPolicyExpiredEmptyHFiles
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testFIFOCompactionPolicyExpiredEmptyHFiles
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testPurgeExpiredFiles
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testPurgeExpiredFiles
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testPurgeExpiredFiles
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckBlockingStoreFiles
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckBlockingStoreFiles
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckBlockingStoreFiles
+msx-listener succeed
+2020-04-18 01:55:03,505 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:55:04,879 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

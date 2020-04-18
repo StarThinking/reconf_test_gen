@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:15:02,579 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:15:03,905 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:15:04,217 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:15:04,965 INFO  [M:0;29d57e5d6047:38923] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:15:05,012 INFO  [M:0;29d57e5d6047:38923] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:15:09,200 INFO  [RS:0;29d57e5d6047:36772] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.mapreduce.TestImportExport#testWithMultipleDeleteFamilyMarkersOfSameRowSameFamily
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.mapreduce.TestImportExport#testWithMultipleDeleteFamilyMarkersOfSameRowSameFamily
+msx-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestImportExport#testWithMultipleDeleteFamilyMarkersOfSameRowSameFamily
+msx-listener succeed
+2020-04-18 04:15:42,752 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:15:44,854 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:09:57,714 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:09:59,261 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:09:59,538 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:10:00,322 INFO  [M:0;fe8939a3a42d:43958] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:10:00,348 INFO  [M:0;fe8939a3a42d:43958] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:10:04,016 INFO  [RS:0;fe8939a3a42d:35388] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestTableOperationException#testGetWithDoNotRetryIOException
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestTableOperationException#testGetWithDoNotRetryIOException
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestTableOperationException#testGetWithDoNotRetryIOException
+msx-listener succeed
+2020-04-18 05:10:16,952 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:10:18,884 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

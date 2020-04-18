@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:56:53,990 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:56:55,767 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:56:56,190 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:56:56,959 INFO  [M:0;d6c493df1b7b:43247] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:56:56,975 INFO  [M:0;d6c493df1b7b:43247] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:57:01,620 INFO  [RS:0;d6c493df1b7b:37045] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckTTL
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckTTL
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testSanityCheckTTL
+msx-listener succeed
+2020-04-18 03:57:09,487 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:57:11,418 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

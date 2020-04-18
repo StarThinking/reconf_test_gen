@@ -1,0 +1,23 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:49:41,891 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:43,706 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:49:44,109 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:44,785 INFO  [M:0;763d8bfed7a4:40519] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:49:44,790 INFO  [M:0;763d8bfed7a4:40519] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:49:48,239 INFO  [RS:0;763d8bfed7a4:36785] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.TestSplitRegionWhileRSCrash#test
+msx-listener unitTestCounterInClass = 0
+2020-04-18 01:49:57,691 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:49:57,879 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:58,516 INFO  [RS:1;763d8bfed7a4:46580] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener testfinished org.apache.hadoop.hbase.master.TestSplitRegionWhileRSCrash#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestSplitRegionWhileRSCrash#test
+msx-listener succeed
+2020-04-18 01:50:07,481 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:50:08,184 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

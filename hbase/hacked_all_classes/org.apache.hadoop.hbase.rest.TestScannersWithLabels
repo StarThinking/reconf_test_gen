@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:53:46,179 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:53:47,615 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:53:47,764 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:53:48,348 INFO  [M:0;4e8bb0a1abfd:46305] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:53:48,352 INFO  [M:0;4e8bb0a1abfd:46305] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:53:52,468 INFO  [RS:0;4e8bb0a1abfd:36666] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.rest.TestScannersWithLabels#testSimpleScannerXMLWithLabelsThatReceivesData
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestScannersWithLabels#testSimpleScannerXMLWithLabelsThatReceivesData
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestScannersWithLabels#testSimpleScannerXMLWithLabelsThatReceivesData
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.rest.TestScannersWithLabels#testSimpleScannerXMLWithLabelsThatReceivesNoData
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestScannersWithLabels#testSimpleScannerXMLWithLabelsThatReceivesNoData
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestScannersWithLabels#testSimpleScannerXMLWithLabelsThatReceivesNoData
+msx-listener succeed
+2020-04-18 01:54:06,220 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:54:08,184 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

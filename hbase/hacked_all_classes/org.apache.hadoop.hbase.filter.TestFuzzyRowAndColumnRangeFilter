@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:50:02,772 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:04,191 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:50:04,420 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:04,931 INFO  [M:0;c3954f2cbf47:39409] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:50:04,937 INFO  [M:0;c3954f2cbf47:39409] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:50:09,064 INFO  [RS:0;c3954f2cbf47:46419] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.filter.TestFuzzyRowAndColumnRangeFilter#Test
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.filter.TestFuzzyRowAndColumnRangeFilter#Test
+msx-listener writeFile testName is org.apache.hadoop.hbase.filter.TestFuzzyRowAndColumnRangeFilter#Test
+msx-listener succeed
+2020-04-18 01:50:16,630 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:50:16,945 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

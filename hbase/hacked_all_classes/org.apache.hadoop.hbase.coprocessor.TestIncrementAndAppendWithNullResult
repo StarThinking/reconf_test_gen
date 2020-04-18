@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:03:45,623 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:03:46,707 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:03:46,840 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:03:47,301 INFO  [M:0;d468549abd57:34595] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:03:47,306 INFO  [M:0;d468549abd57:34595] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:03:50,263 INFO  [RS:0;d468549abd57:35838] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestIncrementAndAppendWithNullResult#testIncrement
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestIncrementAndAppendWithNullResult#testIncrement
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestIncrementAndAppendWithNullResult#testIncrement
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestIncrementAndAppendWithNullResult#testAppend
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestIncrementAndAppendWithNullResult#testAppend
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestIncrementAndAppendWithNullResult#testAppend
+msx-listener succeed
+2020-04-18 02:03:57,165 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:03:58,555 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

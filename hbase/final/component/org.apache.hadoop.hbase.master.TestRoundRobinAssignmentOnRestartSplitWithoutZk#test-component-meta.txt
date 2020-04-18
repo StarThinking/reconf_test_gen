@@ -1,0 +1,29 @@
+msx-listener test started org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestartSplitWithoutZk#test
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:05:11,068 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:05:12,379 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:05:12,598 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:05:13,146 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:05:13,523 INFO  [M:0;a3adaa3f1a95:37108] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:05:13,527 INFO  [M:0;a3adaa3f1a95:37108] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:05:16,196 INFO  [RS:0;a3adaa3f1a95:44941] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:05:16,206 INFO  [RS:1;a3adaa3f1a95:40454] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:05:42,013 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:05:43,001 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:05:43,299 INFO  [RS:1;a3adaa3f1a95:44941] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:05:45,948 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:05:45,960 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:05:47,099 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestartSplitWithoutZk#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestartSplitWithoutZk#test
+msx-listener succeed
+msx-listener all testRunFinished

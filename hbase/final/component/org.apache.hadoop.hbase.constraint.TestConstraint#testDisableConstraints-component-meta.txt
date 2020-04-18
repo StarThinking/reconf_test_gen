@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:06:20,620 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:06:22,350 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:06:22,718 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:06:23,396 INFO  [M:0;3f19befea18f:45764] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:06:23,416 INFO  [M:0;3f19befea18f:45764] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:06:28,490 INFO  [RS:0;3f19befea18f:33839] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.constraint.TestConstraint#testDisableConstraints
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.constraint.TestConstraint#testDisableConstraints
+msx-listener writeFile testName is org.apache.hadoop.hbase.constraint.TestConstraint#testDisableConstraints
+msx-listener succeed
+2020-04-18 04:06:42,893 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:06:44,963 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

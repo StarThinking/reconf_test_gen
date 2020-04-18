@@ -1,0 +1,30 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:56:55,119 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:56:56,723 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:56:57,001 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:56:57,813 INFO  [M:0;a60ebb9b7b59:43366] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:56:57,822 INFO  [M:0;a60ebb9b7b59:43366] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:57:01,807 INFO  [RS:0;a60ebb9b7b59:33298] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithNonExistTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithNonExistTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithNonExistTable
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithDeletedTable
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithDeletedTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithDeletedTable
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithExistTable
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithExistTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.util.TestHBaseFsckCleanReplicationBarriers#testCleanReplicationBarrierWithExistTable
+msx-listener succeed
+2020-04-18 01:57:49,002 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:57:52,527 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

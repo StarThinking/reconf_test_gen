@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:50:34,234 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:50:36,291 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:50:36,803 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:50:37,851 INFO  [M:0;319396f20ad2:43362] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:50:37,856 INFO  [M:0;319396f20ad2:43362] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:50:42,157 INFO  [RS:0;319396f20ad2:45085] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.snapshot.TestMobRestoreSnapshotHelper#testSkipReplayAndUpdateSeqId
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.snapshot.TestMobRestoreSnapshotHelper#testSkipReplayAndUpdateSeqId
+msx-listener writeFile testName is org.apache.hadoop.hbase.snapshot.TestMobRestoreSnapshotHelper#testSkipReplayAndUpdateSeqId
+msx-listener succeed
+2020-04-18 03:51:00,710 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:51:02,641 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

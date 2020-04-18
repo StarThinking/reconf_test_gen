@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:45:24,861 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:45:25,898 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:45:26,075 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:45:26,377 INFO  [M:0;6dd3c48e57a2:33540] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:45:26,381 INFO  [M:0;6dd3c48e57a2:33540] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:45:29,233 INFO  [RS:0;6dd3c48e57a2:42127] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestModifyTableProcedure#testConcurrentModifyColumnFamily
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestModifyTableProcedure#testConcurrentModifyColumnFamily
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestModifyTableProcedure#testConcurrentModifyColumnFamily
+msx-listener succeed
+2020-04-18 03:45:36,952 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:45:39,075 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

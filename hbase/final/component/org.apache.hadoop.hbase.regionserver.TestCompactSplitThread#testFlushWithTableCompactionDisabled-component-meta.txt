@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:04:44,337 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:04:45,648 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:04:45,875 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:04:46,412 INFO  [M:0;a9418c5a5c36:41858] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:04:46,429 INFO  [M:0;a9418c5a5c36:41858] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:04:49,976 INFO  [RS:0;a9418c5a5c36:39578] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestCompactSplitThread#testFlushWithTableCompactionDisabled
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestCompactSplitThread#testFlushWithTableCompactionDisabled
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestCompactSplitThread#testFlushWithTableCompactionDisabled
+msx-listener succeed
+2020-04-18 05:05:13,152 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:05:14,995 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

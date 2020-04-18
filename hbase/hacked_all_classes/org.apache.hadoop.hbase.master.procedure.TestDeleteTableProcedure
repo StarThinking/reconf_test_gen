@@ -1,0 +1,55 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:57:38,919 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:57:40,249 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:57:40,535 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:57:40,991 INFO  [M:0;e5455ca646dc:40474] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:57:40,995 INFO  [M:0;e5455ca646dc:40474] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:57:44,243 INFO  [RS:0;e5455ca646dc:38900] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotExistentTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotExistentTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotExistentTable
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDeleteWithSplits
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDeleteWithSplits
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDeleteWithSplits
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteFromMeta
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteFromMeta
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteFromMeta
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteDeletedTable
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteDeletedTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteDeletedTable
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteWhenTempDirIsNotEmpty
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteWhenTempDirIsNotEmpty
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteWhenTempDirIsNotEmpty
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testRecoveryAndDoubleExecution
+msx-listener perform reset as unitTestCounterInClass 6 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testRecoveryAndDoubleExecution
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testRecoveryAndDoubleExecution
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotDisabledTable
+msx-listener perform reset as unitTestCounterInClass 7 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotDisabledTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotDisabledTable
+msx-listener succeed
+2020-04-18 01:58:20,262 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:58:21,000 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

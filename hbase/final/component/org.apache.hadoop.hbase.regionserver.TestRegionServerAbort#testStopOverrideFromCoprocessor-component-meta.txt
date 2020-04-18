@@ -1,0 +1,27 @@
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestRegionServerAbort#testStopOverrideFromCoprocessor
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:53:11,136 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:53:12,955 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:53:13,302 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:53:14,000 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:53:14,294 INFO  [M:0;e41160a18fba:44499] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:53:14,300 INFO  [M:0;e41160a18fba:44499] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:53:17,933 INFO  [RS:0;e41160a18fba:33004] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:53:17,978 INFO  [RS:1;e41160a18fba:41984] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:53:24,040 INFO  [RpcServer.priority.RWQ.Fifo.read.handler=5,queue=1,port=33004] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:53:24,127 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:53:24,130 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:53:25,722 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestRegionServerAbort#testStopOverrideFromCoprocessor
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestRegionServerAbort#testStopOverrideFromCoprocessor
+msx-listener succeed
+msx-listener all testRunFinished

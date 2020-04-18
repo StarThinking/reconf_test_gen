@@ -1,0 +1,40 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:53:54,979 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:53:56,495 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:53:56,845 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:53:57,614 INFO  [M:0;a0b972f682ea:39998] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:53:57,617 INFO  [M:0;a0b972f682ea:39998] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:54:01,718 INFO  [RS:0;a0b972f682ea:40885] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionException
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionException
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionException
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testNonAtomicOperations
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testNonAtomicOperations
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testNonAtomicOperations
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testAtomicOperations
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testAtomicOperations
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testAtomicOperations
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionExceptionByAsync
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionExceptionByAsync
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRegionExceptionByAsync
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRowMutations
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRowMutations
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMalformedCellFromClient#testRowMutations
+msx-listener succeed
+2020-04-18 01:54:28,346 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:54:30,102 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

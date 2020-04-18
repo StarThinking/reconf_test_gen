@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:35:40,512 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:35:42,216 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:35:42,568 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:35:43,112 INFO  [M:0;8f1f1bdedf57:43275] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:35:43,126 INFO  [M:0;8f1f1bdedf57:43275] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:35:46,560 INFO  [RS:0;8f1f1bdedf57:40110] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.filter.TestMultiRowRangeFilter#testReverseMultiRowRangeFilterIncludingMinAndMaxRow
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.filter.TestMultiRowRangeFilter#testReverseMultiRowRangeFilterIncludingMinAndMaxRow
+msx-listener writeFile testName is org.apache.hadoop.hbase.filter.TestMultiRowRangeFilter#testReverseMultiRowRangeFilterIncludingMinAndMaxRow
+msx-listener succeed
+2020-04-18 03:35:57,377 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:35:57,737 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

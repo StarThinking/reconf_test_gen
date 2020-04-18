@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:44:28,578 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:44:29,956 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:44:30,236 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:44:30,903 INFO  [M:0;f4d22222392b:35250] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:44:30,913 INFO  [M:0;f4d22222392b:35250] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:44:34,249 INFO  [RS:0;f4d22222392b:41976] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestModifyTableProcedure#testRollbackAndDoubleExecutionOnline
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestModifyTableProcedure#testRollbackAndDoubleExecutionOnline
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestModifyTableProcedure#testRollbackAndDoubleExecutionOnline
+msx-listener succeed
+2020-04-18 03:44:43,147 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:44:45,175 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

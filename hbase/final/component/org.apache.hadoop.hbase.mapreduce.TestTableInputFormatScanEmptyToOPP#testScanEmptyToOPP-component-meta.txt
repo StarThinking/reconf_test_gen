@@ -1,0 +1,34 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:05:42,280 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:05:43,951 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:05:44,199 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:05:44,812 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:05:45,254 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:05:45,661 INFO  [M:0;49488aac4fee:37074] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:05:45,713 INFO  [M:0;49488aac4fee:37074] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:05:48,583 INFO  [RS:1;49488aac4fee:40333] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:05:48,585 INFO  [RS:0;49488aac4fee:46071] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:05:48,598 INFO  [RS:2;49488aac4fee:35538] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanEmptyToOPP#testScanEmptyToOPP
+msx-listener unitTestCounterInClass = 0
+2020-04-18 04:06:29,010 INFO  [LocalJobRunner Map Task Executor #0] mapreduce.TestTableInputFormatScanBase$ScanMapper(123): map: key -> msx, value -> (null, null)
+2020-04-18 04:06:31,809 INFO  [pool-208-thread-1] mapreduce.TestTableInputFormatScanBase$ScanReducer(145): reduce: key[0] -> msx, value -> msx
+msx-listener testfinished org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanEmptyToOPP#testScanEmptyToOPP
+msx-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanEmptyToOPP#testScanEmptyToOPP
+msx-listener succeed
+2020-04-18 04:06:33,447 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:06:33,457 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:06:33,458 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:06:41,296 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,35 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:00:27,048 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:28,686 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:00:29,003 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:29,672 INFO  [M:0;6fb4b1e11391:38227] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:00:29,683 INFO  [M:0;6fb4b1e11391:38227] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:00:34,174 INFO  [RS:0;6fb4b1e11391:38463] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshot
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshot
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshot
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshotToEnabledTable
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshotToEnabledTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshotToEnabledTable
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshotToDifferentTable
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshotToDifferentTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRestoreSnapshotToDifferentTable
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRecoveryAndDoubleExecution
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRecoveryAndDoubleExecution
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestRestoreSnapshotProcedure#testRecoveryAndDoubleExecution
+msx-listener succeed
+2020-04-18 02:02:08,076 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:02:09,325 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

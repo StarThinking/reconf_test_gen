@@ -1,0 +1,35 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:49:07,917 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:09,737 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:49:10,070 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:10,714 INFO  [M:0;469a3e1d6f23:41340] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:49:10,724 INFO  [M:0;469a3e1d6f23:41340] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:49:16,727 INFO  [RS:0;469a3e1d6f23:40439] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testGrant
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testGrant
+msx-listener writeFile testName is org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testGrant
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testHasUserPermission
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testHasUserPermission
+msx-listener writeFile testName is org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testHasUserPermission
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testGetUserPermissions
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testGetUserPermissions
+msx-listener writeFile testName is org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testGetUserPermissions
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testRevoke
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testRevoke
+msx-listener writeFile testName is org.apache.hadoop.hbase.security.access.TestUnloadAccessController#testRevoke
+msx-listener succeed
+2020-04-18 01:49:24,083 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:49:26,193 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,21 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:00:35,474 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:37,123 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:00:37,382 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:38,225 INFO  [M:0;e6e3c1679bd6:38673] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:00:38,235 INFO  [M:0;e6e3c1679bd6:38673] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:00:41,900 INFO  [RS:0;e6e3c1679bd6:46825] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestSafemodeBringsDownMaster#testSafemodeBringsDownMaster
+msx-listener unitTestCounterInClass = 0
+2020-04-18 02:00:51,694 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:01:02,023 INFO  [PEWorker-1] master.HMaster(2790): msx-hbase HMaster stop
+2020-04-18 02:01:02,023 INFO  [PEWorker-1] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestSafemodeBringsDownMaster#testSafemodeBringsDownMaster
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestSafemodeBringsDownMaster#testSafemodeBringsDownMaster
+msx-listener succeed
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

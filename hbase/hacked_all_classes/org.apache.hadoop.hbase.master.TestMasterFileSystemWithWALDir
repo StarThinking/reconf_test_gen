@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:14,510 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:16,386 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:16,679 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:17,218 INFO  [M:0;763d8bfed7a4:37008] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:17,226 INFO  [M:0;763d8bfed7a4:37008] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:21,386 INFO  [RS:0;763d8bfed7a4:36556] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.TestMasterFileSystemWithWALDir#testFsUriSetProperly
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.TestMasterFileSystemWithWALDir#testFsUriSetProperly
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestMasterFileSystemWithWALDir#testFsUriSetProperly
+msx-listener succeed
+2020-04-18 01:46:27,580 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:46:28,599 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

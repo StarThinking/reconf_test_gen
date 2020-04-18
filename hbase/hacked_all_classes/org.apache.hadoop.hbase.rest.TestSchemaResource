@@ -1,0 +1,35 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:54:09,254 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:10,947 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:54:11,363 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:11,999 INFO  [M:0;5bbf45febd4d:39751] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:54:12,012 INFO  [M:0;5bbf45febd4d:39751] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:54:16,139 INFO  [RS:0;5bbf45febd4d:45160] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeleteXML[0]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeleteXML[0]
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeleteXML[0]
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeletePB[0]
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeletePB[0]
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeletePB[0]
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeleteXML[1]
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeleteXML[1]
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeleteXML[1]
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeletePB[1]
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeletePB[1]
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestSchemaResource#testTableCreateAndDeletePB[1]
+msx-listener succeed
+2020-04-18 01:54:38,587 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:54:40,132 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

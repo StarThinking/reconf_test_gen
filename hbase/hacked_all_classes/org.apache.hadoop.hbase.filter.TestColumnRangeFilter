@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:36,460 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:37,562 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:37,789 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:38,307 INFO  [M:0;bfd6211c9523:37800] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:38,313 INFO  [M:0;bfd6211c9523:37800] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:41,887 INFO  [RS:0;bfd6211c9523:43639] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.filter.TestColumnRangeFilter#TestColumnRangeFilterWithColumnPaginationFilter
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.filter.TestColumnRangeFilter#TestColumnRangeFilterWithColumnPaginationFilter
+msx-listener writeFile testName is org.apache.hadoop.hbase.filter.TestColumnRangeFilter#TestColumnRangeFilterWithColumnPaginationFilter
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.filter.TestColumnRangeFilter#TestColumnRangeFilterClient
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.filter.TestColumnRangeFilter#TestColumnRangeFilterClient
+msx-listener writeFile testName is org.apache.hadoop.hbase.filter.TestColumnRangeFilter#TestColumnRangeFilterClient
+msx-listener succeed
+2020-04-18 01:46:59,555 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:46:59,934 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

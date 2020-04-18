@@ -1,0 +1,21 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:04:53,997 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:04:55,751 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:04:56,010 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:04:56,874 INFO  [M:0;f97301a694af:46065] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:04:56,916 INFO  [M:0;f97301a694af:46065] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:05:01,549 INFO  [RS:0;f97301a694af:37009] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestMasterCoprocessorExceptionWithAbort#testExceptionFromCoprocessorWhenCreatingTable
+msx-listener unitTestCounterInClass = 0
+2020-04-18 02:05:07,947 INFO  [RpcServer.default.FPBQ.Fifo.handler=4,queue=0,port=46065] master.HMaster(2790): msx-hbase HMaster stop
+2020-04-18 02:05:07,948 INFO  [RpcServer.default.FPBQ.Fifo.handler=4,queue=0,port=46065] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestMasterCoprocessorExceptionWithAbort#testExceptionFromCoprocessorWhenCreatingTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestMasterCoprocessorExceptionWithAbort#testExceptionFromCoprocessorWhenCreatingTable
+msx-listener succeed
+2020-04-18 02:05:09,734 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

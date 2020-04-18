@@ -1,0 +1,29 @@
+msx-listener test started org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:50,172 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:51,415 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:51,569 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:51,929 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:52,185 INFO  [M:0;601d56e9fca8:34293] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:52,193 INFO  [M:0;601d56e9fca8:34293] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:54,179 INFO  [RS:0;601d56e9fca8:35623] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:54,179 INFO  [RS:1;601d56e9fca8:40174] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:47:06,069 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:47:06,604 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:47:06,895 INFO  [RS:1;601d56e9fca8:35623] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:47:09,457 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:47:09,457 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:47:10,333 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
+msx-listener succeed
+msx-listener all testRunFinished

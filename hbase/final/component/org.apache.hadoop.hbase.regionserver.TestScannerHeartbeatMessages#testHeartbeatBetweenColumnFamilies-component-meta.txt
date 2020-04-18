@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:47:47,501 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:47:49,290 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:47:49,483 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:47:50,393 INFO  [M:0;108d6588de91:41401] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:47:50,418 INFO  [M:0;108d6588de91:41401] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:47:54,298 INFO  [RS:0;108d6588de91:42035] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestScannerHeartbeatMessages#testHeartbeatBetweenColumnFamilies
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestScannerHeartbeatMessages#testHeartbeatBetweenColumnFamilies
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestScannerHeartbeatMessages#testHeartbeatBetweenColumnFamilies
+msx-listener succeed
+2020-04-18 04:48:23,768 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:48:26,231 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

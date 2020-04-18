@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:49:55,138 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:56,571 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:49:56,780 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:57,313 INFO  [M:0;e5455ca646dc:42612] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:49:57,319 INFO  [M:0;e5455ca646dc:42612] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:50:00,458 INFO  [RS:0;e5455ca646dc:41340] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.assignment.TestAssignmentManagerUtil#testCreateUnassignProceduresForMergeFail
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.assignment.TestAssignmentManagerUtil#testCreateUnassignProceduresForMergeFail
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestAssignmentManagerUtil#testCreateUnassignProceduresForMergeFail
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.assignment.TestAssignmentManagerUtil#testCreateUnassignProcedureForSplitFail
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.assignment.TestAssignmentManagerUtil#testCreateUnassignProcedureForSplitFail
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestAssignmentManagerUtil#testCreateUnassignProcedureForSplitFail
+msx-listener succeed
+2020-04-18 01:50:12,797 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:50:14,127 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,40 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:55:02,201 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:55:03,479 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:55:03,681 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:55:04,099 INFO  [M:0;3699199c6dd0:44135] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:55:04,104 INFO  [M:0;3699199c6dd0:44135] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:55:07,787 INFO  [RS:0;3699199c6dd0:40782] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteBarriers
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteBarriers
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteBarriers
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testCleanNoPeers
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testCleanNoPeers
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testCleanNoPeers
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegion
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegion
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegion
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegionNoPeers
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegionNoPeers
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegionNoPeers
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testNothing
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testNothing
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testNothing
+msx-listener succeed
+2020-04-18 01:55:17,171 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:55:18,740 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

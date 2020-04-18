@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:52:48,171 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:52:49,884 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:52:50,263 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:52:50,835 INFO  [M:0;32e7cdbcd7a5:39594] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:52:50,840 INFO  [M:0;32e7cdbcd7a5:39594] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:52:54,741 INFO  [RS:0;32e7cdbcd7a5:33285] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.rest.TestGzipFilter#testGzipFilter
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestGzipFilter#testGzipFilter
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestGzipFilter#testGzipFilter
+msx-listener succeed
+2020-04-18 01:53:08,716 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:53:10,142 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

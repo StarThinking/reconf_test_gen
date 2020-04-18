@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:07:41,015 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:07:42,090 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:07:42,318 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:07:42,654 INFO  [M:0;1db02f3538bc:45787] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:07:42,665 INFO  [M:0;1db02f3538bc:45787] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:07:45,162 INFO  [RS:0;1db02f3538bc:44028] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncClientPushback#testMutateRowStats
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncClientPushback#testMutateRowStats
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncClientPushback#testMutateRowStats
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncClientPushback#testClientTracksServerPushback
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncClientPushback#testClientTracksServerPushback
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncClientPushback#testClientTracksServerPushback
+msx-listener succeed
+2020-04-18 02:11:09,955 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:11:11,494 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,26 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:20:47,394 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:20:49,703 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:20:49,958 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:20:50,436 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:20:50,734 INFO  [M:0;8e975ae96677:46262] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:20:50,739 INFO  [M:0;8e975ae96677:46262] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:20:53,482 INFO  [RS:0;8e975ae96677:33102] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:20:53,483 INFO  [RS:1;8e975ae96677:39907] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncSingleRequestRpcRetryingCaller#testRegionMove
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncSingleRequestRpcRetryingCaller#testRegionMove
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncSingleRequestRpcRetryingCaller#testRegionMove
+msx-listener succeed
+2020-04-18 04:21:08,273 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:21:08,277 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:21:09,511 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

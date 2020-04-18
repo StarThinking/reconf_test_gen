@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:42:28,129 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:42:30,647 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:42:31,120 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:42:32,015 INFO  [M:0;8221d5303941:34139] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:42:32,053 INFO  [M:0;8221d5303941:34139] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:42:37,641 INFO  [RS:0;8221d5303941:37165] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.rest.TestMultiRowResource#testMultiCellGetWithColsInQueryPathJSON[1]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestMultiRowResource#testMultiCellGetWithColsInQueryPathJSON[1]
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestMultiRowResource#testMultiCellGetWithColsInQueryPathJSON[1]
+msx-listener succeed
+2020-04-18 03:42:53,798 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:42:55,754 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

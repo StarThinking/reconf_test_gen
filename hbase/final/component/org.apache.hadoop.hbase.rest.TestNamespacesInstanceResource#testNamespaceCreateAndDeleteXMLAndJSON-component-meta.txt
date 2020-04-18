@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:32:59,678 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:33:00,888 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:33:01,079 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:33:01,562 INFO  [M:0;981c787f459c:40948] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:33:01,571 INFO  [M:0;981c787f459c:40948] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:33:04,261 INFO  [RS:0;981c787f459c:39757] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.rest.TestNamespacesInstanceResource#testNamespaceCreateAndDeleteXMLAndJSON
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestNamespacesInstanceResource#testNamespaceCreateAndDeleteXMLAndJSON
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestNamespacesInstanceResource#testNamespaceCreateAndDeleteXMLAndJSON
+msx-listener succeed
+2020-04-18 03:33:16,383 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:33:17,982 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

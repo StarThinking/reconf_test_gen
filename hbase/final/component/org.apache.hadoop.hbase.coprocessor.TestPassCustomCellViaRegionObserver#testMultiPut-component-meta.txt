@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:23:20,562 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:22,521 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:23:22,827 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:23,727 INFO  [M:0;903e582962ab:34908] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:23:23,741 INFO  [M:0;903e582962ab:34908] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:23:29,185 INFO  [RS:0;903e582962ab:34800] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestPassCustomCellViaRegionObserver#testMultiPut
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestPassCustomCellViaRegionObserver#testMultiPut
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestPassCustomCellViaRegionObserver#testMultiPut
+msx-listener succeed
+2020-04-18 04:23:39,066 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:23:40,690 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

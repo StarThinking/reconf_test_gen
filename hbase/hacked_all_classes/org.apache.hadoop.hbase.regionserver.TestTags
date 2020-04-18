@@ -1,0 +1,41 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:53:28,211 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:53:29,962 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:53:30,784 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:53:31,867 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:53:32,181 INFO  [M:0;ce67bb803727:35318] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:53:32,195 INFO  [M:0;ce67bb803727:35318] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:53:36,333 INFO  [RS:0;ce67bb803727:38932] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:53:36,342 INFO  [RS:1;ce67bb803727:33009] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestTags#testFlushAndCompactionWithoutTags
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestTags#testFlushAndCompactionWithoutTags
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestTags#testFlushAndCompactionWithoutTags
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestTags#testTagsWithAppendAndIncrement
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestTags#testTagsWithAppendAndIncrement
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestTags#testTagsWithAppendAndIncrement
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestTags#testFlushAndCompactionwithCombinations
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestTags#testFlushAndCompactionwithCombinations
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestTags#testFlushAndCompactionwithCombinations
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestTags#testTags
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestTags#testTags
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestTags#testTags
+msx-listener succeed
+2020-04-18 01:54:45,710 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:54:45,711 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:54:47,419 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

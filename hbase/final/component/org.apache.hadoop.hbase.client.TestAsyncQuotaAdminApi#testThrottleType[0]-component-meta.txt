@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:09:10,660 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:09:11,828 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:09:11,989 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:09:12,502 INFO  [M:0;903e582962ab:43404] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:09:12,512 INFO  [M:0;903e582962ab:43404] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:09:16,045 INFO  [RS:0;903e582962ab:37379] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncQuotaAdminApi#testThrottleType[0]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncQuotaAdminApi#testThrottleType[0]
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncQuotaAdminApi#testThrottleType[0]
+msx-listener succeed
+2020-04-18 04:09:24,327 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:09:25,815 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

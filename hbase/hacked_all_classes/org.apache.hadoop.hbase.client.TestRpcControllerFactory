@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:26,093 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:29,129 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:29,476 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:30,199 INFO  [M:0;6608d9472dfa:43500] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:30,224 INFO  [M:0;6608d9472dfa:43500] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:33,052 INFO  [RS:0;6608d9472dfa:41849] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestRpcControllerFactory#testCountController
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRpcControllerFactory#testCountController
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRpcControllerFactory#testCountController
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestRpcControllerFactory#testFallbackToDefaultRpcControllerFactory
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRpcControllerFactory#testFallbackToDefaultRpcControllerFactory
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRpcControllerFactory#testFallbackToDefaultRpcControllerFactory
+msx-listener succeed
+2020-04-18 01:46:41,593 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:46:42,990 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

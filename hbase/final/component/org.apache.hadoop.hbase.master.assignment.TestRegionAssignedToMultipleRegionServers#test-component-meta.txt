@@ -1,0 +1,29 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:58:15,942 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:58:17,475 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:58:17,621 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:58:18,046 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:58:18,264 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:58:18,768 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:58:19,132 INFO  [M:0;809c9119e6ca:38634] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:58:19,139 INFO  [M:1;809c9119e6ca:40241] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:58:19,148 INFO  [M:0;809c9119e6ca:38634] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:58:19,148 INFO  [M:1;809c9119e6ca:40241] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:58:23,446 INFO  [RS:0;809c9119e6ca:37035] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:58:23,458 INFO  [RS:1;809c9119e6ca:37860] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.assignment.TestRegionAssignedToMultipleRegionServers#test
+msx-listener unitTestCounterInClass = 0
+2020-04-18 04:58:34,595 INFO  [Time-limited test] master.HMaster(2790): msx-hbase HMaster stop
+2020-04-18 04:58:34,596 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-listener testfinished org.apache.hadoop.hbase.master.assignment.TestRegionAssignedToMultipleRegionServers#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestRegionAssignedToMultipleRegionServers#test
+msx-listener succeed
+2020-04-18 04:58:49,767 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:58:49,769 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:58:50,771 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

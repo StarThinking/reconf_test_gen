@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:25:04,136 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:25:05,603 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:25:05,905 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:25:06,735 INFO  [M:0;538594796ae8:38057] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:25:06,750 INFO  [M:0;538594796ae8:38057] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:25:10,416 INFO  [RS:0;538594796ae8:46640] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.quotas.TestSnapshotQuotaObserverChore#testPersistingSnapshotsForNamespaces
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.quotas.TestSnapshotQuotaObserverChore#testPersistingSnapshotsForNamespaces
+msx-listener writeFile testName is org.apache.hadoop.hbase.quotas.TestSnapshotQuotaObserverChore#testPersistingSnapshotsForNamespaces
+msx-listener succeed
+2020-04-18 04:25:17,608 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:25:19,812 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

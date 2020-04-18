@@ -1,0 +1,21 @@
+msx-listener test started org.apache.hadoop.hbase.TestJMXConnectorServer#testRSConnectorServerWhenStopRegionServer
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:02:44,171 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:02:45,745 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:02:45,951 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:02:46,607 INFO  [M:0;60137042e0cd:44112] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:02:46,615 INFO  [M:0;60137042e0cd:44112] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:02:50,346 INFO  [RS:0;60137042e0cd:32997] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:02:55,810 INFO  [RpcServer.priority.RWQ.Fifo.read.handler=1,queue=1,port=32997] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:02:55,968 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:02:57,526 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.TestJMXConnectorServer#testRSConnectorServerWhenStopRegionServer
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestJMXConnectorServer#testRSConnectorServerWhenStopRegionServer
+msx-listener succeed
+msx-listener all testRunFinished

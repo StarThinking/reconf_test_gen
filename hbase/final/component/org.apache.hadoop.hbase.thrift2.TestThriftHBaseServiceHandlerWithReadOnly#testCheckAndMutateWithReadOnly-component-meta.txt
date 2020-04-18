@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:02:28,248 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:02:29,587 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:02:29,797 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:02:30,260 INFO  [M:0;814c2e5d617f:39870] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:02:30,268 INFO  [M:0;814c2e5d617f:39870] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:02:33,064 INFO  [RS:0;814c2e5d617f:34928] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testCheckAndMutateWithReadOnly
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testCheckAndMutateWithReadOnly
+msx-listener writeFile testName is org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testCheckAndMutateWithReadOnly
+msx-listener succeed
+2020-04-18 05:02:40,407 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:02:42,348 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

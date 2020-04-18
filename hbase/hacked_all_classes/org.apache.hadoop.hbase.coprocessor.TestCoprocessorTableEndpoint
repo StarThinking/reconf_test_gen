@@ -1,0 +1,31 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:49,962 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:52,153 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:52,463 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:53,160 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:53,505 INFO  [M:0;cf8a68167bc5:45796] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:53,512 INFO  [M:0;cf8a68167bc5:45796] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:55,420 INFO  [RS:1;cf8a68167bc5:37715] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:55,420 INFO  [RS:0;cf8a68167bc5:40593] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestCoprocessorTableEndpoint#testCoprocessorTableEndpoint
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestCoprocessorTableEndpoint#testCoprocessorTableEndpoint
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestCoprocessorTableEndpoint#testCoprocessorTableEndpoint
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestCoprocessorTableEndpoint#testDynamicCoprocessorTableEndpoint
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestCoprocessorTableEndpoint#testDynamicCoprocessorTableEndpoint
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestCoprocessorTableEndpoint#testDynamicCoprocessorTableEndpoint
+msx-listener succeed
+2020-04-18 01:47:12,304 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:47:12,304 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:47:13,722 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

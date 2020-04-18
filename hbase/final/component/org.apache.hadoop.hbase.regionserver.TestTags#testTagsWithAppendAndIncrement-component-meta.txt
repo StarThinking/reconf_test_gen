@@ -1,0 +1,26 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:23:47,880 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:49,648 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:23:49,925 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:50,561 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:50,901 INFO  [M:0;df676508d71d:40052] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:23:50,925 INFO  [M:0;df676508d71d:40052] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:23:54,402 INFO  [RS:0;df676508d71d:37586] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:23:54,426 INFO  [RS:1;df676508d71d:35756] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestTags#testTagsWithAppendAndIncrement
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestTags#testTagsWithAppendAndIncrement
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestTags#testTagsWithAppendAndIncrement
+msx-listener succeed
+2020-04-18 04:24:04,399 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:24:04,400 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:24:06,223 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

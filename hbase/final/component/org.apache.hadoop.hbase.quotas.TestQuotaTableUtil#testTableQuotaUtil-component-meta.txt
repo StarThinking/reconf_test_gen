@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:11:51,493 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:11:52,646 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:11:52,816 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:11:53,202 INFO  [M:0;6afba525a433:45844] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:11:53,209 INFO  [M:0;6afba525a433:45844] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:11:55,658 INFO  [RS:0;6afba525a433:38416] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.quotas.TestQuotaTableUtil#testTableQuotaUtil
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.quotas.TestQuotaTableUtil#testTableQuotaUtil
+msx-listener writeFile testName is org.apache.hadoop.hbase.quotas.TestQuotaTableUtil#testTableQuotaUtil
+msx-listener succeed
+2020-04-18 05:12:01,603 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:12:02,904 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

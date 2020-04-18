@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:15:46,804 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:15:48,669 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:15:49,101 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:15:49,805 INFO  [M:0;0e9be186c365:45409] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:15:49,816 INFO  [M:0;0e9be186c365:45409] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:15:53,990 INFO  [RS:0;0e9be186c365:38908] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.mapreduce.TestImportExport#testMetaExport
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.mapreduce.TestImportExport#testMetaExport
+msx-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestImportExport#testMetaExport
+msx-listener succeed
+2020-04-18 04:16:13,501 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:16:14,918 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

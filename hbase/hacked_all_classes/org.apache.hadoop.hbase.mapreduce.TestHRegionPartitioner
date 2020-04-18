@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:00:43,933 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:45,240 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:00:45,527 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:46,310 INFO  [M:0;b11f0cc2f4d9:37755] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:00:46,318 INFO  [M:0;b11f0cc2f4d9:37755] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:00:50,257 INFO  [RS:0;b11f0cc2f4d9:45503] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.mapreduce.TestHRegionPartitioner#testHRegionPartitionerMoreRegions
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.mapreduce.TestHRegionPartitioner#testHRegionPartitionerMoreRegions
+msx-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestHRegionPartitioner#testHRegionPartitionerMoreRegions
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.mapreduce.TestHRegionPartitioner#testHRegionPartitioner
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.mapreduce.TestHRegionPartitioner#testHRegionPartitioner
+msx-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestHRegionPartitioner#testHRegionPartitioner
+msx-listener succeed
+2020-04-18 02:01:06,452 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:01:07,681 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

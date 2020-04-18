@@ -1,0 +1,26 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:32:10,084 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:32:11,693 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:32:11,894 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:32:12,411 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:32:12,737 INFO  [M:0;045769a803a2:43105] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:32:12,755 INFO  [M:0;045769a803a2:43105] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:32:16,205 INFO  [RS:0;045769a803a2:34940] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:32:16,205 INFO  [RS:1;045769a803a2:45102] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncToolAdminApi#testBalancer[1]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncToolAdminApi#testBalancer[1]
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncToolAdminApi#testBalancer[1]
+msx-listener succeed
+2020-04-18 04:32:23,550 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:32:23,550 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:32:24,855 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

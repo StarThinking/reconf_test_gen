@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:02,290 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:04,001 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:04,409 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:05,229 INFO  [M:0;d415b8c20892:42718] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:05,235 INFO  [M:0;d415b8c20892:42718] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:09,836 INFO  [RS:0;d415b8c20892:35373] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncRegionLocator#testNoCompletionException
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncRegionLocator#testNoCompletionException
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncRegionLocator#testNoCompletionException
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncRegionLocator#testTimeout
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncRegionLocator#testTimeout
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncRegionLocator#testTimeout
+msx-listener succeed
+2020-04-18 01:46:22,400 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:46:24,139 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

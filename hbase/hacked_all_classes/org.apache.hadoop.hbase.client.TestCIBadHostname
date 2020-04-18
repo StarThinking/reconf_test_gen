@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:49:21,108 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:22,865 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:49:23,202 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:49:23,937 INFO  [M:0;d415b8c20892:37432] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:49:23,964 INFO  [M:0;d415b8c20892:37432] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:49:28,625 INFO  [RS:0;d415b8c20892:39098] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestCIBadHostname#testGetAdminBadHostname
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestCIBadHostname#testGetAdminBadHostname
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestCIBadHostname#testGetAdminBadHostname
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestCIBadHostname#testGetClientBadHostname
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestCIBadHostname#testGetClientBadHostname
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestCIBadHostname#testGetClientBadHostname
+msx-listener succeed
+2020-04-18 01:49:35,554 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:49:37,386 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

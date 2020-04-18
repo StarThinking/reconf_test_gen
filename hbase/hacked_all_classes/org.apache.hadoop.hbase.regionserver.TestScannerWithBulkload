@@ -1,0 +1,30 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:50:19,121 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:20,780 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:50:21,028 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:21,722 INFO  [M:0;00dfd7258e54:33842] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:50:21,742 INFO  [M:0;00dfd7258e54:33842] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:50:25,960 INFO  [RS:0;00dfd7258e54:42320] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoadWithParallelScan
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoadWithParallelScan
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoadWithParallelScan
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoad
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoad
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoad
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoadNativeHFile
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoadNativeHFile
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestScannerWithBulkload#testBulkLoadNativeHFile
+msx-listener succeed
+2020-04-18 01:50:48,847 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:50:49,763 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,32 @@
+msx-listener test started org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:23:29,343 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:31,001 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:23:31,356 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:32,142 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:23:32,519 INFO  [M:0;22ce2504a163:37346] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:23:32,547 INFO  [M:0;22ce2504a163:37346] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:23:35,972 INFO  [RS:0;22ce2504a163:36317] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:23:35,972 INFO  [RS:1;22ce2504a163:38946] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-hdfs DataNode stop
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode stop
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:23:52,685 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:23:52,720 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:23:54,676 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
+msx-listener succeed
+msx-listener all testRunFinished

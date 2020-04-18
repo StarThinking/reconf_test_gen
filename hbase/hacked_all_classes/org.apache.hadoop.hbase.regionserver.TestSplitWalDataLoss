@@ -1,0 +1,26 @@
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:50:52,371 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:53,582 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:50:53,785 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:54,107 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:54,358 INFO  [M:0;0f9a8b97278a:44913] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:50:54,365 INFO  [M:0;0f9a8b97278a:44913] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:50:56,797 INFO  [RS:0;0f9a8b97278a:37015] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:50:56,806 INFO  [RS:1;0f9a8b97278a:35185] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:51:38,138 INFO  [MemStoreFlusher.0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:51:41,949 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:51:43,092 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
+msx-listener succeed
+msx-listener all testRunFinished

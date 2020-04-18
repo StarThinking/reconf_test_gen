@@ -1,0 +1,20 @@
+msx-listener test started org.apache.hadoop.hbase.tool.TestCanaryTool#testRegionserverWithRegions
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:45:41,789 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:45:44,071 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:45:44,409 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:45:44,964 INFO  [M:0;1569b6d702c0:32800] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:45:44,992 INFO  [M:0;1569b6d702c0:32800] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:45:47,506 INFO  [RS:0;1569b6d702c0:42610] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:45:57,669 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:45:59,683 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.tool.TestCanaryTool#testRegionserverWithRegions
+msx-listener writeFile testName is org.apache.hadoop.hbase.tool.TestCanaryTool#testRegionserverWithRegions
+msx-listener succeed
+msx-listener all testRunFinished

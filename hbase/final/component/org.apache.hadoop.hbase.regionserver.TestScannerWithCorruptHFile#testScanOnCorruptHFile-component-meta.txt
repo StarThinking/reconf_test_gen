@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:52:15,822 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:52:17,471 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:52:17,766 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:52:18,214 INFO  [M:0;59cab75e2810:43376] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:52:18,232 INFO  [M:0;59cab75e2810:43376] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:52:21,669 INFO  [RS:0;59cab75e2810:44229] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestScannerWithCorruptHFile#testScanOnCorruptHFile
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestScannerWithCorruptHFile#testScanOnCorruptHFile
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestScannerWithCorruptHFile#testScanOnCorruptHFile
+msx-listener succeed
+2020-04-18 04:52:29,806 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:52:31,194 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

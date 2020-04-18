@@ -1,0 +1,45 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:57:36,715 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:57:38,021 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:57:38,299 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:57:38,756 INFO  [M:0;5900fc963908:36235] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:57:38,761 INFO  [M:0;5900fc963908:36235] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:57:42,534 INFO  [RS:0;5900fc963908:38990] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNonExistNamespace
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNonExistNamespace
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNonExistNamespace
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testRollbackAndDoubleExecution
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testRollbackAndDoubleExecution
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testRollbackAndDoubleExecution
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNonEmptyNamespace
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNonEmptyNamespace
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNonEmptyNamespace
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteSystemNamespace
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteSystemNamespace
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteSystemNamespace
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testRecoveryAndDoubleExecution
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testRecoveryAndDoubleExecution
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testRecoveryAndDoubleExecution
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNamespace
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNamespace
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteNamespaceProcedure#testDeleteNamespace
+msx-listener succeed
+2020-04-18 01:57:59,378 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:58:00,983 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

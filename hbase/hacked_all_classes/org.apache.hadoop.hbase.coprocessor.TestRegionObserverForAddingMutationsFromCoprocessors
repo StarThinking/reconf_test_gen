@@ -1,0 +1,45 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:06:32,822 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:06:33,826 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:06:33,943 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:06:34,227 INFO  [M:0;368bd3f279fa:43802] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:06:34,236 INFO  [M:0;368bd3f279fa:43802] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:06:36,267 INFO  [RS:0;368bd3f279fa:44012] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testMulti
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testMulti
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testMulti
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteFamily
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteFamily
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteFamily
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteRow
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteRow
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteRow
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteCell
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteCell
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testDeleteCell
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testPutWithTTL
+msx-listener perform reset as unitTestCounterInClass 4 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testPutWithTTL
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testPutWithTTL
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testCPMutationsAreWrittenToWALEdit
+msx-listener perform reset as unitTestCounterInClass 5 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testCPMutationsAreWrittenToWALEdit
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverForAddingMutationsFromCoprocessors#testCPMutationsAreWrittenToWALEdit
+msx-listener succeed
+2020-04-18 02:07:00,193 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:07:01,659 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

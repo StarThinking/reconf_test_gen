@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:52:48,685 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:52:50,428 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:52:50,795 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:52:51,402 INFO  [M:0;0aaceebd2ad6:41054] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:52:51,410 INFO  [M:0;0aaceebd2ad6:41054] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:52:55,683 INFO  [RS:0;0aaceebd2ad6:35364] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.rest.TestNamespacesResource#testNamespaceListXMLandJSON
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestNamespacesResource#testNamespaceListXMLandJSON
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestNamespacesResource#testNamespaceListXMLandJSON
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.rest.TestNamespacesResource#testNamespaceListPBandDefault
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestNamespacesResource#testNamespaceListPBandDefault
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestNamespacesResource#testNamespaceListPBandDefault
+msx-listener succeed
+2020-04-18 01:53:11,053 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:53:12,877 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

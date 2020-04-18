@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:47:52,735 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:47:54,310 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:47:54,687 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:47:55,565 INFO  [M:0;21e610410717:38686] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:47:55,593 INFO  [M:0;21e610410717:38686] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:48:00,205 INFO  [RS:0;21e610410717:43237] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegion
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegion
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.cleaner.TestReplicationBarrierCleaner#testDeleteRowForDeletedRegion
+msx-listener succeed
+2020-04-18 04:48:07,368 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:48:08,805 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

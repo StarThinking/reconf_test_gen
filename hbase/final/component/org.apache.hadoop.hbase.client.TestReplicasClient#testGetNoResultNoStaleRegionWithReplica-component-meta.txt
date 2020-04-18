@@ -1,0 +1,21 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:13:18,395 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:13:19,871 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:13:20,108 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:13:20,496 INFO  [M:0;05dc03f17d79:46806] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:13:20,507 INFO  [M:0;05dc03f17d79:46806] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:13:24,973 INFO  [RS:0;05dc03f17d79:33205] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:13:32,583 INFO  [Time-limited test] master.HMaster(2790): msx-hbase HMaster stop
+2020-04-18 05:13:32,584 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-listener test started org.apache.hadoop.hbase.client.TestReplicasClient#testGetNoResultNoStaleRegionWithReplica
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestReplicasClient#testGetNoResultNoStaleRegionWithReplica
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestReplicasClient#testGetNoResultNoStaleRegionWithReplica
+msx-listener succeed
+2020-04-18 05:13:33,576 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

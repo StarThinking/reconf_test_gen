@@ -1,0 +1,30 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:57:40,494 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:57:41,863 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:57:42,167 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:57:42,615 INFO  [M:0;817dea00cbcc:33522] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:57:42,632 INFO  [M:0;817dea00cbcc:33522] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:57:45,966 INFO  [RS:0;817dea00cbcc:33006] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testDisableTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testDisableTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testDisableTable
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testDisableTableMultipleTimes
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testDisableTableMultipleTimes
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testDisableTableMultipleTimes
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testRecoveryAndDoubleExecution
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testRecoveryAndDoubleExecution
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDisableTableProcedure#testRecoveryAndDoubleExecution
+msx-listener succeed
+2020-04-18 02:01:32,388 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:01:34,642 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,39 @@
+msx-listener test started org.apache.hadoop.hbase.TestClusterBootOrder#testBootMasterFirst
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:00:03,085 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:04,500 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:00:04,567 INFO  [M:0;6ba6b7837aed:46387] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:00:04,572 INFO  [M:0;6ba6b7837aed:46387] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:00:08,644 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:08,920 INFO  [RS:0;6ba6b7837aed:41668] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:00:17,681 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:00:19,371 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.TestClusterBootOrder#testBootMasterFirst
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestClusterBootOrder#testBootMasterFirst
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.TestClusterBootOrder#testBootRegionServerFirst
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 02:00:23,012 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:23,560 INFO  [RS:0;6ba6b7837aed:45614] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:00:27,562 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 02:00:27,850 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 02:00:27,866 INFO  [M:0;6ba6b7837aed:44507] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 02:00:27,877 INFO  [M:0;6ba6b7837aed:44507] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 02:00:39,823 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 02:00:40,518 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.TestClusterBootOrder#testBootRegionServerFirst
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestClusterBootOrder#testBootRegionServerFirst
+msx-listener succeed
+msx-listener all testRunFinished

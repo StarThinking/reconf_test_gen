@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:42:10,472 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:42:12,286 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:42:12,567 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:42:13,423 INFO  [M:0;ca30cfb3b71a:38132] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:42:13,452 INFO  [M:0;ca30cfb3b71a:38132] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:42:18,175 INFO  [RS:0;ca30cfb3b71a:37219] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestMultiRespectsLimits#testMultiLimits
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMultiRespectsLimits#testMultiLimits
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMultiRespectsLimits#testMultiLimits
+msx-listener succeed
+2020-04-18 04:43:01,157 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:43:02,151 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

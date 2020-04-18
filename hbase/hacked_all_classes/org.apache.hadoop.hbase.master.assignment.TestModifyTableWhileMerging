@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:50:09,520 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:11,071 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:50:11,360 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:50:12,018 INFO  [M:0;76c9dcda9e70:37754] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:50:12,026 INFO  [M:0;76c9dcda9e70:37754] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:50:16,073 INFO  [RS:0;76c9dcda9e70:39777] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.assignment.TestModifyTableWhileMerging#test
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.assignment.TestModifyTableWhileMerging#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestModifyTableWhileMerging#test
+msx-listener succeed
+2020-04-18 01:50:24,253 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:50:25,753 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

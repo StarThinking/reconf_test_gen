@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 05:11:55,168 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:11:57,126 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 05:11:57,191 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 05:11:57,363 INFO  [M:0;f41edfc3224b:43786] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 05:11:57,367 INFO  [M:0;f41edfc3224b:43786] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 05:12:00,575 INFO  [RS:0;f41edfc3224b:40973] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.security.token.TestGenerateDelegationToken#test[1: rpcClientImpl=org.apache.hadoop.hbase.ipc.NettyRpcClient]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.security.token.TestGenerateDelegationToken#test[1: rpcClientImpl=org.apache.hadoop.hbase.ipc.NettyRpcClient]
+msx-listener writeFile testName is org.apache.hadoop.hbase.security.token.TestGenerateDelegationToken#test[1: rpcClientImpl=org.apache.hadoop.hbase.ipc.NettyRpcClient]
+msx-listener succeed
+2020-04-18 05:12:09,370 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 05:12:10,839 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

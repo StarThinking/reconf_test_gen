@@ -1,0 +1,23 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:36,247 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:37,762 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:38,115 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:39,164 INFO  [M:0;1878ca71071c:33973] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:39,182 INFO  [M:0;1878ca71071c:33973] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:42,251 INFO  [RS:0;1878ca71071c:41814] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
+msx-listener unitTestCounterInClass = 0
+2020-04-18 01:46:51,095 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:46:51,179 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:51,497 INFO  [RS:1;1878ca71071c:38867] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener testfinished org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
+msx-listener succeed
+2020-04-18 01:47:03,577 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:47:04,449 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

@@ -1,0 +1,25 @@
+msx-listener test started org.apache.hadoop.hbase.master.TestMasterRepairMode#testExistingCluster
+msx-listener unitTestCounterInClass = 0
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:53:20,137 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:53:21,673 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:53:21,977 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:53:22,616 INFO  [M:0;fe594fafbc18:40037] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:53:22,629 INFO  [M:0;fe594fafbc18:40037] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:53:27,792 INFO  [RS:0;fe594fafbc18:42072] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:53:37,176 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:53:39,622 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:53:40,069 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:53:40,575 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:53:40,596 INFO  [M:0;fe594fafbc18:34296] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:53:40,597 INFO  [M:0;fe594fafbc18:34296] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:54:39,075 INFO  [M:0;fe594fafbc18:34296] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener testfinished org.apache.hadoop.hbase.master.TestMasterRepairMode#testExistingCluster
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestMasterRepairMode#testExistingCluster
+msx-listener succeed
+msx-listener all testRunFinished

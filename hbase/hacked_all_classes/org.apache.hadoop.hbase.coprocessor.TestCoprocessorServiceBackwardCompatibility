@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:46:41,381 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:43,715 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:46:44,046 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:46:44,578 INFO  [M:0;d196a8189518:42021] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:46:44,597 INFO  [M:0;d196a8189518:42021] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:46:46,703 INFO  [RS:0;d196a8189518:43458] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestCoprocessorServiceBackwardCompatibility#testCoprocessorServiceLoadedByMaster
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestCoprocessorServiceBackwardCompatibility#testCoprocessorServiceLoadedByMaster
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestCoprocessorServiceBackwardCompatibility#testCoprocessorServiceLoadedByMaster
+msx-listener succeed
+2020-04-18 01:46:54,638 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:46:55,753 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

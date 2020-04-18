@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:54:23,664 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:25,151 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:54:25,433 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:25,952 INFO  [M:0;4b3927c99e11:42697] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:54:25,961 INFO  [M:0;4b3927c99e11:42697] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:54:28,573 INFO  [RS:0;4b3927c99e11:44363] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.rest.TestStatusResource#testGetClusterStatusXML
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestStatusResource#testGetClusterStatusXML
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestStatusResource#testGetClusterStatusXML
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.rest.TestStatusResource#testGetClusterStatusPB
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestStatusResource#testGetClusterStatusPB
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestStatusResource#testGetClusterStatusPB
+msx-listener succeed
+2020-04-18 01:54:43,329 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:54:45,099 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

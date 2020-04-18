@@ -1,0 +1,25 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:54:12,600 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:14,157 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:54:14,455 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:54:15,103 INFO  [M:0;f97301a694af:33766] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:54:15,128 INFO  [M:0;f97301a694af:33766] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:54:18,258 INFO  [RS:0;f97301a694af:34841] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestMetaCache#testPreserveMetaCacheOnException
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMetaCache#testPreserveMetaCacheOnException
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMetaCache#testPreserveMetaCacheOnException
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestMetaCache#testCacheClearingOnCallQueueTooBig
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMetaCache#testCacheClearingOnCallQueueTooBig
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMetaCache#testCacheClearingOnCallQueueTooBig
+msx-listener succeed
+2020-04-18 01:54:34,002 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:54:35,874 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

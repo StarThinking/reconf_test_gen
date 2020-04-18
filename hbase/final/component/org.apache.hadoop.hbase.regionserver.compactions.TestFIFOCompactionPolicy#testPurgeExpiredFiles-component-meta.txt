@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:57:03,860 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:57:05,417 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:57:05,664 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:57:06,121 INFO  [M:0;0c7fdb85e674:39012] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:57:06,135 INFO  [M:0;0c7fdb85e674:39012] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:57:09,837 INFO  [RS:0;0c7fdb85e674:35848] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testPurgeExpiredFiles
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testPurgeExpiredFiles
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.compactions.TestFIFOCompactionPolicy#testPurgeExpiredFiles
+msx-listener succeed
+2020-04-18 03:57:27,017 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:57:28,964 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

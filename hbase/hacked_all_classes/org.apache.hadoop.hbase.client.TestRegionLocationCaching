@@ -1,0 +1,35 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 01:55:35,529 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:55:37,165 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 01:55:37,440 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 01:55:37,876 INFO  [M:0;d468549abd57:43190] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 01:55:37,883 INFO  [M:0;d468549abd57:43190] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 01:55:40,867 INFO  [RS:0;d468549abd57:41089] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiplexerMultiPut
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiplexerMultiPut
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiplexerMultiPut
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiplexerSinglePut
+msx-listener perform reset as unitTestCounterInClass 1 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiplexerSinglePut
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiplexerSinglePut
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableSinglePut
+msx-listener perform reset as unitTestCounterInClass 2 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableSinglePut
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableSinglePut
+msx-listener succeed
+msx-listener test started org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiPut
+msx-listener perform reset as unitTestCounterInClass 3 is larger than zero
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiPut
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRegionLocationCaching#testCachingForHTableMultiPut
+msx-listener succeed
+2020-04-18 01:56:12,048 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 01:56:14,158 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

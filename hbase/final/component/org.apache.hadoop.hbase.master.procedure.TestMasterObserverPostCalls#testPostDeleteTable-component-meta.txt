@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 04:45:26,450 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:45:27,789 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 04:45:28,082 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 04:45:28,720 INFO  [M:0;b644e29c0424:37224] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 04:45:28,742 INFO  [M:0;b644e29c0424:37224] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 04:45:32,781 INFO  [RS:0;b644e29c0424:33677] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
+msx-listener succeed
+2020-04-18 04:45:40,983 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 04:45:42,778 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

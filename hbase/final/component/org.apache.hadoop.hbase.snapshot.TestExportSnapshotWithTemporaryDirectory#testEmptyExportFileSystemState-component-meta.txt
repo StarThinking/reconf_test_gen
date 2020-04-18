@@ -1,0 +1,38 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:36:21,934 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:36:23,599 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:36:23,885 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:36:24,419 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:36:24,863 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:36:25,247 INFO  [M:0;7c83864a68d5:34679] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:36:25,252 INFO  [M:0;7c83864a68d5:34679] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:36:28,663 INFO  [RS:2;7c83864a68d5:43295] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:36:28,665 INFO  [RS:0;7c83864a68d5:42177] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:36:28,665 INFO  [RS:1;7c83864a68d5:41226] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.snapshot.TestExportSnapshotWithTemporaryDirectory#testEmptyExportFileSystemState
+msx-listener unitTestCounterInClass = 0
+msx-listener test Failure org.apache.hadoop.hbase.snapshot.TestExportSnapshotWithTemporaryDirectory#testEmptyExportFileSystemState
+msx-listener writeFile testName is org.apache.hadoop.hbase.snapshot.TestExportSnapshotWithTemporaryDirectory#testEmptyExportFileSystemState
+msx-listener failed
+msx-listener failureMessage: expected:<0> but was:<1>
+msx-listener stackTrace: java.lang.AssertionError: expected:<0> but was:<1>
+msx-listener testfinished org.apache.hadoop.hbase.snapshot.TestExportSnapshotWithTemporaryDirectory#testEmptyExportFileSystemState
+msx-listener writeFile testName is org.apache.hadoop.hbase.snapshot.TestExportSnapshotWithTemporaryDirectory#testEmptyExportFileSystemState
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hbase.snapshot.TestExportSnapshotWithTemporaryDirectory#testEmptyExportFileSystemState
+msx-listener succeed
+2020-04-18 03:38:00,980 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:38:00,984 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:38:00,984 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:38:02,919 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished

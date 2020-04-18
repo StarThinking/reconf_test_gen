@@ -1,0 +1,20 @@
+msx-hdfs NameNode init
+msx-hdfs NameNode start
+msx-hdfs DataNode init
+msx-hdfs DataNode start
+2020-04-18 03:35:06,474 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:35:07,980 INFO  [Time-limited test] master.HMaster(495): msx-hbase HMaster init
+2020-04-18 03:35:08,196 INFO  [Time-limited test] regionserver.HRegionServer(567): msx-hbase HRegionServer init
+2020-04-18 03:35:08,765 INFO  [M:0;1b6ddb8e1c11:35012] master.HMaster(576): msx-hbase HMaster start
+2020-04-18 03:35:08,769 INFO  [M:0;1b6ddb8e1c11:35012] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+2020-04-18 03:35:12,109 INFO  [RS:0;1b6ddb8e1c11:44806] regionserver.HRegionServer(973): msx-hbase HRegionServer start
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotDisabledTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotDisabledTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testDeleteNotDisabledTable
+msx-listener succeed
+2020-04-18 03:35:19,589 INFO  [Time-limited test] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+2020-04-18 03:35:21,387 INFO  [RegionServerTracker-0] regionserver.HRegionServer(2222): msx-hbase HRegionServer stop
+msx-hdfs DataNode stop
+msx-hdfs NameNode stop
+msx-listener all testRunFinished
