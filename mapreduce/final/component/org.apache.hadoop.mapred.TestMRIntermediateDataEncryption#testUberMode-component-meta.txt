@@ -1,0 +1,27 @@
+listener test started org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+mapreduce JobHistoryServer init
+yarn ResourceManager init
+yarn NodeManager init
+yarn NodeManager init
+mapreduce JobHistoryServer start
+yarn ResourceManager start
+yarn NodeManager start
+yarn NodeManager start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+yarn NodeManager stop
+yarn NodeManager stop
+yarn ResourceManager stop
+mapreduce JobHistoryServer stop
+listener testfinished org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
+listener writeFile testName is org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
+listener succeed
+listener all testRunFinished
