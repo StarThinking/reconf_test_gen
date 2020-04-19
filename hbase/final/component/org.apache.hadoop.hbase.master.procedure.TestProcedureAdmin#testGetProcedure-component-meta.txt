@@ -1,0 +1,26 @@
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hbase HRegionServer init
+hbase HMaster init
+hbase HRegionServer init
+hbase HMaster start
+hbase HRegionServer start
+hbase HRegionServer start
+listener test started org.apache.hadoop.hbase.master.procedure.TestProcedureAdmin#testGetProcedure
+listener unitTestCounterInClass = 0
+listener test Failure org.apache.hadoop.hbase.master.procedure.TestProcedureAdmin#testGetProcedure
+listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestProcedureAdmin#testGetProcedure
+listener failed
+listener failureMessage: expected procedure result
+listener stackTrace: java.lang.AssertionError: expected procedure result
+listener testfinished org.apache.hadoop.hbase.master.procedure.TestProcedureAdmin#testGetProcedure
+listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestProcedureAdmin#testGetProcedure
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hbase.master.procedure.TestProcedureAdmin#testGetProcedure
+listener succeed
+hbase HRegionServer stop
+hbase HRegionServer stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener all testRunFinished
