@@ -4,3 +4,9 @@
 655a654,655
 > org.apache.hadoop.yarn.logaggregation.TestAggregatedLogFormat#testContainerLogsFileAccess
 > org.apache.hadoop.yarn.logaggregation.TestAggregatedLogFormat#testForCorruptedAggregatedLogs
+
+> org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithCustomLogPropertyFile
+322a324
+> org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV1_5
+3439d3440
+< org.apache.hadoop.yarn.server.resourcemanager.TestResourceTrackerService#testDecommissionWithExcludeHosts
