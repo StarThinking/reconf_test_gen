@@ -1,0 +1,18 @@
+listener test started org.apache.hadoop.yarn.service.TestYarnNativeServices#testCreateServiceSameNameDifferentUser
+listener unitTestCounterInClass = 0
+yarn ResourceManager init
+yarn NodeManager init
+yarn ResourceManager start
+yarn NodeManager start
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+yarn NodeManager stop
+yarn ResourceManager stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener testfinished org.apache.hadoop.yarn.service.TestYarnNativeServices#testCreateServiceSameNameDifferentUser
+listener writeFile testName is org.apache.hadoop.yarn.service.TestYarnNativeServices#testCreateServiceSameNameDifferentUser
+listener succeed
+listener all testRunFinished
