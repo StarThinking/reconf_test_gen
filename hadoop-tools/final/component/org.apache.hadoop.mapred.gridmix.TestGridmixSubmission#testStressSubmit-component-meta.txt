@@ -1,0 +1,30 @@
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+mapreduce JobHistoryServer init
+yarn ResourceManager init
+yarn NodeManager init
+yarn NodeManager init
+mapreduce JobHistoryServer start
+yarn ResourceManager start
+yarn NodeManager start
+yarn NodeManager start
+listener test started org.apache.hadoop.mapred.gridmix.TestGridmixSubmission#testStressSubmit
+listener unitTestCounterInClass = 0
+listener test Failure org.apache.hadoop.mapred.gridmix.TestGridmixSubmission#testStressSubmit
+listener writeFile testName is org.apache.hadoop.mapred.gridmix.TestGridmixSubmission#testStressSubmit
+listener failed
+listener failureMessage: Client exited with nonzero status expected:<0> but was:<2>
+listener stackTrace: java.lang.AssertionError: Client exited with nonzero status expected:<0> but was:<2>
+listener testfinished org.apache.hadoop.mapred.gridmix.TestGridmixSubmission#testStressSubmit
+listener writeFile testName is org.apache.hadoop.mapred.gridmix.TestGridmixSubmission#testStressSubmit
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.mapred.gridmix.TestGridmixSubmission#testStressSubmit
+listener succeed
+yarn NodeManager stop
+yarn NodeManager stop
+yarn ResourceManager stop
+mapreduce JobHistoryServer stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener all testRunFinished

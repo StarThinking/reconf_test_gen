@@ -1,0 +1,27 @@
+listener test started org.apache.hadoop.streaming.TestSymLink#testSymLink
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+mapreduce JobHistoryServer init
+yarn ResourceManager init
+yarn NodeManager init
+mapreduce JobHistoryServer start
+yarn ResourceManager start
+yarn NodeManager start
+hdfs DataNode stop
+hdfs NameNode stop
+yarn NodeManager stop
+yarn ResourceManager stop
+mapreduce JobHistoryServer stop
+listener test Failure org.apache.hadoop.streaming.TestSymLink#testSymLink
+listener writeFile testName is org.apache.hadoop.streaming.TestSymLink#testSymLink
+listener failed
+listener failureMessage: File /testing-streaming/out does not exist.
+listener stackTrace: java.io.FileNotFoundException: File /testing-streaming/out does not exist.
+listener testfinished org.apache.hadoop.streaming.TestSymLink#testSymLink
+listener writeFile testName is org.apache.hadoop.streaming.TestSymLink#testSymLink
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.streaming.TestSymLink#testSymLink
+listener succeed
+listener all testRunFinished
