@@ -1,0 +1,30 @@
+listener test started org.apache.hadoop.hdfs.TestLeaseRecovery2#testCloseWhileRecoverLease
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.TestLeaseRecovery2#testCloseWhileRecoverLease
+listener writeFile testName is org.apache.hadoop.hdfs.TestLeaseRecovery2#testCloseWhileRecoverLease
+listener failed
+listener failureMessage:  Expected to find 'whereas it is under recovery' but got unexpected exception: java.io.IOException: Unable to close file because the last blockBP-870111899-172.17.0.3-1587271481949:blk_1073741826_1002 does not have enough number of replicas.
+listener stackTrace: java.lang.AssertionError:  Expected to find 'whereas it is under recovery' but got unexpected exception: java.io.IOException: Unable to close file because the last blockBP-870111899-172.17.0.3-1587271481949:blk_1073741826_1002 does not have enough number of replicas.
+listener testfinished org.apache.hadoop.hdfs.TestLeaseRecovery2#testCloseWhileRecoverLease
+listener writeFile testName is org.apache.hadoop.hdfs.TestLeaseRecovery2#testCloseWhileRecoverLease
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.TestLeaseRecovery2#testCloseWhileRecoverLease
+listener succeed
+listener all testRunFinished

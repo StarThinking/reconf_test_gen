@@ -1,0 +1,19 @@
+listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs SecondaryNameNode init
+hdfs SecondaryNameNode init
+hdfs SecondaryNameNode stop
+hdfs SecondaryNameNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+hdfs NameNode stop
+listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+listener succeed
+listener all testRunFinished

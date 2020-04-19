@@ -1,0 +1,32 @@
+listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testOpenFileWhenNNAndClientCrashAfterAddBlock
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs NameNode stop
+hdfs NameNode init
+hdfs NameNode start
+hdfs NameNode stop
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode stop
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+hdfs NameNode stop
+hdfs NameNode stop
+hdfs NameNode stop
+listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testOpenFileWhenNNAndClientCrashAfterAddBlock
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testOpenFileWhenNNAndClientCrashAfterAddBlock
+listener succeed
+listener all testRunFinished

@@ -1,0 +1,21 @@
+listener test started org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+listener failed
+listener failureMessage: Timed out waiting for capacity. Live = 1 Expected = 1 Dead = 0 Expected = 0 Total capacity = 898358673408 Expected = 449179336704 Vol Fails = 0 Expected = 1
+listener stackTrace: java.util.concurrent.TimeoutException: Timed out waiting for capacity. Live = 1 Expected = 1 Dead = 0 Expected = 0 Total capacity = 898358673408 Expected = 449179336704 Vol Fails = 0 Expected = 1
+listener testfinished org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+listener succeed
+listener all testRunFinished

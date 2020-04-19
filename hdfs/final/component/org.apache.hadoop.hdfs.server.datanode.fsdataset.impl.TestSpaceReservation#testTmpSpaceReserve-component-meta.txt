@@ -1,0 +1,21 @@
+listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+listener failed
+listener failureMessage: Wrong reserve space for Tmp  expected:<200> but was:<1000>
+listener stackTrace: java.lang.AssertionError: Wrong reserve space for Tmp  expected:<200> but was:<1000>
+listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+listener succeed
+listener all testRunFinished

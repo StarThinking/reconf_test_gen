@@ -1,0 +1,17 @@
+listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs SecondaryNameNode init
+hdfs SecondaryNameNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+listener failed
+listener failureMessage: Did not fail to checkpoint when there are no valid storage dirs
+listener stackTrace: java.lang.AssertionError: Did not fail to checkpoint when there are no valid storage dirs
+listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testCheckpointWithSeparateDirsAfterNameFails
+listener succeed
+listener all testRunFinished

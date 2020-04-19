@@ -1,0 +1,33 @@
+listener test started org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+listener failed
+listener failureMessage: inode should complete in ~30000 ms.
+listener stackTrace: java.lang.AssertionError: inode should complete in ~30000 ms.
+listener testfinished org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+listener succeed
+listener all testRunFinished

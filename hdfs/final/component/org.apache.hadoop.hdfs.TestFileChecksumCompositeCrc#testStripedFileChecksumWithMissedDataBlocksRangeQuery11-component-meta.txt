@@ -1,0 +1,49 @@
+listener test started org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery11
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery11
+listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery11
+listener failed
+listener failureMessage: `/striped/stripedFileChecksum1': Fail to get block checksum for LocatedStripedBlock{BP-1188829169-172.17.0.21-1587271040152:blk_-9223372036854775792_1001; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:36373,DS-c7037b3c-97e5-48f6-9a13-fe73b959a646,DISK], DatanodeInfoWithStorage[127.0.0.1:46568,DS-0ecdedab-9ca2-485d-b592-6e2cfb487da6,DISK], DatanodeInfoWithStorage[127.0.0.1:41485,DS-2aaf36aa-00ba-414a-972d-206d971d00bc,DISK], DatanodeInfoWithStorage[127.0.0.1:46560,DS-6d8811cd-7f54-40ee-a989-55e5107f846d,DISK], DatanodeInfoWithStorage[127.0.0.1:42625,DS-b1aa28cb-619c-43a7-a162-34ce57004887,DISK], DatanodeInfoWithStorage[127.0.0.1:40069,DS-fc2ad561-4b18-4a1e-b57f-f456d2abc773,DISK], DatanodeInfoWithStorage[127.0.0.1:39632,DS-e12108b4-def9-4659-ad4a-39dfaf785386,DISK], DatanodeInfoWithStorage[127.0.0.1:44539,DS-8140e1d1-2144-486a-b6fa-5d20798f8028,DISK]]; indices=[0, 1, 3, 4, 5, 6, 7, 8]}
+listener stackTrace: org.apache.hadoop.fs.PathIOException: `/striped/stripedFileChecksum1': Fail to get block checksum for LocatedStripedBlock{BP-1188829169-172.17.0.21-1587271040152:blk_-9223372036854775792_1001; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:36373,DS-c7037b3c-97e5-48f6-9a13-fe73b959a646,DISK], DatanodeInfoWithStorage[127.0.0.1:46568,DS-0ecdedab-9ca2-485d-b592-6e2cfb487da6,DISK], DatanodeInfoWithStorage[127.0.0.1:41485,DS-2aaf36aa-00ba-414a-972d-206d971d00bc,DISK], DatanodeInfoWithStorage[127.0.0.1:46560,DS-6d8811cd-7f54-40ee-a989-55e5107f846d,DISK], DatanodeInfoWithStorage[127.0.0.1:42625,DS-b1aa28cb-619c-43a7-a162-34ce57004887,DISK], DatanodeInfoWithStorage[127.0.0.1:40069,DS-fc2ad561-4b18-4a1e-b57f-f456d2abc773,DISK], DatanodeInfoWithStorage[127.0.0.1:39632,DS-e12108b4-def9-4659-ad4a-39dfaf785386,DISK], DatanodeInfoWithStorage[127.0.0.1:44539,DS-8140e1d1-2144-486a-b6fa-5d20798f8028,DISK]]; indices=[0, 1, 3, 4, 5, 6, 7, 8]}
+listener testfinished org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery11
+listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery11
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery11
+listener succeed
+listener all testRunFinished

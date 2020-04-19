@@ -1,0 +1,24 @@
+listener test started org.apache.hadoop.hdfs.TestDFSStripedInputStreamWithRandomECPolicy#testStatefulReadWithDNFailure
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.TestDFSStripedInputStreamWithRandomECPolicy#testStatefulReadWithDNFailure
+listener writeFile testName is org.apache.hadoop.hdfs.TestDFSStripedInputStreamWithRandomECPolicy#testStatefulReadWithDNFailure
+listener failed
+listener failureMessage: arrays first differed at element [3145728]; expected:<14> but was:<12>
+listener stackTrace: arrays first differed at element [3145728]; expected:<14> but was:<12>
+listener testfinished org.apache.hadoop.hdfs.TestDFSStripedInputStreamWithRandomECPolicy#testStatefulReadWithDNFailure
+listener writeFile testName is org.apache.hadoop.hdfs.TestDFSStripedInputStreamWithRandomECPolicy#testStatefulReadWithDNFailure
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.TestDFSStripedInputStreamWithRandomECPolicy#testStatefulReadWithDNFailure
+listener succeed
+listener all testRunFinished

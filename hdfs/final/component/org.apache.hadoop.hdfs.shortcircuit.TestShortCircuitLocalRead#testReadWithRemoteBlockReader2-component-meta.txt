@@ -1,0 +1,18 @@
+listener test started org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead#testReadWithRemoteBlockReader2
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead#testReadWithRemoteBlockReader2
+listener writeFile testName is org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead#testReadWithRemoteBlockReader2
+listener failed
+listener failureMessage: The short-circuit local reads feature is enabled but dfs.domain.socket.path is not set.
+listener stackTrace: org.apache.hadoop.HadoopIllegalArgumentException: The short-circuit local reads feature is enabled but dfs.domain.socket.path is not set.
+listener testfinished org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead#testReadWithRemoteBlockReader2
+listener writeFile testName is org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead#testReadWithRemoteBlockReader2
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.shortcircuit.TestShortCircuitLocalRead#testReadWithRemoteBlockReader2
+listener succeed
+listener all testRunFinished

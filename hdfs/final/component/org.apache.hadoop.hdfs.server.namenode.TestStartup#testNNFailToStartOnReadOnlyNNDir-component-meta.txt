@@ -1,0 +1,21 @@
+listener test started org.apache.hadoop.hdfs.server.namenode.TestStartup#testNNFailToStartOnReadOnlyNNDir
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs NameNode stop
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.server.namenode.TestStartup#testNNFailToStartOnReadOnlyNNDir
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestStartup#testNNFailToStartOnReadOnlyNNDir
+listener failed
+listener failureMessage: Restarting NN should fail on read only NN dir.
+listener stackTrace: java.lang.AssertionError: Restarting NN should fail on read only NN dir.
+listener testfinished org.apache.hadoop.hdfs.server.namenode.TestStartup#testNNFailToStartOnReadOnlyNNDir
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestStartup#testNNFailToStartOnReadOnlyNNDir
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestStartup#testNNFailToStartOnReadOnlyNNDir
+listener succeed
+listener all testRunFinished

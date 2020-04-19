@@ -1,0 +1,18 @@
+listener test started org.apache.hadoop.hdfs.server.namenode.TestStorageRestore#testMultipleSecondaryCheckpoint
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode init
+hdfs DataNode start
+hdfs SecondaryNameNode init
+hdfs SecondaryNameNode stop
+hdfs NameNode stop
+hdfs NameNode init
+hdfs NameNode start
+hdfs DataNode stop
+hdfs NameNode stop
+hdfs SecondaryNameNode stop
+listener testfinished org.apache.hadoop.hdfs.server.namenode.TestStorageRestore#testMultipleSecondaryCheckpoint
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestStorageRestore#testMultipleSecondaryCheckpoint
+listener succeed
+listener all testRunFinished

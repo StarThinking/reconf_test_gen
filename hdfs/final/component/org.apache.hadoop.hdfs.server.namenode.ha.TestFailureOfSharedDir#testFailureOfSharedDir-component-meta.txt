@@ -1,0 +1,18 @@
+listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir#testFailureOfSharedDir
+listener unitTestCounterInClass = 0
+hdfs NameNode init
+hdfs NameNode start
+hdfs NameNode init
+hdfs NameNode start
+hdfs NameNode stop
+hdfs NameNode stop
+listener test Failure org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir#testFailureOfSharedDir
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir#testFailureOfSharedDir
+listener failed
+listener failureMessage: Succeeded in rolling edit log despite shared dir being deleted
+listener stackTrace: java.lang.AssertionError: Succeeded in rolling edit log despite shared dir being deleted
+listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir#testFailureOfSharedDir
+listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir#testFailureOfSharedDir
+listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.ha.TestFailureOfSharedDir#testFailureOfSharedDir
+listener succeed
+listener all testRunFinished
