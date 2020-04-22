@@ -1,208 +1,208 @@
-diff -ruN ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java
---- ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-04-15 05:14:24.553492436 +0000
-+++ /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-03-11 04:27:36.000000000 +0000
-@@ -33,13 +33,6 @@
+diff -ruN /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java
+--- /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-04-15 05:14:24.000000000 +0000
+@@ -33,6 +33,13 @@
  import org.junit.runner.notification.Failure;
  import org.junit.runner.notification.RunListener;
  
--import org.junit.runner.Description;
--import org.junit.runner.Result;
--import java.io.File;
--import java.io.BufferedWriter;
--import java.io.FileWriter;
--import org.apache.commons.lang3.exception.ExceptionUtils;
--
++import org.junit.runner.Description;
++import org.junit.runner.Result;
++import java.io.File;
++import java.io.BufferedWriter;
++import java.io.FileWriter;
++import org.apache.commons.lang3.exception.ExceptionUtils;
++
  /**
   * JUnit run listener which prints full thread dump into System.err
   * in case a test is failed due to timeout.
-@@ -52,13 +45,6 @@
+@@ -45,6 +52,13 @@
  
    private final PrintWriter output;
  
--  public String controllerRootDir = "/root/parameter_test_controller/";
--  public String resultDirName = controllerRootDir + "shared/test_results/";
--  public String warnDirName = controllerRootDir + "shared/warn_results/";
--  public String SEPERATOR = "@@@";
--  public String globalTestName = "";
--  public int unitTestCounterInClass = 0;
--
++  public String controllerRootDir = "/root/parameter_test_controller/";
++  public String resultDirName = controllerRootDir + "shared/test_results/";
++  public String warnDirName = controllerRootDir + "shared/warn_results/";
++  public String SEPERATOR = "@@@";
++  public String globalTestName = "";
++  public int unitTestCounterInClass = 0;
++
    public TimedOutTestsListener() {
      this.output = new PrintWriter(System.err);
    }
-@@ -67,120 +53,8 @@
+@@ -53,8 +67,120 @@
      this.output = output;
    }
  
--  private void writeFile(String testName, String failureMessage, String stackTrace, String result) throws Exception {
--      System.out.println("msx-listener writeFile testName is " + testName);
--      File theFile = null;
--      if (testName.equals("")) {
--          Date date = new Date();
--          SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
--          String dateTime = "Warn-" + formatter.format(date);
--          theFile = new File(warnDirName + dateTime);
--      } else {
--          theFile = new File(resultDirName + testName);
--      }
--
--      if (!theFile.exists()) {
--          BufferedWriter writer = new BufferedWriter(new FileWriter(theFile)); 
--          writer.write(testName + SEPERATOR + result + SEPERATOR + failureMessage + SEPERATOR + stackTrace + SEPERATOR);
--          writer.flush();
--          writer.close();
--      } else {
--          System.out.println("msx-listener INFO: file existed " + theFile);
--      }
--  }
--
--  private String getTestName(String className, String methodName) throws Exception {
--      if (className == null || methodName == null || className.equals("") || methodName.equals("")) {
--          if (!globalTestName.equals("") && !globalTestName.equals("#")) {
--              System.out.println("msx-listener WARN: using globalTestName " + globalTestName);
--              return globalTestName;
--          } else {
--              System.out.println("msx-listener ERROR: unable to obtain test name!");
--              return "";
--          } 
--      }
--      return className + "#" + methodName;
--  }
--
--  private void succeed(String testName, Description description) throws Exception {
--      String failureMessage = "none";
--      String stackTrace = "none";
--      String result = "1";
--      writeFile(testName, failureMessage, stackTrace, result);
--      System.out.println("msx-listener succeed");
--      //reset();
--  }
--
--  private void failed(String testName, Failure failure) throws Exception {
--      String failureMessage = failure.getMessage();
--      String stackTrace = ExceptionUtils.getStackTrace(failure.getException());
--      String result = "-1";
--      writeFile(testName, failureMessage, stackTrace, result);
--      System.out.println("msx-listener failed");
--      System.out.println("msx-listener failureMessage: " + failureMessage);
--      System.out.println("msx-listener stackTrace: " + stackTrace);
--      //reset();
--  }
--
--  @Override
--  public void testStarted(Description description) throws java.lang.Exception {
--      globalTestName = description.getClassName() + "#" + description.getMethodName();
--      System.out.println("msx-listener test started " + globalTestName);
--      if (unitTestCounterInClass > 0) { // perform reset
--          System.out.println("msx-listener perform reset as unitTestCounterInClass " + unitTestCounterInClass + " is larger than zero");
--          //reset();
--      } else {
--          System.out.println("msx-listener unitTestCounterInClass = " + unitTestCounterInClass);
--      }
--      unitTestCounterInClass++;
--  }
--
--  @Override
--  public void testFinished(Description description) throws Exception {
--      String testName = getTestName(description.getClassName(), description.getMethodName());
--      System.out.println("msx-listener testfinished " + testName);
--      succeed(testName, description);
--  }
--
--  @Override
--  public void testIgnored(Description description) throws Exception {
--      String testName = getTestName(description.getClassName(), description.getMethodName());
--      System.out.println("msx-listener test Ignored " + testName);
--      succeed(testName, description);
--  }
--
--  public void myTestFailure(Failure failure) throws Exception{
--      Description description = failure.getDescription();
--      String testName = getTestName(description.getClassName(), description.getMethodName());
--      System.out.println("msx-listener test Failure " + testName);
--      failed(testName, failure);
--  }
--
--  @Override
--  public void testAssumptionFailure(Failure failure) {
--      try {
--          Description description = failure.getDescription();
--          String testName = getTestName(description.getClassName(), description.getMethodName());
--          System.out.println("msx-listener testAssumptionFailure " + testName);
--          failed(testName, failure);
--      } catch(Exception e) {
--          e.printStackTrace();
--      }
--  }
--   
--  @Override // Called before any tests have been run.
--  public void testRunStarted(Description description) throws Exception {
--      System.out.println("msx-listener all testRunStarted");
--  }
--
--  @Override // Called when all tests have finished
--  public void testRunFinished(Result result) throws Exception {
--      System.out.println("msx-listener all testRunFinished");
--  }
--
++  private void writeFile(String testName, String failureMessage, String stackTrace, String result) throws Exception {
++      System.out.println("msx-listener writeFile testName is " + testName);
++      File theFile = null;
++      if (testName.equals("")) {
++          Date date = new Date();
++          SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
++          String dateTime = "Warn-" + formatter.format(date);
++          theFile = new File(warnDirName + dateTime);
++      } else {
++          theFile = new File(resultDirName + testName);
++      }
++
++      if (!theFile.exists()) {
++          BufferedWriter writer = new BufferedWriter(new FileWriter(theFile)); 
++          writer.write(testName + SEPERATOR + result + SEPERATOR + failureMessage + SEPERATOR + stackTrace + SEPERATOR);
++          writer.flush();
++          writer.close();
++      } else {
++          System.out.println("msx-listener INFO: file existed " + theFile);
++      }
++  }
++
++  private String getTestName(String className, String methodName) throws Exception {
++      if (className == null || methodName == null || className.equals("") || methodName.equals("")) {
++          if (!globalTestName.equals("") && !globalTestName.equals("#")) {
++              System.out.println("msx-listener WARN: using globalTestName " + globalTestName);
++              return globalTestName;
++          } else {
++              System.out.println("msx-listener ERROR: unable to obtain test name!");
++              return "";
++          } 
++      }
++      return className + "#" + methodName;
++  }
++
++  private void succeed(String testName, Description description) throws Exception {
++      String failureMessage = "none";
++      String stackTrace = "none";
++      String result = "1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener succeed");
++      //reset();
++  }
++
++  private void failed(String testName, Failure failure) throws Exception {
++      String failureMessage = failure.getMessage();
++      String stackTrace = ExceptionUtils.getStackTrace(failure.getException());
++      String result = "-1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener failed");
++      System.out.println("msx-listener failureMessage: " + failureMessage);
++      System.out.println("msx-listener stackTrace: " + stackTrace);
++      //reset();
++  }
++
++  @Override
++  public void testStarted(Description description) throws java.lang.Exception {
++      globalTestName = description.getClassName() + "#" + description.getMethodName();
++      System.out.println("msx-listener test started " + globalTestName);
++      if (unitTestCounterInClass > 0) { // perform reset
++          System.out.println("msx-listener perform reset as unitTestCounterInClass " + unitTestCounterInClass + " is larger than zero");
++          //reset();
++      } else {
++          System.out.println("msx-listener unitTestCounterInClass = " + unitTestCounterInClass);
++      }
++      unitTestCounterInClass++;
++  }
++
++  @Override
++  public void testFinished(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener testfinished " + testName);
++      succeed(testName, description);
++  }
++
++  @Override
++  public void testIgnored(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Ignored " + testName);
++      succeed(testName, description);
++  }
++
++  public void myTestFailure(Failure failure) throws Exception{
++      Description description = failure.getDescription();
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Failure " + testName);
++      failed(testName, failure);
++  }
++
++  @Override
++  public void testAssumptionFailure(Failure failure) {
++      try {
++          Description description = failure.getDescription();
++          String testName = getTestName(description.getClassName(), description.getMethodName());
++          System.out.println("msx-listener testAssumptionFailure " + testName);
++          failed(testName, failure);
++      } catch(Exception e) {
++          e.printStackTrace();
++      }
++  }
++   
++  @Override // Called before any tests have been run.
++  public void testRunStarted(Description description) throws Exception {
++      System.out.println("msx-listener all testRunStarted");
++  }
++
++  @Override // Called when all tests have finished
++  public void testRunFinished(Result result) throws Exception {
++      System.out.println("msx-listener all testRunFinished");
++  }
++
    @Override
    public void testFailure(Failure failure) throws Exception {
--    myTestFailure(failure);
++    myTestFailure(failure);
      if (failure != null && failure.getMessage() != null
          && failure.getMessage().startsWith(TEST_TIMED_OUT_PREFIX)) {
        output.println("====> TEST TIMED OUT. PRINTING THREAD DUMP. <====");
-diff -ruN ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java
---- ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-04-15 03:27:15.000000000 +0000
-+++ /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-03-11 04:27:36.000000000 +0000
-@@ -492,7 +492,6 @@
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-04-15 03:27:15.000000000 +0000
+@@ -492,6 +492,7 @@
    public HMaster(final Configuration conf)
        throws IOException, KeeperException {
      super(conf);
--    LOG.info("msx-hbase HMaster init");
++    LOG.info("msx-hbase HMaster init");
      TraceUtil.initTracer(conf);
      try {
        if (conf.getBoolean(MAINTENANCE_MODE, false)) {
-@@ -572,8 +571,7 @@
+@@ -571,7 +572,8 @@
    // Main run loop. Calls through to the regionserver run loop AFTER becoming active Master; will
    // block in here until then.
    @Override
--  public void run() { 
--    LOG.info("msx-hbase HMaster start");
-+  public void run() {
+-  public void run() {
++  public void run() { 
++    LOG.info("msx-hbase HMaster start");
      try {
        if (!conf.getBoolean("hbase.testing.nocluster", false)) {
          Threads.setDaemonThreadRunning(new Thread(() -> {
-@@ -2787,7 +2785,6 @@
+@@ -2785,6 +2787,7 @@
    }
  
    public void stopMaster() throws IOException {
--    LOG.info("msx-hbase HMaster stop");
++    LOG.info("msx-hbase HMaster stop");
      if (cpHost != null) {
        cpHost.preStopMaster();
      }
-diff -ruN ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java
---- ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-04-15 03:27:15.000000000 +0000
-+++ /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-03-11 04:27:36.000000000 +0000
-@@ -564,7 +564,6 @@
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-04-15 03:27:15.000000000 +0000
+@@ -564,6 +564,7 @@
    // Defer till after we register with the Master as much as possible. See #startServices.
    public HRegionServer(Configuration conf) throws IOException {
      super("RegionServer");  // thread name
--    LOG.info("msx-hbase HRegionServer init");
++    LOG.info("msx-hbase HRegionServer init");
      TraceUtil.initTracer(conf);
      try {
        this.startcode = System.currentTimeMillis();
-@@ -970,7 +969,6 @@
+@@ -969,6 +970,7 @@
     */
    @Override
    public void run() {
--    LOG.info("msx-hbase HRegionServer start");
++    LOG.info("msx-hbase HRegionServer start");
      try {
        // Do pre-registration initializations; zookeeper, lease threads, etc.
        preRegistrationInitialization();
-@@ -2219,7 +2217,6 @@
+@@ -2217,6 +2219,7 @@
     */
    public void stop(final String msg, final boolean force, final User user) {
      if (!this.stopped) {
--      LOG.info("msx-hbase HRegionServer stop");
++      LOG.info("msx-hbase HRegionServer stop");
        LOG.info("***** STOPPING region server '" + this + "' *****");
        if (this.rsHost != null) {
          // when forced via abort don't allow CPs to override
