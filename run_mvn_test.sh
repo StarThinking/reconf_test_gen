@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo $@
 if [ $# -lt 3 ]; then echo 'ERROR: ./run_mvn_test.sh [project] [test_name] [log_dts_dir|none]'; exit -1; fi
 
 # yarn mapreduce hdfs hbase
@@ -24,8 +24,8 @@ echo "sub_project for $the_test is $sub_project"
 
 # run mvn test
 echo "the_test is $the_test"
-cd $project_root_dir; mvn test -Dtest=$the_test
-#cd $sub_project; mvn test -Dtest=$the_test
+#cd $project_root_dir; mvn test -Dtest=$the_test
+cd $sub_project; mvn test -Dtest=$the_test
 
 # log
 test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt

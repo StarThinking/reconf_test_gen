@@ -1,0 +1,213 @@
+diff -ruN /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java
+--- /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java	2018-05-05 10:34:35.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java	2020-04-17 04:33:36.353188135 +0000
+@@ -106,6 +106,7 @@
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    System.out.println("msx-hdfs JournalNode init");
+     this.conf = conf;
+     this.localDir = new File(
+         conf.get(DFSConfigKeys.DFS_JOURNALNODE_EDITS_DIR_KEY,
+@@ -141,6 +142,7 @@
+    * Start listening for edits via RPC.
+    */
+   public void start() throws IOException {
++    System.out.println("msx-hdfs JournalNode start");
+     Preconditions.checkState(!isStarted(), "JN already running");
+     
+     validateAndCreateJournalDir(localDir);
+@@ -191,6 +193,7 @@
+    * should indicate an error)
+    */
+   public void stop(int rc) {
++    System.out.println("msx-hdfs JournalNode stop");
+     this.resultCode = rc;
+     
+     if (rpcServer != null) { 
+diff -ruN /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java
+--- /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java	2018-05-05 10:34:35.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java	2020-04-17 04:33:09.756906504 +0000
+@@ -401,6 +401,7 @@
+   @InterfaceAudience.LimitedPrivate("HDFS")
+   DataNode(final Configuration conf) {
+     super(conf);
++    System.out.println("msx-hdfs DataNode init");
+     this.blockScanner = new BlockScanner(this, conf);
+     this.tracer = createTracer(conf);
+     this.tracerConfigurationManager =
+@@ -425,6 +426,7 @@
+            final List<StorageLocation> dataDirs,
+            final SecureResources resources) throws IOException {
+     super(conf);
++    System.out.println("msx-hdfs DataNode init");
+     this.tracer = createTracer(conf);
+     this.tracerConfigurationManager =
+         new TracerConfigurationManager(DATANODE_HTRACE_PREFIX, conf);
+@@ -1852,6 +1854,7 @@
+    * Otherwise, deadlock might occur.
+    */
+   public void shutdown() {
++    System.out.println("msx-hdfs DataNode stop");
+     stopMetricsLogger();
+     if (plugins != null) {
+       for (ServicePlugin p : plugins) {
+@@ -2439,6 +2442,7 @@
+    *  If this thread is specifically interrupted, it will stop waiting.
+    */
+   public void runDatanodeDaemon() throws IOException {
++    System.out.println("msx-hdfs DataNode start");
+     blockPoolManager.startAll();
+ 
+     // start dataXceiveServer
+diff -ruN /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java
+--- /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java	2018-05-05 10:34:35.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java	2020-04-17 04:24:36.271469153 +0000
+@@ -887,6 +887,7 @@
+ 
+   protected NameNode(Configuration conf, NamenodeRole role)
+       throws IOException {
++    System.out.println("msx-hdfs NameNode init");
+     this.tracer = new Tracer.Builder("NameNode").
+         conf(TraceUtils.wrapHadoopConf(NAMENODE_HTRACE_PREFIX, conf)).
+         build();
+@@ -918,6 +919,7 @@
+       this.stopAtException(e);
+       throw e;
+     }
++    System.out.println("msx-hdfs NameNode start");
+     this.started.set(true);
+   }
+ 
+@@ -959,6 +961,7 @@
+    * Stop all NameNode threads and wait for all to finish.
+    */
+   public void stop() {
++    System.out.println("msx-hdfs NameNode stop");
+     synchronized(this) {
+       if (stopRequested)
+         return;
+diff -ruN /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java
+--- /hadoop-2.8.5-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java	2018-05-05 10:34:35.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java	2020-04-17 04:32:35.832547276 +0000
+@@ -183,6 +183,7 @@
+   
+   public SecondaryNameNode(Configuration conf,
+       CommandLineOpts commandLineOpts) throws IOException {
++    System.out.println("msx-hdfs SecondaryNameNode init");
+     try {
+       String nsId = DFSUtil.getSecondaryNameServiceId(conf);
+       if (HAUtil.isHAEnabled(conf, nsId)) {
+@@ -280,6 +281,7 @@
+    * Returns only after shutdown is complete.
+    */
+   public void shutdown() {
++    System.out.println("msx-hdfs SecondaryNameNode stop");
+     shouldRun = false;
+     if (checkpointThread != null) {
+       checkpointThread.interrupt();
+@@ -318,6 +320,7 @@
+ 
+   @Override
+   public void run() {
++    System.out.println("msx-hdfs SecondaryNameNode start");
+     SecurityUtil.doAsLoginUserOrFatal(
+         new PrivilegedAction<Object>() {
+         @Override
+diff -ruN /hadoop-2.8.5-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java
+--- /hadoop-2.8.5-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java	2018-05-05 10:34:36.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java	2020-04-17 04:34:15.493602597 +0000
+@@ -193,9 +193,16 @@
+       super(JobHistoryServerWrapper.class.getName());
+     }
+     private volatile boolean jhsStarted = false;
++     
++    @Override
++    protected synchronized void serviceInit(Configuration conf) throws Exception {
++       super.serviceInit(conf);
++       System.out.println("msx-mapreduce JobHistoryServer init");
++    }
+ 
+     @Override
+     public synchronized void serviceStart() throws Exception {
++      System.out.println("msx-mapreduce JobHistoryServer start");
+       try {
+         if (!getConfig().getBoolean(
+             JHAdminConfig.MR_HISTORY_MINICLUSTER_FIXED_PORTS,
+@@ -251,6 +258,7 @@
+ 
+     @Override
+     public synchronized void serviceStop() throws Exception {
++      System.out.println("msx-mapreduce JobHistoryServer stop");
+       if (historyServer != null) {
+         historyServer.stop();
+       }
+diff -ruN /hadoop-2.8.5-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java
+--- /hadoop-2.8.5-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java	2018-05-05 10:34:36.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java	2020-04-17 04:34:59.326066745 +0000
+@@ -472,10 +472,12 @@
+         throws Exception {
+       initResourceManager(index, conf);
+       super.serviceInit(conf);
++      System.out.println("msx-yarn ResourceManager init");
+     }
+ 
+     @Override
+     protected synchronized void serviceStart() throws Exception {
++      System.out.println("msx-yarn ResourceManager start");
+       startResourceManager(index);
+       if(index == 0 && resourceManagers[index].getRMContext().isHAEnabled()) {
+         resourceManagers[index].getRMContext().getRMAdminService()
+@@ -504,6 +506,7 @@
+     
+     @Override
+     protected synchronized void serviceStop() throws Exception {
++      System.out.println("msx-yarn ResourceManager stop");
+       if (resourceManagers[index] != null) {
+         waitForAppMastersToFinish(5000);
+         resourceManagers[index].stop();
+@@ -567,6 +570,7 @@
+       LOG.info("Starting NM: " + index);
+       nodeManagers[index].init(config);
+       super.serviceInit(config);
++      System.out.println("msx-yarn NodeManager init");
+     }
+ 
+     /**
+@@ -590,6 +594,7 @@
+     }
+ 
+     protected synchronized void serviceStart() throws Exception {
++      System.out.println("msx-yarn NodeManager start");
+       nodeManagers[index].start();
+       if (nodeManagers[index].getServiceState() != STATE.STARTED) {
+         // NM could have failed.
+@@ -600,6 +605,7 @@
+ 
+     @Override
+     protected synchronized void serviceStop() throws Exception {
++      System.out.println("msx-yarn NodeManager stop");
+       if (nodeManagers[index] != null) {
+         nodeManagers[index].stop();
+       }
+@@ -787,10 +793,12 @@
+       }
+       appHistoryServer.init(conf);
+       super.serviceInit(conf);
++      System.out.println("msx-yarn ApplicationHistoryServer init");
+     }
+ 
+     @Override
+     protected synchronized void serviceStart() throws Exception {
++      System.out.println("msx-yarn ApplicationHistoryServer start");
+       appHistoryServer.start();
+       if (appHistoryServer.getServiceState() != STATE.STARTED) {
+         // AHS could have failed.
+@@ -809,6 +817,7 @@
+ 
+     @Override
+     protected synchronized void serviceStop() throws Exception {
++      System.out.println("msx-yarn ApplicationHistoryServer stop");
+       if (appHistoryServer != null) {
+         appHistoryServer.stop();
+       }
