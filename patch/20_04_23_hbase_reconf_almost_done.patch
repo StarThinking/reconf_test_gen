@@ -1,0 +1,418 @@
+diff -ruN /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java
+--- /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-04-15 05:14:24.000000000 +0000
+@@ -33,6 +33,13 @@
+ import org.junit.runner.notification.Failure;
+ import org.junit.runner.notification.RunListener;
+ 
++import org.junit.runner.Description;
++import org.junit.runner.Result;
++import java.io.File;
++import java.io.BufferedWriter;
++import java.io.FileWriter;
++import org.apache.commons.lang3.exception.ExceptionUtils;
++
+ /**
+  * JUnit run listener which prints full thread dump into System.err
+  * in case a test is failed due to timeout.
+@@ -45,6 +52,13 @@
+ 
+   private final PrintWriter output;
+ 
++  public String controllerRootDir = "/root/parameter_test_controller/";
++  public String resultDirName = controllerRootDir + "shared/test_results/";
++  public String warnDirName = controllerRootDir + "shared/warn_results/";
++  public String SEPERATOR = "@@@";
++  public String globalTestName = "";
++  public int unitTestCounterInClass = 0;
++
+   public TimedOutTestsListener() {
+     this.output = new PrintWriter(System.err);
+   }
+@@ -53,8 +67,120 @@
+     this.output = output;
+   }
+ 
++  private void writeFile(String testName, String failureMessage, String stackTrace, String result) throws Exception {
++      System.out.println("msx-listener writeFile testName is " + testName);
++      File theFile = null;
++      if (testName.equals("")) {
++          Date date = new Date();
++          SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
++          String dateTime = "Warn-" + formatter.format(date);
++          theFile = new File(warnDirName + dateTime);
++      } else {
++          theFile = new File(resultDirName + testName);
++      }
++
++      if (!theFile.exists()) {
++          BufferedWriter writer = new BufferedWriter(new FileWriter(theFile)); 
++          writer.write(testName + SEPERATOR + result + SEPERATOR + failureMessage + SEPERATOR + stackTrace + SEPERATOR);
++          writer.flush();
++          writer.close();
++      } else {
++          System.out.println("msx-listener INFO: file existed " + theFile);
++      }
++  }
++
++  private String getTestName(String className, String methodName) throws Exception {
++      if (className == null || methodName == null || className.equals("") || methodName.equals("")) {
++          if (!globalTestName.equals("") && !globalTestName.equals("#")) {
++              System.out.println("msx-listener WARN: using globalTestName " + globalTestName);
++              return globalTestName;
++          } else {
++              System.out.println("msx-listener ERROR: unable to obtain test name!");
++              return "";
++          } 
++      }
++      return className + "#" + methodName;
++  }
++
++  private void succeed(String testName, Description description) throws Exception {
++      String failureMessage = "none";
++      String stackTrace = "none";
++      String result = "1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener succeed");
++      //reset();
++  }
++
++  private void failed(String testName, Failure failure) throws Exception {
++      String failureMessage = failure.getMessage();
++      String stackTrace = ExceptionUtils.getStackTrace(failure.getException());
++      String result = "-1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener failed");
++      System.out.println("msx-listener failureMessage: " + failureMessage);
++      System.out.println("msx-listener stackTrace: " + stackTrace);
++      //reset();
++  }
++
++  @Override
++  public void testStarted(Description description) throws java.lang.Exception {
++      globalTestName = description.getClassName() + "#" + description.getMethodName();
++      System.out.println("msx-listener test started " + globalTestName);
++      if (unitTestCounterInClass > 0) { // perform reset
++          System.out.println("msx-listener perform reset as unitTestCounterInClass " + unitTestCounterInClass + " is larger than zero");
++          //reset();
++      } else {
++          System.out.println("msx-listener unitTestCounterInClass = " + unitTestCounterInClass);
++      }
++      unitTestCounterInClass++;
++  }
++
++  @Override
++  public void testFinished(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener testfinished " + testName);
++      succeed(testName, description);
++  }
++
++  @Override
++  public void testIgnored(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Ignored " + testName);
++      succeed(testName, description);
++  }
++
++  public void myTestFailure(Failure failure) throws Exception{
++      Description description = failure.getDescription();
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Failure " + testName);
++      failed(testName, failure);
++  }
++
++  @Override
++  public void testAssumptionFailure(Failure failure) {
++      try {
++          Description description = failure.getDescription();
++          String testName = getTestName(description.getClassName(), description.getMethodName());
++          System.out.println("msx-listener testAssumptionFailure " + testName);
++          failed(testName, failure);
++      } catch(Exception e) {
++          e.printStackTrace();
++      }
++  }
++   
++  @Override // Called before any tests have been run.
++  public void testRunStarted(Description description) throws Exception {
++      System.out.println("msx-listener all testRunStarted");
++  }
++
++  @Override // Called when all tests have finished
++  public void testRunFinished(Result result) throws Exception {
++      System.out.println("msx-listener all testRunFinished");
++  }
++
+   @Override
+   public void testFailure(Failure failure) throws Exception {
++    myTestFailure(failure);
+     if (failure != null && failure.getMessage() != null
+         && failure.getMessage().startsWith(TEST_TIMED_OUT_PREFIX)) {
+       output.println("====> TEST TIMED OUT. PRINTING THREAD DUMP. <====");
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/ReconfAgent.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/ReconfAgent.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/ReconfAgent.java	1970-01-01 00:00:00.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/ReconfAgent.java	2020-04-23 05:00:20.288521967 +0000
+@@ -0,0 +1,150 @@
++package org.apache.hadoop.hbase;
++
++import java.io.*;
++
++import org.apache.hadoop.hbase.HBaseInterfaceAudience;
++import org.apache.yetus.audience.InterfaceAudience;
++import org.apache.hadoop.conf.Configuration;
++
++@InterfaceAudience.LimitedPrivate(HBaseInterfaceAudience.TOOLS)
++public class ReconfAgent {
++    private static final int RP_MODE_INSTANCE = -1; // set v2 to a single instance of the specified component throughout a test
++    private static final int RP_MODE_COMPONENT = -2; // set v2 to all instances for the specified component
++    //private static final String RP_MODE_RECONF = "1"; // set v2 to a single life cycle of a single instance of the specified component
++    private static final String reconf_systemRootDir = "/root/parameter_test_controller/";
++
++    // variables have to be reset for each test
++    public static boolean reconf_instanceWithV2Alive = false;
++    public static int reconf_instanceWithV2HC = -1;
++    public static int reconf_init_point_index = 0;
++
++    protected int reconf_msxPort = 0; // per object
++
++    private static String reconf_vvmode = "";
++    protected static String reconf_parameter = ""; // double check in start/stop
++    private static String reconf_component = "";
++    private static String reconf_v1 = "";
++    private static String reconf_v2 = "";
++    protected static String reconf_point = ""; // synchronized for locking
++    private static int reconf_point_int = 0; 
++
++    private static void loadSharedVariables() {
++        try {
++            BufferedReader reader;
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_vvmode")));
++            reconf_vvmode = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_parameter")));
++            reconf_parameter = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_component")));
++            reconf_component = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_v1")));
++            reconf_v1 = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_v2")));
++            reconf_v2 = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_point")));
++            reconf_point = reader.readLine();
++            reader.close();
++
++            reconf_point_int = Integer.valueOf(reconf_point);
++
++            if (!reconf_vvmode.equals("v1v1") && !reconf_vvmode.equals("v2v2") && !reconf_vvmode.equals("v1v2") && !reconf_vvmode.equals("none")) {
++                System.out.println("msx-reconfagent Error : wrong value of reconf_vvmode " + reconf_vvmode);
++                System.exit(1);
++            }
++        } catch (Exception e) {
++            System.out.println("msx-reconfagent Error : loadSharedVariables");
++            e.printStackTrace();
++        }
++    }
++
++    static {
++        loadSharedVariables();
++    }
++
++    public void checkReconfAtShutdown(String component, Configuration myConf) {
++	System.out.println("msx-reconfagent " + component + " stop, parameter=" + reconf_parameter + " value=" + myConf.get(reconf_parameter));
++    }
++
++    public void performReconf(String component, Configuration myConf) {
++      if (reconf_vvmode.equals("none")) {
++          System.out.println("msx-reconfagent " + component + " init, vvmode is none, do nothing");
++      }
++
++      if (reconf_vvmode.equals("v1v1")) {
++          myConf.set(reconf_parameter, reconf_v1);
++          System.out.println("msx-reconfagent " + component + " init, parameter=" + reconf_parameter + " vvmode=" + reconf_vvmode + " parameter=v1=" + reconf_v1);
++      }
++
++      if ((reconf_vvmode.equals("v2v2"))) {
++          if (this == null) {
++              System.out.println("msx-reconfagent this == null");
++          }
++          if (myConf == null) {
++              System.out.println("msx-reconfagent myConf == null");
++          }
++          if (reconf_parameter == null) {
++              System.out.println("msx-reconfagent reconf_parameter == null");
++          }
++          if (reconf_v2 == null) {
++              System.out.println("msx-reconfagent reconf_v2 == null");
++          }
++          myConf.set(reconf_parameter, reconf_v2);
++          System.out.println("msx-reconfagent " + component + " init, parameter=" + reconf_parameter + " vvmode=" + reconf_vvmode + " parameter=v2=" + reconf_v2);
++      }
++
++      if (reconf_vvmode.equals("v1v2")) { // reconfiguration injection
++          try {
++              synchronized(reconf_point) {
++                  if (reconf_component.equals(component)) {
++                      if (reconf_point_int == RP_MODE_COMPONENT) {
++                          myConf.set(reconf_parameter, reconf_v2);
++                          System.out.println("msx-reconfagent " + component + " init, perform Component-Wide v1v2 reconf " + reconf_point +  " for " + component + ". " +
++                              "Assign " + reconf_parameter + " as v2 value " + reconf_v2);
++                      } else if (reconf_point_int == RP_MODE_INSTANCE) {
++                          if (reconf_instanceWithV2Alive == false) {
++                                reconf_instanceWithV2Alive = true;
++                                reconf_instanceWithV2HC = this.hashCode();
++                                myConf.set(reconf_parameter, reconf_v2);
++                                System.out.println("msx-reconfagent " + component + " init, perform Instance-Wide v1v2 reconf " + reconf_point +  " for " + component + ". " +
++                                    "Assign " + reconf_parameter + " as v2 value " + reconf_v2);
++                                System.out.println("msx-reconfagent switch instanceWithV2Alive to true and record instanceWithV2HC as " + reconf_instanceWithV2HC);
++                            } else { // the instance configured with v2 is still alive
++                                myConf.set(reconf_parameter, reconf_v1);
++                                System.out.println("msx-reconfagent " + component + " init, the instance configured with v2 is still alive. " +
++                                    "Assign " + reconf_parameter + " as v1 value " + reconf_v1);
++                            }
++                      } else {
++                          reconf_init_point_index ++;
++                          if (reconf_point_int == reconf_init_point_index) {
++                              myConf.set(reconf_parameter, reconf_v2);
++                              System.out.println("msx-reconfagent " + component + " init, perform Reconf-Wide v1v2 reconf " + reconf_point +  " for " + component + ". " +
++                                  "Assign " + reconf_parameter + " as v2 value " + reconf_v2);
++                          } else {
++                              myConf.set(reconf_parameter, reconf_v1);
++                              System.out.println("msx-reconfagent " + component + " init, reconf_init_point_index is " + reconf_init_point_index + " but reconf_point is " + reconf_point + ". " +
++                                  "Assign " + reconf_parameter + " as v1 value " + reconf_v1);
++                          }
++                      }
++                  } else { // for other component instances, just configure it to be v1
++                      myConf.set(reconf_parameter, reconf_v1);
++                      System.out.println("msx-reconfagent " + component + " init, I'm not the component concerned for this reconf test. " +
++                          "Assign " + reconf_parameter + " as v1 value " + reconf_v1);
++                  }
++              }
++          } catch (Exception e) {
++              System.out.println("msx-reconfagent Error happened during performReconf");
++              System.exit(1);
++          }
++      }
++    }
++}
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-04-23 05:22:23.034510676 +0000
+@@ -225,6 +225,9 @@
+ import org.apache.hadoop.hbase.shaded.protobuf.generated.AdminProtos.GetRegionInfoResponse.CompactionState;
+ import org.apache.hadoop.hbase.shaded.protobuf.generated.SnapshotProtos.SnapshotDescription;
+ 
++// msx
++import org.apache.hadoop.hbase.ReconfAgent;
++
+ /**
+  * HMaster is the "master server" for HBase. An HBase cluster has one active
+  * master.  If many masters are started, all compete.  Whichever wins goes on to
+@@ -477,6 +480,9 @@
+     }
+   }
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent();
++
+   /**
+    * Initializes the HMaster. The steps are as follows:
+    * <p>
+@@ -492,6 +498,8 @@
+   public HMaster(final Configuration conf)
+       throws IOException, KeeperException {
+     super(conf);
++    LOG.info("msx-hbase HMaster init");
++    reconfAgent.performReconf("HMaster", this.conf);
+     TraceUtil.initTracer(conf);
+     try {
+       if (conf.getBoolean(MAINTENANCE_MODE, false)) {
+@@ -571,7 +579,8 @@
+   // Main run loop. Calls through to the regionserver run loop AFTER becoming active Master; will
+   // block in here until then.
+   @Override
+-  public void run() {
++  public void run() { 
++    LOG.info("msx-hbase HMaster start");
+     try {
+       if (!conf.getBoolean("hbase.testing.nocluster", false)) {
+         Threads.setDaemonThreadRunning(new Thread(() -> {
+@@ -2793,6 +2802,8 @@
+ 
+   @Override
+   public void stop(String msg) {
++    LOG.info("msx-hbase HMaster stop");
++    reconfAgent.checkReconfAtShutdown("HMaster", this.conf);
+     if (!isStopped()) {
+       super.stop(msg);
+       if (this.activeMasterManager != null) {
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-04-23 05:16:39.582878501 +0000
+@@ -231,6 +231,9 @@
+ import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.ReportRegionStateTransitionRequest;
+ import org.apache.hadoop.hbase.shaded.protobuf.generated.RegionServerStatusProtos.ReportRegionStateTransitionResponse;
+ 
++// msx
++import org.apache.hadoop.hbase.ReconfAgent;
++
+ /**
+  * HRegionServer makes a set of HRegions available to clients. It checks in with
+  * the HMaster. There are many HRegionServers in a single HBase deployment.
+@@ -557,6 +560,8 @@
+   /**regionserver codec list **/
+   public static final String REGIONSERVER_CODEC = "hbase.regionserver.codecs";
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent();
+   /**
+    * Starts a HRegionServer at the default location
+    */
+@@ -564,6 +569,9 @@
+   // Defer till after we register with the Master as much as possible. See #startServices.
+   public HRegionServer(Configuration conf) throws IOException {
+     super("RegionServer");  // thread name
++    LOG.info("msx-hbase HRegionServer init");
++    reconfAgent.performReconf("HRegionServer", conf);
++
+     TraceUtil.initTracer(conf);
+     try {
+       this.startcode = System.currentTimeMillis();
+@@ -969,6 +977,7 @@
+    */
+   @Override
+   public void run() {
++    LOG.info("msx-hbase HRegionServer start");
+     try {
+       // Do pre-registration initializations; zookeeper, lease threads, etc.
+       preRegistrationInitialization();
+@@ -2206,6 +2215,8 @@
+ 
+   @Override
+   public void stop(final String msg) {
++    LOG.info("msx-hbase HRegionServer stop");
++    reconfAgent.checkReconfAtShutdown("HRegionServer", this.conf);
+     stop(msg, false, RpcServer.getRequestUser().orElse(null));
+   }
+ 
+diff -ruN /hbase-2.2.4/pom.xml ./pom.xml
+--- /hbase-2.2.4/pom.xml	2020-03-11 04:27:36.000000000 +0000
++++ ./pom.xml	2020-04-16 06:32:43.000000000 +0000
+@@ -2641,7 +2641,7 @@
+           <dependency>
+             <groupId>org.apache.hadoop</groupId>
+             <artifactId>hadoop-common</artifactId>
+-            <version>${hadoop-two.version}</version>
++	    <version>${hadoop-two.version}</version>
+             <exclusions>
+               <exclusion>
+                 <groupId>com.sun.jersey</groupId>
