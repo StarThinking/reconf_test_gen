@@ -14,7 +14,9 @@ function copy_jar_for_hadoop {
     cp /root/hadoop-"$hadoop_version"-src/hadoop-hdfs-project/hadoop-hdfs/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-hdfs/"$hadoop_version"/
     ls -la /root/.m2/repository/org/apache/hadoop/hadoop-hdfs/"$hadoop_version"/ | grep "jar"$
     echo ''
-    
+   
+    if [ "$hadoop_version" == "2.8.5" ]; then return 0; fi
+     
     # Yarn
     ## MiniYARNCluster
     cp /root/hadoop-"$hadoop_version"-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-yarn-server-tests/"$hadoop_version"/
