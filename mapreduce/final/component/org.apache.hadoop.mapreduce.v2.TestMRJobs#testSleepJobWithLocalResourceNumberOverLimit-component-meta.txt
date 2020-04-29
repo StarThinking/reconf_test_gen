@@ -1,30 +1,29 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-yarn NodeManager init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-yarn NodeManager start
-listener test started org.apache.hadoop.mapreduce.v2.TestMRJobs#testSleepJobWithLocalResourceNumberOverLimit
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.mapreduce.v2.TestMRJobs#testSleepJobWithLocalResourceNumberOverLimit
-listener writeFile testName is org.apache.hadoop.mapreduce.v2.TestMRJobs#testSleepJobWithLocalResourceNumberOverLimit
-listener succeed
-yarn NodeManager stop
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 940584193 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 485475507 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 284034271 for JobHistoryServer
+msx-reconfagent creating ReconfAgent 655059806 for ResourceManager
+msx-reconfagent creating ReconfAgent 999674172 for NodeManager
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.mapreduce.v2.TestMRJobs#testSleepJobWithLocalResourceNumberOverLimit
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.mapreduce.v2.TestMRJobs#testSleepJobWithLocalResourceNumberOverLimit
+msx-listener writeFile testName is org.apache.hadoop.mapreduce.v2.TestMRJobs#testSleepJobWithLocalResourceNumberOverLimit
+msx-listener succeed
+msx-reconfagent NodeManager stop 1015539383, value is null
+msx-reconfagent NodeManager stop 1578959831, value is null
+msx-reconfagent NodeManager stop 1464652578, value is null
+msx-reconfagent ResourceManager stop 1446238973, value is null
+msx-reconfagent JobHistoryServer stop 1646410010, value is null
+msx-reconfagent DataNode stop 1482429406, value is null
+msx-reconfagent DataNode stop 130850024, value is null
+msx-reconfagent NameNode stop 85357160, value is null
+msx-listener all testRunFinished
+msx-rc 0

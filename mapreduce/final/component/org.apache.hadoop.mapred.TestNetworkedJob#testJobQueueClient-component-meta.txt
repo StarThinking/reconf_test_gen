@@ -1,18 +1,19 @@
-listener test started org.apache.hadoop.mapred.TestNetworkedJob#testJobQueueClient
-listener unitTestCounterInClass = 0
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-listener testfinished org.apache.hadoop.mapred.TestNetworkedJob#testJobQueueClient
-listener writeFile testName is org.apache.hadoop.mapred.TestNetworkedJob#testJobQueueClient
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.mapred.TestNetworkedJob#testJobQueueClient
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 425952025 for JobHistoryServer
+msx-reconfagent creating ReconfAgent 125318365 for ResourceManager
+msx-reconfagent creating ReconfAgent 608202724 for NodeManager
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager stop 171252010, value is null
+msx-reconfagent NodeManager stop 1301781103, value is null
+msx-reconfagent ResourceManager stop 1456552140, value is null
+msx-reconfagent JobHistoryServer stop 597719343, value is null
+msx-listener testfinished org.apache.hadoop.mapred.TestNetworkedJob#testJobQueueClient
+msx-listener writeFile testName is org.apache.hadoop.mapred.TestNetworkedJob#testJobQueueClient
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

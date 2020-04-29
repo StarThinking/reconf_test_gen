@@ -1,27 +1,27 @@
-listener test started org.apache.hadoop.mapred.TestReduceFetch#testReduceFromMem
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-listener testfinished org.apache.hadoop.mapred.TestReduceFetch#testReduceFromMem
-listener writeFile testName is org.apache.hadoop.mapred.TestReduceFetch#testReduceFromMem
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.mapred.TestReduceFetch#testReduceFromMem
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 711327356 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1388849499 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2118984327 for JobHistoryServer
+msx-reconfagent creating ReconfAgent 134048221 for ResourceManager
+msx-reconfagent creating ReconfAgent 671981276 for NodeManager
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1919576980, value is null
+msx-reconfagent DataNode stop 1563634025, value is null
+msx-reconfagent NameNode stop 260638966, value is null
+msx-reconfagent NodeManager stop 271502370, value is null
+msx-reconfagent NodeManager stop 168670597, value is null
+msx-reconfagent ResourceManager stop 1917149817, value is null
+msx-reconfagent JobHistoryServer stop 541330540, value is null
+msx-listener testfinished org.apache.hadoop.mapred.TestReduceFetch#testReduceFromMem
+msx-listener writeFile testName is org.apache.hadoop.mapred.TestReduceFetch#testReduceFromMem
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

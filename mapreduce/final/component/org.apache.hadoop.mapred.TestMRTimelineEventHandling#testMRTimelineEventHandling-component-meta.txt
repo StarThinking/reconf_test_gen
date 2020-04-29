@@ -1,18 +1,20 @@
-listener test started org.apache.hadoop.mapred.TestMRTimelineEventHandling#testMRTimelineEventHandling
-listener unitTestCounterInClass = 0
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn ApplicationHistoryServer init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn ApplicationHistoryServer start
-yarn ApplicationHistoryServer stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-listener testfinished org.apache.hadoop.mapred.TestMRTimelineEventHandling#testMRTimelineEventHandling
-listener writeFile testName is org.apache.hadoop.mapred.TestMRTimelineEventHandling#testMRTimelineEventHandling
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.mapred.TestMRTimelineEventHandling#testMRTimelineEventHandling
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1971851377 for JobHistoryServer
+msx-reconfagent creating ReconfAgent 728115831 for ResourceManager
+msx-reconfagent creating ReconfAgent 1609124502 for NodeManager
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 145066402 for ApplicationHistoryServer
+msx-reconfagent ApplicationHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ApplicationHistoryServer stop 1780414044, value is null
+msx-reconfagent NodeManager stop 1197721383, value is null
+msx-reconfagent ResourceManager stop 231311211, value is null
+msx-reconfagent JobHistoryServer stop 832743930, value is null
+msx-listener testfinished org.apache.hadoop.mapred.TestMRTimelineEventHandling#testMRTimelineEventHandling
+msx-listener writeFile testName is org.apache.hadoop.mapred.TestMRTimelineEventHandling#testMRTimelineEventHandling
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

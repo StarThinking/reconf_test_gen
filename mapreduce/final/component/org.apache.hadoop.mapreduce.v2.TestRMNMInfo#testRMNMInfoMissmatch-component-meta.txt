@@ -1,24 +1,23 @@
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-yarn NodeManager init
-yarn NodeManager init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-yarn NodeManager start
-yarn NodeManager start
-listener test started org.apache.hadoop.mapreduce.v2.TestRMNMInfo#testRMNMInfoMissmatch
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.mapreduce.v2.TestRMNMInfo#testRMNMInfoMissmatch
-listener writeFile testName is org.apache.hadoop.mapreduce.v2.TestRMNMInfo#testRMNMInfoMissmatch
-listener succeed
-yarn NodeManager stop
-yarn NodeManager stop
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1472682156 for JobHistoryServer
+msx-reconfagent creating ReconfAgent 580871917 for ResourceManager
+msx-reconfagent creating ReconfAgent 182531396 for NodeManager
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.mapreduce.v2.TestRMNMInfo#testRMNMInfoMissmatch
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.mapreduce.v2.TestRMNMInfo#testRMNMInfoMissmatch
+msx-listener writeFile testName is org.apache.hadoop.mapreduce.v2.TestRMNMInfo#testRMNMInfoMissmatch
+msx-listener succeed
+msx-reconfagent NodeManager stop 902860396, value is null
+msx-reconfagent NodeManager stop 712410124, value is null
+msx-reconfagent NodeManager stop 1406919011, value is null
+msx-reconfagent NodeManager stop 1154821602, value is null
+msx-reconfagent ResourceManager stop 1037854997, value is null
+msx-reconfagent JobHistoryServer stop 858507952, value is null
+msx-listener all testRunFinished
+msx-rc 0

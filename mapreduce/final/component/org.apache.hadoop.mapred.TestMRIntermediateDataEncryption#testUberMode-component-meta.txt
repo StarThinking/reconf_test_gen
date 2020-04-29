@@ -1,27 +1,27 @@
-listener test started org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-listener testfinished org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
-listener writeFile testName is org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1278677872 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1392886653 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1063723524 for JobHistoryServer
+msx-reconfagent creating ReconfAgent 1689723487 for ResourceManager
+msx-reconfagent creating ReconfAgent 1202547191 for NodeManager
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 440472115, value is null
+msx-reconfagent DataNode stop 609389093, value is null
+msx-reconfagent NameNode stop 405252209, value is null
+msx-reconfagent NodeManager stop 1860060918, value is null
+msx-reconfagent NodeManager stop 148813381, value is null
+msx-reconfagent ResourceManager stop 1955049794, value is null
+msx-reconfagent JobHistoryServer stop 286840121, value is null
+msx-listener testfinished org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
+msx-listener writeFile testName is org.apache.hadoop.mapred.TestMRIntermediateDataEncryption#testUberMode
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

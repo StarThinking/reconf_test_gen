@@ -1,18 +1,18 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-listener test started org.apache.hadoop.mapreduce.v2.hs.TestHistoryFileManager#testMoveToDoneAlreadyMovedSucceeds
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.mapreduce.v2.hs.TestHistoryFileManager#testMoveToDoneAlreadyMovedSucceeds
-listener writeFile testName is org.apache.hadoop.mapreduce.v2.hs.TestHistoryFileManager#testMoveToDoneAlreadyMovedSucceeds
-listener succeed
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1008315045 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 948395645 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.mapreduce.v2.hs.TestHistoryFileManager#testMoveToDoneAlreadyMovedSucceeds
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.mapreduce.v2.hs.TestHistoryFileManager#testMoveToDoneAlreadyMovedSucceeds
+msx-listener writeFile testName is org.apache.hadoop.mapreduce.v2.hs.TestHistoryFileManager#testMoveToDoneAlreadyMovedSucceeds
+msx-listener succeed
+msx-reconfagent DataNode stop 238431319, value is null
+msx-reconfagent NameNode stop 112797307, value is null
+msx-reconfagent DataNode stop 871989809, value is null
+msx-reconfagent NameNode stop 1359603919, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,48 +1,41 @@
-listener test started org.apache.hadoop.mapred.TestClusterMapReduceTestCase#testMapReduceRestarting
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-mapreduce JobHistoryServer init
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-mapreduce JobHistoryServer start
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-mapreduce JobHistoryServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.mapred.TestClusterMapReduceTestCase#testMapReduceRestarting
-listener writeFile testName is org.apache.hadoop.mapred.TestClusterMapReduceTestCase#testMapReduceRestarting
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.mapred.TestClusterMapReduceTestCase#testMapReduceRestarting
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2088445230 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1369468094 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2025066647 for JobHistoryServer
+msx-reconfagent creating ReconfAgent 870019773 for ResourceManager
+msx-reconfagent creating ReconfAgent 730955696 for NodeManager
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager stop 1713847712, value is null
+msx-reconfagent NodeManager stop 2111181256, value is null
+msx-reconfagent ResourceManager stop 1899609393, value is null
+msx-reconfagent JobHistoryServer stop 1319203143, value is null
+msx-reconfagent DataNode stop 1682619279, value is null
+msx-reconfagent DataNode stop 1474072872, value is null
+msx-reconfagent NameNode stop 1223050066, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent JobHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager stop 366180667, value is null
+msx-reconfagent NodeManager stop 1146694713, value is null
+msx-reconfagent ResourceManager stop 1312966018, value is null
+msx-reconfagent JobHistoryServer stop 1272644808, value is null
+msx-reconfagent DataNode stop 1232204889, value is null
+msx-reconfagent DataNode stop 562096009, value is null
+msx-reconfagent NameNode stop 817994751, value is null
+msx-listener testfinished org.apache.hadoop.mapred.TestClusterMapReduceTestCase#testMapReduceRestarting
+msx-listener writeFile testName is org.apache.hadoop.mapred.TestClusterMapReduceTestCase#testMapReduceRestarting
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0
