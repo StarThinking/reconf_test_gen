@@ -1,24 +1,22 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-listener test started org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl#testDeDuplication
-listener unitTestCounterInClass = 0
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl#testDeDuplication
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl#testDeDuplication
-listener succeed
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 225472281 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1697281847 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl#testDeDuplication
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent DataNode stop 1988939205, value is null
+msx-reconfagent NameNode stop 785271142, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1747721875, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 178259104, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl#testDeDuplication
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestNameNodeAcl#testDeDuplication
+msx-listener succeed
+msx-reconfagent DataNode stop 2090289474, value is null
+msx-reconfagent NameNode stop 832066800, value is null
+msx-listener all testRunFinished
+msx-rc 0

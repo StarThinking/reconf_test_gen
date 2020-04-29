@@ -1,12 +1,14 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace#testSaveNamespaceWithRenamedLease
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace#testSaveNamespaceWithRenamedLease
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace#testSaveNamespaceWithRenamedLease
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace#testSaveNamespaceWithRenamedLease
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1031758260 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 673215101 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 35273658, value is null
+msx-reconfagent NameNode stop 109723133, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace#testSaveNamespaceWithRenamedLease
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestSaveNamespace#testSaveNamespaceWithRenamedLease
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,21 +1,20 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot#testStandbyIsHot
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot#testStandbyIsHot
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot#testStandbyIsHot
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1132547352 for NameNode
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot#testStandbyIsHot
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1105225112 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1164721603, value is null
+msx-reconfagent DataNode stop 251528414, value is null
+msx-reconfagent DataNode stop 977392036, value is null
+msx-reconfagent NameNode stop 1042352417, value is null
+msx-reconfagent NameNode stop 680397140, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot#testStandbyIsHot
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyIsHot#testStandbyIsHot
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

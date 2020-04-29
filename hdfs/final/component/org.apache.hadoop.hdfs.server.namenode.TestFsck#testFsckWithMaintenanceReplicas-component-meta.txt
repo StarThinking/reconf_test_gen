@@ -1,18 +1,18 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckWithMaintenanceReplicas
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckWithMaintenanceReplicas
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckWithMaintenanceReplicas
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckWithMaintenanceReplicas
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1406549556 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1334200688 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1570992404, value is null
+msx-reconfagent DataNode stop 825384060, value is null
+msx-reconfagent DataNode stop 180856547, value is null
+msx-reconfagent NameNode stop 1476377722, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckWithMaintenanceReplicas
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckWithMaintenanceReplicas
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

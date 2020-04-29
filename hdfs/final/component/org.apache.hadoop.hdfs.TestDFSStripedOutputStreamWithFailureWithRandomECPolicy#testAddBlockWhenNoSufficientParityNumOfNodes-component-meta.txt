@@ -1,21 +1,20 @@
-listener test started org.apache.hadoop.hdfs.TestDFSStripedOutputStreamWithFailureWithRandomECPolicy#testAddBlockWhenNoSufficientParityNumOfNodes
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestDFSStripedOutputStreamWithFailureWithRandomECPolicy#testAddBlockWhenNoSufficientParityNumOfNodes
-listener writeFile testName is org.apache.hadoop.hdfs.TestDFSStripedOutputStreamWithFailureWithRandomECPolicy#testAddBlockWhenNoSufficientParityNumOfNodes
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestDFSStripedOutputStreamWithFailureWithRandomECPolicy#testAddBlockWhenNoSufficientParityNumOfNodes
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2133583450 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2109181716 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 781283997, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 24124319, value is null
+msx-reconfagent DataNode stop 1969697947, value is null
+msx-reconfagent DataNode stop 1310963318, value is null
+msx-reconfagent NameNode stop 1868698323, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.TestDFSStripedOutputStreamWithFailureWithRandomECPolicy#testAddBlockWhenNoSufficientParityNumOfNodes
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestDFSStripedOutputStreamWithFailureWithRandomECPolicy#testAddBlockWhenNoSufficientParityNumOfNodes
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

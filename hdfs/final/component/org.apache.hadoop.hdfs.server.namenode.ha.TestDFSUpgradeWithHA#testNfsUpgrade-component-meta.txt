@@ -1,21 +1,19 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA#testNfsUpgrade
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA#testNfsUpgrade
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA#testNfsUpgrade
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA#testNfsUpgrade
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 815674463 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 749981943, value is null
+msx-reconfagent NameNode stop 2015999862, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1223144402, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1340086277, value is null
+msx-reconfagent NameNode stop 115086468, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA#testNfsUpgrade
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestDFSUpgradeWithHA#testNfsUpgrade
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

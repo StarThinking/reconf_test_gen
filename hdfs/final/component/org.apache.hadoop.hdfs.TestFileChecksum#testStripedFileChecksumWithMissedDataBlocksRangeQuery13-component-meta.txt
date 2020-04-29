@@ -1,49 +1,42 @@
-listener test started org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener test Failure org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
-listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
-listener failed
-listener failureMessage: `/striped/stripedFileChecksum1': Fail to get block checksum for LocatedStripedBlock{BP-450888634-172.17.0.15-1587271150411:blk_-9223372036854775792_1001; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:44782,DS-76f6f8ae-a1ab-4f7e-aa9d-08fcd880fa68,DISK], DatanodeInfoWithStorage[127.0.0.1:37304,DS-91af3a7b-28b9-4cf9-8f70-2b4c97964765,DISK], DatanodeInfoWithStorage[127.0.0.1:40953,DS-8a33ff2a-a30b-43de-afb8-0e5bcc8d325a,DISK], DatanodeInfoWithStorage[127.0.0.1:46075,DS-6e34044c-a35d-416f-9fce-77741b24d8c9,DISK], DatanodeInfoWithStorage[127.0.0.1:34694,DS-7b82f3dd-64fa-4383-bb7c-ca5633da33c6,DISK], DatanodeInfoWithStorage[127.0.0.1:33464,DS-9468d9c1-1783-4adc-a573-2b39bb92ff72,DISK], DatanodeInfoWithStorage[127.0.0.1:44991,DS-d79d8329-592b-4dcf-9e9f-e042dd839420,DISK], DatanodeInfoWithStorage[127.0.0.1:42997,DS-5d1ccb9a-19bb-4dd7-9ba5-2c86c046f231,DISK]]; indices=[0, 1, 3, 4, 5, 6, 7, 8]}
-listener stackTrace: org.apache.hadoop.fs.PathIOException: `/striped/stripedFileChecksum1': Fail to get block checksum for LocatedStripedBlock{BP-450888634-172.17.0.15-1587271150411:blk_-9223372036854775792_1001; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:44782,DS-76f6f8ae-a1ab-4f7e-aa9d-08fcd880fa68,DISK], DatanodeInfoWithStorage[127.0.0.1:37304,DS-91af3a7b-28b9-4cf9-8f70-2b4c97964765,DISK], DatanodeInfoWithStorage[127.0.0.1:40953,DS-8a33ff2a-a30b-43de-afb8-0e5bcc8d325a,DISK], DatanodeInfoWithStorage[127.0.0.1:46075,DS-6e34044c-a35d-416f-9fce-77741b24d8c9,DISK], DatanodeInfoWithStorage[127.0.0.1:34694,DS-7b82f3dd-64fa-4383-bb7c-ca5633da33c6,DISK], DatanodeInfoWithStorage[127.0.0.1:33464,DS-9468d9c1-1783-4adc-a573-2b39bb92ff72,DISK], DatanodeInfoWithStorage[127.0.0.1:44991,DS-d79d8329-592b-4dcf-9e9f-e042dd839420,DISK], DatanodeInfoWithStorage[127.0.0.1:42997,DS-5d1ccb9a-19bb-4dd7-9ba5-2c86c046f231,DISK]]; indices=[0, 1, 3, 4, 5, 6, 7, 8]}
-listener testfinished org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
-listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1840976765 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1113895488 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1108066952, value is null
+msx-reconfagent DataNode stop 874153561, value is null
+msx-reconfagent DataNode stop 364480205, value is null
+msx-reconfagent DataNode stop 460333119, value is null
+msx-reconfagent DataNode stop 1816397102, value is null
+msx-reconfagent DataNode stop 1108066952, value is null
+msx-reconfagent ERROR : conf 2063786038 not existed in confInstanceList when removing.
+msx-reconfagent DataNode stop 920446957, value is null
+msx-reconfagent DataNode stop 981159997, value is null
+msx-reconfagent DataNode stop 968957548, value is null
+msx-reconfagent DataNode stop 2008547236, value is null
+msx-reconfagent DataNode stop 1118414398, value is null
+msx-reconfagent DataNode stop 2051598050, value is null
+msx-reconfagent NameNode stop 737104370, value is null
+msx-listener test Failure org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
+msx-listener failed
+msx-listener failureMessage: `/striped/stripedFileChecksum1': Fail to get block checksum for LocatedStripedBlock{BP-526086508-172.17.0.18-1588139761880:blk_-9223372036854775792_1001; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:41864,DS-5d038f6d-c9ba-4a6e-a398-73adf84b3f76,DISK], DatanodeInfoWithStorage[127.0.0.1:38104,DS-900e1e47-6298-4327-a7fe-e0827702b3a9,DISK], DatanodeInfoWithStorage[127.0.0.1:40770,DS-bc7c50e9-131f-483d-821a-1f4460474d0b,DISK], DatanodeInfoWithStorage[127.0.0.1:42671,DS-bc3a5b2f-d4e0-47ba-8f19-a3996470e093,DISK], DatanodeInfoWithStorage[127.0.0.1:41794,DS-55e38a6b-e9c7-4bbc-8d84-5ea6d16a3f26,DISK], DatanodeInfoWithStorage[127.0.0.1:34905,DS-1274bdef-139b-40a8-8b59-3534dc19f1cd,DISK], DatanodeInfoWithStorage[127.0.0.1:38473,DS-077246e5-9af2-4a83-adf2-b6f587be710b,DISK], DatanodeInfoWithStorage[127.0.0.1:43485,DS-1d8b81e7-6cb1-413f-b7ad-543a819956a1,DISK]]; indices=[0, 2, 3, 4, 5, 6, 7, 8]}
+msx-listener stackTrace: org.apache.hadoop.fs.PathIOException: `/striped/stripedFileChecksum1': Fail to get block checksum for LocatedStripedBlock{BP-526086508-172.17.0.18-1588139761880:blk_-9223372036854775792_1001; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:41864,DS-5d038f6d-c9ba-4a6e-a398-73adf84b3f76,DISK], DatanodeInfoWithStorage[127.0.0.1:38104,DS-900e1e47-6298-4327-a7fe-e0827702b3a9,DISK], DatanodeInfoWithStorage[127.0.0.1:40770,DS-bc7c50e9-131f-483d-821a-1f4460474d0b,DISK], DatanodeInfoWithStorage[127.0.0.1:42671,DS-bc3a5b2f-d4e0-47ba-8f19-a3996470e093,DISK], DatanodeInfoWithStorage[127.0.0.1:41794,DS-55e38a6b-e9c7-4bbc-8d84-5ea6d16a3f26,DISK], DatanodeInfoWithStorage[127.0.0.1:34905,DS-1274bdef-139b-40a8-8b59-3534dc19f1cd,DISK], DatanodeInfoWithStorage[127.0.0.1:38473,DS-077246e5-9af2-4a83-adf2-b6f587be710b,DISK], DatanodeInfoWithStorage[127.0.0.1:43485,DS-1d8b81e7-6cb1-413f-b7ad-543a819956a1,DISK]]; indices=[0, 2, 3, 4, 5, 6, 7, 8]}
+msx-listener testfinished org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.TestFileChecksum#testStripedFileChecksumWithMissedDataBlocksRangeQuery13
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

@@ -1,12 +1,14 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckMoveAfterCorruption
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckMoveAfterCorruption
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckMoveAfterCorruption
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckMoveAfterCorruption
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 552497776 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1511013162 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 974154463, value is null
+msx-reconfagent NameNode stop 2110869793, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckMoveAfterCorruption
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFsck#testFsckMoveAfterCorruption
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

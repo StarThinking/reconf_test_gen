@@ -1,24 +1,22 @@
-listener test started org.apache.hadoop.hdfs.server.blockmanagement.TestBlockReportRateLimiting#testRateLimitingDuringDataNodeStartup
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.blockmanagement.TestBlockReportRateLimiting#testRateLimitingDuringDataNodeStartup
-listener writeFile testName is org.apache.hadoop.hdfs.server.blockmanagement.TestBlockReportRateLimiting#testRateLimitingDuringDataNodeStartup
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1635756693 for NameNode
+msx-listener test started org.apache.hadoop.hdfs.server.blockmanagement.TestBlockReportRateLimiting#testRateLimitingDuringDataNodeStartup
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 361100162 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 2079447132, value is null
+msx-reconfagent DataNode stop 1789108344, value is null
+msx-reconfagent DataNode stop 1393129252, value is null
+msx-reconfagent DataNode stop 850292257, value is null
+msx-reconfagent DataNode stop 191030294, value is null
+msx-reconfagent NameNode stop 845960481, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.blockmanagement.TestBlockReportRateLimiting#testRateLimitingDuringDataNodeStartup
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.blockmanagement.TestBlockReportRateLimiting#testRateLimitingDuringDataNodeStartup
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

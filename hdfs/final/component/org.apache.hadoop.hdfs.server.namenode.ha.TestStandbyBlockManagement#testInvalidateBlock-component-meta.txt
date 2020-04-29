@@ -1,21 +1,20 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement#testInvalidateBlock
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement#testInvalidateBlock
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement#testInvalidateBlock
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1132547352 for NameNode
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement#testInvalidateBlock
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 446035529 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 59290303, value is null
+msx-reconfagent DataNode stop 1840065360, value is null
+msx-reconfagent DataNode stop 357878011, value is null
+msx-reconfagent NameNode stop 947886364, value is null
+msx-reconfagent NameNode stop 469925242, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement#testInvalidateBlock
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyBlockManagement#testInvalidateBlock
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

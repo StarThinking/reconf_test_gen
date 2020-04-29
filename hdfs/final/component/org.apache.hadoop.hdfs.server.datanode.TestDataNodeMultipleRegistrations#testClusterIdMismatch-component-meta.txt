@@ -1,21 +1,22 @@
-listener test started org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations#testClusterIdMismatch
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations#testClusterIdMismatch
-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations#testClusterIdMismatch
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations#testClusterIdMismatch
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 898557489 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 638695843 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent ERROR : conf 1529306539 existed in confInstanceList when adding.
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1752535057, value is null
+msx-reconfagent NameNode stop 1591161296, value is null
+msx-reconfagent NameNode stop 911501858, value is null
+msx-reconfagent NameNode stop 29369803, value is null
+msx-reconfagent NameNode stop 663716901, value is null
+msx-reconfagent ERROR : conf 1529306539 not existed in confInstanceList when removing.
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations#testClusterIdMismatch
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeMultipleRegistrations#testClusterIdMismatch
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

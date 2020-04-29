@@ -1,27 +1,26 @@
-listener test started org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM#testSecondaryNameNodeHttpAddressNotNeeded
-listener unitTestCounterInClass = 0
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-listener testfinished org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM#testSecondaryNameNodeHttpAddressNotNeeded
-listener writeFile testName is org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM#testSecondaryNameNodeHttpAddressNotNeeded
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM#testSecondaryNameNodeHttpAddressNotNeeded
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 743819169 for JournalNode
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1483301402 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 950106675 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1856163822, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 898416458 for SecondaryNameNode
+msx-reconfagent NameNode stop 277177787, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 804228988, value is null
+msx-reconfagent NameNode stop 2060684823, value is null
+msx-reconfagent JournalNode stop 668158773, value is null
+msx-reconfagent JournalNode stop 1783908422, value is null
+msx-reconfagent JournalNode stop 421519734, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM#testSecondaryNameNodeHttpAddressNotNeeded
+msx-listener writeFile testName is org.apache.hadoop.hdfs.qjournal.TestSecureNNWithQJM#testSecondaryNameNodeHttpAddressNotNeeded
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

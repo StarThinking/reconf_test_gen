@@ -1,27 +1,31 @@
-listener test started org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
-listener unitTestCounterInClass = 0
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-listener testfinished org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
-listener writeFile testName is org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 636135003 for JournalNode
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 761617499 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 7737939, value is null
+msx-reconfagent NameNode stop 734249832, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 2055952301, value is null
+msx-reconfagent JournalNode stop 1518086451, value is null
+msx-reconfagent JournalNode stop 1124766271, value is null
+msx-reconfagent JournalNode stop 295514793, value is null
+msx-listener test Failure org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
+msx-listener writeFile testName is org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
+msx-listener failed
+msx-listener failureMessage: Expected output to match 'Created metasave file dfs.meta in the log directory of namenode.*failed
+msx-reconfagent NameNode stop 461295762, value is null
+msx-listener stackTrace: java.lang.AssertionError: Expected output to match 'Created metasave file dfs.meta in the log directory of namenode.*failed
+msx-reconfagent NameNode stop 461295762, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
+msx-listener writeFile testName is org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.tools.TestDFSAdminWithHA#testMetaSaveNN1DownNN2Up
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

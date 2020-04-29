@@ -1,21 +1,20 @@
-listener test started org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart#testFileLengthWithHSyncAndClusterRestartWithOutDNsRegister
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart#testFileLengthWithHSyncAndClusterRestartWithOutDNsRegister
-listener writeFile testName is org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart#testFileLengthWithHSyncAndClusterRestartWithOutDNsRegister
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart#testFileLengthWithHSyncAndClusterRestartWithOutDNsRegister
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2047210562 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1086012256 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 16404182, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 2011402239, value is null
+msx-reconfagent DataNode stop 1951706718, value is null
+msx-reconfagent NameNode stop 1511333598, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1100102738, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart#testFileLengthWithHSyncAndClusterRestartWithOutDNsRegister
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestFileLengthOnClusterRestart#testFileLengthWithHSyncAndClusterRestartWithOutDNsRegister
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

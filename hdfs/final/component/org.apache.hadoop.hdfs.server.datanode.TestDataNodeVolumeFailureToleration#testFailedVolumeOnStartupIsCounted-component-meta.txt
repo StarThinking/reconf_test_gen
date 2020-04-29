@@ -1,21 +1,22 @@
-listener test started org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-listener test Failure org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
-listener failed
-listener failureMessage: Timed out waiting for capacity. Live = 1 Expected = 1 Dead = 0 Expected = 0 Total capacity = 898358673408 Expected = 449179336704 Vol Fails = 0 Expected = 1
-listener stackTrace: java.util.concurrent.TimeoutException: Timed out waiting for capacity. Live = 1 Expected = 1 Dead = 0 Expected = 0 Total capacity = 898358673408 Expected = 449179336704 Vol Fails = 0 Expected = 1
-listener testfinished org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1545888253 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 631926612 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 765496679, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1764091484, value is null
+msx-reconfagent NameNode stop 973519265, value is null
+msx-listener test Failure org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+msx-listener failed
+msx-listener failureMessage: Timed out waiting for capacity. Live = 1 Expected = 1 Dead = 0 Expected = 0 Total capacity = 898358673408 Expected = 449179336704 Vol Fails = 0 Expected = 1
+msx-listener stackTrace: java.util.concurrent.TimeoutException: Timed out waiting for capacity. Live = 1 Expected = 1 Dead = 0 Expected = 0 Total capacity = 898358673408 Expected = 449179336704 Vol Fails = 0 Expected = 1
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureToleration#testFailedVolumeOnStartupIsCounted
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

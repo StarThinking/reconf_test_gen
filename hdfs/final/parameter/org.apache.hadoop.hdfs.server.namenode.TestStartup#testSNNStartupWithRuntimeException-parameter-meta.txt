@@ -1,138 +1,139 @@
-conf getBoolean hadoop.ssl.require.client.cert
-conf get hadoop.ssl.require.client.cert
-conf getTrimmed hadoop.ssl.require.client.cert
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get hadoop.ssl.client.conf
-conf getBoolean hadoop.ssl.require.client.cert
-conf getTrimmed hadoop.ssl.require.client.cert
-conf get hadoop.ssl.require.client.cert
-conf getResource ssl-client.xml
-conf getClass hadoop.ssl.keystores.factory.class
-conf getClass hadoop.ssl.keystores.factory.class
-conf getTrimmed hadoop.ssl.keystores.factory.class
-conf get hadoop.ssl.keystores.factory.class
-conf getClassByName org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-conf getClassByNameOrNull org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-conf get hadoop.ssl.enabled.protocols
-conf getStrings hadoop.ssl.enabled.protocols
-conf getTrimmedStrings ssl.server.exclude.cipher.list
-conf get hadoop.ssl.require.client.cert
-conf get ssl.server.exclude.cipher.list
-conf getBoolean hadoop.ssl.require.client.cert
-conf getTrimmed hadoop.ssl.require.client.cert
-conf get ssl.client.keystore.type
-conf get ssl.client.truststore.type
-conf get ssl.client.truststore.location
-conf get hadoop.ssl.hostname.verifier
-conf getBoolean hadoop.security.token.service.use_ip
-conf get hadoop.security.token.service.use_ip
-conf getTrimmed hadoop.security.token.service.use_ip
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-conf get hadoop.security.dns.log-slow-lookups.enabled
-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-conf get hadoop.security.authentication
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get hadoop.security.authentication
-conf get hadoop.security.auth_to_local
-conf get hadoop.security.auth_to_local.mechanism
-conf getLong hadoop.kerberos.min.seconds.before.relogin
-conf get hadoop.kerberos.min.seconds.before.relogin
-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-conf getClass hadoop.security.group.mapping
-conf getClass hadoop.security.group.mapping
-conf get hadoop.security.group.mapping
-conf getTrimmed hadoop.security.group.mapping
-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-conf getLong hadoop.security.groups.cache.secs
-conf get hadoop.security.groups.cache.secs
-conf getTrimmed hadoop.security.groups.cache.secs
-conf getLong hadoop.security.groups.negative-cache.secs
-conf getTrimmed hadoop.security.groups.negative-cache.secs
-conf get hadoop.security.groups.negative-cache.secs
-conf getLong hadoop.security.groups.cache.warn.after.ms
-conf get hadoop.security.groups.cache.warn.after.ms
-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
-conf getBoolean hadoop.security.groups.cache.background.reload
-conf getTrimmed hadoop.security.groups.cache.background.reload
-conf get hadoop.security.groups.cache.background.reload
-conf getInt hadoop.security.groups.cache.background.reload.threads
-conf get hadoop.security.groups.cache.background.reload.threads
-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
-conf get hadoop.user.group.static.mapping.overrides
-conf getInts hadoop.user.group.metrics.percentiles.intervals
-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-conf get hadoop.user.group.metrics.percentiles.intervals
-conf getInt io.file.buffer.size
-conf get io.file.buffer.size
-conf getTrimmed io.file.buffer.size
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf getTimeDuration hadoop.service.shutdown.timeout
-conf get hadoop.service.shutdown.timeout
-conf getResource core-default.xml
-conf getTimeDuration hadoop.service.shutdown.timeout
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get dfs.nameservice.id
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get dfs.ha.namenode.id
-conf get dfs.nameservices
-conf getTrimmedStringCollection dfs.nameservices
-conf get dfs.nameservices
-conf getTrimmedStringCollection dfs.ha.namenodes
-conf getTrimmedStringCollection dfs.nameservices
-conf get dfs.ha.namenodes
-conf get dfs.namenode.secondary.http-address
-conf get dfs.nameservices
-conf getTrimmedStringCollection dfs.ha.namenodes
-conf getTrimmedStringCollection dfs.nameservices
-conf get dfs.ha.namenodes
-conf get dfs.namenode.rpc-address
-conf get dfs.namenode.rpc-address
-conf get dfs.namenode.secondary.http-address
-conf getTrimmed dfs.namenode.secondary.http-address
-conf getTrimmed dfs.namenode.secondary.http-address
-conf get hadoop.security.authentication
-conf get hadoop.security.auth_to_local
-conf get hadoop.kerberos.min.seconds.before.relogin
-conf get hadoop.security.auth_to_local.mechanism
-conf getInts hadoop.user.group.metrics.percentiles.intervals
-conf getLong hadoop.kerberos.min.seconds.before.relogin
-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-conf get hadoop.user.group.metrics.percentiles.intervals
-conf get dfs.metrics.session-id
-conf get dfs.namenode.servicerpc-address
-conf getTrimmed dfs.namenode.servicerpc-address
-conf get fs.defaultFS
-conf get dfs.nameservices
-conf getTrimmedStringCollection dfs.nameservices
-conf getTimeDuration hadoop.service.shutdown.timeout
-conf get hadoop.service.shutdown.timeout
-conf getResource core-default.xml
-conf getTimeDuration hadoop.service.shutdown.timeout
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
+2020-04-29 06:12:56,112 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,112 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,113 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,114 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:12:56,254 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:12:56,255 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:12:56,272 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:12:56,292 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.ssl.client.conf
+2020-04-29 06:12:56,293 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,304 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,304 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,305 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource ssl-client.xml
+2020-04-29 06:12:56,307 [main] INFO  conf.Configuration (Configuration.java:getClass(2660)) - msx-conf getClass hadoop.ssl.keystores.factory.class
+2020-04-29 06:12:56,312 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass hadoop.ssl.keystores.factory.class
+2020-04-29 06:12:56,312 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.ssl.keystores.factory.class
+2020-04-29 06:12:56,320 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.ssl.keystores.factory.class
+2020-04-29 06:12:56,321 [main] INFO  conf.Configuration (Configuration.java:getClassByName(2539)) - msx-conf getClassByName org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
+2020-04-29 06:12:56,321 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
+2020-04-29 06:12:56,325 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
+2020-04-29 06:12:56,326 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.ssl.enabled.protocols
+2020-04-29 06:12:56,326 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ssl.server.exclude.cipher.list
+2020-04-29 06:12:56,326 [main] INFO  conf.Configuration (Configuration.java:getStrings(2243)) - msx-conf getStrings hadoop.ssl.enabled.protocols
+2020-04-29 06:12:56,326 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings ssl.server.exclude.cipher.list
+2020-04-29 06:12:56,327 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,327 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,327 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.ssl.require.client.cert
+2020-04-29 06:12:56,332 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get ssl.client.keystore.type
+2020-04-29 06:12:56,394 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get ssl.client.truststore.location
+2020-04-29 06:12:56,394 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get ssl.client.truststore.type
+2020-04-29 06:12:56,626 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.ssl.hostname.verifier
+2020-04-29 06:12:56,690 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.token.service.use_ip
+2020-04-29 06:12:56,691 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.token.service.use_ip
+2020-04-29 06:12:56,691 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.token.service.use_ip
+2020-04-29 06:12:56,692 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:12:56,706 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:12:56,707 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:12:56,722 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:12:56,724 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 06:12:56,727 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 06:12:56,727 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 06:12:56,728 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 06:12:56,728 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 06:12:56,735 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 06:12:56,738 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.authentication
+2020-04-29 06:12:56,739 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:12:56,753 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:12:56,754 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:12:56,770 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:12:56,783 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.authentication
+2020-04-29 06:12:56,783 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.auth_to_local
+2020-04-29 06:12:56,785 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.auth_to_local.mechanism
+2020-04-29 06:12:56,786 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 06:12:56,786 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 06:12:56,786 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 06:12:56,790 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass hadoop.security.group.mapping
+2020-04-29 06:12:56,790 [main] INFO  conf.Configuration (Configuration.java:getClass(2660)) - msx-conf getClass hadoop.security.group.mapping
+2020-04-29 06:12:56,790 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.group.mapping
+2020-04-29 06:12:56,791 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.group.mapping
+2020-04-29 06:12:56,791 [main] INFO  conf.Configuration (Configuration.java:getClassByName(2539)) - msx-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+2020-04-29 06:12:56,797 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+2020-04-29 06:12:56,801 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
+2020-04-29 06:12:56,802 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.secs
+2020-04-29 06:12:56,802 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.negative-cache.secs
+2020-04-29 06:12:56,802 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.security.groups.cache.secs
+2020-04-29 06:12:56,802 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.security.groups.negative-cache.secs
+2020-04-29 06:12:56,802 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.secs
+2020-04-29 06:12:56,802 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.negative-cache.secs
+2020-04-29 06:12:56,803 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.warn.after.ms
+2020-04-29 06:12:56,803 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.groups.cache.background.reload
+2020-04-29 06:12:56,803 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.security.groups.cache.warn.after.ms
+2020-04-29 06:12:56,803 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.background.reload
+2020-04-29 06:12:56,803 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
+2020-04-29 06:12:56,804 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.background.reload
+2020-04-29 06:12:56,804 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.background.reload.threads
+2020-04-29 06:12:56,804 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.user.group.static.mapping.overrides
+2020-04-29 06:12:56,804 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.security.groups.cache.background.reload.threads
+2020-04-29 06:12:56,804 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
+2020-04-29 06:12:56,853 [main] INFO  conf.Configuration (Configuration.java:getInts(1499)) - msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 06:12:56,853 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 06:12:56,854 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 06:12:56,859 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt io.file.buffer.size
+2020-04-29 06:12:56,860 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get io.file.buffer.size
+2020-04-29 06:12:56,860 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed io.file.buffer.size
+2020-04-29 06:12:56,861 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:12:56,871 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:12:56,872 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:12:56,882 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:12:56,978 [Thread-2] INFO  conf.Configuration (Configuration.java:getTimeDuration(1788)) - msx-conf getTimeDuration hadoop.service.shutdown.timeout
+2020-04-29 06:12:56,979 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.service.shutdown.timeout
+2020-04-29 06:12:56,979 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:12:56,979 [Thread-2] INFO  conf.Configuration (Configuration.java:getTimeDuration(1811)) - msx-conf getTimeDuration hadoop.service.shutdown.timeout
+2020-04-29 06:12:56,986 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:12:56,986 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:12:56,994 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:12:57,004 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservice.id
+2020-04-29 06:12:57,005 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:12:57,010 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:12:57,011 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:12:57,020 [Thread-2] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:12:57,021 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.ha.namenode.id
+2020-04-29 06:12:57,021 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 06:12:57,021 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 06:12:57,022 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.ha.namenodes
+2020-04-29 06:12:57,022 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 06:12:57,022 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.ha.namenodes
+2020-04-29 06:12:57,022 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 06:12:57,023 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.secondary.http-address
+2020-04-29 06:12:57,025 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.ha.namenodes
+2020-04-29 06:12:57,025 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 06:12:57,025 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.ha.namenodes
+2020-04-29 06:12:57,025 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 06:12:57,026 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.rpc-address
+2020-04-29 06:12:57,049 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.rpc-address
+2020-04-29 06:12:57,049 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.namenode.secondary.http-address
+2020-04-29 06:12:57,049 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmed(1273)) - msx-conf getTrimmed dfs.namenode.secondary.http-address
+2020-04-29 06:12:57,050 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.secondary.http-address
+2020-04-29 06:12:57,051 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.authentication
+2020-04-29 06:12:57,052 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.authentication
+2020-04-29 06:12:57,052 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.auth_to_local
+2020-04-29 06:12:57,052 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.auth_to_local.mechanism
+2020-04-29 06:12:57,053 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 06:12:57,053 [Thread-2] INFO  conf.Configuration (Configuration.java:getInts(1499)) - msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 06:12:57,053 [Thread-2] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 06:12:57,053 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 06:12:57,054 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 06:12:57,054 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 06:12:57,282 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.metrics.session-id
+2020-04-29 06:12:57,290 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.servicerpc-address
+2020-04-29 06:12:57,290 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.namenode.servicerpc-address
+2020-04-29 06:12:57,291 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get fs.defaultFS
+2020-04-29 06:12:57,303 [Thread-2] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 06:12:57,303 [Thread-2] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 06:12:57,373 [Thread-3] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.service.shutdown.timeout
+2020-04-29 06:12:57,373 [Thread-3] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:12:57,373 [Thread-3] INFO  conf.Configuration (Configuration.java:getTimeDuration(1788)) - msx-conf getTimeDuration hadoop.service.shutdown.timeout
+2020-04-29 06:12:57,373 [Thread-3] INFO  conf.Configuration (Configuration.java:getTimeDuration(1811)) - msx-conf getTimeDuration hadoop.service.shutdown.timeout
+2020-04-29 06:12:57,389 [Thread-3] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:12:57,390 [Thread-3] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:12:57,398 [Thread-3] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml

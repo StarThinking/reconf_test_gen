@@ -1,18 +1,18 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion#testDeleteSnapshotWithDirModification
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion#testDeleteSnapshotWithDirModification
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion#testDeleteSnapshotWithDirModification
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion#testDeleteSnapshotWithDirModification
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1157726741 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1311292881 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 504478805, value is null
+msx-reconfagent DataNode stop 1540832538, value is null
+msx-reconfagent DataNode stop 259319861, value is null
+msx-reconfagent NameNode stop 1527882132, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion#testDeleteSnapshotWithDirModification
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.snapshot.TestSnapshotDeletion#testDeleteSnapshotWithDirModification
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

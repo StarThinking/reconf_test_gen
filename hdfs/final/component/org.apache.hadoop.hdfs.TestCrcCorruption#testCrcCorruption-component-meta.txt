@@ -1,24 +1,22 @@
-listener test started org.apache.hadoop.hdfs.TestCrcCorruption#testCrcCorruption
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestCrcCorruption#testCrcCorruption
-listener writeFile testName is org.apache.hadoop.hdfs.TestCrcCorruption#testCrcCorruption
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestCrcCorruption#testCrcCorruption
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 825249556 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1107579932 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 29774113, value is null
+msx-reconfagent DataNode stop 1721180011, value is null
+msx-reconfagent NameNode stop 1160487387, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 770950500, value is null
+msx-reconfagent DataNode stop 1232703108, value is null
+msx-reconfagent NameNode stop 836397870, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.TestCrcCorruption#testCrcCorruption
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestCrcCorruption#testCrcCorruption
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

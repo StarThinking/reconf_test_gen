@@ -1,21 +1,20 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestPersistentStoragePolicySatisfier#testSPSxAttrWhenSpsCalledForFile
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestPersistentStoragePolicySatisfier#testSPSxAttrWhenSpsCalledForFile
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestPersistentStoragePolicySatisfier#testSPSxAttrWhenSpsCalledForFile
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestPersistentStoragePolicySatisfier#testSPSxAttrWhenSpsCalledForFile
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1543329699 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2106765983 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 707702552, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 836124518, value is null
+msx-reconfagent DataNode stop 1400290359, value is null
+msx-reconfagent DataNode stop 662215693, value is null
+msx-reconfagent NameNode stop 140737337, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestPersistentStoragePolicySatisfier#testSPSxAttrWhenSpsCalledForFile
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestPersistentStoragePolicySatisfier#testSPSxAttrWhenSpsCalledForFile
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

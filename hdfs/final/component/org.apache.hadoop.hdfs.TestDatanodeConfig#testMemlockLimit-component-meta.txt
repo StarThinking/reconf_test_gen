@@ -1,13 +1,16 @@
-hdfs NameNode init
-hdfs NameNode start
-listener test started org.apache.hadoop.hdfs.TestDatanodeConfig#testMemlockLimit
-listener unitTestCounterInClass = 0
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-listener testfinished org.apache.hadoop.hdfs.TestDatanodeConfig#testMemlockLimit
-listener writeFile testName is org.apache.hadoop.hdfs.TestDatanodeConfig#testMemlockLimit
-listener succeed
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 671467883 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hdfs.TestDatanodeConfig#testMemlockLimit
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent creating ReconfAgent 253263897 for DataNode
+msx-reconfagent ERROR : conf 1008315045 existed in confInstanceList when adding.
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 113849054, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hdfs.TestDatanodeConfig#testMemlockLimit
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestDatanodeConfig#testMemlockLimit
+msx-listener succeed
+msx-reconfagent NameNode stop 333693383, value is null
+msx-listener all testRunFinished
+msx-rc 0

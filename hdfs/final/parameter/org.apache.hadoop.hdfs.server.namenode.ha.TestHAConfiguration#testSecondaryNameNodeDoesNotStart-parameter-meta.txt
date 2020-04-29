@@ -1,34 +1,34 @@
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf get dfs.nameservice.id
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf getTrimmedStringCollection dfs.nameservices
-conf get dfs.nameservices
-conf get dfs.nameservices
-conf getTrimmedStringCollection dfs.nameservices
-conf getTrimmedStringCollection dfs.ha.namenodes.ns1
-conf get dfs.ha.namenodes.ns1
-conf get dfs.namenode.rpc-address.ns1.nn1
-conf getInts dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
-conf getTrimmedStrings dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
-conf get dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
-conf getBoolean hadoop.security.token.service.use_ip
-conf get hadoop.security.token.service.use_ip
-conf getTrimmed hadoop.security.token.service.use_ip
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get hadoop.security.dns.log-slow-lookups.enabled
-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-conf get dfs.namenode.rpc-address.ns1.nn2
-conf getInts dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
-conf getTrimmedStrings dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
-conf get dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
+2020-04-29 06:15:02,386 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:15:02,468 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:15:02,489 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservice.id
+2020-04-29 06:15:02,490 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:15:02,501 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:15:02,502 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:15:02,511 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:15:02,512 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 06:15:02,513 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 06:15:02,524 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 06:15:02,525 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 06:15:02,532 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.ha.namenodes.ns1
+2020-04-29 06:15:02,532 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.ha.namenodes.ns1
+2020-04-29 06:15:02,533 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.rpc-address.ns1.nn1
+2020-04-29 06:15:02,533 [main] INFO  conf.Configuration (Configuration.java:getInts(1499)) - msx-conf getInts dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
+2020-04-29 06:15:02,533 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
+2020-04-29 06:15:02,536 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
+2020-04-29 06:15:02,541 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.token.service.use_ip
+2020-04-29 06:15:02,541 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.token.service.use_ip
+2020-04-29 06:15:02,542 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.token.service.use_ip
+2020-04-29 06:15:02,542 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 06:15:02,549 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 06:15:02,550 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 06:15:02,559 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 06:15:02,561 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 06:15:02,561 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 06:15:02,561 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 06:15:02,562 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 06:15:02,562 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 06:15:02,562 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 06:15:02,565 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
+2020-04-29 06:15:02,565 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.rpc-address.ns1.nn2
+2020-04-29 06:15:02,565 [main] INFO  conf.Configuration (Configuration.java:getInts(1499)) - msx-conf getInts dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
+2020-04-29 06:15:02,565 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2

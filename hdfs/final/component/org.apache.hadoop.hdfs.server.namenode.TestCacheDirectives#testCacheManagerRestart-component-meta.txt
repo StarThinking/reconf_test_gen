@@ -1,26 +1,25 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives#testCacheManagerRestart
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs SecondaryNameNode init
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs SecondaryNameNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives#testCacheManagerRestart
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives#testCacheManagerRestart
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives#testCacheManagerRestart
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 815674463 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1943750504 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 190620463 for SecondaryNameNode
+msx-reconfagent SecondaryNameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 453398853, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent SecondaryNameNode stop 1758303572, value is null
+msx-reconfagent DataNode stop 917277283, value is null
+msx-reconfagent DataNode stop 2035801202, value is null
+msx-reconfagent DataNode stop 1892869131, value is null
+msx-reconfagent DataNode stop 52913970, value is null
+msx-reconfagent NameNode stop 2008664921, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives#testCacheManagerRestart
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCacheDirectives#testCacheManagerRestart
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

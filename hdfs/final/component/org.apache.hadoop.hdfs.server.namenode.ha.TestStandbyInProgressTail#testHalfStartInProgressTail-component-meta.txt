@@ -1,27 +1,24 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyInProgressTail#testHalfStartInProgressTail
-listener unitTestCounterInClass = 0
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyInProgressTail#testHalfStartInProgressTail
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyInProgressTail#testHalfStartInProgressTail
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyInProgressTail#testHalfStartInProgressTail
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 352359770 for JournalNode
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1259639178 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 905847077, value is null
+msx-reconfagent NameNode stop 938199512, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1345293143, value is null
+msx-reconfagent NameNode stop 1853422837, value is null
+msx-reconfagent JournalNode stop 1388278453, value is null
+msx-reconfagent JournalNode stop 1759250827, value is null
+msx-reconfagent JournalNode stop 550147359, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyInProgressTail#testHalfStartInProgressTail
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestStandbyInProgressTail#testHalfStartInProgressTail
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

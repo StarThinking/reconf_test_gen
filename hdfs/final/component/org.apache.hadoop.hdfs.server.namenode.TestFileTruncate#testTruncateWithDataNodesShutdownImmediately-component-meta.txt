@@ -1,33 +1,30 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener test Failure org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
-listener failed
-listener failureMessage: inode should complete in ~30000 ms.
-listener stackTrace: java.lang.AssertionError: inode should complete in ~30000 ms.
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2114650936 for NameNode
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 597364637 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1933129092, value is null
+msx-reconfagent DataNode stop 889422145, value is null
+msx-reconfagent DataNode stop 258737099, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 57795273, value is null
+msx-reconfagent DataNode stop 1732025148, value is null
+msx-reconfagent DataNode stop 313050697, value is null
+msx-reconfagent NameNode stop 747158012, value is null
+msx-listener test Failure org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+msx-listener failed
+msx-listener failureMessage: inode should complete in ~30000 ms.
+msx-listener stackTrace: java.lang.AssertionError: inode should complete in ~30000 ms.
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.namenode.TestFileTruncate#testTruncateWithDataNodesShutdownImmediately
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

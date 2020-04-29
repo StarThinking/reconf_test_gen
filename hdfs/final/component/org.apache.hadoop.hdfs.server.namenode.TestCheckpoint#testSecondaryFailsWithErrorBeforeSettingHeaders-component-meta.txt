@@ -1,20 +1,21 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs SecondaryNameNode init
-hdfs SecondaryNameNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1798219673 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 988904418 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 10001825 for SecondaryNameNode
+msx-reconfagent SecondaryNameNode init, vvmode is none, do nothing
+msx-reconfagent SecondaryNameNode stop 1439693138, value is null
+msx-reconfagent DataNode stop 1552179791, value is null
+msx-reconfagent DataNode stop 670084377, value is null
+msx-reconfagent DataNode stop 1827303532, value is null
+msx-reconfagent NameNode stop 754072705, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testSecondaryFailsWithErrorBeforeSettingHeaders
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

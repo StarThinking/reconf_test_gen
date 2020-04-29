@@ -1,9 +1,11 @@
-listener test started org.apache.hadoop.hdfs.web.TestWebHDFS#testContentSummary
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.web.TestWebHDFS#testContentSummary
-listener writeFile testName is org.apache.hadoop.hdfs.web.TestWebHDFS#testContentSummary
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.web.TestWebHDFS#testContentSummary
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1224347463 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1275009283, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.web.TestWebHDFS#testContentSummary
+msx-listener writeFile testName is org.apache.hadoop.hdfs.web.TestWebHDFS#testContentSummary
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

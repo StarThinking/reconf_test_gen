@@ -1,18 +1,18 @@
-listener test started org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer#testNoSaslAndSecurePortsIgnored
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer#testNoSaslAndSecurePortsIgnored
-listener writeFile testName is org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer#testNoSaslAndSecurePortsIgnored
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer#testNoSaslAndSecurePortsIgnored
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1964779098 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 512031647 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1229660656, value is null
+msx-reconfagent DataNode stop 1241188651, value is null
+msx-reconfagent DataNode stop 1325144080, value is null
+msx-reconfagent NameNode stop 1685036828, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer#testNoSaslAndSecurePortsIgnored
+msx-listener writeFile testName is org.apache.hadoop.hdfs.protocol.datatransfer.sasl.TestSaslDataTransfer#testNoSaslAndSecurePortsIgnored
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,28 +1,26 @@
-listener test started org.apache.hadoop.hdfs.TestDecommission#testAllocAndIBRWhileDecommission
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestDecommission#testAllocAndIBRWhileDecommission
-listener writeFile testName is org.apache.hadoop.hdfs.TestDecommission#testAllocAndIBRWhileDecommission
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestDecommission#testAllocAndIBRWhileDecommission
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1374900476 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1658052217 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 252965559, value is null
+msx-reconfagent DataNode stop 949361271, value is null
+msx-reconfagent DataNode stop 414676233, value is null
+msx-reconfagent DataNode stop 1406293670, value is null
+msx-reconfagent DataNode stop 1615920275, value is null
+msx-reconfagent DataNode stop 91689071, value is null
+msx-reconfagent NameNode stop 1251388043, value is null
+msx-reconfagent NameNode stop 1251388043, value is null
+msx-reconfagent ERROR : conf 116101385 not existed in confInstanceList when removing.
+msx-listener testfinished org.apache.hadoop.hdfs.TestDecommission#testAllocAndIBRWhileDecommission
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestDecommission#testAllocAndIBRWhileDecommission
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

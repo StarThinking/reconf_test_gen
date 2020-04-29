@@ -1,27 +1,24 @@
-listener test started org.apache.hadoop.hdfs.TestSafeMode#testInitializeReplQueuesEarly
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestSafeMode#testInitializeReplQueuesEarly
-listener writeFile testName is org.apache.hadoop.hdfs.TestSafeMode#testInitializeReplQueuesEarly
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestSafeMode#testInitializeReplQueuesEarly
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 956420404 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 259630944 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1506938939, value is null
+msx-reconfagent DataNode stop 340194145, value is null
+msx-reconfagent DataNode stop 45676172, value is null
+msx-reconfagent NameNode stop 677120200, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 836363606, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1024126252, value is null
+msx-reconfagent NameNode stop 331665188, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.TestSafeMode#testInitializeReplQueuesEarly
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestSafeMode#testInitializeReplQueuesEarly
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

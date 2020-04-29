@@ -1,12 +1,14 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-listener test started org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser#testDelegationTokenWithRealUser
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser#testDelegationTokenWithRealUser
-listener writeFile testName is org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser#testDelegationTokenWithRealUser
-listener succeed
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 572593338 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 316335490 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser#testDelegationTokenWithRealUser
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser#testDelegationTokenWithRealUser
+msx-listener writeFile testName is org.apache.hadoop.hdfs.security.TestDelegationTokenForProxyUser#testDelegationTokenWithRealUser
+msx-listener succeed
+msx-reconfagent DataNode stop 428996455, value is null
+msx-reconfagent NameNode stop 957923719, value is null
+msx-listener all testRunFinished
+msx-rc 0

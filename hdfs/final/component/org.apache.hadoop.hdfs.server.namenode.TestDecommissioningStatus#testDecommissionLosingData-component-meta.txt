@@ -1,27 +1,24 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus#testDecommissionLosingData
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus#testDecommissionLosingData
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus#testDecommissionLosingData
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus#testDecommissionLosingData
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1803669141 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2002790740 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1365575811, value is null
+msx-reconfagent DataNode stop 673672784, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 940853443, value is null
+msx-reconfagent DataNode stop 1686151292, value is null
+msx-reconfagent DataNode stop 597624499, value is null
+msx-reconfagent DataNode stop 1506932592, value is null
+msx-reconfagent NameNode stop 1768127248, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus#testDecommissionLosingData
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestDecommissioningStatus#testDecommissionLosingData
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

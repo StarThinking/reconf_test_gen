@@ -1,14 +1,16 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs SecondaryNameNode init
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs SecondaryNameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1864230087 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2112135199 for SecondaryNameNode
+msx-reconfagent SecondaryNameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 40875560, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent SecondaryNameNode stop 678962690, value is null
+msx-reconfagent NameNode stop 1887466020, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testReformatNNBetweenCheckpoints
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

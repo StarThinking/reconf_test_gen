@@ -1,27 +1,24 @@
-listener test started org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeSync#testMultipleJournalsMultipleMissingLogs
-listener unitTestCounterInClass = 0
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-listener testfinished org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeSync#testMultipleJournalsMultipleMissingLogs
-listener writeFile testName is org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeSync#testMultipleJournalsMultipleMissingLogs
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeSync#testMultipleJournalsMultipleMissingLogs
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2095490653 for JournalNode
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1830745997 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 156199931, value is null
+msx-reconfagent NameNode stop 1927499639, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 289711450, value is null
+msx-reconfagent NameNode stop 15910024, value is null
+msx-reconfagent JournalNode stop 712609105, value is null
+msx-reconfagent JournalNode stop 1461474945, value is null
+msx-reconfagent JournalNode stop 1424698224, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeSync#testMultipleJournalsMultipleMissingLogs
+msx-listener writeFile testName is org.apache.hadoop.hdfs.qjournal.server.TestJournalNodeSync#testMultipleJournalsMultipleMissingLogs
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

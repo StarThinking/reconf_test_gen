@@ -1,24 +1,22 @@
-listener test started org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoStriped#testGetBlockInfo[1: ErasureCodingPolicy=[Name=RS-3-2-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=3, numParityUnits=2]], CellSize=1048576, Id=2]]
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoStriped#testGetBlockInfo[1: ErasureCodingPolicy=[Name=RS-3-2-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=3, numParityUnits=2]], CellSize=1048576, Id=2]]
-listener writeFile testName is org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoStriped#testGetBlockInfo[1: ErasureCodingPolicy=[Name=RS-3-2-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=3, numParityUnits=2]], CellSize=1048576, Id=2]]
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoStriped#testGetBlockInfo[1: ErasureCodingPolicy=[Name=RS-3-2-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=3, numParityUnits=2]], CellSize=1048576, Id=2]]
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 925688610 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 969223739 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 753176762, value is null
+msx-reconfagent DataNode stop 1646215662, value is null
+msx-reconfagent DataNode stop 783984711, value is null
+msx-reconfagent DataNode stop 988063915, value is null
+msx-reconfagent DataNode stop 990733429, value is null
+msx-reconfagent NameNode stop 1967286212, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoStriped#testGetBlockInfo[1: ErasureCodingPolicy=[Name=RS-3-2-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=3, numParityUnits=2]], CellSize=1048576, Id=2]]
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.blockmanagement.TestBlockInfoStriped#testGetBlockInfo[1: ErasureCodingPolicy=[Name=RS-3-2-1024k, Schema=[ECSchema=[Codec=rs, numDataUnits=3, numParityUnits=2]], CellSize=1048576, Id=2]]
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

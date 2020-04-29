@@ -1,24 +1,22 @@
-listener test started org.apache.hadoop.hdfs.TestWriteReadStripedFile#testFileEmpty
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestWriteReadStripedFile#testFileEmpty
-listener writeFile testName is org.apache.hadoop.hdfs.TestWriteReadStripedFile#testFileEmpty
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestWriteReadStripedFile#testFileEmpty
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1257993418 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 836251745 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1409359958, value is null
+msx-reconfagent DataNode stop 1303560118, value is null
+msx-reconfagent DataNode stop 349155512, value is null
+msx-reconfagent DataNode stop 1426358674, value is null
+msx-reconfagent DataNode stop 1240717422, value is null
+msx-reconfagent NameNode stop 1875765834, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.TestWriteReadStripedFile#testFileEmpty
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestWriteReadStripedFile#testFileEmpty
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

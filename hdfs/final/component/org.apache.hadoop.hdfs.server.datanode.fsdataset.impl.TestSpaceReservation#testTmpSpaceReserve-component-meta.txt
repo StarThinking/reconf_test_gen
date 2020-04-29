@@ -1,21 +1,22 @@
-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener test Failure org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
-listener failed
-listener failureMessage: Wrong reserve space for Tmp  expected:<200> but was:<1000>
-listener stackTrace: java.lang.AssertionError: Wrong reserve space for Tmp  expected:<200> but was:<1000>
-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 205962452 for DataNode
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent creating ReconfAgent 1375099460 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 109128077, value is null
+msx-reconfagent DataNode stop 702117627, value is null
+msx-reconfagent NameNode stop 582891143, value is null
+msx-listener test Failure org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+msx-listener failed
+msx-listener failureMessage: Wrong reserve space for Tmp  expected:<200> but was:<1000>
+msx-listener stackTrace: java.lang.AssertionError: Wrong reserve space for Tmp  expected:<200> but was:<1000>
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.TestSpaceReservation#testTmpSpaceReserve
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

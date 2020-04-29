@@ -1,24 +1,22 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-listener test started org.apache.hadoop.fs.viewfs.TestViewFileSystemLinkFallback#testInternalSetAcl
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.fs.viewfs.TestViewFileSystemLinkFallback#testInternalSetAcl
-listener writeFile testName is org.apache.hadoop.fs.viewfs.TestViewFileSystemLinkFallback#testInternalSetAcl
-listener succeed
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 990355670 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2061440682 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.fs.viewfs.TestViewFileSystemLinkFallback#testInternalSetAcl
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.fs.viewfs.TestViewFileSystemLinkFallback#testInternalSetAcl
+msx-listener writeFile testName is org.apache.hadoop.fs.viewfs.TestViewFileSystemLinkFallback#testInternalSetAcl
+msx-listener succeed
+msx-reconfagent DataNode stop 1622135821, value is null
+msx-reconfagent DataNode stop 1187972599, value is null
+msx-reconfagent DataNode stop 1251967187, value is null
+msx-reconfagent NameNode stop 1591161296, value is null
+msx-reconfagent NameNode stop 999647352, value is null
+msx-reconfagent NameNode stop 42820240, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,39 +1,32 @@
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs JournalNode init
-hdfs JournalNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestMultiObserverNode#testObserverFailover
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestMultiObserverNode#testObserverFailover
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestMultiObserverNode#testObserverFailover
-listener succeed
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-hdfs JournalNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1897115967 for JournalNode
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent JournalNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 5395829 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1650955365, value is null
+msx-reconfagent NameNode stop 1928621590, value is null
+msx-reconfagent NameNode stop 1251788491, value is null
+msx-reconfagent NameNode stop 173060252, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestMultiObserverNode#testObserverFailover
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestMultiObserverNode#testObserverFailover
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestMultiObserverNode#testObserverFailover
+msx-listener succeed
+msx-reconfagent NameNode stop 749693202, value is null
+msx-reconfagent NameNode stop 51376124, value is null
+msx-reconfagent NameNode stop 1123166613, value is null
+msx-reconfagent NameNode stop 1545666472, value is null
+msx-reconfagent JournalNode stop 1793436274, value is null
+msx-reconfagent JournalNode stop 2143139988, value is null
+msx-reconfagent JournalNode stop 2107543287, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,11 +1,14 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs SecondaryNameNode init
-listener test started org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi#testSecondaryWebUi
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi#testSecondaryWebUi
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi#testSecondaryWebUi
-listener succeed
-hdfs NameNode stop
-hdfs SecondaryNameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 671467883 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1031968647 for SecondaryNameNode
+msx-reconfagent SecondaryNameNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi#testSecondaryWebUi
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi#testSecondaryWebUi
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestSecondaryWebUi#testSecondaryWebUi
+msx-listener succeed
+msx-reconfagent NameNode stop 331596257, value is null
+msx-reconfagent SecondaryNameNode stop 917935693, value is null
+msx-listener all testRunFinished
+msx-rc 0

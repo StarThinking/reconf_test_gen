@@ -1,302 +1,304 @@
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getTrimmedStringCollection dfs.internal.nameservices
-conf get dfs.internal.nameservices
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get dfs.nameservices
-conf getTrimmedStringCollection dfs.nameservices
-conf get dfs.journalnode.edits.dir
-conf get hadoop.htrace.sampler.classes
-conf get journalnode.htracesampler.classes
-conf get hadoop.htrace.tracer.id
-conf get journalnode.htracetracer.id
-conf get hadoop.htrace.span.receiver.classes
-conf get journalnode.htracespan.receiver.classes
-conf get dfs.metrics.session-id
-conf get dfs.journalnode.rpc-address
-conf get hadoop.security.token.service.use_ip
-conf getBoolean hadoop.security.token.service.use_ip
-conf getTrimmed hadoop.security.token.service.use_ip
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get hadoop.security.dns.log-slow-lookups.enabled
-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-conf get hadoop.security.authentication
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf get hadoop.security.authentication
-conf get hadoop.security.auth_to_local
-conf get hadoop.security.auth_to_local.mechanism
-conf getLong hadoop.kerberos.min.seconds.before.relogin
-conf get hadoop.kerberos.min.seconds.before.relogin
-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-conf getClass hadoop.security.group.mapping
-conf getClass hadoop.security.group.mapping
-conf getTrimmed hadoop.security.group.mapping
-conf get hadoop.security.group.mapping
-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-conf getLong hadoop.security.groups.cache.secs
-conf getTrimmed hadoop.security.groups.cache.secs
-conf get hadoop.security.groups.cache.secs
-conf getLong hadoop.security.groups.negative-cache.secs
-conf get hadoop.security.groups.negative-cache.secs
-conf getLong hadoop.security.groups.cache.warn.after.ms
-conf getTrimmed hadoop.security.groups.negative-cache.secs
-conf get hadoop.security.groups.cache.warn.after.ms
-conf getBoolean hadoop.security.groups.cache.background.reload
-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
-conf get hadoop.security.groups.cache.background.reload
-conf getTrimmed hadoop.security.groups.cache.background.reload
-conf get hadoop.security.groups.cache.background.reload.threads
-conf getInt hadoop.security.groups.cache.background.reload.threads
-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
-conf get hadoop.user.group.static.mapping.overrides
-conf getInts hadoop.user.group.metrics.percentiles.intervals
-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-conf get hadoop.user.group.metrics.percentiles.intervals
-conf get dfs.journalnode.http-address
-conf get dfs.journalnode.http-bind-host
-conf getTrimmed dfs.journalnode.http-bind-host
-conf get dfs.journalnode.https-address
-conf getTrimmed dfs.journalnode.https-bind-host
-conf get dfs.journalnode.https-bind-host
-conf get dfs.http.policy
-conf get dfs.cluster.administrators
-conf get dfs.web.authentication.kerberos.keytab
-conf get hadoop.http.temp.dir
-conf get hadoop.http.authentication.type
-conf get hadoop.http.authentication.kerberos.keytab
-conf get hadoop.http.authentication.kerberos.principal
-conf get hadoop.http.authentication.signature.secret.file
-conf get hadoop.http.authentication.simple.anonymous.allowed
-conf get hadoop.http.authentication.token.validity
-conf get bind.address
-conf getInt hadoop.http.max.threads
-conf get hadoop.http.max.threads
-conf getTrimmed hadoop.http.max.threads
-conf get hadoop.http.logs.enabled
-conf getBoolean hadoop.http.logs.enabled
-conf getTrimmed hadoop.http.logs.enabled
-conf getBoolean hadoop.jetty.logs.serve.aliases
-conf getTrimmed hadoop.jetty.logs.serve.aliases
-conf get hadoop.jetty.logs.serve.aliases
-conf get hadoop.http.filter.initializers
-conf getClasses hadoop.http.filter.initializers
-conf getRaw hadoop.http.filter.initializers
-conf getTrimmedStrings hadoop.http.filter.initializers
-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-conf get dfs.web.ugi
-conf get hadoop.http.staticuser.user
-conf getInt hadoop.http.max.request.header.size
-conf get hadoop.http.max.request.header.size
-conf getInt hadoop.http.max.response.header.size
-conf getTrimmed hadoop.http.max.request.header.size
-conf getTrimmed hadoop.http.max.response.header.size
-conf get hadoop.http.max.response.header.size
-conf getInt hadoop.http.idle_timeout.ms
-conf getTrimmed hadoop.http.idle_timeout.ms
-conf get hadoop.http.idle_timeout.ms
-conf getInt hadoop.http.socket.backlog.size
-conf get hadoop.http.socket.backlog.size
-conf getTrimmed hadoop.http.socket.backlog.size
-conf getInt hadoop.http.acceptor.count
-conf get hadoop.http.acceptor.count
-conf getTrimmed hadoop.http.acceptor.count
-conf get hadoop.http.selector.count
-conf getInt hadoop.http.selector.count
-conf getTrimmed hadoop.http.selector.count
-conf get dfs.http.policy
-conf get dfs.http.policy
-conf get dfs.journalnode.rpc-address
-conf get dfs.journalnode.rpc-bind-host
-conf getTrimmed dfs.journalnode.rpc-bind-host
-conf getTrimmed dfs.journalnode.rpc-bind-host
-conf getClass rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
-conf get rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
-conf getClassByName org.apache.hadoop.ipc.ProtobufRpcEngine
-conf getClassByNameOrNull org.apache.hadoop.ipc.ProtobufRpcEngine
-conf getTrimmed rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-conf getInt ipc.maximum.data.length
-conf getTrimmed ipc.maximum.data.length
-conf get ipc.maximum.data.length
-conf get ipc.server.handler.queue.size
-conf getInt ipc.server.handler.queue.size
-conf getInt ipc.server.max.response.size
-conf getTrimmed ipc.server.handler.queue.size
-conf get ipc.server.max.response.size
-conf get ipc.server.read.threadpool.size
-conf getInt ipc.server.read.threadpool.size
-conf getTrimmed ipc.server.max.response.size
-conf getTrimmed ipc.server.read.threadpool.size
-conf get ipc.server.read.connection-queue.size
-conf getInt ipc.server.read.connection-queue.size
-conf getTrimmed ipc.server.read.connection-queue.size
-conf getClass ipc.0.callqueue.impl
-conf getTrimmed ipc.0.callqueue.impl
-conf get ipc.0.callqueue.impl
-conf get ipc.0.scheduler.impl
-conf getClass ipc.0.callqueue.impl
-conf getClass ipc.0.scheduler.impl
-conf getTrimmed ipc.0.scheduler.impl
-conf get ipc.0.callqueue.impl
-conf getTrimmed ipc.0.callqueue.impl
-conf get ipc.0.scheduler.impl
-conf getClass ipc.0.scheduler.impl
-conf getTrimmed ipc.0.scheduler.impl
-conf get ipc.0.backoff.enable
-conf getBoolean ipc.0.backoff.enable
-conf getInt ipc.0.faircallqueue.priority-levels
-conf getTrimmed ipc.0.backoff.enable
-conf get ipc.0.faircallqueue.priority-levels
-conf get ipc.0.scheduler.priority.levels
-conf getInt ipc.0.scheduler.priority.levels
-conf getTrimmed ipc.0.faircallqueue.priority-levels
-conf getTrimmed ipc.0.scheduler.priority.levels
-conf getBoolean hadoop.security.authorization
-conf getTrimmed hadoop.security.authorization
-conf get hadoop.security.authorization
-conf get hadoop.security.authentication
-conf getInt ipc.server.listen.queue.size
-conf getTrimmed ipc.server.listen.queue.size
-conf get ipc.server.listen.queue.size
-conf getInt ipc.client.idlethreshold
-conf getTrimmed ipc.client.idlethreshold
-conf get ipc.client.idlethreshold
-conf get ipc.client.connection.idle-scan-interval.ms
-conf getInt ipc.client.connection.idle-scan-interval.ms
-conf getInt ipc.client.connection.maxidletime
-conf getTrimmed ipc.client.connection.idle-scan-interval.ms
-conf get ipc.client.connection.maxidletime
-conf getInt ipc.client.kill.max
-conf getTrimmed ipc.client.connection.maxidletime
-conf getTrimmed ipc.client.kill.max
-conf get ipc.client.kill.max
-conf get ipc.server.max.connections
-conf getInt ipc.server.max.connections
-conf getTrimmed ipc.server.max.connections
-conf getInts rpc.metrics.percentiles.intervals
-conf getTrimmedStrings rpc.metrics.percentiles.intervals
-conf get rpc.metrics.percentiles.intervals
-conf get ipc.server.tcpnodelay
-conf getBoolean ipc.server.tcpnodelay
-conf getTrimmed ipc.server.tcpnodelay
-conf get ipc.server.log.slow.rpc
-conf getBoolean ipc.server.log.slow.rpc
-conf getTrimmed ipc.server.log.slow.rpc
-conf getBoolean hadoop.security.authorization
-conf getTrimmed hadoop.security.authorization
-conf get hadoop.security.authorization
-conf get dfs.journalnode.edits.dir
-conf get dfs.journalnode.edits.dir.perm
-conf getBoolean dfs.ha.tail-edits.in-progress
-conf get dfs.ha.tail-edits.in-progress
-conf getTrimmed dfs.ha.tail-edits.in-progress
-conf getBoolean dfs.journalnode.enable.sync
-conf get dfs.journalnode.enable.sync
-conf getTrimmed dfs.journalnode.enable.sync
-conf getLong dfs.journalnode.sync.interval
-conf get dfs.journalnode.sync.interval
-conf getInt dfs.edit.log.transfer.timeout
-conf getTrimmed dfs.journalnode.sync.interval
-conf get dfs.edit.log.transfer.bandwidthPerSec
-conf get dfs.edit.log.transfer.timeout
-conf getLong dfs.edit.log.transfer.bandwidthPerSec
-conf getTrimmed dfs.edit.log.transfer.bandwidthPerSec
-conf getTrimmed dfs.edit.log.transfer.timeout
-conf get dfs.namenode.shared.edits.dir
-conf getTrimmed dfs.namenode.shared.edits.dir
-conf getBoolean dfs.ha.tail-edits.in-progress
-conf getTrimmed dfs.ha.tail-edits.in-progress
-conf get dfs.ha.tail-edits.in-progress
-conf getInt dfs.qjournal.queued-edits.limit.mb
-conf getTrimmed dfs.qjournal.queued-edits.limit.mb
-conf get dfs.qjournal.queued-edits.limit.mb
-conf get dfs.metrics.percentiles.intervals
-conf getInts dfs.metrics.percentiles.intervals
-conf getTrimmedStrings dfs.metrics.percentiles.intervals
-conf getResource core-default.xml
-conf getResource core-site.xml
-conf getResource hdfs-default.xml
-conf getResource hdfs-site.xml
-conf getTrimmedStringCollection dfs.internal.nameservices
-conf get dfs.internal.nameservices
-conf get dfs.nameservices
-conf getTrimmedStringCollection dfs.nameservices
-conf get hadoop.htrace.sampler.classes
-conf get journalnode.htracesampler.classes
-conf get dfs.journalnode.edits.dir
-conf get hadoop.htrace.tracer.id
-conf get journalnode.htracespan.receiver.classes
-conf get journalnode.htracetracer.id
-conf get hadoop.htrace.span.receiver.classes
-conf get dfs.metrics.session-id
-conf get dfs.journalnode.rpc-address
-conf get dfs.journalnode.http-bind-host
-conf get dfs.journalnode.http-address
-conf getTrimmed dfs.journalnode.http-bind-host
-conf get dfs.journalnode.https-bind-host
-conf get dfs.http.policy
-conf get dfs.journalnode.https-address
-conf getTrimmed dfs.journalnode.https-bind-host
-conf get dfs.web.authentication.kerberos.keytab
-conf get dfs.cluster.administrators
-conf get hadoop.http.temp.dir
-conf get hadoop.http.authentication.type
-conf get hadoop.http.authentication.kerberos.principal
-conf get hadoop.http.authentication.kerberos.keytab
-conf get hadoop.http.authentication.simple.anonymous.allowed
-conf get hadoop.http.authentication.signature.secret.file
-conf get hadoop.http.authentication.token.validity
-conf get bind.address
-conf get hadoop.http.max.threads
-conf getInt hadoop.http.max.threads
-conf getTrimmed hadoop.http.max.threads
-conf get hadoop.http.logs.enabled
-conf getBoolean hadoop.http.logs.enabled
-conf getTrimmed hadoop.http.logs.enabled
-conf getBoolean hadoop.jetty.logs.serve.aliases
-conf getTrimmed hadoop.jetty.logs.serve.aliases
-conf get hadoop.jetty.logs.serve.aliases
-conf get hadoop.http.filter.initializers
-conf getClasses hadoop.http.filter.initializers
-conf getRaw hadoop.http.filter.initializers
-conf getTrimmedStrings hadoop.http.filter.initializers
-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-conf get dfs.web.ugi
-conf get hadoop.http.staticuser.user
-conf get hadoop.http.max.request.header.size
-conf getInt hadoop.http.max.request.header.size
-conf getInt hadoop.http.max.response.header.size
-conf getTrimmed hadoop.http.max.request.header.size
-conf get hadoop.http.idle_timeout.ms
-conf get hadoop.http.max.response.header.size
-conf getInt hadoop.http.idle_timeout.ms
-conf getInt hadoop.http.socket.backlog.size
-conf getTrimmed hadoop.http.idle_timeout.ms
-conf getTrimmed hadoop.http.max.response.header.size
-conf get hadoop.http.acceptor.count
-conf get hadoop.http.socket.backlog.size
-conf getInt hadoop.http.acceptor.count
-conf getTrimmed hadoop.http.acceptor.count
-conf getTrimmed hadoop.http.socket.backlog.size
-conf get hadoop.http.selector.count
-conf getInt hadoop.http.selector.count
-conf getTrimmed hadoop.http.selector.count
+2020-04-29 05:45:35,304 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 05:45:35,424 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 05:45:35,431 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.internal.nameservices
+2020-04-29 05:45:35,432 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.internal.nameservices
+2020-04-29 05:45:35,433 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 05:45:35,445 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 05:45:35,446 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 05:45:35,457 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 05:45:35,459 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 05:45:35,460 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 05:45:35,460 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.edits.dir
+2020-04-29 05:45:35,499 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get journalnode.htracesampler.classes
+2020-04-29 05:45:35,501 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.htrace.sampler.classes
+2020-04-29 05:45:35,506 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.htrace.tracer.id
+2020-04-29 05:45:35,506 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get journalnode.htracetracer.id
+2020-04-29 05:45:35,510 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get journalnode.htracespan.receiver.classes
+2020-04-29 05:45:35,517 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.htrace.span.receiver.classes
+2020-04-29 05:45:35,816 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.metrics.session-id
+2020-04-29 05:45:35,827 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.rpc-address
+2020-04-29 05:45:35,832 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.token.service.use_ip
+2020-04-29 05:45:35,833 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.token.service.use_ip
+2020-04-29 05:45:35,833 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 05:45:35,833 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.token.service.use_ip
+2020-04-29 05:45:35,841 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 05:45:35,842 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 05:45:35,855 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 05:45:35,857 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 05:45:35,857 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 05:45:35,857 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
+2020-04-29 05:45:35,858 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 05:45:35,858 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 05:45:35,858 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
+2020-04-29 05:45:35,877 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.authentication
+2020-04-29 05:45:35,877 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 05:45:35,883 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 05:45:35,884 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 05:45:35,894 [main] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 05:45:35,898 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.authentication
+2020-04-29 05:45:35,898 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.auth_to_local
+2020-04-29 05:45:35,899 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.auth_to_local.mechanism
+2020-04-29 05:45:35,900 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 05:45:35,900 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 05:45:35,900 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
+2020-04-29 05:45:35,903 [main] INFO  conf.Configuration (Configuration.java:getClass(2660)) - msx-conf getClass hadoop.security.group.mapping
+2020-04-29 05:45:35,904 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.group.mapping
+2020-04-29 05:45:35,904 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass hadoop.security.group.mapping
+2020-04-29 05:45:35,904 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.group.mapping
+2020-04-29 05:45:35,905 [main] INFO  conf.Configuration (Configuration.java:getClassByName(2539)) - msx-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+2020-04-29 05:45:35,905 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+2020-04-29 05:45:35,907 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
+2020-04-29 05:45:35,908 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.secs
+2020-04-29 05:45:35,908 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.security.groups.cache.secs
+2020-04-29 05:45:35,908 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.security.groups.negative-cache.secs
+2020-04-29 05:45:35,908 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.secs
+2020-04-29 05:45:35,909 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.negative-cache.secs
+2020-04-29 05:45:35,909 [main] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong hadoop.security.groups.cache.warn.after.ms
+2020-04-29 05:45:35,909 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.negative-cache.secs
+2020-04-29 05:45:35,910 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.warn.after.ms
+2020-04-29 05:45:35,910 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.groups.cache.background.reload
+2020-04-29 05:45:35,910 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.background.reload
+2020-04-29 05:45:35,910 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
+2020-04-29 05:45:35,911 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.background.reload
+2020-04-29 05:45:35,911 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.groups.cache.background.reload.threads
+2020-04-29 05:45:35,911 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.security.groups.cache.background.reload.threads
+2020-04-29 05:45:35,911 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
+2020-04-29 05:45:35,912 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.user.group.static.mapping.overrides
+2020-04-29 05:45:35,936 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 05:45:35,936 [main] INFO  conf.Configuration (Configuration.java:getInts(1499)) - msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 05:45:35,936 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
+2020-04-29 05:45:35,940 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.http-address
+2020-04-29 05:45:35,941 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.journalnode.http-bind-host
+2020-04-29 05:45:35,941 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.https-address
+2020-04-29 05:45:35,941 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.journalnode.http-bind-host
+2020-04-29 05:45:35,942 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.journalnode.https-bind-host
+2020-04-29 05:45:35,942 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.journalnode.https-bind-host
+2020-04-29 05:45:35,958 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.http.policy
+2020-04-29 05:45:35,963 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.web.authentication.kerberos.keytab
+2020-04-29 05:45:35,963 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.cluster.administrators
+2020-04-29 05:45:36,118 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.temp.dir
+2020-04-29 05:45:36,128 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.kerberos.principal
+2020-04-29 05:45:36,128 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.type
+2020-04-29 05:45:36,129 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.kerberos.keytab
+2020-04-29 05:45:36,129 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.simple.anonymous.allowed
+2020-04-29 05:45:36,130 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get bind.address
+2020-04-29 05:45:36,130 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.signature.secret.file
+2020-04-29 05:45:36,130 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.token.validity
+2020-04-29 05:45:36,166 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.max.threads
+2020-04-29 05:45:36,166 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.max.threads
+2020-04-29 05:45:36,167 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.max.threads
+2020-04-29 05:45:36,170 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.http.logs.enabled
+2020-04-29 05:45:36,171 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.logs.enabled
+2020-04-29 05:45:36,171 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.logs.enabled
+2020-04-29 05:45:36,177 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.jetty.logs.serve.aliases
+2020-04-29 05:45:36,177 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.jetty.logs.serve.aliases
+2020-04-29 05:45:36,177 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.jetty.logs.serve.aliases
+2020-04-29 05:45:36,182 [main] INFO  conf.Configuration (Configuration.java:getClasses(2604)) - msx-conf getClasses hadoop.http.filter.initializers
+2020-04-29 05:45:36,183 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.filter.initializers
+2020-04-29 05:45:36,183 [main] INFO  conf.Configuration (Configuration.java:getClassByName(2539)) - msx-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
+2020-04-29 05:45:36,183 [main] INFO  conf.Configuration (Configuration.java:getRaw(1288)) - msx-conf getRaw hadoop.http.filter.initializers
+2020-04-29 05:45:36,183 [main] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings hadoop.http.filter.initializers
+2020-04-29 05:45:36,184 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
+2020-04-29 05:45:36,185 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
+2020-04-29 05:45:36,186 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.web.ugi
+2020-04-29 05:45:36,186 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.http.staticuser.user
+2020-04-29 05:45:36,191 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.max.request.header.size
+2020-04-29 05:45:36,191 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.max.request.header.size
+2020-04-29 05:45:36,192 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.max.request.header.size
+2020-04-29 05:45:36,192 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.max.response.header.size
+2020-04-29 05:45:36,192 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.max.response.header.size
+2020-04-29 05:45:36,193 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.idle_timeout.ms
+2020-04-29 05:45:36,193 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.max.response.header.size
+2020-04-29 05:45:36,193 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.idle_timeout.ms
+2020-04-29 05:45:36,193 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.idle_timeout.ms
+2020-04-29 05:45:36,202 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.socket.backlog.size
+2020-04-29 05:45:36,202 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.socket.backlog.size
+2020-04-29 05:45:36,203 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.socket.backlog.size
+2020-04-29 05:45:36,209 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.acceptor.count
+2020-04-29 05:45:36,209 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.acceptor.count
+2020-04-29 05:45:36,210 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.acceptor.count
+2020-04-29 05:45:36,210 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.selector.count
+2020-04-29 05:45:36,210 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.selector.count
+2020-04-29 05:45:36,210 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.selector.count
+2020-04-29 05:45:36,362 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.http.policy
+2020-04-29 05:45:36,367 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.http.policy
+2020-04-29 05:45:36,374 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.rpc-address
+2020-04-29 05:45:36,374 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.journalnode.rpc-bind-host
+2020-04-29 05:45:36,374 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1273)) - msx-conf getTrimmed dfs.journalnode.rpc-bind-host
+2020-04-29 05:45:36,375 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.journalnode.rpc-bind-host
+2020-04-29 05:45:36,401 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
+2020-04-29 05:45:36,402 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
+2020-04-29 05:45:36,402 [main] INFO  conf.Configuration (Configuration.java:getClassByName(2539)) - msx-conf getClassByName org.apache.hadoop.ipc.ProtobufRpcEngine
+2020-04-29 05:45:36,402 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.ipc.ProtobufRpcEngine
+2020-04-29 05:45:36,402 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
+2020-04-29 05:45:36,411 [main] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
+2020-04-29 05:45:36,414 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.maximum.data.length
+2020-04-29 05:45:36,414 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.maximum.data.length
+2020-04-29 05:45:36,414 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.server.handler.queue.size
+2020-04-29 05:45:36,414 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.maximum.data.length
+2020-04-29 05:45:36,415 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.handler.queue.size
+2020-04-29 05:45:36,415 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.max.response.size
+2020-04-29 05:45:36,415 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.server.max.response.size
+2020-04-29 05:45:36,415 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.server.read.threadpool.size
+2020-04-29 05:45:36,415 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.handler.queue.size
+2020-04-29 05:45:36,415 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.max.response.size
+2020-04-29 05:45:36,416 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.read.connection-queue.size
+2020-04-29 05:45:36,416 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.read.threadpool.size
+2020-04-29 05:45:36,416 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.server.read.connection-queue.size
+2020-04-29 05:45:36,416 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.read.connection-queue.size
+2020-04-29 05:45:36,416 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.read.threadpool.size
+2020-04-29 05:45:36,418 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass ipc.0.callqueue.impl
+2020-04-29 05:45:36,419 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.0.callqueue.impl
+2020-04-29 05:45:36,419 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.0.callqueue.impl
+2020-04-29 05:45:36,420 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass ipc.0.scheduler.impl
+2020-04-29 05:45:36,420 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.0.scheduler.impl
+2020-04-29 05:45:36,421 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.0.callqueue.impl
+2020-04-29 05:45:36,421 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.0.scheduler.impl
+2020-04-29 05:45:36,421 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass ipc.0.callqueue.impl
+2020-04-29 05:45:36,421 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.0.callqueue.impl
+2020-04-29 05:45:36,422 [main] INFO  conf.Configuration (Configuration.java:getClass(2631)) - msx-conf getClass ipc.0.scheduler.impl
+2020-04-29 05:45:36,423 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.0.scheduler.impl
+2020-04-29 05:45:36,423 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean ipc.0.backoff.enable
+2020-04-29 05:45:36,423 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.0.backoff.enable
+2020-04-29 05:45:36,423 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.0.scheduler.impl
+2020-04-29 05:45:36,424 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.0.backoff.enable
+2020-04-29 05:45:36,424 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.0.faircallqueue.priority-levels
+2020-04-29 05:45:36,424 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.0.faircallqueue.priority-levels
+2020-04-29 05:45:36,424 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.0.scheduler.priority.levels
+2020-04-29 05:45:36,424 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.0.faircallqueue.priority-levels
+2020-04-29 05:45:36,425 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.0.scheduler.priority.levels
+2020-04-29 05:45:36,425 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.0.scheduler.priority.levels
+2020-04-29 05:45:36,426 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.authorization
+2020-04-29 05:45:36,426 [main] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.security.authentication
+2020-04-29 05:45:36,426 [main] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.authorization
+2020-04-29 05:45:36,426 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.authorization
+2020-04-29 05:45:36,438 [main] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.listen.queue.size
+2020-04-29 05:45:36,438 [main] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.server.listen.queue.size
+2020-04-29 05:45:36,438 [main] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.listen.queue.size
+2020-04-29 05:45:36,441 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.client.idlethreshold
+2020-04-29 05:45:36,441 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.client.idlethreshold
+2020-04-29 05:45:36,442 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.client.connection.idle-scan-interval.ms
+2020-04-29 05:45:36,442 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.client.idlethreshold
+2020-04-29 05:45:36,442 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.client.connection.idle-scan-interval.ms
+2020-04-29 05:45:36,442 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.client.connection.maxidletime
+2020-04-29 05:45:36,442 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.client.connection.idle-scan-interval.ms
+2020-04-29 05:45:36,443 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.client.connection.maxidletime
+2020-04-29 05:45:36,443 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.client.kill.max
+2020-04-29 05:45:36,443 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.client.kill.max
+2020-04-29 05:45:36,443 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt ipc.server.max.connections
+2020-04-29 05:45:36,443 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.client.connection.maxidletime
+2020-04-29 05:45:36,443 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.client.kill.max
+2020-04-29 05:45:36,444 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.max.connections
+2020-04-29 05:45:36,444 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.max.connections
+2020-04-29 05:45:36,446 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get rpc.metrics.percentiles.intervals
+2020-04-29 05:45:36,446 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInts(1499)) - msx-conf getInts rpc.metrics.percentiles.intervals
+2020-04-29 05:45:36,446 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings rpc.metrics.percentiles.intervals
+2020-04-29 05:45:36,705 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean ipc.server.tcpnodelay
+2020-04-29 05:45:36,705 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.tcpnodelay
+2020-04-29 05:45:36,706 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.tcpnodelay
+2020-04-29 05:45:36,706 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean ipc.server.log.slow.rpc
+2020-04-29 05:45:36,706 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed ipc.server.log.slow.rpc
+2020-04-29 05:45:36,707 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get ipc.server.log.slow.rpc
+2020-04-29 05:45:36,952 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.security.authorization
+2020-04-29 05:45:36,953 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.security.authorization
+2020-04-29 05:45:36,954 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.security.authorization
+2020-04-29 05:45:36,965 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.edits.dir
+2020-04-29 05:45:36,978 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.edits.dir.perm
+2020-04-29 05:45:36,986 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean dfs.ha.tail-edits.in-progress
+2020-04-29 05:45:36,987 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.ha.tail-edits.in-progress
+2020-04-29 05:45:36,987 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.ha.tail-edits.in-progress
+2020-04-29 05:45:37,016 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.journalnode.enable.sync
+2020-04-29 05:45:37,016 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean dfs.journalnode.enable.sync
+2020-04-29 05:45:37,016 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.journalnode.enable.sync
+2020-04-29 05:45:37,018 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.edit.log.transfer.timeout
+2020-04-29 05:45:37,018 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.journalnode.sync.interval
+2020-04-29 05:45:37,018 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt dfs.edit.log.transfer.timeout
+2020-04-29 05:45:37,018 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong dfs.journalnode.sync.interval
+2020-04-29 05:45:37,018 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.edit.log.transfer.timeout
+2020-04-29 05:45:37,018 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.journalnode.sync.interval
+2020-04-29 05:45:37,019 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.edit.log.transfer.bandwidthPerSec
+2020-04-29 05:45:37,019 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.namenode.shared.edits.dir
+2020-04-29 05:45:37,019 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getLong(1531)) - msx-conf getLong dfs.edit.log.transfer.bandwidthPerSec
+2020-04-29 05:45:37,019 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.edit.log.transfer.bandwidthPerSec
+2020-04-29 05:45:37,019 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.namenode.shared.edits.dir
+2020-04-29 05:45:37,031 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.ha.tail-edits.in-progress
+2020-04-29 05:45:37,031 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean dfs.ha.tail-edits.in-progress
+2020-04-29 05:45:37,031 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.ha.tail-edits.in-progress
+2020-04-29 05:45:37,033 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.qjournal.queued-edits.limit.mb
+2020-04-29 05:45:37,033 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt dfs.qjournal.queued-edits.limit.mb
+2020-04-29 05:45:37,033 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.qjournal.queued-edits.limit.mb
+2020-04-29 05:45:37,037 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInts(1499)) - msx-conf getInts dfs.metrics.percentiles.intervals
+2020-04-29 05:45:37,038 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.metrics.percentiles.intervals
+2020-04-29 05:45:37,038 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-default.xml
+2020-04-29 05:45:37,038 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings dfs.metrics.percentiles.intervals
+2020-04-29 05:45:37,042 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource core-site.xml
+2020-04-29 05:45:37,043 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-default.xml
+2020-04-29 05:45:37,047 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getResource(2779)) - msx-conf getResource hdfs-site.xml
+2020-04-29 05:45:37,231 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.internal.nameservices
+2020-04-29 05:45:37,231 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.internal.nameservices
+2020-04-29 05:45:37,231 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmedStringCollection(2260)) - msx-conf getTrimmedStringCollection dfs.nameservices
+2020-04-29 05:45:37,232 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.nameservices
+2020-04-29 05:45:37,232 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.htrace.sampler.classes
+2020-04-29 05:45:37,232 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get journalnode.htracesampler.classes
+2020-04-29 05:45:37,232 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.edits.dir
+2020-04-29 05:45:37,233 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.htrace.tracer.id
+2020-04-29 05:45:37,233 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get journalnode.htracespan.receiver.classes
+2020-04-29 05:45:37,233 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get journalnode.htracetracer.id
+2020-04-29 05:45:37,234 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.htrace.span.receiver.classes
+2020-04-29 05:45:37,238 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.metrics.session-id
+2020-04-29 05:45:37,241 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.rpc-address
+2020-04-29 05:45:37,244 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.journalnode.http-bind-host
+2020-04-29 05:45:37,244 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.http-address
+2020-04-29 05:45:37,244 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.journalnode.http-bind-host
+2020-04-29 05:45:37,245 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.journalnode.https-bind-host
+2020-04-29 05:45:37,245 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.http.policy
+2020-04-29 05:45:37,245 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.journalnode.https-address
+2020-04-29 05:45:37,245 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed dfs.journalnode.https-bind-host
+2020-04-29 05:45:37,246 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.web.authentication.kerberos.keytab
+2020-04-29 05:45:37,246 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get dfs.cluster.administrators
+2020-04-29 05:45:37,253 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.temp.dir
+2020-04-29 05:45:37,254 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.kerberos.keytab
+2020-04-29 05:45:37,254 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.kerberos.principal
+2020-04-29 05:45:37,254 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.type
+2020-04-29 05:45:37,255 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get bind.address
+2020-04-29 05:45:37,255 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.signature.secret.file
+2020-04-29 05:45:37,255 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.simple.anonymous.allowed
+2020-04-29 05:45:37,255 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.authentication.token.validity
+2020-04-29 05:45:37,257 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.max.threads
+2020-04-29 05:45:37,257 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.max.threads
+2020-04-29 05:45:37,257 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.max.threads
+2020-04-29 05:45:37,258 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.http.logs.enabled
+2020-04-29 05:45:37,258 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.logs.enabled
+2020-04-29 05:45:37,259 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.logs.enabled
+2020-04-29 05:45:37,261 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getBoolean(1659)) - msx-conf getBoolean hadoop.jetty.logs.serve.aliases
+2020-04-29 05:45:37,261 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.jetty.logs.serve.aliases
+2020-04-29 05:45:37,262 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.jetty.logs.serve.aliases
+2020-04-29 05:45:37,266 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getClasses(2604)) - msx-conf getClasses hadoop.http.filter.initializers
+2020-04-29 05:45:37,266 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getRaw(1288)) - msx-conf getRaw hadoop.http.filter.initializers
+2020-04-29 05:45:37,267 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.filter.initializers
+2020-04-29 05:45:37,267 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getClassByName(2539)) - msx-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
+2020-04-29 05:45:37,267 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmedStrings(2278)) - msx-conf getTrimmedStrings hadoop.http.filter.initializers
+2020-04-29 05:45:37,268 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
+2020-04-29 05:45:37,268 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getClassByNameOrNull(2555)) - msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
+2020-04-29 05:45:37,269 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get dfs.web.ugi
+2020-04-29 05:45:37,269 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1456)) - msx-conf get hadoop.http.staticuser.user
+2020-04-29 05:45:37,270 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.max.request.header.size
+2020-04-29 05:45:37,271 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.max.request.header.size
+2020-04-29 05:45:37,271 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.max.response.header.size
+2020-04-29 05:45:37,271 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.max.request.header.size
+2020-04-29 05:45:37,271 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.max.response.header.size
+2020-04-29 05:45:37,272 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.idle_timeout.ms
+2020-04-29 05:45:37,272 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.max.response.header.size
+2020-04-29 05:45:37,272 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.idle_timeout.ms
+2020-04-29 05:45:37,272 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.idle_timeout.ms
+2020-04-29 05:45:37,273 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.socket.backlog.size
+2020-04-29 05:45:37,273 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.acceptor.count
+2020-04-29 05:45:37,273 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.socket.backlog.size
+2020-04-29 05:45:37,273 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.acceptor.count
+2020-04-29 05:45:37,273 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.socket.backlog.size
+2020-04-29 05:45:37,274 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.acceptor.count
+2020-04-29 05:45:37,274 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get hadoop.http.selector.count
+2020-04-29 05:45:37,274 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getInt(1478)) - msx-conf getInt hadoop.http.selector.count
+2020-04-29 05:45:37,274 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:getTrimmed(1253)) - msx-conf getTrimmed hadoop.http.selector.count
+2020-04-29 05:45:37,284 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get 
+2020-04-29 05:45:37,305 [Listener at 0.0.0.0/33069] INFO  conf.Configuration (Configuration.java:get(1196)) - msx-conf get 

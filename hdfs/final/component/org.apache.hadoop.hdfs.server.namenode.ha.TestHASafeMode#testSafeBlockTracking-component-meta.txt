@@ -1,24 +1,22 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testSafeBlockTracking
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testSafeBlockTracking
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testSafeBlockTracking
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1651855867 for NameNode
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testSafeBlockTracking
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1274247563 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode stop 1115381650, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1346197173, value is null
+msx-reconfagent DataNode stop 1144897090, value is null
+msx-reconfagent DataNode stop 1496220730, value is null
+msx-reconfagent NameNode stop 365056339, value is null
+msx-reconfagent NameNode stop 1872047468, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testSafeBlockTracking
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.ha.TestHASafeMode#testSafeBlockTracking
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

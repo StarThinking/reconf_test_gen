@@ -1,24 +1,22 @@
-listener test started org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting#testMultipleVolFailuresOnNode
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting#testMultipleVolFailuresOnNode
-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting#testMultipleVolFailuresOnNode
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting#testMultipleVolFailuresOnNode
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 229672540 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1807699311 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1560640856, value is null
+msx-reconfagent NameNode stop 1249331724, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 256100219, value is null
+msx-reconfagent DataNode stop 1959806204, value is null
+msx-reconfagent DataNode stop 893332246, value is null
+msx-reconfagent NameNode stop 2089899928, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting#testMultipleVolFailuresOnNode
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.datanode.TestDataNodeVolumeFailureReporting#testMultipleVolFailuresOnNode
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

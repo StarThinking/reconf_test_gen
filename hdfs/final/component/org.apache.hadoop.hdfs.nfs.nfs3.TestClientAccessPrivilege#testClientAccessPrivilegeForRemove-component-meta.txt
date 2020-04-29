@@ -1,13 +1,14 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-listener test started org.apache.hadoop.hdfs.nfs.nfs3.TestClientAccessPrivilege#testClientAccessPrivilegeForRemove
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hdfs.nfs.nfs3.TestClientAccessPrivilege#testClientAccessPrivilegeForRemove
-listener writeFile testName is org.apache.hadoop.hdfs.nfs.nfs3.TestClientAccessPrivilege#testClientAccessPrivilegeForRemove
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.nfs.nfs3.TestClientAccessPrivilege#testClientAccessPrivilegeForRemove
-listener succeed
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1336735375 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 766696861 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hdfs.nfs.nfs3.TestClientAccessPrivilege#testClientAccessPrivilegeForRemove
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hdfs.nfs.nfs3.TestClientAccessPrivilege#testClientAccessPrivilegeForRemove
+msx-listener writeFile testName is org.apache.hadoop.hdfs.nfs.nfs3.TestClientAccessPrivilege#testClientAccessPrivilegeForRemove
+msx-listener succeed
+msx-reconfagent DataNode stop 1015799131, value is null
+msx-reconfagent NameNode stop 1888639813, value is null
+msx-listener all testRunFinished
+msx-rc 0

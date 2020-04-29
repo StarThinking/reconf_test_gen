@@ -1,33 +1,32 @@
-listener test started org.apache.hadoop.hdfs.server.diskbalancer.command.TestDiskBalancerCommand#testRunMultipleCommandsUnderOneSetup
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.diskbalancer.command.TestDiskBalancerCommand#testRunMultipleCommandsUnderOneSetup
-listener writeFile testName is org.apache.hadoop.hdfs.server.diskbalancer.command.TestDiskBalancerCommand#testRunMultipleCommandsUnderOneSetup
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.diskbalancer.command.TestDiskBalancerCommand#testRunMultipleCommandsUnderOneSetup
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1277009227 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 737104370 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1270167189, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1458145324, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1521455373, value is null
+msx-reconfagent NameNode stop 1780255888, value is null
+msx-reconfagent DataNode stop 275056979, value is null
+msx-reconfagent DataNode stop 1834031967, value is null
+msx-reconfagent DataNode stop 1917442783, value is null
+msx-reconfagent DataNode stop 1917442783, value is null
+msx-reconfagent ERROR : conf 1894144426 not existed in confInstanceList when removing.
+msx-reconfagent DataNode stop 1834031967, value is null
+msx-reconfagent ERROR : conf 727497138 not existed in confInstanceList when removing.
+msx-reconfagent DataNode stop 275056979, value is null
+msx-reconfagent ERROR : conf 351656492 not existed in confInstanceList when removing.
+msx-reconfagent NameNode stop 2023026843, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.diskbalancer.command.TestDiskBalancerCommand#testRunMultipleCommandsUnderOneSetup
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.diskbalancer.command.TestDiskBalancerCommand#testRunMultipleCommandsUnderOneSetup
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

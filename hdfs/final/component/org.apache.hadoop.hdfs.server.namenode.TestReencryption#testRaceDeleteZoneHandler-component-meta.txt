@@ -1,12 +1,14 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestReencryption#testRaceDeleteZoneHandler
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestReencryption#testRaceDeleteZoneHandler
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestReencryption#testRaceDeleteZoneHandler
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestReencryption#testRaceDeleteZoneHandler
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2132324612 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2002451283 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1145512553, value is null
+msx-reconfagent NameNode stop 131353600, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestReencryption#testRaceDeleteZoneHandler
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestReencryption#testRaceDeleteZoneHandler
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

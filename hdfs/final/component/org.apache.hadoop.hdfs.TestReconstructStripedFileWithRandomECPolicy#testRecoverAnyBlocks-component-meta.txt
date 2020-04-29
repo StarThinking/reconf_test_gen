@@ -1,64 +1,28 @@
-listener test started org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
-listener writeFile testName is org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 601893033 for NameNode
+msx-listener test started org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1398260359 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 620456576, value is null
+msx-reconfagent DataNode stop 577245010, value is null
+msx-reconfagent DataNode stop 878598679, value is null
+msx-reconfagent DataNode stop 1893899796, value is null
+msx-reconfagent DataNode stop 620456576, value is null
+msx-reconfagent ERROR : conf 1358857082 not existed in confInstanceList when removing.
+msx-reconfagent NameNode stop 597364637, value is null
+msx-listener test Failure org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
+msx-listener failed
+msx-listener failureMessage: arrays first differed at element [1048064]; expected:<1> but was:<0>
+msx-listener stackTrace: arrays first differed at element [1048064]; expected:<1> but was:<0>
+msx-listener testfinished org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.TestReconstructStripedFileWithRandomECPolicy#testRecoverAnyBlocks
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

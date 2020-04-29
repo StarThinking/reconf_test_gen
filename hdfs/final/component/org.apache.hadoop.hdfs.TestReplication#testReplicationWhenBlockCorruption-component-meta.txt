@@ -1,27 +1,24 @@
-listener test started org.apache.hadoop.hdfs.TestReplication#testReplicationWhenBlockCorruption
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestReplication#testReplicationWhenBlockCorruption
-listener writeFile testName is org.apache.hadoop.hdfs.TestReplication#testReplicationWhenBlockCorruption
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestReplication#testReplicationWhenBlockCorruption
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 467251741 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1684365841 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 397085322, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 193178505, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 936777001, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 2044258203, value is null
+msx-reconfagent DataNode stop 544237137, value is null
+msx-reconfagent DataNode stop 351781029, value is null
+msx-reconfagent NameNode stop 416379444, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.TestReplication#testReplicationWhenBlockCorruption
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestReplication#testReplicationWhenBlockCorruption
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,9 +1,18 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots#testNestedSnapshots
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots#testNestedSnapshots
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots#testNestedSnapshots
-listener succeed
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 731260860 for DataNode
+msx-reconfagent creating ReconfAgent 706197430 for NameNode
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots#testNestedSnapshots
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 553821397, value is null
+msx-reconfagent DataNode stop 364704856, value is null
+msx-reconfagent DataNode stop 883380345, value is null
+msx-reconfagent NameNode stop 176955204, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots#testNestedSnapshots
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.snapshot.TestNestedSnapshots#testNestedSnapshots
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,15 +1,16 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-listener test started org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot#testInternalRenameFromSlash
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot#testInternalRenameFromSlash
-listener writeFile testName is org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot#testInternalRenameFromSlash
-listener succeed
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 349420578 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 737104370 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot#testInternalRenameFromSlash
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot#testInternalRenameFromSlash
+msx-listener writeFile testName is org.apache.hadoop.fs.viewfs.TestViewFileSystemAtHdfsRoot#testInternalRenameFromSlash
+msx-listener succeed
+msx-reconfagent DataNode stop 1089680530, value is null
+msx-reconfagent DataNode stop 371976476, value is null
+msx-reconfagent NameNode stop 2023026843, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,19 +1,20 @@
-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 616675360 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 888826946 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 2099162554, value is null
+msx-reconfagent DataNode stop 117037021, value is null
+msx-reconfagent DataNode stop 1554298765, value is null
+msx-reconfagent NameNode stop 978881, value is null
+msx-reconfagent NameNode stop 978881, value is null
+msx-reconfagent ERROR : conf 1822215538 not existed in confInstanceList when removing.
+msx-listener testfinished org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.balancer.TestBalancer#testRackPolicyAfterBalance
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,19 +1,21 @@
-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs SecondaryNameNode init
-hdfs SecondaryNameNode init
-hdfs SecondaryNameNode stop
-hdfs SecondaryNameNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1864230087 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 789982400 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1815592231 for SecondaryNameNode
+msx-reconfagent SecondaryNameNode init, vvmode is none, do nothing
+msx-reconfagent SecondaryNameNode init, vvmode is none, do nothing
+msx-reconfagent SecondaryNameNode stop 1677921169, value is null
+msx-reconfagent SecondaryNameNode stop 1939869193, value is null
+msx-reconfagent DataNode stop 1302877661, value is null
+msx-reconfagent NameNode stop 1088239991, value is null
+msx-reconfagent NameNode stop 40875560, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+msx-listener writeFile testName is org.apache.hadoop.hdfs.server.namenode.TestCheckpoint#testMultipleSecondaryNamenodes
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

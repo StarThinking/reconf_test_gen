@@ -1,12 +1,14 @@
-listener test started org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs#testUpgradeFrom22FixesStorageIDs
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs#testUpgradeFrom22FixesStorageIDs
-listener writeFile testName is org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs#testUpgradeFrom22FixesStorageIDs
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs#testUpgradeFrom22FixesStorageIDs
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1663691854 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1012364791 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1932867888, value is null
+msx-reconfagent NameNode stop 1177272631, value is null
+msx-listener testfinished org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs#testUpgradeFrom22FixesStorageIDs
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestDatanodeStartupFixesLegacyStorageIDs#testUpgradeFrom22FixesStorageIDs
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0
