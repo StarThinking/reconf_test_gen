@@ -25,11 +25,13 @@ echo "sub_project for $the_test is $sub_project"
 # run mvn test
 echo "the_test is $the_test"
 #cd $project_root_dir; mvn test -Dtest=$the_test
+rc=1
 cd $sub_project; mvn test -Dtest=$the_test
+rc=$?
 
 # log
 test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt
 if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test'; exit -1; fi
 #echo "test_log is $test_log"
 if [ "$log_dts_dir" != "none" ]; then mv $test_log $log_dts_dir/"$the_test"-output.txt; fi
-
+echo "msx-rc $rc" >> $log_dts_dir/"$the_test"-output.txt
