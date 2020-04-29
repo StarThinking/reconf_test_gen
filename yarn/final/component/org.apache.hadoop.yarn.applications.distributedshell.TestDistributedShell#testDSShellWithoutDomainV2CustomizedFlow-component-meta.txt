@@ -1,21 +1,23 @@
-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
-listener unitTestCounterInClass = 0
-yarn ResourceManager init
-yarn NodeManager init
-yarn ApplicationHistoryServer init
-yarn ResourceManager start
-yarn NodeManager start
-yarn ApplicationHistoryServer start
-yarn ApplicationHistoryServer stop
-yarn NodeManager stop
-yarn ResourceManager stop
-listener test Failure org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
-listener failed
-listener failureMessage: Unexpected number of DS_APP_ATTEMPT_START event published. expected:<1> but was:<0>
-listener stackTrace: java.lang.AssertionError: Unexpected number of DS_APP_ATTEMPT_START event published. expected:<1> but was:<0>
-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 13553665 for ResourceManager
+msx-reconfagent creating ReconfAgent 1823596461 for NodeManager
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1088678161 for ApplicationHistoryServer
+msx-reconfagent ApplicationHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ApplicationHistoryServer stop 1788769145, value is null
+msx-reconfagent NodeManager stop 715755664, value is null
+msx-reconfagent ResourceManager stop 1659835812, value is null
+msx-listener test Failure org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
+msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
+msx-listener failed
+msx-listener failureMessage: Unable to delete directory /tmp/junit9130496646227772169/junit8774994887120407317/entities.
+msx-listener stackTrace: java.io.IOException: Unable to delete directory /tmp/junit9130496646227772169/junit8774994887120407317/entities.
+msx-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
+msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2CustomizedFlow
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

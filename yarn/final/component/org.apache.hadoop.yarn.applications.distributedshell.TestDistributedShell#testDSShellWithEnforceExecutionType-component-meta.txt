@@ -1,15 +1,22 @@
-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
-listener unitTestCounterInClass = 0
-yarn ResourceManager init
-yarn NodeManager init
-yarn ApplicationHistoryServer init
-yarn ResourceManager start
-yarn NodeManager start
-yarn ApplicationHistoryServer start
-yarn ApplicationHistoryServer stop
-yarn NodeManager stop
-yarn ResourceManager stop
-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 576404839 for ResourceManager
+msx-reconfagent creating ReconfAgent 784665233 for NodeManager
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 13663859 for ApplicationHistoryServer
+msx-reconfagent ApplicationHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ApplicationHistoryServer stop 1218650854, value is null
+msx-reconfagent NodeManager stop 1264046149, value is null
+msx-listener test Failure org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
+msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
+msx-listener failed
+msx-listener failureMessage: test timed out after 90000 milliseconds
+msx-listener stackTrace: java.lang.Exception: test timed out after 90000 milliseconds
+        at java.util.concurrent.locmsx-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
+msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithEnforceExecutionType
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 1

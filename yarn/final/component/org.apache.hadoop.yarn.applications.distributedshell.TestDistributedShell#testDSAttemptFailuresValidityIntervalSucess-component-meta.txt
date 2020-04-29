@@ -1,15 +1,17 @@
-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSAttemptFailuresValidityIntervalSucess
-listener unitTestCounterInClass = 0
-yarn ResourceManager init
-yarn NodeManager init
-yarn ApplicationHistoryServer init
-yarn ResourceManager start
-yarn NodeManager start
-yarn ApplicationHistoryServer start
-yarn ApplicationHistoryServer stop
-yarn NodeManager stop
-yarn ResourceManager stop
-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSAttemptFailuresValidityIntervalSucess
-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSAttemptFailuresValidityIntervalSucess
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSAttemptFailuresValidityIntervalSucess
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1235774562 for ResourceManager
+msx-reconfagent creating ReconfAgent 1368515520 for NodeManager
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2006202327 for ApplicationHistoryServer
+msx-reconfagent ApplicationHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ApplicationHistoryServer stop 2109305013, value is null
+msx-reconfagent NodeManager stop 300742844, value is null
+msx-reconfagent ResourceManager stop 2103261769, value is null
+msx-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSAttemptFailuresValidityIntervalSucess
+msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSAttemptFailuresValidityIntervalSucess
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

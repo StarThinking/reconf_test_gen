@@ -1,15 +1,17 @@
-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithOpportunisticContainers
-listener unitTestCounterInClass = 0
-yarn ResourceManager init
-yarn NodeManager init
-yarn ApplicationHistoryServer init
-yarn ResourceManager start
-yarn NodeManager start
-yarn ApplicationHistoryServer start
-yarn ApplicationHistoryServer stop
-yarn NodeManager stop
-yarn ResourceManager stop
-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithOpportunisticContainers
-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithOpportunisticContainers
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithOpportunisticContainers
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 325082037 for ResourceManager
+msx-reconfagent creating ReconfAgent 990531026 for NodeManager
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2108515085 for ApplicationHistoryServer
+msx-reconfagent ApplicationHistoryServer init, vvmode is none, do nothing
+msx-reconfagent ApplicationHistoryServer stop 1482240046, value is null
+msx-reconfagent NodeManager stop 1960528602, value is null
+msx-reconfagent ResourceManager stop 401995178, value is null
+msx-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithOpportunisticContainers
+msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithOpportunisticContainers
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0
