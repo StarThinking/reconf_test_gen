@@ -1,20 +1,20 @@
-listener test started org.apache.hadoop.hbase.master.TestGetLastFlushedSequenceId#test
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.master.TestGetLastFlushedSequenceId#test
-listener writeFile testName is org.apache.hadoop.hbase.master.TestGetLastFlushedSequenceId#test
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.master.TestGetLastFlushedSequenceId#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 638548794 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 840884287 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 48479646 for HRegionServer
+msx-reconfagent creating ReconfAgent 177783881 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 753846780, value is null
+msx-reconfagent HMaster stop 830052949, value is null
+msx-reconfagent DataNode stop 1216379278, value is null
+msx-reconfagent NameNode stop 894198939, value is null
+msx-listener testfinished org.apache.hadoop.hbase.master.TestGetLastFlushedSequenceId#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestGetLastFlushedSequenceId#test
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

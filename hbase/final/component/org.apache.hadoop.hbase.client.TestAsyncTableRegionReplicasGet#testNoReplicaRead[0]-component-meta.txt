@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestAsyncTableRegionReplicasGet#testNoReplicaRead[0]
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableRegionReplicasGet#testNoReplicaRead[0]
-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableRegionReplicasGet#testNoReplicaRead[0]
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1934667480 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2089782826 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1161633541 for HRegionServer
+msx-reconfagent creating ReconfAgent 2046369508 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncTableRegionReplicasGet#testNoReplicaRead[0]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableRegionReplicasGet#testNoReplicaRead[0]
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableRegionReplicasGet#testNoReplicaRead[0]
+msx-listener succeed
+msx-reconfagent HRegionServer stop 712194019, value is null
+msx-reconfagent HRegionServer stop 119614411, value is null
+msx-reconfagent HRegionServer stop 1999254773, value is null
+msx-reconfagent HMaster stop 297530207, value is null
+msx-reconfagent DataNode stop 9921786, value is null
+msx-reconfagent DataNode stop 2147452318, value is null
+msx-reconfagent DataNode stop 773849945, value is null
+msx-reconfagent NameNode stop 1575269886, value is null
+msx-listener all testRunFinished
+msx-rc 0

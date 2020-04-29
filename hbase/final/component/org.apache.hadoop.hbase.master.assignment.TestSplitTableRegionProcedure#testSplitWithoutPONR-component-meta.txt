@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testSplitWithoutPONR
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testSplitWithoutPONR
-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testSplitWithoutPONR
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1562255869 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1133580232 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 90690220 for HRegionServer
+msx-reconfagent creating ReconfAgent 1921759839 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testSplitWithoutPONR
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testSplitWithoutPONR
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testSplitWithoutPONR
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1908233561, value is null
+msx-reconfagent HRegionServer stop 1056537780, value is null
+msx-reconfagent HRegionServer stop 1447506876, value is null
+msx-reconfagent HMaster stop 1583183367, value is null
+msx-reconfagent DataNode stop 767351624, value is null
+msx-reconfagent DataNode stop 622331615, value is null
+msx-reconfagent DataNode stop 1477624667, value is null
+msx-reconfagent NameNode stop 940510998, value is null
+msx-listener all testRunFinished
+msx-rc 0

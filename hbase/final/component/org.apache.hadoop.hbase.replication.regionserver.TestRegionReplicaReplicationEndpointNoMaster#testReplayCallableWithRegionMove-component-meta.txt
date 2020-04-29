@@ -1,27 +1,24 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HMaster stop
-hbase HRegionServer stop
-listener test started org.apache.hadoop.hbase.replication.regionserver.TestRegionReplicaReplicationEndpointNoMaster#testReplayCallableWithRegionMove
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.replication.regionserver.TestRegionReplicaReplicationEndpointNoMaster#testReplayCallableWithRegionMove
-listener writeFile testName is org.apache.hadoop.hbase.replication.regionserver.TestRegionReplicaReplicationEndpointNoMaster#testReplayCallableWithRegionMove
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 757234046 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1460273975 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 72616744 for HRegionServer
+msx-reconfagent creating ReconfAgent 1262500590 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 1518183674, value is null
+msx-listener test started org.apache.hadoop.hbase.replication.regionserver.TestRegionReplicaReplicationEndpointNoMaster#testReplayCallableWithRegionMove
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.replication.regionserver.TestRegionReplicaReplicationEndpointNoMaster#testReplayCallableWithRegionMove
+msx-listener writeFile testName is org.apache.hadoop.hbase.replication.regionserver.TestRegionReplicaReplicationEndpointNoMaster#testReplayCallableWithRegionMove
+msx-listener succeed
+msx-reconfagent HRegionServer stop 503715818, value is null
+msx-reconfagent HRegionServer stop 1842666091, value is null
+msx-reconfagent DataNode stop 1748890347, value is null
+msx-reconfagent DataNode stop 661603509, value is null
+msx-reconfagent NameNode stop 429322265, value is null
+msx-listener all testRunFinished
+msx-rc 0

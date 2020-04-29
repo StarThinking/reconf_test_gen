@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.TestMobStoreScanner#testGetMassive
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.regionserver.TestMobStoreScanner#testGetMassive
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestMobStoreScanner#testGetMassive
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1063078202 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1298006067 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 976076411 for HRegionServer
+msx-reconfagent creating ReconfAgent 724410004 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestMobStoreScanner#testGetMassive
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestMobStoreScanner#testGetMassive
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestMobStoreScanner#testGetMassive
+msx-listener succeed
+msx-reconfagent HRegionServer stop 725363591, value is null
+msx-reconfagent HMaster stop 1946779660, value is null
+msx-reconfagent DataNode stop 966199317, value is null
+msx-reconfagent NameNode stop 462553734, value is null
+msx-listener all testRunFinished
+msx-rc 0

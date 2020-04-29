@@ -1,35 +1,30 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.rsgroup.TestRSGroupsBalance#testMisplacedRegions
-listener unitTestCounterInClass = 0
-hbase HRegionServer init
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.rsgroup.TestRSGroupsBalance#testMisplacedRegions
-listener writeFile testName is org.apache.hadoop.hbase.rsgroup.TestRSGroupsBalance#testMisplacedRegions
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2062815997 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 587290145 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 733262492 for HRegionServer
+msx-reconfagent creating ReconfAgent 1390537050 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.rsgroup.TestRSGroupsBalance#testMisplacedRegions
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hbase.rsgroup.TestRSGroupsBalance#testMisplacedRegions
+msx-listener writeFile testName is org.apache.hadoop.hbase.rsgroup.TestRSGroupsBalance#testMisplacedRegions
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1184807759, value is null
+msx-reconfagent HRegionServer stop 1672655471, value is null
+msx-reconfagent HRegionServer stop 1940382549, value is null
+msx-reconfagent HRegionServer stop 503290885, value is null
+msx-reconfagent HMaster stop 2052499906, value is null
+msx-reconfagent DataNode stop 1764243115, value is null
+msx-reconfagent DataNode stop 191964628, value is null
+msx-reconfagent DataNode stop 149555418, value is null
+msx-reconfagent NameNode stop 1955819151, value is null
+msx-listener all testRunFinished
+msx-rc 0

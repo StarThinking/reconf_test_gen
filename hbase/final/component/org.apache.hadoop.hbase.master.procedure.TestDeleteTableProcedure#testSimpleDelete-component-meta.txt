@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 559841681 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 949995670 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 165119189 for HRegionServer
+msx-reconfagent creating ReconfAgent 1959875677 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestDeleteTableProcedure#testSimpleDelete
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1567429877, value is null
+msx-reconfagent HMaster stop 587614665, value is null
+msx-reconfagent DataNode stop 485932652, value is null
+msx-reconfagent NameNode stop 439852183, value is null
+msx-listener all testRunFinished
+msx-rc 0

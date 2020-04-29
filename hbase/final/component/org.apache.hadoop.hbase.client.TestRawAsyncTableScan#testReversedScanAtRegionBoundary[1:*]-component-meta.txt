@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestRawAsyncTableScan#testReversedScanAtRegionBoundary[1: type=batch]
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestRawAsyncTableScan#testReversedScanAtRegionBoundary[1: type=batch]
-listener writeFile testName is org.apache.hadoop.hbase.client.TestRawAsyncTableScan#testReversedScanAtRegionBoundary[1: type=batch]
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1578521643 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 696282386 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1259950926 for HRegionServer
+msx-reconfagent creating ReconfAgent 606013018 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestRawAsyncTableScan#testReversedScanAtRegionBoundary[1: type=batch]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRawAsyncTableScan#testReversedScanAtRegionBoundary[1: type=batch]
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRawAsyncTableScan#testReversedScanAtRegionBoundary[1: type=batch]
+msx-listener succeed
+msx-reconfagent HRegionServer stop 342782034, value is null
+msx-reconfagent HRegionServer stop 1373245912, value is null
+msx-reconfagent HRegionServer stop 1168243698, value is null
+msx-reconfagent HMaster stop 1111668694, value is null
+msx-reconfagent DataNode stop 405158727, value is null
+msx-reconfagent DataNode stop 1134899805, value is null
+msx-reconfagent DataNode stop 1939499932, value is null
+msx-reconfagent NameNode stop 529139422, value is null
+msx-listener all testRunFinished
+msx-rc 0

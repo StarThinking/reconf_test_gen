@@ -1,38 +1,32 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.TestNamespace#createRemoveTest
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.TestNamespace#createRemoveTest
-listener writeFile testName is org.apache.hadoop.hbase.TestNamespace#createRemoveTest
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 532384021 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 691278085 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 653396876 for HRegionServer
+msx-reconfagent creating ReconfAgent 1028087631 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.TestNamespace#createRemoveTest
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.TestNamespace#createRemoveTest
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestNamespace#createRemoveTest
+msx-listener succeed
+msx-reconfagent HRegionServer stop 210733411, value is null
+msx-reconfagent HRegionServer stop 39549599, value is null
+msx-reconfagent HRegionServer stop 1479803426, value is null
+msx-reconfagent HRegionServer stop 1250208042, value is null
+msx-reconfagent HMaster stop 206059363, value is null
+msx-reconfagent DataNode stop 1212257921, value is null
+msx-reconfagent DataNode stop 1685820748, value is null
+msx-reconfagent DataNode stop 1220504171, value is null
+msx-reconfagent DataNode stop 1902478747, value is null
+msx-reconfagent NameNode stop 1938357411, value is null
+msx-listener all testRunFinished
+msx-rc 0

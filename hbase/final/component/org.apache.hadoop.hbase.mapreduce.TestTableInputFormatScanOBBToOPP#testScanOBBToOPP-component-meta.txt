@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanOBBToOPP#testScanOBBToOPP
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanOBBToOPP#testScanOBBToOPP
-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanOBBToOPP#testScanOBBToOPP
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 150943841 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 525463965 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1415080536 for HRegionServer
+msx-reconfagent creating ReconfAgent 87027081 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanOBBToOPP#testScanOBBToOPP
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanOBBToOPP#testScanOBBToOPP
+msx-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanOBBToOPP#testScanOBBToOPP
+msx-listener succeed
+msx-reconfagent HRegionServer stop 205423261, value is null
+msx-reconfagent HRegionServer stop 1821344407, value is null
+msx-reconfagent HRegionServer stop 579728744, value is null
+msx-reconfagent HMaster stop 1060068271, value is null
+msx-reconfagent DataNode stop 1395010732, value is null
+msx-reconfagent DataNode stop 319390508, value is null
+msx-reconfagent DataNode stop 1230092040, value is null
+msx-reconfagent NameNode stop 144230047, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,29 +1,26 @@
-listener test started org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
-listener writeFile testName is org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 447918512 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 201049553 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 714091961 for HRegionServer
+msx-reconfagent creating ReconfAgent 384180961 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 2109972318, value is null
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 994313603, value is null
+msx-reconfagent HRegionServer stop 1304617021, value is null
+msx-reconfagent HMaster stop 1072395783, value is null
+msx-reconfagent DataNode stop 1944849492, value is null
+msx-reconfagent DataNode stop 1336039963, value is null
+msx-reconfagent NameNode stop 1524455111, value is null
+msx-listener testfinished org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestRoundRobinAssignmentOnRestart#test
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

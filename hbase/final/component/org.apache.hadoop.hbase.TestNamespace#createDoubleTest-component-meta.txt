@@ -1,38 +1,32 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.TestNamespace#createDoubleTest
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.TestNamespace#createDoubleTest
-listener writeFile testName is org.apache.hadoop.hbase.TestNamespace#createDoubleTest
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1279936958 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 766790043 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1978364225 for HRegionServer
+msx-reconfagent creating ReconfAgent 1234001959 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.TestNamespace#createDoubleTest
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.TestNamespace#createDoubleTest
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestNamespace#createDoubleTest
+msx-listener succeed
+msx-reconfagent HRegionServer stop 499877936, value is null
+msx-reconfagent HRegionServer stop 342907998, value is null
+msx-reconfagent HRegionServer stop 229621476, value is null
+msx-reconfagent HRegionServer stop 1390041087, value is null
+msx-reconfagent HMaster stop 1279743014, value is null
+msx-reconfagent DataNode stop 794674835, value is null
+msx-reconfagent DataNode stop 237078182, value is null
+msx-reconfagent DataNode stop 1666013567, value is null
+msx-reconfagent DataNode stop 210181331, value is null
+msx-reconfagent NameNode stop 750133298, value is null
+msx-listener all testRunFinished
+msx-rc 0

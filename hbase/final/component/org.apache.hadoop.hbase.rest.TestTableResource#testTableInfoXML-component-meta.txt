@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.rest.TestTableResource#testTableInfoXML
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.rest.TestTableResource#testTableInfoXML
-listener writeFile testName is org.apache.hadoop.hbase.rest.TestTableResource#testTableInfoXML
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1348350998 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1143382294 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 919054990 for HRegionServer
+msx-reconfagent creating ReconfAgent 124131820 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.rest.TestTableResource#testTableInfoXML
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestTableResource#testTableInfoXML
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestTableResource#testTableInfoXML
+msx-listener succeed
+msx-reconfagent HRegionServer stop 2142893538, value is null
+msx-reconfagent HRegionServer stop 1046153911, value is null
+msx-reconfagent HRegionServer stop 751036632, value is null
+msx-reconfagent HMaster stop 1929772967, value is null
+msx-reconfagent DataNode stop 902496076, value is null
+msx-reconfagent DataNode stop 925192799, value is null
+msx-reconfagent DataNode stop 973720250, value is null
+msx-reconfagent NameNode stop 318492528, value is null
+msx-listener all testRunFinished
+msx-rc 0

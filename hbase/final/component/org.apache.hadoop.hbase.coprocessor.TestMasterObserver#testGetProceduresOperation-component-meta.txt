@@ -1,26 +1,24 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.coprocessor.TestMasterObserver#testGetProceduresOperation
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.coprocessor.TestMasterObserver#testGetProceduresOperation
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestMasterObserver#testGetProceduresOperation
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1804174936 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1911555865 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1137793598 for HRegionServer
+msx-reconfagent creating ReconfAgent 439881159 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestMasterObserver#testGetProceduresOperation
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestMasterObserver#testGetProceduresOperation
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestMasterObserver#testGetProceduresOperation
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1776170418, value is null
+msx-reconfagent HRegionServer stop 1730163867, value is null
+msx-reconfagent HMaster stop 430112653, value is null
+msx-reconfagent DataNode stop 1963367250, value is null
+msx-reconfagent DataNode stop 2079937500, value is null
+msx-reconfagent NameNode stop 1773223252, value is null
+msx-listener all testRunFinished
+msx-rc 0

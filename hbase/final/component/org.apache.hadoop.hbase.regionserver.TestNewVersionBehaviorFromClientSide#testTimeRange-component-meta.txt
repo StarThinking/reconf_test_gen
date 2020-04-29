@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.TestNewVersionBehaviorFromClientSide#testTimeRange
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.regionserver.TestNewVersionBehaviorFromClientSide#testTimeRange
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestNewVersionBehaviorFromClientSide#testTimeRange
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1694357572 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1221830880 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 847652424 for HRegionServer
+msx-reconfagent creating ReconfAgent 1279594482 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestNewVersionBehaviorFromClientSide#testTimeRange
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestNewVersionBehaviorFromClientSide#testTimeRange
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestNewVersionBehaviorFromClientSide#testTimeRange
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1411145354, value is null
+msx-reconfagent HMaster stop 1301752153, value is null
+msx-reconfagent DataNode stop 612635477, value is null
+msx-reconfagent NameNode stop 46833216, value is null
+msx-listener all testRunFinished
+msx-rc 0

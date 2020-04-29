@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanYZYToEmpty#testScanYZYToEmpty
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanYZYToEmpty#testScanYZYToEmpty
-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanYZYToEmpty#testScanYZYToEmpty
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 720089802 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 63552025 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 340761209 for HRegionServer
+msx-reconfagent creating ReconfAgent 690598783 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanYZYToEmpty#testScanYZYToEmpty
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanYZYToEmpty#testScanYZYToEmpty
+msx-listener writeFile testName is org.apache.hadoop.hbase.mapreduce.TestTableInputFormatScanYZYToEmpty#testScanYZYToEmpty
+msx-listener succeed
+msx-reconfagent HRegionServer stop 404771921, value is null
+msx-reconfagent HRegionServer stop 816416182, value is null
+msx-reconfagent HRegionServer stop 116604809, value is null
+msx-reconfagent HMaster stop 656674630, value is null
+msx-reconfagent DataNode stop 1996198068, value is null
+msx-reconfagent DataNode stop 2073543684, value is null
+msx-reconfagent DataNode stop 533400794, value is null
+msx-reconfagent NameNode stop 138292219, value is null
+msx-listener all testRunFinished
+msx-rc 0

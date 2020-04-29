@@ -1,38 +1,26 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.TestLoadProcedureError#testLoadError
-listener unitTestCounterInClass = 0
-hbase HMaster stop
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster init
-hbase HMaster start
-hbase HRegionServer start
-hbase HMaster stop
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster init
-hbase HMaster start
-hbase HRegionServer start
-hbase HMaster stop
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster init
-hbase HMaster start
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.master.TestLoadProcedureError#testLoadError
-listener writeFile testName is org.apache.hadoop.hbase.master.TestLoadProcedureError#testLoadError
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 11005867 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1856410425 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1449687653 for HRegionServer
+msx-reconfagent creating ReconfAgent 117883822 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.TestLoadProcedureError#testLoadError
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HMaster stop 1389519666, value is null
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 552345257, value is null
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 1349163081, value is null
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hbase.master.TestLoadProcedureError#testLoadError
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestLoadProcedureError#testLoadError
+msx-listener succeed
+msx-reconfagent HRegionServer stop 816033452, value is null
+msx-reconfagent HMaster stop 709889291, value is null
+msx-reconfagent DataNode stop 1032249526, value is null
+msx-reconfagent NameNode stop 1056307693, value is null
+msx-listener all testRunFinished
+msx-rc 0

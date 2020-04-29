@@ -1,29 +1,26 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.TestNewStartedRegionServerVersion#test
-listener unitTestCounterInClass = 0
-hbase HRegionServer init
-hbase HRegionServer start
-hbase HRegionServer init
-hbase HRegionServer start
-hbase HRegionServer init
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.master.TestNewStartedRegionServerVersion#test
-listener writeFile testName is org.apache.hadoop.hbase.master.TestNewStartedRegionServerVersion#test
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 595006249 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1831179806 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 570380116 for HRegionServer
+msx-reconfagent creating ReconfAgent 1734960348 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.TestNewStartedRegionServerVersion#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hbase.master.TestNewStartedRegionServerVersion#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestNewStartedRegionServerVersion#test
+msx-listener succeed
+msx-reconfagent HRegionServer stop 220292406, value is null
+msx-reconfagent HRegionServer stop 923521694, value is null
+msx-reconfagent HRegionServer stop 1801436791, value is null
+msx-reconfagent HRegionServer stop 129350599, value is null
+msx-reconfagent HMaster stop 272969264, value is null
+msx-reconfagent DataNode stop 1930817387, value is null
+msx-reconfagent NameNode stop 523943345, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasByEnableTableWhenReplicaCountIsDecreasedWithMultipleRegions
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasByEnableTableWhenReplicaCountIsDecreasedWithMultipleRegions
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasByEnableTableWhenReplicaCountIsDecreasedWithMultipleRegions
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 790269089 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1642249231 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1316463107 for HRegionServer
+msx-reconfagent creating ReconfAgent 570038209 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasByEnableTableWhenReplicaCountIsDecreasedWithMultipleRegions
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasByEnableTableWhenReplicaCountIsDecreasedWithMultipleRegions
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasByEnableTableWhenReplicaCountIsDecreasedWithMultipleRegions
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1699329312, value is null
+msx-reconfagent HRegionServer stop 1065384756, value is null
+msx-reconfagent HRegionServer stop 1855509863, value is null
+msx-reconfagent HMaster stop 2002449533, value is null
+msx-reconfagent DataNode stop 1395388523, value is null
+msx-reconfagent DataNode stop 506476537, value is null
+msx-reconfagent DataNode stop 1039069903, value is null
+msx-reconfagent NameNode stop 1614104509, value is null
+msx-listener all testRunFinished
+msx-rc 0

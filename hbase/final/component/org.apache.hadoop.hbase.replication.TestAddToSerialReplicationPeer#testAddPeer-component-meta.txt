@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.replication.TestAddToSerialReplicationPeer#testAddPeer
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.replication.TestAddToSerialReplicationPeer#testAddPeer
-listener writeFile testName is org.apache.hadoop.hbase.replication.TestAddToSerialReplicationPeer#testAddPeer
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2049015856 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1977421207 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1633182952 for HRegionServer
+msx-reconfagent creating ReconfAgent 2008185556 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.replication.TestAddToSerialReplicationPeer#testAddPeer
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.replication.TestAddToSerialReplicationPeer#testAddPeer
+msx-listener writeFile testName is org.apache.hadoop.hbase.replication.TestAddToSerialReplicationPeer#testAddPeer
+msx-listener succeed
+msx-reconfagent HRegionServer stop 542339519, value is null
+msx-reconfagent HRegionServer stop 146545325, value is null
+msx-reconfagent HRegionServer stop 1052206759, value is null
+msx-reconfagent HMaster stop 25309639, value is null
+msx-reconfagent DataNode stop 1964346374, value is null
+msx-reconfagent DataNode stop 146949056, value is null
+msx-reconfagent DataNode stop 711561196, value is null
+msx-reconfagent NameNode stop 500909832, value is null
+msx-listener all testRunFinished
+msx-rc 0

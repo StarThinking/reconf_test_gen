@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestFlushFromClient#testAsyncFlushTable
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestFlushFromClient#testAsyncFlushTable
-listener writeFile testName is org.apache.hadoop.hbase.client.TestFlushFromClient#testAsyncFlushTable
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1730555895 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1641710333 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1189068915 for HRegionServer
+msx-reconfagent creating ReconfAgent 893189254 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestFlushFromClient#testAsyncFlushTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestFlushFromClient#testAsyncFlushTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestFlushFromClient#testAsyncFlushTable
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1743219139, value is null
+msx-reconfagent HRegionServer stop 1150651489, value is null
+msx-reconfagent HRegionServer stop 377625099, value is null
+msx-reconfagent HMaster stop 2082244973, value is null
+msx-reconfagent DataNode stop 315290709, value is null
+msx-reconfagent DataNode stop 1330035095, value is null
+msx-reconfagent DataNode stop 313266926, value is null
+msx-reconfagent NameNode stop 1005987324, value is null
+msx-listener all testRunFinished
+msx-rc 0

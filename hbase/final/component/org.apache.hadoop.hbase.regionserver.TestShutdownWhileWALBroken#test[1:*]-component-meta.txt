@@ -1,26 +1,26 @@
-listener test started org.apache.hadoop.hbase.regionserver.TestShutdownWhileWALBroken#test[1: WAL=filesystem]
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.regionserver.TestShutdownWhileWALBroken#test[1: WAL=filesystem]
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestShutdownWhileWALBroken#test[1: WAL=filesystem]
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestShutdownWhileWALBroken#test[1: WAL=filesystem]
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 271227208 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 930903666 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1341333370 for HRegionServer
+msx-reconfagent creating ReconfAgent 1633732462 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 312341773, value is null
+msx-reconfagent HRegionServer stop 312341773, value is null
+msx-reconfagent ERROR : conf 706929087 not existed in confInstanceList when removing.
+msx-reconfagent HRegionServer stop 879488302, value is null
+msx-reconfagent HMaster stop 647890212, value is null
+msx-reconfagent DataNode stop 964872468, value is null
+msx-reconfagent DataNode stop 55072806, value is null
+msx-reconfagent NameNode stop 1100972094, value is null
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestShutdownWhileWALBroken#test[1: WAL=filesystem]
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestShutdownWhileWALBroken#test[1: WAL=filesystem]
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

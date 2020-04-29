@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testAppendWithReadOnly
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testAppendWithReadOnly
-listener writeFile testName is org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testAppendWithReadOnly
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1752514437 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2145481557 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1939995104 for HRegionServer
+msx-reconfagent creating ReconfAgent 2103854066 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testAppendWithReadOnly
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testAppendWithReadOnly
+msx-listener writeFile testName is org.apache.hadoop.hbase.thrift2.TestThriftHBaseServiceHandlerWithReadOnly#testAppendWithReadOnly
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1195881297, value is null
+msx-reconfagent HMaster stop 28697139, value is null
+msx-reconfagent DataNode stop 1217977345, value is null
+msx-reconfagent NameNode stop 1392539502, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.coprocessor.TestWALObserver#testWALObserverWriteToWAL
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.coprocessor.TestWALObserver#testWALObserverWriteToWAL
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestWALObserver#testWALObserverWriteToWAL
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 117865551 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1119994603 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 443899755 for HRegionServer
+msx-reconfagent creating ReconfAgent 1261004167 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestWALObserver#testWALObserverWriteToWAL
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestWALObserver#testWALObserverWriteToWAL
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestWALObserver#testWALObserverWriteToWAL
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1924536289, value is null
+msx-reconfagent HMaster stop 283462491, value is null
+msx-reconfagent DataNode stop 217260382, value is null
+msx-reconfagent NameNode stop 1210381721, value is null
+msx-listener all testRunFinished
+msx-rc 0

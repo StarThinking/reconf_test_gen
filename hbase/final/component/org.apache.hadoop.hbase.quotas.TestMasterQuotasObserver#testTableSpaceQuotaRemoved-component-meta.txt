@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.quotas.TestMasterQuotasObserver#testTableSpaceQuotaRemoved
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.quotas.TestMasterQuotasObserver#testTableSpaceQuotaRemoved
-listener writeFile testName is org.apache.hadoop.hbase.quotas.TestMasterQuotasObserver#testTableSpaceQuotaRemoved
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1719382802 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 859065538 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1358918264 for HRegionServer
+msx-reconfagent creating ReconfAgent 1910241315 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.quotas.TestMasterQuotasObserver#testTableSpaceQuotaRemoved
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.quotas.TestMasterQuotasObserver#testTableSpaceQuotaRemoved
+msx-listener writeFile testName is org.apache.hadoop.hbase.quotas.TestMasterQuotasObserver#testTableSpaceQuotaRemoved
+msx-listener succeed
+msx-reconfagent HRegionServer stop 965866722, value is null
+msx-reconfagent HMaster stop 1187224873, value is null
+msx-reconfagent DataNode stop 1603815682, value is null
+msx-reconfagent NameNode stop 1135380314, value is null
+msx-listener all testRunFinished
+msx-rc 0

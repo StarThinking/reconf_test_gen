@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.TestServerCustomProtocol#testNullReturn
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.regionserver.TestServerCustomProtocol#testNullReturn
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestServerCustomProtocol#testNullReturn
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 147975111 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1698765315 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 316916869 for HRegionServer
+msx-reconfagent creating ReconfAgent 2027425626 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestServerCustomProtocol#testNullReturn
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestServerCustomProtocol#testNullReturn
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestServerCustomProtocol#testNullReturn
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1384653185, value is null
+msx-reconfagent HMaster stop 1761473748, value is null
+msx-reconfagent DataNode stop 508857079, value is null
+msx-reconfagent NameNode stop 165368663, value is null
+msx-listener all testRunFinished
+msx-rc 0

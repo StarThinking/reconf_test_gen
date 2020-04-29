@@ -1,28 +1,22 @@
-listener test started org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsReplication#testVisibilityReplication
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsReplication#testVisibilityReplication
-listener writeFile testName is org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsReplication#testVisibilityReplication
-listener succeed
-listener all testRunFinished
-hbase HRegionServer stop
-hbase HRegionServer stop
+msx-listener test started org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsReplication#testVisibilityReplication
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 749831193 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1000447750 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1215883238 for HRegionServer
+msx-reconfagent creating ReconfAgent 1229040495 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsReplication#testVisibilityReplication
+msx-listener writeFile testName is org.apache.hadoop.hbase.security.visibility.TestVisibilityLabelsReplication#testVisibilityReplication
+msx-listener succeed
+msx-listener all testRunFinished
+msx-reconfagent HRegionServer stop 1487191413, value is null
+msx-reconfagent HRegionServer stop 900252331, value is null
+msx-rc 0

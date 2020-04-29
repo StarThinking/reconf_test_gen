@@ -1,46 +1,36 @@
-listener test started org.apache.hadoop.hbase.master.TestClusterRestartSplitWithoutZk#test
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.master.TestClusterRestartSplitWithoutZk#test
-listener writeFile testName is org.apache.hadoop.hbase.master.TestClusterRestartSplitWithoutZk#test
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.master.TestClusterRestartSplitWithoutZk#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1698016667 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1022470075 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1991486411 for HRegionServer
+msx-reconfagent creating ReconfAgent 584331729 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 650770282, value is null
+msx-reconfagent HRegionServer stop 314763470, value is null
+msx-reconfagent HRegionServer stop 1506937490, value is null
+msx-reconfagent HMaster stop 890258585, value is null
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 1698662378, value is null
+msx-reconfagent HRegionServer stop 47676549, value is null
+msx-reconfagent HRegionServer stop 2016008640, value is null
+msx-reconfagent HMaster stop 343346082, value is null
+msx-reconfagent DataNode stop 1586270060, value is null
+msx-reconfagent DataNode stop 18281138, value is null
+msx-reconfagent DataNode stop 754950132, value is null
+msx-reconfagent NameNode stop 145493202, value is null
+msx-listener testfinished org.apache.hadoop.hbase.master.TestClusterRestartSplitWithoutZk#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestClusterRestartSplitWithoutZk#test
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

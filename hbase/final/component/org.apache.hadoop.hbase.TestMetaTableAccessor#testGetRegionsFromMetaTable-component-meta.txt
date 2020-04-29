@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.TestMetaTableAccessor#testGetRegionsFromMetaTable
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.TestMetaTableAccessor#testGetRegionsFromMetaTable
-listener writeFile testName is org.apache.hadoop.hbase.TestMetaTableAccessor#testGetRegionsFromMetaTable
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 595359092 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 232803467 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1829709941 for HRegionServer
+msx-reconfagent creating ReconfAgent 1190379020 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.TestMetaTableAccessor#testGetRegionsFromMetaTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.TestMetaTableAccessor#testGetRegionsFromMetaTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestMetaTableAccessor#testGetRegionsFromMetaTable
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1665781546, value is null
+msx-reconfagent HRegionServer stop 1567727015, value is null
+msx-reconfagent HRegionServer stop 362368964, value is null
+msx-reconfagent HMaster stop 1870419241, value is null
+msx-reconfagent DataNode stop 891425356, value is null
+msx-reconfagent DataNode stop 1362682915, value is null
+msx-reconfagent DataNode stop 1662871618, value is null
+msx-reconfagent NameNode stop 284079657, value is null
+msx-listener all testRunFinished
+msx-rc 0

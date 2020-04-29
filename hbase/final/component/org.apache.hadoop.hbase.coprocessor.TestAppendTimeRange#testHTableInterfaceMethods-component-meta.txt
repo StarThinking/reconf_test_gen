@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.coprocessor.TestAppendTimeRange#testHTableInterfaceMethods
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.coprocessor.TestAppendTimeRange#testHTableInterfaceMethods
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestAppendTimeRange#testHTableInterfaceMethods
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 75510085 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1399827718 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 796628089 for HRegionServer
+msx-reconfagent creating ReconfAgent 1253471038 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestAppendTimeRange#testHTableInterfaceMethods
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestAppendTimeRange#testHTableInterfaceMethods
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestAppendTimeRange#testHTableInterfaceMethods
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1290172352, value is null
+msx-reconfagent HMaster stop 145586528, value is null
+msx-reconfagent DataNode stop 460650663, value is null
+msx-reconfagent NameNode stop 1707836774, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,38 +1,30 @@
-listener test started org.apache.hadoop.hbase.master.procedure.TestSplitWALProcedure#testMasterRestart
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HMaster stop
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.master.procedure.TestSplitWALProcedure#testMasterRestart
-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestSplitWALProcedure#testMasterRestart
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestSplitWALProcedure#testMasterRestart
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 212782824 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 272768837 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 599123320 for HRegionServer
+msx-reconfagent creating ReconfAgent 1353071862 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 1820665346, value is null
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 346220442, value is null
+msx-reconfagent HRegionServer stop 1551493226, value is null
+msx-reconfagent HRegionServer stop 1490053832, value is null
+msx-reconfagent HMaster stop 1975236646, value is null
+msx-reconfagent DataNode stop 1667925982, value is null
+msx-reconfagent DataNode stop 12573916, value is null
+msx-reconfagent DataNode stop 499935745, value is null
+msx-reconfagent NameNode stop 1887613366, value is null
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestSplitWALProcedure#testMasterRestart
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestSplitWALProcedure#testMasterRestart
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

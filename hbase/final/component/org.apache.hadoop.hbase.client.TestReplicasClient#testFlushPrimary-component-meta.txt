@@ -1,21 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HMaster stop
-hbase HRegionServer stop
-listener test started org.apache.hadoop.hbase.client.TestReplicasClient#testFlushPrimary
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestReplicasClient#testFlushPrimary
-listener writeFile testName is org.apache.hadoop.hbase.client.TestReplicasClient#testFlushPrimary
-listener succeed
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1661780514 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 593159417 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 576044624 for HRegionServer
+msx-reconfagent creating ReconfAgent 1230098821 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 493926526, value is null
+msx-listener test started org.apache.hadoop.hbase.client.TestReplicasClient#testFlushPrimary
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestReplicasClient#testFlushPrimary
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestReplicasClient#testFlushPrimary
+msx-listener succeed
+msx-reconfagent HRegionServer stop 100451855, value is null
+msx-reconfagent DataNode stop 1725231663, value is null
+msx-reconfagent NameNode stop 299070555, value is null
+msx-listener all testRunFinished
+msx-rc 0

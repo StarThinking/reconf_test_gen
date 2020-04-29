@@ -1,44 +1,36 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.TestPartialResultsFromClientSide#testDontThrowUnknowScannerExceptionToClient
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.TestPartialResultsFromClientSide#testDontThrowUnknowScannerExceptionToClient
-listener writeFile testName is org.apache.hadoop.hbase.TestPartialResultsFromClientSide#testDontThrowUnknowScannerExceptionToClient
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 385163052 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 189035497 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 210893195 for HRegionServer
+msx-reconfagent creating ReconfAgent 616960939 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.TestPartialResultsFromClientSide#testDontThrowUnknowScannerExceptionToClient
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.TestPartialResultsFromClientSide#testDontThrowUnknowScannerExceptionToClient
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestPartialResultsFromClientSide#testDontThrowUnknowScannerExceptionToClient
+msx-listener succeed
+msx-reconfagent HRegionServer stop 294877240, value is null
+msx-reconfagent HRegionServer stop 1406454419, value is null
+msx-reconfagent HRegionServer stop 1277669260, value is null
+msx-reconfagent HRegionServer stop 579743232, value is null
+msx-reconfagent HRegionServer stop 2099715091, value is null
+msx-reconfagent HMaster stop 970670971, value is null
+msx-reconfagent DataNode stop 1981873392, value is null
+msx-reconfagent DataNode stop 1363979165, value is null
+msx-reconfagent DataNode stop 2008526688, value is null
+msx-reconfagent DataNode stop 775547368, value is null
+msx-reconfagent DataNode stop 1939782678, value is null
+msx-reconfagent NameNode stop 1506984334, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,46 +1,36 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.TestMultiVersions#testGetRowVersions
-listener unitTestCounterInClass = 0
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.TestMultiVersions#testGetRowVersions
-listener writeFile testName is org.apache.hadoop.hbase.TestMultiVersions#testGetRowVersions
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1366971737 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 313115458 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1019633652 for HRegionServer
+msx-reconfagent creating ReconfAgent 1948326262 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.TestMultiVersions#testGetRowVersions
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HRegionServer stop 1204134518, value is null
+msx-reconfagent HRegionServer stop 748645418, value is null
+msx-reconfagent HRegionServer stop 334776295, value is null
+msx-reconfagent HMaster stop 646222445, value is null
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hbase.TestMultiVersions#testGetRowVersions
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestMultiVersions#testGetRowVersions
+msx-listener succeed
+msx-reconfagent HRegionServer stop 133905265, value is null
+msx-reconfagent HRegionServer stop 316238092, value is null
+msx-reconfagent HRegionServer stop 1691202742, value is null
+msx-reconfagent HMaster stop 2029982612, value is null
+msx-reconfagent DataNode stop 1332108505, value is null
+msx-reconfagent DataNode stop 1640750953, value is null
+msx-reconfagent DataNode stop 1469097648, value is null
+msx-reconfagent NameNode stop 995475775, value is null
+msx-listener all testRunFinished
+msx-rc 0

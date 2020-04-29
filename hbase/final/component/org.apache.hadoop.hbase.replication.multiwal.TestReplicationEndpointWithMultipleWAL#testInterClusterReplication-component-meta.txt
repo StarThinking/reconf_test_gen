@@ -1,65 +1,51 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
-listener writeFile testName is org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener WARN: using globalTestName org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
-listener test Failure org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
-listener writeFile testName is org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
-listener failed
-listener failureMessage: null
-listener stackTrace: java.lang.AssertionError
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 10518735 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 73671007 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1437993277 for HRegionServer
+msx-reconfagent creating ReconfAgent 894903776 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
+msx-listener writeFile testName is org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
+msx-listener succeed
+msx-reconfagent HRegionServer stop 201699921, value is null
+msx-reconfagent HRegionServer stop 1894274437, value is null
+msx-reconfagent HRegionServer stop 505813802, value is null
+msx-reconfagent HRegionServer stop 369471722, value is null
+msx-reconfagent HMaster stop 667046138, value is null
+msx-reconfagent DataNode stop 1252572765, value is null
+msx-reconfagent DataNode stop 1571158741, value is null
+msx-reconfagent DataNode stop 2015734677, value is null
+msx-reconfagent DataNode stop 428664189, value is null
+msx-reconfagent NameNode stop 777137382, value is null
+msx-reconfagent HRegionServer stop 831560784, value is null
+msx-reconfagent HRegionServer stop 2032189179, value is null
+msx-reconfagent HMaster stop 2142599058, value is null
+msx-reconfagent DataNode stop 1120535419, value is null
+msx-reconfagent DataNode stop 1740918101, value is null
+msx-reconfagent NameNode stop 1700439759, value is null
+msx-listener WARN: using globalTestName org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
+msx-listener test Failure org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
+msx-listener writeFile testName is org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hbase.replication.multiwal.TestReplicationEndpointWithMultipleWAL#testInterClusterReplication
+msx-listener failed
+msx-listener failureMessage: null
+msx-listener stackTrace: java.lang.AssertionError
+msx-listener all testRunFinished
+msx-rc 1

@@ -1,35 +1,30 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.rsgroup.TestRSGroupsAdmin1#testFailRemoveGroup
-listener unitTestCounterInClass = 0
-hbase HRegionServer init
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.rsgroup.TestRSGroupsAdmin1#testFailRemoveGroup
-listener writeFile testName is org.apache.hadoop.hbase.rsgroup.TestRSGroupsAdmin1#testFailRemoveGroup
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 390673195 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2067198643 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 571688643 for HRegionServer
+msx-reconfagent creating ReconfAgent 1416730069 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.rsgroup.TestRSGroupsAdmin1#testFailRemoveGroup
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hbase.rsgroup.TestRSGroupsAdmin1#testFailRemoveGroup
+msx-listener writeFile testName is org.apache.hadoop.hbase.rsgroup.TestRSGroupsAdmin1#testFailRemoveGroup
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1048569350, value is null
+msx-reconfagent HRegionServer stop 547107050, value is null
+msx-reconfagent HRegionServer stop 1006326946, value is null
+msx-reconfagent HRegionServer stop 28063940, value is null
+msx-reconfagent HMaster stop 217072526, value is null
+msx-reconfagent DataNode stop 1217441842, value is null
+msx-reconfagent DataNode stop 217768896, value is null
+msx-reconfagent DataNode stop 1725402349, value is null
+msx-reconfagent NameNode stop 1943417147, value is null
+msx-listener all testRunFinished
+msx-rc 0

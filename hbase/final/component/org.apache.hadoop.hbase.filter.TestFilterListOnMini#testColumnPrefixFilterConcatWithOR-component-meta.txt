@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.filter.TestFilterListOnMini#testColumnPrefixFilterConcatWithOR
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.filter.TestFilterListOnMini#testColumnPrefixFilterConcatWithOR
-listener writeFile testName is org.apache.hadoop.hbase.filter.TestFilterListOnMini#testColumnPrefixFilterConcatWithOR
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 649950054 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1284758623 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1645424995 for HRegionServer
+msx-reconfagent creating ReconfAgent 1854765924 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.filter.TestFilterListOnMini#testColumnPrefixFilterConcatWithOR
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.filter.TestFilterListOnMini#testColumnPrefixFilterConcatWithOR
+msx-listener writeFile testName is org.apache.hadoop.hbase.filter.TestFilterListOnMini#testColumnPrefixFilterConcatWithOR
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1192184293, value is null
+msx-reconfagent HMaster stop 1312958768, value is null
+msx-reconfagent DataNode stop 1666893598, value is null
+msx-reconfagent NameNode stop 20954277, value is null
+msx-listener all testRunFinished
+msx-rc 0

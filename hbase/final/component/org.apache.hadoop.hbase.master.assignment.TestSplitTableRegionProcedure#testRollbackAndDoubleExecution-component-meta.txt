@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testRollbackAndDoubleExecution
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testRollbackAndDoubleExecution
-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testRollbackAndDoubleExecution
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 445610634 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 133195510 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 930886210 for HRegionServer
+msx-reconfagent creating ReconfAgent 184221789 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testRollbackAndDoubleExecution
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testRollbackAndDoubleExecution
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestSplitTableRegionProcedure#testRollbackAndDoubleExecution
+msx-listener succeed
+msx-reconfagent HRegionServer stop 452625162, value is null
+msx-reconfagent HRegionServer stop 513227729, value is null
+msx-reconfagent HRegionServer stop 843949653, value is null
+msx-reconfagent HMaster stop 345124841, value is null
+msx-reconfagent DataNode stop 1242525714, value is null
+msx-reconfagent DataNode stop 744723151, value is null
+msx-reconfagent DataNode stop 483981806, value is null
+msx-reconfagent NameNode stop 1080666991, value is null
+msx-listener all testRunFinished
+msx-rc 0

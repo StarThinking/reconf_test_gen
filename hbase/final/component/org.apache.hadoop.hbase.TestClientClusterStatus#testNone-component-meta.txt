@@ -1,56 +1,42 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HMaster start
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-listener test started org.apache.hadoop.hbase.TestClientClusterStatus#testNone
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.TestClientClusterStatus#testNone
-listener writeFile testName is org.apache.hadoop.hbase.TestClientClusterStatus#testNone
-listener succeed
-hbase HMaster stop
-hbase HRegionServer stop
-hbase HMaster stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 130915003 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1707386635 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 491741738 for HRegionServer
+msx-reconfagent creating ReconfAgent 2146147072 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 627227593, value is null
+msx-listener test started org.apache.hadoop.hbase.TestClientClusterStatus#testNone
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.TestClientClusterStatus#testNone
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestClientClusterStatus#testNone
+msx-listener succeed
+msx-reconfagent HMaster stop 2063287846, value is null
+msx-reconfagent HMaster stop 543851829, value is null
+msx-reconfagent HRegionServer stop 1212525163, value is null
+msx-reconfagent HRegionServer stop 1506283822, value is null
+msx-reconfagent HRegionServer stop 182923942, value is null
+msx-reconfagent HRegionServer stop 1780465557, value is null
+msx-reconfagent HRegionServer stop 627227593, value is null
+msx-reconfagent ERROR : conf 958164858 not existed in confInstanceList when removing.
+msx-reconfagent HMaster stop 1160873154, value is null
+msx-reconfagent DataNode stop 1469322059, value is null
+msx-reconfagent DataNode stop 659758031, value is null
+msx-reconfagent DataNode stop 538425675, value is null
+msx-reconfagent DataNode stop 848146114, value is null
+msx-reconfagent DataNode stop 1322883981, value is null
+msx-reconfagent NameNode stop 1414334340, value is null
+msx-listener all testRunFinished
+msx-rc 0

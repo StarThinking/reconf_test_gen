@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 886377940 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1117911134 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1304151198 for HRegionServer
+msx-reconfagent creating ReconfAgent 2012774190 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestMasterObserverPostCalls#testPostDeleteTable
+msx-listener succeed
+msx-reconfagent HRegionServer stop 595809459, value is null
+msx-reconfagent HMaster stop 148831781, value is null
+msx-reconfagent DataNode stop 2128993720, value is null
+msx-reconfagent NameNode stop 649387890, value is null
+msx-listener all testRunFinished
+msx-rc 0

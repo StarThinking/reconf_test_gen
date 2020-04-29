@@ -1,26 +1,24 @@
-listener test started org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 185108097 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2042763855 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 541382146 for HRegionServer
+msx-reconfagent creating ReconfAgent 1901534593 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 30966767, value is null
+msx-reconfagent HRegionServer stop 475365589, value is null
+msx-reconfagent HMaster stop 676583416, value is null
+msx-reconfagent DataNode stop 1896450595, value is null
+msx-reconfagent DataNode stop 559804490, value is null
+msx-reconfagent NameNode stop 1329626885, value is null
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestSplitWalDataLoss#test
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

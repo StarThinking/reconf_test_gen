@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.rest.client.TestRemoteTable#testGetTableDescriptor
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.rest.client.TestRemoteTable#testGetTableDescriptor
-listener writeFile testName is org.apache.hadoop.hbase.rest.client.TestRemoteTable#testGetTableDescriptor
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1222339877 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1965597049 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1461065937 for HRegionServer
+msx-reconfagent creating ReconfAgent 107122879 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.rest.client.TestRemoteTable#testGetTableDescriptor
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.client.TestRemoteTable#testGetTableDescriptor
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.client.TestRemoteTable#testGetTableDescriptor
+msx-listener succeed
+msx-reconfagent HRegionServer stop 623187769, value is null
+msx-reconfagent HMaster stop 1139940673, value is null
+msx-reconfagent DataNode stop 1212003611, value is null
+msx-reconfagent NameNode stop 916246276, value is null
+msx-listener all testRunFinished
+msx-rc 0

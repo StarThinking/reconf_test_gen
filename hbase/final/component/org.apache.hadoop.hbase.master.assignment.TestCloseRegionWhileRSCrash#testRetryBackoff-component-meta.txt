@@ -1,38 +1,30 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.assignment.TestCloseRegionWhileRSCrash#testRetryBackoff
-listener unitTestCounterInClass = 0
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster stop
-hbase HRegionServer stop
-hbase HMaster init
-hbase HMaster start
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.master.assignment.TestCloseRegionWhileRSCrash#testRetryBackoff
-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestCloseRegionWhileRSCrash#testRetryBackoff
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1031724929 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1669460557 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1768806050 for HRegionServer
+msx-reconfagent creating ReconfAgent 37305893 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.assignment.TestCloseRegionWhileRSCrash#testRetryBackoff
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 1475574522, value is null
+msx-listener testfinished org.apache.hadoop.hbase.master.assignment.TestCloseRegionWhileRSCrash#testRetryBackoff
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.assignment.TestCloseRegionWhileRSCrash#testRetryBackoff
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1977555528, value is null
+msx-reconfagent HRegionServer stop 647557909, value is null
+msx-reconfagent HRegionServer stop 587629441, value is null
+msx-reconfagent HMaster stop 1628171117, value is null
+msx-reconfagent DataNode stop 1294960871, value is null
+msx-reconfagent DataNode stop 714261320, value is null
+msx-reconfagent DataNode stop 1909855120, value is null
+msx-reconfagent NameNode stop 2041395481, value is null
+msx-listener all testRunFinished
+msx-rc 0

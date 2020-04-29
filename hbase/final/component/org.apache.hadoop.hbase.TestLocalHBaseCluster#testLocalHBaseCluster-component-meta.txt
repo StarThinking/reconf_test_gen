@@ -1,20 +1,20 @@
-listener test started org.apache.hadoop.hbase.TestLocalHBaseCluster#testLocalHBaseCluster
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.TestLocalHBaseCluster#testLocalHBaseCluster
-listener writeFile testName is org.apache.hadoop.hbase.TestLocalHBaseCluster#testLocalHBaseCluster
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.TestLocalHBaseCluster#testLocalHBaseCluster
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 210053412 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 320090703 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1378785700 for HRegionServer
+msx-reconfagent creating ReconfAgent 483391890 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 714562928, value is null
+msx-reconfagent HMaster stop 1456262776, value is null
+msx-reconfagent DataNode stop 647285357, value is null
+msx-reconfagent NameNode stop 1626318975, value is null
+msx-listener testfinished org.apache.hadoop.hbase.TestLocalHBaseCluster#testLocalHBaseCluster
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestLocalHBaseCluster#testLocalHBaseCluster
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

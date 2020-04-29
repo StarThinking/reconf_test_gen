@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.procedure.TestCloneSnapshotProcedure#testCloneSnapshot
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.master.procedure.TestCloneSnapshotProcedure#testCloneSnapshot
-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestCloneSnapshotProcedure#testCloneSnapshot
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 447488500 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 304325816 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1320064858 for HRegionServer
+msx-reconfagent creating ReconfAgent 883386643 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.procedure.TestCloneSnapshotProcedure#testCloneSnapshot
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.master.procedure.TestCloneSnapshotProcedure#testCloneSnapshot
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.procedure.TestCloneSnapshotProcedure#testCloneSnapshot
+msx-listener succeed
+msx-reconfagent HRegionServer stop 733264662, value is null
+msx-reconfagent HMaster stop 1452019068, value is null
+msx-reconfagent DataNode stop 488367007, value is null
+msx-reconfagent NameNode stop 309435410, value is null
+msx-listener all testRunFinished
+msx-rc 0

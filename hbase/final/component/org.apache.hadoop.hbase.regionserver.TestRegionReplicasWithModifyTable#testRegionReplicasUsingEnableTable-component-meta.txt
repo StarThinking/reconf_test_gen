@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasUsingEnableTable
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasUsingEnableTable
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasUsingEnableTable
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 790269089 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1642249231 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 487517046 for HRegionServer
+msx-reconfagent creating ReconfAgent 803695100 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasUsingEnableTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasUsingEnableTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestRegionReplicasWithModifyTable#testRegionReplicasUsingEnableTable
+msx-listener succeed
+msx-reconfagent HRegionServer stop 130608371, value is null
+msx-reconfagent HRegionServer stop 317419230, value is null
+msx-reconfagent HRegionServer stop 1137172408, value is null
+msx-reconfagent HMaster stop 80385064, value is null
+msx-reconfagent DataNode stop 1395388523, value is null
+msx-reconfagent DataNode stop 1581266905, value is null
+msx-reconfagent DataNode stop 1039069903, value is null
+msx-reconfagent NameNode stop 1614104509, value is null
+msx-listener all testRunFinished
+msx-rc 0

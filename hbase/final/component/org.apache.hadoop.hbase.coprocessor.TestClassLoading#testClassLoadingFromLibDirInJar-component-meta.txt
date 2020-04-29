@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.coprocessor.TestClassLoading#testClassLoadingFromLibDirInJar
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.coprocessor.TestClassLoading#testClassLoadingFromLibDirInJar
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestClassLoading#testClassLoadingFromLibDirInJar
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1195742691 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 773286358 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 261968632 for HRegionServer
+msx-reconfagent creating ReconfAgent 108702079 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestClassLoading#testClassLoadingFromLibDirInJar
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestClassLoading#testClassLoadingFromLibDirInJar
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestClassLoading#testClassLoadingFromLibDirInJar
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1801510564, value is null
+msx-reconfagent HMaster stop 1304198762, value is null
+msx-reconfagent DataNode stop 895459566, value is null
+msx-reconfagent NameNode stop 397234016, value is null
+msx-listener all testRunFinished
+msx-rc 0

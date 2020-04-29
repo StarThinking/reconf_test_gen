@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide2#testStartRowStopRowInclusive[4: batch=true, smallResultSize=false, allowPartial=false]
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide2#testStartRowStopRowInclusive[4: batch=true, smallResultSize=false, allowPartial=false]
-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide2#testStartRowStopRowInclusive[4: batch=true, smallResultSize=false, allowPartial=false]
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1841491114 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1596191060 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1331048142 for HRegionServer
+msx-reconfagent creating ReconfAgent 1954526082 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide2#testStartRowStopRowInclusive[4: batch=true, smallResultSize=false, allowPartial=false]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide2#testStartRowStopRowInclusive[4: batch=true, smallResultSize=false, allowPartial=false]
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide2#testStartRowStopRowInclusive[4: batch=true, smallResultSize=false, allowPartial=false]
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1216143399, value is null
+msx-reconfagent HRegionServer stop 518499001, value is null
+msx-reconfagent HRegionServer stop 556765354, value is null
+msx-reconfagent HMaster stop 2140801673, value is null
+msx-reconfagent DataNode stop 422919362, value is null
+msx-reconfagent DataNode stop 2133359262, value is null
+msx-reconfagent DataNode stop 21593649, value is null
+msx-reconfagent NameNode stop 131791943, value is null
+msx-listener all testRunFinished
+msx-rc 0

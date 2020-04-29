@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestFromClientSideScanExcpetion#testScannerFailsAfterRetriesWhenCoprocessorThrowsIOE
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestFromClientSideScanExcpetion#testScannerFailsAfterRetriesWhenCoprocessorThrowsIOE
-listener writeFile testName is org.apache.hadoop.hbase.client.TestFromClientSideScanExcpetion#testScannerFailsAfterRetriesWhenCoprocessorThrowsIOE
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 102180026 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 752022292 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1226352195 for HRegionServer
+msx-reconfagent creating ReconfAgent 841645864 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestFromClientSideScanExcpetion#testScannerFailsAfterRetriesWhenCoprocessorThrowsIOE
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestFromClientSideScanExcpetion#testScannerFailsAfterRetriesWhenCoprocessorThrowsIOE
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestFromClientSideScanExcpetion#testScannerFailsAfterRetriesWhenCoprocessorThrowsIOE
+msx-listener succeed
+msx-reconfagent HRegionServer stop 692702066, value is null
+msx-reconfagent HRegionServer stop 1299352793, value is null
+msx-reconfagent HRegionServer stop 2081890348, value is null
+msx-reconfagent HMaster stop 433381778, value is null
+msx-reconfagent DataNode stop 380811929, value is null
+msx-reconfagent DataNode stop 955312691, value is null
+msx-reconfagent DataNode stop 484187553, value is null
+msx-reconfagent NameNode stop 373993766, value is null
+msx-listener all testRunFinished
+msx-rc 0

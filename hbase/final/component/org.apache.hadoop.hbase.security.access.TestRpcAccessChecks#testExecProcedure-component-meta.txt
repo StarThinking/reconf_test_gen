@@ -1,17 +1,17 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.security.access.TestRpcAccessChecks#testExecProcedure
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.security.access.TestRpcAccessChecks#testExecProcedure
-listener writeFile testName is org.apache.hadoop.hbase.security.access.TestRpcAccessChecks#testExecProcedure
-listener succeed
-listener all testRunFinished
-hbase HRegionServer stop
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1408133727 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1467014381 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1649804552 for HRegionServer
+msx-reconfagent creating ReconfAgent 1942594600 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.security.access.TestRpcAccessChecks#testExecProcedure
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.security.access.TestRpcAccessChecks#testExecProcedure
+msx-listener writeFile testName is org.apache.hadoop.hbase.security.access.TestRpcAccessChecks#testExecProcedure
+msx-listener succeed
+msx-listener all testRunFinished
+msx-reconfagent HRegionServer stop 427706663, value is null
+msx-rc 0

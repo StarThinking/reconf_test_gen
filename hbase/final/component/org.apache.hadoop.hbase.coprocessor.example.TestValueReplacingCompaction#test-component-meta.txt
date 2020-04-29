@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.coprocessor.example.TestValueReplacingCompaction#test
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.coprocessor.example.TestValueReplacingCompaction#test
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.example.TestValueReplacingCompaction#test
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 952546366 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1557621201 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1022646546 for HRegionServer
+msx-reconfagent creating ReconfAgent 1347809754 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.coprocessor.example.TestValueReplacingCompaction#test
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.example.TestValueReplacingCompaction#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.example.TestValueReplacingCompaction#test
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1596801761, value is null
+msx-reconfagent HMaster stop 766937985, value is null
+msx-reconfagent DataNode stop 1852541880, value is null
+msx-reconfagent NameNode stop 626941051, value is null
+msx-listener all testRunFinished
+msx-rc 0

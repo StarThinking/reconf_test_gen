@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestAsyncTableRegionLocator#testGetAllRegionLocations
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableRegionLocator#testGetAllRegionLocations
-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableRegionLocator#testGetAllRegionLocations
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 2029006561 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2143127059 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1061473215 for HRegionServer
+msx-reconfagent creating ReconfAgent 374882300 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncTableRegionLocator#testGetAllRegionLocations
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableRegionLocator#testGetAllRegionLocations
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableRegionLocator#testGetAllRegionLocations
+msx-listener succeed
+msx-reconfagent HRegionServer stop 599466216, value is null
+msx-reconfagent HRegionServer stop 1016067933, value is null
+msx-reconfagent HRegionServer stop 1704864424, value is null
+msx-reconfagent HMaster stop 1699845596, value is null
+msx-reconfagent DataNode stop 187535965, value is null
+msx-reconfagent DataNode stop 2128168415, value is null
+msx-reconfagent DataNode stop 618611729, value is null
+msx-reconfagent NameNode stop 150119570, value is null
+msx-listener all testRunFinished
+msx-rc 0

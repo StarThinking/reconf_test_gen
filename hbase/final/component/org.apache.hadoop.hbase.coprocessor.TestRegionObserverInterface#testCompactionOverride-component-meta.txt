@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverInterface#testCompactionOverride
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverInterface#testCompactionOverride
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverInterface#testCompactionOverride
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 190404001 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 740037232 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1414128594 for HRegionServer
+msx-reconfagent creating ReconfAgent 1883322816 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverInterface#testCompactionOverride
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverInterface#testCompactionOverride
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverInterface#testCompactionOverride
+msx-listener succeed
+msx-reconfagent HRegionServer stop 779381041, value is null
+msx-reconfagent HMaster stop 1729619477, value is null
+msx-reconfagent DataNode stop 237787495, value is null
+msx-reconfagent NameNode stop 1411355297, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestAsyncTableScanException#testIOException
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableScanException#testIOException
-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableScanException#testIOException
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1137023485 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1578922371 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 11660160 for HRegionServer
+msx-reconfagent creating ReconfAgent 1169336797 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncTableScanException#testIOException
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableScanException#testIOException
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableScanException#testIOException
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1118134346, value is null
+msx-reconfagent HRegionServer stop 1790699479, value is null
+msx-reconfagent HRegionServer stop 965835298, value is null
+msx-reconfagent HMaster stop 654481674, value is null
+msx-reconfagent DataNode stop 1052709225, value is null
+msx-reconfagent DataNode stop 1170053907, value is null
+msx-reconfagent DataNode stop 293751868, value is null
+msx-reconfagent NameNode stop 730486034, value is null
+msx-listener all testRunFinished
+msx-rc 0

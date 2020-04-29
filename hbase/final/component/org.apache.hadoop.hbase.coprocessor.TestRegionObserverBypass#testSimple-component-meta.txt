@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverBypass#testSimple
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverBypass#testSimple
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverBypass#testSimple
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 459519939 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 248640724 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1859787889 for HRegionServer
+msx-reconfagent creating ReconfAgent 630163443 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.coprocessor.TestRegionObserverBypass#testSimple
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.TestRegionObserverBypass#testSimple
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.TestRegionObserverBypass#testSimple
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1438645473, value is null
+msx-reconfagent HMaster stop 1458539845, value is null
+msx-reconfagent DataNode stop 1646619234, value is null
+msx-reconfagent NameNode stop 832073482, value is null
+msx-listener all testRunFinished
+msx-rc 0

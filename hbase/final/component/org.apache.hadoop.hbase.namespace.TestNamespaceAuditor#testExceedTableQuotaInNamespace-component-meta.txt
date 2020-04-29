@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.namespace.TestNamespaceAuditor#testExceedTableQuotaInNamespace
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.namespace.TestNamespaceAuditor#testExceedTableQuotaInNamespace
-listener writeFile testName is org.apache.hadoop.hbase.namespace.TestNamespaceAuditor#testExceedTableQuotaInNamespace
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1319613160 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1126482118 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 262767598 for HRegionServer
+msx-reconfagent creating ReconfAgent 782494096 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.namespace.TestNamespaceAuditor#testExceedTableQuotaInNamespace
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.namespace.TestNamespaceAuditor#testExceedTableQuotaInNamespace
+msx-listener writeFile testName is org.apache.hadoop.hbase.namespace.TestNamespaceAuditor#testExceedTableQuotaInNamespace
+msx-listener succeed
+msx-reconfagent HRegionServer stop 683144595, value is null
+msx-reconfagent HMaster stop 1910579294, value is null
+msx-reconfagent DataNode stop 1824399763, value is null
+msx-reconfagent NameNode stop 925211939, value is null
+msx-listener all testRunFinished
+msx-rc 0

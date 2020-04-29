@@ -1,26 +1,24 @@
-listener test started org.apache.hadoop.hbase.coprocessor.example.TestRefreshHFilesEndpoint#testRefreshRegionHFilesEndpointWithException
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.coprocessor.example.TestRefreshHFilesEndpoint#testRefreshRegionHFilesEndpointWithException
-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.example.TestRefreshHFilesEndpoint#testRefreshRegionHFilesEndpointWithException
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.coprocessor.example.TestRefreshHFilesEndpoint#testRefreshRegionHFilesEndpointWithException
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1254517402 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 450284586 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1889541543 for HRegionServer
+msx-reconfagent creating ReconfAgent 509600168 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 6557680, value is null
+msx-reconfagent HRegionServer stop 1085133488, value is null
+msx-reconfagent HMaster stop 2136583997, value is null
+msx-reconfagent DataNode stop 2034186921, value is null
+msx-reconfagent DataNode stop 1589739714, value is null
+msx-reconfagent NameNode stop 418514286, value is null
+msx-listener testfinished org.apache.hadoop.hbase.coprocessor.example.TestRefreshHFilesEndpoint#testRefreshRegionHFilesEndpointWithException
+msx-listener writeFile testName is org.apache.hadoop.hbase.coprocessor.example.TestRefreshHFilesEndpoint#testRefreshRegionHFilesEndpointWithException
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

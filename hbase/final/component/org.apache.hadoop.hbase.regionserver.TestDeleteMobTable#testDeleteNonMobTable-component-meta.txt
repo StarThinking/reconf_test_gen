@@ -1,20 +1,20 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.TestDeleteMobTable#testDeleteNonMobTable
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.regionserver.TestDeleteMobTable#testDeleteNonMobTable
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestDeleteMobTable#testDeleteNonMobTable
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 825470293 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 899366628 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 80270090 for HRegionServer
+msx-reconfagent creating ReconfAgent 438721575 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestDeleteMobTable#testDeleteNonMobTable
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestDeleteMobTable#testDeleteNonMobTable
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestDeleteMobTable#testDeleteNonMobTable
+msx-listener succeed
+msx-reconfagent HRegionServer stop 493458050, value is null
+msx-reconfagent HMaster stop 2073705139, value is null
+msx-reconfagent DataNode stop 1856066615, value is null
+msx-reconfagent NameNode stop 488303395, value is null
+msx-listener all testRunFinished
+msx-rc 0

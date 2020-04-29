@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestAsyncTableScanAll#testReversedScanWithLimitGreaterThanActualCount[5: table=normal, scan=batch]
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableScanAll#testReversedScanWithLimitGreaterThanActualCount[5: table=normal, scan=batch]
-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableScanAll#testReversedScanWithLimitGreaterThanActualCount[5: table=normal, scan=batch]
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1509823215 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 55439211 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1298888350 for HRegionServer
+msx-reconfagent creating ReconfAgent 446557221 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncTableScanAll#testReversedScanWithLimitGreaterThanActualCount[5: table=normal, scan=batch]
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableScanAll#testReversedScanWithLimitGreaterThanActualCount[5: table=normal, scan=batch]
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableScanAll#testReversedScanWithLimitGreaterThanActualCount[5: table=normal, scan=batch]
+msx-listener succeed
+msx-reconfagent HRegionServer stop 802705600, value is null
+msx-reconfagent HRegionServer stop 1843535258, value is null
+msx-reconfagent HRegionServer stop 36372707, value is null
+msx-reconfagent HMaster stop 1651818126, value is null
+msx-reconfagent DataNode stop 270227119, value is null
+msx-reconfagent DataNode stop 333547320, value is null
+msx-reconfagent DataNode stop 135806077, value is null
+msx-reconfagent NameNode stop 1781191272, value is null
+msx-listener all testRunFinished
+msx-rc 0

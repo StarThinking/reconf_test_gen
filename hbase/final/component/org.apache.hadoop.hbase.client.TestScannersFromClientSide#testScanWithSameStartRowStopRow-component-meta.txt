@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanWithSameStartRowStopRow
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanWithSameStartRowStopRow
-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanWithSameStartRowStopRow
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1958705906 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2135987138 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 278585964 for HRegionServer
+msx-reconfagent creating ReconfAgent 1922356813 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanWithSameStartRowStopRow
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanWithSameStartRowStopRow
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanWithSameStartRowStopRow
+msx-listener succeed
+msx-reconfagent HRegionServer stop 109965503, value is null
+msx-reconfagent HRegionServer stop 2065358971, value is null
+msx-reconfagent HRegionServer stop 425065672, value is null
+msx-reconfagent HMaster stop 125827642, value is null
+msx-reconfagent DataNode stop 507968142, value is null
+msx-reconfagent DataNode stop 1835647035, value is null
+msx-reconfagent DataNode stop 1018232669, value is null
+msx-reconfagent NameNode stop 1728529654, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,20 +1,20 @@
-listener test started org.apache.hadoop.hbase.tool.TestCanaryTool#testReadTableTimeouts
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.tool.TestCanaryTool#testReadTableTimeouts
-listener writeFile testName is org.apache.hadoop.hbase.tool.TestCanaryTool#testReadTableTimeouts
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.tool.TestCanaryTool#testReadTableTimeouts
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 348800560 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1111650184 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 236681649 for HRegionServer
+msx-reconfagent creating ReconfAgent 528821155 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 1955316700, value is null
+msx-reconfagent HMaster stop 1630742387, value is null
+msx-reconfagent DataNode stop 1106054388, value is null
+msx-reconfagent NameNode stop 2064295326, value is null
+msx-listener testfinished org.apache.hadoop.hbase.tool.TestCanaryTool#testReadTableTimeouts
+msx-listener writeFile testName is org.apache.hadoop.hbase.tool.TestCanaryTool#testReadTableTimeouts
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

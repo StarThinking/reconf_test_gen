@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanMaxResults
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanMaxResults
-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanMaxResults
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1933951172 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 383582709 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1544371440 for HRegionServer
+msx-reconfagent creating ReconfAgent 764572637 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanMaxResults
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanMaxResults
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide#testScanMaxResults
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1133236876, value is null
+msx-reconfagent HRegionServer stop 1731643917, value is null
+msx-reconfagent HRegionServer stop 1696780250, value is null
+msx-reconfagent HMaster stop 176758879, value is null
+msx-reconfagent DataNode stop 2025935134, value is null
+msx-reconfagent DataNode stop 1894637689, value is null
+msx-reconfagent DataNode stop 1079075253, value is null
+msx-reconfagent NameNode stop 1990858436, value is null
+msx-listener all testRunFinished
+msx-rc 0

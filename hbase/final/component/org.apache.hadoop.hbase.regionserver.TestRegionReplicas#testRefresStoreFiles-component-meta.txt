@@ -1,36 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HMaster stop
-hbase HRegionServer stop
-listener test started org.apache.hadoop.hbase.regionserver.TestRegionReplicas#testRefresStoreFiles
-listener unitTestCounterInClass = 0
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HMaster stop
-hbase HRegionServer stop
-listener testfinished org.apache.hadoop.hbase.regionserver.TestRegionReplicas#testRefresStoreFiles
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestRegionReplicas#testRefresStoreFiles
-listener succeed
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 317986600 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1895291755 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 562169065 for HRegionServer
+msx-reconfagent creating ReconfAgent 1913298211 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 1391302337, value is null
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestRegionReplicas#testRefresStoreFiles
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HRegionServer stop 1055330915, value is null
+msx-reconfagent DataNode stop 973380765, value is null
+msx-reconfagent NameNode stop 1786981081, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HMaster stop 1114061062, value is null
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.TestRegionReplicas#testRefresStoreFiles
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.TestRegionReplicas#testRefresStoreFiles
+msx-listener succeed
+msx-reconfagent HRegionServer stop 375499208, value is null
+msx-reconfagent DataNode stop 1343120909, value is null
+msx-reconfagent NameNode stop 2104300779, value is null
+msx-listener all testRunFinished
+msx-rc 0

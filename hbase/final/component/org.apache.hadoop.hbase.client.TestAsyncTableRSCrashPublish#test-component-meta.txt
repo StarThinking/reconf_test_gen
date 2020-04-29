@@ -1,26 +1,26 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestAsyncTableRSCrashPublish#test
-listener unitTestCounterInClass = 0
-hbase HRegionServer stop
-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableRSCrashPublish#test
-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableRSCrashPublish#test
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1121266770 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1579796025 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1632324577 for HRegionServer
+msx-reconfagent creating ReconfAgent 905781893 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestAsyncTableRSCrashPublish#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HRegionServer stop 745715801, value is null
+msx-listener testfinished org.apache.hadoop.hbase.client.TestAsyncTableRSCrashPublish#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestAsyncTableRSCrashPublish#test
+msx-listener succeed
+msx-reconfagent HRegionServer stop 836993246, value is null
+msx-reconfagent HRegionServer stop 745715801, value is null
+msx-reconfagent ERROR : conf 1491673412 not existed in confInstanceList when removing.
+msx-reconfagent HMaster stop 679204059, value is null
+msx-reconfagent DataNode stop 778432238, value is null
+msx-reconfagent DataNode stop 700530593, value is null
+msx-reconfagent NameNode stop 2044215304, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,44 +1,36 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestMultiParallel#testBadFam
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestMultiParallel#testBadFam
-listener writeFile testName is org.apache.hadoop.hbase.client.TestMultiParallel#testBadFam
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 234087494 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1133783309 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 91595656 for HRegionServer
+msx-reconfagent creating ReconfAgent 943429983 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestMultiParallel#testBadFam
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestMultiParallel#testBadFam
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestMultiParallel#testBadFam
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1024738161, value is null
+msx-reconfagent HRegionServer stop 1322429259, value is null
+msx-reconfagent HRegionServer stop 397829435, value is null
+msx-reconfagent HRegionServer stop 1327334215, value is null
+msx-reconfagent HRegionServer stop 1999839961, value is null
+msx-reconfagent HMaster stop 541592976, value is null
+msx-reconfagent DataNode stop 1029501338, value is null
+msx-reconfagent DataNode stop 207536423, value is null
+msx-reconfagent DataNode stop 1470258049, value is null
+msx-reconfagent DataNode stop 263534276, value is null
+msx-reconfagent DataNode stop 99060494, value is null
+msx-reconfagent NameNode stop 1035250694, value is null
+msx-listener all testRunFinished
+msx-rc 0

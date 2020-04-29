@@ -1,32 +1,28 @@
-listener test started org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
-listener unitTestCounterInClass = 0
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1107306480 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 320145438 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2085777137 for HRegionServer
+msx-reconfagent creating ReconfAgent 1883713739 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 294452509, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 926021169, value is null
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent HRegionServer stop 1368542272, value is null
+msx-reconfagent HRegionServer stop 1445997924, value is null
+msx-reconfagent HMaster stop 791382034, value is null
+msx-reconfagent DataNode stop 1707111834, value is null
+msx-reconfagent DataNode stop 1886387430, value is null
+msx-reconfagent NameNode stop 838508971, value is null
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.wal.TestLogRollAbort#testRSAbortWithUnflushedEdits
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0

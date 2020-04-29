@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.TestMultiVersions#testScanMultipleVersions
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.TestMultiVersions#testScanMultipleVersions
-listener writeFile testName is org.apache.hadoop.hbase.TestMultiVersions#testScanMultipleVersions
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 722211263 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1645396910 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1874595779 for HRegionServer
+msx-reconfagent creating ReconfAgent 1118256572 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.TestMultiVersions#testScanMultipleVersions
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.TestMultiVersions#testScanMultipleVersions
+msx-listener writeFile testName is org.apache.hadoop.hbase.TestMultiVersions#testScanMultipleVersions
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1849955858, value is null
+msx-reconfagent HRegionServer stop 1505112126, value is null
+msx-reconfagent HRegionServer stop 1488686138, value is null
+msx-reconfagent HMaster stop 627113415, value is null
+msx-reconfagent DataNode stop 851612836, value is null
+msx-reconfagent DataNode stop 495991083, value is null
+msx-reconfagent DataNode stop 2013835068, value is null
+msx-reconfagent NameNode stop 1211750423, value is null
+msx-listener all testRunFinished
+msx-rc 0

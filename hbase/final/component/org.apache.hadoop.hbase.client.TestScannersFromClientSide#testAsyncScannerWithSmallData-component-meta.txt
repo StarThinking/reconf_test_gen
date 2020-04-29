@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide#testAsyncScannerWithSmallData
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide#testAsyncScannerWithSmallData
-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide#testAsyncScannerWithSmallData
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1933951172 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 383582709 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 87988742 for HRegionServer
+msx-reconfagent creating ReconfAgent 182227994 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestScannersFromClientSide#testAsyncScannerWithSmallData
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestScannersFromClientSide#testAsyncScannerWithSmallData
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestScannersFromClientSide#testAsyncScannerWithSmallData
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1271280613, value is null
+msx-reconfagent HRegionServer stop 875278951, value is null
+msx-reconfagent HRegionServer stop 2105228528, value is null
+msx-reconfagent HMaster stop 1728117591, value is null
+msx-reconfagent DataNode stop 2025935134, value is null
+msx-reconfagent DataNode stop 147730266, value is null
+msx-reconfagent DataNode stop 1079075253, value is null
+msx-reconfagent NameNode stop 1990858436, value is null
+msx-listener all testRunFinished
+msx-rc 0

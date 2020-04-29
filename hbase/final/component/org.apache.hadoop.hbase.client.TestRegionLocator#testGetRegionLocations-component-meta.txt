@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.client.TestRegionLocator#testGetRegionLocations
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.client.TestRegionLocator#testGetRegionLocations
-listener writeFile testName is org.apache.hadoop.hbase.client.TestRegionLocator#testGetRegionLocations
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1242168049 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1290177049 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1533562775 for HRegionServer
+msx-reconfagent creating ReconfAgent 1813258594 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.client.TestRegionLocator#testGetRegionLocations
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.client.TestRegionLocator#testGetRegionLocations
+msx-listener writeFile testName is org.apache.hadoop.hbase.client.TestRegionLocator#testGetRegionLocations
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1354501368, value is null
+msx-reconfagent HRegionServer stop 522926490, value is null
+msx-reconfagent HRegionServer stop 876223300, value is null
+msx-reconfagent HMaster stop 353426521, value is null
+msx-reconfagent DataNode stop 598922096, value is null
+msx-reconfagent DataNode stop 1994428803, value is null
+msx-reconfagent DataNode stop 1035451752, value is null
+msx-reconfagent NameNode stop 1197908557, value is null
+msx-listener all testRunFinished
+msx-rc 0

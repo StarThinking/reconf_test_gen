@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.wal.TestAsyncWALReplay#testReplayEditsAfterPartialFlush
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.regionserver.wal.TestAsyncWALReplay#testReplayEditsAfterPartialFlush
-listener writeFile testName is org.apache.hadoop.hbase.regionserver.wal.TestAsyncWALReplay#testReplayEditsAfterPartialFlush
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1151707821 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1918982567 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 896117728 for HRegionServer
+msx-reconfagent creating ReconfAgent 2079229390 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.wal.TestAsyncWALReplay#testReplayEditsAfterPartialFlush
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.regionserver.wal.TestAsyncWALReplay#testReplayEditsAfterPartialFlush
+msx-listener writeFile testName is org.apache.hadoop.hbase.regionserver.wal.TestAsyncWALReplay#testReplayEditsAfterPartialFlush
+msx-listener succeed
+msx-reconfagent HRegionServer stop 223144865, value is null
+msx-reconfagent HRegionServer stop 1071464184, value is null
+msx-reconfagent HRegionServer stop 1051639000, value is null
+msx-reconfagent HMaster stop 81218897, value is null
+msx-reconfagent DataNode stop 1471852842, value is null
+msx-reconfagent DataNode stop 1972157788, value is null
+msx-reconfagent DataNode stop 1232432019, value is null
+msx-reconfagent NameNode stop 1369348731, value is null
+msx-listener all testRunFinished
+msx-rc 0

@@ -1,23 +1,22 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
-listener unitTestCounterInClass = 0
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HRegionServer start
-listener testfinished org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
-listener writeFile testName is org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 647264038 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 753461596 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2038123150 for HRegionServer
+msx-reconfagent creating ReconfAgent 2146958397 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
+msx-listener writeFile testName is org.apache.hadoop.hbase.master.TestMergeTableRegionsWhileRSCrash#test
+msx-listener succeed
+msx-reconfagent HRegionServer stop 549755092, value is null
+msx-reconfagent HRegionServer stop 1383938684, value is null
+msx-reconfagent HMaster stop 813146504, value is null
+msx-reconfagent DataNode stop 209908098, value is null
+msx-reconfagent NameNode stop 2024778281, value is null
+msx-listener all testRunFinished
+msx-rc 0

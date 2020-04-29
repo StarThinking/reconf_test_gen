@@ -1,23 +1,16 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.regionserver.TestRegionServerCrashDisableWAL#test
-listener unitTestCounterInClass = 0
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer init
-hbase HMaster init
-hbase HMaster start
-hbase HRegionServer start
-
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1483205354 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1283332253 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1602192559 for HRegionServer
+msx-reconfagent creating ReconfAgent 1886650639 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.regionserver.TestRegionServerCrashDisableWAL#test
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent HMaster stop 620003655, value is null
+msx-reconfagent HMaster init, vvmode is none, do nothing
+Binary file org.apache.hadoop.hbase.regionserver.TestRegionServerCrashDisableWAL#test-output.txt matches

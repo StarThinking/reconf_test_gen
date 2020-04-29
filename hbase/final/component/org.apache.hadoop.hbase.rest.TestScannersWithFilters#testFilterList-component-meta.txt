@@ -1,32 +1,28 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.rest.TestScannersWithFilters#testFilterList
-listener unitTestCounterInClass = 0
-listener testfinished org.apache.hadoop.hbase.rest.TestScannersWithFilters#testFilterList
-listener writeFile testName is org.apache.hadoop.hbase.rest.TestScannersWithFilters#testFilterList
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1080537325 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1842488897 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 834616182 for HRegionServer
+msx-reconfagent creating ReconfAgent 89813071 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.rest.TestScannersWithFilters#testFilterList
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.rest.TestScannersWithFilters#testFilterList
+msx-listener writeFile testName is org.apache.hadoop.hbase.rest.TestScannersWithFilters#testFilterList
+msx-listener succeed
+msx-reconfagent HRegionServer stop 1143679284, value is null
+msx-reconfagent HRegionServer stop 768387676, value is null
+msx-reconfagent HRegionServer stop 772025222, value is null
+msx-reconfagent HMaster stop 145307320, value is null
+msx-reconfagent DataNode stop 457759358, value is null
+msx-reconfagent DataNode stop 1454549684, value is null
+msx-reconfagent DataNode stop 1127571929, value is null
+msx-reconfagent NameNode stop 371512255, value is null
+msx-listener all testRunFinished
+msx-rc 0

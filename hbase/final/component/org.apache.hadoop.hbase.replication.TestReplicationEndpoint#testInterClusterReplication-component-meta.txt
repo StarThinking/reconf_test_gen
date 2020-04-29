@@ -1,71 +1,51 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode init
-hdfs DataNode start
-hbase HRegionServer init
-hbase HMaster init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HRegionServer init
-hbase HMaster start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-hbase HRegionServer start
-listener test started org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener unitTestCounterInClass = 0
-listener test Failure org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener writeFile testName is org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener failed
-listener failureMessage: Waiting timed out after [30,000] msec Failed to replicate all edits, expected = 2500 replicated = 2497
-listener stackTrace: java.lang.AssertionError: Waiting timed out after [30,000] msec Failed to replicate all edits, expected = 2500 replicated = 2497
-listener testfinished org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener writeFile testName is org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener succeed
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hbase HRegionServer stop
-hdfs DataNode stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener WARN: using globalTestName org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener test Failure org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener writeFile testName is org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
-listener failed
-listener failureMessage: null
-listener stackTrace: java.lang.AssertionError
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 56876448 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 591564491 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1975248236 for HRegionServer
+msx-reconfagent creating ReconfAgent 1714087354 for HMaster
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent HMaster init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-reconfagent HRegionServer init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
+msx-listener unitTestCounterInClass = 0
+msx-listener testfinished org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
+msx-listener writeFile testName is org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
+msx-listener succeed
+msx-reconfagent HRegionServer stop 138143867, value is null
+msx-reconfagent HRegionServer stop 854752624, value is null
+msx-reconfagent HRegionServer stop 770650907, value is null
+msx-reconfagent HRegionServer stop 557590291, value is null
+msx-reconfagent HMaster stop 1315239133, value is null
+msx-reconfagent DataNode stop 622452993, value is null
+msx-reconfagent DataNode stop 1991831446, value is null
+msx-reconfagent DataNode stop 804121107, value is null
+msx-reconfagent DataNode stop 727831912, value is null
+msx-reconfagent NameNode stop 1097229268, value is null
+msx-reconfagent HRegionServer stop 784718242, value is null
+msx-reconfagent HRegionServer stop 996878664, value is null
+msx-reconfagent HMaster stop 1367133088, value is null
+msx-reconfagent DataNode stop 1823061365, value is null
+msx-reconfagent DataNode stop 640089904, value is null
+msx-reconfagent NameNode stop 2135936837, value is null
+msx-listener WARN: using globalTestName org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
+msx-listener test Failure org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
+msx-listener writeFile testName is org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hbase.replication.TestReplicationEndpoint#testInterClusterReplication
+msx-listener failed
+msx-listener failureMessage: null
+msx-listener stackTrace: java.lang.AssertionError
+msx-listener all testRunFinished
+msx-rc 1
