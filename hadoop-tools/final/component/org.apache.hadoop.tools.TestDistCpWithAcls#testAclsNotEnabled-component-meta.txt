@@ -1,24 +1,22 @@
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-listener test started org.apache.hadoop.tools.TestDistCpWithAcls#testAclsNotEnabled
-listener unitTestCounterInClass = 0
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-hdfs DataNode stop
-hdfs NameNode stop
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-listener testfinished org.apache.hadoop.tools.TestDistCpWithAcls#testAclsNotEnabled
-listener writeFile testName is org.apache.hadoop.tools.TestDistCpWithAcls#testAclsNotEnabled
-listener succeed
-hdfs DataNode stop
-hdfs NameNode stop
-listener all testRunFinished
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 320304382 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 1790387225 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener test started org.apache.hadoop.tools.TestDistCpWithAcls#testAclsNotEnabled
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent DataNode stop 246264949, value is null
+msx-reconfagent NameNode stop 616443292, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent DataNode stop 1621939721, value is null
+msx-reconfagent NameNode stop 1149508419, value is null
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-listener testfinished org.apache.hadoop.tools.TestDistCpWithAcls#testAclsNotEnabled
+msx-listener writeFile testName is org.apache.hadoop.tools.TestDistCpWithAcls#testAclsNotEnabled
+msx-listener succeed
+msx-reconfagent DataNode stop 100703210, value is null
+msx-reconfagent NameNode stop 203409962, value is null
+msx-listener all testRunFinished
+msx-rc 0

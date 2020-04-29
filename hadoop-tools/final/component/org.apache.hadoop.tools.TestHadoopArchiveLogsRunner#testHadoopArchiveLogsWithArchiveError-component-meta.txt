@@ -1,21 +1,22 @@
-listener test started org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
-listener unitTestCounterInClass = 0
-yarn ResourceManager init
-yarn NodeManager init
-yarn NodeManager init
-yarn ResourceManager start
-yarn NodeManager start
-yarn NodeManager start
-hdfs NameNode init
-hdfs NameNode start
-hdfs DataNode init
-hdfs DataNode start
-yarn NodeManager stop
-yarn NodeManager stop
-yarn ResourceManager stop
-hdfs DataNode stop
-hdfs NameNode stop
-listener testfinished org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
-listener writeFile testName is org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
-listener succeed
-listener all testRunFinished
+msx-listener test started org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
+msx-listener unitTestCounterInClass = 0
+msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
+msx-reconfagent creating ReconfAgent 1035400251 for ResourceManager
+msx-reconfagent creating ReconfAgent 1283621097 for NodeManager
+msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent NodeManager init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 2016775408 for NameNode
+msx-reconfagent NameNode init, vvmode is none, do nothing
+msx-reconfagent creating ReconfAgent 245759387 for DataNode
+msx-reconfagent DataNode init, vvmode is none, do nothing
+msx-reconfagent NodeManager stop 1251478346, value is null
+msx-reconfagent NodeManager stop 3156460, value is null
+msx-reconfagent ResourceManager stop 646199716, value is null
+msx-reconfagent DataNode stop 436070826, value is null
+msx-reconfagent NameNode stop 186786947, value is null
+msx-listener testfinished org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
+msx-listener writeFile testName is org.apache.hadoop.tools.TestHadoopArchiveLogsRunner#testHadoopArchiveLogsWithArchiveError
+msx-listener succeed
+msx-listener all testRunFinished
+msx-rc 0
