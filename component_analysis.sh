@@ -37,10 +37,10 @@ function check_restart() {
     restarted=0
     while IFS=$'\n' read -r line
     do
-	if [ "$line" == "$project $component stop" ]; then
+	if [[ "$line" == "msx-reconfagent $component stop"* ]]; then
             stopped=1
         fi
-        if [ "$line" == "$project $component init" ]; then
+        if [[ "$line" == "msx-reconfagent $component init"* ]]; then
 	    # component is inited after some stop
 	    if [ $stopped -eq 1 ]; then
 	        restarted=1
@@ -57,7 +57,7 @@ function check_init() {
     inited=0
     while IFS=$'\n' read -r line
     do
-	if [ "$line" == "$project $component init" ]; then
+	if [[ "$line" == "msx-reconfagent $component init"* ]]; then
             inited=1
 	    break
         fi
