@@ -33,5 +33,10 @@ rc=$?
 test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt
 if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test'; exit -1; fi
 #echo "test_log is $test_log"
-if [ "$log_dts_dir" != "none" ]; then mv $test_log $log_dts_dir/"$the_test"-output.txt; fi
-echo "msx-rc $rc" >> $log_dts_dir/"$the_test"-output.txt
+if [ "$log_dts_dir" != "none" ]; then 
+    mv $test_log $log_dts_dir/"$the_test"-output.txt
+    echo "msx-rc $rc" >> $log_dts_dir/"$the_test"-output.txt
+fi
+
+# return exit code of mvn test
+exit $rc

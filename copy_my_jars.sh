@@ -8,7 +8,7 @@ function copy_jar_for_hadoop {
     echo ''
     
     ## Configuration Override (Optional)
-    cp /root/reconf_test_gen/lib/hadoop-common-"$hadoop_version".jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
+    #cp /root/reconf_test_gen/lib/hadoop-common-"$hadoop_version".jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
     
     # HDFS
     cp /root/hadoop-"$hadoop_version"-src/hadoop-hdfs-project/hadoop-hdfs/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-hdfs/"$hadoop_version"/
