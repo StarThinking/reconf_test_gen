@@ -28,3 +28,5 @@ find /root/hbase-2.2.4/ -name classes > ~/reconf_test_gen/hbase/proc_dir.txt
 for i in ResourceManager NodeManager ApplicationHistoryServer; do prefix=$(grep ^"package " $(find . -name "$i".java) | awk -F ' ' '{print $2}' | sed 's/.$//g'); echo "$prefix"."$i";  done
 
 java ReadXMLFile hbase/hbase-default.xml | awk -F ' ' '{if($2 == "true" || $2 == "false") print $1}' | sort -u > boolean_xml.txt
+
+grep -v .host$ | grep -v .url$ | grep -v .address$ | grep -v .classpath$ | grep -v .classes$ | grep -v .class$ | grep -v .path$ | grep -v .file$ | grep -v .root-dir$ | grep -v .provider$ | grep -v .principal$ | grep -v .hostname$ | grep -v .id$

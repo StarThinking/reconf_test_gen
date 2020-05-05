@@ -64,10 +64,45 @@ public class ReadXMLFile {
     	    e.printStackTrace();
         }
     }
+    
+    public static void getNoDefaultValueParameters(String xmlPath) {
+        try {
+    	    File xmlFile = new File(xmlPath);
+    	    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+    	    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+    	    Document doc = dBuilder.parse(xmlFile);
+    
+    	    doc.getDocumentElement().normalize();
+    	    //System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+    
+    	    NodeList nList = doc.getElementsByTagName(ELEMENT_NAME);
+    	    for (int i=0; i<nList.getLength(); i++) {
+    	        Node nNode = nList.item(i);
+    	        if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+    	    	    Element eElement = (Element) nNode;
+		    if (eElement.getElementsByTagName("value").item(0) == null ||
+				eElement.getElementsByTagName("value").item(0).getTextContent().equals("")) {
+    	    	        System.out.println(eElement.getElementsByTagName("name").item(0).getTextContent());
+		    }
+    	        }
+    	    }
+    	    //System.out.println("number of " + ELEMENT_NAME + " is " + nList.getLength());
+        } catch (Exception e) {
+    	    e.printStackTrace();
+        }
+    }
 
     public static void main(String args[]) { 
 	String xmlPath = args[0];
+	String cmd = args[1];
+	switch (cmd) {
+	    case "getNoDefaultValueParameters":
+		getNoDefaultValueParameters(xmlPath);
+	        break;
+	    default:
+		System.out.println("Error: wrong cmd " + cmd);
+	}
 	//getAllParameters(xmlPath);
-	getParameterValue(xmlPath);
+	//getParameterValue(xmlPath);
     }
 }
