@@ -14,19 +14,31 @@ mapreduce_components+=('JobHistoryServer')
 hbase_components+=('HMaster')
 hbase_components+=('HRegionServer')
 
-if [ $# -lt 2 ]; then echo 'wrong: [component_project] [parameter...]'; exit -1; fi
+if [ $# -ne 2 ]; then echo 'wrong: [component_project] [parameter file]'; exit -1; fi
 component_project=$1
-shift 1
-parameters=( "$@" )
+parameter_file=$2
 
+if [ ! -f $parameter_file ]; then echo "wrong: $parameter_file not exist!"; exit -1; fi
+
+parameters=$(cat $parameter_file)
 v1='v1'
 v2='v2'
 component_array="$component_project"_components[@]
 components=( $(for c in ${!component_array}; do echo $c; done) ) # dynamically create a new array
 op_count=0 # global
 root_dir='/root/reconf_test_gen'
+whitelist_file="/root/reconf_test_gen/""$component_project""/whitelist.txt"
 
-function init_count() {
+function is_in_whitelist {
+    parameter=$1
+    if [ "$(grep ^"$parameter"$ $whitelist_file)" != "" ]; then
+	return 1
+    else
+	return 0
+    fi
+}
+
+function init_count {
     log_file=$1
     project=$2
     component=$3
@@ -101,11 +113,13 @@ function c2t_reduce {
 }
 
 function c2t_plus_p2t_reduce {
-    echo -n "c2t_plus_p2t_reduce: "
+#    echo -n "c2t_plus_p2t_reduce: "
     op_count=0
     paramter_test_mappping_enable='true'
     for para in ${parameters[@]}
     do
+	is_in_whitelist $para
+	if [ $? -eq 1 ]; then continue; fi
         for compo in ${components[@]}
         do
             get_tests_by_component_project $para $compo
