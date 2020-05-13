@@ -95,14 +95,20 @@ public class ReadXMLFile {
     public static void main(String args[]) { 
 	String xmlPath = args[0];
 	String cmd = args[1];
+	
 	switch (cmd) {
 	    case "getNoDefaultValueParameters":
 		getNoDefaultValueParameters(xmlPath);
 	        break;
+	    case "getParameterValue":
+		getParameterValue(xmlPath);
+		break;
+	    case "getAllParameters":
+		getAllParameters(xmlPath);
+		break;
 	    default:
 		System.out.println("Error: wrong cmd " + cmd);
 	}
 	//getAllParameters(xmlPath);
-	//getParameterValue(xmlPath);
     }
 }
