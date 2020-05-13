@@ -1193,7 +1193,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return the value of the <code>name</code> or its replacing property, 
    *         or null if no such property exists.
    */
-  public String get(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String get(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String[] names = handleDeprecation(deprecationContext.get(), name);
     String result = null;
     for(String n : names) {
@@ -1250,7 +1250,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return the value of the <code>name</code> or its replacing property, 
    *         or null if no such property exists.
    */
-  public String getTrimmed(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String getTrimmed(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String value = get(name);
     
     if (null == value) {
@@ -1270,7 +1270,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return              the value of the <code>name</code> or defaultValue
    *                      if it is not set.
    */
-  public String getTrimmed(String name, String defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String getTrimmed(String name, String defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String ret = getTrimmed(name);
     return ret == null ? defaultValue : ret;
   }
@@ -1285,7 +1285,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return the value of the <code>name</code> property or 
    *         its replacing property and null if no such property exists.
    */
-  public String getRaw(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String getRaw(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String[] names = handleDeprecation(deprecationContext.get(), name);
     String result = null;
     for(String n : names) {
@@ -1453,7 +1453,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value, or <code>defaultValue</code> if the property 
    *         doesn't exist.                    
    */
-  public String get(String name, String defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String get(String name, String defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String[] names = handleDeprecation(deprecationContext.get(), name);
     String result = null;
     for(String n : names) {
@@ -1475,7 +1475,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as an <code>int</code>, 
    *         or <code>defaultValue</code>. 
    */
-  public int getInt(String name, int defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public int getInt(String name, int defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getTrimmed(name);
     if (valueString == null)
       return defaultValue;
@@ -1496,7 +1496,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value interpreted as an array of comma-delimited
    *         <code>int</code> values
    */
-  public int[] getInts(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public int[] getInts(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String[] strings = getTrimmedStrings(name);
     int[] ints = new int[strings.length];
     for (int i = 0; i < strings.length; i++) {
@@ -1528,7 +1528,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as a <code>long</code>, 
    *         or <code>defaultValue</code>. 
    */
-  public long getLong(String name, long defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public long getLong(String name, long defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getTrimmed(name);
     if (valueString == null)
       return defaultValue;
@@ -1553,7 +1553,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as a <code>long</code>,
    *         or <code>defaultValue</code>.
    */
-  public long getLongBytes(String name, long defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public long getLongBytes(String name, long defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getTrimmed(name);
     if (valueString == null)
       return defaultValue;
@@ -1600,7 +1600,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as a <code>float</code>, 
    *         or <code>defaultValue</code>. 
    */
-  public float getFloat(String name, float defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public float getFloat(String name, float defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getTrimmed(name);
     if (valueString == null)
       return defaultValue;
@@ -1629,7 +1629,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as a <code>double</code>, 
    *         or <code>defaultValue</code>. 
    */
-  public double getDouble(String name, double defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public double getDouble(String name, double defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getTrimmed(name);
     if (valueString == null)
       return defaultValue;
@@ -1656,7 +1656,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as a <code>boolean</code>, 
    *         or <code>defaultValue</code>. 
    */
-  public boolean getBoolean(String name, boolean defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public boolean getBoolean(String name, boolean defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getTrimmed(name);
     if (null == valueString || valueString.isEmpty()) {
       return defaultValue;
@@ -1706,7 +1706,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @throws IllegalArgumentException If mapping is illegal for the type
    * provided
    */
-  public <T extends Enum<T>> T getEnum(String name, T defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public <T extends Enum<T>> T getEnum(String name, T defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     final String val = getTrimmed(name);
     return null == val
       ? defaultValue
@@ -1785,11 +1785,11 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @throws NumberFormatException If the property stripped of its unit is not
    *         a number
    */
-  public long getTimeDuration(String name, long defaultValue, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public long getTimeDuration(String name, long defaultValue, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     return getTimeDuration(name, defaultValue, unit, unit);
   }
 
-  public long getTimeDuration(String name, String defaultValue, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public long getTimeDuration(String name, String defaultValue, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     return getTimeDuration(name, defaultValue, unit, unit);
   }
 
@@ -1808,7 +1808,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return time duration in given time unit
    */
   public long getTimeDuration(String name, long defaultValue,
-      TimeUnit defaultUnit, TimeUnit returnUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+      TimeUnit defaultUnit, TimeUnit returnUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String vStr = get(name);
     if (null == vStr) {
       return returnUnit.convert(defaultValue, defaultUnit);
@@ -1818,7 +1818,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
   }
 
   public long getTimeDuration(String name, String defaultValue,
-      TimeUnit defaultUnit, TimeUnit returnUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+      TimeUnit defaultUnit, TimeUnit returnUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String vStr = get(name);
     if (null == vStr) {
       return getTimeDurationHelper(name, defaultValue, defaultUnit, returnUnit);
@@ -1836,7 +1836,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param vStr The string value with time unit suffix to be converted.
    * @param unit Unit to convert the stored property, if it exists.
    */
-  public long getTimeDurationHelper(String name, String vStr, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public long getTimeDurationHelper(String name, String vStr, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     return getTimeDurationHelper(name, vStr, unit, unit);
   }
 
@@ -1872,7 +1872,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
     return converted;
   }
 
-  public long[] getTimeDurations(String name, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public long[] getTimeDurations(String name, TimeUnit unit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String[] strings = getTrimmedStrings(name);
     long[] durations = new long[strings.length];
     for (int i = 0; i < strings.length; i++) {
@@ -1890,7 +1890,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return double -- formatted in target Units
    */
   public double getStorageSize(String name, String defaultValue,
-      StorageUnit targetUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+      StorageUnit targetUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     Preconditions.checkState(isNotBlank(name), "Key cannot be blank.");
     String vString = get(name);
     if (isBlank(vString)) {
@@ -1919,7 +1919,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return - double value in the Storage Unit specified.
    */
   public double getStorageSize(String name, double defaultValue,
-      StorageUnit targetUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+      StorageUnit targetUnit) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     Preconditions.checkNotNull(targetUnit, "Conversion unit cannot be null.");
     Preconditions.checkState(isNotBlank(name), "Name cannot be blank.");
     String vString = get(name);
@@ -1968,7 +1968,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param defaultValue default value
    * @return property value as a compiled Pattern, or defaultValue
    */
-  public Pattern getPattern(String name, Pattern defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public Pattern getPattern(String name, Pattern defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valString = get(name);
     if (null == valString || valString.isEmpty()) {
       return defaultValue;
@@ -2011,7 +2011,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * in from.
    */
   @InterfaceStability.Unstable
-  public synchronized String[] getPropertySources(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public synchronized String[] getPropertySources(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     if (properties == null) {
       // If properties is null, it means a resource was newly added
       // but the props were cleared so as to load it upon future
@@ -2197,7 +2197,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param defaultValue the default value if it is not set
    * @return a new set of ranges from the configured value
    */
-  public IntegerRanges getRange(String name, String defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public IntegerRanges getRange(String name, String defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     return new IntegerRanges(get(name, defaultValue));
   }
 
@@ -2211,7 +2211,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param name property name.
    * @return property value as a collection of <code>String</code>s. 
    */
-  public Collection<String> getStringCollection(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public Collection<String> getStringCollection(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = get(name);
     return StringUtils.getStringCollection(valueString);
   }
@@ -2225,7 +2225,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as an array of <code>String</code>s, 
    *         or <code>null</code>. 
    */
-  public String[] getStrings(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String[] getStrings(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = get(name);
     return StringUtils.getStrings(valueString);
   }
@@ -2240,7 +2240,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as an array of <code>String</code>s, 
    *         or default value. 
    */
-  public String[] getStrings(String name, String... defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String[] getStrings(String name, String... defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = get(name);
     if (valueString == null) {
       return defaultValue;
@@ -2257,7 +2257,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param name property name.
    * @return property value as a collection of <code>String</code>s, or empty <code>Collection</code> 
    */
-  public Collection<String> getTrimmedStringCollection(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public Collection<String> getTrimmedStringCollection(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = get(name);
     if (null == valueString) {
       Collection<String> empty = new ArrayList<String>();
@@ -2275,7 +2275,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as an array of trimmed <code>String</code>s, 
    *         or empty array. 
    */
-  public String[] getTrimmedStrings(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String[] getTrimmedStrings(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = get(name);
     return StringUtils.getTrimmedStrings(valueString);
   }
@@ -2290,7 +2290,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as an array of trimmed <code>String</code>s, 
    *         or default value. 
    */
-  public String[] getTrimmedStrings(String name, String... defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public String[] getTrimmedStrings(String name, String... defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = get(name);
     if (null == valueString) {
       return defaultValue;
@@ -2318,7 +2318,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param name property name
    * @return password
    */
-  public char[] getPassword(String name) throws IOException { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public char[] getPassword(String name) throws IOException { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     char[] pass = null;
 
     pass = getPasswordFromCredentialProviders(name);
@@ -2379,7 +2379,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @throws IOException
    */
   public char[] getPasswordFromCredentialProviders(String name)
-      throws IOException { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+      throws IOException { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     char[] pass = null;
     try {
       List<CredentialProvider> providers =
@@ -2536,7 +2536,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return the class object.
    * @throws ClassNotFoundException if the class is not found.
    */
-  public Class<?> getClassByName(String name) throws ClassNotFoundException { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public Class<?> getClassByName(String name) throws ClassNotFoundException { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     Class<?> ret = getClassByNameOrNull(name);
     if (ret == null) {
       throw new ClassNotFoundException("Class " + name + " not found");
@@ -2552,7 +2552,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param name the class name
    * @return the class object, or null if it could not be found.
    */
-  public Class<?> getClassByNameOrNull(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public Class<?> getClassByNameOrNull(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     Map<String, WeakReference<Class<?>>> map;
     
     synchronized (CACHE_CLASSES) {
@@ -2601,7 +2601,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as a <code>Class[]</code>, 
    *         or <code>defaultValue</code>. 
    */
-  public Class<?>[] getClasses(String name, Class<?> ... defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public Class<?>[] getClasses(String name, Class<?> ... defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getRaw(name);
     if (null == valueString) {
       return defaultValue;
@@ -2628,7 +2628,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return property value as a <code>Class</code>, 
    *         or <code>defaultValue</code>. 
    */
-  public Class<?> getClass(String name, Class<?> defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public Class<?> getClass(String name, Class<?> defaultValue) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     String valueString = getTrimmed(name);
     if (valueString == null)
       return defaultValue;
@@ -2657,7 +2657,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    */
   public <U> Class<? extends U> getClass(String name, 
                                          Class<? extends U> defaultValue, 
-                                         Class<U> xface) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+                                         Class<U> xface) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     try {
       Class<?> theClass = getClass(name, defaultValue);
       if (theClass != null && !xface.isAssignableFrom(theClass))
@@ -2684,7 +2684,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @return a <code>List</code> of objects implementing <code>xface</code>.
    */
   @SuppressWarnings("unchecked")
-  public <U> List<U> getInstances(String name, Class<U> xface) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public <U> List<U> getInstances(String name, Class<U> xface) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     List<U> ret = new ArrayList<U>();
     Class<?>[] classes = getClasses(name);
     for (Class<?> cl: classes) {
@@ -2776,7 +2776,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param name resource name.
    * @return the url for the named resource.
    */
-  public URL getResource(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public URL getResource(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     return classLoader.getResource(name);
   }
   
@@ -2787,7 +2787,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>>,
    * @param name configuration resource name.
    * @return an input stream attached to the resource.
    */
-  public InputStream getConfResourceAsInputStream(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + " " + name);
+  public InputStream getConfResourceAsInputStream(String name) { LOG.info("msx-conf " + Thread.currentThread().getStackTrace()[1].getMethodName() + "," + name + "," + Thread.currentThread().getId());
     try {
       URL url= getResource(name);
 
