@@ -20,9 +20,9 @@ parameter_file=$2
 
 if [ ! -f $parameter_file ]; then echo "wrong: $parameter_file not exist!"; exit -1; fi
 
-parameters=$(cat $parameter_file)
-v1='v1'
-v2='v2'
+parameters=( $(cat $parameter_file) )
+v1='true'
+v2='false'
 component_array="$component_project"_components[@]
 components=( $(for c in ${!component_array}; do echo $c; done) ) # dynamically create a new array
 op_count=0 # global
@@ -89,16 +89,16 @@ function get_tests_by_component_project {
 	    if [ $p_used -eq 0 ]; then continue; fi
 	    for init_p in $(seq 1 $init_point_num)
 	    do
-    	        echo "$parameter $component $v1 $v2 $test_project $test $init_p"
-    	        echo "$parameter $component $v2 $v1 $test_project $test $init_p"
-	        #op_count=$(( op_count + 2 ))
+    	        #echo "$parameter $component $v1 $v2 $test_project $test $init_p"
+    	        #echo "$parameter $component $v2 $v1 $test_project $test $init_p"
+	        op_count=$(( op_count + 2 ))
  	    done
         done
     done
 }
 
 function c2t_reduce {
-    echo -n "c2t_reduce: "
+    echo "c2t_reduce: "
     op_count=0
     paramter_test_mappping_enable='false'
     para='dummy'
@@ -108,12 +108,13 @@ function c2t_reduce {
         get_tests_by_component_project $para $compo
     done
     para_num=${#parameters[@]}
+    echo para_num = $para_num
     op_count=$(( op_count * para_num ))
     echo $op_count
 }
 
 function c2t_plus_p2t_reduce {
-#    echo -n "c2t_plus_p2t_reduce: "
+    echo "c2t_plus_p2t_reduce: "
     op_count=0
     paramter_test_mappping_enable='true'
     for para in ${parameters[@]}
@@ -125,9 +126,9 @@ function c2t_plus_p2t_reduce {
             get_tests_by_component_project $para $compo
         done
     done
-    #echo $op_count
+    echo $op_count
 }
 
-#c2t_reduce
+c2t_reduce
 
 c2t_plus_p2t_reduce
