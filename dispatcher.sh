@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then echo 'ERROR: ./dispatcher.sh [project]'; exit -1; fi
 the_project=$1
 vm_num=19 # 20
 busy_file=/tmp/reconf_busy
-dst='/root/reconf_test_gen/'
+dst='/root/reconf_test_gen/target/'
 IFS=$'\n' 
 entry_list=( $(cat task.txt) )
 entry_list_length=${#entry_list[@]}
