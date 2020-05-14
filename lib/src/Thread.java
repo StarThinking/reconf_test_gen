@@ -44,6 +44,7 @@ import sun.security.util.SecurityConstants;
 // msx
 import java.util.List;
 import java.util.ArrayList;
+import java.io.*;
 
 /**
  * A <i>thread</i> is a thread of execution in a program. The Java
@@ -146,6 +147,8 @@ class Thread implements Runnable {
     private static native void registerNatives();
     static {
         registerNatives();
+	// msx
+	//loadServerClasses();
     }
 
     private volatile String name;
@@ -687,12 +690,366 @@ class Thread implements Runnable {
     }
   
     // msx
-    //private static Map<String, List<Long>> createContextMap = new HashMap<String, List<Long>>();
-    //private static String createContext = "None";
     private static Map startStackMap = new HashMap<Long, StackTraceElement[]>();
     private static Map initStackMap = new HashMap<Long, StackTraceElement[]>();
     private static Map<Long, String> tidComponentMap = new HashMap<Long, String>();
     private static Map<String, List<Long>> componentTidListMap = new HashMap<String, List<Long>>();
+    private static Map<String, List<String>> componentClassListMap = new HashMap<String, List<String>>();  
+
+    private static void loadServerClasses4NameNode() {
+	List<String> classList = new ArrayList<String>();
+	componentClassListMap.put("NameNode", classList);
+	classList.add("org.apache.hadoop.hdfs.server.namenode.FSNamesystemLock");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeAttributes");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.Checkpointer");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditLogFileInputStream");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.CachedBlock");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.BackupImage");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeResourcePolicy");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirConcatOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditLogBackupInputStream");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.BackupNode");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeReference");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeLayoutVersion");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeResourceChecker");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.AclEntryStatusFormat");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditLogOutputStream");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.CheckableNameNodeResource");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.BackupJournalManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSEditLogLoader");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeAttributeProvider");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.LeaseManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeHttpServer");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EncryptionZoneManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.SaveNamespaceCancelledException");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNode");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.XAttrFormat");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSEditLogOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageTransactionalStorageInspector");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.TransferFsImage");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.JournalManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.Snapshot");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.AbstractINodeDiff");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotFSImageFormat");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.DirectorySnapshottableFeature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.DiffList");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotDiffListingInfo");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.AbstractINodeDiffList");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotDiffInfo");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.FSImageFormatPBSnapshot");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.DiffListBySkipList");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.FileDiffList");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.DiffListByArrayList");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.FileWithSnapshotFeature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.DirectoryWithSnapshotFeature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotStatsMXBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.SnapshotManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.FileDiff");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.snapshot.DirectoryDiffListFactory");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirAclOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodesInPath");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.UnsupportedActionException");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.EditLogTailer");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.RemoteNameNodeInfo");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.StandbyCheckpointer");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.ActiveState");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.NameNodeHAProxyFactory");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.StandbyState");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.HAState");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.BootstrapStandby");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ha.HAContext");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.DefaultINodeAttributesProvider");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeUtils");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSEditLogOpCodes");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.Content");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.SerialNumberManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.QuotaByStorageTypeEntry");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.SafeMode");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImage");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.CheckpointFaultInjector");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.JournalSet");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.metrics.NameNodeMetrics");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.metrics.ReplicatedBlocksMBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.metrics.FSNamesystemMBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.metrics.ECBlockGroupsMBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageStorageInspector");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirDeleteOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImagePreTransactionalStorageInspector");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ReencryptionHandler");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageUtil");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirMkdirOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirSymlinkOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.VersionInfoMXBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.AclTransformation");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.LogsPurgeable");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeDirectory");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditLogInputStream");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditsDoubleBuffer");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirSatisfyStoragePolicyOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.SerialNumberMap");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.StartupProgressServlet");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.RedundantEditLogInputStream");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirSnapshotOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeFile");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirTruncateOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.IllegalReservedPathException");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeFileAttributes");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageFormat");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.web.resources.NamenodeWebHdfsMethods");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ContentCounts");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.IsNameNodeActiveServlet");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameCache");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeWithAdditionalFields");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.DfsServlet");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirAppendOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NamenodeFsck");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ImageServlet");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.CacheManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeStatusMXBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ContentSummaryComputationContext");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.StartupProgressView");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.PhaseTracking");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.Status");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.AbstractTracking");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.StartupProgressMetrics");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.StepType");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.Step");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.package-info");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.StartupProgress");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.Phase");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.startupprogress.StepTracking");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FileJournalManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.BackupState");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.GlobalStateIdContext");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirErasureCodingOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EncryptionFaultInjector");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.Quota");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.SaveNamespaceContext");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSTreeTraverser");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeDirectoryAttributes");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeMap");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirAttrOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.Namesystem");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.QuotaCounts");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.StreamLimiter");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSEditLogAsync");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.MetaRecoveryContext");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.top.TopAuditLogger");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.top.metrics.TopMetrics");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.top.window.RollingWindowManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.top.window.RollingWindow");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.top.TopConf");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NNStorage");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeId");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INode");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NNUpgradeUtil");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.LeaseExpiredException");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.BlockStorageMovementAttemptedItems");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.StoragePolicySatisfier");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.StoragePolicySatisfyManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.ItemInfo");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.BlockMoveTaskHandler");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.SPSService");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.FileCollector");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.DatanodeCacheManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.package-info");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.BlockStorageMovementNeeded");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.Context");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.sps.BlockMovementListener");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.INodeSymlink");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeMXBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NameNodeFormatException");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.AclStorage");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.XAttrStorage");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.XAttrFeature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FsckServlet");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.XAttrPermissionFilter");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageCompression");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirectory");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.DirectoryWithQuotaFeature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.SecondaryNameNodeInfoMXBean");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSNamesystem");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditLogBackupOutputStream");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirEncryptionZoneOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSEditLog");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.CheckpointConf");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.HdfsAuditLogger");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirRenameOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirWriteFileOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditLogInputException");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FileUnderConstructionFeature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.StoragePolicySummary");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.AuditLogger");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ReencryptionUpdater");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.CachePool");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.ErasureCodingPolicyManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSImageSerialization");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSDirXAttrOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.AclFeature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.CheckpointSignature");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.EditLogFileOutputStream");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.FSNDNCacheOp");
+        classList.add("org.apache.hadoop.hdfs.server.namenode.InotifyFSEditLogOpTranslator");
+    }
+    
+    private static void loadServerClasses4DataNode() {
+	List<String> classList = new ArrayList<String>();
+	componentClassListMap.put("DataNode", classList);
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedBlockReader");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.ErasureCodingWorker");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedBlockReconstructor");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedBlockWriter");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedReconstructionInfo");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedBlockChecksumReconstructor");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedBlockChecksumMd5CrcReconstructor");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedReconstructor");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedReader");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedWriter");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.StripedBlockChecksumCompositeCrcReconstructor");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.erasurecode.package-info");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BlockReceiver");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DNConf");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ProvidedReplica");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BlockSender");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.SecureDataNodeStarter");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BlockPoolSliceStorage");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DataNodeLayoutVersion");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.FinalizedProvidedReplica");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BPOfferService");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ProfilingFileIoEvents");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaWaitingToBeRecovered");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DataXceiverServer");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaHandler");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DiskBalancer");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.metrics.DataNodeMetricHelper");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.metrics.FSDatasetMBean");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.metrics.DataNodePeerMetrics");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.metrics.OutlierDetector");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.metrics.DataNodeDiskMetrics");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.metrics.DataNodeMetrics");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.FileIoProvider");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.FaultInjectorFileIoEvents");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DirectoryScanner");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.IncrementalBlockReportManager");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.UnexpectedReplicaStateException");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DataNodeMXBean");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReportBadBlockAction");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.webhdfs.DataNodeUGIProvider");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.webhdfs.ExceptionHandler");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.webhdfs.HdfsWriter");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.webhdfs.ParameterParser");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.webhdfs.WebHdfsHandler");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.DatanodeHttpServer");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.URLDispatcher");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.RestCsrfPreventionFilterHandler");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.web.SimpleHttpProxyHandler");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.VolumeScanner");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaBeingWritten");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.AbstractFuture");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.TimeoutFuture");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.VolumeCheckResult");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.Checkable");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.StorageLocationChecker");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.DatasetVolumeChecker");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.package-info");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.checker.AsyncChecker");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BlockChecksumHelper");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.RoundRobinVolumeChoosingPolicy");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.LengthInputStream");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.ReplicaInputStreams");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.DataNodeVolumeMetrics");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.FsVolumeSpi");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.AddBlockPoolException");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.BlockPoolSlice");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.ProvidedVolumeImpl");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetImpl");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.MappableBlock");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.RamDiskReplicaLruTracker");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.VolumeFailureInfo");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetAsyncDiskService");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.ReservedSpaceCalculator");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.ReplicaMap");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetCache");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsVolumeImplBuilder");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetUtil");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsDatasetFactory");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsVolumeList");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.RamDiskAsyncLazyPersistService");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.FsVolumeImpl");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.RamDiskReplicaTracker");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.AvailableSpaceVolumeChoosingPolicy");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.VolumeChoosingPolicy");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.ReplicaOutputStreams");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.FsVolumeReference");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.fsdataset.FsDatasetSpi");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BlockPoolManager");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BPServiceActorActionException");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaUnderRecovery");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.FinalizedReplica");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BPServiceActorAction");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaInfo");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaInPipeline");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaBuilder");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.Replica");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.LocalReplica");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DatanodeUtil");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BPServiceActor");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DataNodeFaultInjector");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DataNode");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BlockScanner");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.LocalReplicaInPipeline");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ShortCircuitRegistry");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ReplicaAlreadyExistsException");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ErrorReportAction");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DataXceiver");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DiskFileCorruptException");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.StorageLocation");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.ChunkChecksum");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.DataStorage");
+        classList.add("org.apache.hadoop.hdfs.server.datanode.BlockRecoveryWorker");
+}
+
+    private static void loadServerClasses4JournalNode() {
+	List<String> classList = new ArrayList<String>();
+	componentClassListMap.put("JournalNode", classList);
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournalNodeSyncer");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournalNodeMXBean");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.GetJournalEditServlet");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournalNodeHttpServer");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournalNodeRpcServer");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.Journal");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournaledEditsCache");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournalMetrics");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournalFaultInjector");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JNStorage");
+        classList.add("org.apache.hadoop.hdfs.qjournal.server.JournalNode");
+    } 
+
+    private static void loadServerClasses() {
+	if (componentClassListMap.size() > 0)
+	    return;
+ 	loadServerClasses4NameNode();	
+ 	loadServerClasses4DataNode();	
+	loadServerClasses4JournalNode();
+    }
+  
+    /**
+     * msx
+     * <code>getComponentClassListMap</code>
+     * @return Map
+     */
+    public static Map<String, List<String>> getComponentClassListMap() {
+        return componentClassListMap;
+    }
+     
     /**
      * msx
      * <code>getStartStackMap</code>
@@ -710,13 +1067,6 @@ class Thread implements Runnable {
     public static Map<String, List<Long>> getComponentTidListMap() {
         return componentTidListMap;
     }
-    /**
-     * msx
-     * <code>setCreateContext</code>
-     */
-    //public static void setCreateContext(String context) {
-    //    createContext = context;
-   // }
     
     /**
      * msx
@@ -736,37 +1086,33 @@ class Thread implements Runnable {
         return initStackMap;
     }
 
-
-    /**
-     * msx
-     * <code>setCreateContext</code>
-     * @return Map
-     */
-    /*public static Map getCreateContextMap() {
-        return createContextMap;
-    }*/
-
     private void findComponentByTid(Long tid, StackTraceElement[] parentStack) {
-      String component = "Other";
-      StackTraceElement[] stack = parentStack;
-      if (stack != null) {
-          for (int i = (stack.length-1); i >= 2; i--) {
-              StackTraceElement s = stack[i];
-              if (s.getClassName().startsWith("org.apache.hadoop.hdfs.server.namenode.")) {
-                  component = "NameNode";
-		  break;
-              } else if (s.getClassName().startsWith("org.apache.hadoop.hdfs.server.datanode.")) {
-                  component = "DataNode";
-		  break;
-              } 
-          }
-      }
-      tidComponentMap.put(tid, component);
-      List<Long> tidList = componentTidListMap.get(component);
-      if (tidList == null)
-	  tidList = new ArrayList<Long>();
-      tidList.add(tid);
-      componentTidListMap.put(component, tidList);
+	loadServerClasses();
+        String component = "Other";
+        StackTraceElement[] stack = parentStack;
+        if (stack != null) {
+            for (int i = (stack.length-1); i >= 2; i--) {
+                StackTraceElement s = stack[i];
+                for (String keyComponent : componentClassListMap.keySet()) {
+		    List<String> classList = componentClassListMap.get(keyComponent);
+		    if (classList == null)
+			continue;
+		    if (classList.contains(s.getClassName())) {
+			component = keyComponent;
+			break;
+		    }
+		}
+		if (!component.equals("Other")) {
+		    break;
+		}
+            }
+        }
+        tidComponentMap.put(tid, component);
+        List<Long> tidList = componentTidListMap.get(component);
+        if (tidList == null)
+            tidList = new ArrayList<Long>();
+        tidList.add(tid);
+        componentTidListMap.put(component, tidList);
   }
    
     /**
