@@ -18,3 +18,12 @@ java ReadXMLFile hbase/hbase-default.xml | awk -F ' ' '{if($2 == "true" || $2 ==
 grep -v .host$ | grep -v .url$ | grep -v .address$ | grep -v .classpath$ | grep -v .classes$ | grep -v .class$ | grep -v .path$ | grep -v .file$ | grep -v .root-dir$ | grep -v .provider$ | grep -v .principal$ | grep -v .hostname$ | grep -v .id$
 
 for i in *; do if [ "$(grep 'msx-listener succeed' $i)" == "" ] && [ "$(grep 'msx-listener failed' $i)" == "" ]; then echo $i; fi; done
+
+# find server classes for a componenet
+cd OUTER_DIR_FOR_COMPONENT
+find COMPONENT_SERVER_CLASS_PATH_PREFIX -name '*.java' | sed 's#/#.#g' | sed 's/^..//g' | sed 's/.java$//g'
+
+# make up list add statement
+cat server_classes.txt | sed 's/^/classList.add("/g' | sed 's/$/");/g'
+
+
