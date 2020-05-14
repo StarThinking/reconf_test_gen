@@ -2,13 +2,10 @@
 
 function copy_jar_for_hadoop {
     hadoop_version=$1
-    # Hadoop Common, Default Configuration and Reconf Agent
+    # Hadoop Common, Configuration and Reconf Agent
     cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
     ls -la /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/ | grep "jar"$
     echo ''
-    
-    ## Configuration Override (Optional)
-    #cp /root/reconf_test_gen/lib/hadoop-common-"$hadoop_version".jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
     
     # HDFS
     cp /root/hadoop-"$hadoop_version"-src/hadoop-hdfs-project/hadoop-hdfs/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-hdfs/"$hadoop_version"/

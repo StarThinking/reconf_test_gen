@@ -1,0 +1,1336 @@
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java	2020-05-14 16:07:01.955946528 +0000
+@@ -106,6 +106,10 @@
+ import org.w3c.dom.Document;
+ import org.w3c.dom.Element;
+ 
++// msx
++import java.io.BufferedReader;
++import java.io.FileReader;
++
+ import com.google.common.base.Preconditions;
+ import com.google.common.base.Strings;
+ 
+@@ -760,6 +764,9 @@
+     }
+   }
+  
++  //msx
++  private static boolean msxConfEnable = false;
++
+   static {
+     // Add default resources
+     addDefaultResource("core-default.xml");
+@@ -778,6 +785,18 @@
+           "respectively");
+       addDefaultResource("hadoop-site.xml");
+     }
++    // msx
++    try {
++        BufferedReader reader = new BufferedReader(new FileReader("/root/reconf_test_gen/lib/enable"));
++        String buffer = reader.readLine();
++        reader.close();
++        if (buffer.equals("true"))
++            msxConfEnable = true;
++        else
++            msxConfEnable = false;
++    } catch(Exception e) {
++        e.printStackTrace();
++    }
+   }
+ 
+   private Properties properties;
+@@ -1181,6 +1200,79 @@
+     return System.getProperty(key);
+   }
+ 
++  private static void printMyStackTrace(StackTraceElement[] elements) {
++    for (int i = 1; i < elements.length; i++) {
++        StackTraceElement s = elements[i];
++        LOG.info("msx-conf \tat " + s.getClassName() + "." + s.getMethodName() + "(" + s.getFileName() + ":" + s.getLineNumber() + ")");
++    }
++  }
++
++  private static boolean isFutureTaskThread() { // run() procedure to as MiniDFSCluster.init will not be traced
++      StackTraceElement[] callingStack = Thread.currentThread().getStackTrace();
++      StackTraceElement sFirst = callingStack[callingStack.length-1];
++      StackTraceElement sSecond = callingStack[callingStack.length-2];
++      if (sFirst.getClassName().equals("java.lang.Thread") && sFirst.getMethodName().equals("run")) {
++          if (sSecond.getClassName().equals("java.util.concurrent.FutureTask") && sSecond.getMethodName().equals("run")) {
++              return true;
++          }
++      }
++      return false;
++  }
++
++  private synchronized static void showStackTrace(String parameter) {
++      if (msxConfEnable == false)
++          return;
++      long currentTid = Thread.currentThread().getId();
++      String component = "Other";
++      // main thread
++      if (currentTid == 1 || isFutureTaskThread()) {
++          Map<String, List<String>> componentClassListMap = Thread.getComponentClassListMap();
++          StackTraceElement[] stack = Thread.currentThread().getStackTrace();
++          if (stack != null) {
++              for (int i = (stack.length-1); i >= 2; i--) {
++                  StackTraceElement s = stack[i];
++                  for (String keyComponent : componentClassListMap.keySet()) {
++                      List<String> classList = componentClassListMap.get(keyComponent);
++                      if (classList == null)
++                          continue;
++                      if (classList.contains(s.getClassName())) {
++                          component = keyComponent;
++                          break;
++                      }
++                  }
++                  if (!component.equals("Other")) {
++                      break;
++                  }
++              }
++          }
++          LOG.info("msx-conf " + parameter + " is main-thread used by " + component);
++          // tmp
++          /*if (component.equals("Other")) {
++              System.out.println("msx-conf this is main thread calling stacktrace:");
++              printMyStackTrace(stack);
++          }*/
++      } else {
++          Map<Long, String> tidComponentMap = Thread.getTidComponentMap();
++          component = tidComponentMap.get(currentTid);
++          LOG.info("msx-conf " + parameter + " is child-thread used by " + component);
++          // tmp
++          /*if (component.equals("Other")) {
++              System.out.println("msx-conf this is non-main thread start stacktrace:");
++              Map<Long, StackTraceElement[]> startStackMap = Thread.getStartStackMap();
++              printMyStackTrace(startStackMap.get(currentTid));
++          }
++          if (component.equals("Other")) {
++              System.out.println("msx-conf this is non-main thread init stacktrace:");
++              Map<Long, StackTraceElement[]> initStackMap = Thread.getInitStackMap();
++              printMyStackTrace(initStackMap.get(currentTid));
++          }
++          if (component.equals("Other")) {
++              System.out.println("msx-conf this is non-main thread calling stacktrace:");
++              printMyStackTrace(Thread.currentThread().getStackTrace());
++          }*/
++      }
++  }
++
+   /**
+    * Get the value of the <code>name</code> property, <code>null</code> if
+    * no such property exists. If the key is deprecated, it returns the value of
+@@ -1193,7 +1285,8 @@
+    * @return the value of the <code>name</code> or its replacing property, 
+    *         or null if no such property exists.
+    */
+-  public String get(String name) {
++  public String get(String name) { 
++    showStackTrace(name);
+     String[] names = handleDeprecation(deprecationContext.get(), name);
+     String result = null;
+     for(String n : names) {
+@@ -1250,7 +1343,8 @@
+    * @return the value of the <code>name</code> or its replacing property, 
+    *         or null if no such property exists.
+    */
+-  public String getTrimmed(String name) {
++  public String getTrimmed(String name) { 
++    showStackTrace(name);
+     String value = get(name);
+     
+     if (null == value) {
+@@ -1270,7 +1364,8 @@
+    * @return              the value of the <code>name</code> or defaultValue
+    *                      if it is not set.
+    */
+-  public String getTrimmed(String name, String defaultValue) {
++  public String getTrimmed(String name, String defaultValue) { 
++    showStackTrace(name);
+     String ret = getTrimmed(name);
+     return ret == null ? defaultValue : ret;
+   }
+@@ -1285,7 +1380,8 @@
+    * @return the value of the <code>name</code> property or 
+    *         its replacing property and null if no such property exists.
+    */
+-  public String getRaw(String name) {
++  public String getRaw(String name) { 
++    showStackTrace(name);
+     String[] names = handleDeprecation(deprecationContext.get(), name);
+     String result = null;
+     for(String n : names) {
+@@ -1453,7 +1549,8 @@
+    * @return property value, or <code>defaultValue</code> if the property 
+    *         doesn't exist.                    
+    */
+-  public String get(String name, String defaultValue) {
++  public String get(String name, String defaultValue) { 
++    showStackTrace(name);
+     String[] names = handleDeprecation(deprecationContext.get(), name);
+     String result = null;
+     for(String n : names) {
+@@ -1475,7 +1572,8 @@
+    * @return property value as an <code>int</code>, 
+    *         or <code>defaultValue</code>. 
+    */
+-  public int getInt(String name, int defaultValue) {
++  public int getInt(String name, int defaultValue) { 
++    showStackTrace(name);
+     String valueString = getTrimmed(name);
+     if (valueString == null)
+       return defaultValue;
+@@ -1496,7 +1594,8 @@
+    * @return property value interpreted as an array of comma-delimited
+    *         <code>int</code> values
+    */
+-  public int[] getInts(String name) {
++  public int[] getInts(String name) { 
++    showStackTrace(name);
+     String[] strings = getTrimmedStrings(name);
+     int[] ints = new int[strings.length];
+     for (int i = 0; i < strings.length; i++) {
+@@ -1528,7 +1627,8 @@
+    * @return property value as a <code>long</code>, 
+    *         or <code>defaultValue</code>. 
+    */
+-  public long getLong(String name, long defaultValue) {
++  public long getLong(String name, long defaultValue) { 
++    showStackTrace(name);
+     String valueString = getTrimmed(name);
+     if (valueString == null)
+       return defaultValue;
+@@ -1553,7 +1653,8 @@
+    * @return property value as a <code>long</code>,
+    *         or <code>defaultValue</code>.
+    */
+-  public long getLongBytes(String name, long defaultValue) {
++  public long getLongBytes(String name, long defaultValue) { 
++    showStackTrace(name);
+     String valueString = getTrimmed(name);
+     if (valueString == null)
+       return defaultValue;
+@@ -1600,7 +1701,8 @@
+    * @return property value as a <code>float</code>, 
+    *         or <code>defaultValue</code>. 
+    */
+-  public float getFloat(String name, float defaultValue) {
++  public float getFloat(String name, float defaultValue) { 
++    showStackTrace(name);
+     String valueString = getTrimmed(name);
+     if (valueString == null)
+       return defaultValue;
+@@ -1629,7 +1731,8 @@
+    * @return property value as a <code>double</code>, 
+    *         or <code>defaultValue</code>. 
+    */
+-  public double getDouble(String name, double defaultValue) {
++  public double getDouble(String name, double defaultValue) { 
++    showStackTrace(name);
+     String valueString = getTrimmed(name);
+     if (valueString == null)
+       return defaultValue;
+@@ -1656,7 +1759,8 @@
+    * @return property value as a <code>boolean</code>, 
+    *         or <code>defaultValue</code>. 
+    */
+-  public boolean getBoolean(String name, boolean defaultValue) {
++  public boolean getBoolean(String name, boolean defaultValue) { 
++    showStackTrace(name);
+     String valueString = getTrimmed(name);
+     if (null == valueString || valueString.isEmpty()) {
+       return defaultValue;
+@@ -1706,7 +1810,8 @@
+    * @throws IllegalArgumentException If mapping is illegal for the type
+    * provided
+    */
+-  public <T extends Enum<T>> T getEnum(String name, T defaultValue) {
++  public <T extends Enum<T>> T getEnum(String name, T defaultValue) { 
++    showStackTrace(name);
+     final String val = getTrimmed(name);
+     return null == val
+       ? defaultValue
+@@ -1785,11 +1890,13 @@
+    * @throws NumberFormatException If the property stripped of its unit is not
+    *         a number
+    */
+-  public long getTimeDuration(String name, long defaultValue, TimeUnit unit) {
++  public long getTimeDuration(String name, long defaultValue, TimeUnit unit) { 
++    showStackTrace(name);
+     return getTimeDuration(name, defaultValue, unit, unit);
+   }
+ 
+-  public long getTimeDuration(String name, String defaultValue, TimeUnit unit) {
++  public long getTimeDuration(String name, String defaultValue, TimeUnit unit) { 
++    showStackTrace(name);
+     return getTimeDuration(name, defaultValue, unit, unit);
+   }
+ 
+@@ -1808,7 +1915,8 @@
+    * @return time duration in given time unit
+    */
+   public long getTimeDuration(String name, long defaultValue,
+-      TimeUnit defaultUnit, TimeUnit returnUnit) {
++      TimeUnit defaultUnit, TimeUnit returnUnit) { 
++    showStackTrace(name);
+     String vStr = get(name);
+     if (null == vStr) {
+       return returnUnit.convert(defaultValue, defaultUnit);
+@@ -1818,7 +1926,8 @@
+   }
+ 
+   public long getTimeDuration(String name, String defaultValue,
+-      TimeUnit defaultUnit, TimeUnit returnUnit) {
++      TimeUnit defaultUnit, TimeUnit returnUnit) { 
++    showStackTrace(name);
+     String vStr = get(name);
+     if (null == vStr) {
+       return getTimeDurationHelper(name, defaultValue, defaultUnit, returnUnit);
+@@ -1836,7 +1945,8 @@
+    * @param vStr The string value with time unit suffix to be converted.
+    * @param unit Unit to convert the stored property, if it exists.
+    */
+-  public long getTimeDurationHelper(String name, String vStr, TimeUnit unit) {
++  public long getTimeDurationHelper(String name, String vStr, TimeUnit unit) { 
++    showStackTrace(name);
+     return getTimeDurationHelper(name, vStr, unit, unit);
+   }
+ 
+@@ -1872,7 +1982,8 @@
+     return converted;
+   }
+ 
+-  public long[] getTimeDurations(String name, TimeUnit unit) {
++  public long[] getTimeDurations(String name, TimeUnit unit) { 
++    showStackTrace(name);
+     String[] strings = getTrimmedStrings(name);
+     long[] durations = new long[strings.length];
+     for (int i = 0; i < strings.length; i++) {
+@@ -1890,7 +2001,8 @@
+    * @return double -- formatted in target Units
+    */
+   public double getStorageSize(String name, String defaultValue,
+-      StorageUnit targetUnit) {
++      StorageUnit targetUnit) { 
++    showStackTrace(name);
+     Preconditions.checkState(isNotBlank(name), "Key cannot be blank.");
+     String vString = get(name);
+     if (isBlank(vString)) {
+@@ -1919,7 +2031,8 @@
+    * @return - double value in the Storage Unit specified.
+    */
+   public double getStorageSize(String name, double defaultValue,
+-      StorageUnit targetUnit) {
++      StorageUnit targetUnit) { 
++    showStackTrace(name);
+     Preconditions.checkNotNull(targetUnit, "Conversion unit cannot be null.");
+     Preconditions.checkState(isNotBlank(name), "Name cannot be blank.");
+     String vString = get(name);
+@@ -1968,7 +2081,8 @@
+    * @param defaultValue default value
+    * @return property value as a compiled Pattern, or defaultValue
+    */
+-  public Pattern getPattern(String name, Pattern defaultValue) {
++  public Pattern getPattern(String name, Pattern defaultValue) { 
++    showStackTrace(name);
+     String valString = get(name);
+     if (null == valString || valString.isEmpty()) {
+       return defaultValue;
+@@ -2011,7 +2125,8 @@
+    * in from.
+    */
+   @InterfaceStability.Unstable
+-  public synchronized String[] getPropertySources(String name) {
++  public synchronized String[] getPropertySources(String name) { 
++    showStackTrace(name);
+     if (properties == null) {
+       // If properties is null, it means a resource was newly added
+       // but the props were cleared so as to load it upon future
+@@ -2197,7 +2312,8 @@
+    * @param defaultValue the default value if it is not set
+    * @return a new set of ranges from the configured value
+    */
+-  public IntegerRanges getRange(String name, String defaultValue) {
++  public IntegerRanges getRange(String name, String defaultValue) { 
++    showStackTrace(name);
+     return new IntegerRanges(get(name, defaultValue));
+   }
+ 
+@@ -2211,7 +2327,8 @@
+    * @param name property name.
+    * @return property value as a collection of <code>String</code>s. 
+    */
+-  public Collection<String> getStringCollection(String name) {
++  public Collection<String> getStringCollection(String name) { 
++    showStackTrace(name);
+     String valueString = get(name);
+     return StringUtils.getStringCollection(valueString);
+   }
+@@ -2225,7 +2342,8 @@
+    * @return property value as an array of <code>String</code>s, 
+    *         or <code>null</code>. 
+    */
+-  public String[] getStrings(String name) {
++  public String[] getStrings(String name) { 
++    showStackTrace(name);
+     String valueString = get(name);
+     return StringUtils.getStrings(valueString);
+   }
+@@ -2240,7 +2358,8 @@
+    * @return property value as an array of <code>String</code>s, 
+    *         or default value. 
+    */
+-  public String[] getStrings(String name, String... defaultValue) {
++  public String[] getStrings(String name, String... defaultValue) { 
++    showStackTrace(name);
+     String valueString = get(name);
+     if (valueString == null) {
+       return defaultValue;
+@@ -2257,7 +2376,8 @@
+    * @param name property name.
+    * @return property value as a collection of <code>String</code>s, or empty <code>Collection</code> 
+    */
+-  public Collection<String> getTrimmedStringCollection(String name) {
++  public Collection<String> getTrimmedStringCollection(String name) { 
++    showStackTrace(name);
+     String valueString = get(name);
+     if (null == valueString) {
+       Collection<String> empty = new ArrayList<String>();
+@@ -2275,7 +2395,8 @@
+    * @return property value as an array of trimmed <code>String</code>s, 
+    *         or empty array. 
+    */
+-  public String[] getTrimmedStrings(String name) {
++  public String[] getTrimmedStrings(String name) { 
++    showStackTrace(name);
+     String valueString = get(name);
+     return StringUtils.getTrimmedStrings(valueString);
+   }
+@@ -2290,7 +2411,8 @@
+    * @return property value as an array of trimmed <code>String</code>s, 
+    *         or default value. 
+    */
+-  public String[] getTrimmedStrings(String name, String... defaultValue) {
++  public String[] getTrimmedStrings(String name, String... defaultValue) { 
++    showStackTrace(name);
+     String valueString = get(name);
+     if (null == valueString) {
+       return defaultValue;
+@@ -2318,7 +2440,8 @@
+    * @param name property name
+    * @return password
+    */
+-  public char[] getPassword(String name) throws IOException {
++  public char[] getPassword(String name) throws IOException { 
++    showStackTrace(name);
+     char[] pass = null;
+ 
+     pass = getPasswordFromCredentialProviders(name);
+@@ -2379,7 +2502,8 @@
+    * @throws IOException
+    */
+   public char[] getPasswordFromCredentialProviders(String name)
+-      throws IOException {
++      throws IOException { 
++    showStackTrace(name);
+     char[] pass = null;
+     try {
+       List<CredentialProvider> providers =
+@@ -2536,7 +2660,8 @@
+    * @return the class object.
+    * @throws ClassNotFoundException if the class is not found.
+    */
+-  public Class<?> getClassByName(String name) throws ClassNotFoundException {
++  public Class<?> getClassByName(String name) throws ClassNotFoundException { 
++    showStackTrace(name);
+     Class<?> ret = getClassByNameOrNull(name);
+     if (ret == null) {
+       throw new ClassNotFoundException("Class " + name + " not found");
+@@ -2552,7 +2677,8 @@
+    * @param name the class name
+    * @return the class object, or null if it could not be found.
+    */
+-  public Class<?> getClassByNameOrNull(String name) {
++  public Class<?> getClassByNameOrNull(String name) { 
++    showStackTrace(name);
+     Map<String, WeakReference<Class<?>>> map;
+     
+     synchronized (CACHE_CLASSES) {
+@@ -2601,7 +2727,8 @@
+    * @return property value as a <code>Class[]</code>, 
+    *         or <code>defaultValue</code>. 
+    */
+-  public Class<?>[] getClasses(String name, Class<?> ... defaultValue) {
++  public Class<?>[] getClasses(String name, Class<?> ... defaultValue) { 
++    showStackTrace(name);
+     String valueString = getRaw(name);
+     if (null == valueString) {
+       return defaultValue;
+@@ -2628,7 +2755,8 @@
+    * @return property value as a <code>Class</code>, 
+    *         or <code>defaultValue</code>. 
+    */
+-  public Class<?> getClass(String name, Class<?> defaultValue) {
++  public Class<?> getClass(String name, Class<?> defaultValue) { 
++    showStackTrace(name);
+     String valueString = getTrimmed(name);
+     if (valueString == null)
+       return defaultValue;
+@@ -2657,7 +2785,8 @@
+    */
+   public <U> Class<? extends U> getClass(String name, 
+                                          Class<? extends U> defaultValue, 
+-                                         Class<U> xface) {
++                                         Class<U> xface) { 
++    showStackTrace(name);
+     try {
+       Class<?> theClass = getClass(name, defaultValue);
+       if (theClass != null && !xface.isAssignableFrom(theClass))
+@@ -2684,7 +2813,8 @@
+    * @return a <code>List</code> of objects implementing <code>xface</code>.
+    */
+   @SuppressWarnings("unchecked")
+-  public <U> List<U> getInstances(String name, Class<U> xface) {
++  public <U> List<U> getInstances(String name, Class<U> xface) { 
++    showStackTrace(name);
+     List<U> ret = new ArrayList<U>();
+     Class<?>[] classes = getClasses(name);
+     for (Class<?> cl: classes) {
+@@ -2776,7 +2906,8 @@
+    * @param name resource name.
+    * @return the url for the named resource.
+    */
+-  public URL getResource(String name) {
++  public URL getResource(String name) { 
++    showStackTrace(name);
+     return classLoader.getResource(name);
+   }
+   
+@@ -2787,7 +2918,8 @@
+    * @param name configuration resource name.
+    * @return an input stream attached to the resource.
+    */
+-  public InputStream getConfResourceAsInputStream(String name) {
++  public InputStream getConfResourceAsInputStream(String name) { 
++    showStackTrace(name);
+     try {
+       URL url= getResource(name);
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java	1970-01-01 00:00:00.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java	2020-04-28 22:19:51.000000000 +0000
+@@ -0,0 +1,167 @@
++package org.apache.hadoop.conf;
++
++import java.io.*;
++import java.util.List;
++import java.util.ArrayList;
++import org.apache.hadoop.conf.Configuration;
++
++public class ReconfAgent {
++
++    private static final int RP_MODE_INSTANCE = -1; // set v2 to a single instance of the specified component throughout a test
++    private static final int RP_MODE_COMPONENT = -2; // set v2 to all instances for the specified component
++    //private static final String RP_MODE_RECONF = "1"; // set v2 to a single life cycle of a single instance of the specified component
++    private static final String reconf_systemRootDir = "/root/parameter_test_controller/";
++
++    private static String reconf_vvmode = "";
++    private static String reconf_parameter = "";
++    private static String reconf_component = "";
++    private static String reconf_v1 = "";
++    private static String reconf_v2 = "";
++    private static String reconf_point = "";
++    private static int reconf_point_int = 0; 
++    
++    private static int reconf_init_point_index = 0;
++    private static List<Integer> confInstanceList = new ArrayList<Integer>();
++
++    // load just once
++    static {
++	loadSharedVariables();
++    }
++
++    private static void loadSharedVariables() {
++        try {
++            BufferedReader reader;
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_vvmode")));
++            reconf_vvmode = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_parameter")));
++            reconf_parameter = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_component")));
++            reconf_component = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_v1")));
++            reconf_v1 = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_v2")));
++            reconf_v2 = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_point")));
++            reconf_point = reader.readLine();
++            reader.close();
++            reconf_point_int = Integer.valueOf(reconf_point);
++
++            if (!reconf_vvmode.equals("v1v1") && !reconf_vvmode.equals("v2v2") && !reconf_vvmode.equals("v1v2") && !reconf_vvmode.equals("none")) {
++                myPrint("ERROR : wrong value of reconf_vvmode " + reconf_vvmode);
++                System.exit(1);
++            }
++      
++	    myPrint("reconf_vvmode=" + reconf_vvmode + ", reconf_parameter=" + reconf_parameter + 
++			    ", reconf_component=" + reconf_component + ", reconf_v1=" + reconf_v1 + ", reconf_v2=" + reconf_v2 +
++			    ", reconf_point=" + reconf_point);
++        } catch (Exception e) {
++            myPrint("ERROR : loadSharedVariables");
++            e.printStackTrace();
++        }
++    }
++
++    public ReconfAgent(String callerClassName) {
++ 	myPrint("creating ReconfAgent " + this.hashCode() + " for " + callerClassName);
++    }
++
++    public void checkReconfAtShutdown(Object obj, String component, Configuration myConf) {
++        myPrint("" + component + " stop " + obj.hashCode() + ", value is " + myConf.get(reconf_parameter));
++	Integer confToRemove = new Integer(myConf.hashCode());
++	boolean existed = confInstanceList.remove(confToRemove);
++	if (!existed) {
++	    myPrint("ERROR : conf " + confToRemove + " not existed in confInstanceList when removing.");
++	}
++    }
++
++    public void performReconf(Object obj, String component, Configuration myConf) {
++      Integer confToAdd = new Integer(myConf.hashCode());
++      if (!confInstanceList.contains(confToAdd)) {
++	  confInstanceList.add(confToAdd);
++      } else {
++	  myPrint("ERROR : conf " + confToAdd + " existed in confInstanceList when adding.");
++      }
++
++      if (reconf_vvmode.equals("none")) {
++          myPrint(component + " init, vvmode is none, do nothing");
++      }
++
++      if (reconf_vvmode.equals("v1v1")) {
++          myConf.set(reconf_parameter, reconf_v1);
++          myPrint(component + " init " + obj.hashCode() + ", vvmode is " + reconf_vvmode + 
++			  ". Set value as v1 " + reconf_v1);// + " myConf is " + myConf.hashCode());
++      }
++
++      if ((reconf_vvmode.equals("v2v2"))) {
++          myConf.set(reconf_parameter, reconf_v2);
++          myPrint(component + " init " + obj.hashCode() + ", vvmode is " + reconf_vvmode + 
++			  ". Set value as v2 " + reconf_v2);//  + " myConf is " + myConf.hashCode());
++      }
++
++      if (reconf_vvmode.equals("v1v2")) { // reconfiguration injection
++          try {
++              synchronized(this) {
++                  if (reconf_component.equals(component)) {
++                      if (reconf_point_int == RP_MODE_INSTANCE) {
++                          /*if (reconf_instanceWithV2Alive == false) {
++                                reconf_instanceWithV2Alive = true;
++                                reconf_instanceWithV2HC = this.hashCode();
++                                myConf.set(reconf_parameter, reconf_v2);
++                                myPrint("" + component + " init, perform Instance-Wide v1v2 reconf " + reconf_point +  " for " + component + ". " +
++                                    "Assign " + reconf_parameter + " as v2 value " + reconf_v2);
++                                myPrint("switch instanceWithV2Alive to true and record instanceWithV2HC as " + reconf_instanceWithV2HC);
++                            } else { // the instance configured with v2 is still alive
++                                myConf.set(reconf_parameter, reconf_v1);
++                                myPrint("" + component + " init, the instance configured with v2 is still alive. " +
++                                    "Assign " + reconf_parameter + " as v1 value " + reconf_v1);
++                            }*/
++                      } else {
++                          reconf_init_point_index ++;
++                          if (reconf_point_int == reconf_init_point_index) {
++                              myConf.set(reconf_parameter, reconf_v2);
++                              myPrint(component + " init " + obj.hashCode() + ", PERFORM V1V2 RECONF " + reconf_point +
++					      ". Set value as v2 " + reconf_v2);// + " myConf is " + myConf.hashCode());
++                          } else {
++                              myConf.set(reconf_parameter, reconf_v1);
++                              myPrint(component + " init " + obj.hashCode() + ", irrelevant init point " + reconf_init_point_index  +
++					      " not " + reconf_point +
++					      ". Set value as v1 " + reconf_v1);// + " myConf is " + myConf.hashCode());
++                          }
++                      }
++                  } else { // for other component instances, just configure it to be v1
++                      myConf.set(reconf_parameter, reconf_v1);
++                      myPrint(component + " init " + obj.hashCode() + ", irrelevant component." +
++				      " Set value as v1 " + reconf_v1);// + " myConf is " + myConf.hashCode()); 
++                  }
++              }
++          } catch (Exception e) {
++              myPrint("ERROR happened during performReconf");
++              System.exit(1);
++          }
++      }
++    }
++
++    private static void myPrint(String str) { System.out.println("msx-reconfagent " + str);}
++    
++    /*public ReconfAgent() {
++	String callerClassName = new Exception().getStackTrace()[1].getClassName();
++ 	myPrint("creating ReconfAgent " + this.hashCode() + " for " + callerClassName);
++    }*/
++    
++    /*public void checkReconfAtShutdown(Object obj, Configuration myConf) {
++	this.checkReconfAtShutdown(obj, obj.getClass().getSimpleName(), myConf);
++    }*/
++
++    /*public void performReconf(Object obj, Configuration myConf) {
++	this.performReconf(obj, obj.getClass().getSimpleName(), myConf);
++    }*/
++}
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/service/AbstractService.java ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/service/AbstractService.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/service/AbstractService.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/service/AbstractService.java	2020-04-28 22:19:51.000000000 +0000
+@@ -149,7 +149,7 @@
+    * the state change not permitted, or something else went wrong
+    */
+   @Override
+-  public void init(Configuration conf) {
++  public void init(Configuration conf) { 
+     if (conf == null) {
+       throw new ServiceStateException("Cannot initialize service "
+                                       + getName() + ": null configuration");
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java ./hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java	2020-05-13 00:08:26.621397814 +0000
+@@ -33,6 +33,15 @@
+ import org.junit.runner.notification.Failure;
+ import org.junit.runner.notification.RunListener;
+ 
++import org.junit.runner.Description;
++import org.junit.runner.Result;
++import java.io.File;
++import java.io.BufferedWriter;
++import java.io.FileWriter;
++import org.apache.commons.lang3.exception.ExceptionUtils;
++
++import java.util.List;
++
+ /**
+  * JUnit run listener which prints full thread dump into System.err
+  * in case a test is failed due to timeout.
+@@ -45,6 +54,13 @@
+ 
+   private final PrintWriter output;
+   
++  public String controllerRootDir = "/root/parameter_test_controller/";
++  public String resultDirName = controllerRootDir + "shared/test_results/";
++  public String warnDirName = controllerRootDir + "shared/warn_results/";
++  public String SEPERATOR = "@@@";
++  public String globalTestName = "";
++  public int unitTestCounterInClass = 0;
++
+   public TimedOutTestsListener() {
+     this.output = new PrintWriter(System.err);
+   }
+@@ -53,8 +69,141 @@
+     this.output = output;
+   }
+ 
++  private void writeFile(String testName, String failureMessage, String stackTrace, String result) throws Exception {
++      System.out.println("msx-listener writeFile testName is " + testName);
++      File theFile = null;
++      if (testName.equals("")) {
++          Date date = new Date();
++          SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
++          String dateTime = "Warn-" + formatter.format(date);
++          theFile = new File(warnDirName + dateTime);
++      } else {
++          theFile = new File(resultDirName + testName);
++      }
++
++      if (!theFile.exists()) {
++          BufferedWriter writer = new BufferedWriter(new FileWriter(theFile)); 
++          writer.write(testName + SEPERATOR + result + SEPERATOR + failureMessage + SEPERATOR + stackTrace + SEPERATOR);
++          writer.flush();
++          writer.close();
++      } else {
++          System.out.println("msx-listener INFO: file existed " + theFile);
++      }
++  }
++
++  private String getTestName(String className, String methodName) throws Exception {
++      if (className == null || methodName == null || className.equals("") || methodName.equals("")) {
++          if (!globalTestName.equals("") && !globalTestName.equals("#")) {
++              System.out.println("msx-listener WARN: using globalTestName " + globalTestName);
++              return globalTestName;
++          } else {
++              System.out.println("msx-listener ERROR: unable to obtain test name!");
++              return "";
++          } 
++      }
++      return className + "#" + methodName;
++  }
++
++  private static void printStackTrace(StackTraceElement[] stack) {
++    if (stack != null) {
++        System.out.println("msx-stack stack.length = " + (stack.length-1));
++        for (int i = 1; i < stack.length; i++) {
++            StackTraceElement s = stack[i];
++            System.out.println("\tmsx-stack at " + s.getClassName() + "." + s.getMethodName() +
++            "(" + s.getFileName() + ":" + s.getLineNumber() + ")");
++        }
++    }
++  }
++
++  private void showStartStack() {
++      Map<Long, StackTraceElement[]> startStackMap = Thread.getStartStackMap();
++      for (Long tid : startStackMap.keySet()) {
++	  System.out.println("msx-stack tid = " + tid);
++	  printStackTrace(startStackMap.get(tid));
++      }
++  }
++
++  private void succeed(String testName, Description description) throws Exception {
++      String failureMessage = "none";
++      String stackTrace = "none";
++      String result = "1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener succeed");
++      //showStartStack();
++      //reset();
++  }
++
++  private void failed(String testName, Failure failure) throws Exception {
++      String failureMessage = failure.getMessage();
++      String stackTrace = ExceptionUtils.getStackTrace(failure.getException());
++      String result = "-1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener failed");
++      System.out.println("msx-listener failureMessage: " + failureMessage);
++      System.out.println("msx-listener stackTrace: " + stackTrace);
++      //showStartStack();
++      //reset();
++  }
++
++  @Override
++  public void testStarted(Description description) throws java.lang.Exception {
++      globalTestName = description.getClassName() + "#" + description.getMethodName();
++      System.out.println("msx-listener test started " + globalTestName);
++      if (unitTestCounterInClass > 0) { // perform reset
++          System.out.println("msx-listener perform reset as unitTestCounterInClass " + unitTestCounterInClass + " is larger than zero");
++          //reset();
++      } else {
++          System.out.println("msx-listener unitTestCounterInClass = " + unitTestCounterInClass);
++      }
++      unitTestCounterInClass++;
++  }
++
++  @Override
++  public void testFinished(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener testfinished " + testName);
++      succeed(testName, description);
++  }
++  
++  @Override
++  public void testIgnored(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Ignored " + testName);
++      succeed(testName, description);
++  }
++   
++  public void myTestFailure(Failure failure) throws Exception{
++      Description description = failure.getDescription();
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Failure " + testName);
++      failed(testName, failure);
++  }
++
++  @Override
++  public void testAssumptionFailure(Failure failure) {
++      try {
++          Description description = failure.getDescription();
++          String testName = getTestName(description.getClassName(), description.getMethodName());
++          System.out.println("msx-listener testAssumptionFailure " + testName);
++          failed(testName, failure);
++      } catch(Exception e) {
++          e.printStackTrace();
++      }
++  }
++   
++  @Override // Called before any tests have been run.
++  public void testRunStarted(Description description) throws Exception {
++      System.out.println("msx-listener all testRunStarted");
++  }
++
++  @Override // Called when all tests have finished
++  public void testRunFinished(Result result) throws Exception {
++      System.out.println("msx-listener all testRunFinished");
++  }
++
+   @Override
+   public void testFailure(Failure failure) throws Exception {
++    myTestFailure(failure);
+     if (failure != null && failure.getMessage() != null 
+         && failure.getMessage().startsWith(TEST_TIMED_OUT_PREFIX)) {
+       output.println("====> TEST TIMED OUT. PRINTING THREAD DUMP. <====");
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java	2020-04-28 22:19:51.000000000 +0000
+@@ -59,6 +59,9 @@
+ import java.util.HashMap;
+ import java.util.Map;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ /**
+  * The JournalNode is a daemon which allows namenodes using
+  * the QuorumJournalManager to log and retrieve edits stored
+@@ -147,8 +150,14 @@
+     return getOrCreateJournal(jid, nameServiceId, StartupOption.REGULAR);
+   }
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("JournalNode");
++
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    reconfAgent.performReconf(this, "JournalNode", conf);
++    
+     this.conf = conf;
+ 
+     String journalNodeDir = null;
+@@ -266,6 +275,9 @@
+    * should indicate an error)
+    */
+   public void stop(int rc) {
++    // msx
++    reconfAgent.checkReconfAtShutdown(this, "JournalNode", this.conf);
++
+     this.resultCode = rc;
+ 
+     for (JournalNodeSyncer jSyncer : journalSyncersById.values()) {
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java	2020-05-12 20:11:26.587747787 +0000
+@@ -228,6 +228,9 @@
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ /**********************************************************
+  * DataNode is a class (and program) that stores a set of
+  * blocks for a DFS deployment.  A single deployment can
+@@ -412,6 +415,9 @@
+ 
+   private ScheduledThreadPoolExecutor metricsLoggerTimer;
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("DataNode");
++
+   /**
+    * Creates a dummy DataNode for testing purpose.
+    */
+@@ -419,6 +425,11 @@
+   @InterfaceAudience.LimitedPrivate("HDFS")
+   DataNode(final Configuration conf) throws DiskErrorException {
+     super(conf);
++    
++    // msx
++    //Thread.setCreateContext("DataNode");
++    reconfAgent.performReconf(this, "DataNode", conf);
++
+     this.tracer = createTracer(conf);
+     this.tracerConfigurationManager =
+         new TracerConfigurationManager(DATANODE_HTRACE_PREFIX, conf);
+@@ -435,6 +446,10 @@
+     initOOBTimeout();
+     storageLocationChecker = null;
+     volumeChecker = new DatasetVolumeChecker(conf, new Timer());
++    
++    // msx
++    //Thread.setCreateContext("None");
++    //System.out.println("msx-context setCreateContext to None at end of DataNode()");
+   }
+ 
+   /**
+@@ -446,6 +461,11 @@
+            final StorageLocationChecker storageLocationChecker,
+            final SecureResources resources) throws IOException {
+     super(conf);
++
++    // msx
++    //Thread.setCreateContext("DataNode");
++    reconfAgent.performReconf(this, "DataNode", conf);
++    
+     this.tracer = createTracer(conf);
+     this.tracerConfigurationManager =
+         new TracerConfigurationManager(DATANODE_HTRACE_PREFIX, conf);
+@@ -520,6 +540,9 @@
+ 
+     initOOBTimeout();
+     this.storageLocationChecker = storageLocationChecker;
++    // msx
++    //Thread.setCreateContext("None");
++    //System.out.println("msx-context setCreateContext to None at end of DataNode()");
+   }
+ 
+   @Override  // ReconfigurableBase
+@@ -2005,6 +2028,9 @@
+    * Otherwise, deadlock might occur.
+    */
+   public void shutdown() {
++    // msx
++    reconfAgent.checkReconfAtShutdown(this, "DataNode", this.getConf());
++
+     stopMetricsLogger();
+     if (plugins != null) {
+       for (ServicePlugin p : plugins) {
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java	2020-05-14 16:19:50.348032999 +0000
+@@ -177,6 +177,9 @@
+ import static org.apache.hadoop.fs.CommonConfigurationKeys.IPC_NAMESPACE;
+ import static org.apache.hadoop.fs.CommonConfigurationKeys.IPC_BACKOFF_ENABLE_DEFAULT;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ /**********************************************************
+  * NameNode serves as both directory namespace manager and
+  * "inode table" for the Hadoop DFS.  There is a single NameNode
+@@ -926,9 +929,17 @@
+     this(conf, NamenodeRole.NAMENODE);
+   }
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("NameNode");
++
+   protected NameNode(Configuration conf, NamenodeRole role)
+       throws IOException {
+     super(conf);
++
++    // msx
++    //Thread.setCreateContext("NameNode");
++    reconfAgent.performReconf(this, "NameNode", conf);
++    
+     this.tracer = new Tracer.Builder("NameNode").
+         conf(TraceUtils.wrapHadoopConf(NAMENODE_HTRACE_PREFIX, conf)).
+         build();
+@@ -965,7 +976,11 @@
+       this.stopAtException(e);
+       throw e;
+     }
++
+     this.started.set(true);
++    // msx
++   // System.out.println("msx-context setCreateContext to None at end of NameNode()");
++    //Thread.setCreateContext("None");
+   }
+ 
+   private void stopAtException(Exception e){
+@@ -1008,6 +1023,9 @@
+    * Stop all NameNode threads and wait for all to finish.
+    */
+   public void stop() {
++    // msx
++    reconfAgent.checkReconfAtShutdown(this, "NameNode", this.getConf());
++    
+     synchronized(this) {
+       if (stopRequested)
+         return;
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java	2020-04-28 22:19:51.000000000 +0000
+@@ -83,6 +83,9 @@
+ 
+ import javax.management.ObjectName;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ /**********************************************************
+  * The Secondary NameNode is a helper to the primary NameNode.
+  * The Secondary is responsible for supporting periodic checkpoints 
+@@ -180,9 +183,15 @@
+   public SecondaryNameNode(Configuration conf)  throws IOException {
+     this(conf, new CommandLineOpts());
+   }
++
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("SecondaryNameNode");
+   
+   public SecondaryNameNode(Configuration conf,
+       CommandLineOpts commandLineOpts) throws IOException {
++    // msx 
++    reconfAgent.performReconf(this, "SecondaryNameNode", conf);
++    
+     try {
+       String nsId = DFSUtil.getSecondaryNameServiceId(conf);
+       if (HAUtil.isHAEnabled(conf, nsId)) {
+@@ -280,6 +289,9 @@
+    * Returns only after shutdown is complete.
+    */
+   public void shutdown() {
++    // msx
++    reconfAgent.checkReconfAtShutdown(this, "SecondaryNameNode", this.conf);
++    
+     shouldRun = false;
+     if (checkpointThread != null) {
+       checkpointThread.interrupt();
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java	2020-04-28 22:19:51.000000000 +0000
+@@ -54,6 +54,9 @@
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ /**
+  * Configures and starts the MR-specific components in the YARN cluster.
+  *
+@@ -227,12 +230,24 @@
+             MRWebAppUtil.getJHSHttpPolicy() == HttpConfig.Policy.HTTPS_ONLY));
+   }
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("JobHistoryServer");
++  
+   private class JobHistoryServerWrapper extends AbstractService {
+     public JobHistoryServerWrapper() {
+       super(JobHistoryServerWrapper.class.getName());
+     }
+     private volatile boolean jhsStarted = false;
+ 
++    // msx
++    @Override
++    public synchronized void serviceInit(Configuration conf) throws Exception {
++	Configuration config = new YarnConfiguration(conf);
++	// msx
++	reconfAgent.performReconf(this, "JobHistoryServer", config);
++	super.serviceInit(config);
++    }
++
+     @Override
+     public synchronized void serviceStart() throws Exception {
+       try {
+@@ -270,6 +285,9 @@
+ 
+     @Override
+     public synchronized void serviceStop() throws Exception {
++      // msx
++      reconfAgent.checkReconfAtShutdown(this, "JobHistoryServer", this.getConfig());
++
+       if (historyServer != null) {
+         historyServer.stop();
+       }
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java	2020-04-28 22:19:51.000000000 +0000
+@@ -60,6 +60,9 @@
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ /**
+  * History server that keeps track of all types of history in the cluster.
+  * Application specific history to start with.
+@@ -82,9 +85,14 @@
+   public ApplicationHistoryServer() {
+     super(ApplicationHistoryServer.class.getName());
+   }
++  
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("ApplicationHistoryServer");
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    reconfAgent.performReconf(this, "ApplicationHistoryServer", conf);
+ 
+     // do security login first.
+     try {
+@@ -123,6 +131,9 @@
+ 
+   @Override
+   protected void serviceStop() throws Exception {
++    // msx
++    reconfAgent.checkReconfAtShutdown(this, "ApplicationHistoryServer", this.getConfig());
++    
+     if (webApp != null) {
+       webApp.stop();
+     }
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java	2020-04-28 22:19:51.000000000 +0000
+@@ -92,6 +92,9 @@
+ import java.util.concurrent.ConcurrentSkipListMap;
+ import java.util.concurrent.atomic.AtomicBoolean;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ public class NodeManager extends CompositeService
+     implements EventHandler<NodeManagerEvent>, NodeManagerMXBean {
+ 
+@@ -383,8 +386,14 @@
+             DefaultContainerExecutor.class, ContainerExecutor.class), conf);
+   }
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("NodeManager");
++  
+   @Override
+-  protected void serviceInit(Configuration conf) throws Exception {
++  protected void serviceInit(Configuration conf) throws Exception { 
++    // msx
++    reconfAgent.performReconf(this, "NodeManager", conf);
++
+     UserGroupInformation.setConfiguration(conf);
+     rmWorkPreservingRestartEnabled = conf.getBoolean(YarnConfiguration
+             .RM_WORK_PRESERVING_RECOVERY_ENABLED,
+@@ -519,6 +528,9 @@
+ 
+   @Override
+   protected void serviceStop() throws Exception {
++    // msx
++    reconfAgent.checkReconfAtShutdown(this, "NodeManager", this.getConfig());
++    
+     if (isStopping.getAndSet(true)) {
+       return;
+     }
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java	2020-04-28 22:19:51.000000000 +0000
+@@ -139,6 +139,9 @@
+ import java.util.Map;
+ import java.util.concurrent.atomic.AtomicBoolean;
+ 
++// msx
++import org.apache.hadoop.conf.ReconfAgent;
++
+ /**
+  * The ResourceManager is the main class that is a set of components.
+  * "I am the ResourceManager. All your resources belong to us..."
+@@ -249,9 +252,15 @@
+     return resourceProfilesManager;
+   }
+ 
++  // msx
++  private static ReconfAgent reconfAgent = new ReconfAgent("ResourceManager");
++  
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
+-    this.conf = conf;
++    // msx
++    reconfAgent.performReconf(this, "ResourceManager", conf);
++    
++    this.conf = conf; 
+     UserGroupInformation.setConfiguration(conf);
+     this.rmContext = new RMContextImpl();
+     rmContext.setResourceManager(this);
+@@ -346,7 +355,7 @@
+ 
+     registerMXBean();
+ 
+-    super.serviceInit(this.conf);
++    super.serviceInit(this.conf);  
+   }
+ 
+   private void loadConfigurationXml(String configurationFile)
+@@ -897,7 +906,7 @@
+ 
+     @Override
+     protected void serviceStop() throws Exception {
+-
++      
+       super.serviceStop();
+ 
+       DefaultMetricsSystem.shutdown();
+@@ -1364,6 +1373,9 @@
+ 
+   @Override
+   protected void serviceStop() throws Exception {
++    // msx
++    reconfAgent.checkReconfAtShutdown(this, "ResourceManager", this.conf);
++    
+     if (webApp != null) {
+       webApp.stop();
+     }
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/NodeManager.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/NodeManager.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/NodeManager.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/NodeManager.java	2020-04-28 22:19:51.000000000 +0000
+@@ -97,6 +97,7 @@
+       String rackName, Resource capability,
+       ResourceManager resourceManager)
+       throws IOException, YarnException {
++    System.out.println("msx-yarn NodeManager start Container");
+     this.containerManagerAddress = hostName + ":" + containerManagerPort;
+     this.nodeHttpAddress = hostName + ":" + httpPort;
+     this.rackName = rackName;
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-tests/src/test/java/org/apache/hadoop/yarn/server/MiniYARNCluster.java	2020-04-28 22:19:51.000000000 +0000
+@@ -807,19 +807,22 @@
+     @Override
+     protected synchronized void serviceInit(Configuration conf)
+         throws Exception {
++      // msx
++      Configuration config = new YarnConfiguration(conf);
+       appHistoryServer = new ApplicationHistoryServer();
+-      conf.setClass(YarnConfiguration.APPLICATION_HISTORY_STORE,
++      
++      config.setClass(YarnConfiguration.APPLICATION_HISTORY_STORE,
+           MemoryApplicationHistoryStore.class, ApplicationHistoryStore.class);
+       // Only set memory timeline store if timeline v1.5 is not enabled.
+       // Otherwise, caller has the freedom to choose storage impl.
+-      if (!TimelineUtils.timelineServiceV1_5Enabled(conf)) {
+-        conf.setClass(YarnConfiguration.TIMELINE_SERVICE_STORE,
++      if (!TimelineUtils.timelineServiceV1_5Enabled(config)) {
++        config.setClass(YarnConfiguration.TIMELINE_SERVICE_STORE,
+             MemoryTimelineStore.class, TimelineStore.class);
+       }
+-      conf.setClass(YarnConfiguration.TIMELINE_SERVICE_STATE_STORE_CLASS,
++      config.setClass(YarnConfiguration.TIMELINE_SERVICE_STATE_STORE_CLASS,
+           MemoryTimelineStateStore.class, TimelineStateStore.class);
+-      appHistoryServer.init(conf);
+-      super.serviceInit(conf);
++      appHistoryServer.init(config);
++      super.serviceInit(config);
+     }
+ 
+     @Override
+diff -ruN /hadoop-3.2.1-src/pom.xml ./pom.xml
+--- /hadoop-3.2.1-src/pom.xml	2019-09-10 14:35:50.000000000 +0000
++++ ./pom.xml	2020-04-28 22:19:51.000000000 +0000
+@@ -140,6 +140,21 @@
+       <plugins>
+         <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
++          <artifactId>maven-surefire-plugin</artifactId>
++          <configuration>
++            <properties>
++              <property>
++                <name>listener</name>
++                <value>org.apache.hadoop.test.TimedOutTestsListener</value>
++              </property>
++      	    </properties>
++            <additionalClasspathElements>
++              <additionalClasspathElement>/root/.m2/repository/org/apache/hadoop/hadoop-common/3.2.1/hadoop-common-3.2.1-tests.jar</additionalClasspathElement>
++            </additionalClasspathElements>
++          </configuration>
++        </plugin>
++        <plugin>
++          <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-dependency-plugin</artifactId>
+           <version>${maven-dependency-plugin.version}</version>
+         </plugin>
