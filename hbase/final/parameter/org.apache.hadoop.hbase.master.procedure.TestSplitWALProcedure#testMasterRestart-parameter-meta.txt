@@ -1,9 +1,9 @@
-      "Bulkload_1min_rmsx-conf get dfs.nameservices
-      "Bulkload_5msx-conf get dfs.nameservices
-      "FlushOutputSize_median"msx-conf get fs.permissions.umask-mode
-      "l2Cachemsx-conf getTrimmed io.file.buffer.size
-      "MajorCompactionInputFileCount_98th_percmsx-conf get dfs.nameservices
-      "MajorCompactionInputFileCount_98th_percmsx-conf getTrimmedStringCollection dfs.nameservices
+msx-conf get dfs.nameservices
+msx-conf get dfs.nameservices
+msx-conf get fs.permissions.umask-mode
+msx-conf getTrimmed io.file.buffer.size
+msx-conf get dfs.nameservices
+msx-conf getTrimmedStringCollection dfs.nameservices
 msx-conf get 
 msx-conf get bind.address
 msx-conf getBoolean dfs.block.access.token.enable
@@ -141,7 +141,7 @@ msx-conf getBoolean hbase.regionserver.minorcompaction.pagecache.drop
 msx-conf getBoolean hbase.regionserver.nonces.enabled
 msx-conf getBoolean hbase.regionserver.wal.enablecompression
 msx-conf getBoolean hbase.regionserver.workers
-      msx-conf getBoolean hbase.replication.bulkload.enabled
+msx-conf getBoolean hbase.replication.bulkload.enabled
 msx-conf getBoolean hbase.replication.bulkload.enabled
 msx-conf getBoolean hbase.resolve.hostnames.on.failure
 msx-conf getBoolean hbase.rpc.crypto.encryption.aes.enabled
@@ -520,8 +520,8 @@ msx-conf get dfs.namenode.write-lock-reporting-threshold-ms
 msx-conf get dfs.namenode.write.stale.datanode.ratio
 msx-conf get dfs.namenode.xattrs.enabled
 msx-conf get dfs.nameservice.id
-      msx-conf get dfs.nameservices
-    msx-conf get dfs.nameservices
+msx-conf get dfs.nameservices
+msx-conf get dfs.nameservices
 msx-conf get dfs.nameservices
 msx-conf get dfs.permissions.enabled
 msx-conf get dfs.permissions.superusergroup
@@ -1552,9 +1552,9 @@ msx-conf getInt hdfs.client.sleep.before.retries
 msx-conf getInt hfile.format.version
 msx-conf getInt hfile.index.block.max.size
 msx-conf getInt hfile.index.block.min.entries
-      msx-conf getInt io.file.buffer.size
-     msx-conf getInt io.file.buffer.size
-    msx-conf getInt io.file.buffer.size
+msx-conf getInt io.file.buffer.size
+msx-conf getInt io.file.buffer.size
+msx-conf getInt io.file.buffer.size
 msx-conf getInt io.file.buffer.size
 msx-conf getInt io.storefile.bloom.block.size
 msx-conf getInt io.storefile.bloom.max.fold
@@ -1812,7 +1812,7 @@ msx-conf getResource core-site.xml
 msx-conf getResource hadoop-site.xml
 msx-conf getResource hbase-default.xml
 msx-conf getResource hbase-site.xml
-      msx-conf getResource hdfs-default.xml
+msx-conf getResource hdfs-default.xml
 msx-conf getResource hdfs-default.xml
 msx-conf getResource hdfs-site.xml
 msx-conf getResource mapred-default.xml
@@ -2641,9 +2641,9 @@ msx-conf getTrimmedStringCollection dfs.namenode.edits.dir.required
 msx-conf getTrimmedStringCollection dfs.namenode.name.dir
 msx-conf getTrimmedStringCollection dfs.namenode.resource.checked.volumes
 msx-conf getTrimmedStringCollection dfs.namenode.shared.edits.dir
-      msx-conf getTrimmedStringCollection dfs.nameservices
-     msx-conf getTrimmedStringCollection dfs.nameservices
-    msx-conf getTrimmedStringCollection dfs.nameservices
+msx-conf getTrimmedStringCollection dfs.nameservices
+msx-conf getTrimmedStringCollection dfs.nameservices
+msx-conf getTrimmedStringCollection dfs.nameservices
 msx-conf getTrimmedStringCollection dfs.nameservices
 msx-conf getTrimmedStringCollection fs.protected.directories
 msx-conf getTrimmedStrings dfs.block.local-path-access.user
@@ -2698,6 +2698,6 @@ msx-conf get zookeeper.znode.switch
 msx-conf get zookeeper.znode.switch.merge
 msx-conf get zookeeper.znode.switch.split
 msx-conf get zookeeper.znode.tableEnableDisable
-      "rpcGetRequesmsx-conf get dfs.nameservices
-      "rpcGetRequesmsx-conf getInt io.file.buffer.size
-      "rpcGetRequesmsx-conf getTrimmedStringCollection dfs.nameservices
+msx-conf get dfs.nameservices
+msx-conf getInt io.file.buffer.size
+msx-conf getTrimmedStringCollection dfs.nameservices
