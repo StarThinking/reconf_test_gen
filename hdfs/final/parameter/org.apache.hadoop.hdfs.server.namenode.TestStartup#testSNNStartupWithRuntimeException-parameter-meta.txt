@@ -1,139 +1,53 @@
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.ssl.client.conf
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf getResource ssl-client.xml
-msx-conf getClass hadoop.ssl.keystores.factory.class
-msx-conf getClass hadoop.ssl.keystores.factory.class
-msx-conf getTrimmed hadoop.ssl.keystores.factory.class
-msx-conf get hadoop.ssl.keystores.factory.class
-msx-conf getClassByName org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-msx-conf getClassByNameOrNull org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get hadoop.ssl.enabled.protocols
-msx-conf get ssl.server.exclude.cipher.list
-msx-conf getStrings hadoop.ssl.enabled.protocols
-msx-conf getTrimmedStrings ssl.server.exclude.cipher.list
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf get ssl.client.keystore.type
-msx-conf get ssl.client.truststore.location
-msx-conf get ssl.client.truststore.type
-msx-conf get hadoop.ssl.hostname.verifier
-msx-conf getBoolean hadoop.security.token.service.use_ip
-msx-conf get hadoop.security.token.service.use_ip
-msx-conf getTrimmed hadoop.security.token.service.use_ip
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.enabled
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf get hadoop.security.authentication
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.auth_to_local
-msx-conf get hadoop.security.auth_to_local.mechanism
-msx-conf get hadoop.kerberos.min.seconds.before.relogin
-msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
-msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-msx-conf getClass hadoop.security.group.mapping
-msx-conf getClass hadoop.security.group.mapping
-msx-conf getTrimmed hadoop.security.group.mapping
-msx-conf get hadoop.security.group.mapping
-msx-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.negative-cache.secs
-msx-conf getLong hadoop.security.groups.cache.secs
-msx-conf getLong hadoop.security.groups.negative-cache.secs
-msx-conf getTrimmed hadoop.security.groups.cache.secs
-msx-conf getTrimmed hadoop.security.groups.negative-cache.secs
-msx-conf get hadoop.security.groups.cache.warn.after.ms
-msx-conf getBoolean hadoop.security.groups.cache.background.reload
-msx-conf getLong hadoop.security.groups.cache.warn.after.ms
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload
-msx-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
-msx-conf get hadoop.security.groups.cache.background.reload
-msx-conf get hadoop.security.groups.cache.background.reload.threads
-msx-conf get hadoop.user.group.static.mapping.overrides
-msx-conf getInt hadoop.security.groups.cache.background.reload.threads
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
-msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
-msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-msx-conf get hadoop.user.group.metrics.percentiles.intervals
-msx-conf getInt io.file.buffer.size
-msx-conf get io.file.buffer.size
-msx-conf getTrimmed io.file.buffer.size
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf get hadoop.service.shutdown.timeout
-msx-conf getResource core-default.xml
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get dfs.nameservice.id
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get dfs.ha.namenode.id
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.ha.namenodes
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.ha.namenodes
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.namenode.secondary.http-address
-msx-conf get dfs.ha.namenodes
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.ha.namenodes
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.namenode.rpc-address
-msx-conf get dfs.namenode.rpc-address
-msx-conf getTrimmed dfs.namenode.secondary.http-address
-msx-conf getTrimmed dfs.namenode.secondary.http-address
-msx-conf get dfs.namenode.secondary.http-address
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.auth_to_local
-msx-conf get hadoop.security.auth_to_local.mechanism
-msx-conf get hadoop.kerberos.min.seconds.before.relogin
-msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
-msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
-msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-msx-conf get hadoop.user.group.metrics.percentiles.intervals
-msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-msx-conf get dfs.metrics.session-id
-msx-conf get dfs.namenode.servicerpc-address
-msx-conf getTrimmed dfs.namenode.servicerpc-address
-msx-conf get fs.defaultFS
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get hadoop.service.shutdown.timeout
-msx-conf getResource core-default.xml
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
+msx-conf core-default.xml is main-thread used by NameNode
+msx-conf core-default.xml is main-thread used by Other
+msx-conf core-site.xml is main-thread used by NameNode
+msx-conf core-site.xml is main-thread used by Other
+msx-conf dfs.ha.namenode.id is main-thread used by NameNode
+msx-conf dfs.ha.namenodes is main-thread used by NameNode
+msx-conf dfs.metrics.session-id is main-thread used by NameNode
+msx-conf dfs.namenode.rpc-address is main-thread used by NameNode
+msx-conf dfs.namenode.secondary.http-address is main-thread used by NameNode
+msx-conf dfs.namenode.servicerpc-address is main-thread used by NameNode
+msx-conf dfs.nameservice.id is main-thread used by NameNode
+msx-conf dfs.nameservices is main-thread used by NameNode
+msx-conf fs.defaultFS is main-thread used by NameNode
+msx-conf hadoop.kerberos.min.seconds.before.relogin is main-thread used by NameNode
+msx-conf hadoop.kerberos.min.seconds.before.relogin is main-thread used by Other
+msx-conf hadoop.security.authentication is main-thread used by NameNode
+msx-conf hadoop.security.authentication is main-thread used by Other
+msx-conf hadoop.security.auth_to_local is main-thread used by NameNode
+msx-conf hadoop.security.auth_to_local is main-thread used by Other
+msx-conf hadoop.security.auth_to_local.mechanism is main-thread used by NameNode
+msx-conf hadoop.security.auth_to_local.mechanism is main-thread used by Other
+msx-conf hadoop.security.dns.log-slow-lookups.enabled is main-thread used by Other
+msx-conf hadoop.security.dns.log-slow-lookups.threshold.ms is main-thread used by Other
+msx-conf hadoop.security.group.mapping is main-thread used by Other
+msx-conf hadoop.security.groups.cache.background.reload is main-thread used by Other
+msx-conf hadoop.security.groups.cache.background.reload.threads is main-thread used by Other
+msx-conf hadoop.security.groups.cache.secs is main-thread used by Other
+msx-conf hadoop.security.groups.cache.warn.after.ms is main-thread used by Other
+msx-conf hadoop.security.groups.negative-cache.secs is main-thread used by Other
+msx-conf hadoop.security.token.service.use_ip is main-thread used by Other
+msx-conf hadoop.service.shutdown.timeout is main-thread used by NameNode
+msx-conf hadoop.service.shutdown.timeout is main-thread used by Other
+msx-conf hadoop.ssl.client.conf is main-thread used by Other
+msx-conf hadoop.ssl.enabled.protocols is main-thread used by Other
+msx-conf hadoop.ssl.hostname.verifier is main-thread used by Other
+msx-conf hadoop.ssl.keystores.factory.class is main-thread used by Other
+msx-conf hadoop.ssl.require.client.cert is main-thread used by Other
+msx-conf hadoop.user.group.metrics.percentiles.intervals is main-thread used by NameNode
+msx-conf hadoop.user.group.metrics.percentiles.intervals is main-thread used by Other
+msx-conf hadoop.user.group.static.mapping.overrides is main-thread used by Other
+msx-conf hdfs-default.xml is main-thread used by NameNode
+msx-conf hdfs-default.xml is main-thread used by Other
+msx-conf hdfs-site.xml is main-thread used by NameNode
+msx-conf hdfs-site.xml is main-thread used by Other
+msx-conf io.file.buffer.size is main-thread used by Other
+msx-conf org.apache.hadoop.mapred.JobConf is main-thread used by Other
+msx-conf org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback is main-thread used by Other
+msx-conf org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory is main-thread used by Other
+msx-conf ssl.client.keystore.type is main-thread used by Other
+msx-conf ssl.client.truststore.location is main-thread used by Other
+msx-conf ssl.client.truststore.type is main-thread used by Other
+msx-conf ssl-client.xml is main-thread used by Other
+msx-conf ssl.server.exclude.cipher.list is main-thread used by Other

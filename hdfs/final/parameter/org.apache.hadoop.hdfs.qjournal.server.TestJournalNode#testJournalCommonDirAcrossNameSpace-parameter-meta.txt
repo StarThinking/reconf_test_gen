@@ -1,313 +1,120 @@
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getTrimmedStringCollection dfs.internal.nameservices
-msx-conf get dfs.internal.nameservices
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get journalnode.htracesampler.classes
-msx-conf get hadoop.htrace.sampler.classes
-msx-conf get journalnode.htracetracer.id
-msx-conf get hadoop.htrace.tracer.id
-msx-conf get journalnode.htracespan.receiver.classes
-msx-conf get hadoop.htrace.span.receiver.classes
-msx-conf get dfs.metrics.session-id
-msx-conf get dfs.journalnode.rpc-address
-msx-conf getBoolean hadoop.security.token.service.use_ip
-msx-conf get hadoop.security.token.service.use_ip
-msx-conf getResource core-default.xml
-msx-conf getTrimmed hadoop.security.token.service.use_ip
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.enabled
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf get hadoop.security.authentication
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.auth_to_local
-msx-conf get hadoop.security.auth_to_local.mechanism
-msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
-msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-msx-conf get hadoop.kerberos.min.seconds.before.relogin
-msx-conf getClass hadoop.security.group.mapping
-msx-conf get hadoop.security.group.mapping
-msx-conf getClass hadoop.security.group.mapping
-msx-conf getTrimmed hadoop.security.group.mapping
-msx-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getLong hadoop.security.groups.cache.secs
-msx-conf getTrimmed hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.negative-cache.secs
-msx-conf getLong hadoop.security.groups.negative-cache.secs
-msx-conf getTrimmed hadoop.security.groups.negative-cache.secs
-msx-conf get hadoop.security.groups.cache.warn.after.ms
-msx-conf getBoolean hadoop.security.groups.cache.background.reload
-msx-conf getLong hadoop.security.groups.cache.warn.after.ms
-msx-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
-msx-conf get hadoop.security.groups.cache.background.reload
-msx-conf getInt hadoop.security.groups.cache.background.reload.threads
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
-msx-conf get hadoop.security.groups.cache.background.reload.threads
-msx-conf get hadoop.user.group.static.mapping.overrides
-msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
-msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-msx-conf get hadoop.user.group.metrics.percentiles.intervals
-msx-conf get dfs.journalnode.http-address
-msx-conf getTrimmed dfs.journalnode.http-bind-host
-msx-conf get dfs.journalnode.http-bind-host
-msx-conf get dfs.journalnode.https-bind-host
-msx-conf get dfs.journalnode.https-address
-msx-conf getTrimmed dfs.journalnode.https-bind-host
-msx-conf get dfs.http.policy
-msx-conf get dfs.cluster.administrators
-msx-conf get dfs.web.authentication.kerberos.keytab
-msx-conf get hadoop.http.temp.dir
-msx-conf get hadoop.http.authentication.kerberos.principal
-msx-conf get hadoop.http.authentication.type
-msx-conf get hadoop.http.authentication.kerberos.keytab
-msx-conf get hadoop.http.authentication.simple.anonymous.allowed
-msx-conf get bind.address
-msx-conf get hadoop.http.authentication.signature.secret.file
-msx-conf get hadoop.http.authentication.token.validity
-msx-conf getInt hadoop.http.max.threads
-msx-conf getTrimmed hadoop.http.max.threads
-msx-conf get hadoop.http.max.threads
-msx-conf get hadoop.http.logs.enabled
-msx-conf getBoolean hadoop.http.logs.enabled
-msx-conf getTrimmed hadoop.http.logs.enabled
-msx-conf getBoolean hadoop.jetty.logs.serve.aliases
-msx-conf get hadoop.jetty.logs.serve.aliases
-msx-conf getTrimmed hadoop.jetty.logs.serve.aliases
-msx-conf getClasses hadoop.http.filter.initializers
-msx-conf getRaw hadoop.http.filter.initializers
-msx-conf get hadoop.http.filter.initializers
-msx-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getTrimmedStrings hadoop.http.filter.initializers
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get dfs.web.ugi
-msx-conf get hadoop.http.staticuser.user
-msx-conf getInt hadoop.http.max.request.header.size
-msx-conf get hadoop.http.max.request.header.size
-msx-conf getInt hadoop.http.max.response.header.size
-msx-conf getTrimmed hadoop.http.max.request.header.size
-msx-conf get hadoop.http.max.response.header.size
-msx-conf getInt hadoop.http.idle_timeout.ms
-msx-conf getTrimmed hadoop.http.max.response.header.size
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf getTrimmed hadoop.http.idle_timeout.ms
-msx-conf getInt hadoop.http.socket.backlog.size
-msx-conf get hadoop.http.socket.backlog.size
-msx-conf getTrimmed hadoop.http.socket.backlog.size
-msx-conf getInt hadoop.http.acceptor.count
-msx-conf getTrimmed hadoop.http.acceptor.count
-msx-conf get hadoop.http.acceptor.count
-msx-conf get hadoop.http.selector.count
-msx-conf getInt hadoop.http.selector.count
-msx-conf getTrimmed hadoop.http.selector.count
-msx-conf get dfs.http.policy
-msx-conf get dfs.http.policy
-msx-conf get dfs.journalnode.rpc-address
-msx-conf getTrimmed dfs.journalnode.rpc-bind-host
-msx-conf getTrimmed dfs.journalnode.rpc-bind-host
-msx-conf get dfs.journalnode.rpc-bind-host
-msx-conf getClass rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
-msx-conf getTrimmed rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
-msx-conf get rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB
-msx-conf getClassByName org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getClassByNameOrNull org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getInt ipc.maximum.data.length
-msx-conf get ipc.maximum.data.length
-msx-conf getInt ipc.server.handler.queue.size
-msx-conf getTrimmed ipc.maximum.data.length
-msx-conf get ipc.server.handler.queue.size
-msx-conf getInt ipc.server.max.response.size
-msx-conf getTrimmed ipc.server.handler.queue.size
-msx-conf get ipc.server.max.response.size
-msx-conf getTrimmed ipc.server.max.response.size
-msx-conf get ipc.server.read.threadpool.size
-msx-conf getInt ipc.server.read.threadpool.size
-msx-conf getTrimmed ipc.server.read.threadpool.size
-msx-conf get ipc.server.read.connection-queue.size
-msx-conf getInt ipc.server.read.connection-queue.size
-msx-conf getTrimmed ipc.server.read.connection-queue.size
-msx-conf get ipc.0.callqueue.impl
-msx-conf getClass ipc.0.callqueue.impl
-msx-conf getTrimmed ipc.0.callqueue.impl
-msx-conf getClass ipc.0.scheduler.impl
-msx-conf get ipc.0.scheduler.impl
-msx-conf getClass ipc.0.callqueue.impl
-msx-conf getTrimmed ipc.0.scheduler.impl
-msx-conf get ipc.0.callqueue.impl
-msx-conf getTrimmed ipc.0.callqueue.impl
-msx-conf getClass ipc.0.scheduler.impl
-msx-conf get ipc.0.scheduler.impl
-msx-conf getBoolean ipc.0.backoff.enable
-msx-conf getTrimmed ipc.0.backoff.enable
-msx-conf getTrimmed ipc.0.scheduler.impl
-msx-conf get ipc.0.backoff.enable
-msx-conf getInt ipc.0.faircallqueue.priority-levels
-msx-conf getTrimmed ipc.0.faircallqueue.priority-levels
-msx-conf get ipc.0.faircallqueue.priority-levels
-msx-conf getInt ipc.0.scheduler.priority.levels
-msx-conf getTrimmed ipc.0.scheduler.priority.levels
-msx-conf get ipc.0.scheduler.priority.levels
-msx-conf get hadoop.security.authorization
-msx-conf getBoolean hadoop.security.authorization
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get hadoop.security.authentication
-msx-conf getInt ipc.server.listen.queue.size
-msx-conf get ipc.server.listen.queue.size
-msx-conf getTrimmed ipc.server.listen.queue.size
-msx-conf getInt ipc.client.idlethreshold
-msx-conf get ipc.client.idlethreshold
-msx-conf getTrimmed ipc.client.idlethreshold
-msx-conf get ipc.client.connection.idle-scan-interval.ms
-msx-conf getInt ipc.client.connection.idle-scan-interval.ms
-msx-conf getInt ipc.client.connection.maxidletime
-msx-conf getTrimmed ipc.client.connection.idle-scan-interval.ms
-msx-conf get ipc.client.connection.maxidletime
-msx-conf getTrimmed ipc.client.connection.maxidletime
-msx-conf get ipc.client.kill.max
-msx-conf getInt ipc.client.kill.max
-msx-conf getInt ipc.server.max.connections
-msx-conf getTrimmed ipc.client.kill.max
-msx-conf getTrimmed ipc.server.max.connections
-msx-conf get ipc.server.max.connections
-msx-conf get rpc.metrics.percentiles.intervals
-msx-conf getInts rpc.metrics.percentiles.intervals
-msx-conf getTrimmedStrings rpc.metrics.percentiles.intervals
-msx-conf getBoolean ipc.server.tcpnodelay
-msx-conf get ipc.server.log.slow.rpc
-msx-conf get ipc.server.tcpnodelay
-msx-conf getBoolean ipc.server.log.slow.rpc
-msx-conf getTrimmed ipc.server.log.slow.rpc
-msx-conf getTrimmed ipc.server.tcpnodelay
-msx-conf getBoolean hadoop.security.authorization
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get hadoop.security.authorization
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.journalnode.edits.dir.ns1
-msx-conf get dfs.journalnode.edits.dir
-msx-conf get dfs.journalnode.edits.dir.perm
-msx-conf get dfs.ha.tail-edits.in-progress
-msx-conf getBoolean dfs.ha.tail-edits.in-progress
-msx-conf getTrimmed dfs.ha.tail-edits.in-progress
-msx-conf get dfs.journalnode.enable.sync
-msx-conf getBoolean dfs.journalnode.enable.sync
-msx-conf getTrimmed dfs.journalnode.enable.sync
-msx-conf getLong dfs.journalnode.sync.interval
-msx-conf get dfs.journalnode.sync.interval
-msx-conf getTrimmed dfs.journalnode.sync.interval
-msx-conf get dfs.edit.log.transfer.timeout
-msx-conf getInt dfs.edit.log.transfer.timeout
-msx-conf getTrimmed dfs.edit.log.transfer.timeout
-msx-conf getLong dfs.edit.log.transfer.bandwidthPerSec
-msx-conf getTrimmed dfs.edit.log.transfer.bandwidthPerSec
-msx-conf get dfs.edit.log.transfer.bandwidthPerSec
-msx-conf get dfs.namenode.shared.edits.dir
-msx-conf getTrimmed dfs.namenode.shared.edits.dir
-msx-conf get dfs.ha.namenodes.ns1
-msx-conf get dfs.namenode.shared.edits.dir.ns1
-msx-conf getTrimmed dfs.namenode.shared.edits.dir.ns1
-msx-conf getTrimmedStringCollection dfs.ha.namenodes.ns1
-msx-conf get dfs.namenode.shared.edits.dir.ns1.nn1
-msx-conf get dfs.namenode.shared.edits.dir.ns1.nn2
-msx-conf getTrimmed dfs.namenode.shared.edits.dir.ns1.nn1
-msx-conf getTrimmed dfs.namenode.shared.edits.dir.ns1.nn2
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getResource core-default.xml
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.ssl.client.conf
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getResource ssl-client.xml
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf getClass hadoop.ssl.keystores.factory.class
-msx-conf getClass hadoop.ssl.keystores.factory.class
-msx-conf getTrimmed hadoop.ssl.keystores.factory.class
-msx-conf get hadoop.ssl.keystores.factory.class
-msx-conf getClassByName org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-msx-conf getClassByNameOrNull org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-msx-conf get hadoop.ssl.enabled.protocols
-msx-conf get ssl.server.exclude.cipher.list
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getStrings hadoop.ssl.enabled.protocols
-msx-conf getTrimmedStrings ssl.server.exclude.cipher.list
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf get ssl.client.keystore.type
-msx-conf get ssl.client.truststore.type
-msx-conf get ssl.client.truststore.location
-msx-conf get hadoop.ssl.hostname.verifier
-msx-conf get io.file.buffer.size
-msx-conf getInt io.file.buffer.size
-msx-conf getTrimmed io.file.buffer.size
-msx-conf get dfs.ha.tail-edits.in-progress
-msx-conf get dfs.journalnode.edits.dir.ns2
-msx-conf get dfs.journalnode.edits.dir
-msx-conf getBoolean dfs.ha.tail-edits.in-progress
-msx-conf getTrimmed dfs.ha.tail-edits.in-progress
-msx-conf get dfs.journalnode.edits.dir.perm
-msx-conf getBoolean dfs.ha.tail-edits.in-progress
-msx-conf getTrimmed dfs.ha.tail-edits.in-progress
-msx-conf get dfs.ha.tail-edits.in-progress
-msx-conf get dfs.journalnode.enable.sync
-msx-conf get dfs.journalnode.sync.interval
-msx-conf getBoolean dfs.journalnode.enable.sync
-msx-conf getLong dfs.journalnode.sync.interval
-msx-conf getTrimmed dfs.journalnode.enable.sync
-msx-conf getTrimmed dfs.journalnode.sync.interval
-msx-conf get dfs.edit.log.transfer.bandwidthPerSec
-msx-conf get dfs.edit.log.transfer.timeout
-msx-conf getInt dfs.edit.log.transfer.timeout
-msx-conf getLong dfs.edit.log.transfer.bandwidthPerSec
-msx-conf getTrimmed dfs.edit.log.transfer.bandwidthPerSec
-msx-conf getTrimmed dfs.edit.log.transfer.timeout
-msx-conf get dfs.ha.namenodes.ns2
-msx-conf get dfs.namenode.shared.edits.dir
-msx-conf get dfs.namenode.shared.edits.dir.ns2
-msx-conf getTrimmed dfs.namenode.shared.edits.dir
-msx-conf getTrimmed dfs.namenode.shared.edits.dir.ns2
-msx-conf getTrimmedStringCollection dfs.ha.namenodes.ns2
-msx-conf get dfs.namenode.shared.edits.dir.ns2.nn3
-msx-conf get dfs.namenode.shared.edits.dir.ns2.nn4
-msx-conf getTrimmed dfs.namenode.shared.edits.dir.ns2.nn3
-msx-conf getTrimmed dfs.namenode.shared.edits.dir.ns2.nn4
-msx-conf get dfs.ha.tail-edits.in-progress
-msx-conf getBoolean dfs.ha.tail-edits.in-progress
-msx-conf getTrimmed dfs.ha.tail-edits.in-progress
-msx-conf get dfs.qjournal.queued-edits.limit.mb
-msx-conf getInt dfs.qjournal.queued-edits.limit.mb
-msx-conf getTrimmed dfs.qjournal.queued-edits.limit.mb
-msx-conf get dfs.metrics.percentiles.intervals
-msx-conf getInts dfs.metrics.percentiles.intervals
-msx-conf getResource core-default.xml
-msx-conf getTrimmedStrings dfs.metrics.percentiles.intervals
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get 
+msx-conf bind.address is main-thread used by JournalNode
+msx-conf core-default.xml is main-thread used by JournalNode
+msx-conf core-default.xml is main-thread used by Other
+msx-conf core-site.xml is main-thread used by JournalNode
+msx-conf core-site.xml is main-thread used by Other
+msx-conf dfs.cluster.administrators is main-thread used by JournalNode
+msx-conf dfs.edit.log.transfer.bandwidthPerSec is main-thread used by JournalNode
+msx-conf dfs.edit.log.transfer.timeout is main-thread used by JournalNode
+msx-conf dfs.ha.namenodes.ns1 is main-thread used by JournalNode
+msx-conf dfs.ha.namenodes.ns2 is main-thread used by JournalNode
+msx-conf dfs.ha.tail-edits.in-progress is main-thread used by JournalNode
+msx-conf dfs.http.policy is main-thread used by JournalNode
+msx-conf dfs.internal.nameservices is main-thread used by JournalNode
+msx-conf dfs.journalnode.edits.dir is main-thread used by JournalNode
+msx-conf dfs.journalnode.edits.dir.ns1 is main-thread used by JournalNode
+msx-conf dfs.journalnode.edits.dir.ns2 is main-thread used by JournalNode
+msx-conf dfs.journalnode.edits.dir.perm is main-thread used by JournalNode
+msx-conf dfs.journalnode.enable.sync is main-thread used by JournalNode
+msx-conf dfs.journalnode.http-address is main-thread used by JournalNode
+msx-conf dfs.journalnode.http-bind-host is main-thread used by JournalNode
+msx-conf dfs.journalnode.https-address is main-thread used by JournalNode
+msx-conf dfs.journalnode.https-bind-host is main-thread used by JournalNode
+msx-conf dfs.journalnode.rpc-address is main-thread used by JournalNode
+msx-conf dfs.journalnode.rpc-bind-host is main-thread used by JournalNode
+msx-conf dfs.journalnode.sync.interval is main-thread used by JournalNode
+msx-conf dfs.metrics.percentiles.intervals is main-thread used by Other
+msx-conf dfs.metrics.session-id is main-thread used by JournalNode
+msx-conf dfs.namenode.shared.edits.dir is main-thread used by JournalNode
+msx-conf dfs.namenode.shared.edits.dir.ns1 is main-thread used by JournalNode
+msx-conf dfs.namenode.shared.edits.dir.ns1.nn1 is main-thread used by JournalNode
+msx-conf dfs.namenode.shared.edits.dir.ns1.nn2 is main-thread used by JournalNode
+msx-conf dfs.namenode.shared.edits.dir.ns2 is main-thread used by JournalNode
+msx-conf dfs.namenode.shared.edits.dir.ns2.nn3 is main-thread used by JournalNode
+msx-conf dfs.namenode.shared.edits.dir.ns2.nn4 is main-thread used by JournalNode
+msx-conf dfs.nameservices is main-thread used by JournalNode
+msx-conf dfs.nameservices is main-thread used by Other
+msx-conf dfs.qjournal.queued-edits.limit.mb is main-thread used by Other
+msx-conf dfs.web.authentication.kerberos.keytab is main-thread used by JournalNode
+msx-conf dfs.web.ugi is main-thread used by JournalNode
+msx-conf hadoop.htrace.sampler.classes is main-thread used by JournalNode
+msx-conf hadoop.htrace.span.receiver.classes is main-thread used by JournalNode
+msx-conf hadoop.htrace.tracer.id is main-thread used by JournalNode
+msx-conf hadoop.http.acceptor.count is main-thread used by JournalNode
+msx-conf hadoop.http.authentication.kerberos.keytab is main-thread used by JournalNode
+msx-conf hadoop.http.authentication.kerberos.principal is main-thread used by JournalNode
+msx-conf hadoop.http.authentication.signature.secret.file is main-thread used by JournalNode
+msx-conf hadoop.http.authentication.simple.anonymous.allowed is main-thread used by JournalNode
+msx-conf hadoop.http.authentication.token.validity is main-thread used by JournalNode
+msx-conf hadoop.http.authentication.type is main-thread used by JournalNode
+msx-conf hadoop.http.filter.initializers is main-thread used by JournalNode
+msx-conf hadoop.http.idle_timeout.ms is main-thread used by JournalNode
+msx-conf hadoop.http.logs.enabled is main-thread used by JournalNode
+msx-conf hadoop.http.max.request.header.size is main-thread used by JournalNode
+msx-conf hadoop.http.max.response.header.size is main-thread used by JournalNode
+msx-conf hadoop.http.max.threads is main-thread used by JournalNode
+msx-conf hadoop.http.selector.count is main-thread used by JournalNode
+msx-conf hadoop.http.socket.backlog.size is main-thread used by JournalNode
+msx-conf hadoop.http.staticuser.user is main-thread used by JournalNode
+msx-conf hadoop.http.temp.dir is main-thread used by JournalNode
+msx-conf hadoop.jetty.logs.serve.aliases is main-thread used by JournalNode
+msx-conf hadoop.kerberos.min.seconds.before.relogin is main-thread used by JournalNode
+msx-conf hadoop.security.authentication is main-thread used by JournalNode
+msx-conf hadoop.security.authorization is main-thread used by JournalNode
+msx-conf hadoop.security.auth_to_local is main-thread used by JournalNode
+msx-conf hadoop.security.auth_to_local.mechanism is main-thread used by JournalNode
+msx-conf hadoop.security.dns.log-slow-lookups.enabled is main-thread used by JournalNode
+msx-conf hadoop.security.dns.log-slow-lookups.threshold.ms is main-thread used by JournalNode
+msx-conf hadoop.security.group.mapping is main-thread used by JournalNode
+msx-conf hadoop.security.groups.cache.background.reload is main-thread used by JournalNode
+msx-conf hadoop.security.groups.cache.background.reload.threads is main-thread used by JournalNode
+msx-conf hadoop.security.groups.cache.secs is main-thread used by JournalNode
+msx-conf hadoop.security.groups.cache.warn.after.ms is main-thread used by JournalNode
+msx-conf hadoop.security.groups.negative-cache.secs is main-thread used by JournalNode
+msx-conf hadoop.security.token.service.use_ip is main-thread used by JournalNode
+msx-conf hadoop.ssl.client.conf is main-thread used by JournalNode
+msx-conf hadoop.ssl.enabled.protocols is main-thread used by JournalNode
+msx-conf hadoop.ssl.hostname.verifier is main-thread used by JournalNode
+msx-conf hadoop.ssl.keystores.factory.class is main-thread used by JournalNode
+msx-conf hadoop.ssl.require.client.cert is main-thread used by JournalNode
+msx-conf hadoop.user.group.metrics.percentiles.intervals is main-thread used by JournalNode
+msx-conf hadoop.user.group.static.mapping.overrides is main-thread used by JournalNode
+msx-conf hdfs-default.xml is main-thread used by JournalNode
+msx-conf hdfs-default.xml is main-thread used by Other
+msx-conf hdfs-site.xml is main-thread used by JournalNode
+msx-conf hdfs-site.xml is main-thread used by Other
+msx-conf io.file.buffer.size is main-thread used by JournalNode
+msx-conf ipc.0.backoff.enable is main-thread used by JournalNode
+msx-conf ipc.0.callqueue.impl is main-thread used by JournalNode
+msx-conf ipc.0.faircallqueue.priority-levels is main-thread used by JournalNode
+msx-conf ipc.0.scheduler.impl is main-thread used by JournalNode
+msx-conf ipc.0.scheduler.priority.levels is main-thread used by JournalNode
+msx-conf ipc.client.connection.idle-scan-interval.ms is main-thread used by JournalNode
+msx-conf ipc.client.connection.maxidletime is main-thread used by JournalNode
+msx-conf ipc.client.idlethreshold is main-thread used by JournalNode
+msx-conf ipc.client.kill.max is main-thread used by JournalNode
+msx-conf ipc.maximum.data.length is main-thread used by JournalNode
+msx-conf ipc.server.handler.queue.size is main-thread used by JournalNode
+msx-conf ipc.server.listen.queue.size is main-thread used by JournalNode
+msx-conf ipc.server.log.slow.rpc is main-thread used by JournalNode
+msx-conf ipc.server.max.connections is main-thread used by JournalNode
+msx-conf ipc.server.max.response.size is main-thread used by JournalNode
+msx-conf ipc.server.read.connection-queue.size is main-thread used by JournalNode
+msx-conf ipc.server.read.threadpool.size is main-thread used by JournalNode
+msx-conf ipc.server.tcpnodelay is main-thread used by JournalNode
+msx-conf  is main-thread used by JournalNode
+msx-conf journalnode.htracesampler.classes is main-thread used by JournalNode
+msx-conf journalnode.htracespan.receiver.classes is main-thread used by JournalNode
+msx-conf journalnode.htracetracer.id is main-thread used by JournalNode
+msx-conf org.apache.hadoop.http.lib.StaticUserWebFilter is main-thread used by JournalNode
+msx-conf org.apache.hadoop.ipc.ProtobufRpcEngine is main-thread used by JournalNode
+msx-conf org.apache.hadoop.mapred.JobConf is main-thread used by JournalNode
+msx-conf org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback is main-thread used by JournalNode
+msx-conf org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory is main-thread used by JournalNode
+msx-conf rpc.engine.org.apache.hadoop.hdfs.qjournal.protocolPB.QJournalProtocolPB is main-thread used by JournalNode
+msx-conf rpc.metrics.percentiles.intervals is main-thread used by JournalNode
+msx-conf ssl.client.keystore.type is main-thread used by JournalNode
+msx-conf ssl.client.truststore.location is main-thread used by JournalNode
+msx-conf ssl.client.truststore.type is main-thread used by JournalNode
+msx-conf ssl-client.xml is main-thread used by JournalNode
+msx-conf ssl.server.exclude.cipher.list is main-thread used by JournalNode

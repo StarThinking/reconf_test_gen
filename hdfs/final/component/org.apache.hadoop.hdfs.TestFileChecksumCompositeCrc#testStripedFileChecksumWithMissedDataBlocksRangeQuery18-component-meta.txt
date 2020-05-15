@@ -1,9 +1,9 @@
 msx-listener test started org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery18
 msx-listener unitTestCounterInClass = 0
 msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
-msx-reconfagent creating ReconfAgent 1016925085 for NameNode
+msx-reconfagent creating ReconfAgent 1997963191 for NameNode
 msx-reconfagent NameNode init, vvmode is none, do nothing
-msx-reconfagent creating ReconfAgent 1113895488 for DataNode
+msx-reconfagent creating ReconfAgent 1408533352 for DataNode
 msx-reconfagent DataNode init, vvmode is none, do nothing
 msx-reconfagent DataNode init, vvmode is none, do nothing
 msx-reconfagent DataNode init, vvmode is none, do nothing
@@ -15,24 +15,28 @@ msx-reconfagent DataNode init, vvmode is none, do nothing
 msx-reconfagent DataNode init, vvmode is none, do nothing
 msx-reconfagent DataNode init, vvmode is none, do nothing
 msx-reconfagent DataNode init, vvmode is none, do nothing
-msx-reconfagent DataNode stop 61426020, value is null
-msx-reconfagent DataNode stop 61426020, value is null
-msx-reconfagent ERROR : conf 1398260359 not existed in confInstanceList when removing.
-msx-reconfagent DataNode init, vvmode is none, do nothing
-msx-reconfagent DataNode stop 553577819, value is null
-msx-reconfagent DataNode stop 1904609259, value is null
-msx-reconfagent DataNode stop 1789282489, value is null
-msx-reconfagent DataNode stop 1280443567, value is null
-msx-reconfagent DataNode stop 1574573264, value is null
-msx-reconfagent DataNode stop 470132045, value is null
-msx-reconfagent DataNode stop 651235118, value is null
-msx-reconfagent DataNode stop 80756779, value is null
-msx-reconfagent DataNode stop 1128266449, value is null
-msx-reconfagent DataNode stop 1539088279, value is null
-msx-reconfagent DataNode stop 1568949719, value is null
-msx-reconfagent NameNode stop 737104370, value is null
+msx-reconfagent DataNode stop 889928215, value is null
+msx-reconfagent DataNode stop 1959758632, value is null
+msx-reconfagent DataNode stop 889928215, value is null
+msx-reconfagent ERROR : conf 1298557761 not existed in confInstanceList when removing.
+msx-reconfagent DataNode stop 574077658, value is null
+msx-reconfagent DataNode stop 130850024, value is null
+msx-reconfagent DataNode stop 1809129176, value is null
+msx-reconfagent DataNode stop 508760925, value is null
+msx-reconfagent DataNode stop 1829966070, value is null
+msx-reconfagent DataNode stop 1720865719, value is null
+msx-reconfagent DataNode stop 260638966, value is null
+msx-reconfagent DataNode stop 1337835760, value is null
+msx-reconfagent DataNode stop 480184864, value is null
+msx-reconfagent NameNode stop 300604602, value is null
+msx-listener test Failure org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery18
+msx-listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery18
+msx-listener failed
+msx-listener failureMessage: `/striped/stripedFileChecksum3': Fail to get block checksum for LocatedStripedBlock{BP-1686146634-172.17.0.10-1589504110037:blk_-9223372036854775776_1002; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:44715,DS-c83c7cbf-4656-45c9-9891-84887977963d,DISK], DatanodeInfoWithStorage[127.0.0.1:46002,DS-9eeedeeb-2f07-408e-bb53-7d9e94fa4b6a,DISK], DatanodeInfoWithStorage[127.0.0.1:38519,DS-1aba93e0-a588-486c-b8bb-3211fa664d9a,DISK], DatanodeInfoWithStorage[127.0.0.1:44192,DS-80b3fece-3b39-4525-a44b-de57f9e37e9b,DISK], DatanodeInfoWithStorage[127.0.0.1:34372,DS-14e3a7d0-3755-4118-8d95-378f96a95404,DISK], DatanodeInfoWithStorage[127.0.0.1:44397,DS-4727d9be-450f-4c16-8288-1eb44a897159,DISK], DatanodeInfoWithStorage[127.0.0.1:33519,DS-9597449e-caf6-46b3-98f4-e95be128d091,DISK], DatanodeInfoWithStorage[127.0.0.1:45350,DS-0da120bd-8892-42cb-bd9d-211eb25969d4,DISK]]; indices=[1, 2, 3, 4, 5, 6, 7, 8]}
+msx-listener stackTrace: org.apache.hadoop.fs.PathIOException: `/striped/stripedFileChecksum3': Fail to get block checksum for LocatedStripedBlock{BP-1686146634-172.17.0.10-1589504110037:blk_-9223372036854775776_1002; getBlockSize()=37748736; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[127.0.0.1:44715,DS-c83c7cbf-4656-45c9-9891-84887977963d,DISK], DatanodeInfoWithStorage[127.0.0.1:46002,DS-9eeedeeb-2f07-408e-bb53-7d9e94fa4b6a,DISK], DatanodeInfoWithStorage[127.0.0.1:38519,DS-1aba93e0-a588-486c-b8bb-3211fa664d9a,DISK], DatanodeInfoWithStorage[127.0.0.1:44192,DS-80b3fece-3b39-4525-a44b-de57f9e37e9b,DISK], DatanodeInfoWithStorage[127.0.0.1:34372,DS-14e3a7d0-3755-4118-8d95-378f96a95404,DISK], DatanodeInfoWithStorage[127.0.0.1:44397,DS-4727d9be-450f-4c16-8288-1eb44a897159,DISK], DatanodeInfoWithStorage[127.0.0.1:33519,DS-9597449e-caf6-46b3-98f4-e95be128d091,DISK], DatanodeInfoWithStorage[127.0.0.1:45350,DS-0da120bd-8892-42cb-bd9d-211eb25969d4,DISK]]; indices=[1, 2, 3, 4, 5, 6, 7, 8]}
 msx-listener testfinished org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery18
 msx-listener writeFile testName is org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery18
+msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.hdfs.TestFileChecksumCompositeCrc#testStripedFileChecksumWithMissedDataBlocksRangeQuery18
 msx-listener succeed
 msx-listener all testRunFinished
-msx-rc 0
+msx-rc 1

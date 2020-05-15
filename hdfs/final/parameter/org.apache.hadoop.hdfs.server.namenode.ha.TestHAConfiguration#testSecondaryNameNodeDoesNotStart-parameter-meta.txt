@@ -1,34 +1,16 @@
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf get dfs.nameservice.id
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.nameservices
-msx-conf get dfs.ha.namenodes.ns1
-msx-conf getTrimmedStringCollection dfs.ha.namenodes.ns1
-msx-conf get dfs.namenode.rpc-address.ns1.nn1
-msx-conf getInts dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
-msx-conf getTrimmedStrings dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
-msx-conf get dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1
-msx-conf getBoolean hadoop.security.token.service.use_ip
-msx-conf getTrimmed hadoop.security.token.service.use_ip
-msx-conf get hadoop.security.token.service.use_ip
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.security.dns.log-slow-lookups.enabled
-msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf get dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
-msx-conf get dfs.namenode.rpc-address.ns1.nn2
-msx-conf getInts dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
-msx-conf getTrimmedStrings dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2
+msx-conf core-default.xml is main-thread used by NameNode
+msx-conf core-default.xml is main-thread used by Other
+msx-conf core-site.xml is main-thread used by NameNode
+msx-conf core-site.xml is main-thread used by Other
+msx-conf dfs.ha.namenodes.ns1 is main-thread used by NameNode
+msx-conf dfs.namenode.rpc-address.auxiliary-ports.ns1.nn1 is main-thread used by NameNode
+msx-conf dfs.namenode.rpc-address.auxiliary-ports.ns1.nn2 is main-thread used by NameNode
+msx-conf dfs.namenode.rpc-address.ns1.nn1 is main-thread used by NameNode
+msx-conf dfs.namenode.rpc-address.ns1.nn2 is main-thread used by NameNode
+msx-conf dfs.nameservice.id is main-thread used by NameNode
+msx-conf dfs.nameservices is main-thread used by NameNode
+msx-conf hadoop.security.dns.log-slow-lookups.enabled is main-thread used by NameNode
+msx-conf hadoop.security.dns.log-slow-lookups.threshold.ms is main-thread used by NameNode
+msx-conf hadoop.security.token.service.use_ip is main-thread used by NameNode
+msx-conf hdfs-default.xml is main-thread used by NameNode
+msx-conf hdfs-site.xml is main-thread used by NameNode

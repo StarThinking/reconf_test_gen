@@ -1,300 +1,73 @@
-msx-conf get hadoop.http.temp.dir
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf get httpfs.hadoop.filesystem.cache.purge.frequency
-msx-conf get httpfs.services
-msx-conf get hadoop.http.max.threads
-msx-conf get httpfs.authentication.kerberos.keytab
-msx-conf get httpfs.authentication.signature.secret.file
-msx-conf get httpfs.delegation.token.manager.update.interval
-msx-conf get httpfs.authentication.kerberos.principal
-msx-conf get httpfs.delegation.token.manager.max.lifetime
-msx-conf get httpfs.hadoop.authentication.kerberos.keytab
-msx-conf get httpfs.hostname
-msx-conf get httpfs.http.hostname
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get httpfs.authentication.type
-msx-conf get httpfs.delegation.token.manager.renewal.interval
-msx-conf get httpfs.hadoop.filesystem.cache.purge.timeout
-msx-conf get httpfs.http.port
-msx-conf get hadoop.http.max.response.header.size
-msx-conf get httpfs.buffer.size
-msx-conf get httpfs.hadoop.authentication.kerberos.principal
-msx-conf get httpfs.hadoop.authentication.type
-msx-conf get httpfs.ssl.enabled
-msx-conf get hadoop.security.sensitive-config-keys
-msx-conf get kerberos.realm
-msx-conf get httpfs.services
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf get hadoop.http.max.threads
-msx-conf get httpfs.hadoop.authentication.kerberos.keytab
-msx-conf get httpfs.hadoop.filesystem.cache.purge.frequency
-msx-conf get httpfs.authentication.kerberos.principal
-msx-conf get httpfs.delegation.token.manager.max.lifetime
-msx-conf get httpfs.http.hostname
-msx-conf get httpfs.proxyuser.root.hosts
-msx-conf get httpfs.hadoop.authentication.kerberos.principal
-msx-conf getRaw httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf get hadoop.http.max.response.header.size
-msx-conf get hadoop.http.temp.dir
-msx-conf get httpfs.hadoop.authentication.type
-msx-conf get httpfs.ssl.enabled
-msx-conf get httpfs.authentication.kerberos.keytab
-msx-conf get httpfs.authentication.signature.secret.file
-msx-conf get httpfs.delegation.token.manager.update.interval
-msx-conf get httpfs.hostname
-msx-conf get httpfs.proxyuser.root.groups
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get httpfs.delegation.token.manager.renewal.interval
-msx-conf get httpfs.hadoop.filesystem.cache.purge.timeout
-msx-conf get httpfs.http.port
-msx-conf getRaw httpfs.http.hostname
-msx-conf getClasses httpfs.services
-msx-conf get httpfs.authentication.type
-msx-conf get httpfs.buffer.size
-msx-conf get kerberos.realm
-msx-conf getRaw httpfs.services
-msx-conf getClassByName org.apache.hadoop.lib.service.instrumentation.InstrumentationService
-msx-conf getClassByNameOrNull org.apache.hadoop.lib.service.instrumentation.InstrumentationService
-msx-conf get httpfs.services
-msx-conf getTrimmedStrings httpfs.services
-msx-conf getClassByName org.apache.hadoop.lib.service.scheduler.SchedulerService
-msx-conf getClassByNameOrNull org.apache.hadoop.lib.service.scheduler.SchedulerService
-msx-conf getClassByName org.apache.hadoop.lib.service.security.GroupsService
-msx-conf getClassByNameOrNull org.apache.hadoop.lib.service.security.GroupsService
-msx-conf getClassByName org.apache.hadoop.lib.service.hadoop.FileSystemAccessService
-msx-conf getClassByNameOrNull org.apache.hadoop.lib.service.hadoop.FileSystemAccessService
-msx-conf getClasses httpfs.services.ext
-msx-conf getRaw httpfs.services.ext
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf get hadoop.http.max.threads
-msx-conf get httpfs.delegation.token.manager.max.lifetime
-msx-conf get httpfs.hadoop.authentication.kerberos.keytab
-msx-conf get httpfs.hadoop.filesystem.cache.purge.frequency
-msx-conf get httpfs.http.hostname
-msx-conf get httpfs.proxyuser.root.hosts
-msx-conf get httpfs.services
-msx-conf get hadoop.http.max.response.header.size
-msx-conf get httpfs.authentication.kerberos.principal
-msx-conf get httpfs.hadoop.authentication.kerberos.principal
-msx-conf get httpfs.hadoop.authentication.type
-msx-conf get httpfs.ssl.enabled
-msx-conf getRaw httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf get hadoop.http.temp.dir
-msx-conf get httpfs.authentication.kerberos.keytab
-msx-conf get httpfs.authentication.signature.secret.file
-msx-conf get httpfs.delegation.token.manager.renewal.interval
-msx-conf get httpfs.delegation.token.manager.update.interval
-msx-conf get httpfs.hadoop.filesystem.cache.purge.timeout
-msx-conf get httpfs.hostname
-msx-conf get httpfs.proxyuser.root.groups
-msx-conf getRaw httpfs.http.hostname
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get httpfs.authentication.type
-msx-conf get httpfs.buffer.size
-msx-conf get httpfs.http.port
-msx-conf getInt timers.size
-msx-conf get kerberos.realm
-msx-conf getTrimmed timers.size
-msx-conf get timers.size
-msx-conf get httpfs.services
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf get hadoop.http.max.threads
-msx-conf get httpfs.delegation.token.manager.max.lifetime
-msx-conf get httpfs.hadoop.authentication.kerberos.keytab
-msx-conf get httpfs.hadoop.filesystem.cache.purge.frequency
-msx-conf get httpfs.http.hostname
-msx-conf get httpfs.proxyuser.root.hosts
-msx-conf get httpfs.authentication.kerberos.principal
-msx-conf get httpfs.hadoop.authentication.kerberos.principal
-msx-conf getRaw httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf get hadoop.http.max.response.header.size
-msx-conf get hadoop.http.temp.dir
-msx-conf get httpfs.hadoop.authentication.type
-msx-conf get httpfs.ssl.enabled
-msx-conf getRaw httpfs.http.hostname
-msx-conf get httpfs.authentication.kerberos.keytab
-msx-conf get httpfs.authentication.signature.secret.file
-msx-conf get httpfs.delegation.token.manager.update.interval
-msx-conf get httpfs.hostname
-msx-conf get httpfs.proxyuser.root.groups
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get httpfs.delegation.token.manager.renewal.interval
-msx-conf get httpfs.hadoop.filesystem.cache.purge.timeout
-msx-conf get httpfs.http.port
-msx-conf getRaw httpfs.http.hostname
-msx-conf get httpfs.authentication.type
-msx-conf get httpfs.buffer.size
-msx-conf getInt threads
-msx-conf get kerberos.realm
-msx-conf getTrimmed threads
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf get httpfs.hadoop.filesystem.cache.purge.frequency
-msx-conf get httpfs.services
-msx-conf get threads
-msx-conf get hadoop.http.max.threads
-msx-conf get httpfs.delegation.token.manager.max.lifetime
-msx-conf get httpfs.hadoop.authentication.kerberos.keytab
-msx-conf get httpfs.http.hostname
-msx-conf get httpfs.proxyuser.root.hosts
-msx-conf get httpfs.authentication.kerberos.principal
-msx-conf get httpfs.hadoop.authentication.kerberos.principal
-msx-conf getRaw httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf getRaw httpfs.hostname
-msx-conf get hadoop.http.max.response.header.size
-msx-conf get hadoop.http.temp.dir
-msx-conf get httpfs.hadoop.authentication.type
-msx-conf get httpfs.ssl.enabled
-msx-conf getRaw httpfs.http.hostname
-msx-conf get httpfs.authentication.kerberos.keytab
-msx-conf get httpfs.authentication.signature.secret.file
-msx-conf get httpfs.delegation.token.manager.update.interval
-msx-conf get httpfs.proxyuser.root.groups
-msx-conf get httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get httpfs.authentication.type
-msx-conf get httpfs.delegation.token.manager.renewal.interval
-msx-conf get httpfs.hadoop.filesystem.cache.purge.timeout
-msx-conf get httpfs.http.port
-msx-conf getClass hadoop.security.group.mapping
-msx-conf get httpfs.buffer.size
-msx-conf get kerberos.realm
-msx-conf getTrimmed hadoop.security.group.mapping
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get hadoop.security.group.mapping
-msx-conf getLong hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.cache.secs
-msx-conf getLong hadoop.security.groups.negative-cache.secs
-msx-conf getTrimmed hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.negative-cache.secs
-msx-conf getLong hadoop.security.groups.cache.warn.after.ms
-msx-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
-msx-conf getTrimmed hadoop.security.groups.negative-cache.secs
-msx-conf getBoolean hadoop.security.groups.cache.background.reload
-msx-conf get hadoop.security.groups.cache.background.reload
-msx-conf get hadoop.security.groups.cache.warn.after.ms
-msx-conf getInt hadoop.security.groups.cache.background.reload.threads
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload
-msx-conf get hadoop.security.groups.cache.background.reload.threads
-msx-conf get hadoop.user.group.static.mapping.overrides
-msx-conf get httpfs.services
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf get hadoop.http.max.threads
-msx-conf get httpfs.hadoop.authentication.kerberos.keytab
-msx-conf get httpfs.hadoop.filesystem.cache.purge.frequency
-msx-conf get httpfs.proxyuser.root.hosts
-msx-conf get httpfs.authentication.kerberos.principal
-msx-conf get httpfs.delegation.token.manager.max.lifetime
-msx-conf get httpfs.hadoop.authentication.kerberos.principal
-msx-conf get httpfs.http.hostname
-msx-conf getRaw httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf get hadoop.http.max.response.header.size
-msx-conf get httpfs.hadoop.authentication.type
-msx-conf get httpfs.ssl.enabled
-msx-conf getRaw httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf get hadoop.http.temp.dir
-msx-conf get httpfs.authentication.kerberos.keytab
-msx-conf get httpfs.authentication.signature.secret.file
-msx-conf get httpfs.delegation.token.manager.update.interval
-msx-conf get httpfs.hostname
-msx-conf get httpfs.proxyuser.root.groups
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get httpfs.authentication.type
-msx-conf get httpfs.buffer.size
-msx-conf get httpfs.delegation.token.manager.renewal.interval
-msx-conf get httpfs.hadoop.filesystem.cache.purge.timeout
-msx-conf get httpfs.http.port
-msx-conf get kerberos.realm
-msx-conf getRaw httpfs.http.hostname
-msx-conf get authentication.type
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.auth_to_local
-msx-conf get hadoop.kerberos.min.seconds.before.relogin
-msx-conf get hadoop.security.auth_to_local.mechanism
-msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
-msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
-msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-msx-conf get config.dir
-msx-conf get hadoop.user.group.metrics.percentiles.intervals
-msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-msx-conf get name.node.whitelist
-msx-conf getTrimmedStringCollection name.node.whitelist
-msx-conf getInt filesystem.cache.purge.frequency
-msx-conf get filesystem.cache.purge.frequency
-msx-conf getLong filesystem.cache.purge.timeout
-msx-conf getTrimmed filesystem.cache.purge.frequency
-msx-conf get filesystem.cache.purge.timeout
-msx-conf getTrimmed filesystem.cache.purge.timeout
-msx-conf get httpfs.startup.status
-msx-conf get httpfs.admin.group
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get fs.defaultFS
-msx-conf get httpfs.authentication.kerberos.principal
-msx-conf getRaw httpfs.hostname
-msx-conf getRaw httpfs.http.hostname
-msx-conf get httpfs.authentication.kerberos.keytab
-msx-conf get httpfs.authentication.signature.secret.file
-msx-conf get httpfs.authentication.type
-msx-conf getBoolean httpfs.ssl.enabled
-msx-conf get httpfs.ssl.enabled
-msx-conf getTrimmed httpfs.ssl.enabled
-msx-conf get delegation-token.token-kind
-msx-conf getBoolean zk-dt-secret-manager.enable
-msx-conf getTrimmed zk-dt-secret-manager.enable
-msx-conf getLong delegation-token.update-interval.sec
-msx-conf getTrimmed delegation-token.update-interval.sec
-msx-conf get zk-dt-secret-manager.enable
-msx-conf get delegation-token.update-interval.sec
-msx-conf getLong delegation-token.max-lifetime.sec
-msx-conf getTrimmed delegation-token.max-lifetime.sec
-msx-conf get delegation-token.max-lifetime.sec
-msx-conf get delegation-token.renew-interval.sec
-msx-conf getLong delegation-token.removal-scan-interval.sec
-msx-conf getLong delegation-token.renew-interval.sec
-msx-conf getTrimmed delegation-token.renew-interval.sec
-msx-conf get delegation-token.removal-scan-interval.sec
-msx-conf getTrimmed delegation-token.removal-scan-interval.sec
-msx-conf getClass hadoop.security.impersonation.provider.class
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getClass hadoop.security.impersonation.provider.class
-msx-conf get hadoop.proxyservers
-msx-conf get hadoop.security.impersonation.provider.class
-msx-conf getTrimmed hadoop.security.impersonation.provider.class
-msx-conf getTrimmedStrings hadoop.proxyservers
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf getBoolean fs.webhdfs.impl.disable.cache
-msx-conf getClass fs.webhdfs.impl
-msx-conf get fs.webhdfs.impl.disable.cache
-msx-conf getTrimmed fs.webhdfs.impl.disable.cache
-msx-conf getClassByName org.apache.hadoop.fs.http.client.HttpFSFileSystem
-msx-conf getClassByNameOrNull org.apache.hadoop.fs.http.client.HttpFSFileSystem
-msx-conf get fs.webhdfs.impl
-msx-conf getTrimmed fs.webhdfs.impl
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf getClass httpfs.authenticator.class
-msx-conf get httpfs.authenticator.class
-msx-conf getTrimmed httpfs.authenticator.class
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getBoolean fs.automatic.close
-msx-conf get fs.automatic.close
-msx-conf getTrimmed fs.automatic.close
+msx-conf authentication.type is main-thread used by Other
+msx-conf config.dir is main-thread used by Other
+msx-conf core-default.xml is main-thread used by Other
+msx-conf core-site.xml is main-thread used by Other
+msx-conf delegation-token.max-lifetime.sec is main-thread used by Other
+msx-conf delegation-token.removal-scan-interval.sec is main-thread used by Other
+msx-conf delegation-token.renew-interval.sec is main-thread used by Other
+msx-conf delegation-token.token-kind is main-thread used by Other
+msx-conf delegation-token.update-interval.sec is main-thread used by Other
+msx-conf filesystem.cache.purge.frequency is main-thread used by Other
+msx-conf filesystem.cache.purge.timeout is main-thread used by Other
+msx-conf fs.automatic.close is main-thread used by Other
+msx-conf fs.client.resolve.remote.symlinks is main-thread used by Other
+msx-conf fs.defaultFS is main-thread used by Other
+msx-conf fs.webhdfs.impl.disable.cache is main-thread used by Other
+msx-conf fs.webhdfs.impl is main-thread used by Other
+msx-conf hadoop.http.idle_timeout.ms is main-thread used by Other
+msx-conf hadoop.http.max.request.header.size is main-thread used by Other
+msx-conf hadoop.http.max.response.header.size is main-thread used by Other
+msx-conf hadoop.http.max.threads is main-thread used by Other
+msx-conf hadoop.http.temp.dir is main-thread used by Other
+msx-conf hadoop.kerberos.min.seconds.before.relogin is main-thread used by Other
+msx-conf hadoop.proxyservers is main-thread used by Other
+msx-conf hadoop.security.authentication is main-thread used by Other
+msx-conf hadoop.security.auth_to_local is main-thread used by Other
+msx-conf hadoop.security.auth_to_local.mechanism is main-thread used by Other
+msx-conf hadoop.security.group.mapping is main-thread used by Other
+msx-conf hadoop.security.groups.cache.background.reload is main-thread used by Other
+msx-conf hadoop.security.groups.cache.background.reload.threads is main-thread used by Other
+msx-conf hadoop.security.groups.cache.secs is main-thread used by Other
+msx-conf hadoop.security.groups.cache.warn.after.ms is main-thread used by Other
+msx-conf hadoop.security.groups.negative-cache.secs is main-thread used by Other
+msx-conf hadoop.security.impersonation.provider.class is main-thread used by Other
+msx-conf hadoop.security.sensitive-config-keys is main-thread used by Other
+msx-conf hadoop.user.group.metrics.percentiles.intervals is main-thread used by Other
+msx-conf hadoop.user.group.static.mapping.overrides is main-thread used by Other
+msx-conf hdfs-default.xml is main-thread used by Other
+msx-conf hdfs-site.xml is main-thread used by Other
+msx-conf httpfs.admin.group is main-thread used by Other
+msx-conf httpfs.authentication.kerberos.keytab is main-thread used by Other
+msx-conf httpfs.authentication.kerberos.principal is main-thread used by Other
+msx-conf httpfs.authentication.signature.secret.file is main-thread used by Other
+msx-conf httpfs.authentication.type is main-thread used by Other
+msx-conf httpfs.authenticator.class is main-thread used by Other
+msx-conf httpfs.buffer.size is main-thread used by Other
+msx-conf httpfs.delegation.token.manager.max.lifetime is main-thread used by Other
+msx-conf httpfs.delegation.token.manager.renewal.interval is main-thread used by Other
+msx-conf httpfs.delegation.token.manager.update.interval is main-thread used by Other
+msx-conf httpfs.hadoop.authentication.kerberos.keytab is main-thread used by Other
+msx-conf httpfs.hadoop.authentication.kerberos.principal is main-thread used by Other
+msx-conf httpfs.hadoop.authentication.type is main-thread used by Other
+msx-conf httpfs.hadoop.filesystem.cache.purge.frequency is main-thread used by Other
+msx-conf httpfs.hadoop.filesystem.cache.purge.timeout is main-thread used by Other
+msx-conf httpfs.hostname is main-thread used by Other
+msx-conf httpfs.http.hostname is main-thread used by Other
+msx-conf httpfs.http.port is main-thread used by Other
+msx-conf httpfs.proxyuser.root.groups is main-thread used by Other
+msx-conf httpfs.proxyuser.root.hosts is main-thread used by Other
+msx-conf httpfs.services.ext is main-thread used by Other
+msx-conf httpfs.services is main-thread used by Other
+msx-conf httpfs.ssl.enabled is main-thread used by Other
+msx-conf httpfs.startup.status is main-thread used by Other
+msx-conf kerberos.realm is main-thread used by Other
+msx-conf name.node.whitelist is main-thread used by Other
+msx-conf org.apache.hadoop.fs.http.client.HttpFSFileSystem is main-thread used by Other
+msx-conf org.apache.hadoop.lib.service.hadoop.FileSystemAccessService is main-thread used by Other
+msx-conf org.apache.hadoop.lib.service.instrumentation.InstrumentationService is main-thread used by Other
+msx-conf org.apache.hadoop.lib.service.scheduler.SchedulerService is main-thread used by Other
+msx-conf org.apache.hadoop.lib.service.security.GroupsService is main-thread used by Other
+msx-conf org.apache.hadoop.mapred.JobConf is main-thread used by Other
+msx-conf threads is main-thread used by Other
+msx-conf timers.size is main-thread used by Other
+msx-conf zk-dt-secret-manager.enable is main-thread used by Other

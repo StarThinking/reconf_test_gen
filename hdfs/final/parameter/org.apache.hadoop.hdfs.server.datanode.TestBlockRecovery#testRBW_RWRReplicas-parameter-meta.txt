@@ -1,671 +1,227 @@
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get datanode.htrace.sampler.classes
-msx-conf get hadoop.htrace.sampler.classes
-msx-conf get datanode.htrace.tracer.id
-msx-conf get hadoop.htrace.tracer.id
-msx-conf get datanode.htrace.span.receiver.classes
-msx-conf get hadoop.htrace.span.receiver.classes
-msx-conf getInt dfs.datanode.fileio.profiling.sampling.percentage
-msx-conf get dfs.datanode.fileio.profiling.sampling.percentage
-msx-conf getTrimmed dfs.datanode.fileio.profiling.sampling.percentage
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.ssl.client.conf
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf getResource ssl-client.xml
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf getClass hadoop.ssl.keystores.factory.class
-msx-conf getClass hadoop.ssl.keystores.factory.class
-msx-conf getTrimmed hadoop.ssl.keystores.factory.class
-msx-conf get hadoop.ssl.keystores.factory.class
-msx-conf getClassByName org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-msx-conf getClassByNameOrNull org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get hadoop.ssl.enabled.protocols
-msx-conf getStrings hadoop.ssl.enabled.protocols
-msx-conf getTrimmedStrings ssl.server.exclude.cipher.list
-msx-conf get ssl.server.exclude.cipher.list
-msx-conf getBoolean hadoop.ssl.require.client.cert
-msx-conf getTrimmed hadoop.ssl.require.client.cert
-msx-conf get hadoop.ssl.require.client.cert
-msx-conf get ssl.client.keystore.type
-msx-conf get ssl.client.truststore.location
-msx-conf get ssl.client.truststore.type
-msx-conf get hadoop.ssl.hostname.verifier
-msx-conf getBoolean hadoop.security.token.service.use_ip
-msx-conf get hadoop.security.token.service.use_ip
-msx-conf getTrimmed hadoop.security.token.service.use_ip
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.enabled
-msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf get hadoop.security.authentication
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.auth_to_local
-msx-conf get hadoop.security.auth_to_local.mechanism
-msx-conf get hadoop.kerberos.min.seconds.before.relogin
-msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
-msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-msx-conf getClass hadoop.security.group.mapping
-msx-conf get hadoop.security.group.mapping
-msx-conf getClass hadoop.security.group.mapping
-msx-conf getTrimmed hadoop.security.group.mapping
-msx-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getLong hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.cache.secs
-msx-conf getLong hadoop.security.groups.negative-cache.secs
-msx-conf getTrimmed hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.negative-cache.secs
-msx-conf getLong hadoop.security.groups.cache.warn.after.ms
-msx-conf getTrimmed hadoop.security.groups.negative-cache.secs
-msx-conf get hadoop.security.groups.cache.warn.after.ms
-msx-conf getBoolean hadoop.security.groups.cache.background.reload
-msx-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
-msx-conf get hadoop.security.groups.cache.background.reload
-msx-conf getInt hadoop.security.groups.cache.background.reload.threads
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload
-msx-conf get hadoop.security.groups.cache.background.reload.threads
-msx-conf get hadoop.user.group.static.mapping.overrides
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
-msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
-msx-conf get hadoop.user.group.metrics.percentiles.intervals
-msx-conf getInt io.file.buffer.size
-msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-msx-conf get io.file.buffer.size
-msx-conf getTrimmed io.file.buffer.size
-msx-conf getBoolean dfs.datanode.enable.fileio.fault.injection
-msx-conf get dfs.datanode.enable.fileio.fault.injection
-msx-conf getTrimmed dfs.datanode.enable.fileio.fault.injection
-msx-conf getLong dfs.block.scanner.volume.bytes.per.second
-msx-conf get dfs.block.scanner.volume.bytes.per.second
-msx-conf getLong dfs.datanode.scan.period.hours
-msx-conf getTrimmed dfs.block.scanner.volume.bytes.per.second
-msx-conf get dfs.datanode.scan.period.hours
-msx-conf getTrimmed dfs.datanode.scan.period.hours
-msx-conf getLong dfs.namenode.max-num-blocks-to-log
-msx-conf getTrimmed dfs.namenode.max-num-blocks-to-log
-msx-conf get dfs.block.local-path-access.user
-msx-conf get dfs.datanode.use.datanode.hostname
-msx-conf get dfs.namenode.max-num-blocks-to-log
-msx-conf get dfs.permissions.superusergroup
-msx-conf getBoolean dfs.datanode.use.datanode.hostname
-msx-conf getTrimmed dfs.datanode.use.datanode.hostname
-msx-conf getTrimmedStrings dfs.block.local-path-access.user
-msx-conf get dfs.permissions.enabled
-msx-conf get dfs.pipeline.ecn
-msx-conf get hadoop.common.configuration.version
-msx-conf getBoolean dfs.permissions.enabled
-msx-conf getBoolean dfs.pipeline.ecn
-msx-conf getTrimmed dfs.permissions.enabled
-msx-conf getTrimmed dfs.pipeline.ecn
-msx-conf get hadoop.hdfs.configuration.version
-msx-conf getTimeDuration dfs.datanode.disk.check.timeout
-msx-conf get dfs.datanode.disk.check.timeout
-msx-conf getTimeDuration dfs.datanode.disk.check.timeout
-msx-conf get dfs.datanode.failed.volumes.tolerated
-msx-conf getInt dfs.datanode.failed.volumes.tolerated
-msx-conf getTimeDuration dfs.datanode.disk.check.min.gap
-msx-conf getTimeDuration dfs.datanode.disk.check.min.gap
-msx-conf getTrimmed dfs.datanode.failed.volumes.tolerated
-msx-conf get dfs.datanode.disk.check.min.gap
-msx-conf get dfs.datanode.disk.check.timeout
-msx-conf getTimeDuration dfs.datanode.disk.check.timeout
-msx-conf getTimeDuration dfs.datanode.disk.check.timeout
-msx-conf getBoolean dfs.client.read.shortcircuit
-msx-conf getTrimmed dfs.client.read.shortcircuit
-msx-conf get dfs.client.read.shortcircuit
-msx-conf get hadoop.rpc.socket.factory.class.default
-msx-conf getClassByName org.apache.hadoop.net.StandardSocketFactory
-msx-conf getClassByNameOrNull org.apache.hadoop.net.StandardSocketFactory
-msx-conf get dfs.datanode.hostname
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get dfs.datanode.dns.interface
-msx-conf get hadoop.security.dns.interface
-msx-conf get hadoop.security.dns.nameserver
-msx-conf get dfs.datanode.dns.nameserver
-msx-conf getInt dfs.client.socket-timeout
-msx-conf get dfs.client.socket-timeout
-msx-conf get dfs.datanode.socket.write.timeout
-msx-conf getInt dfs.datanode.socket.write.timeout
-msx-conf getTrimmed dfs.client.socket-timeout
-msx-conf getTrimmed dfs.datanode.socket.write.timeout
-msx-conf get dfs.datanode.socket.reuse.keepalive
-msx-conf getInt dfs.datanode.socket.reuse.keepalive
-msx-conf getInt dfs.datanode.transfer.socket.send.buffer.size
-msx-conf getTrimmed dfs.datanode.socket.reuse.keepalive
-msx-conf getTrimmed dfs.datanode.transfer.socket.send.buffer.size
-msx-conf get dfs.datanode.transfer.socket.recv.buffer.size
-msx-conf get dfs.datanode.transfer.socket.send.buffer.size
-msx-conf getBoolean dfs.data.transfer.server.tcpnodelay
-msx-conf getInt dfs.datanode.transfer.socket.recv.buffer.size
-msx-conf getTrimmed dfs.datanode.transfer.socket.recv.buffer.size
-msx-conf getTrimmed dfs.data.transfer.server.tcpnodelay
-msx-conf get dfs.datanode.transferTo.allowed
-msx-conf get dfs.data.transfer.server.tcpnodelay
-msx-conf getBoolean dfs.datanode.transferTo.allowed
-msx-conf getLong dfs.datanode.readahead.bytes
-msx-conf getTrimmed dfs.datanode.readahead.bytes
-msx-conf getTrimmed dfs.datanode.transferTo.allowed
-msx-conf get dfs.datanode.readahead.bytes
-msx-conf get ipc.maximum.data.length
-msx-conf getBoolean dfs.datanode.drop.cache.behind.writes
-msx-conf getInt ipc.maximum.data.length
-msx-conf getTrimmed dfs.datanode.drop.cache.behind.writes
-msx-conf getTrimmed ipc.maximum.data.length
-msx-conf get dfs.datanode.drop.cache.behind.writes
-msx-conf get dfs.datanode.sync.behind.writes
-msx-conf getBoolean dfs.datanode.sync.behind.writes
-msx-conf getBoolean dfs.datanode.sync.behind.writes.in.background
-msx-conf getTrimmed dfs.datanode.sync.behind.writes
-msx-conf get dfs.datanode.drop.cache.behind.reads
-msx-conf get dfs.datanode.sync.behind.writes.in.background
-msx-conf getBoolean dfs.datanode.drop.cache.behind.reads
-msx-conf getTrimmed dfs.datanode.drop.cache.behind.reads
-msx-conf getTrimmed dfs.datanode.sync.behind.writes.in.background
-msx-conf getBoolean dfs.datanode.use.datanode.hostname
-msx-conf getTrimmed dfs.datanode.use.datanode.hostname
-msx-conf get dfs.datanode.use.datanode.hostname
-msx-conf getLong dfs.blockreport.intervalMsec
-msx-conf getTrimmed dfs.blockreport.intervalMsec
-msx-conf get dfs.blockreport.intervalMsec
-msx-conf get dfs.datanode.peer.stats.enabled
-msx-conf getBoolean dfs.datanode.peer.stats.enabled
-msx-conf getInt dfs.datanode.fileio.profiling.sampling.percentage
-msx-conf getTrimmed dfs.datanode.fileio.profiling.sampling.percentage
-msx-conf getTrimmed dfs.datanode.peer.stats.enabled
-msx-conf get dfs.datanode.fileio.profiling.sampling.percentage
-msx-conf get dfs.datanode.outliers.report.interval
-msx-conf getLong dfs.blockreport.incremental.intervalMsec
-msx-conf getTimeDuration dfs.datanode.outliers.report.interval
-msx-conf getTimeDuration dfs.datanode.outliers.report.interval
-msx-conf getTrimmed dfs.blockreport.incremental.intervalMsec
-msx-conf get dfs.blockreport.incremental.intervalMsec
-msx-conf get dfs.blockreport.split.threshold
-msx-conf getLong dfs.blockreport.split.threshold
-msx-conf getLong dfs.cachereport.intervalMsec
-msx-conf getTrimmed dfs.blockreport.split.threshold
-msx-conf getTrimmed dfs.cachereport.intervalMsec
-msx-conf get dfs.blockreport.initialDelay
-msx-conf get dfs.cachereport.intervalMsec
-msx-conf get dfs.datanode.slow.io.warning.threshold.ms
-msx-conf getLong dfs.datanode.slow.io.warning.threshold.ms
-msx-conf getTimeDuration dfs.blockreport.initialDelay
-msx-conf getTrimmed dfs.datanode.slow.io.warning.threshold.ms
-msx-conf get dfs.heartbeat.interval
-msx-conf getLong dfs.datanode.lifeline.interval.seconds
-msx-conf getTimeDuration dfs.heartbeat.interval
-msx-conf getTrimmed dfs.datanode.lifeline.interval.seconds
-msx-conf get dfs.datanode.lifeline.interval.seconds
-msx-conf get dfs.datanode.synconclose
-msx-conf get dfs.datanode.min.supported.namenode.version
-msx-conf getBoolean dfs.datanode.synconclose
-msx-conf getBoolean dfs.encrypt.data.transfer
-msx-conf getTrimmed dfs.datanode.synconclose
-msx-conf get dfs.encrypt.data.overwrite.downstream.derived.qop
-msx-conf get dfs.encrypt.data.transfer
-msx-conf get dfs.encrypt.data.transfer.algorithm
-msx-conf getBoolean dfs.encrypt.data.overwrite.downstream.derived.qop
-msx-conf getTrimmed dfs.encrypt.data.overwrite.downstream.derived.qop
-msx-conf getTrimmed dfs.encrypt.data.transfer
-msx-conf getClass dfs.trustedchannel.resolver.class
-msx-conf getClass dfs.trustedchannel.resolver.class
-msx-conf get dfs.trustedchannel.resolver.class
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getTrimmed dfs.trustedchannel.resolver.class
-msx-conf get dfs.data.transfer.protection
-msx-conf get ignore.secure.ports.for.testing
-msx-conf getBoolean ignore.secure.ports.for.testing
-msx-conf getTrimmed ignore.secure.ports.for.testing
-msx-conf get dfs.datanode.xceiver.stop.timeout.millis
-msx-conf getLong dfs.datanode.max.locked.memory
-msx-conf getLong dfs.datanode.xceiver.stop.timeout.millis
-msx-conf getTrimmed dfs.datanode.max.locked.memory
-msx-conf getTrimmed dfs.datanode.xceiver.stop.timeout.millis
-msx-conf get dfs.datanode.max.locked.memory
-msx-conf get dfs.datanode.restart.replica.expiration
-msx-conf getBoolean dfs.datanode.non.local.lazy.persist
-msx-conf getLong dfs.datanode.restart.replica.expiration
-msx-conf getTrimmed dfs.datanode.restart.replica.expiration
-msx-conf get dfs.datanode.bp-ready.timeout
-msx-conf get dfs.datanode.non.local.lazy.persist
-msx-conf getTimeDuration dfs.datanode.bp-ready.timeout
-msx-conf getTimeDuration dfs.datanode.bp-ready.timeout
-msx-conf getTrimmed dfs.datanode.non.local.lazy.persist
-msx-conf get dfs.datanode.data.dir
-msx-conf get dfs.datanode.failed.volumes.tolerated
-msx-conf getInt dfs.datanode.failed.volumes.tolerated
-msx-conf getTrimmed dfs.datanode.failed.volumes.tolerated
-msx-conf getTrimmedStrings dfs.datanode.data.dir
-msx-conf getInt ipc.server.listen.queue.size
-msx-conf get ipc.server.listen.queue.size
-msx-conf getTrimmed ipc.server.listen.queue.size
-msx-conf get dfs.datanode.address
-msx-conf getTrimmed dfs.datanode.address
-msx-conf getTrimmed dfs.datanode.address
-msx-conf getInt dfs.datanode.max.transfer.threads
-msx-conf get dfs.datanode.max.transfer.threads
-msx-conf getLongBytes dfs.blocksize
-msx-conf getTrimmed dfs.blocksize
-msx-conf getTrimmed dfs.datanode.max.transfer.threads
-msx-conf get dfs.blocksize
-msx-conf get dfs.datanode.balance.bandwidthPerSec
-msx-conf getInt dfs.datanode.balance.max.concurrent.moves
-msx-conf getLongBytes dfs.datanode.balance.bandwidthPerSec
-msx-conf getTrimmed dfs.datanode.balance.bandwidthPerSec
-msx-conf get dfs.datanode.balance.max.concurrent.moves
-msx-conf getTrimmed dfs.datanode.balance.max.concurrent.moves
-msx-conf getBoolean dfs.client.read.shortcircuit
-msx-conf getTrimmed dfs.client.read.shortcircuit
-msx-conf get dfs.client.domain.socket.data.traffic
-msx-conf get dfs.client.read.shortcircuit
-msx-conf getBoolean dfs.client.domain.socket.data.traffic
-msx-conf getTrimmed dfs.client.domain.socket.data.traffic
-msx-conf get dfs.short.circuit.shared.memory.watcher.interrupt.check.ms
-msx-conf getInt dfs.short.circuit.shared.memory.watcher.interrupt.check.ms
-msx-conf getTrimmed dfs.short.circuit.shared.memory.watcher.interrupt.check.ms
-msx-conf get dfs.datanode.shared.file.descriptor.paths
-msx-conf getTrimmedStrings dfs.datanode.shared.file.descriptor.paths
-msx-conf get hadoop.workaround.non.threadsafe.getpwuid
-msx-conf getBoolean hadoop.workaround.non.threadsafe.getpwuid
-msx-conf getResource core-default.xml
-msx-conf getTrimmed hadoop.workaround.non.threadsafe.getpwuid
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf getLong hadoop.security.uid.cache.secs
-msx-conf get hadoop.security.uid.cache.secs
-msx-conf getTrimmed hadoop.security.uid.cache.secs
-msx-conf getBoolean dfs.webhdfs.rest-csrf.enabled
-msx-conf getTrimmed dfs.webhdfs.rest-csrf.enabled
-msx-conf get dfs.webhdfs.rest-csrf.enabled
-msx-conf getInt dfs.datanode.http.internal-proxy.port
-msx-conf getTrimmed dfs.datanode.http.internal-proxy.port
-msx-conf get dfs.datanode.http.internal-proxy.port
-msx-conf get dfs.cluster.administrators
-msx-conf getTrimmed dfs.datanode.http.address
-msx-conf get dfs.datanode.http.address
-msx-conf getBoolean dfs.xframe.enabled
-msx-conf getTrimmed dfs.datanode.http.address
-msx-conf get dfs.xframe.enabled
-msx-conf get dfs.xframe.value
-msx-conf getTrimmed dfs.xframe.enabled
-msx-conf getTrimmed dfs.xframe.value
-msx-conf getTrimmed dfs.xframe.value
-msx-conf get hadoop.http.temp.dir
-msx-conf get hadoop.http.authentication.type
-msx-conf get hadoop.http.authentication.kerberos.principal
-msx-conf get hadoop.http.authentication.kerberos.keytab
-msx-conf get hadoop.http.authentication.signature.secret.file
-msx-conf get hadoop.http.authentication.simple.anonymous.allowed
-msx-conf get hadoop.http.authentication.token.validity
-msx-conf get bind.address
-msx-conf getInt hadoop.http.max.threads
-msx-conf getTrimmed hadoop.http.max.threads
-msx-conf get hadoop.http.max.threads
-msx-conf get hadoop.http.logs.enabled
-msx-conf getBoolean hadoop.http.logs.enabled
-msx-conf getTrimmed hadoop.http.logs.enabled
-msx-conf get hadoop.jetty.logs.serve.aliases
-msx-conf getBoolean hadoop.jetty.logs.serve.aliases
-msx-conf getTrimmed hadoop.jetty.logs.serve.aliases
-msx-conf getClasses hadoop.http.filter.initializers
-msx-conf getRaw hadoop.http.filter.initializers
-msx-conf getTrimmedStrings hadoop.http.filter.initializers
-msx-conf get hadoop.http.filter.initializers
-msx-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get dfs.web.ugi
-msx-conf get hadoop.http.staticuser.user
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get hadoop.http.max.response.header.size
-msx-conf getInt hadoop.http.idle_timeout.ms
-msx-conf getInt hadoop.http.max.request.header.size
-msx-conf getInt hadoop.http.max.response.header.size
-msx-conf getTrimmed hadoop.http.max.request.header.size
-msx-conf getTrimmed hadoop.http.max.response.header.size
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf getTrimmed hadoop.http.idle_timeout.ms
-msx-conf getInt hadoop.http.socket.backlog.size
-msx-conf getTrimmed hadoop.http.socket.backlog.size
-msx-conf get hadoop.http.socket.backlog.size
-msx-conf get hadoop.http.acceptor.count
-msx-conf getInt hadoop.http.acceptor.count
-msx-conf getTrimmed hadoop.http.acceptor.count
-msx-conf get hadoop.http.selector.count
-msx-conf getInt hadoop.http.selector.count
-msx-conf getTrimmed hadoop.http.selector.count
-msx-conf get dfs.webhdfs.ugi.expire.after.access
-msx-conf getInt dfs.webhdfs.ugi.expire.after.access
-msx-conf getTrimmed dfs.webhdfs.ugi.expire.after.access
-msx-conf get dfs.http.policy
-msx-conf get dfs.webhdfs.netty.high.watermark
-msx-conf getInt dfs.webhdfs.netty.high.watermark
-msx-conf getInt dfs.webhdfs.netty.low.watermark
-msx-conf getTrimmed dfs.webhdfs.netty.high.watermark
-msx-conf getTrimmed dfs.webhdfs.netty.low.watermark
-msx-conf get dfs.webhdfs.netty.low.watermark
-msx-conf get dfs.datanode.http.address
-msx-conf getTrimmed dfs.datanode.http.address
-msx-conf getTrimmed dfs.datanode.http.address
-msx-conf getLong jvm.pause.warn-threshold.ms
-msx-conf get jvm.pause.warn-threshold.ms
-msx-conf getLong jvm.pause.info-threshold.ms
-msx-conf getTrimmed jvm.pause.info-threshold.ms
-msx-conf getTrimmed jvm.pause.warn-threshold.ms
-msx-conf get jvm.pause.info-threshold.ms
-msx-conf get hadoop.token.files
-msx-conf get dfs.datanode.ipc.address
-msx-conf getTrimmed dfs.datanode.ipc.address
-msx-conf getInt dfs.datanode.handler.count
-msx-conf get dfs.datanode.handler.count
-msx-conf getTrimmed dfs.datanode.handler.count
-msx-conf get rpc.engine.org.apache.hadoop.hdfs.protocolPB.ClientDatanodeProtocolPB
-msx-conf getClass rpc.engine.org.apache.hadoop.hdfs.protocolPB.ClientDatanodeProtocolPB
-msx-conf getTrimmed rpc.engine.org.apache.hadoop.hdfs.protocolPB.ClientDatanodeProtocolPB
-msx-conf getClassByName org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getClassByNameOrNull org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getInt ipc.maximum.data.length
-msx-conf getTrimmed ipc.maximum.data.length
-msx-conf get ipc.maximum.data.length
-msx-conf get ipc.server.handler.queue.size
-msx-conf get ipc.server.max.response.size
-msx-conf getInt ipc.server.handler.queue.size
-msx-conf getInt ipc.server.max.response.size
-msx-conf getInt ipc.server.read.threadpool.size
-msx-conf getTrimmed ipc.server.handler.queue.size
-msx-conf getTrimmed ipc.server.max.response.size
-msx-conf get ipc.server.read.connection-queue.size
-msx-conf get ipc.server.read.threadpool.size
-msx-conf getInt ipc.server.read.connection-queue.size
-msx-conf getTrimmed ipc.server.read.connection-queue.size
-msx-conf getTrimmed ipc.server.read.threadpool.size
-msx-conf getClass ipc.0.callqueue.impl
-msx-conf getTrimmed ipc.0.callqueue.impl
-msx-conf get ipc.0.callqueue.impl
-msx-conf get ipc.0.callqueue.impl
-msx-conf get ipc.0.scheduler.impl
-msx-conf getClass ipc.0.callqueue.impl
-msx-conf getClass ipc.0.scheduler.impl
-msx-conf getTrimmed ipc.0.callqueue.impl
-msx-conf getTrimmed ipc.0.scheduler.impl
-msx-conf get ipc.0.scheduler.impl
-msx-conf getClass ipc.0.scheduler.impl
-msx-conf getTrimmed ipc.0.scheduler.impl
-msx-conf get ipc.0.backoff.enable
-msx-conf get ipc.0.faircallqueue.priority-levels
-msx-conf getBoolean ipc.0.backoff.enable
-msx-conf getInt ipc.0.faircallqueue.priority-levels
-msx-conf getInt ipc.0.scheduler.priority.levels
-msx-conf getTrimmed ipc.0.backoff.enable
-msx-conf getTrimmed ipc.0.faircallqueue.priority-levels
-msx-conf getTrimmed ipc.0.scheduler.priority.levels
-msx-conf get hadoop.security.authorization
-msx-conf get ipc.0.scheduler.priority.levels
-msx-conf getBoolean hadoop.security.authorization
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get hadoop.security.authentication
-msx-conf get ipc.server.listen.queue.size
-msx-conf getInt ipc.server.listen.queue.size
-msx-conf getTrimmed ipc.server.listen.queue.size
-msx-conf getInt ipc.client.idlethreshold
-msx-conf get ipc.client.connection.idle-scan-interval.ms
-msx-conf get ipc.client.idlethreshold
-msx-conf getInt ipc.client.connection.idle-scan-interval.ms
-msx-conf getInt ipc.client.connection.maxidletime
-msx-conf getTrimmed ipc.client.connection.idle-scan-interval.ms
-msx-conf getTrimmed ipc.client.idlethreshold
-msx-conf get ipc.client.connection.maxidletime
-msx-conf get ipc.client.kill.max
-msx-conf get ipc.server.max.connections
-msx-conf getInt ipc.client.kill.max
-msx-conf getInt ipc.server.max.connections
-msx-conf getTrimmed ipc.client.connection.maxidletime
-msx-conf getTrimmed ipc.client.kill.max
-msx-conf getTrimmed ipc.server.max.connections
-msx-conf get rpc.metrics.percentiles.intervals
-msx-conf getInts rpc.metrics.percentiles.intervals
-msx-conf getTrimmedStrings rpc.metrics.percentiles.intervals
-msx-conf getBoolean ipc.server.tcpnodelay
-msx-conf getTrimmed ipc.server.tcpnodelay
-msx-conf get ipc.server.log.slow.rpc
-msx-conf get ipc.server.tcpnodelay
-msx-conf getBoolean ipc.server.log.slow.rpc
-msx-conf getTrimmed ipc.server.log.slow.rpc
-msx-conf getClass hadoop.security.saslproperties.resolver.class
-msx-conf get hadoop.security.saslproperties.resolver.class
-msx-conf getClass hadoop.security.saslproperties.resolver.class
-msx-conf getTrimmed hadoop.security.saslproperties.resolver.class
-msx-conf get hadoop.rpc.protection
-msx-conf getTrimmedStrings hadoop.rpc.protection
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getBoolean hadoop.security.authorization
-msx-conf get hadoop.security.authorization
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get dfs.metrics.session-id
-msx-conf get dfs.metrics.percentiles.intervals
-msx-conf getInts dfs.metrics.percentiles.intervals
-msx-conf getTrimmedStrings dfs.metrics.percentiles.intervals
-msx-conf getFloat dfs.datanode.ec.reconstruction.xmits.weight
-msx-conf getTrimmed dfs.datanode.ec.reconstruction.xmits.weight
-msx-conf get dfs.datanode.ec.reconstruction.xmits.weight
-msx-conf get dfs.datanode.ec.reconstruction.threads
-msx-conf getInt dfs.datanode.ec.reconstruction.threads
-msx-conf getTrimmed dfs.datanode.ec.reconstruction.threads
-msx-conf get dfs.nameservices
-msx-conf get fs.defaultFS
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.internal.nameservices
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.internal.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.ha.namenodes
-msx-conf get dfs.namenode.rpc-address
-msx-conf get dfs.namenode.servicerpc-address
-msx-conf getTrimmedStringCollection dfs.ha.namenodes
-msx-conf get dfs.ha.namenodes
-msx-conf get dfs.internal.nameservices
-msx-conf get dfs.nameservices
-msx-conf getTrimmedStringCollection dfs.ha.namenodes
-msx-conf getTrimmedStringCollection dfs.internal.nameservices
-msx-conf getTrimmedStringCollection dfs.nameservices
-msx-conf get dfs.namenode.lifeline.rpc-address
-msx-conf get dfs.datanode.metrics.logger.period.seconds
-msx-conf getInt dfs.datanode.metrics.logger.period.seconds
-msx-conf getTrimmed dfs.datanode.metrics.logger.period.seconds
-msx-conf get dfs.datanode.fsdataset.factory
-msx-conf getClass dfs.datanode.fsdataset.factory
-msx-conf getClass dfs.datanode.fsdataset.factory
-msx-conf getTrimmed dfs.datanode.fsdataset.factory
-msx-conf getInt dfs.datanode.network.counts.cache.max.size
-msx-conf getTrimmed dfs.datanode.network.counts.cache.max.size
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get dfs.datanode.network.counts.cache.max.size
-msx-conf get dfs.datanode.oob.timeout-ms
-msx-conf get dfs.datanode.startup
-msx-conf get dfs.datanode.parallel.volumes.load.threads.num
-msx-conf getInt dfs.datanode.parallel.volumes.load.threads.num
-msx-conf getTrimmed dfs.datanode.parallel.volumes.load.threads.num
-msx-conf get fs.defaultFS
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get fs.file.impl.disable.cache
-msx-conf getBoolean fs.file.impl.disable.cache
-msx-conf getTrimmed fs.file.impl.disable.cache
-msx-conf get fs.client.htrace.sampler.classes
-msx-conf get fs.client.htrace.span.receiver.classes
-msx-conf get fs.client.htrace.tracer.id
-msx-conf get hadoop.htrace.sampler.classes
-msx-conf get hadoop.htrace.span.receiver.classes
-msx-conf get hadoop.htrace.tracer.id
-msx-conf getClass fs.file.impl
-msx-conf getTrimmed fs.file.impl
-msx-conf get file.bytes-per-checksum
-msx-conf get fs.file.impl
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getInt file.bytes-per-checksum
-msx-conf getTrimmed file.bytes-per-checksum
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get hadoop.service.shutdown.timeout
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf get fs.automatic.close
-msx-conf getBoolean fs.automatic.close
-msx-conf getResource hdfs-site.xml
-msx-conf getTrimmed fs.automatic.close
-msx-conf get dfs.datanode.data.dir.perm
-msx-conf get io.file.buffer.size
-msx-conf getInt io.file.buffer.size
-msx-conf getTrimmed io.file.buffer.size
-msx-conf get dfs.lock.suppress.warning.interval
-msx-conf getTimeDuration dfs.lock.suppress.warning.interval
-msx-conf getTimeDuration dfs.lock.suppress.warning.interval
-msx-conf getTrimmedStringCollection dfs.datanode.data.dir
-msx-conf get dfs.datanode.data.dir
-msx-conf get dfs.datanode.ram.disk.replica.tracker
-msx-conf getClass dfs.datanode.ram.disk.replica.tracker
-msx-conf getClass dfs.datanode.ram.disk.replica.tracker
-msx-conf getTrimmed dfs.datanode.ram.disk.replica.tracker
-msx-conf getClass dfs.datanode.fsdataset.volume.choosing.policy
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get dfs.datanode.fsdataset.volume.choosing.policy
-msx-conf getClass dfs.datanode.fsdataset.volume.choosing.policy
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getTrimmed dfs.datanode.fsdataset.volume.choosing.policy
-msx-conf getLong fs.df.interval
-msx-conf getTrimmed fs.df.interval
-msx-conf get fs.df.interval
-msx-conf getClass dfs.datanode.du.reserved.calculator
-msx-conf getClass dfs.datanode.du.reserved.calculator
-msx-conf getTrimmed dfs.datanode.du.reserved.calculator
-msx-conf get dfs.datanode.du.reserved
-msx-conf get dfs.datanode.du.reserved.calculator
-msx-conf getClassByName org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.ReservedSpaceCalculator$ReservedSpaceCalculatorAbsolute
-msx-conf getClassByNameOrNull org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.ReservedSpaceCalculator$ReservedSpaceCalculatorAbsolute
-msx-conf getLong dfs.datanode.du.reserved
-msx-conf getTrimmed dfs.datanode.du.reserved
-msx-conf get dfs.datanode.du.reserved.disk
-msx-conf get dfs.datanode.fsdatasetcache.max.threads.per.volume
-msx-conf getInt dfs.datanode.fsdatasetcache.max.threads.per.volume
-msx-conf getLong dfs.datanode.du.reserved.disk
-msx-conf getTrimmed dfs.datanode.du.reserved.disk
-msx-conf getTrimmed dfs.datanode.fsdatasetcache.max.threads.per.volume
-msx-conf get dfs.metrics.percentiles.intervals
-msx-conf getInts dfs.metrics.percentiles.intervals
-msx-conf getTrimmedStrings dfs.metrics.percentiles.intervals
-msx-conf getLong dfs.datanode.cache.revocation.timeout.ms
-msx-conf getTrimmed dfs.datanode.cache.revocation.timeout.ms
-msx-conf get dfs.datanode.cache.revocation.polling.ms
-msx-conf get dfs.datanode.cache.revocation.timeout.ms
-msx-conf getLong dfs.datanode.cache.revocation.polling.ms
-msx-conf getTrimmed dfs.datanode.cache.revocation.polling.ms
-msx-conf get fs.defaultFS
-msx-conf get dfs.datanode.block-pinning.enabled
-msx-conf get fs.file.impl.disable.cache
-msx-conf getBoolean dfs.datanode.block-pinning.enabled
-msx-conf getBoolean fs.file.impl.disable.cache
-msx-conf getTrimmed dfs.datanode.block-pinning.enabled
-msx-conf getTrimmed fs.file.impl.disable.cache
-msx-conf get ipc.maximum.data.length
-msx-conf getInt ipc.maximum.data.length
-msx-conf getTrimmed ipc.maximum.data.length
-msx-conf get dfs.datanode.cached-dfsused.check.interval.ms
-msx-conf get dfs.datanode.duplicate.replica.deletion
-msx-conf get io.file.buffer.size
-msx-conf getBoolean dfs.datanode.duplicate.replica.deletion
-msx-conf getInt io.file.buffer.size
-msx-conf getInt ipc.maximum.data.length
-msx-conf getLong dfs.datanode.cached-dfsused.check.interval.ms
-msx-conf getTrimmed dfs.datanode.cached-dfsused.check.interval.ms
-msx-conf getTrimmed dfs.datanode.duplicate.replica.deletion
-msx-conf getTrimmed io.file.buffer.size
-msx-conf getTrimmed ipc.maximum.data.length
-msx-conf get ipc.maximum.data.length
-msx-conf get fs.getspaceused.classname
-msx-conf getClass fs.getspaceused.classname
-msx-conf getClass fs.getspaceused.classname
-msx-conf getLong fs.du.interval
-msx-conf getTrimmed fs.du.interval
-msx-conf getTrimmed fs.getspaceused.classname
-msx-conf get fs.du.interval
-msx-conf get fs.getspaceused.jitterMillis
-msx-conf getLong fs.getspaceused.jitterMillis
-msx-conf getTrimmed fs.getspaceused.jitterMillis
-msx-conf get dfs.datanode.volumes.replica-add.threadpool.size
-msx-conf getInt dfs.datanode.volumes.replica-add.threadpool.size
-msx-conf getTrimmed dfs.datanode.volumes.replica-add.threadpool.size
-msx-conf get hadoop.service.shutdown.timeout
-msx-conf getResource core-default.xml
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
-msx-conf get dfs.datanode.directoryscan.interval
-msx-conf getTimeDuration dfs.datanode.directoryscan.interval
-msx-conf getTimeDuration dfs.datanode.directoryscan.interval
-msx-conf get dfs.datanode.directoryscan.interval
-msx-conf get dfs.datanode.directoryscan.throttle.limit.ms.per.sec
-msx-conf getInt dfs.datanode.directoryscan.throttle.limit.ms.per.sec
-msx-conf getTimeDuration dfs.datanode.directoryscan.interval
-msx-conf getTimeDuration dfs.datanode.directoryscan.interval
-msx-conf getTrimmed dfs.datanode.directoryscan.throttle.limit.ms.per.sec
-msx-conf get dfs.datanode.directoryscan.threads
-msx-conf getInt dfs.datanode.directoryscan.threads
-msx-conf getTrimmed dfs.datanode.directoryscan.threads
-msx-conf getLong dfs.disk.balancer.max.disk.throughputInMBperSec
-msx-conf get dfs.disk.balancer.block.tolerance.percent
-msx-conf get dfs.disk.balancer.max.disk.errors
-msx-conf get dfs.disk.balancer.max.disk.throughputInMBperSec
-msx-conf getLong dfs.disk.balancer.block.tolerance.percent
-msx-conf getLong dfs.disk.balancer.max.disk.errors
-msx-conf getTrimmed dfs.disk.balancer.block.tolerance.percent
-msx-conf getTrimmed dfs.disk.balancer.max.disk.errors
-msx-conf getTrimmed dfs.disk.balancer.max.disk.throughputInMBperSec
-msx-conf get dfs.disk.balancer.enabled
-msx-conf get dfs.disk.balancer.max.disk.throughputInMBperSec
-msx-conf get dfs.disk.balancer.plan.valid.interval
-msx-conf getBoolean dfs.disk.balancer.enabled
-msx-conf getInt dfs.disk.balancer.max.disk.throughputInMBperSec
-msx-conf getTimeDuration dfs.disk.balancer.plan.valid.interval
-msx-conf getTimeDuration dfs.disk.balancer.plan.valid.interval
-msx-conf getTrimmed dfs.disk.balancer.enabled
-msx-conf getTrimmed dfs.disk.balancer.max.disk.throughputInMBperSec
-msx-conf get 
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf get hadoop.service.shutdown.timeout
-msx-conf getResource core-default.xml
-msx-conf getTimeDuration hadoop.service.shutdown.timeout
-msx-conf getResource core-site.xml
-msx-conf getResource hdfs-default.xml
-msx-conf getResource hdfs-site.xml
+msx-conf bind.address is main-thread used by DataNode
+msx-conf core-default.xml is main-thread used by DataNode
+msx-conf core-default.xml is main-thread used by Other
+msx-conf core-site.xml is main-thread used by DataNode
+msx-conf core-site.xml is main-thread used by Other
+msx-conf datanode.htrace.sampler.classes is main-thread used by DataNode
+msx-conf datanode.htrace.span.receiver.classes is main-thread used by DataNode
+msx-conf datanode.htrace.tracer.id is main-thread used by DataNode
+msx-conf dfs.block.local-path-access.user is main-thread used by DataNode
+msx-conf dfs.blockreport.incremental.intervalMsec is main-thread used by DataNode
+msx-conf dfs.blockreport.initialDelay is main-thread used by DataNode
+msx-conf dfs.blockreport.intervalMsec is main-thread used by DataNode
+msx-conf dfs.blockreport.split.threshold is main-thread used by DataNode
+msx-conf dfs.block.scanner.volume.bytes.per.second is main-thread used by DataNode
+msx-conf dfs.blocksize is main-thread used by DataNode
+msx-conf dfs.cachereport.intervalMsec is main-thread used by DataNode
+msx-conf dfs.client.domain.socket.data.traffic is main-thread used by DataNode
+msx-conf dfs.client.read.shortcircuit is main-thread used by DataNode
+msx-conf dfs.client.socket-timeout is main-thread used by DataNode
+msx-conf dfs.cluster.administrators is main-thread used by DataNode
+msx-conf dfs.datanode.address is main-thread used by DataNode
+msx-conf dfs.datanode.balance.bandwidthPerSec is main-thread used by DataNode
+msx-conf dfs.datanode.balance.max.concurrent.moves is main-thread used by DataNode
+msx-conf dfs.datanode.block-pinning.enabled is main-thread used by DataNode
+msx-conf dfs.datanode.bp-ready.timeout is main-thread used by DataNode
+msx-conf dfs.datanode.cached-dfsused.check.interval.ms is main-thread used by DataNode
+msx-conf dfs.datanode.cache.revocation.polling.ms is main-thread used by DataNode
+msx-conf dfs.datanode.cache.revocation.timeout.ms is main-thread used by DataNode
+msx-conf dfs.datanode.data.dir is main-thread used by DataNode
+msx-conf dfs.datanode.data.dir.perm is main-thread used by DataNode
+msx-conf dfs.datanode.directoryscan.interval is main-thread used by DataNode
+msx-conf dfs.datanode.directoryscan.threads is main-thread used by DataNode
+msx-conf dfs.datanode.directoryscan.throttle.limit.ms.per.sec is main-thread used by DataNode
+msx-conf dfs.datanode.disk.check.min.gap is main-thread used by DataNode
+msx-conf dfs.datanode.disk.check.timeout is main-thread used by DataNode
+msx-conf dfs.datanode.dns.interface is main-thread used by DataNode
+msx-conf dfs.datanode.dns.nameserver is main-thread used by DataNode
+msx-conf dfs.datanode.drop.cache.behind.reads is main-thread used by DataNode
+msx-conf dfs.datanode.drop.cache.behind.writes is main-thread used by DataNode
+msx-conf dfs.datanode.duplicate.replica.deletion is main-thread used by DataNode
+msx-conf dfs.datanode.du.reserved.calculator is main-thread used by DataNode
+msx-conf dfs.datanode.du.reserved.disk is main-thread used by DataNode
+msx-conf dfs.datanode.du.reserved is main-thread used by DataNode
+msx-conf dfs.datanode.ec.reconstruction.threads is main-thread used by DataNode
+msx-conf dfs.datanode.ec.reconstruction.xmits.weight is main-thread used by DataNode
+msx-conf dfs.datanode.enable.fileio.fault.injection is main-thread used by DataNode
+msx-conf dfs.datanode.failed.volumes.tolerated is main-thread used by DataNode
+msx-conf dfs.datanode.fileio.profiling.sampling.percentage is main-thread used by DataNode
+msx-conf dfs.datanode.fsdatasetcache.max.threads.per.volume is main-thread used by DataNode
+msx-conf dfs.datanode.fsdataset.factory is main-thread used by DataNode
+msx-conf dfs.datanode.fsdataset.volume.choosing.policy is main-thread used by DataNode
+msx-conf dfs.datanode.handler.count is main-thread used by DataNode
+msx-conf dfs.datanode.hostname is main-thread used by DataNode
+msx-conf dfs.datanode.http.address is main-thread used by DataNode
+msx-conf dfs.datanode.http.internal-proxy.port is main-thread used by DataNode
+msx-conf dfs.datanode.ipc.address is main-thread used by DataNode
+msx-conf dfs.datanode.lifeline.interval.seconds is main-thread used by DataNode
+msx-conf dfs.datanode.max.locked.memory is main-thread used by DataNode
+msx-conf dfs.datanode.max.transfer.threads is main-thread used by DataNode
+msx-conf dfs.datanode.metrics.logger.period.seconds is main-thread used by DataNode
+msx-conf dfs.datanode.min.supported.namenode.version is main-thread used by DataNode
+msx-conf dfs.datanode.network.counts.cache.max.size is main-thread used by DataNode
+msx-conf dfs.datanode.non.local.lazy.persist is main-thread used by DataNode
+msx-conf dfs.datanode.oob.timeout-ms is main-thread used by DataNode
+msx-conf dfs.datanode.outliers.report.interval is main-thread used by DataNode
+msx-conf dfs.datanode.parallel.volumes.load.threads.num is main-thread used by DataNode
+msx-conf dfs.datanode.peer.stats.enabled is main-thread used by DataNode
+msx-conf dfs.datanode.ram.disk.replica.tracker is main-thread used by DataNode
+msx-conf dfs.datanode.readahead.bytes is main-thread used by DataNode
+msx-conf dfs.datanode.restart.replica.expiration is main-thread used by DataNode
+msx-conf dfs.datanode.scan.period.hours is main-thread used by DataNode
+msx-conf dfs.datanode.shared.file.descriptor.paths is main-thread used by DataNode
+msx-conf dfs.datanode.slow.io.warning.threshold.ms is main-thread used by DataNode
+msx-conf dfs.datanode.socket.reuse.keepalive is main-thread used by DataNode
+msx-conf dfs.datanode.socket.write.timeout is main-thread used by DataNode
+msx-conf dfs.datanode.startup is main-thread used by DataNode
+msx-conf dfs.datanode.sync.behind.writes.in.background is main-thread used by DataNode
+msx-conf dfs.datanode.sync.behind.writes is main-thread used by DataNode
+msx-conf dfs.datanode.synconclose is main-thread used by DataNode
+msx-conf dfs.datanode.transfer.socket.recv.buffer.size is main-thread used by DataNode
+msx-conf dfs.datanode.transfer.socket.send.buffer.size is main-thread used by DataNode
+msx-conf dfs.datanode.transferTo.allowed is main-thread used by DataNode
+msx-conf dfs.datanode.use.datanode.hostname is main-thread used by DataNode
+msx-conf dfs.datanode.volumes.replica-add.threadpool.size is main-thread used by DataNode
+msx-conf dfs.datanode.xceiver.stop.timeout.millis is main-thread used by DataNode
+msx-conf dfs.data.transfer.protection is main-thread used by DataNode
+msx-conf dfs.data.transfer.server.tcpnodelay is main-thread used by DataNode
+msx-conf dfs.disk.balancer.block.tolerance.percent is main-thread used by DataNode
+msx-conf dfs.disk.balancer.enabled is main-thread used by DataNode
+msx-conf dfs.disk.balancer.max.disk.errors is main-thread used by DataNode
+msx-conf dfs.disk.balancer.max.disk.throughputInMBperSec is main-thread used by DataNode
+msx-conf dfs.disk.balancer.plan.valid.interval is main-thread used by DataNode
+msx-conf dfs.encrypt.data.overwrite.downstream.derived.qop is main-thread used by DataNode
+msx-conf dfs.encrypt.data.transfer.algorithm is main-thread used by DataNode
+msx-conf dfs.encrypt.data.transfer is main-thread used by DataNode
+msx-conf dfs.ha.namenodes is main-thread used by DataNode
+msx-conf dfs.heartbeat.interval is main-thread used by DataNode
+msx-conf dfs.http.policy is main-thread used by DataNode
+msx-conf dfs.internal.nameservices is main-thread used by DataNode
+msx-conf dfs.lock.suppress.warning.interval is main-thread used by DataNode
+msx-conf dfs.metrics.percentiles.intervals is main-thread used by DataNode
+msx-conf dfs.metrics.session-id is main-thread used by DataNode
+msx-conf dfs.namenode.lifeline.rpc-address is main-thread used by DataNode
+msx-conf dfs.namenode.max-num-blocks-to-log is main-thread used by DataNode
+msx-conf dfs.namenode.rpc-address is main-thread used by DataNode
+msx-conf dfs.namenode.servicerpc-address is main-thread used by DataNode
+msx-conf dfs.nameservices is main-thread used by DataNode
+msx-conf dfs.permissions.enabled is main-thread used by DataNode
+msx-conf dfs.permissions.superusergroup is main-thread used by DataNode
+msx-conf dfs.pipeline.ecn is main-thread used by DataNode
+msx-conf dfs.short.circuit.shared.memory.watcher.interrupt.check.ms is main-thread used by DataNode
+msx-conf dfs.trustedchannel.resolver.class is main-thread used by DataNode
+msx-conf dfs.webhdfs.netty.high.watermark is main-thread used by DataNode
+msx-conf dfs.webhdfs.netty.low.watermark is main-thread used by DataNode
+msx-conf dfs.webhdfs.rest-csrf.enabled is main-thread used by DataNode
+msx-conf dfs.webhdfs.ugi.expire.after.access is main-thread used by DataNode
+msx-conf dfs.web.ugi is main-thread used by DataNode
+msx-conf dfs.xframe.enabled is main-thread used by DataNode
+msx-conf dfs.xframe.value is main-thread used by DataNode
+msx-conf file.bytes-per-checksum is main-thread used by DataNode
+msx-conf fs.automatic.close is main-thread used by DataNode
+msx-conf fs.client.htrace.sampler.classes is main-thread used by DataNode
+msx-conf fs.client.htrace.span.receiver.classes is main-thread used by DataNode
+msx-conf fs.client.htrace.tracer.id is main-thread used by DataNode
+msx-conf fs.client.resolve.remote.symlinks is main-thread used by DataNode
+msx-conf fs.defaultFS is main-thread used by DataNode
+msx-conf fs.df.interval is main-thread used by DataNode
+msx-conf fs.du.interval is main-thread used by DataNode
+msx-conf fs.file.impl.disable.cache is main-thread used by DataNode
+msx-conf fs.file.impl is main-thread used by DataNode
+msx-conf fs.getspaceused.classname is main-thread used by DataNode
+msx-conf fs.getspaceused.jitterMillis is main-thread used by DataNode
+msx-conf hadoop.common.configuration.version is main-thread used by DataNode
+msx-conf hadoop.hdfs.configuration.version is main-thread used by DataNode
+msx-conf hadoop.htrace.sampler.classes is main-thread used by DataNode
+msx-conf hadoop.htrace.span.receiver.classes is main-thread used by DataNode
+msx-conf hadoop.htrace.tracer.id is main-thread used by DataNode
+msx-conf hadoop.http.acceptor.count is main-thread used by DataNode
+msx-conf hadoop.http.authentication.kerberos.keytab is main-thread used by DataNode
+msx-conf hadoop.http.authentication.kerberos.principal is main-thread used by DataNode
+msx-conf hadoop.http.authentication.signature.secret.file is main-thread used by DataNode
+msx-conf hadoop.http.authentication.simple.anonymous.allowed is main-thread used by DataNode
+msx-conf hadoop.http.authentication.token.validity is main-thread used by DataNode
+msx-conf hadoop.http.authentication.type is main-thread used by DataNode
+msx-conf hadoop.http.filter.initializers is main-thread used by DataNode
+msx-conf hadoop.http.idle_timeout.ms is main-thread used by DataNode
+msx-conf hadoop.http.logs.enabled is main-thread used by DataNode
+msx-conf hadoop.http.max.request.header.size is main-thread used by DataNode
+msx-conf hadoop.http.max.response.header.size is main-thread used by DataNode
+msx-conf hadoop.http.max.threads is main-thread used by DataNode
+msx-conf hadoop.http.selector.count is main-thread used by DataNode
+msx-conf hadoop.http.socket.backlog.size is main-thread used by DataNode
+msx-conf hadoop.http.staticuser.user is main-thread used by DataNode
+msx-conf hadoop.http.temp.dir is main-thread used by DataNode
+msx-conf hadoop.jetty.logs.serve.aliases is main-thread used by DataNode
+msx-conf hadoop.kerberos.min.seconds.before.relogin is main-thread used by DataNode
+msx-conf hadoop.rpc.protection is main-thread used by DataNode
+msx-conf hadoop.rpc.socket.factory.class.default is main-thread used by DataNode
+msx-conf hadoop.security.authentication is main-thread used by DataNode
+msx-conf hadoop.security.authorization is main-thread used by DataNode
+msx-conf hadoop.security.auth_to_local is main-thread used by DataNode
+msx-conf hadoop.security.auth_to_local.mechanism is main-thread used by DataNode
+msx-conf hadoop.security.dns.interface is main-thread used by DataNode
+msx-conf hadoop.security.dns.log-slow-lookups.enabled is main-thread used by DataNode
+msx-conf hadoop.security.dns.log-slow-lookups.threshold.ms is main-thread used by DataNode
+msx-conf hadoop.security.dns.nameserver is main-thread used by DataNode
+msx-conf hadoop.security.group.mapping is main-thread used by DataNode
+msx-conf hadoop.security.groups.cache.background.reload is main-thread used by DataNode
+msx-conf hadoop.security.groups.cache.background.reload.threads is main-thread used by DataNode
+msx-conf hadoop.security.groups.cache.secs is main-thread used by DataNode
+msx-conf hadoop.security.groups.cache.warn.after.ms is main-thread used by DataNode
+msx-conf hadoop.security.groups.negative-cache.secs is main-thread used by DataNode
+msx-conf hadoop.security.saslproperties.resolver.class is main-thread used by DataNode
+msx-conf hadoop.security.token.service.use_ip is main-thread used by DataNode
+msx-conf hadoop.security.uid.cache.secs is main-thread used by DataNode
+msx-conf hadoop.service.shutdown.timeout is main-thread used by DataNode
+msx-conf hadoop.service.shutdown.timeout is main-thread used by Other
+msx-conf hadoop.ssl.client.conf is main-thread used by DataNode
+msx-conf hadoop.ssl.enabled.protocols is main-thread used by DataNode
+msx-conf hadoop.ssl.hostname.verifier is main-thread used by DataNode
+msx-conf hadoop.ssl.keystores.factory.class is main-thread used by DataNode
+msx-conf hadoop.ssl.require.client.cert is main-thread used by DataNode
+msx-conf hadoop.token.files is main-thread used by DataNode
+msx-conf hadoop.user.group.metrics.percentiles.intervals is main-thread used by DataNode
+msx-conf hadoop.user.group.static.mapping.overrides is main-thread used by DataNode
+msx-conf hadoop.workaround.non.threadsafe.getpwuid is main-thread used by DataNode
+msx-conf hdfs-default.xml is main-thread used by DataNode
+msx-conf hdfs-default.xml is main-thread used by Other
+msx-conf hdfs-site.xml is main-thread used by DataNode
+msx-conf hdfs-site.xml is main-thread used by Other
+msx-conf ignore.secure.ports.for.testing is main-thread used by DataNode
+msx-conf io.file.buffer.size is main-thread used by DataNode
+msx-conf ipc.0.backoff.enable is main-thread used by DataNode
+msx-conf ipc.0.callqueue.impl is main-thread used by DataNode
+msx-conf ipc.0.faircallqueue.priority-levels is main-thread used by DataNode
+msx-conf ipc.0.scheduler.impl is main-thread used by DataNode
+msx-conf ipc.0.scheduler.priority.levels is main-thread used by DataNode
+msx-conf ipc.client.connection.idle-scan-interval.ms is main-thread used by DataNode
+msx-conf ipc.client.connection.maxidletime is main-thread used by DataNode
+msx-conf ipc.client.idlethreshold is main-thread used by DataNode
+msx-conf ipc.client.kill.max is main-thread used by DataNode
+msx-conf ipc.maximum.data.length is main-thread used by DataNode
+msx-conf ipc.server.handler.queue.size is main-thread used by DataNode
+msx-conf ipc.server.listen.queue.size is main-thread used by DataNode
+msx-conf ipc.server.log.slow.rpc is main-thread used by DataNode
+msx-conf ipc.server.max.connections is main-thread used by DataNode
+msx-conf ipc.server.max.response.size is main-thread used by DataNode
+msx-conf ipc.server.read.connection-queue.size is main-thread used by DataNode
+msx-conf ipc.server.read.threadpool.size is main-thread used by DataNode
+msx-conf ipc.server.tcpnodelay is main-thread used by DataNode
+msx-conf  is main-thread used by DataNode
+msx-conf jvm.pause.info-threshold.ms is main-thread used by DataNode
+msx-conf jvm.pause.warn-threshold.ms is main-thread used by DataNode
+msx-conf org.apache.hadoop.hdfs.server.datanode.fsdataset.impl.ReservedSpaceCalculator$ReservedSpaceCalculatorAbsolute is main-thread used by DataNode
+msx-conf org.apache.hadoop.http.lib.StaticUserWebFilter is main-thread used by DataNode
+msx-conf org.apache.hadoop.ipc.ProtobufRpcEngine is main-thread used by DataNode
+msx-conf org.apache.hadoop.mapred.JobConf is main-thread used by DataNode
+msx-conf org.apache.hadoop.net.StandardSocketFactory is main-thread used by DataNode
+msx-conf org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback is main-thread used by DataNode
+msx-conf org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory is main-thread used by DataNode
+msx-conf rpc.engine.org.apache.hadoop.hdfs.protocolPB.ClientDatanodeProtocolPB is main-thread used by DataNode
+msx-conf rpc.metrics.percentiles.intervals is main-thread used by DataNode
+msx-conf ssl.client.keystore.type is main-thread used by DataNode
+msx-conf ssl.client.truststore.location is main-thread used by DataNode
+msx-conf ssl.client.truststore.type is main-thread used by DataNode
+msx-conf ssl-client.xml is main-thread used by DataNode
+msx-conf ssl.server.exclude.cipher.list is main-thread used by DataNode
