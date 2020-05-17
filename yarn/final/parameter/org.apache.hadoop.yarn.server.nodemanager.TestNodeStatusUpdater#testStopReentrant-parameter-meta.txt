@@ -1,879 +1,877 @@
-msx-conf get yarn.ipc.record.factory.class
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf getBoolean hadoop.security.token.service.use_ip
-msx-conf get hadoop.security.token.service.use_ip
-msx-conf getResource core-default.xml
-msx-conf getTrimmed hadoop.security.token.service.use_ip
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf getBoolean hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.enabled
-msx-conf getInt hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.enabled
-msx-conf get hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf getTrimmed hadoop.security.dns.log-slow-lookups.threshold.ms
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.authentication
-msx-conf get hadoop.security.auth_to_local
-msx-conf get hadoop.security.auth_to_local.mechanism
-msx-conf getLong hadoop.kerberos.min.seconds.before.relogin
-msx-conf get hadoop.kerberos.min.seconds.before.relogin
-msx-conf getTrimmed hadoop.kerberos.min.seconds.before.relogin
-msx-conf getClass hadoop.security.group.mapping
-msx-conf getClass hadoop.security.group.mapping
-msx-conf get hadoop.security.group.mapping
-msx-conf getTrimmed hadoop.security.group.mapping
-msx-conf getClassByName org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getLong hadoop.security.groups.cache.secs
-msx-conf get hadoop.security.groups.cache.secs
-msx-conf getTrimmed hadoop.security.groups.cache.secs
-msx-conf getLong hadoop.security.groups.negative-cache.secs
-msx-conf getTrimmed hadoop.security.groups.negative-cache.secs
-msx-conf get hadoop.security.groups.negative-cache.secs
-msx-conf get hadoop.security.groups.cache.warn.after.ms
-msx-conf getBoolean hadoop.security.groups.cache.background.reload
-msx-conf getLong hadoop.security.groups.cache.warn.after.ms
-msx-conf getTrimmed hadoop.security.groups.cache.warn.after.ms
-msx-conf get hadoop.security.groups.cache.background.reload
-msx-conf getInt hadoop.security.groups.cache.background.reload.threads
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload
-msx-conf get hadoop.security.groups.cache.background.reload.threads
-msx-conf get hadoop.user.group.static.mapping.overrides
-msx-conf getTrimmed hadoop.security.groups.cache.background.reload.threads
-msx-conf getInts hadoop.user.group.metrics.percentiles.intervals
-msx-conf get hadoop.user.group.metrics.percentiles.intervals
-msx-conf getTrimmedStrings hadoop.user.group.metrics.percentiles.intervals
-msx-conf getBoolean yarn.resourcemanager.work-preserving-recovery.enabled
-msx-conf getTrimmed yarn.resourcemanager.work-preserving-recovery.enabled
-msx-conf get yarn.resourcemanager.work-preserving-recovery.enabled
-msx-conf getBoolean yarn.nodemanager.recovery.enabled
-msx-conf getTrimmed yarn.nodemanager.recovery.enabled
-msx-conf get yarn.nodemanager.recovery.enabled
-msx-conf getInt yarn.resourcemanager.rm.container-allocation.expiry-interval-ms
-msx-conf get yarn.resourcemanager.rm.container-allocation.expiry-interval-ms
-msx-conf getTrimmed yarn.resourcemanager.rm.container-allocation.expiry-interval-ms
-msx-conf get yarn.admin.acl
-msx-conf get hadoop.token.files
-msx-conf getBoolean yarn.acl.enable
-msx-conf get yarn.acl.enable
-msx-conf getTrimmed yarn.acl.enable
-msx-conf getBoolean yarn.nodemanager.distributed-scheduling.enabled
-msx-conf get yarn.nodemanager.distributed-scheduling.enabled
-msx-conf getClasses yarn.nodemanager.container-state-transition-listener.classes
-msx-conf getInstances yarn.nodemanager.container-state-transition-listener.classes
-msx-conf getTrimmed yarn.nodemanager.distributed-scheduling.enabled
-msx-conf getRaw yarn.nodemanager.container-state-transition-listener.classes
-msx-conf get yarn.ipc.record.factory.class
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl
-msx-conf getBoolean yarn.timeline-service.enabled
-msx-conf get yarn.timeline-service.enabled
-msx-conf getTrimmed yarn.timeline-service.enabled
-msx-conf get yarn.nodemanager.resource-plugins
-msx-conf getStrings yarn.nodemanager.resource-plugins
-msx-conf get yarn.nodemanager.container-executor.class
-msx-conf getClass yarn.nodemanager.container-executor.class
-msx-conf getClass yarn.nodemanager.container-executor.class
-msx-conf getClassByName org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor
-msx-conf getTrimmed yarn.nodemanager.container-executor.class
-msx-conf get fs.AbstractFileSystem.file.impl
-msx-conf getClass fs.AbstractFileSystem.file.impl
-msx-conf getResource core-default.xml
-msx-conf getTrimmed fs.AbstractFileSystem.file.impl
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf getClassByName org.apache.hadoop.fs.local.LocalFs
-msx-conf getClassByNameOrNull org.apache.hadoop.fs.local.LocalFs
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf get fs.client.htrace.sampler.classes
-msx-conf get hadoop.htrace.sampler.classes
-msx-conf get fs.client.htrace.tracer.id
-msx-conf get hadoop.htrace.tracer.id
-msx-conf get fs.client.htrace.span.receiver.classes
-msx-conf get hadoop.htrace.span.receiver.classes
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get yarn.nodemanager.env-whitelist
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get yarn.nodemanager.health-checker.script.path
-msx-conf get yarn.nodemanager.node-attributes.provider
-msx-conf get yarn.nodemanager.node-labels.provider
-msx-conf getClass yarn.nodemanager.containers-launcher.class
-msx-conf getClass yarn.nodemanager.containers-launcher.class
-msx-conf get yarn.nodemanager.containers-launcher.class
-msx-conf getClassByName org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher
-msx-conf getTrimmed yarn.nodemanager.containers-launcher.class
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getInt yarn.nodemanager.opportunistic-containers-max-queue-length
-msx-conf getTrimmed yarn.nodemanager.opportunistic-containers-max-queue-length
-msx-conf get yarn.nodemanager.opportunistic-containers-max-queue-length
-msx-conf get yarn.ipc.record.factory.class
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.records.impl.pb.ContainerQueuingLimitPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.records.impl.pb.ContainerQueuingLimitPBImpl
-msx-conf getClassByName org.apache.hadoop.yarn.api.records.impl.pb.ResourceUtilizationPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.api.records.impl.pb.ResourceUtilizationPBImpl
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.records.impl.pb.OpportunisticContainersStatusPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.records.impl.pb.OpportunisticContainersStatusPBImpl
-msx-conf get yarn.timeline-service.enabled
-msx-conf getBoolean yarn.timeline-service.enabled
-msx-conf getTrimmed yarn.timeline-service.enabled
-msx-conf get yarn.log-aggregation-enable
-msx-conf getBoolean yarn.log-aggregation-enable
-msx-conf getTrimmed yarn.log-aggregation-enable
-msx-conf getLong yarn.log-aggregation-status.time-out.ms
-msx-conf get yarn.log-aggregation-status.time-out.ms
-msx-conf getTrimmed yarn.log-aggregation-status.time-out.ms
-msx-conf getBoolean yarn.timeline-service.enabled
-msx-conf get hadoop.security.dns.interface
-msx-conf get hadoop.security.dns.nameserver
-msx-conf get yarn.timeline-service.enabled
-msx-conf getTrimmed yarn.timeline-service.enabled
-msx-conf getInt yarn.nodemanager.delete.thread-count
-msx-conf get yarn.nodemanager.delete.debug-delay-sec
-msx-conf get yarn.nodemanager.delete.thread-count
-msx-conf getInt yarn.nodemanager.delete.debug-delay-sec
-msx-conf getTrimmed yarn.nodemanager.delete.debug-delay-sec
-msx-conf getTrimmed yarn.nodemanager.delete.thread-count
-msx-conf getLong yarn.nodemanager.disk-health-checker.interval-ms
-msx-conf get yarn.nodemanager.disk-health-checker.interval-ms
-msx-conf getTrimmed yarn.nodemanager.disk-health-checker.interval-ms
-msx-conf getFloat yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage
-msx-conf get yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage
-msx-conf getFloat yarn.nodemanager.disk-health-checker.disk-utilization-watermark-low-per-disk-percentage
-msx-conf getTrimmed yarn.nodemanager.disk-health-checker.disk-utilization-watermark-low-per-disk-percentage
-msx-conf getTrimmed yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage
-msx-conf get yarn.nodemanager.disk-health-checker.disk-utilization-watermark-low-per-disk-percentage
-msx-conf get yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb
-msx-conf getLong yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb
-msx-conf getTrimmed yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb
-msx-conf getTrimmedStrings yarn.nodemanager.local-dirs
-msx-conf get yarn.nodemanager.local-dirs
-msx-conf get yarn.nodemanager.disk-validator
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf get yarn.nodemanager.log-dirs
-msx-conf getTrimmedStrings yarn.nodemanager.log-dirs
-msx-conf get yarn.nodemanager.disk-validator
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf get yarn.nodemanager.local-dirs
-msx-conf getResource resource-types.xml
-msx-conf get yarn.nodemanager.disk-validator
-msx-conf get yarn.nodemanager.log-dirs
-msx-conf getBoolean yarn.nodemanager.disk-health-checker.enable
-msx-conf getTrimmed yarn.nodemanager.disk-health-checker.enable
-msx-conf get yarn.nodemanager.disk-health-checker.enable
-msx-conf get yarn.nodemanager.disk-health-checker.min-healthy-disks
-msx-conf getFloat yarn.nodemanager.disk-health-checker.min-healthy-disks
-msx-conf getTrimmed yarn.nodemanager.disk-health-checker.min-healthy-disks
-msx-conf getClass fs.AbstractFileSystem.file.impl
-msx-conf getTrimmed fs.AbstractFileSystem.file.impl
-msx-conf get fs.AbstractFileSystem.file.impl
-msx-conf getClassByName org.apache.hadoop.fs.local.LocalFs
-msx-conf getClassByNameOrNull org.apache.hadoop.fs.local.LocalFs
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getLong fs.local.block.size
-msx-conf get fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf getLong fs.local.block.size
-msx-conf get fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get yarn.nodemanager.resource-monitor.interval-ms
-msx-conf getLong yarn.nodemanager.resource-monitor.interval-ms
-msx-conf getTrimmed yarn.nodemanager.resource-monitor.interval-ms
-msx-conf getClass yarn.nodemanager.resource-calculator.class
-msx-conf get yarn.nodemanager.resource-calculator.class
-msx-conf getClass yarn.nodemanager.resource-calculator.class
-msx-conf getTrimmed yarn.nodemanager.resource-calculator.class
-msx-conf getBoolean yarn.log-aggregation-enable
-msx-conf getTrimmed yarn.log-aggregation-enable
-msx-conf get yarn.log-aggregation-enable
-msx-conf get yarn.nodemanager.amrmproxy.enabled
-msx-conf getBoolean yarn.nodemanager.amrmproxy.enabled
-msx-conf getBoolean yarn.nodemanager.distributed-scheduling.enabled
-msx-conf getTrimmed yarn.nodemanager.amrmproxy.enabled
-msx-conf getTrimmed yarn.nodemanager.distributed-scheduling.enabled
-msx-conf get yarn.nodemanager.distributed-scheduling.enabled
-msx-conf get yarn.nodemanager.sleep-delay-before-sigkill.ms
-msx-conf getLong yarn.nodemanager.process-kill-wait.ms
-msx-conf getLong yarn.nodemanager.sleep-delay-before-sigkill.ms
-msx-conf getTrimmed yarn.nodemanager.process-kill-wait.ms
-msx-conf getTrimmed yarn.nodemanager.sleep-delay-before-sigkill.ms
-msx-conf get yarn.nodemanager.local-cache.max-files-per-directory
-msx-conf get yarn.nodemanager.process-kill-wait.ms
-msx-conf getInt yarn.nodemanager.local-cache.max-files-per-directory
-msx-conf getTrimmed yarn.nodemanager.local-cache.max-files-per-directory
-msx-conf get yarn.ipc.record.factory.class
-msx-conf get fs.AbstractFileSystem.file.impl
-msx-conf getClass fs.AbstractFileSystem.file.impl
-msx-conf getTrimmed fs.AbstractFileSystem.file.impl
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getClassByName org.apache.hadoop.fs.local.LocalFs
-msx-conf getClassByNameOrNull org.apache.hadoop.fs.local.LocalFs
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.local.block.size
-msx-conf getLong fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get fs.permissions.umask-mode
-msx-conf getBoolean hadoop.workaround.non.threadsafe.getpwuid
-msx-conf get hadoop.workaround.non.threadsafe.getpwuid
-msx-conf getResource core-default.xml
-msx-conf getTrimmed hadoop.workaround.non.threadsafe.getpwuid
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf get hadoop.security.uid.cache.secs
-msx-conf getLong hadoop.security.uid.cache.secs
-msx-conf getTrimmed hadoop.security.uid.cache.secs
-msx-conf get fs.local.block.size
-msx-conf getLong fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get fs.permissions.umask-mode
-msx-conf getLong fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get fs.local.block.size
-msx-conf get fs.permissions.umask-mode
-msx-conf getLong fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get fs.local.block.size
-msx-conf get fs.permissions.umask-mode
-msx-conf get yarn.nodemanager.localizer.cache.target-size-mb
-msx-conf getLong yarn.nodemanager.localizer.cache.target-size-mb
-msx-conf getTrimmed yarn.nodemanager.localizer.cache.target-size-mb
-msx-conf get yarn.nodemanager.localizer.cache.cleanup.interval-ms
-msx-conf getLong yarn.nodemanager.localizer.cache.cleanup.interval-ms
-msx-conf getTrimmed yarn.nodemanager.localizer.cache.cleanup.interval-ms
-msx-conf get yarn.resourcemanager.ha.enabled
-msx-conf get yarn.nodemanager.localizer.address
-msx-conf getBoolean yarn.resourcemanager.ha.enabled
-msx-conf getTrimmed yarn.resourcemanager.ha.enabled
-msx-conf get yarn.nodemanager.bind-host
-msx-conf getClass fs.AbstractFileSystem.file.impl
-msx-conf get fs.AbstractFileSystem.file.impl
-msx-conf getClassByName org.apache.hadoop.fs.local.LocalFs
-msx-conf getTrimmed fs.AbstractFileSystem.file.impl
-msx-conf getClassByNameOrNull org.apache.hadoop.fs.local.LocalFs
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf get yarn.nodemanager.localizer.fetch.thread-count
-msx-conf getInt yarn.nodemanager.localizer.fetch.thread-count
-msx-conf getTrimmed yarn.nodemanager.localizer.fetch.thread-count
-msx-conf get fs.AbstractFileSystem.file.impl
-msx-conf getClass fs.AbstractFileSystem.file.impl
-msx-conf getTrimmed fs.AbstractFileSystem.file.impl
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getClassByName org.apache.hadoop.fs.local.LocalFs
-msx-conf getClassByNameOrNull org.apache.hadoop.fs.local.LocalFs
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf getBoolean yarn.nodemanager.network-tagging-handler.enabled
-msx-conf getTrimmed yarn.nodemanager.network-tagging-handler.enabled
-msx-conf get yarn.nodemanager.network-tagging-handler.enabled
-msx-conf getBoolean yarn.nodemanager.resource.network.enabled
-msx-conf getTrimmed yarn.nodemanager.resource.network.enabled
-msx-conf get yarn.nodemanager.resource.disk.enabled
-msx-conf get yarn.nodemanager.resource.network.enabled
-msx-conf getBoolean yarn.nodemanager.resource.disk.enabled
-msx-conf getTrimmed yarn.nodemanager.resource.disk.enabled
-msx-conf get yarn.nodemanager.resource.memory.enabled
-msx-conf getBoolean yarn.nodemanager.resource.cpu.enabled
-msx-conf getBoolean yarn.nodemanager.resource.memory.enabled
-msx-conf getTrimmed yarn.nodemanager.resource.memory.enabled
-msx-conf get yarn.nodemanager.resource.cpu.enabled
-msx-conf getTrimmed yarn.nodemanager.resource.cpu.enabled
-msx-conf getClass yarn.nodemanager.linux-container-executor.resources-handler.class
-msx-conf getTrimmed yarn.nodemanager.linux-container-executor.resources-handler.class
-msx-conf get yarn.nodemanager.linux-container-executor.resources-handler.class
-msx-conf getClassByName org.apache.hadoop.yarn.server.nodemanager.util.DefaultLCEResourcesHandler
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.nodemanager.util.DefaultLCEResourcesHandler
-msx-conf getBoolean yarn.nodemanager.numa-awareness.enabled
-msx-conf get yarn.nodemanager.numa-awareness.enabled
-msx-conf getTrimmed yarn.nodemanager.numa-awareness.enabled
-msx-conf getBoolean yarn.nodemanager.opportunistic-containers-use-pause-for-preemption
-msx-conf get yarn.nodemanager.opportunistic-containers-use-pause-for-preemption
-msx-conf getBoolean yarn.nodemanager.recovery.enabled
-msx-conf getTrimmed yarn.nodemanager.opportunistic-containers-use-pause-for-preemption
-msx-conf get yarn.nodemanager.recovery.enabled
-msx-conf getStringCollection yarn.nodemanager.aux-services
-msx-conf getTrimmed yarn.nodemanager.recovery.enabled
-msx-conf get yarn.nodemanager.aux-services
-msx-conf getLong yarn.nodemanager.resource-monitor.interval-ms
-msx-conf get yarn.nodemanager.resource-monitor.interval-ms
-msx-conf getLong yarn.nodemanager.container-monitor.interval-ms
-msx-conf getTrimmed yarn.nodemanager.container-monitor.interval-ms
-msx-conf getTrimmed yarn.nodemanager.resource-monitor.interval-ms
-msx-conf get yarn.nodemanager.container-monitor.interval-ms
-msx-conf getClass yarn.nodemanager.resource-calculator.class
-msx-conf getClass yarn.nodemanager.resource-calculator.class
-msx-conf getTrimmed yarn.nodemanager.resource-calculator.class
-msx-conf get yarn.nodemanager.resource-calculator.class
-msx-conf getClass yarn.nodemanager.container-monitor.resource-calculator.class
-msx-conf get yarn.nodemanager.container-monitor.resource-calculator.class
-msx-conf getClass yarn.nodemanager.container-monitor.resource-calculator.class
-msx-conf getTrimmed yarn.nodemanager.container-monitor.resource-calculator.class
-msx-conf getClass yarn.nodemanager.container-monitor.process-tree.class
-msx-conf getClass yarn.nodemanager.container-monitor.process-tree.class
-msx-conf getTrimmed yarn.nodemanager.container-monitor.process-tree.class
-msx-conf get yarn.nodemanager.container-metrics.enable
-msx-conf get yarn.nodemanager.container-monitor.process-tree.class
-msx-conf getBoolean yarn.nodemanager.container-metrics.enable
-msx-conf getTrimmed yarn.nodemanager.container-metrics.enable
-msx-conf get yarn.nodemanager.container-metrics.period-ms
-msx-conf getLong yarn.nodemanager.container-metrics.period-ms
-msx-conf getLong yarn.nodemanager.container-metrics.unregister-delay-ms
-msx-conf getTrimmed yarn.nodemanager.container-metrics.period-ms
-msx-conf get yarn.nodemanager.container-metrics.unregister-delay-ms
-msx-conf getTrimmed yarn.nodemanager.container-metrics.unregister-delay-ms
-msx-conf getBoolean yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf get yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf get yarn.nodemanager.resource.memory-mb
-msx-conf getLong yarn.nodemanager.resource.memory-mb
-msx-conf getTrimmed yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf getTrimmed yarn.nodemanager.resource.memory-mb
-msx-conf get yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf getBoolean yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf getInt yarn.nodemanager.resource.cpu-vcores
-msx-conf getTrimmed yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf get yarn.nodemanager.resource.cpu-vcores
-msx-conf getFloat yarn.nodemanager.vmem-pmem-ratio
-msx-conf getTrimmed yarn.nodemanager.resource.cpu-vcores
-msx-conf getTrimmed yarn.nodemanager.vmem-pmem-ratio
-msx-conf get yarn.nodemanager.pmem-check-enabled
-msx-conf get yarn.nodemanager.vmem-pmem-ratio
-msx-conf getBoolean yarn.nodemanager.pmem-check-enabled
-msx-conf getTrimmed yarn.nodemanager.pmem-check-enabled
-msx-conf get yarn.nodemanager.vmem-check-enabled
-msx-conf getBoolean yarn.nodemanager.elastic-memory-control.enabled
-msx-conf getBoolean yarn.nodemanager.vmem-check-enabled
-msx-conf getTrimmed yarn.nodemanager.elastic-memory-control.enabled
-msx-conf getTrimmed yarn.nodemanager.vmem-check-enabled
-msx-conf get yarn.nodemanager.elastic-memory-control.enabled
-msx-conf get yarn.nodemanager.resource.memory.enforced
-msx-conf getBoolean yarn.nodemanager.resource.memory.enforced
-msx-conf getTrimmed yarn.nodemanager.resource.memory.enforced
-msx-conf get yarn.nodemanager.container-monitor.enabled
-msx-conf getBoolean yarn.nodemanager.container-monitor.enabled
-msx-conf getTrimmed yarn.nodemanager.container-monitor.enabled
-msx-conf get yarn.nodemanager.resource.percentage-physical-cpu-limit
-msx-conf getInt yarn.nodemanager.resource.percentage-physical-cpu-limit
-msx-conf getTrimmed yarn.nodemanager.resource.percentage-physical-cpu-limit
-msx-conf getInt yarn.dispatcher.print-events-info.threshold
-msx-conf getTrimmed yarn.dispatcher.print-events-info.threshold
-msx-conf get yarn.dispatcher.print-events-info.threshold
-msx-conf getLong yarn.nodemanager.log.retain-seconds
-msx-conf get yarn.nodemanager.log.deletion-threads-count
-msx-conf get yarn.nodemanager.log.retain-seconds
-msx-conf getInt yarn.nodemanager.log.deletion-threads-count
-msx-conf getTrimmed yarn.nodemanager.log.deletion-threads-count
-msx-conf getTrimmed yarn.nodemanager.log.retain-seconds
-msx-conf get yarn.sharedcache.enabled
-msx-conf getBoolean yarn.sharedcache.enabled
-msx-conf getInt yarn.dispatcher.print-events-info.threshold
-msx-conf getTrimmed yarn.sharedcache.enabled
-msx-conf get jvm.pause.warn-threshold.ms
-msx-conf get yarn.dispatcher.print-events-info.threshold
-msx-conf getLong jvm.pause.info-threshold.ms
-msx-conf getLong jvm.pause.warn-threshold.ms
-msx-conf getTrimmed jvm.pause.warn-threshold.ms
-msx-conf getTrimmed yarn.dispatcher.print-events-info.threshold
-msx-conf get jvm.pause.info-threshold.ms
-msx-conf getTrimmed jvm.pause.info-threshold.ms
-msx-conf getClass yarn.resourcemanager.configuration.provider-class
-msx-conf getClass yarn.resourcemanager.configuration.provider-class
-msx-conf get yarn.resourcemanager.configuration.provider-class
-msx-conf getResource core-default.xml
-msx-conf getTrimmed yarn.resourcemanager.configuration.provider-class
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getResource yarn-site.xml
-msx-conf getResource resource-types.xml
-msx-conf getClassByName org.apache.hadoop.yarn.LocalConfigurationProvider
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.LocalConfigurationProvider
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getConfResourceAsInputStream resource-types.xml
-msx-conf getResource resource-types.xml
-msx-conf getResource resource-types.xml
-msx-conf get yarn.resource-types
-msx-conf getStrings yarn.resource-types
-msx-conf getLong yarn.resource-types.memory-mb.minimum-allocation
-msx-conf get yarn.resource-types.memory-mb.minimum-allocation
-msx-conf getLong yarn.scheduler.minimum-allocation-mb
-msx-conf getTrimmed yarn.resource-types.memory-mb.minimum-allocation
-msx-conf getTrimmed yarn.scheduler.minimum-allocation-mb
-msx-conf get yarn.scheduler.minimum-allocation-mb
-msx-conf getLong yarn.resource-types.memory-mb.maximum-allocation
-msx-conf getTrimmed yarn.resource-types.memory-mb.maximum-allocation
-msx-conf get yarn.resource-types.memory-mb.maximum-allocation
-msx-conf get yarn.scheduler.maximum-allocation-mb
-msx-conf getLong yarn.resource-types.vcores.minimum-allocation
-msx-conf getLong yarn.scheduler.maximum-allocation-mb
-msx-conf getTrimmed yarn.scheduler.maximum-allocation-mb
-msx-conf get yarn.resource-types.vcores.minimum-allocation
-msx-conf getLong yarn.scheduler.minimum-allocation-vcores
-msx-conf getTrimmed yarn.resource-types.vcores.minimum-allocation
-msx-conf getTrimmed yarn.scheduler.minimum-allocation-vcores
-msx-conf get yarn.scheduler.minimum-allocation-vcores
-msx-conf getLong yarn.resource-types.vcores.maximum-allocation
-msx-conf getTrimmed yarn.resource-types.vcores.maximum-allocation
-msx-conf get yarn.resource-types.vcores.maximum-allocation
-msx-conf get yarn.scheduler.maximum-allocation-vcores
-msx-conf getLong yarn.scheduler.maximum-allocation-vcores
-msx-conf getTrimmed yarn.scheduler.maximum-allocation-vcores
-msx-conf getClass yarn.resourcemanager.configuration.provider-class
-msx-conf getClass yarn.resourcemanager.configuration.provider-class
-msx-conf get yarn.resourcemanager.configuration.provider-class
-msx-conf getClassByName org.apache.hadoop.yarn.LocalConfigurationProvider
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.LocalConfigurationProvider
-msx-conf getTrimmed yarn.resourcemanager.configuration.provider-class
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getConfResourceAsInputStream node-resources.xml
-msx-conf getResource node-resources.xml
-msx-conf getResource node-resources.xml
-msx-conf getLong yarn.resource-types.memory-mb.minimum-allocation
-msx-conf getTrimmed yarn.resource-types.memory-mb.minimum-allocation
-msx-conf get yarn.resource-types.memory-mb.minimum-allocation
-msx-conf get yarn.scheduler.minimum-allocation-mb
-msx-conf getLong yarn.scheduler.minimum-allocation-mb
-msx-conf getTrimmed yarn.scheduler.minimum-allocation-mb
-msx-conf get yarn.resource-types.memory-mb.maximum-allocation
-msx-conf getLong yarn.resource-types.memory-mb.maximum-allocation
-msx-conf getLong yarn.scheduler.maximum-allocation-mb
-msx-conf getTrimmed yarn.resource-types.memory-mb.maximum-allocation
-msx-conf get yarn.resource-types.vcores.minimum-allocation
-msx-conf get yarn.scheduler.maximum-allocation-mb
-msx-conf getLong yarn.resource-types.vcores.minimum-allocation
-msx-conf getTrimmed yarn.resource-types.vcores.minimum-allocation
-msx-conf getTrimmed yarn.scheduler.maximum-allocation-mb
-msx-conf get yarn.scheduler.minimum-allocation-vcores
-msx-conf getLong yarn.resource-types.vcores.maximum-allocation
-msx-conf getLong yarn.scheduler.minimum-allocation-vcores
-msx-conf getTrimmed yarn.scheduler.minimum-allocation-vcores
-msx-conf get yarn.resource-types.vcores.maximum-allocation
-msx-conf get yarn.scheduler.maximum-allocation-vcores
-msx-conf getLong yarn.scheduler.maximum-allocation-vcores
-msx-conf getTrimmed yarn.resource-types.vcores.maximum-allocation
-msx-conf getTrimmed yarn.scheduler.maximum-allocation-vcores
-msx-conf get yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf getBoolean yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf getTrimmed yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf get yarn.nodemanager.resource.memory-mb
-msx-conf getBoolean yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf getLong yarn.nodemanager.resource.memory-mb
-msx-conf getTrimmed yarn.nodemanager.resource.memory-mb
-msx-conf get yarn.nodemanager.resource.cpu-vcores
-msx-conf get yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf getInt yarn.nodemanager.resource.cpu-vcores
-msx-conf getTrimmed yarn.nodemanager.resource.cpu-vcores
-msx-conf getTrimmed yarn.nodemanager.resource.detect-hardware-capabilities
-msx-conf get yarn.nodemanager.vmem-pmem-ratio
-msx-conf getFloat yarn.nodemanager.vmem-pmem-ratio
-msx-conf getTrimmed yarn.nodemanager.vmem-pmem-ratio
-msx-conf getClass yarn.nodemanager.resource-calculator.class
-msx-conf getClass yarn.nodemanager.resource-calculator.class
-msx-conf get yarn.nodemanager.resource-calculator.class
-msx-conf getTrimmed yarn.nodemanager.resource-calculator.class
-msx-conf get yarn.log-aggregation-enable
-msx-conf get yarn.nm.liveness-monitor.expiry-interval-ms
-msx-conf get yarn.nodemanager.resourcemanager.minimum.version
-msx-conf getBoolean yarn.log-aggregation-enable
-msx-conf getInt yarn.nm.liveness-monitor.expiry-interval-ms
-msx-conf getTrimmed yarn.log-aggregation-enable
-msx-conf getTrimmed yarn.nm.liveness-monitor.expiry-interval-ms
-msx-conf getLong yarn.nodemanager.duration-to-track-stopped-containers
-msx-conf getTrimmed yarn.nodemanager.duration-to-track-stopped-containers
-msx-conf get yarn.log-aggregation-enable
-msx-conf get yarn.nodemanager.duration-to-track-stopped-containers
-msx-conf get yarn.timeline-service.enabled
-msx-conf getBoolean yarn.log-aggregation-enable
-msx-conf getBoolean yarn.timeline-service.enabled
-msx-conf getTrimmed yarn.log-aggregation-enable
-msx-conf getTrimmed yarn.timeline-service.enabled
-msx-conf get yarn.nodemanager.bind-host
-msx-conf get yarn.resourcemanager.ha.enabled
-msx-conf get yarn.nodemanager.address
-msx-conf getBoolean yarn.resourcemanager.ha.enabled
-msx-conf getTrimmed yarn.resourcemanager.ha.enabled
-msx-conf get yarn.ipc.rpc.class
-msx-conf get yarn.nodemanager.container-manager.thread-count
-msx-conf getInt yarn.nodemanager.container-manager.thread-count
-msx-conf getTrimmed yarn.nodemanager.container-manager.thread-count
-msx-conf get yarn.ipc.server.factory.class
-msx-conf getClassByName org.apache.hadoop.yarn.api.impl.pb.service.ContainerManagementProtocolPBServiceImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.api.impl.pb.service.ContainerManagementProtocolPBServiceImpl
-msx-conf getClassByName org.apache.hadoop.yarn.proto.ContainerManagementProtocol$ContainerManagementProtocolService
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.proto.ContainerManagementProtocol$ContainerManagementProtocolService
-msx-conf get rpc.engine.org.apache.hadoop.yarn.api.ContainerManagementProtocolPB
-msx-conf getClass rpc.engine.org.apache.hadoop.yarn.api.ContainerManagementProtocolPB
-msx-conf getClassByName org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getClassByNameOrNull org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getTrimmed rpc.engine.org.apache.hadoop.yarn.api.ContainerManagementProtocolPB
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getInt ipc.maximum.data.length
-msx-conf get ipc.maximum.data.length
-msx-conf getInt ipc.server.handler.queue.size
-msx-conf getTrimmed ipc.maximum.data.length
-msx-conf getTrimmed ipc.server.handler.queue.size
-msx-conf get ipc.server.handler.queue.size
-msx-conf get ipc.server.max.response.size
-msx-conf getInt ipc.server.max.response.size
-msx-conf getTrimmed ipc.server.max.response.size
-msx-conf get ipc.server.read.threadpool.size
-msx-conf getInt ipc.server.read.connection-queue.size
-msx-conf getInt ipc.server.read.threadpool.size
-msx-conf getTrimmed ipc.server.read.threadpool.size
-msx-conf get ipc.server.read.connection-queue.size
-msx-conf getTrimmed ipc.server.read.connection-queue.size
-msx-conf getClass ipc.49170.callqueue.impl
-msx-conf get ipc.49170.callqueue.impl
-msx-conf getTrimmed ipc.49170.callqueue.impl
-msx-conf get ipc.49170.scheduler.impl
-msx-conf getClass ipc.49170.scheduler.impl
-msx-conf getTrimmed ipc.49170.scheduler.impl
-msx-conf get ipc.49170.callqueue.impl
-msx-conf getClass ipc.49170.callqueue.impl
-msx-conf getTrimmed ipc.49170.callqueue.impl
-msx-conf getClass ipc.49170.scheduler.impl
-msx-conf getTrimmed ipc.49170.scheduler.impl
-msx-conf get ipc.49170.scheduler.impl
-msx-conf getBoolean ipc.49170.backoff.enable
-msx-conf getTrimmed ipc.49170.backoff.enable
-msx-conf get ipc.49170.backoff.enable
-msx-conf get ipc.49170.faircallqueue.priority-levels
-msx-conf getInt ipc.49170.faircallqueue.priority-levels
-msx-conf getTrimmed ipc.49170.faircallqueue.priority-levels
-msx-conf get ipc.49170.scheduler.priority.levels
-msx-conf getInt ipc.49170.scheduler.priority.levels
-msx-conf getTrimmed ipc.49170.scheduler.priority.levels
-msx-conf get hadoop.security.authorization
-msx-conf getBoolean hadoop.security.authorization
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get hadoop.security.authentication
-msx-conf get ipc.server.listen.queue.size
-msx-conf getInt ipc.server.listen.queue.size
-msx-conf getTrimmed ipc.server.listen.queue.size
-msx-conf getInt ipc.client.idlethreshold
-msx-conf get ipc.client.connection.idle-scan-interval.ms
-msx-conf get ipc.client.idlethreshold
-msx-conf getInt ipc.client.connection.idle-scan-interval.ms
-msx-conf getTrimmed ipc.client.connection.idle-scan-interval.ms
-msx-conf getTrimmed ipc.client.idlethreshold
-msx-conf get ipc.client.connection.maxidletime
-msx-conf getInt ipc.client.connection.maxidletime
-msx-conf getInt ipc.client.kill.max
-msx-conf getTrimmed ipc.client.connection.maxidletime
-msx-conf getTrimmed ipc.client.kill.max
-msx-conf get ipc.client.kill.max
-msx-conf get ipc.server.max.connections
-msx-conf getInt ipc.server.max.connections
-msx-conf getTrimmed ipc.server.max.connections
-msx-conf get rpc.metrics.percentiles.intervals
-msx-conf getInts rpc.metrics.percentiles.intervals
-msx-conf getTrimmedStrings rpc.metrics.percentiles.intervals
-msx-conf get ipc.server.tcpnodelay
-msx-conf getBoolean ipc.server.log.slow.rpc
-msx-conf getBoolean ipc.server.tcpnodelay
-msx-conf getTrimmed ipc.server.log.slow.rpc
-msx-conf getTrimmed ipc.server.tcpnodelay
-msx-conf get ipc.server.log.slow.rpc
-msx-conf getClass hadoop.security.saslproperties.resolver.class
-msx-conf get hadoop.security.saslproperties.resolver.class
-msx-conf getClass hadoop.security.saslproperties.resolver.class
-msx-conf getTrimmed hadoop.security.saslproperties.resolver.class
-msx-conf get hadoop.rpc.protection
-msx-conf getTrimmedStrings hadoop.rpc.protection
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get hadoop.security.authorization
-msx-conf get yarn.nodemanager.bind-host
-msx-conf getBoolean hadoop.security.authorization
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get yarn.nodemanager.address
-msx-conf getTrimmed yarn.nodemanager.address
-msx-conf getClassByName org.apache.hadoop.yarn.api.records.impl.pb.NodeIdPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.api.records.impl.pb.NodeIdPBImpl
-msx-conf get yarn.ipc.rpc.class
-msx-conf getInt yarn.nodemanager.localizer.client.thread-count
-msx-conf get yarn.nodemanager.localizer.client.thread-count
-msx-conf get yarn.ipc.server.factory.class
-msx-conf getClassByName org.apache.hadoop.yarn.server.nodemanager.api.impl.pb.service.LocalizationProtocolPBServiceImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.nodemanager.api.impl.pb.service.LocalizationProtocolPBServiceImpl
-msx-conf getTrimmed yarn.nodemanager.localizer.client.thread-count
-msx-conf getClassByName org.apache.hadoop.yarn.proto.LocalizationProtocol$LocalizationProtocolService
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.proto.LocalizationProtocol$LocalizationProtocolService
-msx-conf getClass rpc.engine.org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB
-msx-conf getTrimmed rpc.engine.org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB
-msx-conf get rpc.engine.org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB
-msx-conf getClassByName org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getClassByNameOrNull org.apache.hadoop.ipc.ProtobufRpcEngine
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get ipc.maximum.data.length
-msx-conf getInt ipc.maximum.data.length
-msx-conf getInt ipc.server.handler.queue.size
-msx-conf getTrimmed ipc.maximum.data.length
-msx-conf getTrimmed ipc.server.handler.queue.size
-msx-conf get ipc.server.handler.queue.size
-msx-conf get ipc.server.max.response.size
-msx-conf getInt ipc.server.max.response.size
-msx-conf getTrimmed ipc.server.max.response.size
-msx-conf get ipc.server.read.threadpool.size
-msx-conf getInt ipc.server.read.connection-queue.size
-msx-conf getInt ipc.server.read.threadpool.size
-msx-conf getTrimmed ipc.server.read.threadpool.size
-msx-conf get ipc.server.read.connection-queue.size
-msx-conf getClass ipc.49160.callqueue.impl
-msx-conf getTrimmed ipc.49160.callqueue.impl
-msx-conf getTrimmed ipc.server.read.connection-queue.size
-msx-conf get ipc.49160.callqueue.impl
-msx-conf get ipc.49160.scheduler.impl
-msx-conf getClass ipc.49160.scheduler.impl
-msx-conf getTrimmed ipc.49160.scheduler.impl
-msx-conf get ipc.49160.callqueue.impl
-msx-conf getClass ipc.49160.callqueue.impl
-msx-conf getClass ipc.49160.scheduler.impl
-msx-conf getTrimmed ipc.49160.callqueue.impl
-msx-conf getTrimmed ipc.49160.scheduler.impl
-msx-conf get ipc.49160.backoff.enable
-msx-conf get ipc.49160.scheduler.impl
-msx-conf getBoolean ipc.49160.backoff.enable
-msx-conf getTrimmed ipc.49160.backoff.enable
-msx-conf get ipc.49160.faircallqueue.priority-levels
-msx-conf getInt ipc.49160.faircallqueue.priority-levels
-msx-conf getInt ipc.49160.scheduler.priority.levels
-msx-conf getTrimmed ipc.49160.faircallqueue.priority-levels
-msx-conf get ipc.49160.scheduler.priority.levels
-msx-conf getBoolean hadoop.security.authorization
-msx-conf getTrimmed ipc.49160.scheduler.priority.levels
-msx-conf get hadoop.security.authorization
-msx-conf get hadoop.security.authentication
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get ipc.server.listen.queue.size
-msx-conf getInt ipc.server.listen.queue.size
-msx-conf getTrimmed ipc.server.listen.queue.size
-msx-conf getInt ipc.client.idlethreshold
-msx-conf getTrimmed ipc.client.idlethreshold
-msx-conf get ipc.client.connection.idle-scan-interval.ms
-msx-conf get ipc.client.idlethreshold
-msx-conf getInt ipc.client.connection.idle-scan-interval.ms
-msx-conf getTrimmed ipc.client.connection.idle-scan-interval.ms
-msx-conf get ipc.client.connection.maxidletime
-msx-conf getInt ipc.client.connection.maxidletime
-msx-conf getInt ipc.client.kill.max
-msx-conf getTrimmed ipc.client.connection.maxidletime
-msx-conf get ipc.client.kill.max
-msx-conf getInt ipc.server.max.connections
-msx-conf getTrimmed ipc.client.kill.max
-msx-conf getTrimmed ipc.server.max.connections
-msx-conf get ipc.server.max.connections
-msx-conf get rpc.metrics.percentiles.intervals
-msx-conf getInts rpc.metrics.percentiles.intervals
-msx-conf getTrimmedStrings rpc.metrics.percentiles.intervals
-msx-conf getBoolean ipc.server.tcpnodelay
-msx-conf get ipc.server.log.slow.rpc
-msx-conf get ipc.server.tcpnodelay
-msx-conf getBoolean ipc.server.log.slow.rpc
-msx-conf getTrimmed ipc.server.log.slow.rpc
-msx-conf getTrimmed ipc.server.tcpnodelay
-msx-conf getBoolean hadoop.security.authorization
-msx-conf getTrimmed hadoop.security.authorization
-msx-conf get hadoop.security.authorization
-msx-conf get yarn.nodemanager.bind-host
-msx-conf get yarn.nodemanager.localizer.address
-msx-conf getTrimmed yarn.nodemanager.localizer.address
-msx-conf getTrimmed yarn.nodemanager.localizer.address
-msx-conf get yarn.resourcemanager.ha.enabled
-msx-conf getBoolean yarn.resourcemanager.ha.enabled
-msx-conf getTrimmed yarn.resourcemanager.ha.enabled
-msx-conf getLong fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get fs.local.block.size
-msx-conf getLong fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get fs.local.block.size
-msx-conf getLong fs.local.block.size
-msx-conf get fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
-msx-conf get fs.permissions.umask-mode
-msx-conf get yarn.http.policy
-msx-conf get yarn.nodemanager.webapp.address
-msx-conf getRaw yarn.nodemanager.hostname
-msx-conf get yarn.nodemanager.bind-host
-msx-conf get yarn.nodemanager.webapp.cross-origin.enabled
-msx-conf getBoolean yarn.nodemanager.webapp.cross-origin.enabled
-msx-conf getClasses hadoop.http.filter.initializers
-msx-conf getTrimmed yarn.nodemanager.bind-host
-msx-conf getTrimmed yarn.nodemanager.webapp.cross-origin.enabled
-msx-conf get hadoop.http.filter.initializers
-msx-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getRaw hadoop.http.filter.initializers
-msx-conf getTrimmedStrings hadoop.http.filter.initializers
-msx-conf get yarn.http.policy
-msx-conf get yarn.admin.acl
-msx-conf get yarn.nodemanager.webapp.spnego-principal
-msx-conf get hadoop.http.temp.dir
-msx-conf get hadoop.http.authentication.kerberos.keytab
-msx-conf get hadoop.http.authentication.kerberos.principal
-msx-conf get hadoop.http.authentication.type
-msx-conf get hadoop.http.authentication.signature.secret.file
-msx-conf get hadoop.http.authentication.simple.anonymous.allowed
-msx-conf get hadoop.http.authentication.token.validity
-msx-conf get bind.address
-msx-conf getInt hadoop.http.max.threads
-msx-conf get hadoop.http.max.threads
-msx-conf getTrimmed hadoop.http.max.threads
-msx-conf get hadoop.http.logs.enabled
-msx-conf getBoolean hadoop.http.logs.enabled
-msx-conf getTrimmed hadoop.http.logs.enabled
-msx-conf get hadoop.jetty.logs.serve.aliases
-msx-conf getBoolean hadoop.jetty.logs.serve.aliases
-msx-conf getTrimmed hadoop.jetty.logs.serve.aliases
-msx-conf getClasses hadoop.http.filter.initializers
-msx-conf get hadoop.http.filter.initializers
-msx-conf getClassByName org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getClassByName org.apache.hadoop.security.AuthenticationFilterInitializer
-msx-conf getClassByNameOrNull org.apache.hadoop.http.lib.StaticUserWebFilter
-msx-conf getClassByNameOrNull org.apache.hadoop.security.AuthenticationFilterInitializer
-msx-conf getRaw hadoop.http.filter.initializers
-msx-conf getTrimmedStrings hadoop.http.filter.initializers
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf get dfs.web.ugi
-msx-conf get hadoop.http.staticuser.user
-msx-conf get hadoop.http.authentication.kerberos.principal
-msx-conf get hadoop.http.authentication.type
-msx-conf get bind.address
-msx-conf get hadoop.http.authentication.kerberos.keytab
-msx-conf get hadoop.http.authentication.signature.secret.file
-msx-conf get hadoop.http.authentication.simple.anonymous.allowed
-msx-conf get hadoop.http.authentication.token.validity
-msx-conf getInt hadoop.http.max.request.header.size
-msx-conf get hadoop.http.idle_timeout.ms
-msx-conf get hadoop.http.max.request.header.size
-msx-conf get hadoop.http.max.response.header.size
-msx-conf getInt hadoop.http.idle_timeout.ms
-msx-conf getInt hadoop.http.max.response.header.size
-msx-conf getTrimmed hadoop.http.idle_timeout.ms
-msx-conf getTrimmed hadoop.http.max.request.header.size
-msx-conf getTrimmed hadoop.http.max.response.header.size
-msx-conf get hadoop.http.socket.backlog.size
-msx-conf getInt hadoop.http.socket.backlog.size
-msx-conf getTrimmed hadoop.http.socket.backlog.size
-msx-conf get hadoop.http.acceptor.count
-msx-conf getInt hadoop.http.acceptor.count
-msx-conf getInt hadoop.http.selector.count
-msx-conf getTrimmed hadoop.http.acceptor.count
-msx-conf get hadoop.http.selector.count
-msx-conf getTrimmed hadoop.http.selector.count
-msx-conf get yarn.nodemanager.webapp.rest-csrf.custom-header
-msx-conf get yarn.nodemanager.webapp.rest-csrf.methods-to-ignore
-msx-conf get yarn.nodemanager.webapp.rest-csrf.enabled
-msx-conf get yarn.nodemanager.webapp.xfs-filter.xframe-options
-msx-conf getBoolean yarn.webapp.xfs-filter.enabled
-msx-conf get yarn.webapp.xfs-filter.enabled
-msx-conf getTrimmed yarn.webapp.xfs-filter.enabled
-msx-conf get yarn.ipc.record.factory.class
-msx-conf get yarn.log.server.web-service.url
-msx-conf get yarn.log-aggregation.file-formats
-msx-conf getStringCollection yarn.log-aggregation.file-formats
-msx-conf get yarn.log-aggregation.TFile.remote-app-log-dir
-msx-conf get yarn.log-aggregation.TFile.remote-app-log-dir-suffix
-msx-conf get yarn.nodemanager.remote-app-log-dir
-msx-conf get yarn.log-aggregation.file-controller.TFile.class
-msx-conf get yarn.nodemanager.remote-app-log-dir-suffix
-msx-conf getClass yarn.log-aggregation.file-controller.TFile.class
-msx-conf getClass yarn.log-aggregation.file-controller.TFile.class
-msx-conf getTrimmed yarn.log-aggregation.file-controller.TFile.class
-msx-conf get yarn.log-aggregation.file-controller.TFile.class
-msx-conf getClassByName org.apache.hadoop.yarn.logaggregation.filecontroller.tfile.LogAggregationTFileController
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.logaggregation.filecontroller.tfile.LogAggregationTFileController
-msx-conf getClassByNameOrNull org.apache.hadoop.mapred.JobConf
-msx-conf getInt yarn.nodemanager.log-aggregation.num-log-files-per-app
-msx-conf getTrimmed yarn.nodemanager.log-aggregation.num-log-files-per-app
-msx-conf get yarn.log-aggregation.TFile.remote-app-log-dir
-msx-conf get yarn.nodemanager.log-aggregation.num-log-files-per-app
-msx-conf get yarn.nodemanager.remote-app-log-dir
-msx-conf get yarn.log-aggregation.TFile.remote-app-log-dir-suffix
-msx-conf get yarn.nodemanager.remote-app-log-dir-suffix
-msx-conf getBoolean yarn.webapp.filter-entity-list-by-user
-msx-conf getTrimmed yarn.webapp.filter-entity-list-by-user
-msx-conf get yarn.webapp.filter-entity-list-by-user
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.RegisterNodeManagerRequestPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.RegisterNodeManagerRequestPBImpl
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.RegisterNodeManagerResponsePBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.RegisterNodeManagerResponsePBImpl
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.records.impl.pb.NodeStatusPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.records.impl.pb.NodeStatusPBImpl
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.NodeHeartbeatRequestPBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.NodeHeartbeatRequestPBImpl
-msx-conf get yarn.ipc.record.factory.class
-msx-conf getClassByName org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.NodeHeartbeatResponsePBImpl
-msx-conf getClassByNameOrNull org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.NodeHeartbeatResponsePBImpl
-msx-conf get 
-msx-conf get yarn.nodemanager.recovery.enabled
-msx-conf getBoolean yarn.nodemanager.recovery.enabled
-msx-conf getTrimmed yarn.nodemanager.recovery.enabled
-msx-conf get fs.AbstractFileSystem.file.impl
-msx-conf getClass fs.AbstractFileSystem.file.impl
-msx-conf getTrimmed fs.AbstractFileSystem.file.impl
-msx-conf getResource core-default.xml
-msx-conf getResource core-site.xml
-msx-conf getResource yarn-default.xml
-msx-conf getClassByName org.apache.hadoop.fs.local.LocalFs
-msx-conf getResource resource-types.xml
-msx-conf getResource yarn-site.xml
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getBoolean fs.client.resolve.remote.symlinks
-msx-conf getClassByNameOrNull org.apache.hadoop.fs.local.LocalFs
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.client.resolve.remote.symlinks
-msx-conf getLong fs.local.block.size
-msx-conf getTrimmed fs.client.resolve.remote.symlinks
-msx-conf get fs.local.block.size
-msx-conf getTrimmed fs.local.block.size
+msx-conf 	at com.google.inject.internal.cglib.reflect.$FastConstructor.newInstance(FastConstructor.java:40)
+msx-conf 	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:267)
+msx-conf 	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:85)
+msx-conf 	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:105)
+msx-conf 	at com.google.inject.internal.DefaultConstructionProxyFactory$1.newInstance(DefaultConstructionProxyFactory.java:61)
+msx-conf 	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1016)
+msx-conf 	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1012)
+msx-conf 	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
+msx-conf 	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+msx-conf 	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1051)
+msx-conf 	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
+msx-conf 	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+msx-conf 	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+msx-conf 	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:145)
+msx-conf 	at com.google.inject.servlet.FilterDefinition.init(FilterDefinition.java:112)
+msx-conf 	at com.google.inject.servlet.GuiceFilter.init(GuiceFilter.java:220)
+msx-conf 	at com.google.inject.servlet.ManagedFilterPipeline.initPipeline(ManagedFilterPipeline.java:99)
+msx-conf 	at com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory$GuiceInstantiatedComponentProvider.getInstance(GuiceComponentProviderFactory.java:345)
+msx-conf 	at com.sun.jersey.guice.spi.container.servlet.GuiceContainer.initiate(GuiceContainer.java:121)
+msx-conf 	at com.sun.jersey.server.impl.application.RootResourceUriRules.<init>(RootResourceUriRules.java:124)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$10.f(WebApplicationImpl.java:602)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$10.f(WebApplicationImpl.java:605)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$13.f(WebApplicationImpl.java:795)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$13.f(WebApplicationImpl.java:799)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.access$700(WebApplicationImpl.java:180)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.getOrCreateResourceComponentProvider(WebApplicationImpl.java:602)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiateResource(WebApplicationImpl.java:677)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiateResource(WebApplicationImpl.java:682)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl._initiate(WebApplicationImpl.java:1359)
+msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiate(WebApplicationImpl.java:795)
+msx-conf 	at com.sun.jersey.server.impl.component.IoCResourceFactory$SingletonWrapper.init(IoCResourceFactory.java:186)
+msx-conf 	at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:394)
+msx-conf 	at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:744)
+msx-conf 	at com.sun.jersey.spi.container.servlet.ServletContainer$InternalWebComponent.initiate(ServletContainer.java:339)
+msx-conf 	at com.sun.jersey.spi.container.servlet.WebComponent.init(WebComponent.java:207)
+msx-conf 	at com.sun.jersey.spi.container.servlet.WebComponent.load(WebComponent.java:605)
+msx-conf 	at com.sun.jersey.spi.inject.Errors.processWithErrors(Errors.java:193)
+msx-conf 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+msx-conf 	at java.lang.reflect.Method.invoke(Method.java:498)
+msx-conf 	at java.security.AccessController.doPrivileged(AccessController.java:-2)
+msx-conf 	at javax.security.auth.Subject.doAs(Subject.java:422)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getBoolean(Configuration.java:1734)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getBoolean(Configuration.java:1735)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2635)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2636)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByNameOrNull(Configuration.java:2652)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2730)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2731)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2735)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2760)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2762)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2702)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2703)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2707)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2711)
+msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1260)
+msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1264)
+msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1524)
+msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1528)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getConfResourceAsInputStream(Configuration.java:2893)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getConfResourceAsInputStream(Configuration.java:2895)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getFloat(Configuration.java:1676)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getFloat(Configuration.java:1677)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getInstances(Configuration.java:2788)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getInstances(Configuration.java:2790)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1547)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1548)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getInts(Configuration.java:1569)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getInts(Configuration.java:1570)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1602)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1603)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2951)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getPropsWithPrefix(Configuration.java:3021)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getRaw(Configuration.java:1355)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getResource(Configuration.java:2881)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getSocketAddr(Configuration.java:2543)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getSocketAddr(Configuration.java:2546)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3139)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getStringCollection(Configuration.java:2302)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getStringCollection(Configuration.java:2303)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getStrings(Configuration.java:2317)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getStrings(Configuration.java:2318)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1318)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1319)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1339)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1340)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2370)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2371)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2386)
+msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2387)
+msx-conf 	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3098)
+msx-conf 	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3071)
+msx-conf 	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1405)
+msx-conf 	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1433)
+msx-conf 	at org.apache.hadoop.conf.Configuration.setInt(Configuration.java:1585)
+msx-conf 	at org.apache.hadoop.conf.Configuration.showStackTrace(Configuration.java:1224)
+msx-conf 	at org.apache.hadoop.conf.Configuration.substituteVars(Configuration.java:1171)
+msx-conf 	at org.apache.hadoop.conf.Configuration.updateConnectAddr(Configuration.java:2598)
+msx-conf 	at org.apache.hadoop.conf.Configuration.updateConnectAddr(Configuration.java:2599)
+msx-conf 	at org.apache.hadoop.conf.Configuration.updateConnectAddr(Configuration.java:2603)
+msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.createFileSystem(AbstractFileSystem.java:167)
+msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.createFileSystem(AbstractFileSystem.java:173)
+msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.get(AbstractFileSystem.java:258)
+msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.newInstance(AbstractFileSystem.java:135)
+msx-conf 	at org.apache.hadoop.fs.ChecksumFs.delete(ChecksumFs.java:511)
+msx-conf 	at org.apache.hadoop.fs.DelegateToFileSystem.getFileStatus(DelegateToFileSystem.java:126)
+msx-conf 	at org.apache.hadoop.fs.DelegateToFileSystem.<init>(DelegateToFileSystem.java:52)
+msx-conf 	at org.apache.hadoop.fs.DelegateToFileSystem.mkdir(DelegateToFileSystem.java:183)
+msx-conf 	at org.apache.hadoop.fs.FileContext$15.next(FileContext.java:1239)
+msx-conf 	at org.apache.hadoop.fs.FileContext$15.next(FileContext.java:1243)
+msx-conf 	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:333)
+msx-conf 	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:336)
+msx-conf 	at org.apache.hadoop.fs.FileContext$4.next(FileContext.java:800)
+msx-conf 	at org.apache.hadoop.fs.FileContext$4.next(FileContext.java:804)
+msx-conf 	at org.apache.hadoop.fs.FileContext$5.next(FileContext.java:836)
+msx-conf 	at org.apache.hadoop.fs.FileContext$5.next(FileContext.java:840)
+msx-conf 	at org.apache.hadoop.fs.FileContext.delete(FileContext.java:842)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getAbstractFileSystem(FileContext.java:333)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:370)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:436)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:459)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:466)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getFileStatus(FileContext.java:1245)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getLocalFSFileContext(FileContext.java:422)
+msx-conf 	at org.apache.hadoop.fs.FileContext.getLocalFSFileContext(FileContext.java:502)
+msx-conf 	at org.apache.hadoop.fs.FileContext.<init>(FileContext.java:237)
+msx-conf 	at org.apache.hadoop.fs.FileContext.<init>(FileContext.java:257)
+msx-conf 	at org.apache.hadoop.fs.FileContext.mkdir(FileContext.java:807)
+msx-conf 	at org.apache.hadoop.fs.FileContext$Util.exists(FileContext.java:1733)
+msx-conf 	at org.apache.hadoop.fs.FileSystem.getDefaultBlockSize(FileSystem.java:2522)
+msx-conf 	at org.apache.hadoop.fs.FileSystem.getDefaultBlockSize(FileSystem.java:2533)
+msx-conf 	at org.apache.hadoop.fs.FileSystem.initialize(FileSystem.java:284)
+msx-conf 	at org.apache.hadoop.fs.FileSystem.primitiveMkdir(FileSystem.java:1279)
+msx-conf 	at org.apache.hadoop.fs.FilterFs.getFileStatus(FilterFs.java:122)
+msx-conf 	at org.apache.hadoop.fs.FilterFs.mkdir(FilterFs.java:212)
+msx-conf 	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+msx-conf 	at org.apache.hadoop.fs.FsTracer.get(FsTracer.java:45)
+msx-conf 	at org.apache.hadoop.fs.local.LocalFs.<init>(LocalFs.java:37)
+msx-conf 	at org.apache.hadoop.fs.local.LocalFs.<init>(LocalFs.java:51)
+msx-conf 	at org.apache.hadoop.fs.local.RawLocalFs.<init>(RawLocalFs.java:43)
+msx-conf 	at org.apache.hadoop.fs.local.RawLocalFs.<init>(RawLocalFs.java:57)
+msx-conf 	at org.apache.hadoop.fs.permission.FsPermission.getUMask(FsPermission.java:311)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:664)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:987)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:656)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.initialize(RawLocalFileSystem.java:99)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirs(RawLocalFileSystem.java:564)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.mkdirsWithOptionalPermission(RawLocalFileSystem.java:587)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:531)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.mkOneDirWithMode(RawLocalFileSystem.java:547)
+msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:860)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.addDefaultApps(HttpServer2.java:704)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.addDefaultApps(HttpServer2.java:712)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:433)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:446)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:449)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:452)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:460)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:467)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.createHttpChannelConnector(HttpServer2.java:489)
+msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.createHttpChannelConnector(HttpServer2.java:490)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.constructSecretProvider(HttpServer2.java:655)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.createWebAppContext(HttpServer2.java:640)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.getFilterInitializers(HttpServer2.java:681)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.getFilterInitializers(HttpServer2.java:688)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.getFilterProperties(HttpServer2.java:665)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:119)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:540)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:546)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:558)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:567)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:595)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:600)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:605)
+msx-conf 	at org.apache.hadoop.http.HttpServer2.start(HttpServer2.java:1155)
+msx-conf 	at org.apache.hadoop.http.lib.StaticUserWebFilter.getUsernameFromConf(StaticUserWebFilter.java:138)
+msx-conf 	at org.apache.hadoop.http.lib.StaticUserWebFilter.getUsernameFromConf(StaticUserWebFilter.java:147)
+msx-conf 	at org.apache.hadoop.http.lib.StaticUserWebFilter.initFilter(StaticUserWebFilter.java:126)
+msx-conf 	at org.apache.hadoop.io.nativeio.NativeIO.<clinit>(NativeIO.java:683)
+msx-conf 	at org.apache.hadoop.io.nativeio.NativeIO.initNative(NativeIO.java:-2)
+msx-conf 	at org.apache.hadoop.io.nativeio.NativeIO$POSIX.<clinit>(NativeIO.java:186)
+msx-conf 	at org.apache.hadoop.io.nativeio.NativeIO$POSIX.<clinit>(NativeIO.java:193)
+msx-conf 	at org.apache.hadoop.ipc.CallQueueManager.<init>(CallQueueManager.java:76)
+msx-conf 	at org.apache.hadoop.ipc.CallQueueManager.parseNumLevels(CallQueueManager.java:321)
+msx-conf 	at org.apache.hadoop.ipc.CallQueueManager.parseNumLevels(CallQueueManager.java:324)
+msx-conf 	at org.apache.hadoop.ipc.metrics.RpcMetrics.create(RpcMetrics.java:100)
+msx-conf 	at org.apache.hadoop.ipc.metrics.RpcMetrics.<init>(RpcMetrics.java:61)
+msx-conf 	at org.apache.hadoop.ipc.ProtobufRpcEngine.getServer(ProtobufRpcEngine.java:347)
+msx-conf 	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server.<init>(ProtobufRpcEngine.java:426)
+msx-conf 	at org.apache.hadoop.ipc.RPC$Builder.build(RPC.java:848)
+msx-conf 	at org.apache.hadoop.ipc.RPC.getProtocolEngine(RPC.java:213)
+msx-conf 	at org.apache.hadoop.ipc.RPC.getProtocolEngine(RPC.java:215)
+msx-conf 	at org.apache.hadoop.ipc.RPC$Server.<init>(RPC.java:1039)
+msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3631)
+msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3634)
+msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3637)
+msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3640)
+msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3643)
+msx-conf 	at org.apache.hadoop.ipc.Server.getAuthMethods(Server.java:3137)
+msx-conf 	at org.apache.hadoop.ipc.Server.getClientBackoffEnable(Server.java:733)
+msx-conf 	at org.apache.hadoop.ipc.Server.getQueueClass(Server.java:683)
+msx-conf 	at org.apache.hadoop.ipc.Server.getSchedulerClass(Server.java:691)
+msx-conf 	at org.apache.hadoop.ipc.Server.getSchedulerClass(Server.java:697)
+msx-conf 	at org.apache.hadoop.ipc.Server.getSchedulerClass(Server.java:706)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3027)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3032)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3036)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3042)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3046)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3052)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3053)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3054)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3058)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3062)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3066)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3069)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3070)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3072)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3076)
+msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3085)
+msx-conf 	at org.apache.hadoop.ipc.Server$Listener.<init>(Server.java:1173)
+msx-conf 	at org.apache.hadoop.security.AuthenticationFilterInitializer.getFilterConfigMap(AuthenticationFilterInitializer.java:72)
+msx-conf 	at org.apache.hadoop.security.AuthenticationFilterInitializer.getFilterConfigMap(AuthenticationFilterInitializer.java:79)
+msx-conf 	at org.apache.hadoop.security.AuthenticationFilterInitializer.initFilter(AuthenticationFilterInitializer.java:59)
+msx-conf 	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:451)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:102)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:106)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:107)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:113)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:116)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:119)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:122)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:128)
+msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:133)
+msx-conf 	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:166)
+msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:65)
+msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:80)
+msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:83)
+msx-conf 	at org.apache.hadoop.security.SaslPropertiesResolver.getInstance(SaslPropertiesResolver.java:54)
+msx-conf 	at org.apache.hadoop.security.SaslPropertiesResolver.getInstance(SaslPropertiesResolver.java:57)
+msx-conf 	at org.apache.hadoop.security.SaslPropertiesResolver.setConf(SaslPropertiesResolver.java:64)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.<clinit>(SecurityUtil.java:88)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:696)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.getLocalHostName(SecurityUtil.java:246)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.getLocalHostName(SecurityUtil.java:247)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.login(SecurityUtil.java:279)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:104)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:110)
+msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:99)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.createLoginUser(UserGroupInformation.java:723)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1730)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:571)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:660)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:316)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:319)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:326)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:337)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:342)
+msx-conf 	at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:365)
+msx-conf 	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+msx-conf 	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
+msx-conf 	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:108)
+msx-conf 	at org.apache.hadoop.service.CompositeService.serviceStart(CompositeService.java:121)
+msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.getInternal(TraceUtils.java:71)
+msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.get(TraceUtils.java:51)
+msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.get(TraceUtils.java:55)
+msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.get(TraceUtils.java:60)
+msx-conf 	at org.apache.hadoop.util.JvmPauseMonitor.serviceInit(JvmPauseMonitor.java:79)
+msx-conf 	at org.apache.hadoop.util.JvmPauseMonitor.serviceInit(JvmPauseMonitor.java:80)
+msx-conf 	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133)
+msx-conf 	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:137)
+msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:77)
+msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
+msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:96)
+msx-conf 	at org.apache.hadoop.yarn.api.records.impl.LightWeightResource.<init>(LightWeightResource.java:69)
+msx-conf 	at org.apache.hadoop.yarn.api.records.NodeId.newInstance(NodeId.java:41)
+msx-conf 	at org.apache.hadoop.yarn.api.records.Resource.newInstance(Resource.java:83)
+msx-conf 	at org.apache.hadoop.yarn.api.records.ResourceUtilization.newInstance(ResourceUtilization.java:40)
+msx-conf 	at org.apache.hadoop.yarn.conf.ConfigurationProviderFactory.getConfigurationProvider(ConfigurationProviderFactory.java:53)
+msx-conf 	at org.apache.hadoop.yarn.conf.HAUtil.isHAEnabled(HAUtil.java:78)
+msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.getSocketAddr(YarnConfiguration.java:3945)
+msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.getSocketAddr(YarnConfiguration.java:3948)
+msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.numaAwarenessEnabled(YarnConfiguration.java:4148)
+msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceEnabled(YarnConfiguration.java:4029)
+msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceV2Enabled(YarnConfiguration.java:4054)
+msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.updateConnectAddr(YarnConfiguration.java:3957)
+msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.useHttps(YarnConfiguration.java:3989)
+msx-conf 	at org.apache.hadoop.yarn.event.AsyncDispatcher.serviceInit(AsyncDispatcher.java:154)
+msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RecordFactoryPBImpl.newRecordInstance(RecordFactoryPBImpl.java:56)
+msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.createServer(RpcServerFactoryPBImpl.java:172)
+msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:115)
+msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:131)
+msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:83)
+msx-conf 	at org.apache.hadoop.yarn.factory.providers.RecordFactoryProvider.getRecordFactory(RecordFactoryProvider.java:49)
+msx-conf 	at org.apache.hadoop.yarn.factory.providers.RpcFactoryProvider.getServerFactory(RpcFactoryProvider.java:46)
+msx-conf 	at org.apache.hadoop.yarn.ipc.HadoopYarnProtoRPC.getServer(HadoopYarnProtoRPC.java:65)
+msx-conf 	at org.apache.hadoop.yarn.ipc.YarnRPC.create(YarnRPC.java:60)
+msx-conf 	at org.apache.hadoop.yarn.ipc.YarnRPC.create(YarnRPC.java:61)
+msx-conf 	at org.apache.hadoop.yarn.ipc.YarnRPC.getServer(YarnRPC.java:54)
+msx-conf 	at org.apache.hadoop.yarn.LocalConfigurationProvider.getConfigurationInputStream(LocalConfigurationProvider.java:44)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileController.extractRemoteRootLogDir(LogAggregationFileController.java:286)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileController.extractRemoteRootLogDir(LogAggregationFileController.java:288)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileController.extractRemoteRootLogDirSuffix(LogAggregationFileController.java:266)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileController.extractRemoteRootLogDirSuffix(LogAggregationFileController.java:269)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:122)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:128)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:133)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:139)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:68)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:84)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:87)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:94)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:97)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileController.initialize(LogAggregationFileController.java:123)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileController.initialize(LogAggregationFileController.java:136)
+msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileController.initialize(LogAggregationFileController.java:137)
+msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:66)
+msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:70)
+msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:77)
+msx-conf 	at org.apache.hadoop.yarn.server.api.protocolrecords.RegisterNodeManagerRequest.newInstance(RegisterNodeManagerRequest.java:65)
+msx-conf 	at org.apache.hadoop.yarn.server.api.records.ContainerQueuingLimit.newInstance(ContainerQueuingLimit.java:31)
+msx-conf 	at org.apache.hadoop.yarn.server.api.records.OpportunisticContainersStatus.newInstance(OpportunisticContainersStatus.java:34)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.ContainerExecutor.setConf(ContainerExecutor.java:108)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices.serviceInit(AuxServices.java:133)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.AuxServices.serviceInit(AuxServices.java:141)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.buildNodeId(ContainerManagerImpl.java:693)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.createAMRMProxyService(ContainerManagerImpl.java:329)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.createAMRMProxyService(ContainerManagerImpl.java:331)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.createContainerScheduler(ContainerManagerImpl.java:350)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.createContainersLauncher(ContainerManagerImpl.java:580)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.createContainersLauncher(ContainerManagerImpl.java:584)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.createLogHandler(ContainerManagerImpl.java:541)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.<init>(ContainerManagerImpl.java:251)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.<init>(ContainerManagerImpl.java:255)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.<init>(ContainerManagerImpl.java:269)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceInit(ContainerManagerImpl.java:303)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceInit(ContainerManagerImpl.java:314)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceInit(ContainerManagerImpl.java:317)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceInit(ContainerManagerImpl.java:319)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceInit(ContainerManagerImpl.java:323)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:603)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:627)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:630)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:632)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:636)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:642)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:643)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:662)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl.serviceStart(ContainerManagerImpl.java:668)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher.serviceInit(ContainersLauncher.java:108)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.getConfiguredResourceHandlerChain(ResourceHandlerModule.java:346)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.getNumaResourceHandler(ResourceHandlerModule.java:277)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.getTrafficControlBandwidthHandler(ResourceHandlerModule.java:170)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initCGroupsCpuResourceHandler(ResourceHandlerModule.java:145)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initCGroupsCpuResourceHandler(ResourceHandlerModule.java:148)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initDiskResourceHandler(ResourceHandlerModule.java:229)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initializeConfiguredResourceHandlerChain(ResourceHandlerModule.java:296)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initializeConfiguredResourceHandlerChain(ResourceHandlerModule.java:298)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initializeConfiguredResourceHandlerChain(ResourceHandlerModule.java:300)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initializeConfiguredResourceHandlerChain(ResourceHandlerModule.java:302)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initializeConfiguredResourceHandlerChain(ResourceHandlerModule.java:303)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initMemoryResourceHandler(ResourceHandlerModule.java:253)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initNetworkResourceHandler(ResourceHandlerModule.java:193)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.linux.resources.ResourceHandlerModule.initNetworkResourceHandler(ResourceHandlerModule.java:201)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$1.onDirsChanged(ResourceLocalizationService.java:286)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$2.onDirsChanged(ResourceLocalizationService.java:292)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.access$000(ResourceLocalizationService.java:150)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.access$600(ResourceLocalizationService.java:150)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.checkAndInitializeLocalDirs(ResourceLocalizationService.java:1621)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.checkLocalDir(ResourceLocalizationService.java:1647)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.cleanupLogDir(ResourceLocalizationService.java:1477)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.cleanupLogDirs(ResourceLocalizationService.java:1468)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.createLocalizerExecutor(ResourceLocalizationService.java:837)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.createLocalizerTracker(ResourceLocalizationService.java:399)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.createServer(ResourceLocalizationService.java:404)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.createServer(ResourceLocalizationService.java:409)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.createServer(ResourceLocalizationService.java:411)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.createServer(ResourceLocalizationService.java:415)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.getLocalFileContext(ResourceLocalizationService.java:225)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.initializeLocalDir(ResourceLocalizationService.java:1424)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.initializeLocalDir(ResourceLocalizationService.java:1425)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.initializeLocalDirs(ResourceLocalizationService.java:1402)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.initializeLogDir(ResourceLocalizationService.java:1455)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.initializeLogDirs(ResourceLocalizationService.java:1449)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$LocalizerTracker.<init>(ResourceLocalizationService.java:731)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$LocalizerTracker.<init>(ResourceLocalizationService.java:737)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$PublicLocalizer.<init>(ResourceLocalizationService.java:858)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService$PublicLocalizer.<init>(ResourceLocalizationService.java:862)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:248)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:251)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:254)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:259)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:260)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:261)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:271)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:273)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:274)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceInit(ResourceLocalizationService.java:280)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceStart(ResourceLocalizationService.java:385)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceStart(ResourceLocalizationService.java:388)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceStart(ResourceLocalizationService.java:394)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.serviceStart(ResourceLocalizationService.java:395)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService.validateConf(ResourceLocalizationService.java:233)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.sharedcache.SharedCacheUploadService.serviceInit(SharedCacheUploadService.java:68)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.NonAggregatingLogHandler.createScheduledThreadPoolExecutor(NonAggregatingLogHandler.java:221)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.NonAggregatingLogHandler.serviceInit(NonAggregatingLogHandler.java:93)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.loghandler.NonAggregatingLogHandler.serviceInit(NonAggregatingLogHandler.java:95)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.isContainerMonitorEnabled(ContainersMonitorImpl.java:251)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:132)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:133)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:137)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:140)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:147)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:150)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:152)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:157)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:161)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:171)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:178)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:181)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:184)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:187)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:217)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl.serviceInit(ContainersMonitorImpl.java:221)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.resourceplugin.ResourcePluginManager.getPluginsFromConfig(ResourcePluginManager.java:70)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.resourceplugin.ResourcePluginManager.initialize(ResourcePluginManager.java:59)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.AllocationBasedResourceUtilizationTracker.<init>(AllocationBasedResourceUtilizationTracker.java:41)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler.<init>(ContainerScheduler.java:101)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler.<init>(ContainerScheduler.java:125)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler.<init>(ContainerScheduler.java:168)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler.<init>(ContainerScheduler.java:171)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler.serviceInit(ContainerScheduler.java:138)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.scheduler.ContainerScheduler.serviceInit(ContainerScheduler.java:154)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.<init>(DefaultContainerExecutor.java:93)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DeletionService.serviceInit(DeletionService.java:177)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DeletionService.serviceInit(DeletionService.java:179)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DirectoryCollection.createDir(DirectoryCollection.java:518)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DirectoryCollection.createNonExistentDirs(DirectoryCollection.java:340)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DirectoryCollection.<init>(DirectoryCollection.java:184)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DirectoryCollection.registerDirsChangeListener(DirectoryCollection.java:215)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:124)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:128)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:141)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:145)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:146)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:152)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:153)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:158)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:161)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService$MonitoringTimerTask.<init>(LocalDirsHandlerService.java:168)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.registerLocalDirsChangeListener(LocalDirsHandlerService.java:263)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.registerLogDirsChangeListener(LocalDirsHandlerService.java:267)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.serviceInit(LocalDirsHandlerService.java:208)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.serviceInit(LocalDirsHandlerService.java:211)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.serviceInit(LocalDirsHandlerService.java:212)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.serviceInit(LocalDirsHandlerService.java:214)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.serviceInit(LocalDirsHandlerService.java:222)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.serviceInit(LocalDirsHandlerService.java:227)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.LocalDirsHandlerService.serviceInit(LocalDirsHandlerService.java:228)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.logaggregation.tracker.NMLogAggregationStatusTracker.<init>(NMLogAggregationStatusTracker.java:68)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.logaggregation.tracker.NMLogAggregationStatusTracker.<init>(NMLogAggregationStatusTracker.java:77)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeHealthCheckerService.serviceInit(NodeHealthCheckerService.java:59)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createContainerExecutor(NodeManager.java:384)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createContainerExecutor(NodeManager.java:385)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createNMContext(NodeManager.java:282)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createNMContext(NodeManager.java:285)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createNMLogAggregationStatusTracker(NodeManager.java:1077)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createNodeAttributesProvider(NodeManager.java:179)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createNodeLabelsProvider(NodeManager.java:217)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.doSecureLogin(NodeManager.java:301)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.getNodeHealthScriptRunner(NodeManager.java:358)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.initAndStartRecoveryStore(NodeManager.java:307)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager$NMContext.<init>(NodeManager.java:681)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager$NMContext.<init>(NodeManager.java:707)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:397)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:398)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:403)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:411)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:419)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:424)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:427)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:431)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:434)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:448)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:458)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:464)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:475)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:480)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:505)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:518)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:525)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManagerTestBase.<clinit>(NodeManagerTestBase.java:66)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManagerTestBase.createNMConfig(NodeManagerTestBase.java:70)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManagerTestBase.createNMConfig(NodeManagerTestBase.java:82)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManagerTestBase.setUp(NodeManagerTestBase.java:162)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl.serviceInit(NodeResourceMonitorImpl.java:69)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeResourceMonitorImpl.serviceInit(NodeResourceMonitorImpl.java:73)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.isTokenKeepAliveEnabled(NodeStatusUpdaterImpl.java:353)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.registerWithRM(NodeStatusUpdaterImpl.java:394)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.registerWithRM(NodeStatusUpdaterImpl.java:416)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:189)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:192)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:209)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:217)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:219)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:222)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:235)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:254)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceInit(NodeStatusUpdaterImpl.java:257)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl.serviceStart(NodeStatusUpdaterImpl.java:272)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.security.NMContainerTokenSecretManager.<init>(NMContainerTokenSecretManager.java:68)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater$7$1.<init>(TestNodeStatusUpdater.java:1190)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater$7.createContainerManager(TestNodeStatusUpdater.java:1189)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater.deleteBaseDir(TestNodeStatusUpdater.java:898)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater.deleteBaseDir(TestNodeStatusUpdater.java:899)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater$MyResourceTracker2.registerNodeManager(TestNodeStatusUpdater.java:529)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater.testStopReentrant(TestNodeStatusUpdater.java:1201)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater.testStopReentrant(TestNodeStatusUpdater.java:1202)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeStatusUpdater.testStopReentrant(TestNodeStatusUpdater.java:1203)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getConfiguredMemoryMB(NodeManagerHardwareUtils.java:250)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getConfiguredVCores(NodeManagerHardwareUtils.java:154)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getContainerMemoryMB(NodeManagerHardwareUtils.java:274)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getContainerMemoryMB(NodeManagerHardwareUtils.java:275)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getContainerMemoryMB(NodeManagerHardwareUtils.java:304)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getContainerMemoryMB(NodeManagerHardwareUtils.java:305)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getNodeCpuPercentage(NodeManagerHardwareUtils.java:137)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getNodeResources(NodeManagerHardwareUtils.java:350)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getNodeResources(NodeManagerHardwareUtils.java:352)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getNodeResources(NodeManagerHardwareUtils.java:366)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getNodeResources(NodeManagerHardwareUtils.java:378)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getVCores(NodeManagerHardwareUtils.java:178)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getVCores(NodeManagerHardwareUtils.java:179)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getVCores(NodeManagerHardwareUtils.java:209)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.getVCores(NodeManagerHardwareUtils.java:210)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.util.NodeManagerHardwareUtils.isHardwareDetectionEnabled(NodeManagerHardwareUtils.java:47)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices.<clinit>(NMWebServices.java:102)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices$$FastClassByGuice$$84485dc9.newInstance(<generated>:-1)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices.<init>(NMWebServices.java:122)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices.<init>(NMWebServices.java:125)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.NMWebServices.<init>(NMWebServices.java:126)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.WebServer.serviceStart(WebServer.java:112)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.WebServer.serviceStart(WebServer.java:67)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.WebServer.serviceStart(WebServer.java:69)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.WebServer.serviceStart(WebServer.java:71)
+msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.webapp.WebServer.serviceStart(WebServer.java:83)
+msx-conf 	at org.apache.hadoop.yarn.server.security.ApplicationACLsManager.<init>(ApplicationACLsManager.java:60)
+msx-conf 	at org.apache.hadoop.yarn.server.security.BaseContainerTokenSecretManager.<init>(BaseContainerTokenSecretManager.java:63)
+msx-conf 	at org.apache.hadoop.yarn.util.Records.<clinit>(Records.java:33)
+msx-conf 	at org.apache.hadoop.yarn.util.Records.newRecord(Records.java:36)
+msx-conf 	at org.apache.hadoop.yarn.util.ResourceCalculatorPlugin.getContainersMonitorPlugin(ResourceCalculatorPlugin.java:213)
+msx-conf 	at org.apache.hadoop.yarn.util.ResourceCalculatorPlugin.getContainersMonitorPlugin(ResourceCalculatorPlugin.java:216)
+msx-conf 	at org.apache.hadoop.yarn.util.ResourceCalculatorPlugin.getNodeResourceMonitorPlugin(ResourceCalculatorPlugin.java:234)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.addResourcesFileToConf(ResourceUtils.java:434)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getAllocation(ResourceUtils.java:199)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getAllocation(ResourceUtils.java:204)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getConfInputStream(ResourceUtils.java:412)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getConfInputStream(ResourceUtils.java:419)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getConfInputStream(ResourceUtils.java:421)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getNodeResourceInformation(ResourceUtils.java:510)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getNodeResourceInformation(ResourceUtils.java:514)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getNumberOfKnownResourceTypes(ResourceUtils.java:367)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getResourceInformationMapFromConfig(ResourceUtils.java:244)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.getResourceInformationMapFromConfig(ResourceUtils.java:286)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.initializeNodeResourceInformation(ResourceUtils.java:527)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.initializeResourcesMap(ResourceUtils.java:294)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.initializeResourceTypesIfNeeded(ResourceUtils.java:379)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.initializeResourceTypesIfNeeded(ResourceUtils.java:394)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.initializeResourceTypesIfNeeded(ResourceUtils.java:395)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.setAllocationForMandatoryResources(ResourceUtils.java:172)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.setAllocationForMandatoryResources(ResourceUtils.java:177)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.setAllocationForMandatoryResources(ResourceUtils.java:185)
+msx-conf 	at org.apache.hadoop.yarn.util.resource.ResourceUtils.setAllocationForMandatoryResources(ResourceUtils.java:190)
+msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getHttpSchemePrefix(WebAppUtils.java:441)
+msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getNMWebAppURLWithoutScheme(WebAppUtils.java:346)
+msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getNMWebAppURLWithoutScheme(WebAppUtils.java:350)
+msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getWebAppBindURL(WebAppUtils.java:331)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:302)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:310)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:328)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:341)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:354)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:367)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:369)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.getConfigParameters(WebApps.java:419)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.hasXFSEnabled(WebApps.java:415)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.start(WebApps.java:428)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.start(WebApps.java:432)
+msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.start(WebApps.java:439)
+msx-conf 	at org.apache.htrace.core.Tracer$Builder.build(Tracer.java:158)
+msx-conf 	at org.apache.htrace.core.Tracer$Builder.build(Tracer.java:159)
+msx-conf 	at org.apache.htrace.core.Tracer$Builder.build(Tracer.java:163)
+msx-conf 	at org.apache.htrace.core.Tracer$Builder.loadSamplers(Tracer.java:85)
+msx-conf 	at org.apache.htrace.core.Tracer$Builder.loadSpanReceivers(Tracer.java:111)
+msx-conf 	at org.apache.htrace.core.TracerId.<init>(TracerId.java:75)
+msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+msx-conf 	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+msx-conf 	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+msx-conf 	at org.eclipse.jetty.server.Server.doStart(Server.java:394)
+msx-conf 	at org.eclipse.jetty.server.Server.start(Server.java:427)
+msx-conf 	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+msx-conf 	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+msx-conf 	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:349)
+msx-conf 	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:873)
+msx-conf 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+msx-conf 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:105)
+msx-conf 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:113)
+msx-conf 	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131)
+msx-conf 	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:522)
+msx-conf 	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1368)
+msx-conf 	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1406)
+msx-conf 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+msx-conf 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+msx-conf 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+msx-conf 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+msx-conf 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+msx-conf 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:244)
+msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:195)
+msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:241)
+msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+msx-conf 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+msx-conf 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+msx-conf 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+msx-conf 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+msx-conf 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+msx-conf 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+msx-conf 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+msx-conf 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+msx-conf 	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+msx-conf 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+msx-conf 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+msx-conf 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java:-2)
+msx-conf 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+msx-conf 	at sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+msx-conf 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+msx-conf bind.address is used by non-component-thread 1 as NodeManager
+msx-conf core-default.xml is used by non-component-thread 1 as NodeManager
+msx-conf core-default.xml is used by non-component-thread 1 as Other
+msx-conf core-site.xml is used by non-component-thread 1 as NodeManager
+msx-conf core-site.xml is used by non-component-thread 1 as Other
+msx-conf dfs.web.ugi is used by non-component-thread 1 as NodeManager
+msx-conf fs.AbstractFileSystem.file.impl is used by non-component-thread 1 as NodeManager
+msx-conf fs.AbstractFileSystem.file.impl is used by non-component-thread 1 as Other
+msx-conf fs.client.htrace.sampler.classes is used by non-component-thread 1 as NodeManager
+msx-conf fs.client.htrace.span.receiver.classes is used by non-component-thread 1 as NodeManager
+msx-conf fs.client.htrace.tracer.id is used by non-component-thread 1 as NodeManager
+msx-conf fs.client.resolve.remote.symlinks is used by non-component-thread 1 as NodeManager
+msx-conf fs.client.resolve.remote.symlinks is used by non-component-thread 1 as Other
+msx-conf fs.local.block.size is used by non-component-thread 1 as NodeManager
+msx-conf fs.local.block.size is used by non-component-thread 1 as Other
+msx-conf fs.permissions.umask-mode is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.htrace.sampler.classes is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.htrace.span.receiver.classes is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.htrace.tracer.id is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.acceptor.count is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.authentication.kerberos.keytab is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.authentication.kerberos.principal is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.authentication.signature.secret.file is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.authentication.simple.anonymous.allowed is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.authentication.token.validity is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.authentication.type is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.filter.initializers is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.idle_timeout.ms is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.logs.enabled is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.max.request.header.size is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.max.response.header.size is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.max.threads is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.selector.count is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.socket.backlog.size is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.staticuser.user is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.http.temp.dir is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.jetty.logs.serve.aliases is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.kerberos.min.seconds.before.relogin is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.rpc.protection is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.authentication is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.authorization is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.auth_to_local is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.auth_to_local.mechanism is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.dns.interface is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.dns.log-slow-lookups.enabled is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.dns.log-slow-lookups.threshold.ms is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.dns.nameserver is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.group.mapping is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.groups.cache.background.reload is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.groups.cache.background.reload.threads is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.groups.cache.secs is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.groups.cache.warn.after.ms is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.groups.negative-cache.secs is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.saslproperties.resolver.class is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.token.service.use_ip is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.security.uid.cache.secs is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.token.files is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.user.group.metrics.percentiles.intervals is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.user.group.static.mapping.overrides is used by non-component-thread 1 as NodeManager
+msx-conf hadoop.workaround.non.threadsafe.getpwuid is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49160.backoff.enable is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49160.callqueue.impl is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49160.faircallqueue.priority-levels is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49160.scheduler.impl is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49160.scheduler.priority.levels is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49170.backoff.enable is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49170.callqueue.impl is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49170.faircallqueue.priority-levels is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49170.scheduler.impl is used by non-component-thread 1 as NodeManager
+msx-conf ipc.49170.scheduler.priority.levels is used by non-component-thread 1 as NodeManager
+msx-conf ipc.client.connection.idle-scan-interval.ms is used by non-component-thread 1 as NodeManager
+msx-conf ipc.client.connection.maxidletime is used by non-component-thread 1 as NodeManager
+msx-conf ipc.client.idlethreshold is used by non-component-thread 1 as NodeManager
+msx-conf ipc.client.kill.max is used by non-component-thread 1 as NodeManager
+msx-conf ipc.maximum.data.length is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.handler.queue.size is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.listen.queue.size is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.log.slow.rpc is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.max.connections is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.max.response.size is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.read.connection-queue.size is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.read.threadpool.size is used by non-component-thread 1 as NodeManager
+msx-conf ipc.server.tcpnodelay is used by non-component-thread 1 as NodeManager
+msx-conf  is used by component-thread 92 as NodeManager
+msx-conf jvm.pause.info-threshold.ms is used by non-component-thread 1 as NodeManager
+msx-conf jvm.pause.warn-threshold.ms is used by non-component-thread 1 as NodeManager
+msx-conf node-resources.xml is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.fs.local.LocalFs is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.fs.local.LocalFs is used by non-component-thread 1 as Other
+msx-conf org.apache.hadoop.http.lib.StaticUserWebFilter is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.ipc.ProtobufRpcEngine is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.mapred.JobConf is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.security.AuthenticationFilterInitializer is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.api.impl.pb.service.ContainerManagementProtocolPBServiceImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.api.records.impl.pb.NodeIdPBImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.api.records.impl.pb.ResourceUtilizationPBImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.LocalConfigurationProvider is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.logaggregation.filecontroller.tfile.LogAggregationTFileController is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.proto.ContainerManagementProtocol$ContainerManagementProtocolService is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.proto.LocalizationProtocol$LocalizationProtocolService is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.NodeHeartbeatRequestPBImpl is used by component-thread 91 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.NodeHeartbeatResponsePBImpl is used by component-thread 91 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.RegisterNodeManagerRequestPBImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.protocolrecords.impl.pb.RegisterNodeManagerResponsePBImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.records.impl.pb.ContainerQueuingLimitPBImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.records.impl.pb.NodeStatusPBImpl is used by component-thread 91 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.api.records.impl.pb.OpportunisticContainersStatusPBImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.nodemanager.api.impl.pb.service.LocalizationProtocolPBServiceImpl is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainersLauncher is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor is used by non-component-thread 1 as NodeManager
+msx-conf org.apache.hadoop.yarn.server.nodemanager.util.DefaultLCEResourcesHandler is used by non-component-thread 1 as NodeManager
+msx-conf resource-types.xml is used by non-component-thread 1 as NodeManager
+msx-conf resource-types.xml is used by non-component-thread 1 as Other
+msx-conf rpc.engine.org.apache.hadoop.yarn.api.ContainerManagementProtocolPB is used by non-component-thread 1 as NodeManager
+msx-conf rpc.engine.org.apache.hadoop.yarn.server.nodemanager.api.LocalizationProtocolPB is used by non-component-thread 1 as NodeManager
+msx-conf rpc.metrics.percentiles.intervals is used by non-component-thread 1 as NodeManager
+msx-conf this is non-component-thread calling stacktrace:
+msx-conf yarn.acl.enable is used by non-component-thread 1 as NodeManager
+msx-conf yarn.admin.acl is used by non-component-thread 1 as NodeManager
+msx-conf yarn-default.xml is used by non-component-thread 1 as NodeManager
+msx-conf yarn-default.xml is used by non-component-thread 1 as Other
+msx-conf yarn.dispatcher.print-events-info.threshold is used by non-component-thread 1 as NodeManager
+msx-conf yarn.http.policy is used by non-component-thread 1 as NodeManager
+msx-conf yarn.ipc.record.factory.class is used by component-thread 91 as NodeManager
+msx-conf yarn.ipc.record.factory.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.ipc.record.factory.class is used by non-component-thread 1 as Other
+msx-conf yarn.ipc.rpc.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.ipc.server.factory.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.log-aggregation-enable is used by non-component-thread 1 as NodeManager
+msx-conf yarn.log-aggregation.file-controller.TFile.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.log-aggregation.file-formats is used by non-component-thread 1 as NodeManager
+msx-conf yarn.log-aggregation-status.time-out.ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.log-aggregation.TFile.remote-app-log-dir is used by non-component-thread 1 as NodeManager
+msx-conf yarn.log-aggregation.TFile.remote-app-log-dir-suffix is used by non-component-thread 1 as NodeManager
+msx-conf yarn.log.server.web-service.url is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nm.liveness-monitor.expiry-interval-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.address is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.amrmproxy.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.aux-services is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.bind-host is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-executor.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-manager.thread-count is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-metrics.enable is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-metrics.period-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-metrics.unregister-delay-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-monitor.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-monitor.interval-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-monitor.process-tree.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-monitor.resource-calculator.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.containers-launcher.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.container-state-transition-listener.classes is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.delete.debug-delay-sec is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.delete.thread-count is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.disk-health-checker.disk-utilization-watermark-low-per-disk-percentage is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.disk-health-checker.enable is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.disk-health-checker.interval-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.disk-health-checker.min-healthy-disks is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.disk-validator is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.distributed-scheduling.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.duration-to-track-stopped-containers is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.elastic-memory-control.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.env-whitelist is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.health-checker.script.path is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.hostname is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.linux-container-executor.resources-handler.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.local-cache.max-files-per-directory is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.local-dirs is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.localizer.address is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.localizer.cache.cleanup.interval-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.localizer.cache.target-size-mb is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.localizer.client.thread-count is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.localizer.fetch.thread-count is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.log-aggregation.num-log-files-per-app is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.log.deletion-threads-count is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.log-dirs is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.log.retain-seconds is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.network-tagging-handler.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.node-attributes.provider is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.node-labels.provider is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.numa-awareness.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.opportunistic-containers-max-queue-length is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.opportunistic-containers-use-pause-for-preemption is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.pmem-check-enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.process-kill-wait.ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.recovery.enabled is used by component-thread 92 as NodeManager
+msx-conf yarn.nodemanager.recovery.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.remote-app-log-dir is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.remote-app-log-dir-suffix is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource-calculator.class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.cpu.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.cpu-vcores is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.detect-hardware-capabilities is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.disk.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resourcemanager.minimum.version is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.memory.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.memory.enforced is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.memory-mb is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource-monitor.interval-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.network.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource.percentage-physical-cpu-limit is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.resource-plugins is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.sleep-delay-before-sigkill.ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.vmem-check-enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.vmem-pmem-ratio is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.webapp.address is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.webapp.cross-origin.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.webapp.rest-csrf.custom-header is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.webapp.rest-csrf.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.webapp.rest-csrf.methods-to-ignore is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.webapp.spnego-principal is used by non-component-thread 1 as NodeManager
+msx-conf yarn.nodemanager.webapp.xfs-filter.xframe-options is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resourcemanager.configuration.provider-class is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resourcemanager.ha.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resourcemanager.rm.container-allocation.expiry-interval-ms is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resourcemanager.work-preserving-recovery.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resource-types is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resource-types.memory-mb.maximum-allocation is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resource-types.memory-mb.minimum-allocation is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resource-types.vcores.maximum-allocation is used by non-component-thread 1 as NodeManager
+msx-conf yarn.resource-types.vcores.minimum-allocation is used by non-component-thread 1 as NodeManager
+msx-conf yarn.scheduler.maximum-allocation-mb is used by non-component-thread 1 as NodeManager
+msx-conf yarn.scheduler.maximum-allocation-vcores is used by non-component-thread 1 as NodeManager
+msx-conf yarn.scheduler.minimum-allocation-mb is used by non-component-thread 1 as NodeManager
+msx-conf yarn.scheduler.minimum-allocation-vcores is used by non-component-thread 1 as NodeManager
+msx-conf yarn.sharedcache.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn-site.xml is used by non-component-thread 1 as NodeManager
+msx-conf yarn-site.xml is used by non-component-thread 1 as Other
+msx-conf yarn.timeline-service.enabled is used by non-component-thread 1 as NodeManager
+msx-conf yarn.webapp.filter-entity-list-by-user is used by non-component-thread 1 as NodeManager
+msx-conf yarn.webapp.xfs-filter.enabled is used by non-component-thread 1 as NodeManager
