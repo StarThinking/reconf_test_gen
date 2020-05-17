@@ -27,6 +27,7 @@ do
     do
 	if [ "$j" == "$i" ]; then
             common_count=$(( common_count + 1 ))
+            list_common+=("$i")
 	    break
         fi
     done
@@ -63,6 +64,9 @@ do
 done
 echo "unique in $2: $list2_uniq_count"
 
+echo '----------------------------------------------------------------------'
+echo "common list:"
+for i in ${list_common[@]}; do echo $i; done
 echo '----------------------------------------------------------------------'
 echo "unique list in $1:"
 for i in ${list1_uniq[@]}; do echo $i; done
