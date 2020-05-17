@@ -32,20 +32,22 @@ parameter_file=$2
 
 if [ ! -f $parameter_file ]; then echo "wrong: $parameter_file not exist!"; exit -1; fi
 
-parameters=( $(cat $parameter_file) )
-v1='true'
-v2='false'
-parameter_entries=$(cat $parameter_file)
+#parameters=( $(cat $parameter_file) )
+#v1='true'
+#v2='false'
+parameter_entries=( $(cat $parameter_file) )
+para_num=${#parameter_entries[@]}
+echo "para_num = $para_num"
 
 component_array="$component_project"_components[@]
 components=( $(for c in ${!component_array}; do echo $c; done) ) # dynamically create a new array
-op_count=0 # global
 root_dir='/root/reconf_test_gen'
-whitelist_file="/root/reconf_test_gen/""$component_project""/whitelist.txt"
+white_list_file="/root/reconf_test_gen/""$component_project""/xml/white_list.txt"
+if [ ! -f $white_list_file ]; then echo "$white_list_file not exists, exit."; exit -1; fi
 
-function is_in_whitelist {
+function is_in_white_list {
     parameter=$1
-    if [ "$(grep ^"$parameter"$ $whitelist_file)" != "" ]; then
+    if [ "$(grep ^"$parameter"$ $white_list_file)" != "" ]; then
 	return 1
     else
 	return 0
@@ -74,11 +76,12 @@ function para_used_in_test {
     if [ "$paramter_test_mappping_enable" == "false" ]; then return 1; fi
 
     used=0
-    if [ "$(grep $parameter $log_file)" != "" ]; then used=1; fi
+    if [ "$(grep " $parameter " $log_file)" != "" ]; then used=1; fi
     return $used
 }
 
 function get_tests_by_component_project {
+    local_op_count=0
     parameter=$1
     component=$2
     v1=$3
@@ -107,53 +110,56 @@ function get_tests_by_component_project {
 	    do
     	        #echo "$parameter $component $v1 $v2 $test_project $test $init_p"
     	        #echo "$parameter $component $v2 $v1 $test_project $test $init_p"
-	        op_count=$(( op_count + 2 ))
+	        local_op_count=$(( local_op_count + 2 ))
  	    done
         done
     done
+    echo $local_op_count
 }
 
 function c2t_reduce {
     echo "c2t_reduce: "
-    op_count=0
+    op_count_sum=0
     paramter_test_mappping_enable='false'
     para='dummy'
 
     for compo in ${components[@]}
     do
-        get_tests_by_component_project $para $compo
+        ops=$(get_tests_by_component_project $para $compo)
+	op_count_sum=$(( op_count_sum + ops ))
     done
-    para_num=${#parameters[@]}
-    echo para_num = $para_num
-    op_count=$(( op_count * para_num ))
-    echo $op_count
+    op_count_sum=$(( op_count_sum * para_num ))
+    echo $op_count_sum
 }
 
 function c2t_plus_p2t_reduce {
     echo "c2t_plus_p2t_reduce: "
-    op_count=0
+    op_count_sum=0
     paramter_test_mappping_enable='true'
     for entry in ${parameter_entries[@]}
     do
-	para=$(echo $entry | awk -F ' ' '{print $1}')
+        para=$(echo $entry | awk -F ' ' '{print $1}')
 	values=$(echo $entry | cut -d ' ' -f 2-)
 	#echo "values = ${values[@]}"
 	v_pairs=( $(get_combo $values) )
 	
-	is_in_whitelist $para
+	is_in_white_list $para
 	if [ $? -eq 1 ]; then continue; fi
         
-	for pair in ${v_pairs[@]}; do
-	v1=$(echo $pair | awk -F ' ' '{print $1}')
-	v2=$(echo $pair | awk -F ' ' '{print $2}')
-	for compo in ${components[@]}
-        do
-           get_tests_by_component_project $para $compo $v1 $v2
-        done; done
+	for pair in ${v_pairs[@]}
+ 	do
+	    v1=$(echo $pair | awk -F ' ' '{print $1}')
+	    v2=$(echo $pair | awk -F ' ' '{print $2}')
+	    for compo in ${components[@]}
+            do
+        	ops=$(get_tests_by_component_project $para $compo)
+		op_count_sum=$(( op_count_sum + ops ))
+            done
+	done
     done
-    echo $op_count
+    echo $op_count_sum
 }
 
-c2t_reduce
+#c2t_reduce
 
 c2t_plus_p2t_reduce
