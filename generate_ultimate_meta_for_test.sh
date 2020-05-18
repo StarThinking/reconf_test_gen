@@ -15,11 +15,17 @@ if [ ! -f $component_log ] || [ ! -f $parameter_log ]; then echo 'no component_l
 num=$(cat "$component_log" | grep 'conf with hashCode' | wc -l)
 component_conf_hc_array=( $(cat "$component_log" | grep 'conf with hashCode' | awk '{print $(NF-2)}') )
 component_name_array=( $(cat "$component_log" | grep 'conf with hashCode' | awk '{print $NF}') )
-#for i in $(seq 0 $(( num - 1 )))
-#do
-#    echo "hc: ${component_conf_hc_array[$i]}"
-#    echo "name: ${component_name_array[$i]}"
-#done
+
+declare -A hashmap
+
+for i in $(seq 0 $(( num - 1 )))
+do
+    hc=${component_conf_hc_array[$i]}
+    name=${component_name_array[$i]}
+    hashmap["$hc"]="$name"
+    #echo "hc: ${component_conf_hc_array[$i]}"
+    #echo "name: ${component_name_array[$i]}"
+done
 
 function get_component_name_by_conf_hc {    
     hc=$1
@@ -48,9 +54,15 @@ function main {
         para=$(echo $line | awk '{print $3}')
 	conf_hc=$(echo $line | awk '{print $(NF-2)}')
 	returnValue=$(echo $line | awk '{print $(NF)}')
-        component=$(get_component_name_by_conf_hc $conf_hc)
-        echo "$para $component $returnValue"
+	if [ "$returnValue" == "null" ]; then continue; fi
+        #component=$(get_component_name_by_conf_hc $conf_hc)
+        component=${hashmap["$conf_hc"]}
+	if [ "$component" == "" ]; then
+	    echo "$para OtherComponent $returnValue"
+        else
+            echo "$para $component $returnValue"
+	fi
     done
 }
 
-main | sort -k1 -k2 -k3 | sort -u > ./"$test_name"-ultimate-meta.txt
+main | sort -u | sort -k1 -k2 > ./"$test_name"-ultimate-meta.txt
