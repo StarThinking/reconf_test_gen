@@ -3,6 +3,8 @@
 function copy_jar_for_hadoop {
     hadoop_version=$1
     # Hadoop Common, Configuration and Reconf Agent
+    # move hacked hadoop-common to target
+    cp /root/reconf_test_gen/javassist_study/conf_return/hadoop-common-"$hadoop_version".jar /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/
     cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
     ls -la /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/ | grep "jar"$
     echo ''

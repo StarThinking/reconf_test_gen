@@ -7,7 +7,6 @@ public class Convert {
     private static List<String> myGetMethods = new ArrayList<String>();
 
     static {
-
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.get(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getTrimmed(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getRaw(");
@@ -56,9 +55,9 @@ public class Convert {
 		    if (cm.getLongName().startsWith(get)) {
 		    	    //System.out.println("cm name: " + cm.getLongName());
 			//cm.insertAfter( "LOG.info( \"msx-conf return value \" + $_ );");
-			//cm.insertAfter( "whoInvokesMe(name, String.valueOf($_));");
+			cm.insertAfter( "whoInvokesMe(name, String.valueOf($_));");
 			//cm.insertAfter("System.out.println(\"msx-conf message from javassist\");");
-			cm.insertAfter( "System.out.println( \"its \" + $_ );");
+			//cm.insertAfter( "System.out.println( \"its \" + $_ );");
 			//cm.insertAfter( "System.exit(-1);");
 			break;
 		    }

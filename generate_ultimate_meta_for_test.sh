@@ -37,17 +37,18 @@ function get_component_name_by_conf_hc {
 }
 
 function main {
-    parameter_log_line_element=6
+    parameter_log_line_element=9
     
     for line in $(cat $parameter_log)
     do
         element_num=$(echo $line | awk '{print NF}')
         if [ $element_num -ne $parameter_log_line_element ]; then continue; fi
-        para=$(echo $line | awk '{print $2}')
-        conf_hc=$(echo $line | awk '{print $NF}')
+        para=$(echo $line | awk '{print $3}')
+	conf_hc=$(echo $line | awk '{print $(NF-2)}')
+	returnValue=$(echo $line | awk '{print $(NF)}')
         component=$(get_component_name_by_conf_hc $conf_hc)
-        echo "$para $component"
+        echo "$para $component $returnValue"
     done
 }
 
-main | sort -k1 -k2 | uniq -c  > ./"$test_name"-ultimate-meta.txt
+main | sort -k1 -k2 -k3  > ./"$test_name"-ultimate-meta.txt

@@ -34,18 +34,19 @@ function get_component_name_by_conf_hc {
     fi
 }
 
-parameter_log_line_element=6
+parameter_log_line_element=9
 #compo_uniq=( $(echo ${component_name_array[@]} | tr ' ' '\n' | sort -u) )
 #compo_uniq+=('OtherComponent')
 
+#msx-conf parameter ipc.client.low-latency getMethod get conf-hashcode 1445424568 returnValue false
 rm ./tmp/*
 
 for line in $(cat $parameter_log)
 do
     element_num=$(echo $line | awk '{print NF}')
     if [ $element_num -ne $parameter_log_line_element ]; then continue; fi
-    para=$(echo $line | awk '{print $2}')
-    conf_hc=$(echo $line | awk '{print $NF}')
+    para=$(echo $line | awk '{print $3}')
+    conf_hc=$(echo $line | awk '{print $(NF-2)}')
     component=$(get_component_name_by_conf_hc $conf_hc)
     echo "$para" >> ./tmp/"$component"
 done
