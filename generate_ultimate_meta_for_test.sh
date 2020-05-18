@@ -2,11 +2,13 @@
 
 IFS=$'\n'
 
-if [ $# -ne 1 ]; then echo 'wrong: [test_name]'; exit -1; fi
+if [ $# -ne 2 ]; then echo 'wrong: [dir] [test_name]'; exit -1; fi
 
-test_name=$1
-component_log="$test_name"-component-meta.txt
-parameter_log="$test_name"-parameter-meta.txt
+dir=$1
+output_log=$2
+test_name=$(echo $output_log | awk -F '-output.txt' '{print $1}')
+component_log="$dir"/"$test_name"-component-meta.txt
+parameter_log="$dir"/"$test_name"-parameter-meta.txt
 
 num=$(cat "$component_log" | grep 'conf with hashCode' | wc -l)
 component_conf_hc_array=( $(cat "$component_log" | grep 'conf with hashCode' | awk '{print $(NF-2)}') )
@@ -48,4 +50,4 @@ function main {
     done
 }
 
-main | sort -k1 -k2 | uniq -c 
+main | sort -k1 -k2 | uniq -c  > ./"$test_name"-ultimate-meta.txt
