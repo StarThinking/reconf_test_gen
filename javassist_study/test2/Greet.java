@@ -17,4 +17,12 @@ public class Greet{
      System.out.println("count : "+knowncount);
    }
 
+   public String getBoolean() {
+	return "Hello Boolean";
+   }
+   
+   public String get() {
+	return "Hello get";
+   }
+
 }
