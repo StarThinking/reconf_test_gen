@@ -34,16 +34,18 @@ function get_component_name_by_conf_hc {
     fi
 }
 
-parameter_log_line_element=6
-#compo_uniq=( $(echo ${component_name_array[@]} | tr ' ' '\n' | sort -u) )
-#compo_uniq+=('OtherComponent')
+function main {
+    parameter_log_line_element=6
+    
+    for line in $(cat $parameter_log)
+    do
+        element_num=$(echo $line | awk '{print NF}')
+        if [ $element_num -ne $parameter_log_line_element ]; then continue; fi
+        para=$(echo $line | awk '{print $2}')
+        conf_hc=$(echo $line | awk '{print $NF}')
+        component=$(get_component_name_by_conf_hc $conf_hc)
+        echo "$para $component"
+    done
+}
 
-for line in $(cat $parameter_log)
-do
-    element_num=$(echo $line | awk '{print NF}')
-    if [ $element_num -ne $parameter_log_line_element ]; then continue; fi
-    para=$(echo $line | awk '{print $2}')
-    conf_hc=$(echo $line | awk '{print $NF}')
-    component=$(get_component_name_by_conf_hc $conf_hc)
-    echo "$para $component"
-done
+main | sort -k1 -k2 | uniq -c 
