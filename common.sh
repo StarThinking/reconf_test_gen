@@ -1,10 +1,14 @@
 #!/bin/bash
 
 IFS=$'\n'
-if [ $# -ne 3 ]; then echo 'error'; exit -1; fi
+if [ $# -lt 2 ]; then echo 'error'; exit -1; fi
 if [ ! -f $1 ] || [ ! -f $2 ]; then echo 'error'; exit -1; fi
 
-scope=/root/reconf_test_gen/$3/all_parameters.txt
+scope=/root/reconf_test_gen/four_in_one_parameters.txt
+if [ $# -eq 3 ]; then
+    scope=/root/reconf_test_gen/$3/all_parameters.txt
+fi
+
 list1_raw=( $(cat $1) )
 for p in ${list1_raw[@]}
 do
