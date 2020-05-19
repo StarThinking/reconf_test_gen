@@ -22,7 +22,7 @@ for i in $(seq 0 $(( num - 1 )))
 do
     hc=${component_conf_hc_array[$i]}
     name=${component_name_array[$i]}
-    hashmap["$hc"]="$name"
+    hashmap["$hc"]="$name"."$i"
     #echo "hc: ${component_conf_hc_array[$i]}"
     #echo "name: ${component_name_array[$i]}"
 done
