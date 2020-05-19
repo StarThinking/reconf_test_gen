@@ -1,501 +1,249 @@
-msx-conf 	at com.google.inject.internal.cglib.reflect.$FastConstructor.newInstance(FastConstructor.java:40)
-msx-conf 	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:267)
-msx-conf 	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:85)
-msx-conf 	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:105)
-msx-conf 	at com.google.inject.internal.DefaultConstructionProxyFactory$1.newInstance(DefaultConstructionProxyFactory.java:61)
-msx-conf 	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1016)
-msx-conf 	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1012)
-msx-conf 	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
-msx-conf 	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
-msx-conf 	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1051)
-msx-conf 	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
-msx-conf 	at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
-msx-conf 	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
-msx-conf 	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:145)
-msx-conf 	at com.google.inject.servlet.FilterDefinition.init(FilterDefinition.java:112)
-msx-conf 	at com.google.inject.servlet.GuiceFilter.init(GuiceFilter.java:220)
-msx-conf 	at com.google.inject.servlet.ManagedFilterPipeline.initPipeline(ManagedFilterPipeline.java:99)
-msx-conf 	at com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory$GuiceInstantiatedComponentProvider.getInstance(GuiceComponentProviderFactory.java:345)
-msx-conf 	at com.sun.jersey.guice.spi.container.servlet.GuiceContainer.initiate(GuiceContainer.java:121)
-msx-conf 	at com.sun.jersey.server.impl.application.RootResourceUriRules.<init>(RootResourceUriRules.java:124)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$10.f(WebApplicationImpl.java:602)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$10.f(WebApplicationImpl.java:605)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$13.f(WebApplicationImpl.java:795)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl$13.f(WebApplicationImpl.java:799)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.access$700(WebApplicationImpl.java:180)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.getOrCreateResourceComponentProvider(WebApplicationImpl.java:602)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiateResource(WebApplicationImpl.java:677)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiateResource(WebApplicationImpl.java:682)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl._initiate(WebApplicationImpl.java:1359)
-msx-conf 	at com.sun.jersey.server.impl.application.WebApplicationImpl.initiate(WebApplicationImpl.java:795)
-msx-conf 	at com.sun.jersey.server.impl.component.IoCResourceFactory$SingletonWrapper.init(IoCResourceFactory.java:186)
-msx-conf 	at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:394)
-msx-conf 	at com.sun.jersey.spi.container.servlet.ServletContainer.init(ServletContainer.java:744)
-msx-conf 	at com.sun.jersey.spi.container.servlet.ServletContainer$InternalWebComponent.initiate(ServletContainer.java:339)
-msx-conf 	at com.sun.jersey.spi.container.servlet.WebComponent.init(WebComponent.java:207)
-msx-conf 	at com.sun.jersey.spi.container.servlet.WebComponent.load(WebComponent.java:605)
-msx-conf 	at com.sun.jersey.spi.inject.Errors.processWithErrors(Errors.java:193)
-msx-conf 	at java.lang.reflect.Method.invoke(Method.java:498)
-msx-conf 	at java.security.AccessController.doPrivileged(AccessController.java:-2)
-msx-conf 	at javax.security.auth.Subject.doAs(Subject.java:422)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getBoolean(Configuration.java:1734)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getBoolean(Configuration.java:1735)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2635)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2636)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByNameOrNull(Configuration.java:2652)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2730)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2731)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2735)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2760)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2762)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2702)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2703)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2707)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2711)
-msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1260)
-msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1264)
-msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1524)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getFloat(Configuration.java:1676)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getFloat(Configuration.java:1677)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1547)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1548)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInts(Configuration.java:1569)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInts(Configuration.java:1570)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1602)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1603)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2951)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getPropsWithPrefix(Configuration.java:3021)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getRaw(Configuration.java:1355)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getResource(Configuration.java:2881)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getSocketAddr(Configuration.java:2543)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getSocketAddr(Configuration.java:2546)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getSocketAddr(Configuration.java:2566)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3139)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getStringCollection(Configuration.java:2302)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getStringCollection(Configuration.java:2303)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1318)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1319)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1339)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1340)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2370)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2371)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2386)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2387)
-msx-conf 	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3098)
-msx-conf 	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3071)
-msx-conf 	at org.apache.hadoop.conf.Configuration.showStackTrace(Configuration.java:1224)
-msx-conf 	at org.apache.hadoop.conf.Configuration.updateConnectAddr(Configuration.java:2598)
-msx-conf 	at org.apache.hadoop.conf.Configuration.updateConnectAddr(Configuration.java:2599)
-msx-conf 	at org.apache.hadoop.conf.ReconfAgent.checkReconfAtShutdown(ReconfAgent.java:80)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.addDefaultApps(HttpServer2.java:704)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.addDefaultApps(HttpServer2.java:712)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:433)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:446)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:449)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:452)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:460)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.build(HttpServer2.java:467)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.createHttpChannelConnector(HttpServer2.java:489)
-msx-conf 	at org.apache.hadoop.http.HttpServer2$Builder.createHttpChannelConnector(HttpServer2.java:490)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.constructSecretProvider(HttpServer2.java:655)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.createWebAppContext(HttpServer2.java:640)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.getFilterInitializers(HttpServer2.java:681)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.getFilterInitializers(HttpServer2.java:688)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.getFilterProperties(HttpServer2.java:665)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:119)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:540)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:546)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.<init>(HttpServer2.java:558)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:567)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:595)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:600)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.initializeWebServer(HttpServer2.java:605)
-msx-conf 	at org.apache.hadoop.http.HttpServer2.start(HttpServer2.java:1155)
-msx-conf 	at org.apache.hadoop.ipc.CallQueueManager.<init>(CallQueueManager.java:76)
-msx-conf 	at org.apache.hadoop.ipc.CallQueueManager.parseNumLevels(CallQueueManager.java:321)
-msx-conf 	at org.apache.hadoop.ipc.CallQueueManager.parseNumLevels(CallQueueManager.java:324)
-msx-conf 	at org.apache.hadoop.ipc.metrics.RpcMetrics.create(RpcMetrics.java:100)
-msx-conf 	at org.apache.hadoop.ipc.metrics.RpcMetrics.<init>(RpcMetrics.java:61)
-msx-conf 	at org.apache.hadoop.ipc.ProtobufRpcEngine.getServer(ProtobufRpcEngine.java:347)
-msx-conf 	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server.<init>(ProtobufRpcEngine.java:426)
-msx-conf 	at org.apache.hadoop.ipc.RPC$Builder.build(RPC.java:848)
-msx-conf 	at org.apache.hadoop.ipc.RPC.getProtocolEngine(RPC.java:213)
-msx-conf 	at org.apache.hadoop.ipc.RPC.getProtocolEngine(RPC.java:215)
-msx-conf 	at org.apache.hadoop.ipc.RPC$Server.<init>(RPC.java:1039)
-msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3631)
-msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3634)
-msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3637)
-msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3640)
-msx-conf 	at org.apache.hadoop.ipc.Server$ConnectionManager.<init>(Server.java:3643)
-msx-conf 	at org.apache.hadoop.ipc.Server.getAuthMethods(Server.java:3137)
-msx-conf 	at org.apache.hadoop.ipc.Server.getClientBackoffEnable(Server.java:733)
-msx-conf 	at org.apache.hadoop.ipc.Server.getQueueClass(Server.java:683)
-msx-conf 	at org.apache.hadoop.ipc.Server.getSchedulerClass(Server.java:691)
-msx-conf 	at org.apache.hadoop.ipc.Server.getSchedulerClass(Server.java:697)
-msx-conf 	at org.apache.hadoop.ipc.Server.getSchedulerClass(Server.java:706)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3027)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3032)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3036)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3042)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3046)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3052)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3053)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3054)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3058)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3062)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3066)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3069)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3070)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3072)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3076)
-msx-conf 	at org.apache.hadoop.ipc.Server.<init>(Server.java:3085)
-msx-conf 	at org.apache.hadoop.ipc.Server$Listener.<init>(Server.java:1173)
-msx-conf 	at org.apache.hadoop.security.AuthenticationFilterInitializer.getFilterConfigMap(AuthenticationFilterInitializer.java:72)
-msx-conf 	at org.apache.hadoop.security.AuthenticationFilterInitializer.getFilterConfigMap(AuthenticationFilterInitializer.java:79)
-msx-conf 	at org.apache.hadoop.security.authentication.KerberosTestUtils$1.run(KerberosTestUtils.java:120)
-msx-conf 	at org.apache.hadoop.security.authentication.KerberosTestUtils.doAs(KerberosTestUtils.java:117)
-msx-conf 	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.init(AuthenticationFilter.java:180)
-msx-conf 	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.initializeAuthHandler(AuthenticationFilter.java:194)
-msx-conf 	at org.apache.hadoop.security.authorize.ProxyServers.refresh(ProxyServers.java:38)
-msx-conf 	at org.apache.hadoop.security.authorize.ProxyUsers.getInstance(ProxyUsers.java:47)
-msx-conf 	at org.apache.hadoop.security.authorize.ProxyUsers.getInstance(ProxyUsers.java:50)
-msx-conf 	at org.apache.hadoop.security.authorize.ProxyUsers.refreshSuperUserGroupsConfiguration(ProxyUsers.java:74)
-msx-conf 	at org.apache.hadoop.security.authorize.ProxyUsers.refreshSuperUserGroupsConfiguration(ProxyUsers.java:77)
-msx-conf 	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:451)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:102)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:106)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:107)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:113)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:116)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:119)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:122)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:128)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:133)
-msx-conf 	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:166)
-msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:65)
-msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:80)
-msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:83)
-msx-conf 	at org.apache.hadoop.security.SaslPropertiesResolver.getInstance(SaslPropertiesResolver.java:54)
-msx-conf 	at org.apache.hadoop.security.SaslPropertiesResolver.getInstance(SaslPropertiesResolver.java:57)
-msx-conf 	at org.apache.hadoop.security.SaslPropertiesResolver.setConf(SaslPropertiesResolver.java:64)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.<clinit>(SecurityUtil.java:88)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:696)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.login(SecurityUtil.java:306)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.login(SecurityUtil.java:311)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:104)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:110)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:99)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationFilter.init(DelegationTokenAuthenticationFilter.java:180)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationFilter.init(DelegationTokenAuthenticationFilter.java:202)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationFilter.initializeAuthHandler(DelegationTokenAuthenticationFilter.java:214)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationHandler.init(DelegationTokenAuthenticationHandler.java:131)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationHandler.initTokenManager(DelegationTokenAuthenticationHandler.java:156)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationHandler.initTokenManager(DelegationTokenAuthenticationHandler.java:162)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenManager$DelegationTokenSecretManager.<init>(DelegationTokenManager.java:72)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenManager$DelegationTokenSecretManager.<init>(DelegationTokenManager.java:73)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenManager$DelegationTokenSecretManager.<init>(DelegationTokenManager.java:74)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenManager$DelegationTokenSecretManager.<init>(DelegationTokenManager.java:75)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenManager.<init>(DelegationTokenManager.java:119)
-msx-conf 	at org.apache.hadoop.security.token.delegation.web.DelegationTokenManager.<init>(DelegationTokenManager.java:122)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1730)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:316)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:319)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:326)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:337)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:342)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:365)
-msx-conf 	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
-msx-conf 	at org.apache.hadoop.service.AbstractService.start(AbstractService.java:194)
-msx-conf 	at org.apache.hadoop.service.AbstractService.stop(AbstractService.java:220)
-msx-conf 	at org.apache.hadoop.service.CompositeService.serviceInit(CompositeService.java:108)
-msx-conf 	at org.apache.hadoop.service.CompositeService.serviceStart(CompositeService.java:121)
-msx-conf 	at org.apache.hadoop.util.JvmPauseMonitor.serviceInit(JvmPauseMonitor.java:79)
-msx-conf 	at org.apache.hadoop.util.JvmPauseMonitor.serviceInit(JvmPauseMonitor.java:80)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:137)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:77)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:96)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl$1.run(TimelineClientImpl.java:196)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl$1.run(TimelineClientImpl.java:206)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl$2.run(TimelineClientImpl.java:227)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl$2.run(TimelineClientImpl.java:242)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl$3.run(TimelineClientImpl.java:265)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl$3.run(TimelineClientImpl.java:281)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.cancelDelegationToken(TimelineClientImpl.java:261)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.cancelDelegationToken(TimelineClientImpl.java:289)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.getDelegationToken(TimelineClientImpl.java:212)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.renewDelegationToken(TimelineClientImpl.java:223)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.renewDelegationToken(TimelineClientImpl.java:250)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.serviceInit(TimelineClientImpl.java:106)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.serviceInit(TimelineClientImpl.java:120)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.serviceInit(TimelineClientImpl.java:126)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.serviceInit(TimelineClientImpl.java:130)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.serviceInit(TimelineClientImpl.java:99)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl.serviceStart(TimelineClientImpl.java:144)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector.constructResURI(TimelineConnector.java:193)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector.operateDelegationToken(TimelineConnector.java:218)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector.serviceInit(TimelineConnector.java:106)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector.serviceInit(TimelineConnector.java:121)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector$TimelineClientConnectionRetry.<init>(TimelineConnector.java:305)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector$TimelineClientConnectionRetry.<init>(TimelineConnector.java:311)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector$TimelineClientConnectionRetry.<init>(TimelineConnector.java:318)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector$TimelineClientConnectionRetry.<init>(TimelineConnector.java:320)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector$TimelineClientConnectionRetry.retryOn(TimelineConnector.java:334)
-msx-conf 	at org.apache.hadoop.yarn.client.api.impl.TimelineConnector$TimelineClientRetryOpForOperateDelegationToken.run(TimelineConnector.java:431)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.getTimelineServiceVersions(YarnConfiguration.java:4117)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.getTimelineServiceVersions(YarnConfiguration.java:4119)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.getTimelineServiceVersion(YarnConfiguration.java:4041)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceEnabled(YarnConfiguration.java:4029)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceV15Enabled(YarnConfiguration.java:4096)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceV15Enabled(YarnConfiguration.java:4097)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceV1Enabled(YarnConfiguration.java:4075)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceV1Enabled(YarnConfiguration.java:4076)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.useHttps(YarnConfiguration.java:3989)
-msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.createServer(RpcServerFactoryPBImpl.java:172)
-msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:115)
-msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:131)
-msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl.getServer(RpcServerFactoryPBImpl.java:83)
-msx-conf 	at org.apache.hadoop.yarn.factory.providers.RpcFactoryProvider.getServerFactory(RpcFactoryProvider.java:46)
-msx-conf 	at org.apache.hadoop.yarn.ipc.HadoopYarnProtoRPC.getServer(HadoopYarnProtoRPC.java:65)
-msx-conf 	at org.apache.hadoop.yarn.ipc.YarnRPC.create(YarnRPC.java:60)
-msx-conf 	at org.apache.hadoop.yarn.ipc.YarnRPC.create(YarnRPC.java:61)
-msx-conf 	at org.apache.hadoop.yarn.ipc.YarnRPC.getServer(YarnRPC.java:54)
-msx-conf 	at org.apache.hadoop.yarn.logaggregation.filecontroller.LogAggregationFileControllerFactory.<init>(LogAggregationFileControllerFactory.java:68)
-msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:66)
-msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:77)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryClientService.serviceStart(ApplicationHistoryClientService.java:100)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryClientService.serviceStart(ApplicationHistoryClientService.java:107)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryClientService.serviceStart(ApplicationHistoryClientService.java:80)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryClientService.serviceStart(ApplicationHistoryClientService.java:81)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryClientService.serviceStart(ApplicationHistoryClientService.java:87)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryClientService.serviceStart(ApplicationHistoryClientService.java:94)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryClientService.serviceStart(ApplicationHistoryClientService.java:95)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryManagerOnTimelineStore.serviceInit(ApplicationHistoryManagerOnTimelineStore.java:101)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryManagerOnTimelineStore.serviceInit(ApplicationHistoryManagerOnTimelineStore.java:98)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryManagerOnTimelineStore.serviceInit(ApplicationHistoryManagerOnTimelineStore.java:99)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.createApplicationACLsManager(ApplicationHistoryServer.java:209)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.createApplicationHistoryManager(ApplicationHistoryServer.java:217)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.createTimelineDataManager(ApplicationHistoryServer.java:242)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.createTimelineStore(ApplicationHistoryServer.java:231)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.doSecureLogin(ApplicationHistoryServer.java:338)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.doSecureLogin(ApplicationHistoryServer.java:339)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.getBindAddress(ApplicationHistoryServer.java:350)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceInit(ApplicationHistoryServer.java:104)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceInit(ApplicationHistoryServer.java:108)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceInit(ApplicationHistoryServer.java:112)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceInit(ApplicationHistoryServer.java:113)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceInit(ApplicationHistoryServer.java:123)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceInit(ApplicationHistoryServer.java:99)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceStart(ApplicationHistoryServer.java:128)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceStart(ApplicationHistoryServer.java:129)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.serviceStop(ApplicationHistoryServer.java:135)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:255)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:259)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:277)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:279)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:289)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:292)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:295)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:324)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer.startWebApp(ApplicationHistoryServer.java:325)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.webapp.AHSWebServices$$FastClassByGuice$$8a8590b6.newInstance(<generated>:-1)
-msx-conf 	at org.apache.hadoop.yarn.server.applicationhistoryservice.webapp.AHSWebServices.<init>(AHSWebServices.java:90)
-msx-conf 	at org.apache.hadoop.yarn.server.security.ApplicationACLsManager.<init>(ApplicationACLsManager.java:60)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1$3.call(TestTimelineAuthenticationFilterForV1.java:228)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1$3.call(TestTimelineAuthenticationFilterForV1.java:231)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1$5.run(TestTimelineAuthenticationFilterForV1.java:280)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1$5.run(TestTimelineAuthenticationFilterForV1.java:283)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1$6.run(TestTimelineAuthenticationFilterForV1.java:317)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1$6.run(TestTimelineAuthenticationFilterForV1.java:320)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.access$000(TestTimelineAuthenticationFilterForV1.java:63)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.createTimelineClientForUGI(TestTimelineAuthenticationFilterForV1.java:159)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.createTimelineClientForUGI(TestTimelineAuthenticationFilterForV1.java:160)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.setup(TestTimelineAuthenticationFilterForV1.java:148)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.setup(TestTimelineAuthenticationFilterForV1.java:149)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.setup(TestTimelineAuthenticationFilterForV1.java:150)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.tearDown(TestTimelineAuthenticationFilterForV1.java:171)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:227)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:244)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:253)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:259)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:266)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:269)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:279)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:286)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:295)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:296)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:302)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:306)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:316)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TestTimelineAuthenticationFilterForV1.testDelegationTokenOperations(TestTimelineAuthenticationFilterForV1.java:325)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineACLsManager.<init>(TimelineACLsManager.java:61)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer.initFilter(TimelineAuthenticationFilterInitializer.java:93)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer.setAuthFilterConfig(TimelineAuthenticationFilterInitializer.java:64)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer.setAuthFilterConfig(TimelineAuthenticationFilterInitializer.java:71)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilter.init(TimelineAuthenticationFilter.java:47)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineDelgationTokenSecretManagerService.serviceInit(TimelineDelgationTokenSecretManagerService.java:46)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineDelgationTokenSecretManagerService.serviceInit(TimelineDelgationTokenSecretManagerService.java:49)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineDelgationTokenSecretManagerService.serviceInit(TimelineDelgationTokenSecretManagerService.java:52)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineV1DelegationTokenSecretManagerService.serviceInit(TimelineV1DelegationTokenSecretManagerService.java:53)
-msx-conf 	at org.apache.hadoop.yarn.server.timeline.security.TimelineV1DelegationTokenSecretManagerService.serviceInit(TimelineV1DelegationTokenSecretManagerService.java:58)
-msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getAHSWebAppURLWithoutScheme(WebAppUtils.java:356)
-msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getAHSWebAppURLWithoutScheme(WebAppUtils.java:360)
-msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getHttpSchemePrefix(WebAppUtils.java:441)
-msx-conf 	at org.apache.hadoop.yarn.webapp.util.WebAppUtils.getWebAppBindURL(WebAppUtils.java:331)
-msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:302)
-msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:310)
-msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:341)
-msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.build(WebApps.java:369)
-msx-conf 	at org.apache.hadoop.yarn.webapp.WebApps$Builder.hasXFSEnabled(WebApps.java:415)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-msx-conf 	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
-msx-conf 	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:161)
-msx-conf 	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
-msx-conf 	at org.eclipse.jetty.server.Server.doStart(Server.java:394)
-msx-conf 	at org.eclipse.jetty.server.Server.start(Server.java:427)
-msx-conf 	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
-msx-conf 	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
-msx-conf 	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:349)
-msx-conf 	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:873)
-msx-conf 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
-msx-conf 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:105)
-msx-conf 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:113)
-msx-conf 	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131)
-msx-conf 	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:522)
-msx-conf 	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1368)
-msx-conf 	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1406)
-msx-conf 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-msx-conf 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-msx-conf 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-msx-conf 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
-msx-conf 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-msx-conf 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-msx-conf 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-msx-conf 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-msx-conf 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-msx-conf 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-msx-conf 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-msx-conf 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-msx-conf 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-msx-conf 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-msx-conf 	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-msx-conf 	at org.junit.runners.Suite.runChild(Suite.java:127)
-msx-conf 	at org.junit.runners.Suite.runChild(Suite.java:26)
-msx-conf 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-msx-conf 	at sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
-msx-conf 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-msx-conf bind.address is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf core-default.xml is used by non-component-thread 1 as Other
-msx-conf core-site.xml is used by non-component-thread 1 as Other
-msx-conf delegation-token.max-lifetime.sec is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf delegation-token.removal-scan-interval.sec is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf delegation-token.renew-interval.sec is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf delegation-token.token-kind is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf delegation-token.update-interval.sec is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.acceptor.count is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.filter.initializers is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.idle_timeout.ms is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.logs.enabled is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.max.request.header.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.max.response.header.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.max.threads is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.selector.count is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.socket.backlog.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.http.temp.dir is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.jetty.logs.serve.aliases is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.kerberos.min.seconds.before.relogin is used by non-component-thread 1 as Other
-msx-conf hadoop.proxyservers is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.proxyuser.HTTP.hosts is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.proxyuser.HTTP.users is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.rpc.protection is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.security.authentication is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.security.authentication is used by non-component-thread 1 as Other
-msx-conf hadoop.security.authorization is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.security.auth_to_local is used by non-component-thread 1 as Other
-msx-conf hadoop.security.auth_to_local.mechanism is used by non-component-thread 1 as Other
-msx-conf hadoop.security.dns.log-slow-lookups.enabled is used by non-component-thread 1 as Other
-msx-conf hadoop.security.dns.log-slow-lookups.threshold.ms is used by non-component-thread 1 as Other
-msx-conf hadoop.security.group.mapping is used by non-component-thread 1 as Other
-msx-conf hadoop.security.groups.cache.background.reload is used by non-component-thread 1 as Other
-msx-conf hadoop.security.groups.cache.background.reload.threads is used by non-component-thread 1 as Other
-msx-conf hadoop.security.groups.cache.secs is used by non-component-thread 1 as Other
-msx-conf hadoop.security.groups.cache.warn.after.ms is used by non-component-thread 1 as Other
-msx-conf hadoop.security.groups.negative-cache.secs is used by non-component-thread 1 as Other
-msx-conf hadoop.security.impersonation.provider.class is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.security.saslproperties.resolver.class is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf hadoop.security.token.service.use_ip is used by non-component-thread 1 as Other
-msx-conf hadoop.user.group.metrics.percentiles.intervals is used by non-component-thread 1 as Other
-msx-conf hadoop.user.group.static.mapping.overrides is used by non-component-thread 1 as Other
-msx-conf ipc.10200.backoff.enable is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.10200.callqueue.impl is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.10200.faircallqueue.priority-levels is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.10200.scheduler.impl is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.10200.scheduler.priority.levels is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.client.connection.idle-scan-interval.ms is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.client.connection.maxidletime is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.client.idlethreshold is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.client.kill.max is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.maximum.data.length is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.handler.queue.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.listen.queue.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.log.slow.rpc is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.max.connections is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.max.response.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.read.connection-queue.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.read.threadpool.size is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf ipc.server.tcpnodelay is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf  is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf jvm.pause.info-threshold.ms is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf jvm.pause.warn-threshold.ms is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf org.apache.hadoop.ipc.ProtobufRpcEngine is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf org.apache.hadoop.mapred.JobConf is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf org.apache.hadoop.mapred.JobConf is used by non-component-thread 1 as Other
-msx-conf org.apache.hadoop.yarn.api.impl.pb.service.ApplicationHistoryProtocolPBServiceImpl is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf org.apache.hadoop.yarn.proto.ApplicationHistoryProtocol$ApplicationHistoryProtocolService is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf rpc.engine.org.apache.hadoop.yarn.api.ApplicationHistoryProtocolPB is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf rpc.metrics.percentiles.intervals is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf this is non-component-thread calling stacktrace:
-msx-conf yarn.acl.enable is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.admin.acl is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.http.policy is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.http.policy is used by non-component-thread 1 as Other
-msx-conf yarn.ipc.rpc.class is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.ipc.server.factory.class is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.log-aggregation.file-formats is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.address is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.bind-host is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.client.max-retries is used by non-component-thread 1 as Other
-msx-conf yarn.timeline-service.client.retry-interval-ms is used by non-component-thread 1 as Other
-msx-conf yarn.timeline-service.delegation.key.update-interval is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.delegation.token.max-lifetime is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.delegation.token.renew-interval is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.enabled is used by non-component-thread 1 as Other
-msx-conf yarn.timeline-service.generic-application-history.max-applications is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.generic-application-history.store-class is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.handler-thread-count is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.http-authentication.kerberos.keytab is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.http-authentication.kerberos.principal is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.http-authentication.type is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.http-cross-origin.enabled is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.keytab is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.principal is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.recovery.enabled is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.store-class is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.ui-names is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.version is used by non-component-thread 1 as Other
-msx-conf yarn.timeline-service.versions is used by non-component-thread 1 as Other
-msx-conf yarn.timeline-service.webapp.address is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf yarn.timeline-service.webapp.address is used by non-component-thread 1 as Other
-msx-conf yarn.webapp.xfs-filter.enabled is used by non-component-thread 1 as ApplicationHistoryServer
-msx-conf zk-dt-secret-manager.enable is used by non-component-thread 1 as ApplicationHistoryServer
+msx-conf parameter  getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter bind.address getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter bind.address getMethod get conf-hashcode 279566689 returnValue localhost
+msx-conf parameter core-default.xml getMethod getResource conf-hashcode 1975546571 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-common/3.2.1/hadoop-common-3.2.1.jar!/core-default.xml
+msx-conf parameter core-site.xml getMethod getResource conf-hashcode 1975546571 returnValue null
+msx-conf parameter delegation-token.max-lifetime.sec getMethod get conf-hashcode 9844218 returnValue null
+msx-conf parameter delegation-token.max-lifetime.sec getMethod getLong conf-hashcode 9844218 returnValue 604800
+msx-conf parameter delegation-token.max-lifetime.sec getMethod getTrimmed conf-hashcode 9844218 returnValue null
+msx-conf parameter delegation-token.removal-scan-interval.sec getMethod get conf-hashcode 9844218 returnValue null
+msx-conf parameter delegation-token.removal-scan-interval.sec getMethod getLong conf-hashcode 9844218 returnValue 3600
+msx-conf parameter delegation-token.removal-scan-interval.sec getMethod getTrimmed conf-hashcode 9844218 returnValue null
+msx-conf parameter delegation-token.renew-interval.sec getMethod get conf-hashcode 9844218 returnValue null
+msx-conf parameter delegation-token.renew-interval.sec getMethod getLong conf-hashcode 9844218 returnValue 86400
+msx-conf parameter delegation-token.renew-interval.sec getMethod getTrimmed conf-hashcode 9844218 returnValue null
+msx-conf parameter delegation-token.token-kind getMethod get conf-hashcode 9844218 returnValue TIMELINE_DELEGATION_TOKEN
+msx-conf parameter delegation-token.update-interval.sec getMethod get conf-hashcode 9844218 returnValue null
+msx-conf parameter delegation-token.update-interval.sec getMethod getLong conf-hashcode 9844218 returnValue 86400
+msx-conf parameter delegation-token.update-interval.sec getMethod getTrimmed conf-hashcode 9844218 returnValue null
+msx-conf parameter hadoop.http.acceptor.count getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.acceptor.count getMethod getInt conf-hashcode 1370651081 returnValue -1
+msx-conf parameter hadoop.http.acceptor.count getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.filter.initializers getMethod get conf-hashcode 1370651081 returnValue 
+msx-conf parameter hadoop.http.filter.initializers getMethod get conf-hashcode 1370651081 returnValue org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer
+msx-conf parameter hadoop.http.filter.initializers getMethod getClasses conf-hashcode 1370651081 returnValue [Ljava.lang.Class;@1800a575
+msx-conf parameter hadoop.http.filter.initializers getMethod getRaw conf-hashcode 1370651081 returnValue org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer
+msx-conf parameter hadoop.http.filter.initializers getMethod getTrimmedStrings conf-hashcode 1370651081 returnValue [Ljava.lang.String;@1c93f6e1
+msx-conf parameter hadoop.http.idle_timeout.ms getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.idle_timeout.ms getMethod getInt conf-hashcode 1370651081 returnValue 10000
+msx-conf parameter hadoop.http.idle_timeout.ms getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.logs.enabled getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.logs.enabled getMethod getBoolean conf-hashcode 1370651081 returnValue true
+msx-conf parameter hadoop.http.logs.enabled getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.max.request.header.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.max.request.header.size getMethod getInt conf-hashcode 1370651081 returnValue 65536
+msx-conf parameter hadoop.http.max.request.header.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.max.response.header.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.max.response.header.size getMethod getInt conf-hashcode 1370651081 returnValue 65536
+msx-conf parameter hadoop.http.max.response.header.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.max.threads getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.max.threads getMethod getInt conf-hashcode 1370651081 returnValue -1
+msx-conf parameter hadoop.http.max.threads getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.selector.count getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.selector.count getMethod getInt conf-hashcode 1370651081 returnValue -1
+msx-conf parameter hadoop.http.selector.count getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.socket.backlog.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.socket.backlog.size getMethod getInt conf-hashcode 1370651081 returnValue 128
+msx-conf parameter hadoop.http.socket.backlog.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.http.temp.dir getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.jetty.logs.serve.aliases getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.jetty.logs.serve.aliases getMethod getBoolean conf-hashcode 1370651081 returnValue true
+msx-conf parameter hadoop.jetty.logs.serve.aliases getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.kerberos.min.seconds.before.relogin getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.kerberos.min.seconds.before.relogin getMethod getLong conf-hashcode 1370651081 returnValue 60
+msx-conf parameter hadoop.kerberos.min.seconds.before.relogin getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.proxyservers getMethod get conf-hashcode 1107579932 returnValue null
+msx-conf parameter hadoop.proxyservers getMethod getTrimmedStrings conf-hashcode 1107579932 returnValue [Ljava.lang.String;@6580cfdd
+msx-conf parameter hadoop.proxyuser.HTTP.hosts getMethod get conf-hashcode 279566689 returnValue *
+msx-conf parameter hadoop.proxyuser.HTTP.users getMethod get conf-hashcode 279566689 returnValue foo
+msx-conf parameter hadoop.rpc.protection getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.rpc.protection getMethod getTrimmedStrings conf-hashcode 1370651081 returnValue [Ljava.lang.String;@5f20155b
+msx-conf parameter hadoop.security.auth_to_local getMethod get conf-hashcode 1370651081 returnValue DEFAULT
+msx-conf parameter hadoop.security.auth_to_local.mechanism getMethod get conf-hashcode 1370651081 returnValue hadoop
+msx-conf parameter hadoop.security.authentication getMethod get conf-hashcode 1370651081 returnValue kerberos
+msx-conf parameter hadoop.security.authorization getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.authorization getMethod getBoolean conf-hashcode 1370651081 returnValue false
+msx-conf parameter hadoop.security.authorization getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.dns.log-slow-lookups.enabled getMethod get conf-hashcode 1975546571 returnValue false
+msx-conf parameter hadoop.security.dns.log-slow-lookups.enabled getMethod getBoolean conf-hashcode 1975546571 returnValue false
+msx-conf parameter hadoop.security.dns.log-slow-lookups.enabled getMethod getTrimmed conf-hashcode 1975546571 returnValue false
+msx-conf parameter hadoop.security.dns.log-slow-lookups.threshold.ms getMethod get conf-hashcode 1975546571 returnValue 1000
+msx-conf parameter hadoop.security.dns.log-slow-lookups.threshold.ms getMethod getInt conf-hashcode 1975546571 returnValue 1000
+msx-conf parameter hadoop.security.dns.log-slow-lookups.threshold.ms getMethod getTrimmed conf-hashcode 1975546571 returnValue 1000
+msx-conf parameter hadoop.security.group.mapping getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.group.mapping getMethod getClass conf-hashcode 1370651081 returnValue class org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+msx-conf parameter hadoop.security.group.mapping getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.background.reload getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.background.reload getMethod getBoolean conf-hashcode 1370651081 returnValue false
+msx-conf parameter hadoop.security.groups.cache.background.reload getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.background.reload.threads getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.background.reload.threads getMethod getInt conf-hashcode 1370651081 returnValue 3
+msx-conf parameter hadoop.security.groups.cache.background.reload.threads getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.secs getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.secs getMethod getLong conf-hashcode 1370651081 returnValue 300
+msx-conf parameter hadoop.security.groups.cache.secs getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.warn.after.ms getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.cache.warn.after.ms getMethod getLong conf-hashcode 1370651081 returnValue 5000
+msx-conf parameter hadoop.security.groups.cache.warn.after.ms getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.negative-cache.secs getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.groups.negative-cache.secs getMethod getLong conf-hashcode 1370651081 returnValue 30
+msx-conf parameter hadoop.security.groups.negative-cache.secs getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.impersonation.provider.class getMethod get conf-hashcode 1107579932 returnValue null
+msx-conf parameter hadoop.security.impersonation.provider.class getMethod getClass conf-hashcode 1107579932 returnValue class org.apache.hadoop.security.authorize.DefaultImpersonationProvider
+msx-conf parameter hadoop.security.impersonation.provider.class getMethod getTrimmed conf-hashcode 1107579932 returnValue null
+msx-conf parameter hadoop.security.saslproperties.resolver.class getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.saslproperties.resolver.class getMethod getClass conf-hashcode 1370651081 returnValue class org.apache.hadoop.security.SaslPropertiesResolver
+msx-conf parameter hadoop.security.saslproperties.resolver.class getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.security.token.service.use_ip getMethod get conf-hashcode 1975546571 returnValue null
+msx-conf parameter hadoop.security.token.service.use_ip getMethod getBoolean conf-hashcode 1975546571 returnValue true
+msx-conf parameter hadoop.security.token.service.use_ip getMethod getTrimmed conf-hashcode 1975546571 returnValue null
+msx-conf parameter hadoop.user.group.metrics.percentiles.intervals getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter hadoop.user.group.metrics.percentiles.intervals getMethod getInts conf-hashcode 1370651081 returnValue [I@7e0b85f9
+msx-conf parameter hadoop.user.group.metrics.percentiles.intervals getMethod getTrimmedStrings conf-hashcode 1370651081 returnValue [Ljava.lang.String;@6580cfdd
+msx-conf parameter hadoop.user.group.static.mapping.overrides getMethod get conf-hashcode 1370651081 returnValue dr.who=;
+msx-conf parameter ipc.10200.backoff.enable getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.backoff.enable getMethod getBoolean conf-hashcode 1370651081 returnValue false
+msx-conf parameter ipc.10200.backoff.enable getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.callqueue.impl getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.callqueue.impl getMethod getClass conf-hashcode 1370651081 returnValue class java.util.concurrent.LinkedBlockingQueue
+msx-conf parameter ipc.10200.callqueue.impl getMethod getClass conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.callqueue.impl getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.faircallqueue.priority-levels getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.faircallqueue.priority-levels getMethod getInt conf-hashcode 1370651081 returnValue 0
+msx-conf parameter ipc.10200.faircallqueue.priority-levels getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.scheduler.impl getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.scheduler.impl getMethod getClass conf-hashcode 1370651081 returnValue class org.apache.hadoop.ipc.DefaultRpcScheduler
+msx-conf parameter ipc.10200.scheduler.impl getMethod getClass conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.scheduler.impl getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.scheduler.priority.levels getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.10200.scheduler.priority.levels getMethod getInt conf-hashcode 1370651081 returnValue 4
+msx-conf parameter ipc.10200.scheduler.priority.levels getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.connection.idle-scan-interval.ms getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.connection.idle-scan-interval.ms getMethod getInt conf-hashcode 1370651081 returnValue 10000
+msx-conf parameter ipc.client.connection.idle-scan-interval.ms getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.connection.maxidletime getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.connection.maxidletime getMethod getInt conf-hashcode 1370651081 returnValue 10000
+msx-conf parameter ipc.client.connection.maxidletime getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.idlethreshold getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.idlethreshold getMethod getInt conf-hashcode 1370651081 returnValue 4000
+msx-conf parameter ipc.client.idlethreshold getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.kill.max getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.client.kill.max getMethod getInt conf-hashcode 1370651081 returnValue 10
+msx-conf parameter ipc.client.kill.max getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.maximum.data.length getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.maximum.data.length getMethod getInt conf-hashcode 1370651081 returnValue 67108864
+msx-conf parameter ipc.maximum.data.length getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.handler.queue.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.handler.queue.size getMethod getInt conf-hashcode 1370651081 returnValue 100
+msx-conf parameter ipc.server.handler.queue.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.listen.queue.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.listen.queue.size getMethod getInt conf-hashcode 1370651081 returnValue 128
+msx-conf parameter ipc.server.listen.queue.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.log.slow.rpc getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.log.slow.rpc getMethod getBoolean conf-hashcode 1370651081 returnValue false
+msx-conf parameter ipc.server.log.slow.rpc getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.max.connections getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.max.connections getMethod getInt conf-hashcode 1370651081 returnValue 0
+msx-conf parameter ipc.server.max.connections getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.max.response.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.max.response.size getMethod getInt conf-hashcode 1370651081 returnValue 1048576
+msx-conf parameter ipc.server.max.response.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.read.connection-queue.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.read.connection-queue.size getMethod getInt conf-hashcode 1370651081 returnValue 100
+msx-conf parameter ipc.server.read.connection-queue.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.read.threadpool.size getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.read.threadpool.size getMethod getInt conf-hashcode 1370651081 returnValue 1
+msx-conf parameter ipc.server.read.threadpool.size getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.tcpnodelay getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter ipc.server.tcpnodelay getMethod getBoolean conf-hashcode 1370651081 returnValue true
+msx-conf parameter ipc.server.tcpnodelay getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter jvm.pause.info-threshold.ms getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter jvm.pause.info-threshold.ms getMethod getLong conf-hashcode 1370651081 returnValue 1000
+msx-conf parameter jvm.pause.info-threshold.ms getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter jvm.pause.warn-threshold.ms getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter jvm.pause.warn-threshold.ms getMethod getLong conf-hashcode 1370651081 returnValue 10000
+msx-conf parameter jvm.pause.warn-threshold.ms getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter org.apache.hadoop.ipc.ProtobufRpcEngine getMethod getClassByName conf-hashcode 1370651081 returnValue class org.apache.hadoop.ipc.ProtobufRpcEngine
+msx-conf parameter org.apache.hadoop.ipc.ProtobufRpcEngine getMethod getClassByNameOrNull conf-hashcode 1370651081 returnValue class org.apache.hadoop.ipc.ProtobufRpcEngine
+msx-conf parameter org.apache.hadoop.mapred.JobConf getMethod getClassByNameOrNull conf-hashcode 1107579932 returnValue null
+msx-conf parameter org.apache.hadoop.mapred.JobConf getMethod getClassByNameOrNull conf-hashcode 1370651081 returnValue null
+msx-conf parameter org.apache.hadoop.yarn.api.impl.pb.service.ApplicationHistoryProtocolPBServiceImpl getMethod getClassByName conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.api.impl.pb.service.ApplicationHistoryProtocolPBServiceImpl
+msx-conf parameter org.apache.hadoop.yarn.api.impl.pb.service.ApplicationHistoryProtocolPBServiceImpl getMethod getClassByNameOrNull conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.api.impl.pb.service.ApplicationHistoryProtocolPBServiceImpl
+msx-conf parameter org.apache.hadoop.yarn.proto.ApplicationHistoryProtocol$ApplicationHistoryProtocolService getMethod getClassByName conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.proto.ApplicationHistoryProtocol$ApplicationHistoryProtocolService
+msx-conf parameter org.apache.hadoop.yarn.proto.ApplicationHistoryProtocol$ApplicationHistoryProtocolService getMethod getClassByNameOrNull conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.proto.ApplicationHistoryProtocol$ApplicationHistoryProtocolService
+msx-conf parameter org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore getMethod getClassByName conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore
+msx-conf parameter org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore getMethod getClassByNameOrNull conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore
+msx-conf parameter org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer getMethod getClassByName conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer
+msx-conf parameter org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer getMethod getClassByNameOrNull conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.server.timeline.security.TimelineAuthenticationFilterInitializer
+msx-conf parameter rpc.engine.org.apache.hadoop.yarn.api.ApplicationHistoryProtocolPB getMethod get conf-hashcode 1370651081 returnValue org.apache.hadoop.ipc.ProtobufRpcEngine
+msx-conf parameter rpc.engine.org.apache.hadoop.yarn.api.ApplicationHistoryProtocolPB getMethod getClass conf-hashcode 1370651081 returnValue class org.apache.hadoop.ipc.ProtobufRpcEngine
+msx-conf parameter rpc.engine.org.apache.hadoop.yarn.api.ApplicationHistoryProtocolPB getMethod getTrimmed conf-hashcode 1370651081 returnValue org.apache.hadoop.ipc.ProtobufRpcEngine
+msx-conf parameter rpc.metrics.percentiles.intervals getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter rpc.metrics.percentiles.intervals getMethod getInts conf-hashcode 1370651081 returnValue [I@3c7f66c4
+msx-conf parameter rpc.metrics.percentiles.intervals getMethod getTrimmedStrings conf-hashcode 1370651081 returnValue [Ljava.lang.String;@6580cfdd
+msx-conf parameter yarn.acl.enable getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.acl.enable getMethod getBoolean conf-hashcode 1370651081 returnValue false
+msx-conf parameter yarn.acl.enable getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.admin.acl getMethod get conf-hashcode 1370651081 returnValue *
+msx-conf parameter yarn.http.policy getMethod get conf-hashcode 1370651081 returnValue HTTP_ONLY
+msx-conf parameter yarn.ipc.rpc.class getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.ipc.server.factory.class getMethod get conf-hashcode 1370651081 returnValue org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl
+msx-conf parameter yarn.log-aggregation.file-formats getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.log-aggregation.file-formats getMethod getStringCollection conf-hashcode 1370651081 returnValue []
+msx-conf parameter yarn.timeline-service.address getMethod get conf-hashcode 1370651081 returnValue localhost:10200
+msx-conf parameter yarn.timeline-service.address getMethod getTrimmed conf-hashcode 1370651081 returnValue localhost:10200
+msx-conf parameter yarn.timeline-service.bind-host getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.bind-host getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.client.max-retries getMethod get conf-hashcode 1370651081 returnValue 1
+msx-conf parameter yarn.timeline-service.client.max-retries getMethod getInt conf-hashcode 1370651081 returnValue 1
+msx-conf parameter yarn.timeline-service.client.max-retries getMethod getTrimmed conf-hashcode 1370651081 returnValue 1
+msx-conf parameter yarn.timeline-service.client.retry-interval-ms getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.client.retry-interval-ms getMethod getLong conf-hashcode 1370651081 returnValue 1000
+msx-conf parameter yarn.timeline-service.client.retry-interval-ms getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.delegation.key.update-interval getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.delegation.key.update-interval getMethod getLong conf-hashcode 1370651081 returnValue 86400000
+msx-conf parameter yarn.timeline-service.delegation.key.update-interval getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.delegation.token.max-lifetime getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.delegation.token.max-lifetime getMethod getLong conf-hashcode 1370651081 returnValue 604800000
+msx-conf parameter yarn.timeline-service.delegation.token.max-lifetime getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.delegation.token.renew-interval getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.delegation.token.renew-interval getMethod getLong conf-hashcode 1370651081 returnValue 86400000
+msx-conf parameter yarn.timeline-service.delegation.token.renew-interval getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.enabled getMethod get conf-hashcode 1370651081 returnValue true
+msx-conf parameter yarn.timeline-service.enabled getMethod getBoolean conf-hashcode 1370651081 returnValue true
+msx-conf parameter yarn.timeline-service.enabled getMethod getTrimmed conf-hashcode 1370651081 returnValue true
+msx-conf parameter yarn.timeline-service.generic-application-history.max-applications getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.generic-application-history.max-applications getMethod getLong conf-hashcode 1370651081 returnValue 10000
+msx-conf parameter yarn.timeline-service.generic-application-history.max-applications getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.generic-application-history.store-class getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.handler-thread-count getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.handler-thread-count getMethod getInt conf-hashcode 1370651081 returnValue 10
+msx-conf parameter yarn.timeline-service.handler-thread-count getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.http-authentication.kerberos.keytab getMethod get conf-hashcode 279566689 returnValue /root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/target/b6ecc995-d5c0-499c-934a-6378c03bec69
+msx-conf parameter yarn.timeline-service.http-authentication.kerberos.principal getMethod get conf-hashcode 279566689 returnValue HTTP/localhost@EXAMPLE.COM
+msx-conf parameter yarn.timeline-service.http-authentication.type getMethod get conf-hashcode 279566689 returnValue kerberos
+msx-conf parameter yarn.timeline-service.http-cross-origin.enabled getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.http-cross-origin.enabled getMethod getBoolean conf-hashcode 1370651081 returnValue false
+msx-conf parameter yarn.timeline-service.http-cross-origin.enabled getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.keytab getMethod get conf-hashcode 1370651081 returnValue /root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/target/b6ecc995-d5c0-499c-934a-6378c03bec69
+msx-conf parameter yarn.timeline-service.principal getMethod get conf-hashcode 1370651081 returnValue HTTP/localhost@EXAMPLE.COM
+msx-conf parameter yarn.timeline-service.recovery.enabled getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.recovery.enabled getMethod getBoolean conf-hashcode 1370651081 returnValue false
+msx-conf parameter yarn.timeline-service.recovery.enabled getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.store-class getMethod get conf-hashcode 1370651081 returnValue org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore
+msx-conf parameter yarn.timeline-service.store-class getMethod getClass conf-hashcode 1370651081 returnValue class org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore
+msx-conf parameter yarn.timeline-service.store-class getMethod getTrimmed conf-hashcode 1370651081 returnValue org.apache.hadoop.yarn.server.timeline.MemoryTimelineStore
+msx-conf parameter yarn.timeline-service.ui-names getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.ui-names getMethod getTrimmedStrings conf-hashcode 1370651081 returnValue [Ljava.lang.String;@6580cfdd
+msx-conf parameter yarn.timeline-service.version getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.version getMethod getFloat conf-hashcode 1370651081 returnValue 1.0
+msx-conf parameter yarn.timeline-service.version getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.versions getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.timeline-service.webapp.address getMethod get conf-hashcode 1370651081 returnValue localhost:8188
+msx-conf parameter yarn.timeline-service.webapp.address getMethod getTrimmed conf-hashcode 1370651081 returnValue localhost:8188
+msx-conf parameter yarn.webapp.xfs-filter.enabled getMethod get conf-hashcode 1370651081 returnValue null
+msx-conf parameter yarn.webapp.xfs-filter.enabled getMethod getBoolean conf-hashcode 1370651081 returnValue true
+msx-conf parameter yarn.webapp.xfs-filter.enabled getMethod getTrimmed conf-hashcode 1370651081 returnValue null
+msx-conf parameter zk-dt-secret-manager.enable getMethod get conf-hashcode 9844218 returnValue null
+msx-conf parameter zk-dt-secret-manager.enable getMethod getBoolean conf-hashcode 9844218 returnValue false
+msx-conf parameter zk-dt-secret-manager.enable getMethod getTrimmed conf-hashcode 9844218 returnValue null

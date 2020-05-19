@@ -1,232 +1,109 @@
-msx-conf 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-msx-conf 	at java.lang.reflect.Method.invoke(Method.java:498)
-msx-conf 	at java.security.AccessController.doPrivileged(AccessController.java:-2)
-msx-conf 	at javax.security.auth.Subject.doAs(Subject.java:422)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getBoolean(Configuration.java:1734)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getBoolean(Configuration.java:1735)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2635)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByName(Configuration.java:2636)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClassByNameOrNull(Configuration.java:2652)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2730)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2731)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2735)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2760)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClass(Configuration.java:2762)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2702)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getClasses(Configuration.java:2703)
-msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1260)
-msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1264)
-msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1524)
-msx-conf 	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1528)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInstances(Configuration.java:2788)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInstances(Configuration.java:2790)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1547)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInt(Configuration.java:1548)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInts(Configuration.java:1569)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getInts(Configuration.java:1570)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1602)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getLong(Configuration.java:1603)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2951)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getRaw(Configuration.java:1355)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getResource(Configuration.java:2881)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3139)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getStrings(Configuration.java:2317)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getStrings(Configuration.java:2318)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1318)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmed(Configuration.java:1319)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2370)
-msx-conf 	at org.apache.hadoop.conf.Configuration.getTrimmedStrings(Configuration.java:2371)
-msx-conf 	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3098)
-msx-conf 	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3071)
-msx-conf 	at org.apache.hadoop.conf.Configuration.setClass(Configuration.java:2814)
-msx-conf 	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1405)
-msx-conf 	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1433)
-msx-conf 	at org.apache.hadoop.conf.Configuration.showStackTrace(Configuration.java:1224)
-msx-conf 	at org.apache.hadoop.conf.ReconfAgent.checkReconfAtShutdown(ReconfAgent.java:80)
-msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.createFileSystem(AbstractFileSystem.java:167)
-msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.createFileSystem(AbstractFileSystem.java:173)
-msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.get(AbstractFileSystem.java:258)
-msx-conf 	at org.apache.hadoop.fs.AbstractFileSystem.newInstance(AbstractFileSystem.java:135)
-msx-conf 	at org.apache.hadoop.fs.DelegateToFileSystem.<init>(DelegateToFileSystem.java:52)
-msx-conf 	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:333)
-msx-conf 	at org.apache.hadoop.fs.FileContext$2.run(FileContext.java:336)
-msx-conf 	at org.apache.hadoop.fs.FileContext.getAbstractFileSystem(FileContext.java:333)
-msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:370)
-msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:436)
-msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:459)
-msx-conf 	at org.apache.hadoop.fs.FileContext.getFileContext(FileContext.java:466)
-msx-conf 	at org.apache.hadoop.fs.FileContext.getLocalFSFileContext(FileContext.java:422)
-msx-conf 	at org.apache.hadoop.fs.FileContext.<init>(FileContext.java:237)
-msx-conf 	at org.apache.hadoop.fs.FileContext.<init>(FileContext.java:257)
-msx-conf 	at org.apache.hadoop.fs.FileSystem.initialize(FileSystem.java:284)
-msx-conf 	at org.apache.hadoop.fs.FsTracer.get(FsTracer.java:45)
-msx-conf 	at org.apache.hadoop.fs.local.LocalFs.<init>(LocalFs.java:37)
-msx-conf 	at org.apache.hadoop.fs.local.LocalFs.<init>(LocalFs.java:51)
-msx-conf 	at org.apache.hadoop.fs.local.RawLocalFs.<init>(RawLocalFs.java:43)
-msx-conf 	at org.apache.hadoop.fs.local.RawLocalFs.<init>(RawLocalFs.java:57)
-msx-conf 	at org.apache.hadoop.fs.RawLocalFileSystem.initialize(RawLocalFileSystem.java:99)
-msx-conf 	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:451)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:102)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:106)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:107)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:113)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:116)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:119)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:122)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:128)
-msx-conf 	at org.apache.hadoop.security.Groups.<init>(Groups.java:133)
-msx-conf 	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:166)
-msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:65)
-msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:80)
-msx-conf 	at org.apache.hadoop.security.HadoopKerberosName.setConfiguration(HadoopKerberosName.java:83)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.<clinit>(SecurityUtil.java:88)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.getAuthenticationMethod(SecurityUtil.java:696)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:104)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:110)
-msx-conf 	at org.apache.hadoop.security.SecurityUtil.setConfigurationInternal(SecurityUtil.java:99)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.createLoginUser(UserGroupInformation.java:723)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1730)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:571)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:660)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:316)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:319)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:326)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:337)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:342)
-msx-conf 	at org.apache.hadoop.security.UserGroupInformation.setConfiguration(UserGroupInformation.java:365)
-msx-conf 	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
-msx-conf 	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:172)
-msx-conf 	at org.apache.hadoop.service.AbstractService.stop(AbstractService.java:220)
-msx-conf 	at org.apache.hadoop.service.ServiceOperations.stopQuietly(ServiceOperations.java:102)
-msx-conf 	at org.apache.hadoop.service.ServiceOperations.stop(ServiceOperations.java:54)
-msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.getInternal(TraceUtils.java:71)
-msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.get(TraceUtils.java:51)
-msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.get(TraceUtils.java:55)
-msx-conf 	at org.apache.hadoop.tracing.TraceUtils$1.get(TraceUtils.java:60)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:133)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:137)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:77)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:79)
-msx-conf 	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:96)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceEnabled(YarnConfiguration.java:4029)
-msx-conf 	at org.apache.hadoop.yarn.conf.YarnConfiguration.timelineServiceV2Enabled(YarnConfiguration.java:4054)
-msx-conf 	at org.apache.hadoop.yarn.factories.impl.pb.RecordFactoryPBImpl.newRecordInstance(RecordFactoryPBImpl.java:56)
-msx-conf 	at org.apache.hadoop.yarn.factory.providers.RecordFactoryProvider.getRecordFactory(RecordFactoryProvider.java:49)
-msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:66)
-msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:70)
-msx-conf 	at org.apache.hadoop.yarn.security.AdminACLsManager.<init>(AdminACLsManager.java:77)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.ContainerExecutor.setConf(ContainerExecutor.java:108)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.resourceplugin.ResourcePluginManager.getPluginsFromConfig(ResourcePluginManager.java:70)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.containermanager.resourceplugin.ResourcePluginManager.initialize(ResourcePluginManager.java:59)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.<init>(DefaultContainerExecutor.java:93)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createContainerExecutor(NodeManager.java:384)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createContainerExecutor(NodeManager.java:385)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createNMContext(NodeManager.java:282)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.createNMContext(NodeManager.java:285)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.initAndStartRecoveryStore(NodeManager.java:307)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager$NMContext.<init>(NodeManager.java:681)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager$NMContext.<init>(NodeManager.java:707)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:397)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:398)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:403)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:411)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:419)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:424)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:427)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:431)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceInit(NodeManager.java:434)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.NodeManager.serviceStop(NodeManager.java:532)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.security.NMContainerTokenSecretManager.<init>(NMContainerTokenSecretManager.java:68)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor.<init>(TestNodeManager.java:40)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeManager.testContainerExecutorInitCall(TestNodeManager.java:55)
-msx-conf 	at org.apache.hadoop.yarn.server.nodemanager.TestNodeManager.testContainerExecutorInitCall(TestNodeManager.java:59)
-msx-conf 	at org.apache.hadoop.yarn.server.security.ApplicationACLsManager.<init>(ApplicationACLsManager.java:60)
-msx-conf 	at org.apache.hadoop.yarn.server.security.BaseContainerTokenSecretManager.<init>(BaseContainerTokenSecretManager.java:63)
-msx-conf 	at org.apache.htrace.core.Tracer$Builder.build(Tracer.java:158)
-msx-conf 	at org.apache.htrace.core.Tracer$Builder.build(Tracer.java:159)
-msx-conf 	at org.apache.htrace.core.Tracer$Builder.build(Tracer.java:163)
-msx-conf 	at org.apache.htrace.core.Tracer$Builder.loadSamplers(Tracer.java:85)
-msx-conf 	at org.apache.htrace.core.Tracer$Builder.loadSpanReceivers(Tracer.java:111)
-msx-conf 	at org.apache.htrace.core.TracerId.<init>(TracerId.java:75)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-msx-conf 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-msx-conf 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-msx-conf 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-msx-conf 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-msx-conf 	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:168)
-msx-conf 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-msx-conf 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-msx-conf 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-msx-conf 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-msx-conf 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-msx-conf 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-msx-conf 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-msx-conf 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-msx-conf 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-msx-conf 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-msx-conf 	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-msx-conf 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-msx-conf 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-msx-conf 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java:-2)
-msx-conf 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-msx-conf 	at sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
-msx-conf 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-msx-conf core-default.xml is used by non-component-thread 1 as NodeManager
-msx-conf core-default.xml is used by non-component-thread 1 as Other
-msx-conf core-site.xml is used by non-component-thread 1 as NodeManager
-msx-conf core-site.xml is used by non-component-thread 1 as Other
-msx-conf fs.AbstractFileSystem.file.impl is used by non-component-thread 1 as NodeManager
-msx-conf fs.client.htrace.sampler.classes is used by non-component-thread 1 as NodeManager
-msx-conf fs.client.htrace.span.receiver.classes is used by non-component-thread 1 as NodeManager
-msx-conf fs.client.htrace.tracer.id is used by non-component-thread 1 as NodeManager
-msx-conf fs.client.resolve.remote.symlinks is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.htrace.sampler.classes is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.htrace.span.receiver.classes is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.htrace.tracer.id is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.kerberos.min.seconds.before.relogin is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.authentication is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.auth_to_local is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.auth_to_local.mechanism is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.dns.log-slow-lookups.enabled is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.dns.log-slow-lookups.threshold.ms is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.group.mapping is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.groups.cache.background.reload is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.groups.cache.background.reload.threads is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.groups.cache.secs is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.groups.cache.warn.after.ms is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.groups.negative-cache.secs is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.security.token.service.use_ip is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.token.files is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.user.group.metrics.percentiles.intervals is used by non-component-thread 1 as NodeManager
-msx-conf hadoop.user.group.static.mapping.overrides is used by non-component-thread 1 as NodeManager
-msx-conf  is used by non-component-thread 1 as NodeManager
-msx-conf org.apache.hadoop.fs.local.LocalFs is used by non-component-thread 1 as NodeManager
-msx-conf org.apache.hadoop.mapred.JobConf is used by non-component-thread 1 as NodeManager
-msx-conf org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback is used by non-component-thread 1 as NodeManager
-msx-conf org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl is used by non-component-thread 1 as NodeManager
-msx-conf org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor is used by non-component-thread 1 as NodeManager
-msx-conf resource-types.xml is used by non-component-thread 1 as NodeManager
-msx-conf resource-types.xml is used by non-component-thread 1 as Other
-msx-conf this is non-component-thread calling stacktrace:
-msx-conf yarn.acl.enable is used by non-component-thread 1 as NodeManager
-msx-conf yarn.admin.acl is used by non-component-thread 1 as NodeManager
-msx-conf yarn-default.xml is used by non-component-thread 1 as NodeManager
-msx-conf yarn-default.xml is used by non-component-thread 1 as Other
-msx-conf yarn.ipc.record.factory.class is used by non-component-thread 1 as NodeManager
-msx-conf yarn.nodemanager.container-executor.class is used by non-component-thread 1 as NodeManager
-msx-conf yarn.nodemanager.container-state-transition-listener.classes is used by non-component-thread 1 as NodeManager
-msx-conf yarn.nodemanager.distributed-scheduling.enabled is used by non-component-thread 1 as NodeManager
-msx-conf yarn.nodemanager.env-whitelist is used by non-component-thread 1 as NodeManager
-msx-conf yarn.nodemanager.recovery.enabled is used by non-component-thread 1 as NodeManager
-msx-conf yarn.nodemanager.resource-plugins is used by non-component-thread 1 as NodeManager
-msx-conf yarn.resourcemanager.rm.container-allocation.expiry-interval-ms is used by non-component-thread 1 as NodeManager
-msx-conf yarn.resourcemanager.work-preserving-recovery.enabled is used by non-component-thread 1 as NodeManager
-msx-conf yarn-site.xml is used by non-component-thread 1 as NodeManager
-msx-conf yarn-site.xml is used by non-component-thread 1 as Other
-msx-conf yarn.timeline-service.enabled is used by non-component-thread 1 as NodeManager
+msx-conf parameter  getMethod get conf-hashcode 1150538133 returnValue null
+msx-conf parameter core-default.xml getMethod getResource conf-hashcode 1150538133 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-common/3.2.1/hadoop-common-3.2.1.jar!/core-default.xml
+msx-conf parameter core-default.xml getMethod getResource conf-hashcode 17037394 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-common/3.2.1/hadoop-common-3.2.1.jar!/core-default.xml
+msx-conf parameter core-default.xml getMethod getResource conf-hashcode 574568002 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-common/3.2.1/hadoop-common-3.2.1.jar!/core-default.xml
+msx-conf parameter core-default.xml getMethod getResource conf-hashcode 604125138 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-common/3.2.1/hadoop-common-3.2.1.jar!/core-default.xml
+msx-conf parameter core-site.xml getMethod getResource conf-hashcode 1150538133 returnValue file:/root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/target/test-classes/core-site.xml
+msx-conf parameter core-site.xml getMethod getResource conf-hashcode 17037394 returnValue file:/root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/target/test-classes/core-site.xml
+msx-conf parameter core-site.xml getMethod getResource conf-hashcode 574568002 returnValue file:/root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/target/test-classes/core-site.xml
+msx-conf parameter core-site.xml getMethod getResource conf-hashcode 604125138 returnValue file:/root/hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/target/test-classes/core-site.xml
+msx-conf parameter fs.AbstractFileSystem.file.impl getMethod get conf-hashcode 574568002 returnValue org.apache.hadoop.fs.local.LocalFs
+msx-conf parameter fs.AbstractFileSystem.file.impl getMethod getClass conf-hashcode 574568002 returnValue class org.apache.hadoop.fs.local.LocalFs
+msx-conf parameter fs.AbstractFileSystem.file.impl getMethod getTrimmed conf-hashcode 574568002 returnValue org.apache.hadoop.fs.local.LocalFs
+msx-conf parameter fs.client.htrace.sampler.classes getMethod get conf-hashcode 574568002 returnValue null
+msx-conf parameter fs.client.htrace.span.receiver.classes getMethod get conf-hashcode 574568002 returnValue null
+msx-conf parameter fs.client.htrace.tracer.id getMethod get conf-hashcode 574568002 returnValue null
+msx-conf parameter fs.client.resolve.remote.symlinks getMethod get conf-hashcode 574568002 returnValue true
+msx-conf parameter fs.client.resolve.remote.symlinks getMethod getBoolean conf-hashcode 574568002 returnValue true
+msx-conf parameter fs.client.resolve.remote.symlinks getMethod getTrimmed conf-hashcode 574568002 returnValue true
+msx-conf parameter hadoop.htrace.sampler.classes getMethod get conf-hashcode 574568002 returnValue null
+msx-conf parameter hadoop.htrace.span.receiver.classes getMethod get conf-hashcode 574568002 returnValue null
+msx-conf parameter hadoop.htrace.tracer.id getMethod get conf-hashcode 574568002 returnValue null
+msx-conf parameter hadoop.kerberos.min.seconds.before.relogin getMethod get conf-hashcode 1150538133 returnValue 60
+msx-conf parameter hadoop.kerberos.min.seconds.before.relogin getMethod getLong conf-hashcode 1150538133 returnValue 60
+msx-conf parameter hadoop.kerberos.min.seconds.before.relogin getMethod getTrimmed conf-hashcode 1150538133 returnValue 60
+msx-conf parameter hadoop.security.auth_to_local getMethod get conf-hashcode 1150538133 returnValue RULE:[1:$1] RULE:[2:$1]
+msx-conf parameter hadoop.security.auth_to_local.mechanism getMethod get conf-hashcode 1150538133 returnValue hadoop
+msx-conf parameter hadoop.security.authentication getMethod get conf-hashcode 1150538133 returnValue simple
+msx-conf parameter hadoop.security.dns.log-slow-lookups.enabled getMethod get conf-hashcode 17037394 returnValue false
+msx-conf parameter hadoop.security.dns.log-slow-lookups.enabled getMethod getBoolean conf-hashcode 17037394 returnValue false
+msx-conf parameter hadoop.security.dns.log-slow-lookups.enabled getMethod getTrimmed conf-hashcode 17037394 returnValue false
+msx-conf parameter hadoop.security.dns.log-slow-lookups.threshold.ms getMethod get conf-hashcode 17037394 returnValue 1000
+msx-conf parameter hadoop.security.dns.log-slow-lookups.threshold.ms getMethod getInt conf-hashcode 17037394 returnValue 1000
+msx-conf parameter hadoop.security.dns.log-slow-lookups.threshold.ms getMethod getTrimmed conf-hashcode 17037394 returnValue 1000
+msx-conf parameter hadoop.security.group.mapping getMethod get conf-hashcode 1150538133 returnValue org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+msx-conf parameter hadoop.security.group.mapping getMethod getClass conf-hashcode 1150538133 returnValue class org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+msx-conf parameter hadoop.security.group.mapping getMethod getTrimmed conf-hashcode 1150538133 returnValue org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+msx-conf parameter hadoop.security.groups.cache.background.reload getMethod get conf-hashcode 1150538133 returnValue false
+msx-conf parameter hadoop.security.groups.cache.background.reload getMethod getBoolean conf-hashcode 1150538133 returnValue false
+msx-conf parameter hadoop.security.groups.cache.background.reload getMethod getTrimmed conf-hashcode 1150538133 returnValue false
+msx-conf parameter hadoop.security.groups.cache.background.reload.threads getMethod get conf-hashcode 1150538133 returnValue 3
+msx-conf parameter hadoop.security.groups.cache.background.reload.threads getMethod getInt conf-hashcode 1150538133 returnValue 3
+msx-conf parameter hadoop.security.groups.cache.background.reload.threads getMethod getTrimmed conf-hashcode 1150538133 returnValue 3
+msx-conf parameter hadoop.security.groups.cache.secs getMethod get conf-hashcode 1150538133 returnValue 300
+msx-conf parameter hadoop.security.groups.cache.secs getMethod getLong conf-hashcode 1150538133 returnValue 300
+msx-conf parameter hadoop.security.groups.cache.secs getMethod getTrimmed conf-hashcode 1150538133 returnValue 300
+msx-conf parameter hadoop.security.groups.cache.warn.after.ms getMethod get conf-hashcode 1150538133 returnValue 5000
+msx-conf parameter hadoop.security.groups.cache.warn.after.ms getMethod getLong conf-hashcode 1150538133 returnValue 5000
+msx-conf parameter hadoop.security.groups.cache.warn.after.ms getMethod getTrimmed conf-hashcode 1150538133 returnValue 5000
+msx-conf parameter hadoop.security.groups.negative-cache.secs getMethod get conf-hashcode 1150538133 returnValue 30
+msx-conf parameter hadoop.security.groups.negative-cache.secs getMethod getLong conf-hashcode 1150538133 returnValue 30
+msx-conf parameter hadoop.security.groups.negative-cache.secs getMethod getTrimmed conf-hashcode 1150538133 returnValue 30
+msx-conf parameter hadoop.security.token.service.use_ip getMethod get conf-hashcode 17037394 returnValue false
+msx-conf parameter hadoop.security.token.service.use_ip getMethod getBoolean conf-hashcode 17037394 returnValue false
+msx-conf parameter hadoop.security.token.service.use_ip getMethod getTrimmed conf-hashcode 17037394 returnValue false
+msx-conf parameter hadoop.token.files getMethod get conf-hashcode 1150538133 returnValue null
+msx-conf parameter hadoop.user.group.metrics.percentiles.intervals getMethod get conf-hashcode 1150538133 returnValue null
+msx-conf parameter hadoop.user.group.metrics.percentiles.intervals getMethod getInts conf-hashcode 1150538133 returnValue [I@15d9bc04
+msx-conf parameter hadoop.user.group.metrics.percentiles.intervals getMethod getTrimmedStrings conf-hashcode 1150538133 returnValue [Ljava.lang.String;@1e9e725a
+msx-conf parameter hadoop.user.group.static.mapping.overrides getMethod get conf-hashcode 1150538133 returnValue dr.who=;
+msx-conf parameter org.apache.hadoop.fs.local.LocalFs getMethod getClassByName conf-hashcode 574568002 returnValue class org.apache.hadoop.fs.local.LocalFs
+msx-conf parameter org.apache.hadoop.fs.local.LocalFs getMethod getClassByNameOrNull conf-hashcode 574568002 returnValue class org.apache.hadoop.fs.local.LocalFs
+msx-conf parameter org.apache.hadoop.mapred.JobConf getMethod getClassByNameOrNull conf-hashcode 1150538133 returnValue null
+msx-conf parameter org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback getMethod getClassByName conf-hashcode 1150538133 returnValue class org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+msx-conf parameter org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback getMethod getClassByNameOrNull conf-hashcode 1150538133 returnValue class org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback
+msx-conf parameter org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl getMethod getClassByName conf-hashcode 1593180232 returnValue class org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl
+msx-conf parameter org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl getMethod getClassByNameOrNull conf-hashcode 1593180232 returnValue class org.apache.hadoop.yarn.server.api.records.impl.pb.NodeHealthStatusPBImpl
+msx-conf parameter org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor getMethod getClassByName conf-hashcode 1150538133 returnValue class org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor
+msx-conf parameter org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor getMethod getClassByNameOrNull conf-hashcode 1150538133 returnValue class org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor
+msx-conf parameter resource-types.xml getMethod getResource conf-hashcode 1150538133 returnValue null
+msx-conf parameter resource-types.xml getMethod getResource conf-hashcode 17037394 returnValue null
+msx-conf parameter resource-types.xml getMethod getResource conf-hashcode 574568002 returnValue null
+msx-conf parameter resource-types.xml getMethod getResource conf-hashcode 604125138 returnValue null
+msx-conf parameter yarn-default.xml getMethod getResource conf-hashcode 1150538133 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/yarn-default.xml
+msx-conf parameter yarn-default.xml getMethod getResource conf-hashcode 17037394 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/yarn-default.xml
+msx-conf parameter yarn-default.xml getMethod getResource conf-hashcode 574568002 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/yarn-default.xml
+msx-conf parameter yarn-default.xml getMethod getResource conf-hashcode 604125138 returnValue jar:file:/root/.m2/repository/org/apache/hadoop/hadoop-yarn-common/3.2.1/hadoop-yarn-common-3.2.1.jar!/yarn-default.xml
+msx-conf parameter yarn-site.xml getMethod getResource conf-hashcode 1150538133 returnValue null
+msx-conf parameter yarn-site.xml getMethod getResource conf-hashcode 17037394 returnValue null
+msx-conf parameter yarn-site.xml getMethod getResource conf-hashcode 574568002 returnValue null
+msx-conf parameter yarn-site.xml getMethod getResource conf-hashcode 604125138 returnValue null
+msx-conf parameter yarn.acl.enable getMethod get conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.acl.enable getMethod getBoolean conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.acl.enable getMethod getTrimmed conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.admin.acl getMethod get conf-hashcode 1150538133 returnValue *
+msx-conf parameter yarn.ipc.record.factory.class getMethod get conf-hashcode 604125138 returnValue org.apache.hadoop.yarn.factories.impl.pb.RecordFactoryPBImpl
+msx-conf parameter yarn.nodemanager.container-executor.class getMethod get conf-hashcode 1150538133 returnValue org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor
+msx-conf parameter yarn.nodemanager.container-executor.class getMethod getClass conf-hashcode 1150538133 returnValue class org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor
+msx-conf parameter yarn.nodemanager.container-executor.class getMethod getTrimmed conf-hashcode 1150538133 returnValue org.apache.hadoop.yarn.server.nodemanager.TestNodeManager$InvalidContainerExecutor
+msx-conf parameter yarn.nodemanager.container-state-transition-listener.classes getMethod getClasses conf-hashcode 1150538133 returnValue [Ljava.lang.Class;@214b199c
+msx-conf parameter yarn.nodemanager.container-state-transition-listener.classes getMethod getInstances conf-hashcode 1150538133 returnValue []
+msx-conf parameter yarn.nodemanager.container-state-transition-listener.classes getMethod getRaw conf-hashcode 1150538133 returnValue null
+msx-conf parameter yarn.nodemanager.distributed-scheduling.enabled getMethod get conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.nodemanager.distributed-scheduling.enabled getMethod getBoolean conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.nodemanager.distributed-scheduling.enabled getMethod getTrimmed conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.nodemanager.env-whitelist getMethod get conf-hashcode 1150538133 returnValue JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_HOME,PATH,LANG,TZ
+msx-conf parameter yarn.nodemanager.recovery.enabled getMethod get conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.nodemanager.recovery.enabled getMethod getBoolean conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.nodemanager.recovery.enabled getMethod getTrimmed conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.nodemanager.resource-plugins getMethod get conf-hashcode 1150538133 returnValue null
+msx-conf parameter yarn.nodemanager.resource-plugins getMethod getStrings conf-hashcode 1150538133 returnValue null
+msx-conf parameter yarn.resourcemanager.rm.container-allocation.expiry-interval-ms getMethod get conf-hashcode 1150538133 returnValue 600000
+msx-conf parameter yarn.resourcemanager.rm.container-allocation.expiry-interval-ms getMethod getInt conf-hashcode 1150538133 returnValue 600000
+msx-conf parameter yarn.resourcemanager.rm.container-allocation.expiry-interval-ms getMethod getTrimmed conf-hashcode 1150538133 returnValue 600000
+msx-conf parameter yarn.resourcemanager.work-preserving-recovery.enabled getMethod get conf-hashcode 1150538133 returnValue true
+msx-conf parameter yarn.resourcemanager.work-preserving-recovery.enabled getMethod getBoolean conf-hashcode 1150538133 returnValue true
+msx-conf parameter yarn.resourcemanager.work-preserving-recovery.enabled getMethod getTrimmed conf-hashcode 1150538133 returnValue true
+msx-conf parameter yarn.timeline-service.enabled getMethod get conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.timeline-service.enabled getMethod getBoolean conf-hashcode 1150538133 returnValue false
+msx-conf parameter yarn.timeline-service.enabled getMethod getTrimmed conf-hashcode 1150538133 returnValue false

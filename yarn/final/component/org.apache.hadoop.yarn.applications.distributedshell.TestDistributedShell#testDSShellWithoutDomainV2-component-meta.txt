@@ -1,20 +1,23 @@
 msx-listener test started org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2
 msx-listener unitTestCounterInClass = 0
 msx-reconfagent reconf_vvmode=none, reconf_parameter=, reconf_component=, reconf_v1=, reconf_v2=, reconf_point=0
-msx-reconfagent creating ReconfAgent 1947174880 for ResourceManager
-msx-reconfagent creating ReconfAgent 1955188440 for NodeManager
+msx-reconfagent creating ReconfAgent 1750803702 for ResourceManager
+msx-reconfagent creating ReconfAgent 1981214549 for NodeManager
+msx-reconfagent conf with hashCode 1142478008 for ResourceManager
 msx-reconfagent ResourceManager init, vvmode is none, do nothing
+msx-reconfagent conf with hashCode 607104184 for NodeManager
 msx-reconfagent NodeManager init, vvmode is none, do nothing
-msx-reconfagent creating ReconfAgent 1511621764 for ApplicationHistoryServer
+msx-reconfagent creating ReconfAgent 304922420 for ApplicationHistoryServer
+msx-reconfagent conf with hashCode 1153559433 for ApplicationHistoryServer
 msx-reconfagent ApplicationHistoryServer init, vvmode is none, do nothing
-msx-reconfagent ApplicationHistoryServer stop 1784679517, value is null
-msx-reconfagent NodeManager stop 2044883175, value is null
+msx-reconfagent ResourceManager stop 730975160, value is null
+msx-reconfagent ApplicationHistoryServer stop 779506343, value is null
+msx-reconfagent NodeManager stop 2014105831, value is null
 msx-listener test Failure org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2
 msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2
 msx-listener failed
-msx-listener failureMessage: test timed out after 90000 milliseconds
-msx-listener stackTrace: java.lang.Exception: test timed out after 90000 milliseconds
-msx-reconfagent ResourceManager stop 453473451, value is null
+msx-listener failureMessage: org.apache.hadoop.service.ServiceStateException: java.net.ConnectException: Call From fe9a8bce6095/172.17.0.2 to localhost:39062 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+msx-listener stackTrace: org.apache.hadoop.yarn.exceptions.YarnRuntimeException: org.apache.hadoop.service.ServiceStateException: java.net.ConnectException: Call From fe9a8bce6095/172.17.0.2 to localhost:39062 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
 msx-listener testfinished org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2
 msx-listener writeFile testName is org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2
 msx-listener INFO: file existed /root/parameter_test_controller/shared/test_results/org.apache.hadoop.yarn.applications.distributedshell.TestDistributedShell#testDSShellWithoutDomainV2
