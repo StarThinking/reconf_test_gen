@@ -91,10 +91,46 @@ public class ReadXMLFile {
     	    e.printStackTrace();
         }
     }
+ 
+    public static void discriptionContainsEnable(String xmlPath, String parameter) {
+        try {
+    	    File xmlFile = new File(xmlPath);
+    	    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+    	    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+    	    Document doc = dBuilder.parse(xmlFile);
+    
+    	    doc.getDocumentElement().normalize();
+    	    //System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+    
+    	    NodeList nList = doc.getElementsByTagName(ELEMENT_NAME);
+    	    for (int i=0; i<nList.getLength(); i++) {
+		Node nNode = nList.item(i);
+		if (nNode.getNodeType() == Node.ELEMENT_NODE) { 
+    	            Element eElement = (Element) nNode;
+		    if (!eElement.getElementsByTagName("name").item(0).getTextContent().equals(parameter))
+		        continue;
+	            if (eElement.getElementsByTagName("description").item(0) != null) {
+			String desc = eElement.getElementsByTagName("description").item(0).getTextContent();
+			if (desc.contains("Enable") || desc.contains("Disable") || desc.contains("enable") || desc.contains("disable")) { 
+			    System.out.print("yes");
+			} else {
+			    System.out.print("no");
+			}
+	            }
+		}
+    	    }
+    	    //System.out.println("number of " + ELEMENT_NAME + " is " + nList.getLength());
+        } catch (Exception e) {
+    	    e.printStackTrace();
+        }
+    }
 
     public static void main(String args[]) { 
 	String xmlPath = args[0];
 	String cmd = args[1];
+        String argument = "";
+	if (args.length == 3)
+ 	    argument = args[2];
 	
 	switch (cmd) {
 	    case "getNoDefaultValueParameters":
@@ -105,6 +141,9 @@ public class ReadXMLFile {
 		break;
 	    case "getAllParameters":
 		getAllParameters(xmlPath);
+		break;
+	    case "discriptionContainsEnable":
+		discriptionContainsEnable(xmlPath, argument);
 		break;
 	    default:
 		System.out.println("Error: wrong cmd " + cmd);

@@ -32,7 +32,6 @@ parameter_entry="$2"
 
 parameter_entries=( $(echo "$parameter_entry") )
 para_num=${#parameter_entries[@]}
-#echo "parameter = $parameter_entry"
 
 component_array="$component_project"_components[@]
 components=( $(for c in ${!component_array}; do echo $c; done) ) # dynamically create a new array
@@ -129,13 +128,13 @@ function get_tests_by_component_project {
 	    if [ $p_used -eq 0 ]; then continue; fi
 	    for init_p in $(seq 1 $init_point_num)
 	    do
-    	        echo "$parameter $component $v1 $v2 $test_project $test $init_p"
-    	        echo "$parameter $component $v2 $v1 $test_project $test $init_p"
+    	        #echo "$parameter $component $v1 $v2 $test_project $test $init_p"
+    	        #echo "$parameter $component $v2 $v1 $test_project $test $init_p"
 	        local_op_count=$(( local_op_count + 2 ))
  	    done
         done
     done
-    #echo $local_op_count
+    echo $local_op_count
 }
 
 function c2t_reduce {
@@ -171,13 +170,13 @@ function c2t_plus_p2t_reduce {
 	    v2=$(echo $pair | awk -F ' ' '{print $2}')
 	    for compo in ${components[@]}
             do
-        	#ops=$(get_tests_by_component_project $para $compo $v1 $v2)
-        	get_tests_by_component_project $para $compo $v1 $v2
+        	ops=$(get_tests_by_component_project $para $compo $v1 $v2)
+        	#get_tests_by_component_project $para $compo $v1 $v2
 		op_count_sum=$(( op_count_sum + ops ))
             done
 	done
     done
-    #echo $op_count_sum
+    echo $op_count_sum
 }
 
 function c2t_plus_p2t_plus_p2c_reduce {
@@ -186,12 +185,14 @@ function c2t_plus_p2t_plus_p2c_reduce {
     c2t_plus_p2t_reduce
 }
 
-#echo "white_list_check_enable is $white_list_check_enable"
-#echo -n "c2t_reduce "
-#c2t_reduce
-#
-#echo -n "c2t_plus_p2t_reduce "
-#c2t_plus_p2t_reduce
-#
-#echo -n "c2t_plus_p2t_plus_p2c_reduce "
-c2t_plus_p2t_plus_p2c_reduce > ~/reconf_test_gen/reduction/"$(echo $parameter_entry | awk '{print $1}')"
+echo "parameter = $parameter_entry"
+echo "white_list_check_enable is $white_list_check_enable"
+echo -n "c2t_reduce "
+c2t_reduce
+
+echo -n "c2t_plus_p2t_reduce "
+c2t_plus_p2t_reduce
+
+echo -n "c2t_plus_p2t_plus_p2c_reduce "
+c2t_plus_p2t_plus_p2c_reduce
+#c2t_plus_p2t_plus_p2c_reduce > ~/reconf_test_gen/reduction/"$(echo $parameter_entry | awk '{print $1}')"
