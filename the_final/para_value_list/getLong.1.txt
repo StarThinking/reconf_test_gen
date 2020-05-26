@@ -1,86 +1,86 @@
-dfs.balancer.getBlocks.min-block-size
-dfs.balancer.getBlocks.size
-dfs.balancer.max-size-to-move
-dfs.blocksize
-dfs.datanode.balance.bandwidthPerSec
-dfs.balancer.max-iteration-time
-dfs.balancer.movedWinWidth
-dfs.block.access.key.update.interval
-dfs.block.access.token.lifetime
-dfs.blockreport.incremental.intervalMsec
-dfs.blockreport.initialDelay
-dfs.blockreport.intervalMsec
-dfs.blockreport.split.threshold
-dfs.block.scanner.volume.bytes.per.second
-dfs.cachereport.intervalMsec
-dfs.client.cache.readahead
-dfs.client.datanode-restart.timeout
-dfs.client.hedged.read.threshold.millis
-dfs.client.key.provider.cache.expiry
-dfs.client.mmap.cache.timeout.ms
-dfs.client.mmap.retry.timeout.ms
-dfs.client.read.prefetch.size
-dfs.client.read.short.circuit.replica.stale.threshold.ms
-dfs.client.read.shortcircuit.streams.cache.expiry.ms
-dfs.client.server-defaults.validity.period.ms
-dfs.client.slow.io.warning.threshold.ms
-dfs.client.socketcache.expiryMsec
-dfs.client.write.exclude.nodes.cache.expiry.interval.millis
-dfs.content-summary.sleep-microsec
-dfs.datanode.bp-ready.timeout
-dfs.datanode.cached-dfsused.check.interval.ms
-dfs.datanode.cache.revocation.polling.ms
-dfs.datanode.cache.revocation.timeout.ms
-dfs.datanode.du.reserved
-dfs.datanode.lifeline.interval.seconds
-dfs.datanode.max.locked.memory
-dfs.datanode.readahead.bytes
-dfs.datanode.restart.replica.expiration
-dfs.datanode.scan.period.hours
-dfs.datanode.slow.io.warning.threshold.ms
-dfs.disk.balancer.block.tolerance.percent
-dfs.disk.balancer.max.disk.errors
-dfs.disk.balancer.max.disk.throughputInMBperSec
-dfs.domain.socket.disable.interval.seconds
-dfs.edit.log.transfer.bandwidthPerSec
-dfs.federation.router.connection.clean.ms
-dfs.federation.router.connection.pool.clean.ms
-dfs.federation.router.heartbeat.interval
-dfs.federation.router.store.connection.test
-dfs.federation.router.store.membership.expiration
-dfs.heartbeat.interval
-dfs.image.transfer.bandwidthPerSec
-dfs.image.transfer-bootstrap-standby.bandwidthPerSec
-dfs.journalnode.sync.interval
-dfs.mover.movedWinWidth
-dfs.namenode.accesstime.precision
-dfs.namenode.blocks.per.postponedblocks.rescan
-dfs.namenode.checkpoint.period
-dfs.namenode.checkpoint.txns
-dfs.namenode.delegation.key.update-interval
-dfs.namenode.delegation.token.max-lifetime
-dfs.namenode.delegation.token.renew-interval
-dfs.namenode.fs-limits.max-blocks-per-file
-dfs.namenode.fs-limits.min-block-size
-dfs.namenode.full.block.report.lease.length.ms
-dfs.namenode.heartbeat.recheck-interval
-dfs.namenode.lease-recheck-interval-ms
-dfs.namenode.max-lock-hold-to-release-lease-ms
-dfs.namenode.max-num-blocks-to-log
-dfs.namenode.max.objects
-dfs.namenode.num.extra.edits.retained
-dfs.namenode.path.based.cache.refresh.interval.ms
-dfs.namenode.path.based.cache.retry.interval.ms
-dfs.namenode.read-lock-reporting-threshold-ms
-dfs.namenode.redundancy.interval.seconds
-dfs.namenode.resource.check.interval
-dfs.namenode.resource.du.reserved
-dfs.namenode.retrycache.expirytime.millis
-dfs.namenode.stale.datanode.interval
-dfs.namenode.startup.delay.block.deletion.sec
-dfs.namenode.storageinfo.defragment.interval.ms
-dfs.namenode.storageinfo.defragment.timeout.ms
-dfs.namenode.write-lock-reporting-threshold-ms
-dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms
-dfs.storage.policy.satisfier.recheck.timeout.millis
-dfs.storage.policy.satisfier.self.retry.timeout.millis
+dfs.balancer.getBlocks.min-block-size 10485760 1 1024 1048576000
+dfs.balancer.getBlocks.size 2147483648 1 2097152 8589934592
+dfs.balancer.max-size-to-move 10737418240 1 1048576 107374182400
+dfs.blocksize 134217728 1048576 67108864 268435456
+dfs.datanode.balance.bandwidthPerSec 10m 1k 1m 1g
+dfs.balancer.max-iteration-time 1200000 1 1000 12000000
+dfs.balancer.movedWinWidth 5400000 1 500 54000000
+dfs.block.access.key.update.interval 600 1 2 6000
+dfs.block.access.token.lifetime 600 1 2 600000
+dfs.blockreport.incremental.intervalMsec 0 1 100 1000 100000
+dfs.blockreport.initialDelay 0s 1ms 1s 10s
+dfs.blockreport.intervalMsec 21600000 1 216 216000000
+dfs.blockreport.split.threshold 1000000 1 2 4 0
+dfs.block.scanner.volume.bytes.per.second 0 1048576 1 81920 1048576000
+dfs.cachereport.intervalMsec 10000 1 100 1000000
+dfs.client.cache.readahead 1 1024 1048576 134217728
+dfs.client.datanode-restart.timeout 30s 1s 3s 3000s
+dfs.client.hedged.read.threshold.millis 500 1 50 500000
+dfs.client.key.provider.cache.expiry 864000000 1 100 1000
+dfs.client.mmap.cache.timeout.ms 3600000 1 100 1000
+dfs.client.mmap.retry.timeout.ms 300000 1 100 1000
+dfs.client.read.prefetch.size 1342177280 1 1024 268435456
+dfs.client.read.short.circuit.replica.stale.threshold.ms 1800000 1 180 1800
+dfs.client.read.shortcircuit.streams.cache.expiry.ms 300000 1 300 3000
+dfs.client.server-defaults.validity.period.ms 3600000 1 300 3000
+dfs.client.slow.io.warning.threshold.ms 30000 1 300 3000
+dfs.client.socketcache.expiryMsec 3000 1 300 3000000
+dfs.client.write.exclude.nodes.cache.expiry.interval.millis 600000 1 200 2000
+dfs.content-summary.sleep-microsec 500 1 50 5000000
+dfs.datanode.bp-ready.timeout 20s 1ms 1s 2000s
+dfs.datanode.cached-dfsused.check.interval.ms 600000 1 200 2000
+dfs.datanode.cache.revocation.polling.ms 500 1 50 5000000
+dfs.datanode.cache.revocation.timeout.ms 900000 1 100 1000
+dfs.datanode.du.reserved 0 1 1024 1048576 268435456
+dfs.datanode.lifeline.interval.seconds 3s 9s 6000s
+dfs.datanode.max.locked.memory 0 1 1024 1048576 268435456
+dfs.datanode.readahead.bytes 0 1 4194304 1024 268435456
+dfs.datanode.restart.replica.expiration 50 1 5 5000
+dfs.datanode.scan.period.hours 0 504 1 5040
+dfs.datanode.slow.io.warning.threshold.ms 300 1 30 3000000
+dfs.disk.balancer.block.tolerance.percent 10 0 1 100
+dfs.disk.balancer.max.disk.errors 5 0 1 500
+dfs.disk.balancer.max.disk.throughputInMBperSec 10 1 100 100000
+dfs.domain.socket.disable.interval.seconds 0 600 1 6 600000
+dfs.edit.log.transfer.bandwidthPerSec 0 1 1024 1048576
+dfs.federation.router.connection.clean.ms 10000 1 100 10000000
+dfs.federation.router.connection.pool.clean.ms 60000 1 100 6000000
+dfs.federation.router.heartbeat.interval 5000 10 100 50000000
+dfs.federation.router.store.connection.test 60000 100 1000 60000000
+dfs.federation.router.store.membership.expiration 300000 1 300 300000000
+dfs.heartbeat.interval 3s 3ms 30ms 300000s
+dfs.image.transfer.bandwidthPerSec 0 1 1024 1048576
+dfs.image.transfer-bootstrap-standby.bandwidthPerSec 0 1 1024 1048576
+dfs.journalnode.sync.interval 120000 1 120 1200
+dfs.mover.movedWinWidth 5400000 1 540 5400
+dfs.namenode.accesstime.precision 0 3600000 1 360 3600
+dfs.namenode.blocks.per.postponedblocks.rescan 10000 1 10 100000000
+dfs.namenode.checkpoint.period 3600s 1s 10s 30s
+dfs.namenode.checkpoint.txns 1000000 1 10 1000 1000000000
+dfs.namenode.delegation.key.update-interval 86400000 1 100 1000
+dfs.namenode.delegation.token.max-lifetime 604800000 1 100 1000
+dfs.namenode.delegation.token.renew-interval 86400000 1 100 1000
+dfs.namenode.fs-limits.max-blocks-per-file 10000 1 10 100 10000000
+dfs.namenode.fs-limits.min-block-size 1048576 1 1024 1073741824
+dfs.namenode.full.block.report.lease.length.ms 300000 1 300 3000
+dfs.namenode.heartbeat.recheck-interval 300000 1 3 30000000
+dfs.namenode.lease-recheck-interval-ms 2000 1 200 20000000
+dfs.namenode.max-lock-hold-to-release-lease-ms 25 1 10 100 250000
+dfs.namenode.max-num-blocks-to-log 1000 1 10 2000 1000000
+dfs.namenode.max.objects 0 1 10 100 1000
+dfs.namenode.num.extra.edits.retained 1000000 1 100 100000000 
+dfs.namenode.path.based.cache.refresh.interval.ms 30000 1 300 30000000
+dfs.namenode.path.based.cache.retry.interval.ms 30000 1 300 30000000
+dfs.namenode.read-lock-reporting-threshold-ms 5000 1 500 5000000
+dfs.namenode.redundancy.interval.seconds 3s 3ms 1s 3000s
+dfs.namenode.resource.check.interval 5000 50 500 5000000
+dfs.namenode.resource.du.reserved 104857600 1024 102400 10485760000
+dfs.namenode.retrycache.expirytime.millis 600000 1 600 600000000
+dfs.namenode.stale.datanode.interval 30000 30 3000 300000000
+dfs.namenode.startup.delay.block.deletion.sec 0 1 5 10
+dfs.namenode.storageinfo.defragment.interval.ms 600000 1 600 600000000
+dfs.namenode.storageinfo.defragment.timeout.ms 4 1 40 4000000
+dfs.namenode.write-lock-reporting-threshold-ms 5000 1 500 50000000
+dfs.storage.policy.satisfier.datanode.cache.refresh.interval.ms 300000 1 300 300000000
+dfs.storage.policy.satisfier.recheck.timeout.millis 60000 1 600 60000000
+dfs.storage.policy.satisfier.self.retry.timeout.millis 300000 1 300 30000000

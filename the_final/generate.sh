@@ -31,38 +31,35 @@ do
     v_index=$(( v_index + 1 ))
 done
 
-for log in $(find . -name '*-ultimate-meta.txt')
+for p in hdfs hbase yarn mapreduce hadoop-tools
 do
-    # per log
-    declare -A component_count_map
-    
-    quick_look_log="$(grep ^"$parameter " $log)"
-    if [ "$quick_look_log" == "" ]; then continue; fi
-    
-    for line in $(cat $log)
+    logs=$(grep -r ^"$parameter " $p/final/ultimate | awk -F '-ultimate-meta.txt' '{print $1"-ultimate-meta.txt"}' | sort -u)
+
+    for log in ${logs[@]}
     do
-	quick_look_line="$(echo $line | grep ^"$parameter ")"
-	if [ "$quick_look_line" == "" ]; then continue; fi
-    	
-	the_proj="$(echo $log | awk -F '/' '{print $2}')"
-    	the_test="$(echo $log | awk -F '/' '{print $5}' | awk -F '-ultimate-meta.txt' '{print $1}')"
-	the_component="$(echo "$line" | awk '{print $2}' | awk -F '.' '{print $1}')"
-	the_value="$(echo "$line" | awk '{print $3}')"
-	if [ "$the_component" == "OtherComponent" ] ;then continue; fi
+	#echo log is $log
+        
+    	the_proj="$(echo $log | awk -F '/' '{print $1}')"
+        the_test="$(echo $log | awk -F '/' '{print $4}' | awk -F '-ultimate-meta.txt' '{print $1}')"
 
-        # update component_count_map
-	if [ "${component_count_map["$the_component"]}" == "" ]; then 
-	    component_count_map["$the_component"]=1; 
-	else
-	    current_v=${component_count_map["$the_component"]}
-	    component_count_map["$the_component"]=$(( current_v + 1 ))
-	fi
-	tuple_head="$parameter"" ""$the_proj"" ""$the_test"" ""$the_component"" ""${component_count_map["$the_component"]}"
-
-	# add the default value used for this component at this point
-	# create value pairs	
-	v_list[0]="$the_value"
-	v_pairs=( $(get_combo ${v_list[@]}) )
-	for v_p in ${v_pairs[@]}; do echo "$tuple_head"" ""$v_p"; done
+        component_inits=( $(cat $log | grep ^"$parameter " | awk '{print $2}' | sort -u | grep -v OtherComponent | awk -F '.' '{print $1}' | uniq -c | awk '{print $2" "$1}') )
+	#echo ${component_inits[@]}	
+    	# add the default value used for this component at this point and create value pairs	
+        value_used=( $(cat $log | grep ^"$parameter " | awk '{print $3}' | sort -u | grep -v OtherComponent | head -n 1) )       
+    	v_list[0]="$value_used"
+    	v_pairs=( $(get_combo ${v_list[@]}) )
+	
+	for component_init in ${component_inits[@]}
+	do
+	    the_component=$(echo $component_init | awk '{print $1}')
+	    the_inits=$(echo $component_init | awk '{print $2}')
+	    for the_init in $(seq 1 $the_inits)
+	    do
+    	        for v_p in ${v_pairs[@]}
+	  	do
+	            echo "$parameter"" ""$the_proj"" ""$the_test"" ""$the_component"" ""$the_init"" ""$v_p"
+    	        done
+	    done
+	done
     done
 done
