@@ -21,6 +21,20 @@ function per_override_task {
     done
 }
 
+# hadoop common: Configuration, ReconfAgent, Listener
+hadoop_version='3.2.1'
+echo "perform jar override for hadoop common $hadoop_version"
+cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
+
+hadoop_version='2.8.5'
+echo "perform jar override for hadoop common $hadoop_version"
+cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
+
+# hbase common: Listener
+echo "perform jar override for hbase common 2.2.4"
+cp /root/hbase-2.2.4/hbase-common/target/*.jar /root/.m2/repository/org/apache/hbase/hbase-common/2.2.4/
+
+# system component modification
 for i in $(find ~/reconf_test_gen -name 'jar_override.txt')
 do
     echo "perform jar override for $i"
