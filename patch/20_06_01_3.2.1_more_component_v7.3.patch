@@ -12,8 +12,8 @@ diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/or
        LoggerFactory.getLogger(Configuration.class);
 diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java
 --- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java	1970-01-01 00:00:00.000000000 +0000
-+++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java	2020-06-01 05:04:30.000000000 +0000
-@@ -0,0 +1,205 @@
++++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java	2020-06-01 19:08:13.748896334 +0000
+@@ -0,0 +1,210 @@
 +package org.apache.hadoop.conf;
 +
 +import java.io.*;
@@ -22,6 +22,8 @@ diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/or
 +import java.util.Map;
 +import java.util.HashMap;
 +import org.apache.hadoop.conf.Configuration;
++
++import org.apache.hadoop.mapred.JobConf;
 +
 +public class ReconfAgent {
 +
@@ -124,7 +126,8 @@ diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/or
 +	  myPrint("conf with hashCode " + confToAdd + " for " + component);
 +      } else {
 +	  myPrint("WARN : conf " + confToAdd + " existed in confInstanceList when adding.");
-+	  Configuration copiedConf = new Configuration(myConf);
++	  Configuration copiedConf = null;
++	  copiedConf = new Configuration(myConf);
 +	  myConf = copiedConf;
 +	  confToAdd = new Integer(myConf.hashCode());
 +	  if (!confHcComponentMap.containsKey(confToAdd)) {
@@ -135,6 +138,8 @@ diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/or
 +	      myPrint("ERROR : conf " + confToAdd + " existed in confInstanceList when adding.");
 +	  }
 +      }
++
++      myPrint("performReconf for comoponent_name " + component + " component_hc " + componentHcStr + " conf_hc " + confToAdd);
 +
 +      if (reconf_vvmode.equals("none")) {
 +          myPrint(component + " init, vvmode is none, do nothing");
