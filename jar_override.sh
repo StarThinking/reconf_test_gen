@@ -39,4 +39,5 @@ for i in $(find ~/reconf_test_gen -name 'jar_override.txt')
 do
     echo "perform jar override for $i"
     per_override_task $i
+    echo ''
 done
