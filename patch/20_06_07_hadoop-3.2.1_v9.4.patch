@@ -1,0 +1,1282 @@
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configuration.java	2020-06-04 02:59:23.000000000 +0000
+@@ -106,6 +106,10 @@
+ import org.w3c.dom.Document;
+ import org.w3c.dom.Element;
+ 
++// msx
++import java.io.BufferedReader;
++import java.io.FileReader;
++
+ import com.google.common.base.Preconditions;
+ import com.google.common.base.Strings;
+ 
+@@ -222,7 +226,7 @@
+  */
+ @InterfaceAudience.Public
+ @InterfaceStability.Stable
+-public class Configuration implements Iterable<Map.Entry<String,String>>,
++public class Configuration extends ReconfAgent implements Iterable<Map.Entry<String,String>>,
+                                       Writable {
+   private static final Logger LOG =
+       LoggerFactory.getLogger(Configuration.class);
+@@ -760,6 +764,9 @@
+     }
+   }
+  
++  //msx
++  private static boolean msxConfEnable = false;
++
+   static {
+     // Add default resources
+     addDefaultResource("core-default.xml");
+@@ -778,6 +785,18 @@
+           "respectively");
+       addDefaultResource("hadoop-site.xml");
+     }
++    // msx
++    try {
++        BufferedReader reader = new BufferedReader(new FileReader("/root/reconf_test_gen/lib/enable"));
++        String buffer = reader.readLine();
++        reader.close();
++        if (buffer.equals("true"))
++            msxConfEnable = true;
++        else
++            msxConfEnable = false;
++    } catch(Exception e) {
++        e.printStackTrace();
++    }
+   }
+ 
+   private Properties properties;
+@@ -1181,6 +1200,16 @@
+     return System.getProperty(key);
+   }
+ 
++   // msx
++  private void whoInvokesMe(String parameter, String returnValue) {
++      if (msxConfEnable == false)
++          return;
++      String getMethodName = Thread.currentThread().getStackTrace()[2].getMethodName();
++      System.out.println("msx-conf parameter " + parameter + " getMethod " + getMethodName + " conf-hashcode "
++          + this.hashCode() + " returnValue " + returnValue);
++      return;
++  }
++
+   /**
+    * Get the value of the <code>name</code> property, <code>null</code> if
+    * no such property exists. If the key is deprecated, it returns the value of
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configured.java ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configured.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configured.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/Configured.java	2020-06-03 22:32:17.000000000 +0000
+@@ -24,7 +24,7 @@
+ /** Base class for things that may be configured with a {@link Configuration}. */
+ @InterfaceAudience.Public
+ @InterfaceStability.Stable
+-public class Configured implements Configurable {
++public class Configured extends ReconfAgent implements Configurable {
+ 
+   private Configuration conf;
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java	1970-01-01 00:00:00.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/conf/ReconfAgent.java	2020-06-06 21:34:26.131108238 +0000
+@@ -0,0 +1,196 @@
++package org.apache.hadoop.conf;
++
++import java.io.*;
++import java.util.List;
++import java.util.ArrayList;
++import java.util.Map;
++import java.util.HashMap;
++import org.apache.hadoop.conf.Configuration;
++
++public class ReconfAgent {
++    private static final String reconf_systemRootDir = "/root/parameter_test_controller/";
++
++    private static String reconf_vvmode = "";
++    private static String reconf_parameter = "";
++    public static String getReconfParameter() {
++        return ReconfAgent.reconf_parameter;
++    }
++    private static String reconf_component = "";
++    private static String reconf_v1 = "";
++    private static String reconf_v2 = "";
++    private static String reconf_point = "";
++    private static int reconf_point_int = 0; 
++    
++    private static int reconf_init_point_index = 0;
++    private static Map<Configuration, String> confComponentMap = new HashMap<Configuration, String>();
++    private static List<Object> componentList = new ArrayList<Object>();
++
++    // load just once
++    static {
++	loadSharedVariables();
++    }
++
++    private static void loadSharedVariables() {
++        try {
++            BufferedReader reader;
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_vvmode")));
++            reconf_vvmode = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_parameter")));
++            reconf_parameter = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_component")));
++            reconf_component = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_v1")));
++            reconf_v1 = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_v2")));
++            reconf_v2 = reader.readLine();
++            reader.close();
++
++            reader = new BufferedReader(new FileReader(new File(reconf_systemRootDir + "shared/reconf_point")));
++            reconf_point = reader.readLine();
++            reader.close();
++            reconf_point_int = Integer.valueOf(reconf_point);
++
++            if (!reconf_vvmode.equals("v1v1") && !reconf_vvmode.equals("v2v2") && !reconf_vvmode.equals("v1v2") && !reconf_vvmode.equals("none")) {
++                myPrint("ERROR : wrong value of reconf_vvmode " + reconf_vvmode);
++                System.exit(1);
++            }
++      
++	    myPrint("reconf_vvmode=" + reconf_vvmode + ", reconf_parameter=" + reconf_parameter + 
++			    ", reconf_component=" + reconf_component + ", reconf_v1=" + reconf_v1 + ", reconf_v2=" + reconf_v2 +
++			    ", reconf_point=" + reconf_point);
++        } catch (Exception e) {
++            myPrint("ERROR : loadSharedVariables");
++            e.printStackTrace();
++        }
++    }
++
++    public synchronized static Configuration performReconf(Object componentObj, String component, Configuration originConf) {
++      if (originConf == null) {
++	  myPrint("ERROR : originConf is null");
++	  return null;
++      }
++      
++      myPrint("performReconf for comoponent " + component + " " + componentObj.hashCode() + " originConf " + originConf.hashCode());
++
++      /* check if component instance is already registered */
++      String componentHcStr = "";
++      if (componentObj != null) {
++          if (componentList.contains(componentObj)) {
++              myPrint("ERROR: " + component + " " + componentObj.hashCode() + 
++                  " already existed in componentList, just ignore this one.");
++	      // return the original conf
++              return originConf;
++          } else {
++              componentList.add(componentObj);
++              componentHcStr = Integer.toString(componentObj.hashCode());
++          }
++      } else {
++          componentHcStr = "static";
++      }
++      
++      /*
++       * check if originConf is being used by other component instances;
++       * if so, return copied new conf to ensure each component instance has its own conf.
++       */
++      Configuration uniqueConf = null; 
++      if (!confComponentMap.containsKey(originConf)) {
++          uniqueConf = originConf;
++	  myPrint("conf " + originConf.hashCode() + " itself is unique for " + component + " " + componentHcStr);
++      } else {
++	  uniqueConf = new Configuration(originConf); // new conf instance
++	  myPrint("WARN: conf " + originConf.hashCode() + " is shared with component " +
++              confComponentMap.get(originConf) + ", let copy and return new conf " + uniqueConf.hashCode());
++      }
++      confComponentMap.put(uniqueConf, component);
++
++      if (reconf_vvmode.equals("none")) {
++          myPrint(component + " init, vvmode is none, do nothing");
++      }
++
++      if (reconf_vvmode.equals("v1v1")) {
++          uniqueConf.set(reconf_parameter, reconf_v1);
++          myPrint(component + " init " + componentHcStr + ", vvmode is " + reconf_vvmode + 
++			  ". Set value as v1 " + reconf_v1);// + " uniqueConf is " + uniqueConf.hashCode());
++      }
++
++      if ((reconf_vvmode.equals("v2v2"))) {
++          uniqueConf.set(reconf_parameter, reconf_v2);
++          myPrint(component + " init " + componentHcStr + ", vvmode is " + reconf_vvmode + 
++			  ". Set value as v2 " + reconf_v2);//  + " uniqueConf is " + uniqueConf.hashCode());
++      }
++
++      if (reconf_vvmode.equals("v1v2")) { // reconfiguration injection
++          try {
++              //synchronized(this) {
++                  if (reconf_component.equals(component)) {
++                      if (reconf_point_int == -1) { //FF_ODD
++                          reconf_init_point_index ++;
++                          if ((reconf_init_point_index % 2) == 1) {
++                              uniqueConf.set(reconf_parameter, reconf_v2);
++                              myPrint(component + " init " + componentHcStr + ", PERFORM V1V2 FF_ODD RECONF " + reconf_point +
++					      ". Set value as v2 " + reconf_v2);// + " uniqueConf is " + uniqueConf.hashCode());
++                          } else {
++                              uniqueConf.set(reconf_parameter, reconf_v1);
++                              myPrint(component + " init " + componentHcStr + ", irrelevant init point " + reconf_init_point_index +
++					      ". Set value as v1 " + reconf_v1);// + " uniqueConf is " + uniqueConf.hashCode());
++                          }
++                      } else if (reconf_point_int == -2) { //FF_EVEN
++                          reconf_init_point_index ++;
++                          if ((reconf_init_point_index % 2) == 0) {
++                              uniqueConf.set(reconf_parameter, reconf_v2);
++                              myPrint(component + " init " + componentHcStr + ", PERFORM V1V2 FF_EVEN RECONF " + reconf_point +
++					      ". Set value as v2 " + reconf_v2);// + " uniqueConf is " + uniqueConf.hashCode());
++                          } else {
++                              uniqueConf.set(reconf_parameter, reconf_v1);
++                              myPrint(component + " init " + componentHcStr + ", irrelevant init point " + reconf_init_point_index +
++					      ". Set value as v1 " + reconf_v1);// + " uniqueConf is " + uniqueConf.hashCode());
++                          }
++		      } else {
++                          reconf_init_point_index ++;
++                          if (reconf_point_int == reconf_init_point_index) {
++                              uniqueConf.set(reconf_parameter, reconf_v2);
++                              myPrint(component + " init " + componentHcStr + ", PERFORM V1V2 RECONF " + reconf_point +
++					      ". Set value as v2 " + reconf_v2);// + " uniqueConf is " + uniqueConf.hashCode());
++                          } else {
++                              uniqueConf.set(reconf_parameter, reconf_v1);
++                              myPrint(component + " init " + componentHcStr + ", irrelevant init point " + reconf_init_point_index +
++					      " not " + reconf_point +
++					      ". Set value as v1 " + reconf_v1);// + " uniqueConf is " + uniqueConf.hashCode());
++                          }
++                      }
++                  } else { // for other component instances, just configure it to be v1
++                      uniqueConf.set(reconf_parameter, reconf_v1);
++                      myPrint(component + " init " + componentHcStr + ", irrelevant component." +
++				      " Set value as v1 " + reconf_v1);// + " uniqueConf is " + uniqueConf.hashCode()); 
++                  }
++             // }
++          } catch (Exception e) {
++              myPrint("ERROR happened during performReconf");
++              System.exit(1);
++          }
++      }
++      return uniqueConf;
++    }
++
++    private static void myPrint(String str) { System.out.println("msx-reconfagent " + str);}
++}
++    
++/*
++    public static void checkReconfAtShutdown(componentObject componentObj, String component, Configuration uniqueConf) {
++	if (componentObj == null || uniqueConf == null)
++	    return;
++        myPrint("" + component + " stop " + componentObj.hashCode() + ", value is " + uniqueConf.get(reconf_parameter));
++	Integer confToRemove = new Integer(uniqueConf.hashCode());
++	String v = confComponentMap.remove(confToRemove);
++	if (v == null) {
++	    myPrint("WARN : conf " + confToRemove + " not existed in confInstanceList when removing.");
++	}
++    }*/
+diff -ruN /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java ./hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java
+--- /hadoop-3.2.1-src/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/test/TimedOutTestsListener.java	2020-06-04 23:23:40.000000000 +0000
+@@ -33,6 +33,15 @@
+ import org.junit.runner.notification.Failure;
+ import org.junit.runner.notification.RunListener;
+ 
++import org.junit.runner.Description;
++import org.junit.runner.Result;
++import java.io.File;
++import java.io.BufferedWriter;
++import java.io.FileWriter;
++import org.apache.commons.lang3.exception.ExceptionUtils;
++
++import java.util.List;
++
+ /**
+  * JUnit run listener which prints full thread dump into System.err
+  * in case a test is failed due to timeout.
+@@ -45,6 +54,13 @@
+ 
+   private final PrintWriter output;
+   
++  public String controllerRootDir = "/root/parameter_test_controller/";
++  public String resultDirName = controllerRootDir + "shared/test_results/";
++  public String warnDirName = controllerRootDir + "shared/warn_results/";
++  public String SEPERATOR = "@@@";
++  public String globalTestName = "";
++  public int unitTestCounterInClass = 0;
++
+   public TimedOutTestsListener() {
+     this.output = new PrintWriter(System.err);
+   }
+@@ -53,8 +69,133 @@
+     this.output = output;
+   }
+ 
++  private void writeFile(String testName, String failureMessage, String stackTrace, String result) throws Exception {
++      System.out.println("msx-listener writeFile testName is " + testName);
++      File theFile = null;
++      if (testName.equals("")) {
++          Date date = new Date();
++          SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
++          String dateTime = "Warn-" + formatter.format(date);
++          theFile = new File(warnDirName + dateTime);
++      } else {
++          theFile = new File(resultDirName + testName);
++      }
++
++      if (!theFile.exists()) {
++          BufferedWriter writer = new BufferedWriter(new FileWriter(theFile)); 
++          writer.write(testName + SEPERATOR + result + SEPERATOR + failureMessage + SEPERATOR + stackTrace + SEPERATOR);
++          writer.flush();
++          writer.close();
++      } else {
++          System.out.println("msx-listener INFO: file existed " + theFile);
++      }
++  }
++
++  private String getTestName(String className, String methodName) throws Exception {
++      if (className == null || methodName == null || className.equals("") || methodName.equals("")) {
++          if (!globalTestName.equals("") && !globalTestName.equals("#")) {
++              System.out.println("msx-listener WARN: using globalTestName " + globalTestName);
++              return globalTestName;
++          } else {
++              System.out.println("msx-listener ERROR: unable to obtain test name!");
++              return "";
++          } 
++      }
++      return className + "#" + methodName;
++  }
++
++  private static void printStackTrace(StackTraceElement[] stack) {
++    if (stack != null) {
++        System.out.println("msx-stack stack.length = " + (stack.length-1));
++        for (int i = 1; i < stack.length; i++) {
++            StackTraceElement s = stack[i];
++            System.out.println("\tmsx-stack at " + s.getClassName() + "." + s.getMethodName() +
++            "(" + s.getFileName() + ":" + s.getLineNumber() + ")");
++        }
++    }
++  }
++
++  private void succeed(String testName, Description description) throws Exception {
++      String failureMessage = "none";
++      String stackTrace = "none";
++      String result = "1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener succeed");
++      //showStartStack();
++      //reset();
++  }
++
++  private void failed(String testName, Failure failure) throws Exception {
++      String failureMessage = failure.getMessage();
++      String stackTrace = ExceptionUtils.getStackTrace(failure.getException());
++      String result = "-1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener failed");
++      System.out.println("msx-listener failureMessage: " + failureMessage);
++      System.out.println("msx-listener stackTrace: " + stackTrace);
++      //showStartStack();
++      //reset();
++  }
++
++  @Override
++  public void testStarted(Description description) throws java.lang.Exception {
++      globalTestName = description.getClassName() + "#" + description.getMethodName();
++      System.out.println("msx-listener test started " + globalTestName);
++      if (unitTestCounterInClass > 0) { // perform reset
++          System.out.println("msx-listener perform reset as unitTestCounterInClass " + unitTestCounterInClass + " is larger than zero");
++          //reset();
++      } else {
++          System.out.println("msx-listener unitTestCounterInClass = " + unitTestCounterInClass);
++      }
++      unitTestCounterInClass++;
++  }
++
++  @Override
++  public void testFinished(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener testfinished " + testName);
++      succeed(testName, description);
++  }
++  
++  @Override
++  public void testIgnored(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Ignored " + testName);
++      succeed(testName, description);
++  }
++   
++  public void myTestFailure(Failure failure) throws Exception{
++      Description description = failure.getDescription();
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Failure " + testName);
++      failed(testName, failure);
++  }
++
++  @Override
++  public void testAssumptionFailure(Failure failure) {
++      try {
++          Description description = failure.getDescription();
++          String testName = getTestName(description.getClassName(), description.getMethodName());
++          System.out.println("msx-listener testAssumptionFailure " + testName);
++          failed(testName, failure);
++      } catch(Exception e) {
++          e.printStackTrace();
++      }
++  }
++   
++  @Override // Called before any tests have been run.
++  public void testRunStarted(Description description) throws Exception {
++      System.out.println("msx-listener all testRunStarted");
++  }
++
++  @Override // Called when all tests have finished
++  public void testRunFinished(Result result) throws Exception {
++      System.out.println("msx-listener all testRunFinished");
++  }
++
+   @Override
+   public void testFailure(Failure failure) throws Exception {
++    myTestFailure(failure);
+     if (failure != null && failure.getMessage() != null 
+         && failure.getMessage().startsWith(TEST_TIMED_OUT_PREFIX)) {
+       output.println("====> TEST TIMED OUT. PRINTING THREAD DUMP. <====");
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/qjournal/server/JournalNode.java	2020-06-06 22:12:02.524879281 +0000
+@@ -149,6 +149,8 @@
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:JournalNode", conf);
+     this.conf = conf;
+ 
+     String journalNodeDir = null;
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/balancer/Balancer.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/balancer/Balancer.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/balancer/Balancer.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/balancer/Balancer.java	2020-06-06 22:04:35.295771324 +0000
+@@ -264,6 +264,8 @@
+    */
+   Balancer(NameNodeConnector theblockpool, BalancerParameters p,
+       Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:Balancer", conf);
+     final long movedWinWidth = getLong(conf,
+         DFSConfigKeys.DFS_BALANCER_MOVEDWINWIDTH_KEY,
+         DFSConfigKeys.DFS_BALANCER_MOVEDWINWIDTH_DEFAULT);
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/datanode/DataNode.java	2020-06-06 22:14:27.842539004 +0000
+@@ -417,8 +417,11 @@
+    */
+   @VisibleForTesting
+   @InterfaceAudience.LimitedPrivate("HDFS")
+-  DataNode(final Configuration conf) throws DiskErrorException {
+-    super(conf);
++  DataNode(Configuration conf) throws DiskErrorException {
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:DataNode", conf);
++    super.setConf(conf);
+     this.tracer = createTracer(conf);
+     this.tracerConfigurationManager =
+         new TracerConfigurationManager(DATANODE_HTRACE_PREFIX, conf);
+@@ -441,11 +444,14 @@
+    * Create the DataNode given a configuration, an array of dataDirs,
+    * and a namenode proxy.
+    */
+-  DataNode(final Configuration conf,
++  DataNode(Configuration conf,
+            final List<StorageLocation> dataDirs,
+            final StorageLocationChecker storageLocationChecker,
+            final SecureResources resources) throws IOException {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:DataNode", conf);
++    super.setConf(conf);
+     this.tracer = createTracer(conf);
+     this.tracerConfigurationManager =
+         new TracerConfigurationManager(DATANODE_HTRACE_PREFIX, conf);
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/mover/Mover.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/mover/Mover.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/mover/Mover.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/mover/Mover.java	2020-06-06 22:04:11.299497256 +0000
+@@ -122,6 +122,8 @@
+ 
+   Mover(NameNodeConnector nnc, Configuration conf, AtomicInteger retryCount,
+       Map<Long, Set<DatanodeInfo>> excludedPinnedBlocks) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:Mover", conf);
+     final long movedWinWidth = conf.getLong(
+         DFSConfigKeys.DFS_MOVER_MOVEDWINWIDTH_KEY,
+         DFSConfigKeys.DFS_MOVER_MOVEDWINWIDTH_DEFAULT);
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/NameNode.java	2020-06-06 22:02:56.858647041 +0000
+@@ -928,7 +928,15 @@
+ 
+   protected NameNode(Configuration conf, NamenodeRole role)
+       throws IOException {
+-    super(conf);
++    // msx
++    super();
++    if (!(this instanceof BackupNode)) {
++        conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:NameNode", conf);
++    } else {
++        conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:BackupNode", conf);
++    }
++    super.setConf(conf);
++
+     this.tracer = new Tracer.Builder("NameNode").
+         conf(TraceUtils.wrapHadoopConf(NAMENODE_HTRACE_PREFIX, conf)).
+         build();
+@@ -1646,6 +1654,8 @@
+     boolean aborted = false;
+     switch (startOpt) {
+     case FORMAT:
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(null, "hdfs:NameNode_FORMAT", conf);
+       aborted = format(conf, startOpt.getForceFormat(),
+           startOpt.getInteractiveFormat());
+       terminate(aborted ? 1 : 0);
+@@ -1656,15 +1666,21 @@
+       terminate(0);
+       return null;
+     case ROLLBACK:
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(null, "hdfs:NameNode_ROLLBACK", conf);
+       aborted = doRollback(conf, true);
+       terminate(aborted ? 1 : 0);
+       return null; // avoid warning
+     case BOOTSTRAPSTANDBY:
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(null, "hdfs:NameNode_BOOTSTRAPSTANDBY", conf);
+       String[] toolArgs = Arrays.copyOfRange(argv, 1, argv.length);
+       int rc = BootstrapStandby.run(toolArgs, conf);
+       terminate(rc);
+       return null; // avoid warning
+     case INITIALIZESHAREDEDITS:
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(null, "hdfs:NameNode_INITIALIZESHAREDEDITS", conf);
+       aborted = initializeSharedEdits(conf,
+           startOpt.getForceFormat(),
+           startOpt.getInteractiveFormat());
+@@ -1676,9 +1692,13 @@
+       DefaultMetricsSystem.initialize(role.toString().replace(" ", ""));
+       return new BackupNode(conf, role);
+     case RECOVER:
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(null, "hdfs:NameNode_RECOVER", conf);
+       NameNode.doRecovery(startOpt, conf);
+       return null;
+     case METADATAVERSION:
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(null, "hdfs:NameNode_METADATAVERSION", conf);
+       printMetadataVersion(conf);
+       terminate(0);
+       return null; // avoid javac warning
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/SecondaryNameNode.java	2020-06-06 22:00:50.725206428 +0000
+@@ -183,6 +183,8 @@
+   
+   public SecondaryNameNode(Configuration conf,
+       CommandLineOpts commandLineOpts) throws IOException {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:SecondaryNameNode", conf);
+     try {
+       String nsId = DFSUtil.getSecondaryNameServiceId(conf);
+       if (HAUtil.isHAEnabled(conf, nsId)) {
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/sps/StoragePolicySatisfier.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/sps/StoragePolicySatisfier.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/sps/StoragePolicySatisfier.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/namenode/sps/StoragePolicySatisfier.java	2020-06-06 21:58:38.343694453 +0000
+@@ -91,6 +91,8 @@
+   private DatanodeCacheManager dnCacheMgr;
+ 
+   public StoragePolicySatisfier(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:StoragePolicySatisfier", conf);
+     this.conf = conf;
+   }
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSAdmin.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSAdmin.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSAdmin.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSAdmin.java	2020-06-06 22:11:24.232441929 +0000
+@@ -481,7 +481,10 @@
+    * Construct a DFSAdmin object.
+    */
+   public DFSAdmin(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:DFSAdmin", conf);
++    super.setConf(conf);
+   }
+   
+   protected DistributedFileSystem getDFS() throws IOException {
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSHAAdmin.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSHAAdmin.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSHAAdmin.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSHAAdmin.java	2020-06-06 22:06:30.265084429 +0000
+@@ -52,6 +52,8 @@
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:DFSHAAdmin", conf);
+     if (conf != null) {
+       conf = addSecurityConfiguration(conf);
+     }
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSZKFailoverController.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSZKFailoverController.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSZKFailoverController.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSZKFailoverController.java	2020-06-06 22:10:02.655510213 +0000
+@@ -127,6 +127,8 @@
+   }
+   
+   public static DFSZKFailoverController create(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hdfs:DFSZKFailoverController_create", conf);
+     Configuration localNNConf = DFSHAAdmin.addSecurityConfiguration(conf);
+     String nsId = DFSUtil.getNamenodeNameServiceId(conf);
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSck.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSck.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSck.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DFSck.java	2020-06-06 22:05:52.040647854 +0000
+@@ -129,7 +129,10 @@
+   }
+ 
+   public DFSck(Configuration conf, PrintStream out) throws IOException {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:DFSck", conf);
++    super.setConf(conf);
+     this.ugi = UserGroupInformation.getCurrentUser();
+     this.out = out;
+     this.connectionFactory = URLConnectionFactory
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DiskBalancerCLI.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DiskBalancerCLI.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DiskBalancerCLI.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/DiskBalancerCLI.java	2020-06-06 22:09:46.311323540 +0000
+@@ -158,7 +158,10 @@
+   }
+ 
+   public DiskBalancerCLI(Configuration conf, final PrintStream printStream) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:DiskBalancerCLI", conf);
++    super.setConf(conf);
+     this.printStream = printStream;
+   }
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetConf.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetConf.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetConf.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetConf.java	2020-06-06 22:10:37.391906949 +0000
+@@ -278,7 +278,10 @@
+   }
+ 
+   GetConf(Configuration conf, PrintStream out, PrintStream err) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:GetConf", conf);
++    super.setConf(conf);
+     this.out = out;
+     this.err = err;
+   }
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetGroups.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetGroups.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetGroups.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/GetGroups.java	2020-06-06 22:15:36.191319639 +0000
+@@ -53,11 +53,17 @@
+ 
+   
+   public GetGroups(Configuration conf) {
+-    super(conf);
++    // msx
++    super(null);
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:GetGroups", conf);
++    super.setConf(conf);
+   }
+ 
+   public GetGroups(Configuration conf, PrintStream out) {
+-    super(conf, out);
++    // msx
++    super(null, out);
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:GetGroups", conf);
++    super.setConf(conf);
+   }
+   
+   @Override
+@@ -96,4 +102,4 @@
+     int res = ToolRunner.run(new GetGroups(new HdfsConfiguration()), argv);
+     System.exit(res);
+   }
+-}
+\ No newline at end of file
++}
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/snapshot/SnapshotDiff.java ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/snapshot/SnapshotDiff.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/snapshot/SnapshotDiff.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/tools/snapshot/SnapshotDiff.java	2020-06-06 22:05:11.508184919 +0000
+@@ -54,7 +54,10 @@
+    * Construct a SnapshotDiff object.
+    */
+   public SnapshotDiff(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:SnapshotDiff", conf);
++    super.setConf(conf);
+   }
+   private static String getSnapshotName(String name) {
+     if (Path.CUR_DIR.equals(name)) { // current directory
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/server/federation/router/Router.java ./hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/server/federation/router/Router.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/server/federation/router/Router.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/server/federation/router/Router.java	2020-06-06 22:12:44.385357385 +0000
+@@ -142,6 +142,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration configuration) throws Exception {
++    // msx
++    configuration = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:Router", configuration);
+     this.conf = configuration;
+     updateRouterState(RouterServiceState.INITIALIZING);
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/tools/federation/RouterAdmin.java ./hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/tools/federation/RouterAdmin.java
+--- /hadoop-3.2.1-src/hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/tools/federation/RouterAdmin.java	2019-09-10 14:35:49.000000000 +0000
++++ ./hadoop-hdfs-project/hadoop-hdfs-rbf/src/main/java/org/apache/hadoop/hdfs/tools/federation/RouterAdmin.java	2020-06-06 22:13:12.213675221 +0000
+@@ -87,7 +87,10 @@
+   }
+ 
+   public RouterAdmin(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hdfs:RouterAdmin", conf);
++    super.setConf(conf);
+   }
+ 
+   /**
+@@ -924,4 +927,4 @@
+       return mode;
+     }
+   }
+-}
+\ No newline at end of file
++}
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapred/YarnChild.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapred/YarnChild.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapred/YarnChild.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapred/YarnChild.java	2020-06-06 21:45:23.202612876 +0000
+@@ -61,6 +61,9 @@
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ 
++// msx
++import org.apache.hadoop.conf.Configuration;
++
+ /**
+  * The main() for MapReduce task processes.
+  */
+@@ -74,7 +77,9 @@
+     Thread.setDefaultUncaughtExceptionHandler(new YarnUncaughtExceptionHandler());
+     LOG.debug("Child starting");
+ 
+-    final JobConf job = new JobConf(MRJobConfig.JOB_CONF_FILE);
++    // msx
++    JobConf jobTmp = new JobConf(MRJobConfig.JOB_CONF_FILE);
++    final JobConf job = new JobConf(org.apache.hadoop.conf.Configured.performReconf(null, "mapreduce:YarnChild_main", jobTmp));
+     // Initing with our JobConf allows us to avoid loading confs twice
+     Limits.init(job);
+     UserGroupInformation.setConfiguration(job);
+@@ -289,6 +294,9 @@
+ 
+   private static void configureTask(JobConf job, Task task,
+       Credentials credentials, Token<JobTokenIdentifier> jt) throws IOException {
++    // msx
++    job = new JobConf(org.apache.hadoop.conf.Configured.performReconf(null, "mapreduce:YarnChild_configureTask", job));
++    LOG.info("msx YarnChild_configureTask");
+     job.setCredentials(credentials);
+ 
+     ApplicationAttemptId appAttemptId = ContainerId.fromString(
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapreduce/v2/app/MRAppMaster.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapreduce/v2/app/MRAppMaster.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapreduce/v2/app/MRAppMaster.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app/src/main/java/org/apache/hadoop/mapreduce/v2/app/MRAppMaster.java	2020-06-06 21:36:31.808543642 +0000
+@@ -277,7 +277,9 @@
+   }
+ 
+   @Override
+-  protected void serviceInit(final Configuration conf) throws Exception {
++  protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:MRAppMaster", conf);
+     // create the job classloader if enabled
+     createJobClassLoader(conf);
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobClient.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobClient.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobClient.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobClient.java	2020-06-06 21:35:41.827972798 +0000
+@@ -442,6 +442,13 @@
+    */
+   public JobClient() {
+   }
++
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobClient", conf);
++    super.setConf(conf);
++  }
+     
+   /**
+    * Build a job client with the given {@link JobConf}, and connect to the 
+@@ -451,6 +458,8 @@
+    * @throws IOException
+    */
+   public JobClient(JobConf conf) throws IOException {
++    // msx
++    conf = new JobConf(org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobClient", conf));
+     init(conf);
+   }
+ 
+@@ -462,6 +471,8 @@
+    * @throws IOException
+    */
+   public JobClient(Configuration conf) throws IOException {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobClient", conf);
+     init(new JobConf(conf));
+   }
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobQueueClient.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobQueueClient.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobQueueClient.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/JobQueueClient.java	2020-06-06 21:34:00.358813883 +0000
+@@ -50,10 +50,14 @@
+   }
+ 
+   public JobQueueClient(JobConf conf) throws IOException {
++    // msx
++    conf = new JobConf(org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobQueueClient", conf));
+     setConf(conf);
+   }
+ 
+   private void init(JobConf conf) throws IOException {
++    // msx
++    conf = new JobConf(org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobQueueClient", conf));
+     setConf(conf);
+     jc = new JobClient(conf);
+   }
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/pipes/Submitter.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/pipes/Submitter.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/pipes/Submitter.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapred/pipes/Submitter.java	2020-06-06 21:26:02.997361776 +0000
+@@ -89,6 +89,7 @@
+   }
+   
+   public Submitter(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:Submitter", conf);
+     setConf(conf);
+   }
+   
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/tools/CLI.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/tools/CLI.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/tools/CLI.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core/src/main/java/org/apache/hadoop/mapreduce/tools/CLI.java	2020-06-06 21:26:25.385617480 +0000
+@@ -83,6 +83,8 @@
+   }
+   
+   public CLI(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:CLI", conf);
+     setConf(conf);
+   }
+   
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/JobHistoryServer.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/JobHistoryServer.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/JobHistoryServer.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/JobHistoryServer.java	2020-06-06 21:22:07.274669505 +0000
+@@ -118,6 +118,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobHistoryServer", conf);
+     Configuration config = new YarnConfiguration(conf);
+ 
+     // This is required for WebApps to use https if enabled.
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/client/HSAdmin.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/client/HSAdmin.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/client/HSAdmin.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs/src/main/java/org/apache/hadoop/mapreduce/v2/hs/client/HSAdmin.java	2020-06-06 21:46:26.391334576 +0000
+@@ -44,11 +44,16 @@
+   }
+ 
+   public HSAdmin(JobConf conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = new JobConf(org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:HSAdmin", conf));
++    super.setConf(conf);
+   }
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:HSAdmin", conf);
+     if (conf != null) {
+       conf = addSecurityConfiguration(conf);
+     }
+Binary files /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/.jobTokenPassword.crc and ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/.jobTokenPassword.crc differ
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test/test.reduce.task/data.in ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test/test.reduce.task/data.in
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test/test.reduce.task/data.in	1970-01-01 00:00:00.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test/test.reduce.task/data.in	2020-06-02 17:41:04.000000000 +0000
+@@ -0,0 +1 @@
++k1v1k1v2k1v3k1v4ÿÿÇþž£
+\ No newline at end of file
+Binary files /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test/test.reduce.task.compression/data.in and ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test/test.reduce.task.compression/data.in differ
+Binary files /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test.ifile/data and ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/build/test.ifile/data differ
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/jobTokenPassword ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/jobTokenPassword
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/jobTokenPassword	1970-01-01 00:00:00.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/jobTokenPassword	2020-06-02 18:08:50.000000000 +0000
+@@ -0,0 +1 @@
++password
+\ No newline at end of file
+diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java
+--- /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/v2/MiniMRYarnCluster.java	2020-06-06 21:27:14.034173112 +0000
+@@ -233,6 +233,15 @@
+     }
+     private volatile boolean jhsStarted = false;
+ 
++    // msx
++    @Override
++    public synchronized void serviceInit(Configuration conf) throws Exception {
++        // msx
++        Configuration config = new YarnConfiguration(conf);
++        config = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobHistoryServer", config);
++        super.serviceInit(config);
++    }
++
+     @Override
+     public synchronized void serviceStart() throws Exception {
+       try {
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/ApplicationMaster.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/ApplicationMaster.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/ApplicationMaster.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/ApplicationMaster.java	2020-06-06 19:19:00.154298682 +0000
+@@ -437,6 +437,8 @@
+   public ApplicationMaster() {
+     // Set up the configuration
+     conf = new YarnConfiguration();
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:ApplicationMaster", conf);
+   }
+ 
+   /**
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/Client.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/Client.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/Client.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/src/main/java/org/apache/hadoop/yarn/applications/distributedshell/Client.java	2020-06-06 19:15:38.855999585 +0000
+@@ -292,6 +292,8 @@
+   }
+ 
+   Client(String appMasterMainClass, Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:Client", conf);
+     this.conf = conf;
+     this.conf.setBoolean(
+         YarnConfiguration.YARN_CLIENT_LOAD_RESOURCETYPES_FROM_SERVER, true);
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-unmanaged-am-launcher/src/main/java/org/apache/hadoop/yarn/applications/unmanagedamlauncher/UnmanagedAMLauncher.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-unmanaged-am-launcher/src/main/java/org/apache/hadoop/yarn/applications/unmanagedamlauncher/UnmanagedAMLauncher.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-unmanaged-am-launcher/src/main/java/org/apache/hadoop/yarn/applications/unmanagedamlauncher/UnmanagedAMLauncher.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-applications-unmanaged-am-launcher/src/main/java/org/apache/hadoop/yarn/applications/unmanagedamlauncher/UnmanagedAMLauncher.java	2020-06-06 19:19:24.522577000 +0000
+@@ -119,6 +119,8 @@
+   /**
+    */
+   public UnmanagedAMLauncher(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:UnmanagedAMLauncher", conf);
+     // Set up RPC
+     this.conf = conf;
+   }
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-api/src/main/java/org/apache/hadoop/yarn/service/webapp/ApiServerWebApp.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-api/src/main/java/org/apache/hadoop/yarn/service/webapp/ApiServerWebApp.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-api/src/main/java/org/apache/hadoop/yarn/service/webapp/ApiServerWebApp.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-api/src/main/java/org/apache/hadoop/yarn/service/webapp/ApiServerWebApp.java	2020-06-06 19:34:15.144749100 +0000
+@@ -83,6 +83,14 @@
+     super.serviceStart();
+   }
+ 
++  // msx
++  @Override
++  protected void serviceInit(org.apache.hadoop.conf.Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:ApiServerWebApp", conf);
++    super.serviceInit(conf);
++  }
++  
+   @Override
+   protected void serviceStop() throws Exception {
+     if (apiServer != null) {
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-core/src/main/java/org/apache/hadoop/yarn/service/ServiceMaster.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-core/src/main/java/org/apache/hadoop/yarn/service/ServiceMaster.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-core/src/main/java/org/apache/hadoop/yarn/service/ServiceMaster.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-core/src/main/java/org/apache/hadoop/yarn/service/ServiceMaster.java	2020-06-06 19:15:23.007818577 +0000
+@@ -87,6 +87,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:ServiceMaster", conf);
+     printSystemEnv();
+     context = new ServiceContext();
+     Path appDir = getAppDir();
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/SCMAdmin.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/SCMAdmin.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/SCMAdmin.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/SCMAdmin.java	2020-06-06 19:54:39.646734555 +0000
+@@ -45,7 +45,17 @@
+   }
+ 
+   public SCMAdmin(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:SCMAdmin", conf);
++    super.setConf(conf);
++  }
++
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:SCMAdmin", conf);
++    super.setConf(conf);
+   }
+ 
+   private static void printHelp(String cmd) {
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/LogsCLI.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/LogsCLI.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/LogsCLI.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/LogsCLI.java	2020-06-06 19:31:03.694562482 +0000
+@@ -133,6 +133,13 @@
+   @VisibleForTesting
+   ClientConnectionRetry connectionRetry;
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:LogsCLI", conf);
++    super.setConf(conf);
++  }
++
+   @Override
+   public int run(String[] args) throws Exception {
+     try {
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/NodeAttributesCLI.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/NodeAttributesCLI.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/NodeAttributesCLI.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/NodeAttributesCLI.java	2020-06-06 19:51:47.200764991 +0000
+@@ -249,7 +249,10 @@
+     }
+ 
+     protected CommandHandler(Configuration conf) {
+-      super(conf);
++      // msx
++      super();
++      conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:CommandHandler", conf);
++      super.setConf(conf);
+       options = buildOptions();
+     }
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/RMAdminCLI.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/RMAdminCLI.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/RMAdminCLI.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/RMAdminCLI.java	2020-06-06 19:55:07.467052300 +0000
+@@ -173,7 +173,10 @@
+   }
+ 
+   public RMAdminCLI(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:RMAdminCLI", conf);
++    super.setConf(conf);
+   }
+ 
+   protected void setErrOut(PrintStream errOut) {
+@@ -984,6 +987,8 @@
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:RMAdminCLI", conf);
+     if (conf != null) {
+       conf = addSecurityConfiguration(conf);
+     }
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/SchedConfCLI.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/SchedConfCLI.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/SchedConfCLI.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/cli/SchedConfCLI.java	2020-06-06 19:53:49.438161106 +0000
+@@ -62,7 +62,14 @@
+       "value as confKey=confVal.";
+ 
+   public SchedConfCLI() {
+-    super(new YarnConfiguration());
++    this(new YarnConfiguration());
++  }
++  
++  public SchedConfCLI(Configuration conf) {
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:SchedConfCLI", conf);
++    super.setConf(conf);
+   }
+ 
+   public static void main(String[] args) throws Exception {
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/client/api/impl/TimelineClientImpl.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/client/api/impl/TimelineClientImpl.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/client/api/impl/TimelineClientImpl.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/client/api/impl/TimelineClientImpl.java	2020-06-06 19:42:58.214723260 +0000
+@@ -96,6 +96,8 @@
+   }
+ 
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:TimelineClientImpl", conf);
+     if (!YarnConfiguration.timelineServiceV1Enabled(conf)) {
+       throw new IOException("Timeline V1 client is not properly configured. "
+           + "Either timeline service is not enabled or version is not set to"
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-registry/src/main/java/org/apache/hadoop/registry/server/dns/RegistryDNSServer.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-registry/src/main/java/org/apache/hadoop/registry/server/dns/RegistryDNSServer.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-registry/src/main/java/org/apache/hadoop/registry/server/dns/RegistryDNSServer.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-registry/src/main/java/org/apache/hadoop/registry/server/dns/RegistryDNSServer.java	2020-06-06 19:25:52.751011089 +0000
+@@ -74,7 +74,8 @@
+    */
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
+-
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:RegistryDNSServer", conf);
+     pathToRecordMap = new ConcurrentHashMap<>();
+ 
+     registryOperations = new RegistryOperationsService("RegistryDNSOperations");
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-applicationhistoryservice/src/main/java/org/apache/hadoop/yarn/server/applicationhistoryservice/ApplicationHistoryServer.java	2020-06-06 19:23:54.137656366 +0000
+@@ -85,7 +85,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
+-
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:ApplicationHistoryServer", conf);
+     // do security login first.
+     try {
+       doSecureLogin(conf);
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/NodeManager.java	2020-06-06 19:22:17.028547249 +0000
+@@ -385,6 +385,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:NodeManager", conf);
+     UserGroupInformation.setConfiguration(conf);
+     rmWorkPreservingRestartEnabled = conf.getBoolean(YarnConfiguration
+             .RM_WORK_PRESERVING_RECOVERY_ENABLED,
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/containermanager/localizer/ContainerLocalizer.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/containermanager/localizer/ContainerLocalizer.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/containermanager/localizer/ContainerLocalizer.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/main/java/org/apache/hadoop/yarn/server/nodemanager/containermanager/localizer/ContainerLocalizer.java	2020-06-06 19:44:50.172001963 +0000
+@@ -130,7 +130,10 @@
+     this.localDirs = localDirs;
+     this.localizerId = localizerId;
+     this.recordFactory = recordFactory;
+-    this.conf = initConfiguration();
++    // msx
++    Configuration tmpConf = initConfiguration();
++    tmpConf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:ContainerLocalizer", tmpConf);
++    this.conf = tmpConf;
+     this.diskValidator = DiskValidatorFactory.getInstance(
+         YarnConfiguration.DEFAULT_DISK_VALIDATOR);
+     this.appCacheDirContextName = String.format(APPCACHE_CTXT_FMT, appId);
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java	2020-06-06 21:16:33.158853454 +0000
+@@ -251,6 +251,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:ResourceManager", conf);
+     this.conf = conf;
+     UserGroupInformation.setConfiguration(conf);
+     this.rmContext = new RMContextImpl();
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/Router.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/Router.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/Router.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-router/src/main/java/org/apache/hadoop/yarn/server/router/Router.java	2020-06-06 19:40:31.377046177 +0000
+@@ -87,6 +87,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration config) throws Exception {
++    // msx
++    config = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:Router", config);
+     this.conf = config;
+     // ClientRM Proxy
+     clientRMProxyService = createClientRMProxyService();
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-sharedcachemanager/src/main/java/org/apache/hadoop/yarn/server/sharedcachemanager/SharedCacheManager.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-sharedcachemanager/src/main/java/org/apache/hadoop/yarn/server/sharedcachemanager/SharedCacheManager.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-sharedcachemanager/src/main/java/org/apache/hadoop/yarn/server/sharedcachemanager/SharedCacheManager.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-sharedcachemanager/src/main/java/org/apache/hadoop/yarn/server/sharedcachemanager/SharedCacheManager.java	2020-06-06 19:22:38.972797882 +0000
+@@ -62,7 +62,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
+-
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:SharedCacheManager", conf);
+     this.store = createSCMStoreService(conf);
+     addService(store);
+ 
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/collector/PerNodeTimelineCollectorsAuxService.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/collector/PerNodeTimelineCollectorsAuxService.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/collector/PerNodeTimelineCollectorsAuxService.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/collector/PerNodeTimelineCollectorsAuxService.java	2020-06-06 19:25:33.666793122 +0000
+@@ -80,6 +80,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:PerNodeTimelineCollectorsAuxService", conf);
+     if (!YarnConfiguration.timelineServiceV2Enabled(conf)) {
+       throw new YarnException(
+           "Looks like timeline_collector is set as an auxillary service in "
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/reader/TimelineReaderServer.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/reader/TimelineReaderServer.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/reader/TimelineReaderServer.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/main/java/org/apache/hadoop/yarn/server/timelineservice/reader/TimelineReaderServer.java	2020-06-06 19:25:19.826635049 +0000
+@@ -74,6 +74,8 @@
+ 
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:TimelineReaderServer", conf);
+     if (!YarnConfiguration.timelineServiceV2Enabled(conf)) {
+       throw new YarnException("timeline service v.2 is not enabled");
+     }
+@@ -248,4 +250,4 @@
+     TimelineReaderServer server = startTimelineReaderServer(args, conf);
+     server.join();
+   }
+-}
+\ No newline at end of file
++}
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase/hadoop-yarn-server-timelineservice-hbase-client/src/main/java/org/apache/hadoop/yarn/server/timelineservice/storage/TimelineSchemaCreator.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase/hadoop-yarn-server-timelineservice-hbase-client/src/main/java/org/apache/hadoop/yarn/server/timelineservice/storage/TimelineSchemaCreator.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase/hadoop-yarn-server-timelineservice-hbase-client/src/main/java/org/apache/hadoop/yarn/server/timelineservice/storage/TimelineSchemaCreator.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase/hadoop-yarn-server-timelineservice-hbase-client/src/main/java/org/apache/hadoop/yarn/server/timelineservice/storage/TimelineSchemaCreator.java	2020-06-06 19:40:18.648900806 +0000
+@@ -296,7 +296,8 @@
+   @VisibleForTesting
+   public static void createAllTables(Configuration hbaseConf,
+       boolean skipExisting) throws IOException {
+-
++    // msx
++    hbaseConf = org.apache.hadoop.conf.Configured.performReconf(null, "yarn:TimelineSchemaCreator_createAllTables", hbaseConf);
+     Connection conn = null;
+     try {
+       conn = ConnectionFactory.createConnection(hbaseConf);
+diff -ruN /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-web-proxy/src/main/java/org/apache/hadoop/yarn/server/webproxy/WebAppProxyServer.java ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-web-proxy/src/main/java/org/apache/hadoop/yarn/server/webproxy/WebAppProxyServer.java
+--- /hadoop-3.2.1-src/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-web-proxy/src/main/java/org/apache/hadoop/yarn/server/webproxy/WebAppProxyServer.java	2019-09-10 14:35:50.000000000 +0000
++++ ./hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-web-proxy/src/main/java/org/apache/hadoop/yarn/server/webproxy/WebAppProxyServer.java	2020-06-06 19:23:36.185451327 +0000
+@@ -61,6 +61,8 @@
+   @Override
+   protected void serviceInit(Configuration conf) throws Exception {
+     Configuration config = new YarnConfiguration(conf);
++    // msx
++    config = org.apache.hadoop.conf.Configured.performReconf(this, "yarn:WebAppProxyServer", config);
+     doSecureLogin(conf);
+     proxy = new WebAppProxy();
+     addService(proxy);

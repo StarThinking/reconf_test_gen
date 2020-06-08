@@ -1,0 +1,1045 @@
+diff -ruN /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java
+--- /hbase-2.2.4/hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-common/src/test/java/org/apache/hadoop/hbase/TimedOutTestsListener.java	2020-05-18 04:31:54.000000000 +0000
+@@ -33,6 +33,13 @@
+ import org.junit.runner.notification.Failure;
+ import org.junit.runner.notification.RunListener;
+ 
++import org.junit.runner.Description;
++import org.junit.runner.Result;
++import java.io.File;
++import java.io.BufferedWriter;
++import java.io.FileWriter;
++import org.apache.commons.lang3.exception.ExceptionUtils;
++
+ /**
+  * JUnit run listener which prints full thread dump into System.err
+  * in case a test is failed due to timeout.
+@@ -45,6 +52,13 @@
+ 
+   private final PrintWriter output;
+ 
++  public String controllerRootDir = "/root/parameter_test_controller/";
++  public String resultDirName = controllerRootDir + "shared/test_results/";
++  public String warnDirName = controllerRootDir + "shared/warn_results/";
++  public String SEPERATOR = "@@@";
++  public String globalTestName = "";
++  public int unitTestCounterInClass = 0;
++
+   public TimedOutTestsListener() {
+     this.output = new PrintWriter(System.err);
+   }
+@@ -53,8 +67,120 @@
+     this.output = output;
+   }
+ 
++  private void writeFile(String testName, String failureMessage, String stackTrace, String result) throws Exception {
++      System.out.println("msx-listener writeFile testName is " + testName);
++      File theFile = null;
++      if (testName.equals("")) {
++          Date date = new Date();
++          SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
++          String dateTime = "Warn-" + formatter.format(date);
++          theFile = new File(warnDirName + dateTime);
++      } else {
++          theFile = new File(resultDirName + testName);
++      }
++
++      if (!theFile.exists()) {
++          BufferedWriter writer = new BufferedWriter(new FileWriter(theFile)); 
++          writer.write(testName + SEPERATOR + result + SEPERATOR + failureMessage + SEPERATOR + stackTrace + SEPERATOR);
++          writer.flush();
++          writer.close();
++      } else {
++          System.out.println("msx-listener INFO: file existed " + theFile);
++      }
++  }
++
++  private String getTestName(String className, String methodName) throws Exception {
++      if (className == null || methodName == null || className.equals("") || methodName.equals("")) {
++          if (!globalTestName.equals("") && !globalTestName.equals("#")) {
++              System.out.println("msx-listener WARN: using globalTestName " + globalTestName);
++              return globalTestName;
++          } else {
++              System.out.println("msx-listener ERROR: unable to obtain test name!");
++              return "";
++          } 
++      }
++      return className + "#" + methodName;
++  }
++
++  private void succeed(String testName, Description description) throws Exception {
++      String failureMessage = "none";
++      String stackTrace = "none";
++      String result = "1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener succeed");
++      //reset();
++  }
++
++  private void failed(String testName, Failure failure) throws Exception {
++      String failureMessage = failure.getMessage();
++      String stackTrace = ExceptionUtils.getStackTrace(failure.getException());
++      String result = "-1";
++      writeFile(testName, failureMessage, stackTrace, result);
++      System.out.println("msx-listener failed");
++      System.out.println("msx-listener failureMessage: " + failureMessage);
++      System.out.println("msx-listener stackTrace: " + stackTrace);
++      //reset();
++  }
++
++  @Override
++  public void testStarted(Description description) throws java.lang.Exception {
++      globalTestName = description.getClassName() + "#" + description.getMethodName();
++      System.out.println("msx-listener test started " + globalTestName);
++      if (unitTestCounterInClass > 0) { // perform reset
++          System.out.println("msx-listener perform reset as unitTestCounterInClass " + unitTestCounterInClass + " is larger than zero");
++          //reset();
++      } else {
++          System.out.println("msx-listener unitTestCounterInClass = " + unitTestCounterInClass);
++      }
++      unitTestCounterInClass++;
++  }
++
++  @Override
++  public void testFinished(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener testfinished " + testName);
++      succeed(testName, description);
++  }
++
++  @Override
++  public void testIgnored(Description description) throws Exception {
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Ignored " + testName);
++      succeed(testName, description);
++  }
++
++  public void myTestFailure(Failure failure) throws Exception{
++      Description description = failure.getDescription();
++      String testName = getTestName(description.getClassName(), description.getMethodName());
++      System.out.println("msx-listener test Failure " + testName);
++      failed(testName, failure);
++  }
++
++  @Override
++  public void testAssumptionFailure(Failure failure) {
++      try {
++          Description description = failure.getDescription();
++          String testName = getTestName(description.getClassName(), description.getMethodName());
++          System.out.println("msx-listener testAssumptionFailure " + testName);
++          failed(testName, failure);
++      } catch(Exception e) {
++          e.printStackTrace();
++      }
++  }
++   
++  @Override // Called before any tests have been run.
++  public void testRunStarted(Description description) throws Exception {
++      System.out.println("msx-listener all testRunStarted");
++  }
++
++  @Override // Called when all tests have finished
++  public void testRunFinished(Result result) throws Exception {
++      System.out.println("msx-listener all testRunFinished");
++  }
++
+   @Override
+   public void testFailure(Failure failure) throws Exception {
++    myTestFailure(failure);
+     if (failure != null && failure.getMessage() != null
+         && failure.getMessage().startsWith(TEST_TIMED_OUT_PREFIX)) {
+       output.println("====> TEST TIMED OUT. PRINTING THREAD DUMP. <====");
+diff -ruN /hbase-2.2.4/hbase-endpoint/src/main/java/org/apache/hadoop/hbase/coprocessor/Export.java ./hbase-endpoint/src/main/java/org/apache/hadoop/hbase/coprocessor/Export.java
+--- /hbase-2.2.4/hbase-endpoint/src/main/java/org/apache/hadoop/hbase/coprocessor/Export.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-endpoint/src/main/java/org/apache/hadoop/hbase/coprocessor/Export.java	2020-06-07 04:12:50.472127880 +0000
+@@ -104,7 +104,9 @@
+   }
+ 
+   @VisibleForTesting
+-  static Map<byte[], Response> run(final Configuration conf, final String[] args) throws Throwable {
++  static Map<byte[], Response> run(Configuration conf, final String[] args) throws Throwable {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:Export_run", conf);
+     String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+     if (!ExportUtils.isValidArguements(args)) {
+       ExportUtils.usage("Wrong number of arguments: " + ArrayUtils.getLength(otherArgs));
+diff -ruN /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/HttpProxyExample.java ./hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/HttpProxyExample.java
+--- /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/HttpProxyExample.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/HttpProxyExample.java	2020-06-07 02:20:00.646807393 +0000
+@@ -90,6 +90,8 @@
+   private ChannelGroup channelGroup;
+ 
+   public HttpProxyExample(Configuration conf, int port) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HttpProxyExample", conf);
+     this.conf = conf;
+     this.port = port;
+   }
+diff -ruN /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/RefreshHFilesClient.java ./hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/RefreshHFilesClient.java
+--- /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/RefreshHFilesClient.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-examples/src/main/java/org/apache/hadoop/hbase/client/example/RefreshHFilesClient.java	2020-06-07 02:20:53.099406472 +0000
+@@ -53,6 +53,8 @@
+    * @param cfg the {@link Configuration} object to use
+    */
+   public RefreshHFilesClient(Configuration cfg) {
++    // msx
++    cfg = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:RefreshHFilesClient", cfg);
+     try {
+       this.connection = ConnectionFactory.createConnection(cfg);
+     } catch (IOException e) {
+diff -ruN /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/IndexBuilder.java ./hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/IndexBuilder.java
+--- /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/IndexBuilder.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/IndexBuilder.java	2020-06-07 02:19:39.634567405 +0000
+@@ -72,6 +72,13 @@
+   /** the qualifier containing the indexed row key */
+   public static final byte[] INDEX_QUALIFIER = Bytes.toBytes("ROW");
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:IndexBuilder", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Internal Mapper to be run by Hadoop.
+    */
+diff -ruN /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/SampleUploader.java ./hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/SampleUploader.java
+--- /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/SampleUploader.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-examples/src/main/java/org/apache/hadoop/hbase/mapreduce/SampleUploader.java	2020-06-07 02:19:22.778374885 +0000
+@@ -63,6 +63,13 @@
+ 
+   private static final String NAME = "SampleUploader";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:SampleUploader", conf);
++    super.setConf(conf);
++  }
++
+   static class Uploader extends Mapper<LongWritable, Text, ImmutableBytesWritable, Put> {
+     private long checkpoint = 100;
+     private long count = 0;
+diff -ruN /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/rest/RESTDemoClient.java ./hbase-examples/src/main/java/org/apache/hadoop/hbase/rest/RESTDemoClient.java
+--- /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/rest/RESTDemoClient.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-examples/src/main/java/org/apache/hadoop/hbase/rest/RESTDemoClient.java	2020-06-07 02:18:40.901896599 +0000
+@@ -59,6 +59,8 @@
+       port = Integer.parseInt(args[1]);
+     }
+     conf = HBaseConfiguration.create();
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:RESTDemoClient_main", conf);
+     String principal = conf.get(Constants.REST_KERBEROS_PRINCIPAL);
+     if (principal != null) {
+       secure = true;
+diff -ruN /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/thrift2/DemoClient.java ./hbase-examples/src/main/java/org/apache/hadoop/hbase/thrift2/DemoClient.java
+--- /hbase-2.2.4/hbase-examples/src/main/java/org/apache/hadoop/hbase/thrift2/DemoClient.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-examples/src/main/java/org/apache/hadoop/hbase/thrift2/DemoClient.java	2020-06-07 02:18:03.797472817 +0000
+@@ -64,6 +64,8 @@
+       port = Integer.parseInt(args[1]);
+     }
+     org.apache.hadoop.conf.Configuration conf = HBaseConfiguration.create();
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:DemoClient_main", conf);
+     String principal = conf.get("hbase.thrift.kerberos.principal");
+     if (principal != null) {
+       secure = true;
+diff -ruN /hbase-2.2.4/hbase-hbtop/src/main/java/org/apache/hadoop/hbase/hbtop/HBTop.java ./hbase-hbtop/src/main/java/org/apache/hadoop/hbase/hbtop/HBTop.java
+--- /hbase-2.2.4/hbase-hbtop/src/main/java/org/apache/hadoop/hbase/hbtop/HBTop.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-hbtop/src/main/java/org/apache/hadoop/hbase/hbtop/HBTop.java	2020-06-07 02:22:39.464621306 +0000
+@@ -49,7 +49,11 @@
+   }
+ 
+   public HBTop(Configuration conf) {
+-    super(Objects.requireNonNull(conf));
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HBTop", conf);
++    super.setConf(conf);
++    //super(Objects.requireNonNull(conf));
+   }
+ 
+   @Override
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapred/RowCounter.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapred/RowCounter.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapred/RowCounter.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapred/RowCounter.java	2020-06-07 02:24:23.001803839 +0000
+@@ -34,6 +34,9 @@
+ import org.apache.hadoop.util.Tool;
+ import org.apache.hadoop.util.ToolRunner;
+ 
++// msx
++import org.apache.hadoop.conf.Configuration;
++
+ /**
+  * A job with a map to count rows.
+  * Map outputs table rows IF the input row has columns that have content.
+@@ -44,6 +47,13 @@
+   // Name of this 'program'
+   static final String NAME = "rowcounter";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:RowCounter", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Mapper that runs the count.
+    */
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CellCounter.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CellCounter.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CellCounter.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CellCounter.java	2020-06-07 02:28:05.152341096 +0000
+@@ -82,6 +82,13 @@
+ 
+   private final static String JOB_NAME_CONF_KEY = "mapreduce.job.name";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:CellCounter", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Mapper that runs the count.
+    */
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CopyTable.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CopyTable.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CopyTable.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/CopyTable.java	2020-06-07 02:27:49.784165570 +0000
+@@ -45,6 +45,9 @@
+ import org.apache.hadoop.util.Tool;
+ import org.apache.hadoop.util.ToolRunner;
+ 
++// msx
++import org.apache.hadoop.conf.Configuration;
++
+ /**
+  * Tool used to copy a table to another one which can be on a different setup.
+  * It is also configurable with a start and time as well as a specification
+@@ -77,6 +80,13 @@
+ 
+   private final static String JOB_NAME_CONF_KEY = "mapreduce.job.name";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:CopyTable", conf);
++    super.setConf(conf);
++  }
++
+   private Path generateUniqTempDir(boolean withDirCreated) throws IOException {
+     FileSystem fs = FSUtils.getCurrentFileSystem(getConf());
+     Path dir = new Path(fs.getWorkingDirectory(), NAME);
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Export.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Export.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Export.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Export.java	2020-06-07 02:29:44.481475569 +0000
+@@ -47,6 +47,13 @@
+   static final String NAME = "export";
+   static final String JOB_NAME_CONF_KEY = "mapreduce.job.name";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:Export", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Sets up the actual job.
+    *
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/HashTable.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/HashTable.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/HashTable.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/HashTable.java	2020-06-07 02:26:22.011163086 +0000
+@@ -79,7 +79,10 @@
+   Path destPath;
+ 
+   public HashTable(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HashTable", conf);
++    super.setConf(conf);
+   }
+ 
+   public static class TableHash {
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Import.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Import.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Import.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/Import.java	2020-06-07 02:27:34.743993792 +0000
+@@ -98,6 +98,13 @@
+ 
+   private final static String JOB_NAME_CONF_KEY = "mapreduce.job.name";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:Import", conf);
++    super.setConf(conf);
++  }
++
+   public static class CellWritableComparablePartitioner
+       extends Partitioner<CellWritableComparable, Cell> {
+     private static CellWritableComparable[] START_KEYS = null;
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/ImportTsv.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/ImportTsv.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/ImportTsv.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/ImportTsv.java	2020-06-07 02:30:01.041664708 +0000
+@@ -110,6 +110,13 @@
+    */
+   private static boolean DRY_RUN_TABLE_CREATED;
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ImportTsv", conf);
++    super.setConf(conf);
++  }
++
+   public static class TsvParser {
+     /**
+      * Column families and qualifiers mapped to the TSV columns
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/RowCounter.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/RowCounter.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/RowCounter.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/RowCounter.java	2020-06-07 02:25:44.546735192 +0000
+@@ -58,6 +58,13 @@
+   private final static String JOB_NAME_CONF_KEY = "mapreduce.job.name";
+   private final static String EXPECTED_COUNT_KEY = RowCounter.class.getName() + ".expected_count";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:RowCounter2", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Mapper that runs the count.
+    */
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/SyncTable.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/SyncTable.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/SyncTable.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/SyncTable.java	2020-06-07 02:29:32.141334627 +0000
+@@ -81,7 +81,10 @@
+   Counters counters;
+ 
+   public SyncTable(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:SyncTable", conf);
++    super.setConf(conf);
+   }
+ 
+   private void initCredentialsForHBase(String zookeeper, Job job) throws IOException {
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/WALPlayer.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/WALPlayer.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/WALPlayer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/WALPlayer.java	2020-06-07 04:00:02.735359296 +0000
+@@ -89,8 +89,18 @@
+   public WALPlayer(){
+   }
+ 
+-  protected WALPlayer(final Configuration c) {
+-    super(c);
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:WALPlayer", conf);
++    super.setConf(conf);
++  }
++
++  protected WALPlayer(Configuration c) {
++    // msx
++    super();
++    c = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:WALPlayer", c);
++    super.setConf(c);
+   }
+ 
+   /**
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mapreduce/replication/VerifyReplication.java	2020-06-07 02:26:46.479442546 +0000
+@@ -120,6 +120,13 @@
+ 
+   private final static String JOB_NAME_CONF_KEY = "mapreduce.job.name";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:VerifyReplication", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Map-only comparator for 2 tables
+    */
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mob/mapreduce/MobRefReporter.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mob/mapreduce/MobRefReporter.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mob/mapreduce/MobRefReporter.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/mob/mapreduce/MobRefReporter.java	2020-06-07 02:25:23.402493695 +0000
+@@ -169,6 +169,13 @@
+   static final String REPORT_JOB_ID = "mob.report.job.id";
+   static final String REPORT_START_DATETIME = "mob.report.job.start";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:MobRefReporter", conf);
++    super.setConf(conf);
++  }
++
+   public static class MobRefMapper extends TableMapper<Text, ImmutableBytesWritable> {
+     @Override
+     public void map(ImmutableBytesWritable r, Result columns, Context context) throws IOException,
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/regionserver/CompactionTool.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/regionserver/CompactionTool.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/regionserver/CompactionTool.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/regionserver/CompactionTool.java	2020-06-07 02:24:36.409956978 +0000
+@@ -81,6 +81,13 @@
+   private final static String CONF_COMPACT_MAJOR = "hbase.compactiontool.compact.major";
+   private final static String CONF_DELETE_COMPACTED = "hbase.compactiontool.delete";
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:CompactionTool", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Class responsible to execute the Compaction on the specified path.
+    * The path can be a table, region or family directory.
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/snapshot/ExportSnapshot.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/snapshot/ExportSnapshot.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/snapshot/ExportSnapshot.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/snapshot/ExportSnapshot.java	2020-06-07 02:24:00.597547952 +0000
+@@ -118,6 +118,13 @@
+   private static final int DEFAULT_COPY_MANIFEST_THREADS =
+       Runtime.getRuntime().availableProcessors();
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ExportSnapshot", conf);
++    super.setConf(conf);
++  }
++
+   static class Testing {
+     static final String CONF_TEST_FAILURE = "test.snapshot.export.failure";
+     static final String CONF_TEST_FAILURE_COUNT = "test.snapshot.export.failure.count";
+diff -ruN /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/util/MapreduceDependencyClasspathTool.java ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/util/MapreduceDependencyClasspathTool.java
+--- /hbase-2.2.4/hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/util/MapreduceDependencyClasspathTool.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-mapreduce/src/main/java/org/apache/hadoop/hbase/util/MapreduceDependencyClasspathTool.java	2020-06-07 02:25:08.534323882 +0000
+@@ -38,6 +38,8 @@
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:MapreduceDependencyClasspathTool", conf);
+     this.conf = conf;
+   }
+ 
+diff -ruN /hbase-2.2.4/hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALPrettyPrinter.java ./hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALPrettyPrinter.java
+--- /hbase-2.2.4/hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALPrettyPrinter.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/ProcedureWALPrettyPrinter.java	2020-06-07 02:30:14.801821867 +0000
+@@ -58,6 +58,13 @@
+     out = System.out;
+   }
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ProcedureWALPrettyPrinter", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Reads a log file and outputs its contents.
+    *
+diff -ruN /hbase-2.2.4/hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.java ./hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.java
+--- /hbase-2.2.4/hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-procedure/src/main/java/org/apache/hadoop/hbase/procedure2/store/wal/WALProcedureStore.java	2020-06-07 03:40:16.605812106 +0000
+@@ -242,8 +242,10 @@
+   }
+ 
+   @VisibleForTesting
+-  public WALProcedureStore(final Configuration conf, final Path walDir, final Path walArchiveDir,
++  public WALProcedureStore(Configuration conf, final Path walDir, final Path walArchiveDir,
+       final LeaseRecovery leaseRecovery) throws IOException {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:WALProcedureStore", conf);
+     this.conf = conf;
+     this.leaseRecovery = leaseRecovery;
+     this.walDir = walDir;
+diff -ruN /hbase-2.2.4/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/RESTServer.java ./hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/RESTServer.java
+--- /hbase-2.2.4/hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/RESTServer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-rest/src/main/java/org/apache/hadoop/hbase/rest/RESTServer.java	2020-06-07 02:30:55.298284390 +0000
+@@ -109,6 +109,8 @@
+   private InfoServer infoServer;
+ 
+   public RESTServer(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:RESTServer", conf);
+     RESTServer.conf = conf;
+     this.userProvider = UserProvider.instantiate(conf);
+   }
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.java	2020-06-07 02:47:43.893803905 +0000
+@@ -135,8 +135,18 @@
+     init();
+   }
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HFilePrettyPrinter", conf);
++    super.setConf(conf);
++  }
++
+   public HFilePrettyPrinter(Configuration conf) {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HFilePrettyPrinter", conf);
++    super.setConf(conf);
+     init();
+   }
+ 
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java	2020-06-07 03:43:33.760063871 +0000
+@@ -492,6 +492,7 @@
+   public HMaster(final Configuration conf)
+       throws IOException, KeeperException {
+     super(conf);
++   
+     TraceUtil.initTracer(conf);
+     try {
+       if (conf.getBoolean(MAINTENANCE_MODE, false)) {
+@@ -571,7 +572,7 @@
+   // Main run loop. Calls through to the regionserver run loop AFTER becoming active Master; will
+   // block in here until then.
+   @Override
+-  public void run() {
++  public void run() { 
+     try {
+       if (!conf.getBoolean("hbase.testing.nocluster", false)) {
+         Threads.setDaemonThreadRunning(new Thread(() -> {
+@@ -2793,6 +2794,7 @@
+ 
+   @Override
+   public void stop(String msg) {
++    
+     if (!isStopped()) {
+       super.stop(msg);
+       if (this.activeMasterManager != null) {
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/RegionPlacementMaintainer.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/RegionPlacementMaintainer.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/master/RegionPlacementMaintainer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/master/RegionPlacementMaintainer.java	2020-06-07 02:52:13.616884504 +0000
+@@ -102,6 +102,8 @@
+ 
+   public RegionPlacementMaintainer(Configuration conf, boolean enforceLocality,
+       boolean enforceMinAssignmentMove) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:RegionPlacementMaintainer", conf);
+     this.conf = conf;
+     this.enforceLocality = enforceLocality;
+     this.enforceMinAssignmentMove = enforceMinAssignmentMove;
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/mob/ExpiredMobFileCleaner.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/mob/ExpiredMobFileCleaner.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/mob/ExpiredMobFileCleaner.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/mob/ExpiredMobFileCleaner.java	2020-06-07 02:47:04.013348417 +0000
+@@ -48,6 +48,14 @@
+ public class ExpiredMobFileCleaner extends Configured implements Tool {
+ 
+   private static final Logger LOG = LoggerFactory.getLogger(ExpiredMobFileCleaner.class);
++
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ExpiredMobFileCleaner", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Cleans the MOB files when they're expired and their min versions are 0.
+    * If the latest timestamp of Cells in a MOB file is older than the TTL in the column family,
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/AbstractMemStore.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/AbstractMemStore.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/AbstractMemStore.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/AbstractMemStore.java	2020-06-07 02:38:26.787441003 +0000
+@@ -74,8 +74,10 @@
+     scanners.add(segment.getScanner(readPt));
+   }
+ 
+-  protected AbstractMemStore(final Configuration conf, final CellComparator c,
++  protected AbstractMemStore(Configuration conf, final CellComparator c,
+       final RegionServicesForStores regionServices) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:AbstractMemStore", conf);
+     this.conf = conf;
+     this.comparator = c;
+     this.regionServices = regionServices;
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java	2020-06-07 03:44:39.448814126 +0000
+@@ -564,6 +564,13 @@
+   // Defer till after we register with the Master as much as possible. See #startServices.
+   public HRegionServer(Configuration conf) throws IOException {
+     super("RegionServer");  // thread name
++    // msx
++    if (!(this instanceof HMaster)) {
++        conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HRegionServer", conf);
++    } else {
++        conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HMaster", conf);
++    }
++
+     TraceUtil.initTracer(conf);
+     try {
+       this.startcode = System.currentTimeMillis();
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ShutdownHook.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ShutdownHook.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ShutdownHook.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/ShutdownHook.java	2020-06-07 03:58:10.834081233 +0000
+@@ -80,8 +80,10 @@
+    * @param threadToJoin After calling stop on <code>stop</code> will then
+    * join this thread.
+    */
+-  public static void install(final Configuration conf, final FileSystem fs,
++  public static void install(Configuration conf, final FileSystem fs,
+       final Stoppable stop, final Thread threadToJoin) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:ShutdownHook_install", conf);
+     Runnable fsShutdownHook = suppressHdfsShutdownHook(fs);
+     Thread t = new ShutdownHookThread(conf, stop, threadToJoin, fsShutdownHook);
+     ShutdownHookManager.affixShutdownHook(t, 0);
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/AbstractFSWAL.java	2020-06-07 03:52:17.510045799 +0000
+@@ -336,12 +336,14 @@
+   }
+ 
+   protected AbstractFSWAL(final FileSystem fs, final Path rootDir, final String logDir,
+-      final String archiveDir, final Configuration conf, final List<WALActionsListener> listeners,
++      final String archiveDir, Configuration conf, final List<WALActionsListener> listeners,
+       final boolean failIfWALExists, final String prefix, final String suffix)
+       throws FailedLogCloseException, IOException {
+     this.fs = fs;
+     this.walDir = new Path(rootDir, logDir);
+     this.walArchiveDir = new Path(rootDir, archiveDir);
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:AbstractFSWAL", conf);
+     this.conf = conf;
+ 
+     if (!fs.exists(walDir) && !fs.mkdirs(walDir)) {
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/Compressor.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/Compressor.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/Compressor.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/wal/Compressor.java	2020-06-07 02:42:37.874308751 +0000
+@@ -68,6 +68,8 @@
+   private static void transformFile(Path input, Path output)
+       throws IOException {
+     Configuration conf = HBaseConfiguration.create();
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:Compressor", conf);
+ 
+     FileSystem inFS = input.getFileSystem(conf);
+     FileSystem outFS = output.getFileSystem(conf);
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/replication/master/ReplicationPeerConfigUpgrader.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/replication/master/ReplicationPeerConfigUpgrader.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/replication/master/ReplicationPeerConfigUpgrader.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/replication/master/ReplicationPeerConfigUpgrader.java	2020-06-07 02:31:41.886816493 +0000
+@@ -63,6 +63,8 @@
+   private final ReplicationPeerStorage peerStorage;
+ 
+   public ReplicationPeerConfigUpgrader(ZKWatcher zookeeper, Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ReplicationPeerConfigUpgrader", conf);
+     this.zookeeper = zookeeper;
+     this.conf = conf;
+     this.peerStorage = ReplicationStorageFactory.getReplicationPeerStorage(zookeeper, conf);
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/DumpReplicationQueues.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/DumpReplicationQueues.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/DumpReplicationQueues.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/DumpReplicationQueues.java	2020-06-07 02:31:08.898439723 +0000
+@@ -87,6 +87,13 @@
+     numWalsNotFound = 0;
+   }
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:DumpReplicationQueues", conf);
++    super.setConf(conf);
++  }
++
+   static class DumpOptions {
+     boolean hdfs = false;
+     boolean distributed = false;
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/ReplicationSyncUp.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/ReplicationSyncUp.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/ReplicationSyncUp.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/replication/regionserver/ReplicationSyncUp.java	2020-06-07 02:31:21.818587288 +0000
+@@ -52,6 +52,13 @@
+ 
+   private static final long SLEEP_TIME = 10000;
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ReplicationSyncUp", conf);
++    super.setConf(conf);
++  }
++
+   /**
+    * Main program
+    */
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/tool/CanaryTool.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/tool/CanaryTool.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/tool/CanaryTool.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/tool/CanaryTool.java	2020-06-07 02:51:56.904693629 +0000
+@@ -735,6 +735,8 @@
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:CanaryTool", conf);
+     if (conf == null) {
+       conf = HBaseConfiguration.create();
+     }
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/tool/LoadIncrementalHFiles.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/tool/LoadIncrementalHFiles.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/tool/LoadIncrementalHFiles.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/tool/LoadIncrementalHFiles.java	2020-06-07 03:50:29.288809768 +0000
+@@ -179,7 +179,17 @@
+ 
+   public LoadIncrementalHFiles(Configuration conf) {
+     // make a copy, just to be sure we're not overriding someone else's config
+-    super(HBaseConfiguration.create(conf));
++    //super(HBaseConfiguration.create(conf));
++    //conf = getConf();
++
++    // msx
++    super();
++    if (!(this instanceof BulkLoadHFilesTool)) {
++        conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:LoadIncrementalHFiles", conf);
++    } else {
++        conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:BulkLoadHFilesTool", conf);
++    }
++    super.setConf(conf);
+     conf = getConf();
+     // disable blockcache for tool invocation, see HBASE-10500
+     conf.setFloat(HConstants.HFILE_BLOCK_CACHE_SIZE_KEY, 0);
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/tool/PreUpgradeValidator.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/tool/PreUpgradeValidator.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/tool/PreUpgradeValidator.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/tool/PreUpgradeValidator.java	2020-06-07 02:48:54.178606651 +0000
+@@ -61,6 +61,8 @@
+ 
+   @Override
+   public void setConf(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:PreUpgradeValidator", conf);
+     this.configuration = conf;
+   }
+ 
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/CompressionTest.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/CompressionTest.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/CompressionTest.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/CompressionTest.java	2020-06-07 02:45:30.884284757 +0000
+@@ -120,6 +120,8 @@
+   public static void doSmokeTest(FileSystem fs, Path path, String codec)
+   throws Exception {
+     Configuration conf = HBaseConfiguration.create();
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:CompressionTest_doSmokeTest", conf);
+     HFileContext context = new HFileContextBuilder()
+                            .withCompression(HFileWriterImpl.compressionByName(codec)).build();
+     HFile.Writer writer = HFile.getWriterFactoryNoCache(conf)
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/HBaseFsck.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/HBaseFsck.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/HBaseFsck.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/HBaseFsck.java	2020-06-07 02:44:58.647916575 +0000
+@@ -364,7 +364,10 @@
+    */
+   public HBaseFsck(Configuration conf, ExecutorService exec) throws MasterNotRunningException,
+       ZooKeeperConnectionException, IOException, ClassNotFoundException {
+-    super(conf);
++    // msx
++    super();
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HBaseFsck", conf);
++    super.setConf(conf);
+     errors = getErrorReporter(getConf());
+     this.executor = exec;
+     lockFileRetryCounterFactory = createLockRetryCounterFactory(getConf());
+@@ -3616,7 +3619,12 @@
+    * This is a Tool wrapper that gathers -Dxxx=yyy configuration settings from the command line.
+    */
+   static class HBaseFsckTool extends Configured implements Tool {
+-    HBaseFsckTool(Configuration conf) { super(conf); }
++    HBaseFsckTool(Configuration conf) { 
++	// msx 
++	super(); 
++	conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:HBaseFsckTool", conf);
++        super.setConf(conf);
++    }
+     @Override
+     public int run(String[] args) throws Exception {
+       HBaseFsck hbck = new HBaseFsck(getConf());
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionMover.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionMover.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionMover.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionMover.java	2020-06-07 02:45:48.172482213 +0000
+@@ -157,6 +157,8 @@
+      * @param conf Configuration object
+      */
+     public RegionMoverBuilder(String hostname, Configuration conf) {
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:RegionMoverBuilder", conf);
+       String[] splitHostname = hostname.toLowerCase().split(":");
+       this.hostname = splitHostname[0];
+       if (splitHostname.length == 2) {
+@@ -790,4 +792,4 @@
+       mover.doStaticMain(args);
+     }
+   }
+-}
+\ No newline at end of file
++}
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionSplitter.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionSplitter.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionSplitter.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/RegionSplitter.java	2020-06-07 02:43:29.242895450 +0000
+@@ -389,6 +389,8 @@
+   static void createPresplitTable(TableName tableName, SplitAlgorithm splitAlgo,
+           String[] columnFamilies, Configuration conf)
+   throws IOException, InterruptedException {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:RegionSplitter_createPresplitTable", conf);
+     final int splitCount = conf.getInt("split.count", 0);
+     Preconditions.checkArgument(splitCount > 1, "Split count must be > 1");
+ 
+@@ -452,6 +454,8 @@
+ 
+   static void rollingSplit(TableName tableName, SplitAlgorithm splitAlgo, Configuration conf)
+   throws IOException, InterruptedException {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:RegionSplitter_rollingSplit", conf);
+     final int minOS = conf.getInt("split.outstanding", 2);
+     try (Connection connection = ConnectionFactory.createConnection(conf)) {
+       // Max outstanding splits. default == 50% of servers
+@@ -657,6 +661,8 @@
+   public static SplitAlgorithm newSplitAlgoInstance(Configuration conf,
+           String splitClassName) throws IOException {
+     Class<?> splitClass;
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:RegionSplitter_newSplitAlgoInstance", conf);
+ 
+     // For split algorithms builtin to RegionSplitter, the user can specify
+     // their simple class name instead of a fully qualified class name.
+diff -ruN /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/compaction/MajorCompactor.java ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/compaction/MajorCompactor.java
+--- /hbase-2.2.4/hbase-server/src/main/java/org/apache/hadoop/hbase/util/compaction/MajorCompactor.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-server/src/main/java/org/apache/hadoop/hbase/util/compaction/MajorCompactor.java	2020-06-07 02:43:01.618579942 +0000
+@@ -72,6 +72,8 @@
+ 
+   public MajorCompactor(Configuration conf, TableName tableName, Set<String> storesToCompact,
+       int concurrency, long timestamp, long sleepForMs) throws IOException {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:MajorCompactor", conf);
+     this.connection = ConnectionFactory.createConnection(conf);
+     this.tableName = tableName;
+     this.timestamp = timestamp;
+diff -ruN /hbase-2.2.4/hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift/ThriftServer.java ./hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift/ThriftServer.java
+--- /hbase-2.2.4/hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift/ThriftServer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift/ThriftServer.java	2020-06-07 04:10:57.554838213 +0000
+@@ -196,6 +196,8 @@
+   //
+ 
+   public ThriftServer(Configuration conf) {
++    // msx for both thrift and thrift2
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ThriftServer", conf);
+     this.conf = HBaseConfiguration.create(conf);
+   }
+ 
+diff -ruN /hbase-2.2.4/hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift2/ThriftServer.java ./hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift2/ThriftServer.java
+--- /hbase-2.2.4/hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift2/ThriftServer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-thrift/src/main/java/org/apache/hadoop/hbase/thrift2/ThriftServer.java	2020-06-07 04:05:55.575389202 +0000
+@@ -56,7 +56,10 @@
+ 
+ 
+   public ThriftServer(Configuration conf) {
++    // msx
+     super(conf);
++    //conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ThriftServer2", conf);
++    //super.setConf(conf);
+   }
+ 
+   @Override
+diff -ruN /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/HQuorumPeer.java ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/HQuorumPeer.java
+--- /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/HQuorumPeer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/HQuorumPeer.java	2020-06-07 02:59:31.845889667 +0000
+@@ -64,6 +64,8 @@
+    */
+   public static void main(String[] args) {
+     Configuration conf = HBaseConfiguration.create();
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:HQuorumPeer_main", conf);
+     try {
+       Properties zkProperties = ZKConfig.makeZKProps(conf);
+       writeMyID(zkProperties);
+@@ -103,6 +105,8 @@
+     long myId = -1;
+ 
+     Configuration conf = HBaseConfiguration.create();
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:HQuorumPeer_writeMyID", conf);
+     String myAddress = Strings.domainNamePointerToHostName(DNS.getDefaultHost(
+         conf.get("hbase.zookeeper.dns.interface","default"),
+         conf.get("hbase.zookeeper.dns.nameserver","default")));
+diff -ruN /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKAclReset.java ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKAclReset.java
+--- /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKAclReset.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKAclReset.java	2020-06-07 03:01:43.335391454 +0000
+@@ -46,6 +46,13 @@
+ public class ZKAclReset extends Configured implements Tool {
+   private static final Logger LOG = LoggerFactory.getLogger(ZKAclReset.class);
+ 
++  // msx
++  @Override
++  public void setConf(Configuration conf) {
++    conf = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ZKAclReset", conf);
++    super.setConf(conf);
++  }
++
+   private static void resetAcls(final ZKWatcher zkw, final String znode,
+                                 final boolean eraseAcls) throws Exception {
+     List<String> children = ZKUtil.listChildrenNoWatch(zkw, znode);
+diff -ruN /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKMainServer.java ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKMainServer.java
+--- /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKMainServer.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKMainServer.java	2020-06-07 03:38:37.736682887 +0000
+@@ -36,7 +36,9 @@
+ public class ZKMainServer {
+   private static final String SERVER_ARG = "-server";
+ 
+-  public String parse(final Configuration c) {
++  public String parse(Configuration c) {
++    // msx
++    c = org.apache.hadoop.conf.Configured.performReconf(this, "hbase:ZKMainServer", c);
+     return ZKConfig.getZKQuorumServersString(c);
+   }
+ 
+@@ -100,6 +102,8 @@
+     if (!hasServer(args)) {
+       // Add the zk ensemble from configuration if none passed on command-line.
+       Configuration conf = HBaseConfiguration.create();
++      // msx
++      conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:ZKMainServer_main", conf);
+       String hostport = new ZKMainServer().parse(conf);
+       if (hostport != null && hostport.length() > 0) {
+         newArgs = new String[args.length + 2];
+diff -ruN /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKServerTool.java ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKServerTool.java
+--- /hbase-2.2.4/hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKServerTool.java	2020-03-11 04:27:36.000000000 +0000
++++ ./hbase-zookeeper/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKServerTool.java	2020-06-07 03:01:09.251002165 +0000
+@@ -39,6 +39,8 @@
+   }
+ 
+   public static ServerName[] readZKNodes(Configuration conf) {
++    // msx
++    conf = org.apache.hadoop.conf.Configured.performReconf(null, "hbase:ZKServerTool_readZKNodes", conf);
+     List<ServerName> hosts = new LinkedList<>();
+     String quorum = conf.get(HConstants.ZOOKEEPER_QUORUM, HConstants.LOCALHOST);
+ 
+diff -ruN /hbase-2.2.4/pom.xml ./pom.xml
+--- /hbase-2.2.4/pom.xml	2020-03-11 04:27:36.000000000 +0000
++++ ./pom.xml	2020-05-18 04:31:54.000000000 +0000
+@@ -2641,7 +2641,7 @@
+           <dependency>
+             <groupId>org.apache.hadoop</groupId>
+             <artifactId>hadoop-common</artifactId>
+-            <version>${hadoop-two.version}</version>
++	    <version>${hadoop-two.version}</version>
+             <exclusions>
+               <exclusion>
+                 <groupId>com.sun.jersey</groupId>
