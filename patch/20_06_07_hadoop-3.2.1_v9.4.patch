@@ -952,7 +952,7 @@ diff -ruN /hadoop-3.2.1-src/hadoop-mapreduce-project/hadoop-mapreduce-client/had
 +    public synchronized void serviceInit(Configuration conf) throws Exception {
 +        // msx
 +        Configuration config = new YarnConfiguration(conf);
-+        config = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobHistoryServer", config);
++        config = org.apache.hadoop.conf.Configured.performReconf(this, "mapreduce:JobHistoryServerWrapper", config);
 +        super.serviceInit(config);
 +    }
 +
