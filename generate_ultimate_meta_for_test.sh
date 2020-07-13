@@ -2,7 +2,7 @@
 
 IFS=$'\n'
 
-if [ $# -ne 2 ]; then echo 'wrong: [dir] [test_name]'; exit -1; fi
+if [ $# -ne 2 ]; then echo 'wrong: [dir] [-output.txt]'; exit -1; fi
 
 dir=$1
 output_log=$2
