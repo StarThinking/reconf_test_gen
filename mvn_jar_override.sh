@@ -34,7 +34,7 @@ cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target
 # double override
 cp /root/reconf_test_gen/javassist_study/conf_return/hadoop-common-2.8.5.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
 
-# hbase common: Listener
+# hbase common: Listener, HBaseConfiguration
 echo "perform jar override for hbase common 2.2.4"
 cp /root/hbase-2.2.4/hbase-common/target/*.jar /root/.m2/repository/org/apache/hbase/hbase-common/2.2.4/
 
