@@ -19,7 +19,7 @@ do
 	new=$(echo $entry | awk '{print $1}')
 	old=$(echo $entry | awk '{print $2}')
 	if [ "$old" == "$compConf" ]; then
-	    echo "conf $new is extended from conf $compConf"
+#	    echo "conf $new is extended from conf $compConf"
 	    sed -i "s/$new/$compConf/g" $parameter_log
         fi
     done

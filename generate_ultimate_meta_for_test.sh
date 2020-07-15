@@ -12,6 +12,9 @@ parameter_log="$dir"/"$test_name"-parameter-meta.txt
 
 if [ ! -f $component_log ] || [ ! -f $parameter_log ]; then echo 'no component_log or parameter_log'; exit 0; fi
 
+# extend
+/root/reconf_test_gen/extend.sh $component_log $parameter_log
+
 num=$(cat "$component_log" | grep 'performReconf for comoponent' | wc -l)
 component_conf_hc_array=( $(cat "$component_log" | grep 'performReconf for comoponent' | awk '{print $8}') )
 component_name_array=( $(cat "$component_log" | grep 'performReconf for comoponent' | awk '{print $5}') )
