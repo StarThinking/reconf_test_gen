@@ -13,6 +13,6 @@ done
     
 for i in $(grep -oP "node-[0-9]{1,2}$" /etc/hosts | sed 's/node-//g' | sort -n)
 do
-    ssh node-$i "cd ~/reconf_test_gen/target/; tar zcvf $i.tar.gz *"
+    ssh node-$i 'cd ~/reconf_test_gen/target/; tar zcvf $i.tar.gz *'
     scp node-$i:~/reconf_test_gen/target/$i.tar.gz ~/reconf_test_gen/target/
 done
