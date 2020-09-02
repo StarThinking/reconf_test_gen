@@ -29,7 +29,9 @@ echo "# raw_cannot = $(cat raw_cannot.txt | wc -l)"
 echo "# later = $(cat later.txt | wc -l)"
 echo "# can = $(cat can.txt | wc -l)"
 echo "# cannot = $(cat cannot.txt | wc -l)"
-echo "% can = $(echo "scale=2; $(cat can.txt | wc -l) * 100 / $(cat total.txt | wc -l)" | bc)"
+if [ $(cat total.txt | wc -l) -ne 0 ] && [ $(cat total.txt | wc -l) -gt 50 ]; then
+    echo "% can = $(echo "scale=2; $(cat can.txt | wc -l) * 100 / $(cat total.txt | wc -l)" | bc)"
+fi
 
 rm later.txt raw_cannot.txt raw_can.txt 2> /dev/null
 rm cannot.txt raw_can_with_later.txt can.txt 2> /dev/null
