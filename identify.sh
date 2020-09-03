@@ -1,7 +1,10 @@
 #!/bin/bash
 
+if [ $# -ne 2 ]; then echo 'wrong args'; exit -1; fi
+
 IFS=$'\n'
 log=$1
+output=$2
 
 rm later.txt raw_cannot.txt raw_can.txt 2> /dev/null
 rm cannot.txt raw_can_with_later.txt can.txt 2> /dev/null
@@ -31,6 +34,12 @@ echo "# can = $(cat can.txt | wc -l)"
 echo "# cannot = $(cat cannot.txt | wc -l)"
 if [ $(cat total.txt | wc -l) -ne 0 ] && [ $(cat total.txt | wc -l) -gt 50 ]; then
     echo "% can = $(echo "scale=2; $(cat can.txt | wc -l) * 100 / $(cat total.txt | wc -l)" | bc)"
+fi
+
+log_prefix=$(echo $log | awk -F '-component-meta.txt' '{print $1}')
+if [ $output -eq 1 ]; then
+    cat can.txt > "$log_prefix"-identify-can.txt
+    cat cannot.txt > "$log_prefix"-identify-cannot.txt
 fi
 
 rm later.txt raw_cannot.txt raw_can.txt 2> /dev/null
