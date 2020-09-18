@@ -6,30 +6,30 @@ IFS=$'\n'
 log=$1
 output=$2
 
-rm later.txt raw_cannot.txt raw_can.txt 2> /dev/null
-rm cannot.txt raw_can_with_later.txt can.txt 2> /dev/null
-rm total.txt 2> /dev/null
+rm total.txt can.txt cannot.txt conf_cannot_identify.txt conf_later_identify.txt conf_real_cannot_identify.txt 2> /dev/null
+rm total_tmp.txt cannot_tmp.txt 2> /dev/null
+#rm later.txt raw_cannot.txt raw_can.txt 2> /dev/null
+#rm cannot.txt raw_can_with_later.txt can.txt 2> /dev/null
+#rm total.txt 2> /dev/null
 
-cat $log | grep 'can be identified' | awk '{print $2}' | sort -u > raw_can.txt
-cat $log | grep 'cannot be identified' | awk '{print $2}' | sort -u > raw_cannot.txt
-later_conf=( $(cat $log | grep 'later identified' | awk '{print $2}' | sort -u) )
-for c in ${later_conf[@]}; do cat $log | grep 'cannot be identified' | grep $c; done | awk '{print $2}' | sort -u > later.txt
+cat $log | grep 'cannot be identified when reading from' | awk '{print $NF}' | sort -u > conf_cannot_identify.txt
+cat $log | grep 'later identified' | awk '{print $2}' | sort -u > conf_later_identify.txt
 
-# exclude later from raw cannot
-comm -23 raw_cannot.txt later.txt > cannot.txt
+comm -23 conf_cannot_identify.txt conf_later_identify.txt > conf_real_cannot_identify.txt
 
-# merge raw can with later
-cat raw_can.txt later.txt | sort -u > raw_can_with_later.txt
+cat $log | grep 'reading from' | awk '{print $2}' | sort -u > total_tmp.txt
+# common
+comm -12 total_tmp.txt ~/reconf_test_gen/all_xml_parameters.txt > total.txt
 
-# exclude cannot from can
-comm -23 raw_can_with_later.txt cannot.txt > can.txt
+cat conf_real_cannot_identify.txt | while read line; do grep $line $log | grep 'reading from' | awk '{print $2}'; done | sort -u > cannot_tmp.txt
+# common
+comm -12 cannot_tmp.txt ~/reconf_test_gen/all_xml_parameters.txt > cannot.txt
 
-# combine can and cannot
-cat can.txt cannot.txt | sort -u > total.txt
+comm -23 total.txt cannot.txt > can.txt
 
-echo "# raw_can = $(cat raw_can.txt | wc -l)"
-echo "# raw_cannot = $(cat raw_cannot.txt | wc -l)"
-echo "# later = $(cat later.txt | wc -l)"
+echo "# raw_can = 0"
+echo "# raw_cannot = 0"
+echo "# later = 0"
 echo "# can = $(cat can.txt | wc -l)"
 echo "# cannot = $(cat cannot.txt | wc -l)"
 if [ $(cat total.txt | wc -l) -ne 0 ] && [ $(cat total.txt | wc -l) -gt 50 ]; then
@@ -37,11 +37,10 @@ if [ $(cat total.txt | wc -l) -ne 0 ] && [ $(cat total.txt | wc -l) -gt 50 ]; th
 fi
 
 log_prefix=$(echo $log | awk -F '-component-meta.txt' '{print $1}')
+echo $log_prefix
 if [ $output -eq 1 ]; then
     cat can.txt > "$log_prefix"-identify-can.txt
     cat cannot.txt > "$log_prefix"-identify-cannot.txt
 fi
 
-rm later.txt raw_cannot.txt raw_can.txt 2> /dev/null
-rm cannot.txt raw_can_with_later.txt can.txt 2> /dev/null
-rm total.txt 2> /dev/null
+rm total.txt can.txt cannot.txt conf_cannot_identify.txt conf_later_identify.txt conf_real_cannot_identify.txt 2> /dev/null
