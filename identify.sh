@@ -27,20 +27,16 @@ comm -12 cannot_tmp.txt ~/reconf_test_gen/all_xml_parameters.txt > cannot.txt
 
 comm -23 total.txt cannot.txt > can.txt
 
-echo "# raw_can = 0"
-echo "# raw_cannot = 0"
-echo "# later = 0"
-echo "# can = $(cat can.txt | wc -l)"
-echo "# cannot = $(cat cannot.txt | wc -l)"
-if [ $(cat total.txt | wc -l) -ne 0 ] && [ $(cat total.txt | wc -l) -gt 50 ]; then
-    echo "% can = $(echo "scale=2; $(cat can.txt | wc -l) * 100 / $(cat total.txt | wc -l)" | bc)"
+echo "$log can = $(cat can.txt | wc -l)"
+echo "$log cannot = $(cat cannot.txt | wc -l)"
+if [ $(cat total.txt | wc -l) -gt 0 ]; then
+    echo "$log % can = $(echo "scale=2; $(cat can.txt | wc -l) * 100 / $(cat total.txt | wc -l)" | bc)"
 fi
 
 log_prefix=$(echo $log | awk -F '-component-meta.txt' '{print $1}')
-echo $log_prefix
 if [ $output -eq 1 ]; then
     cat can.txt > "$log_prefix"-identify-can.txt
     cat cannot.txt > "$log_prefix"-identify-cannot.txt
 fi
 
-rm total.txt can.txt cannot.txt conf_cannot_identify.txt conf_later_identify.txt conf_real_cannot_identify.txt 2> /dev/null
+#rm total.txt can.txt cannot.txt conf_cannot_identify.txt conf_later_identify.txt conf_real_cannot_identify.txt 2> /dev/null

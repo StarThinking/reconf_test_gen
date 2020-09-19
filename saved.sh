@@ -8,12 +8,13 @@ grep -rn 'msx-rc 0' | wc -l; grep -rn 'msx-rc 1' | wc -l;
 # identified result
 cd final/component/;
 #grep registerMyComponent * | awk -F '-component-meta.txt' '{print $1"-component-meta.txt"}' | sort -u | while read line; do echo $line; ~/reconf_test_gen/identify.sh $line 1; echo ""; done > result.txt; mkdir ../identify; mv *-identify-*.txt ../identify; cd ../identify; cat *-identify-can.txt | sort -u > all_can.txt; cat *-identify-cannot.txt | sort -u > all_cannot.txt; comm -13 all_can.txt all_cannot.txt > unique_cannot.txt
-ls | while read line; do echo $line; ~/reconf_test_gen/identify.sh $line 1; echo ""; done > result.txt; mkdir ../identify; mv *-identify-*.txt ../identify; cd ../identify; cat *-identify-can.txt | sort -u > all_can.txt; cat *-identify-cannot.txt | sort -u > all_cannot.txt; comm -13 all_can.txt all_cannot.txt > unique_cannot.txt
+ls | while read line; do echo $line; ~/reconf_test_gen/identify.sh $line 1; echo ""; done > result.txt; mkdir ../identify; mv *-identify-*.txt ../identify; 
+#cd ../identify; cat *-identify-can.txt | sort -u > all_can.txt; cat *-identify-cannot.txt | sort -u > all_cannot.txt; comm -13 all_can.txt all_cannot.txt > unique_cannot.txt
 
 # filter because the tests are generated wrong
-ls | while read i; do para=$(echo $i | awk -F '%|_' '{print $1}'); test=$(echo $i | awk -F '%|_' '{print $2}'); if [ "$(find ~/vm_images/the_final/haha/ -name "$test"-identify-cannot.txt | xargs grep ^"$para"$)" != "" ]; then echo $i; fi; done | tee hahaha.txt
+ls | while read i; do para=$(echo $i | awk -F '%|_' '{print $1}'); test=$(echo $i | awk -F '%|_' '{print $2}'); if [ "$(find ~/vm_images/the_final/test_gen/identity_link/ -name "$test"-identify-cannot.txt | xargs grep ^"$para"$)" != "" ]; then echo $i; fi; done | tee hahaha.txt
 
-ls | while read i; do para=$(cat $i | head -n 3 | tail -n 1 | awk -F 'h_list: |@@@' '{print $2}'); test=$(cat $i | head -n 2 | tail -n 1 | awk -F 'u_test: ' '{print $2}'); if [ "$(find ~/vm_images/the_final/haha/ -name "$test"-identify-cannot.txt | xargs grep ^"$para"$)" != "" ]; then echo $i; fi; done | tee hahaha.txt
+ls | while read i; do para=$(cat $i | head -n 3 | tail -n 1 | awk -F 'h_list: |@@@' '{print $2}'); test=$(cat $i | head -n 2 | tail -n 1 | awk -F 'u_test: ' '{print $2}'); if [ "$(find ~/vm_images/the_final/test_gen/identity_link/ -name "$test"-identify-cannot.txt | xargs grep ^"$para"$)" != "" ]; then echo $i; fi; done | tee hahaha.txt
 
 # under final/component/
 cat result.txt | grep '% can' | awk '{print $NF}' | sort -n > distri.txt
