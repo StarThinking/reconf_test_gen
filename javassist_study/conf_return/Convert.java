@@ -24,22 +24,13 @@ public class Convert {
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getTimeDurations(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getStorageSize(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getPattern(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getPropertySources(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getRange(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getStringCollection(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getStrings(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getTrimmedStringCollection(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getTrimmedStrings(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getPassword(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getPasswordFromCredentialProviders(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getClassByName(");
 	myGetMethods.add("org.apache.hadoop.conf.Configuration.getClassByNameOrNull(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getClasses(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getClass(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getClass(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getInstances(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getResource(");
-	myGetMethods.add("org.apache.hadoop.conf.Configuration.getConfResourceAsInputStream(");
     }
    
     public static void main(String[] args) {
@@ -55,7 +46,7 @@ public class Convert {
 		    if (cm.getLongName().startsWith(get)) {
 		    	    //System.out.println("cm name: " + cm.getLongName());
 			//cm.insertAfter( "LOG.info( \"msx-conf return value \" + $_ );");
-			cm.insertAfter( "whoInvokesMe(name, String.valueOf($_));");
+			cm.insertAfter( "prerunFetchReturnValue(name, String.valueOf($_));");
 			//cm.insertAfter("System.out.println(\"msx-conf message from javassist\");");
 			//cm.insertAfter( "System.out.println( \"its \" + $_ );");
 			//cm.insertAfter( "System.exit(-1);");
