@@ -39,4 +39,4 @@ if [ $output -eq 1 ]; then
     cat cannot.txt > "$log_prefix"-identify-cannot.txt
 fi
 
-#rm total.txt can.txt cannot.txt conf_cannot_identify.txt conf_later_identify.txt conf_real_cannot_identify.txt 2> /dev/null
+rm total.txt can.txt cannot.txt conf_cannot_identify.txt conf_later_identify.txt conf_real_cannot_identify.txt 2> /dev/null
