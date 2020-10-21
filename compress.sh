@@ -6,7 +6,7 @@ log=$1
 #if [ "$(cat $log | grep "msx-reconfagent" | grep "performReconf")" == "" ]; then echo 'no init'; exit 0; fi
 
 prefix=$(echo $log | awk -F '-output.txt' '{print $1}')
-grep msx $log | grep -v 'msx-get' > "$prefix"-component-meta.txt
+grep msx $log | grep -v 'msx-get' | sort -u > "$prefix"-component-meta.txt
 
 grep msx $log | grep 'msx-get' | awk -F 'msx-get ' '{print $2}' | sort -u > "$prefix"-parameter-meta.txt
 
