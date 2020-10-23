@@ -5,6 +5,9 @@ rm *txt*; for i in $(grep -oP "node-[0-9]{1,2}$" /etc/hosts | sed 's/node-//g' |
 grep -rn ERROR * | grep 'sanity check failed' | awk -F '-component-meta.txt' '{print $1}' | sort -u
 grep -rn 'msx-rc 0' | wc -l; grep -rn 'msx-rc 1' | wc -l; 
 
+# show components
+grep registerMyCom * | awk -F 'msx-confcontroller| ' '{print $6}' | awk -F '.' '{print $1}' | sort | uniq -c | sort -n -k 1
+
 # identified result
 cd final/component/;
 #grep registerMyComponent * | awk -F '-component-meta.txt' '{print $1"-component-meta.txt"}' | sort -u | while read line; do echo $line; ~/reconf_test_gen/identify.sh $line 1; echo ""; done > result.txt; mkdir ../identify; mv *-identify-*.txt ../identify; cd ../identify; cat *-identify-can.txt | sort -u > all_can.txt; cat *-identify-cannot.txt | sort -u > all_cannot.txt; comm -13 all_can.txt all_cannot.txt > unique_cannot.txt
