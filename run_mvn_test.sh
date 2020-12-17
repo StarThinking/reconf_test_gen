@@ -26,7 +26,8 @@ echo "sub_project for $the_test is $sub_project"
 echo "the_test is $the_test"
 #cd $project_root_dir; mvn test -Dtest=$the_test
 rc=1
-cd $sub_project; mvn test -Dtest=$the_test
+rm ~/mvn_tmp_log.txt &> /dev/null
+cd $sub_project; mvn test -Dtest=$the_test &> ~/mvn_tmp_log.txt
 rc=$?
 
 # log
@@ -36,6 +37,7 @@ if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test
 if [ "$log_dts_dir" != "none" ]; then 
     mv $test_log $log_dts_dir/"$the_test"-output.txt
     echo "msx-rc $rc" >> $log_dts_dir/"$the_test"-output.txt
+    mv ~/mvn_tmp_log.txt $log_dts_dir/"$the_test"-mvnlog.txt
 fi
 
 # return exit code of mvn test
