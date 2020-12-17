@@ -11,10 +11,10 @@ function per_override_task {
         mvn_jar_path_num=$(find /root/.m2/ -name $jar_name | wc -l)
         mvn_jar_path=$(find /root/.m2/ -name $jar_name)
         if [ $mvn_jar_path_num -eq 0 ]; then
-    	echo "$jar_name not used in mvn"
+    	    echo "$jar_name is not used in mvn"
         elif [ $mvn_jar_path_num -eq 1 ]; then 
-    	echo "USE $jar_path to override $mvn_jar_path"
-           	cp $jar_path $mvn_jar_path
+    	    echo "USE $jar_path to override $mvn_jar_path"
+            cp $jar_path $mvn_jar_path
         else 
             echo "ERROR: $jar_name"; exit -1; 
         fi
@@ -25,23 +25,27 @@ function per_override_task {
 hadoop_version='3.2.1'
 echo "perform jar override for hadoop common $hadoop_version"
 cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
-# double override
+# double override for probing parameter types via get()
 #cp /root/reconf_test_gen/javassist_study/conf_return/hadoop-common-3.2.1.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
 
 hadoop_version='2.8.5'
 echo "perform jar override for hadoop common $hadoop_version"
 cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
-# double override
+# double override for probing parameter types via get()
 #cp /root/reconf_test_gen/javassist_study/conf_return/hadoop-common-2.8.5.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
 
 # hbase common: Listener, HBaseConfiguration
 echo "perform jar override for hbase common 2.2.4"
 cp /root/hbase-2.2.4/hbase-common/target/*.jar /root/.m2/repository/org/apache/hbase/hbase-common/2.2.4/
 
+# hive common: Listener
+echo "perform jar override for hive common 2.3.7"
+cp /root/apache-hive-2.3.7-src/common/target/*.jar /root/.m2/repository/org/apache/hive/hive-common/2.3.7/
+
 # system component modification
-for i in $(find ~/reconf_test_gen -name 'override_jar_store.txt')
-do
-    echo ''
-    echo "perform jar override for $i"
-    per_override_task $i
-done
+#for i in $(find ~/reconf_test_gen -name 'override_jar_store.txt')
+#do
+#    echo ''
+#    echo "perform jar override for $i"
+#    per_override_task $i
+#done
