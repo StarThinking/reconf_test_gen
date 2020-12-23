@@ -1,3 +1,7 @@
+grep -rn '${hadoop-two.version}' | awk -F ':' '{print $1}' | sort -u | while read i; do sed -i 's/${hadoop-two.version}/3.1.2/g' $i; done
+grep -rn '${hadoop-three.version}' | awk -F ':' '{print $1}' | sort -u | while read i; do sed -i 's/${hadoop-three.version}/3.1.2/g' $i; done
+grep -rn '${hadoop.version}' | awk -F ':' '{print $1}' | sort -u | while read i; do sed -i 's/${hadoop.version}/3.1.2/g' $i; done
+
 # structure final
 rm *txt*; for i in $(grep -oP "node-[0-9]{1,2}$" /etc/hosts | sed 's/node-//g' | sort -n); do tar zxvf $i.tar.gz ; done; rm *.tar.gz; mkdir component; mkdir parameter; mkdir ultimate; mv *-component-meta.txt component; mv *-parameter-meta.txt parameter; mv *-ultimate-meta.txt ultimate; mkdir final; mv * final
 
