@@ -22,15 +22,15 @@ function per_override_task {
 }
 
 # hadoop common: Configuration, ReconfAgent, Listener (fpr hdfs yarn mapreduce)
-hadoop_version='3.2.1'
+hadoop_version='3.1.2'
 echo "perform jar override for hadoop common $hadoop_version"
 cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
 # double override for probing parameter types via get()
 #cp /root/reconf_test_gen/javassist_study/conf_return/hadoop-common-3.2.1.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
 
-hadoop_version='2.8.5'
-echo "perform jar override for hadoop common $hadoop_version"
-cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
+#hadoop_version='2.8.5'
+#echo "perform jar override for hadoop common $hadoop_version"
+#cp /root/hadoop-"$hadoop_version"-src/hadoop-common-project/hadoop-common/target/*.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
 # double override for probing parameter types via get()
 #cp /root/reconf_test_gen/javassist_study/conf_return/hadoop-common-2.8.5.jar /root/.m2/repository/org/apache/hadoop/hadoop-common/"$hadoop_version"/
 
@@ -39,8 +39,8 @@ echo "perform jar override for hbase common 2.2.4"
 cp /root/hbase-2.2.4/hbase-common/target/*.jar /root/.m2/repository/org/apache/hbase/hbase-common/2.2.4/
 
 # hive common: Listener
-echo "perform jar override for hive common 2.3.7"
-cp /root/apache-hive-2.3.7-src/common/target/*.jar /root/.m2/repository/org/apache/hive/hive-common/2.3.7/
+echo "perform jar override for hive common 3.2.1"
+cp /root/apache-hive-3.1.2-src/common/target/*.jar /root/.m2/repository/org/apache/hive/hive-common/3.1.2/
 
 # system component modification
 #for i in $(find ~/reconf_test_gen -name 'override_jar_store.txt')
