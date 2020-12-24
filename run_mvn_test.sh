@@ -14,24 +14,26 @@ sub_project_classes_dir="/root/reconf_test_gen/"$the_project"/all_classes"
 
 log_dts_dir="$3"
 
-suffix='all_classes.txt'
-raw_sub_project=$(cd $sub_project_classes_dir; grep ^"$classname"$ *.txt | awk -F 'all_classes.txt' '{print $1}' | sed 's#%#/#g')
-if [ "$raw_sub_project" == "" ]; then
-    echo "ERROR: cannot find sub_project for $the_test"; exit -1;
-fi
-sub_project="$project_root_dir""$raw_sub_project"
-echo "sub_project for $the_test is $sub_project"
+#suffix='all_classes.txt'
+#raw_sub_project=$(cd $sub_project_classes_dir; grep ^"$classname"$ *.txt | awk -F 'all_classes.txt' '{print $1}' | sed 's#%#/#g')
+#if [ "$raw_sub_project" == "" ]; then
+#    echo "ERROR: cannot find sub_project for $the_test"; exit -1;
+#fi
+#sub_project="$project_root_dir""$raw_sub_project"
+#echo "sub_project for $the_test is $sub_project"
 
 # run mvn test
 echo "the_test is $the_test"
 #cd $project_root_dir; mvn test -Dtest=$the_test
 rc=1
 rm ~/mvn_tmp_log.txt &> /dev/null
-cd $sub_project; mvn test -Dtest=$the_test &> ~/mvn_tmp_log.txt
+#cd $sub_project; mvn test -Dtest=$the_test &> ~/mvn_tmp_log.txt
+cd $project_root_dir; mvn test -Dtest=$the_test &> ~/mvn_tmp_log.txt
 rc=$?
 
 # log
-test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt
+test_log="$(find $project_root_dir -name "$classname"-output.txt)"
+#test_log="$sub_project"/target/surefire-reports/"$classname"-output.txt
 if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test'; exit -1; fi
 #echo "test_log is $test_log"
 if [ "$log_dts_dir" != "none" ]; then 
