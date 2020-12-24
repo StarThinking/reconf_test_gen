@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then echo 'ERROR: ./dispatcher.sh [project]'; exit -1; fi
 the_project=$1
 vm_num=$(( $(cat /proc/cpuinfo | grep 'processor' | wc -l) / 2 ))
 if [ $vm_num -gt 20 ]; then vm_num=20; fi
-vm_num=10
+vm_num=1
 vm_num=$(( vm_num -1 ))
 busy_file=/tmp/reconf_busy
 dst='/root/reconf_test_gen/target/'
