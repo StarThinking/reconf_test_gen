@@ -36,8 +36,10 @@ if [ ! -f $test_log ]; then echo 'ERROR: cannot find test_log for test $the_test
 #echo "test_log is $test_log"
 if [ "$log_dts_dir" != "none" ]; then 
     mv $test_log $log_dts_dir/"$the_test"-output.txt
-    echo "msx-rc $rc" >> $log_dts_dir/"$the_test"-output.txt
     mv ~/mvn_tmp_log.txt $log_dts_dir/"$the_test"-mvnlog.txt
+    
+    echo "msx-rc $rc" >> $log_dts_dir/"$the_test"-output.txt
+    echo "msx-rc $rc" >> $log_dts_dir/"$the_test"-mvnlog.txt
 fi
 
 # return exit code of mvn test
