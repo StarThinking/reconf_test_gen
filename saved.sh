@@ -1,4 +1,5 @@
 # test running time
+docker container list -a | awk '{print $NF}' | grep -v NAMES | while read i; do docker container stop $i; docker container rm $i; done
 for i in $(seq 0 19); do docker exec hadoop-$i bash -c 'cd /root/reconf_test_gen/; for i in target/*-mvnlog.txt; do ~/reconf_test_gen/filter_time.sh $i; done > yarn.txt'; done
 for i in $(seq 0 9); do docker exec hadoop-$i bash -c 'cd /root/reconf_test_gen/; ./display_run_time.sh yarn run'; done
 
