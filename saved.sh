@@ -1,3 +1,6 @@
+# find all the sub projects pom.xml path
+find /root/flink-release-1.12.1 -name pom.xml | sed -e "s/pom.xml$//g" | sort | sed '1d' | grep -v '/target/' | grep -v '/src/' | while read sub_project; do cd $sub_project; echo "--------------------------$sub_project---------------------------"; mvn test; echo ''; echo ''; done
+
 # test running time
 docker container list -a | awk '{print $NF}' | grep -v NAMES | while read i; do docker container stop $i; docker container rm $i; done
 for i in $(seq 0 19); do docker exec hadoop-$i bash -c 'cd /root/reconf_test_gen/; for i in target/*-mvnlog.txt; do ~/reconf_test_gen/filter_time.sh $i; done > yarn.txt'; done

@@ -1,8 +1,13 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then echo "[proj]"; exit -1; fi
+if [ $# -ne 2 ]; then echo "[proj] [version]"; exit -1; fi
 proj=$1
-proj_root_dir=$(cat /root/reconf_test_gen/$proj/project_root_dir.txt)
+version=$2
+if [ $version -eq 3 ]; then
+    proj_root_dir=$(cat /root/reconf_test_gen/$proj/project_root_dir.txt)
+else
+    proj_root_dir=$(cat /root/reconf_test_gen/$proj/project_root_dir_2.txt)
+fi
 
 tmp_file='jar.class.tmp'
 	
